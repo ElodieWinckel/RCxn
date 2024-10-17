@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Form for a new entry in the Research Constructicon</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <form action="/submit" method="post">
+        <h1>General</h1>
+        <h3>Title</h3>
+        <div>
+          <label for="construction">
+            Give a name to the construction:
+            <span title="The name of the language should not be part of the title" style="cursor: help;">ℹ️</span>
+          </label>
+          <input type="text" id="construction" name="construction" required>
+        </div>
+
+        <h3>Language</h3>
+        <div>
+          <label for="language">Language (also: time frame, dialect area, written/spoken modality text genre)</label>
+          <input type="text" id="language" name="language" size="50" required>
+        </div>
+        <h3>Construction Status</h3>
+        <div>
+          <label for="construction_status">Is this a construction?</label>
+          <select id="construction_status" name="construction_status">
+            <option value="none" selected></option> <!-- Default value for no selection -->
+            <option value="yes">Yes</option>
+            <option value="not_known">Not known</option>
+            <option value="no">No</option>
+          </select>
+          <label for="construction_status">(recommended field)</label>
+        </div>
+
+        <h1>Form-meaning pairing of the elements</h1>
+        <h3>Number of elements</h3>
+        <label for="element_nb">Number of elements (at least 1):</label>
+        <input type="number" id="element_nb" name="element_nb" min="1" oninput="generateFields()" required>
+        <div id="ElementsContainer"></div>
+
+        <h1>Examples</h1>
+        <div id="ExamplesContainer"></div>
+        <button type="button" onclick="addExample()">Add Example</button>
+
+
+        <h1>Cotext</h1>
+
+        <h3>Information Structure</h3>
+        <div id="infoStructureContainer" class="info-structure-grid"></div>
+
+        <h1>Well done! (don't forget to submit)</h1>
+        <button type="submit" onclick="submitForm()">Submit Form</button>
+      </form>
+    </div>
+
+    <script>
+    function generateFields() {
+        const elementNb = document.getElementById('element_nb').value;
+        const container = document.getElementById('ElementsContainer');
+        const infoContainer = document.getElementById('infoStructureContainer');
+        container.innerHTML = ''; // Clear previous fields
+        infoContainer.innerHTML = ''; // Clear previous information structure fields
+
+        const constructionName = document.getElementById('construction').value.replace(/\s+/g, ''); // Get and clean construction name
+
+        for (let i = 0; i < elementNb; i++) {
+            // Create a title for each element
+            const elementTitle = document.createElement('h3');
+            elementTitle.textContent = `Element ${i + 1}`;
+            container.appendChild(elementTitle);
+
+            // Create fields for word order
+            const wordOrderLabel = document.createElement('label');
+            wordOrderLabel.textContent = `Word order specifications (recommended):`;
+            const wordOrderInput = document.createElement('input');
+            wordOrderInput.type = 'text';
+            wordOrderInput.name = `WordOrder_${i + 1}`;
+            container.appendChild(wordOrderLabel);
+            container.appendChild(wordOrderInput);
+            container.appendChild(document.createElement('br'));
+        }
+
+        // Dynamically add checkboxes under fixed titles (Topic, Comment, Focus, Background) in a grid
+        ['Topic', 'Comment', 'Focus', 'Background'].forEach(function(field) {
+            const fieldContainer = document.createElement('div');
+            const fieldLabel = document.createElement('h4');
+            fieldLabel.textContent = `${field}:`;
+            fieldContainer.appendChild(fieldLabel);
+
+            for (let i = 0; i < elementNb; i++) {
+                const checkboxContainer = document.createElement('div');
+                checkboxContainer.className = 'checkbox-container';
+
+                const checkbox = document.createElement('input');
+                checkbox.type = 'checkbox';
+
+                // Create the correct URI as the value
+                checkbox.value = `${constructionName}_${String.fromCharCode(65 + i)}`; // e.g., construction_A, construction_B, etc.
+
+                checkbox.name = `${field.toLowerCase()}_element[]`; // Store as an array
+
+                const checkboxLabel = document.createElement('label');
+                checkboxLabel.textContent = `Element ${i + 1}`;
+
+                // Append checkbox and label side by side in the container
+                checkboxContainer.appendChild(checkbox);
+                checkboxContainer.appendChild(checkboxLabel);
+
+                // Append each checkbox-container to the field container
+                fieldContainer.appendChild(checkboxContainer);
+            }
+
+            infoContainer.appendChild(fieldContainer);
+        });
+    }
+
+// A button to create fields for examples
+      let exampleCounter = 0;
+
+    function addExample() {
+        exampleCounter++;
+        const container = document.getElementById('ExamplesContainer');
+
+        const exampleDiv = document.createElement('div');
+        exampleDiv.className = 'example';
+        exampleDiv.innerHTML = `
+            <h3>Example ${exampleCounter}</h3>
+            <label for="example_text_${exampleCounter}">Text of the example:</label>
+            <input type="text" id="example_text_${exampleCounter}" name="example_text_${exampleCounter}">
+            <br>
+            <label for="translation_${exampleCounter}">Translation of the example:</label>
+            <input type="text" id="translation_${exampleCounter}" name="translation_${exampleCounter}">
+            <br>
+            <label for="glosses_${exampleCounter}">Glosses of the example:</label>
+            <input type="text" id="glosses_${exampleCounter}" name="glosses_${exampleCounter}">
+            <br>
+            <label for="comment_${exampleCounter}">Comment:</label>
+            <input type="text" id="comment_${exampleCounter}" name="comment_${exampleCounter}">
+            <br><br>
+        `;
+        container.appendChild(exampleDiv);
+    }
+</script>
+
+  </body>
+</html>

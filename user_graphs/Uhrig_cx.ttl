@@ -1,0 +1,66 @@
+@prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cx: <http://example.org/cx/> .
+@prefix membr: <http://example.org/users/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/cx/Hellyeah!construction> a membr:Construction ;
+    cx:hasConstructionMeaning <http://example.org/cx/Hellyeah!construction_Meaning> ;
+    cx:hasExample <http://example.org/cx/Hellyeah!construction_Ex_A> ;
+    cx:hasGesture "Often head nod, also beat gestures." ;
+    cx:hasIntonation "Stress pattern, with stress primarily on first word or level stress, but rarely on the second word. " ;
+    cx:hasMetadata <http://example.org/cx/Hellyeah!construction_MD> ;
+    cx:hasSlots <http://example.org/cx/Hellyeah!construction_slots> ;
+    cx:partOfLanguage "English" .
+
+membr:Project_Blake membr:SubProject membr:Project_Blake_241014 .
+
+<http://example.org/cx/Hellyeah!construction_A> a cx:SlotMandatory ;
+    cx:WordOrder "1" ;
+    cx:hasSlotForm <http://example.org/cx/Hellyeah!construction_A_Form> ;
+    cx:hasSlotMeaning <http://example.org/cx/Hellyeah!construction_A_Meaning> .
+
+<http://example.org/cx/Hellyeah!construction_A_Form> a cx:SlotForm ;
+    cx:hasSyntacticForm <http://example.org/cx/Hellyeah!construction_A_Morphosyntax> .
+
+<http://example.org/cx/Hellyeah!construction_A_Meaning> a cx:SlotMeaning ;
+    cx:hasSemanticContribution "intensification" .
+
+<http://example.org/cx/Hellyeah!construction_A_Morphosyntax> a cx:hell .
+
+<http://example.org/cx/Hellyeah!construction_B> a cx:SlotMandatory ;
+    cx:WordOrder "2" ;
+    cx:hasSlotForm <http://example.org/cx/Hellyeah!construction_B_Form> ;
+    cx:hasSlotMeaning <http://example.org/cx/Hellyeah!construction_B_Meaning> .
+
+<http://example.org/cx/Hellyeah!construction_B_Form> a cx:SlotForm ;
+    cx:hasSyntacticForm <http://example.org/cx/Hellyeah!construction_B_Morphosyntax> .
+
+<http://example.org/cx/Hellyeah!construction_B_Meaning> a cx:SlotMeaning ;
+    cx:hasSemanticContribution "affirmative" .
+
+<http://example.org/cx/Hellyeah!construction_B_Morphosyntax> a <http://example.org/cx/yeah!> .
+
+<http://example.org/cx/Hellyeah!construction_Ex_A> a cx:Example ;
+    cx:hasGlosses "" ;
+    cx:hasText "Are you in? - Hell yeah!" ;
+    cx:hasTranslation "" ;
+    RDFS:comment "" .
+
+<http://example.org/cx/Hellyeah!construction_MD> a cx:Metadata ;
+    cx:annotator membr:Blake ;
+    cx:creationDate "2024-10-14"^^xsd:date ;
+    cx:hasFindings "People smile." ;
+    cx:hasRQ membr:Project_Blake_241014 ;
+    cx:hasTitle "English Hell yeah! construction" .
+
+<http://example.org/cx/Hellyeah!construction_Meaning> a cx:ConstructionMeaning ;
+    cx:hasMeaning "affirmative" .
+
+<http://example.org/cx/Hellyeah!construction_slots> a rdf:Seq ;
+    rdf:_1 <http://example.org/cx/Hellyeah!construction_A> ;
+    rdf:_2 <http://example.org/cx/Hellyeah!construction_B> .
+
+membr:Project_Blake_241014 a membr:Project ;
+    membr:projectName "The multimodal expression of exclamative constructions" .
+

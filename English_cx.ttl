@@ -1,0 +1,28 @@
+@prefix cx: <http://example.org/cx/> .
+@prefix membr: <http://example.org/users/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cx:RelativeclauseCx a membr:Construction ;
+    cx:createdOn "2024-09-27"^^xsd:date ;
+    cx:hasExample cx:RelativeclauseCx_Ex_A,
+        cx:RelativeclauseCx_Ex_B ;
+    cx:hasSlots cx:RelativeclauseCx_slots ;
+    cx:hasTitle "English Relative clause Cx" .
+
+cx:RelativeclauseCx_A cx:hasIS cx:Comment .
+
+cx:RelativeclauseCx_Ex_A a cx:Example ;
+    cx:hasGlosses "it is the life" ;
+    cx:hasTranslation "That's life" ;
+    rdfs:comment "cleft" .
+
+cx:RelativeclauseCx_Ex_B a cx:Example ;
+    cx:hasGlosses "he was a time" ;
+    cx:hasTranslation "once upon a time" ;
+    rdfs:comment "expression" .
+
+cx:RelativeclauseCx_slots a rdf:Seq ;
+    rdf:_1 cx:RelativeclauseCx_A .
+

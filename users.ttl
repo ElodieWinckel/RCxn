@@ -1,0 +1,187 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix membr: <http://example.com/users/> .
+
+membr:Blake a foaf:Person ;
+    foaf:currentProject membr:Project_Blake ;
+    foaf:familyName "Blake" ;
+    foaf:givenName "Ashley" .
+
+membr:DelaGarza a foaf:Person ;
+    foaf:currentProject membr:Project_DelaGarza ;
+    foaf:familyName "De la Garza" ;
+    foaf:givenName "Vania" .
+
+membr:FernandezSantos a foaf:Person ;
+    foaf:currentProject membr:Project_FernandezSantos ;
+    foaf:familyName "Fernández Santos" ;
+    foaf:givenName "Sara" .
+
+membr:Fokashchuk a foaf:Person ;
+    foaf:currentProject membr:Project_Fokashchuk ;
+    foaf:familyName "Fokashchuk" ;
+    foaf:givenName "Iryna" .
+
+membr:Führer a foaf:Person ;
+    foaf:currentProject membr:Project_Führer ;
+    foaf:familyName "Führer" ;
+    foaf:givenName "Bastian" .
+
+membr:Gedik a foaf:Person ;
+    foaf:currentProject membr:Project_Gedik ;
+    foaf:familyName "Gedik" ;
+    foaf:givenName "Tan Arda" .
+
+membr:GroseHodge a foaf:Person ;
+    foaf:currentProject membr:Project_GroseHodge ;
+    foaf:familyName "Grose-Hodge" ;
+    foaf:givenName "Magdalena Grose-Hodge" .
+
+membr:Iabdounane a foaf:Person ;
+    foaf:currentProject membr:Project_Iabdounane ;
+    foaf:familyName "Iabdounane" ;
+    foaf:givenName "Yassine" .
+
+membr:Kassler a foaf:Person ;
+    foaf:currentProject membr:Project_Kassler ;
+    foaf:familyName "Kassler" ;
+    foaf:givenName "Annika" .
+
+membr:Kenanidis a foaf:Person ;
+    foaf:currentProject membr:Project_Kenanidis ;
+    foaf:familyName "Kenanidis" ;
+    foaf:givenName "Panagiotis" .
+
+membr:Kessler a foaf:Person ;
+    foaf:currentProject membr:Project_Kessler ;
+    foaf:familyName "Keßler" ;
+    foaf:givenName "Florian" .
+
+membr:Kissane a foaf:Person ;
+    foaf:currentProject membr:Project_Kissane ;
+    foaf:familyName "Kissane" ;
+    foaf:givenName "Hassane" .
+
+membr:Kligge a foaf:Person ;
+    foaf:currentProject membr:Project_Kligge ;
+    foaf:familyName "Kligge" ;
+    foaf:givenName "Hendrik" .
+
+membr:Lee a foaf:Person ;
+    foaf:currentProject membr:Project_Lee ;
+    foaf:familyName "Lee" ;
+    foaf:givenName "Dongeun" .
+
+membr:Legouté a foaf:Person ;
+    foaf:currentProject membr:Project_Legouté ;
+    foaf:familyName "Legouté" ;
+    foaf:givenName "Anne Sherley" .
+
+membr:Patel a foaf:Person ;
+    foaf:currentProject membr:Project_Patel ;
+    foaf:familyName "Patel" ;
+    foaf:givenName "Malin" .
+
+membr:Prela a foaf:Person ;
+    foaf:currentProject membr:Project_Prela ;
+    foaf:familyName "Prela" ;
+    foaf:givenName "Leonarda" .
+
+membr:Ramezani a foaf:Person ;
+    foaf:currentProject membr:Project_Ramezani ;
+    foaf:familyName "Ramezani" ;
+    foaf:givenName "Pegah" .
+
+membr:Rastegar a foaf:Person ;
+    foaf:currentProject membr:Project_Rastegar ;
+    foaf:familyName "Rastegar" ;
+    foaf:givenName "Aria" .
+
+membr:Stampfer a foaf:Person ;
+    foaf:currentProject membr:Project_Stampfer ;
+    foaf:familyName "Stampfer" ;
+    foaf:givenName "Veronika" .
+
+membr:Trombetta a foaf:Person ;
+    foaf:currentProject membr:Project_Trombetta ;
+    foaf:familyName "Trombetta" ;
+    foaf:givenName "Chiara" .
+
+membr:Winckel a foaf:Person ;
+    foaf:currentProject membr:Project_Winckel ;
+    foaf:familyName "Winckel" ;
+    foaf:givenName "Elodie" .
+
+membr:Wright a foaf:Person ;
+    foaf:currentProject membr:Project_Wright ;
+    foaf:familyName "Wright" ;
+    foaf:givenName "Richenda" .
+
+membr:Project_Blake a membr:Project ;
+    membr:projectName "Project Blake"@en .
+
+membr:Project_DelaGarza a membr:Project ;
+    membr:projectName "Project De la Garza"@en .
+
+membr:Project_FernandezSantos a membr:Project ;
+    membr:projectName "Artificial language learning as a window to the early entrenchment of constructions"@en .
+
+membr:Project_Fokashchuk a membr:Project ;
+    membr:projectName "Functions and cognitive semantics of prepositions in complex constructions"@en .
+
+membr:Project_Führer a membr:Project ;
+    membr:projectName "German verbs with particles or prefixes in language change: Form, meaning, and syntax"@en .
+
+membr:Project_Gedik a membr:Project ;
+    membr:projectName "Project Gedik"@en .
+
+membr:Project_GroseHodge a membr:Project ;
+    membr:projectName "Project Grose-Hodge"@en .
+
+membr:Project_Iabdounane a membr:Project ;
+    membr:projectName "Multimodal constructional space"@en .
+
+membr:Project_Kassler a membr:Project ;
+    membr:projectName "Project Kassler"@en .
+
+membr:Project_Kenanidis a membr:Project ;
+    membr:projectName "Project Kenanidis"@en .
+
+membr:Project_Kessler a membr:Project ;
+    membr:projectName "Project Keßler"@en .
+
+membr:Project_Kissane a membr:Project ;
+    membr:projectName "Form and meaning as factors in the identification and learning of constructional slots – English phrasal verbs and verb-preposition combinations"@en .
+
+membr:Project_Kligge a membr:Project ;
+    membr:projectName "Representation and acquisition of agreement relations in a usage-based framework"@en .
+
+membr:Project_Lee a membr:Project ;
+    membr:projectName "Project Lee"@en .
+
+membr:Project_Legouté a membr:Project ;
+    membr:projectName "Multifunctionality in Haitian Creole: New insights from a Construction Grammar perspective"@en .
+
+membr:Project_Patel a membr:Project ;
+    membr:projectName "Corpus evidence for delineating constructions"@en .
+
+membr:Project_Prela a membr:Project ;
+    membr:projectName "Project Prela"@en .
+
+membr:Project_Ramezani a membr:Project ;
+    membr:projectName "Representation and processing of constructions in the brain"@en .
+
+membr:Project_Rastegar a membr:Project ;
+    membr:projectName "Representation and acquisition of idiomatic constructions in L1 and L2 learners"@en .
+
+membr:Project_Stampfer a membr:Project ;
+    membr:projectName "Semantically related argument structures in the history of English"@en .
+
+membr:Project_Trombetta a membr:Project ;
+    membr:projectName "Constructions beyond the sentence: text-structuring in (esp.) sixteenth-century historiographical texts"@en .
+
+membr:Project_Winckel a membr:Project ;
+    membr:projectName "Building a Research Constructicon"@en .
+
+membr:Project_Wright a membr:Project ;
+    membr:projectName "Project Wright"@en .
+

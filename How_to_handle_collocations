@@ -1,0 +1,39 @@
+@prefix ex: <http://example.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# Classes
+ex:Slot a rdfs:Class .
+ex:SyntacticForm a rdfs:Class .
+ex:Collocation a rdfs:Class .
+
+# Properties
+ex:hasCollocation a rdf:Property ;
+                  rdfs:domain ex:Slot ;
+                  rdfs:range ex:Collocation .
+
+ex:appliesToSlot a rdf:Property ;
+                 rdfs:domain ex:Collocation ;
+                 rdfs:range ex:Slot .
+
+ex:usesSyntacticForm a rdf:Property ;
+                     rdfs:domain ex:Collocation ;
+                     rdfs:range ex:SyntacticForm .
+
+ex:collocationPercentage a rdf:Property ;
+                         rdfs:domain ex:Collocation ;
+                         rdfs:range xsd:decimal .
+
+# Example
+ex:EngDitransitive_3 a ex:Slot .
+
+ex:give a ex:SyntacticForm .
+
+ex:EngDitransitive_3_collocation1 a ex:Collocation ;
+                                  ex:appliesToSlot ex:EngDitransitive_3 ;
+                                  ex:usesSyntacticForm ex:give ;
+                                  ex:collocationPercentage "90"^^xsd:decimal .
+
+ex:EngDitransitive_3 ex:hasCollocation ex:EngDitransitive_3_collocation1 .
+
