@@ -120,7 +120,6 @@
         <h1>Links</h1>
         <h3>Inherits from</h3>
         <div>
-          <label for="inheritsFrom">Inherits from:</label>
           <input type="text" id="inheritsFrom" name="inheritsFrom" placeholder="Type construction name">
           <button type="button" id="add_inherits_from">Add</button>
         </div>
@@ -130,7 +129,6 @@
 
         <h3>Inherited by</h3>
         <div>
-          <label for="inheritedBy">Inherited by:</label>
           <input type="text" id="inheritedBy" name="inheritedBy" placeholder="Type construction name">
           <button type="button" id="add_inherited_by">Add</button>
         </div>
@@ -140,7 +138,6 @@
 
         <h3>Metaphorical extension</h3>
         <div>
-          <label for="metaphoricalExtension">Metaphorical extension:</label>
           <input type="text" id="metaphoricalExtension" name="metaphoricalExtension" placeholder="Type construction name">
           <button type="button" id="add_metaphorical_extension">Add</button>
         </div>
@@ -262,6 +259,39 @@
           container.appendChild(optionalitySelect);
           container.appendChild(document.createElement('br'));
 
+          // Create fields for word order
+          const orderLabel = document.createElement('label');
+          orderLabel.textContent = `Word order specifications (recommended):`;
+          // Create an info icon
+          const orderInfoIcon = document.createElement('span');
+          orderInfoIcon.className = 'info-icon';
+          orderInfoIcon.textContent = 'ℹ️'; // Unicode info symbol
+          // Create the tooltip text container with HTML content
+          const orderTooltipText = document.createElement('span');
+          orderTooltipText.className = 'tooltiptext';
+          orderTooltipText.innerHTML = `
+            By default, the order is considered to be irrelevant. Therefore, specifications should be spelled out.<br>
+            For example: <br>
+            Element 1 immediately before element 2.`;
+          // Create a container for the label and the info icon
+          const orderLabelContainer = document.createElement('div');
+          orderLabelContainer.className = 'label-container';
+          orderLabelContainer.appendChild(orderLabel);
+          orderLabelContainer.appendChild(orderInfoIcon);
+          const orderInput = document.createElement('input');
+          orderInput.type = 'text';
+          orderInput.name = `WordOrder_${i + 1}`;
+          // Create a container for the input and the tooltip
+          const orderTooltipContainer = document.createElement('div');
+          orderTooltipContainer.className = 'tooltip-container';
+          orderTooltipContainer.appendChild(orderInput);
+          orderTooltipContainer.appendChild(orderTooltipText);
+          // Add tooltip functionality to the info icon
+          orderInfoIcon.appendChild(orderTooltipText);
+          container.appendChild(orderLabelContainer);
+          container.appendChild(orderTooltipContainer);
+          container.appendChild(document.createElement('br'));
+
           // Create fields for surface form
           const surfaceLabel = document.createElement('label');
           surfaceLabel.textContent = `Surface form (optional):`;
@@ -363,6 +393,16 @@
           container.appendChild(stemTooltipContainer);
           container.appendChild(document.createElement('br'));
 
+          // Create fields for translation
+          const translationLabel = document.createElement('label');
+          translationLabel.textContent = `Translation (recommended):`;
+          const translationInput = document.createElement('input');
+          translationInput.type = 'text';
+          translationInput.name = `translation_${i + 1}`;
+          container.appendChild(translationLabel);
+          container.appendChild(translationInput);
+          container.appendChild(document.createElement('br'));
+
           // Create fields for morpho-syntactic form
           const morphoLabel = document.createElement('label');
           morphoLabel.textContent = `(Morpho-)syntactic form (optional):`;
@@ -425,49 +465,6 @@
           morphInfoIcon.appendChild(morphoTooltipText);
           container.appendChild(morphoLabelContainer);
           container.appendChild(morphoTooltipContainer);
-          container.appendChild(document.createElement('br'));
-
-          // Create fields for word order
-          const orderLabel = document.createElement('label');
-          orderLabel.textContent = `Word order specifications (recommended):`;
-          // Create an info icon
-          const orderInfoIcon = document.createElement('span');
-          orderInfoIcon.className = 'info-icon';
-          orderInfoIcon.textContent = 'ℹ️'; // Unicode info symbol
-          // Create the tooltip text container with HTML content
-          const orderTooltipText = document.createElement('span');
-          orderTooltipText.className = 'tooltiptext';
-          orderTooltipText.innerHTML = `
-            By default, the order is considered to be irrelevant. Therefore, specifications should be spelled out.<br>
-            For example: <br>
-            Element 1 immediately before element 2.`;
-          // Create a container for the label and the info icon
-          const orderLabelContainer = document.createElement('div');
-          orderLabelContainer.className = 'label-container';
-          orderLabelContainer.appendChild(orderLabel);
-          orderLabelContainer.appendChild(orderInfoIcon);
-          const orderInput = document.createElement('input');
-          orderInput.type = 'text';
-          orderInput.name = `WordOrder_${i + 1}`;
-          // Create a container for the input and the tooltip
-          const orderTooltipContainer = document.createElement('div');
-          orderTooltipContainer.className = 'tooltip-container';
-          orderTooltipContainer.appendChild(orderInput);
-          orderTooltipContainer.appendChild(orderTooltipText);
-          // Add tooltip functionality to the info icon
-          orderInfoIcon.appendChild(orderTooltipText);
-          container.appendChild(orderLabelContainer);
-          container.appendChild(orderTooltipContainer);
-          container.appendChild(document.createElement('br'));
-
-          // Create fields for translation
-          const translationLabel = document.createElement('label');
-          translationLabel.textContent = `Translation (recommended):`;
-          const translationInput = document.createElement('input');
-          translationInput.type = 'text';
-          translationInput.name = `translation_${i + 1}`;
-          container.appendChild(translationLabel);
-          container.appendChild(translationInput);
           container.appendChild(document.createElement('br'));
 
           // Create fields for syntactic function
