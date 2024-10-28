@@ -12,7 +12,7 @@
 
   <body>
     <div class="container">
-      <form action="/submit" method="post">
+      <form action="{{ url_for('submit') }}" method="post">
         <h1>Metadata</h1>
         <div>
           <label for="uri">Select Your Name:</label>

@@ -695,10 +695,10 @@ def submit():
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
 
     # The file is stored in "user_graphs" subfolder, ensure it exists
-    os.makedirs("user_graphs", exist_ok=True)
+    os.makedirs(os.path.join(app.instance_path, "user_graphs"), exist_ok=True)
 
     # Create the file path within the subfolder
-    file_path = os.path.join("user_graphs", f'{user_name.split("/")[-1]}_{timestamp}_cx.ttl')
+    file_path = os.path.join(app.instance_path, "user_graphs", f'{user_name.split("/")[-1]}_{timestamp}_cx.ttl')
 
     # Serialize the ttl file
     g.serialize(destination=file_path, format='turtle')
