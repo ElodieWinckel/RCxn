@@ -88,6 +88,30 @@ button:hover {
     cursor: help;
 }
 
+.label-container .info-icon {
+    font-size: 1.2em; /* Adjust size as needed */
+    cursor: pointer; /* Show pointer cursor on hover */
+    margin-left: 5px; /* Adjust spacing as needed */
+    position: relative; /* Required for tooltip positioning */
+}
+
+.info-icon .tooltiptext {
+    visibility: hidden;
+    width: 600px; /* Adjust as needed */
+    background-color: #555;
+    color: #fff;
+    text-align: left; /* Adjust text alignment as needed */
+    border-radius: 5px;
+    padding: 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* Position above the info icon */
+    left: 50%;
+    margin-left: -100px; /* Center the tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
 .tooltiptext {
     visibility: hidden;
     width: 200px;
@@ -106,6 +130,7 @@ button:hover {
 }
 
 .info-icon:hover .tooltiptext {
+    display: block;
     visibility: visible;
     opacity: 1;
 }
