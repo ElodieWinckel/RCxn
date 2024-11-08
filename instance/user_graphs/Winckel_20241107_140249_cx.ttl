@@ -1,0 +1,62 @@
+@prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cx: <http://example.org/cx/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix membr: <http://example.org/users/> .
+@prefix olia: <http://purl.org/olia/olia.owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cx:RelativeclauseCx a membr:Construction ;
+    cx:differentFormSimilarFunction cx:adjective ;
+    cx:hasConstructionMeaning cx:RelativeclauseCx_Meaning ;
+    cx:hasGesture "sometimes eyebrow" ;
+    cx:hasMetadata cx:RelativeclauseCx_MD ;
+    cx:hasSlots cx:RelativeclauseCx_slots ;
+    cx:inheritedBy cx:EnglishCASADitransitiveConstruction ;
+    cx:inheritsFrom cx:EnglishCASAResultativeConstruction ;
+    cx:metaphoricalExtension cx:EnglishCASAIntransitiveConstruction ;
+    cx:partOfLanguage "English" .
+
+cx:RelativeclauseCx_A a cx:SlotMandatory ;
+    cx:hasIS cx:Background,
+        cx:Topic ;
+    cx:hasSlotForm cx:RelativeclauseCx_A_Form ;
+    cx:hasSlotMeaning cx:RelativeclauseCx_A_Meaning .
+
+cx:RelativeclauseCx_A_Form a cx:SlotForm ;
+    cx:hasSyntacticForm cx:RelativeclauseCx_A_Morphosyntax .
+
+cx:RelativeclauseCx_A_Index a cx:Individual ;
+    cx:hasAnimacy cx:animate ;
+    cx:hasGender cx:masculine ;
+    cx:hasNumberFeature olia:Trial ;
+    cx:hasPerson cx:second .
+
+cx:RelativeclauseCx_A_Meaning a cx:SlotMeaning ;
+    cx:hasIndex cx:RelativeclauseCx_A_Index ;
+    cx:hasSemanticContribution olia:AddresseeRole .
+
+cx:RelativeclauseCx_A_Morphosyntax a cx:Noun ;
+    cx:hasCaseFeature olia:DelativeCase .
+
+cx:RelativeclauseCx_B a cx:SlotMandatory ;
+    cx:hasIS cx:Comment,
+        cx:Focus ;
+    cx:hasRoot "wh-" ;
+    cx:hasSlotForm cx:RelativeclauseCx_B_Form ;
+    cx:hasSlotMeaning cx:RelativeclauseCx_B_Meaning .
+
+cx:RelativeclauseCx_B_Form a cx:SlotForm ;
+    cx:hasSyntacticForm cx:RelativeclauseCx_B_Morphosyntax .
+
+cx:RelativeclauseCx_B_Index a cx:Event ;
+    cx:hasMode olia:ImperativeVerb ;
+    cx:hasTenseFeature olia:PastInFuture ;
+    cx:hasVoice cx:passive .
+
+cx:RelativeclauseCx_B_Meaning a cx:SlotMeaning ;
+    cx:hasIndex cx:RelativeclauseCx_B_Index ;
+    cx:hasSemanticContribution olia:PurposeRole ;
+    cx:hasSemanticProperty "positive connotation" .
+
+cx:RelativeclauseCx_B_Morphosyntax a 
