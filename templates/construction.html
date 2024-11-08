@@ -19,6 +19,20 @@
             </tr>
         {% endfor %}
     </table>
+
+    <h2>Metadata</h2>
+    <table border="1">
+        <tr>
+            <th>Property</th>
+            <th>Object</th>
+        </tr>
+        {% for triple in metadata %}
+            <tr>
+                <td>{{ triple.property }}</td>
+                <td>{{ triple.object }}</td>
+            </tr>
+        {% endfor %}
+    </table>
     <a href="{{ url_for('index') }}">Back to Constructions List</a>
 </body>
 </html>

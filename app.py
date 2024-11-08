@@ -669,7 +669,7 @@ def submit():
         if example_text.strip(): #TODO actually, there should not be any example without a text; but if users create an example by mistake, this needs to be handled
             g.add((cx[construction_name_cleaned], cx.hasExample, example_uri))
             g.add((example_uri, RDF.type, cx.Example))
-            g.add((example_uri, cx.hasText, Literal()))
+            g.add((example_uri, cx.hasText, Literal(example_text)))
         if translation.strip():
             g.add((example_uri, cx.hasTranslation, Literal(translation)))
         if glosses.strip():

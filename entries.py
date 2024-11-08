@@ -64,6 +64,8 @@ def construction_detail(uri):
     entry_uri = URIRef("http://example.org/cx/" + uri)
     # Rebuilt the full URI for the meaning of the construction
     meaning_uri = URIRef("http://example.org/cx/" + uri + "_Meaning")
+    # Rebuilt the full URI for metadata
+    metadata_uri = URIRef("http://example.org/cx/" + uri + "_MD")
 
     # Collect all triples where entry_uri is the subject
     triples = []
@@ -82,14 +84,25 @@ def construction_detail(uri):
             })
     triples[:] = [item for item in triples if item['property'] != "hasConstructionMeaning"]
 
+    # Collect triples for metadata
+    metadata = []
+    for predicate, obj in g.predicate_objects(subject=metadata_uri):
+        if str(predicate) != "http://www.w3.org/1999/02/22-rdf-syntax-ns#type":
+            metadata.append({
+                'property': re.sub(prefixes, "", str(predicate)),
+                'object': re.sub(prefixes, "", str(obj)),
+            })
+    metadata[:] = [item for item in metadata if item['property'] != "hasTitle"]
+    triples[:] = [item for item in triples if item['property'] != "hasMetadata"]
+
     # Print triples for debug
     print(triples)
+    print(metadata)
 
     # Fetch the title for display purposes
-    entry_metadata_uri = URIRef(str(entry_uri) + "_MD")
-    title = g.value(entry_metadata_uri, CX.hasTitle)
+    title = g.value(metadata_uri, CX.hasTitle)
 
-    return render_template("construction.html", title=title, triples=triples)
+    return render_template("construction.html", title=title, triples=triples, metadata=metadata)
 
 
 if __name__ == "__main__":
