@@ -1,4 +1,5 @@
 import glob
+import re
 from flask import Flask, render_template, redirect, url_for
 from rdflib import Graph, URIRef, Literal, Namespace, RDF, XSD
 
@@ -56,16 +57,33 @@ def index():
 
 @app.route('/construction/<path:uri>', endpoint='construction_detail')
 def construction_detail(uri):
+    # A list of prefixes that we might want to delete from the URI
+    prefixes = "http://example.org/cx/|http://example.org/users/|http://purl.org/olia/olia.owl#|http://www.w3.org/2000/01/rdf-schema#|http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+
     # Rebuild the full URI for the construction
     entry_uri = URIRef("http://example.org/cx/" + uri)
+    # Rebuilt the full URI for the meaning of the construction
+    meaning_uri = URIRef("http://example.org/cx/" + uri + "_Meaning")
 
     # Collect all triples where entry_uri is the subject
     triples = []
     for predicate, obj in g.predicate_objects(subject=entry_uri):
         triples.append({
-            'property': str(predicate),
-            'object': str(obj)
+            'property': re.sub(prefixes, "", str(predicate)),
+            'object': re.sub(prefixes, "", str(obj)),
         })
+
+    # Add triples for meaning
+    for predicate, obj in g.predicate_objects(subject=meaning_uri):
+        if str(predicate) != "http://www.w3.org/1999/02/22-rdf-syntax-ns#type":
+            triples.append({
+                'property': re.sub(prefixes, "", str(predicate)),
+                'object': re.sub(prefixes, "", str(obj)),
+            })
+    triples[:] = [item for item in triples if item['property'] != "hasConstructionMeaning"]
+
+    # Print triples for debug
+    print(triples)
 
     # Fetch the title for display purposes
     entry_metadata_uri = URIRef(str(entry_uri) + "_MD")
