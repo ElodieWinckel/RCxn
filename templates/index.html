@@ -393,6 +393,16 @@
           container.appendChild(stemTooltipContainer);
           container.appendChild(document.createElement('br'));
 
+          // Create fields for transliteration
+          const transliterationLabel = document.createElement('label');
+          transliterationLabel.textContent = `Transliteration (optional):`;
+          const transliterationInput = document.createElement('input');
+          transliterationInput.type = 'text';
+          transliterationInput.name = `transliteration_${i + 1}`;
+          container.appendChild(transliterationLabel);
+          container.appendChild(transliterationInput);
+          container.appendChild(document.createElement('br'));
+
           // Create fields for translation
           const translationLabel = document.createElement('label');
           translationLabel.textContent = `Translation (recommended):`;
@@ -1200,6 +1210,9 @@
             <br>
             <label for="translation_${exampleCounter}">Translation of the example:</label>
             <input type="text" id="translation_${exampleCounter}" name="translation_${exampleCounter}">
+            <br>
+            <label for="transliteration_${exampleCounter}">Transliteration of the example:</label>
+            <input type="text" id="transliteration_${exampleCounter}" name="transliteration_${exampleCounter}">
             <br>
             <label for="glosses_${exampleCounter}">Glosses of the example:</label>
             <input type="text" id="glosses_${exampleCounter}" name="glosses_${exampleCounter}">

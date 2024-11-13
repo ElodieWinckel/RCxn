@@ -120,20 +120,20 @@ def load_existing_constructions_title(file_path):
 ###################################################
 
 # Prepare all lists that are passed to the HTML form
-uri_list = load_uris_from_ttl('users.ttl')
-project_list = load_projects_from_ttl('users.ttl')
-semantic_roles = load_SemanticRoles('olia.owl')
+uri_list = load_uris_from_ttl('/data/www/RCxn/users.ttl')
+project_list = load_projects_from_ttl('/data/www/RCxn/users.ttl')
+semantic_roles = load_SemanticRoles('/data/www/RCxn/olia.owl')
 semantic_roles.insert(0, '') # The first element of the drop-down list should be the empty string
-number_features = load_NumberFeatures('olia.owl')
+number_features = load_NumberFeatures('/data/www/RCxn/olia.owl')
 number_features.insert(0, '') # The first element of the drop-down list should be the empty string
-case_features = load_CaseFeatures('olia.owl')
+case_features = load_CaseFeatures('/data/www/RCxn/olia.owl')
 case_features.insert(0, '') # The first element of the drop-down list should be the empty string
-tense_features = load_TenseFeatures('olia.owl')
+tense_features = load_TenseFeatures('/data/www/RCxn/olia.owl')
 tense_features.insert(0,("",""))
-modus = load_Mode('olia.owl')
+modus = load_Mode('/data/www/RCxn/olia.owl')
 modus.insert(0, '') # The first element of the drop-down list should be the empty string
-list_cx_uris = load_existing_constructions_uri('cx.ttl')
-list_cx = load_existing_constructions_title("cx.ttl")
+list_cx_uris = load_existing_constructions_uri('/data/www/RCxn/cx.ttl')
+list_cx = load_existing_constructions_title("/data/www/RCxn/cx.ttl")
 
 @app.route('/')
 def index():
@@ -402,6 +402,7 @@ def submit():
         voice = request.form[f'voice_{i}']
         morphosyntactic_form = request.form[f'morphosyntactic_form_{i}']
         word_order = request.form[f'WordOrder_{i}']
+        transliteration = request.form[f'transliteration_{i}']
         translation = request.form[f'translation_{i}']
         syntactic_function = request.form[f'syntactic_function_{i}']
         case = request.form[f'case_{i}']
@@ -526,6 +527,10 @@ def submit():
             g.add((element_uri, cx.hasRoot, Literal(root)))
         if stem.strip():
             g.add((element_uri, cx.hasStem, Literal(stem)))
+        if translation.strip():
+            g.add((element_uri, cx.hasTranslation, Literal(translation)))
+        if transliteration.strip():
+            g.add((element_uri, cx.hasTransliteration, Literal(transliteration)))
 
         # If defined, attribute its morphosyntactic form, syntactic function, translation and case to the element/slot.
         if morphosyntactic_form.strip():
@@ -534,23 +539,19 @@ def submit():
             g.add((morphsyn_form_uri, RDF.type, cx[morphosyntactic_form]))
             # Triple to relate slot to it meaning
             g.add((slot_form_uri, cx.hasSyntacticForm, morphsyn_form_uri))
-        if translation.strip():
-            if not morphosyntactic_form.strip():
-                return "Error: You cannot provide a translation without morphosyntactic form"
-            g.add((morphsyn_form_uri, cx.hasTranslation, Literal(translation)))
         if syntactic_function.strip():
-            if not morphosyntactic_form.strip():
-                return "Error: You cannot provide a syntactic function without morphosyntactic form"
+            morphsyn_form_uri = URIRef(cx[f"{construction_name_cleaned}_{chr(65 + y)}_Morphosyntax"])
+            g.add((morphsyn_form_uri, RDF.type, cx[morphosyntactic_form]))
             g.add((morphsyn_form_uri, cx.hasSyntacticFunction, Literal(syntactic_function)))
         if add_case.strip():
-            if not morphosyntactic_form.strip():
-                return "Error: You cannot provide a case without morphosyntactic form"
+            morphsyn_form_uri = URIRef(cx[f"{construction_name_cleaned}_{chr(65 + y)}_Morphosyntax"])
+            g.add((morphsyn_form_uri, RDF.type, cx[morphosyntactic_form]))
             print("Warning: new value for case!")
             g.add((morphsyn_form_uri, cx.hasCaseFeature, Literal(add_case)))
         else:
             if case.strip():
-                if not morphosyntactic_form.strip():
-                    return "Error: You cannot provide a case without morphosyntactic form"
+                morphsyn_form_uri = URIRef(cx[f"{construction_name_cleaned}_{chr(65 + y)}_Morphosyntax"])
+                g.add((morphsyn_form_uri, RDF.type, cx[morphosyntactic_form]))
                 case = case + "Case"
                 g.add((morphsyn_form_uri, cx.hasCaseFeature, olia[case]))
 
@@ -658,7 +659,8 @@ def submit():
     while f'example_text_{example_counter}' in request.form:
         # Fetch values for each example
         example_text = request.form[f'example_text_{example_counter}']
-        translation = request.form[f'translation_{example_counter}']
+        ex_translation = request.form[f'translation_{example_counter}']
+        transliteration = request.form[f'transliteration_{example_counter}']
         glosses = request.form[f'glosses_{example_counter}']
         comment = request.form[f'comment_{example_counter}']
 
@@ -670,8 +672,10 @@ def submit():
             g.add((cx[construction_name_cleaned], cx.hasExample, example_uri))
             g.add((example_uri, RDF.type, cx.Example))
             g.add((example_uri, cx.hasText, Literal(example_text)))
-        if translation.strip():
-            g.add((example_uri, cx.hasTranslation, Literal(translation)))
+        if ex_translation.strip():
+            g.add((example_uri, cx.hasTranslation, Literal(ex_translation)))
+        if transliteration.strip():
+            g.add((example_uri, cx.hasTransliteration, Literal(transliteration)))
         if glosses.strip():
             g.add((example_uri, cx.hasGlosses, Literal(glosses)))
         if comment.strip():
