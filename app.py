@@ -120,20 +120,21 @@ def load_existing_constructions_title(file_path):
 ###################################################
 
 # Prepare all lists that are passed to the HTML form
-uri_list = load_uris_from_ttl('/data/www/RCxn/users.ttl')
-project_list = load_projects_from_ttl('/data/www/RCxn/users.ttl')
-semantic_roles = load_SemanticRoles('/data/www/RCxn/olia.owl')
+# /data/www/RCxn/
+uri_list = load_uris_from_ttl('users.ttl')
+project_list = load_projects_from_ttl('users.ttl')
+semantic_roles = load_SemanticRoles('olia.owl')
 semantic_roles.insert(0, '') # The first element of the drop-down list should be the empty string
-number_features = load_NumberFeatures('/data/www/RCxn/olia.owl')
+number_features = load_NumberFeatures('olia.owl')
 number_features.insert(0, '') # The first element of the drop-down list should be the empty string
-case_features = load_CaseFeatures('/data/www/RCxn/olia.owl')
+case_features = load_CaseFeatures('olia.owl')
 case_features.insert(0, '') # The first element of the drop-down list should be the empty string
-tense_features = load_TenseFeatures('/data/www/RCxn/olia.owl')
+tense_features = load_TenseFeatures('olia.owl')
 tense_features.insert(0,("",""))
-modus = load_Mode('/data/www/RCxn/olia.owl')
+modus = load_Mode('olia.owl')
 modus.insert(0, '') # The first element of the drop-down list should be the empty string
-list_cx_uris = load_existing_constructions_uri('/data/www/RCxn/cx.ttl')
-list_cx = load_existing_constructions_title("/data/www/RCxn/cx.ttl")
+list_cx_uris = load_existing_constructions_uri('cx.ttl')
+list_cx = load_existing_constructions_title("cx.ttl")
 
 @app.route('/')
 def index():
@@ -659,9 +660,9 @@ def submit():
     while f'example_text_{example_counter}' in request.form:
         # Fetch values for each example
         example_text = request.form[f'example_text_{example_counter}']
-        ex_translation = request.form[f'translation_{example_counter}']
-        transliteration = request.form[f'transliteration_{example_counter}']
-        glosses = request.form[f'glosses_{example_counter}']
+        ex_translation = request.form[f'example_translation_{example_counter}']
+        ex_transliteration = request.form[f'example_transliteration_{example_counter}']
+        ex_glosses = request.form[f'glosses_{example_counter}']
         comment = request.form[f'comment_{example_counter}']
 
         # Create a unique URI for each example
@@ -674,10 +675,10 @@ def submit():
             g.add((example_uri, cx.hasText, Literal(example_text)))
         if ex_translation.strip():
             g.add((example_uri, cx.hasTranslation, Literal(ex_translation)))
-        if transliteration.strip():
-            g.add((example_uri, cx.hasTransliteration, Literal(transliteration)))
-        if glosses.strip():
-            g.add((example_uri, cx.hasGlosses, Literal(glosses)))
+        if ex_transliteration.strip():
+            g.add((example_uri, cx.hasTransliteration, Literal(ex_transliteration)))
+        if ex_glosses.strip():
+            g.add((example_uri, cx.hasGlosses, Literal(ex_glosses)))
         if comment.strip():
             g.add((example_uri, RDFS.comment, Literal(comment)))
 
