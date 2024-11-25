@@ -21,7 +21,7 @@ membr:Fokashchuk a foaf:Person ;
     foaf:familyName "Fokashchuk" ;
     foaf:givenName "Iryna" .
 
-membr:Führer a foaf:Person ;
+membr:Fuehrer a foaf:Person ;
     foaf:currentProject membr:Project_Führer ;
     foaf:familyName "Führer" ;
     foaf:givenName "Bastian" .
@@ -71,7 +71,7 @@ membr:Lee a foaf:Person ;
     foaf:familyName "Lee" ;
     foaf:givenName "Dongeun" .
 
-membr:Legouté a foaf:Person ;
+membr:Legoute a foaf:Person ;
     foaf:currentProject membr:Project_Legouté ;
     foaf:familyName "Legouté" ;
     foaf:givenName "Anne Sherley" .
