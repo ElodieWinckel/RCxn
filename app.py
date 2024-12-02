@@ -537,22 +537,24 @@ def submit():
         if morphosyntactic_form.strip():
             # URI for morphosyntax
             morphsyn_form_uri = URIRef(cx[f"{construction_name_cleaned}_{chr(65 + y)}_Morphosyntax"])
-            g.add((morphsyn_form_uri, RDF.type, cx[morphosyntactic_form]))
+            morphosyntactic_form_cleaned = morphosyntactic_form.replace(" ", "")
+            g.add((morphsyn_form_uri, RDF.type, cx[morphosyntactic_form_cleaned]))
+            g.add((cx[morphosyntactic_form_cleaned], RDFS.label, Literal(morphosyntactic_form)))
             # Triple to relate slot to it meaning
             g.add((slot_form_uri, cx.hasSyntacticForm, morphsyn_form_uri))
         if syntactic_function.strip():
             morphsyn_form_uri = URIRef(cx[f"{construction_name_cleaned}_{chr(65 + y)}_Morphosyntax"])
-            g.add((morphsyn_form_uri, RDF.type, cx[morphosyntactic_form]))
+            g.add((morphsyn_form_uri, RDF.type, cx[morphosyntactic_form_cleaned]))
             g.add((morphsyn_form_uri, cx.hasSyntacticFunction, Literal(syntactic_function)))
         if add_case.strip():
             morphsyn_form_uri = URIRef(cx[f"{construction_name_cleaned}_{chr(65 + y)}_Morphosyntax"])
-            g.add((morphsyn_form_uri, RDF.type, cx[morphosyntactic_form]))
+            g.add((morphsyn_form_uri, RDF.type, cx[morphosyntactic_form_cleaned]))
             print("Warning: new value for case!")
             g.add((morphsyn_form_uri, cx.hasCaseFeature, Literal(add_case)))
         else:
             if case.strip():
                 morphsyn_form_uri = URIRef(cx[f"{construction_name_cleaned}_{chr(65 + y)}_Morphosyntax"])
-                g.add((morphsyn_form_uri, RDF.type, cx[morphosyntactic_form]))
+                g.add((morphsyn_form_uri, RDF.type, cx[morphosyntactic_form_cleaned]))
                 case = case + "Case"
                 g.add((morphsyn_form_uri, cx.hasCaseFeature, olia[case]))
 

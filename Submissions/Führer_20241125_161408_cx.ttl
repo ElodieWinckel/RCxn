@@ -1,0 +1,190 @@
+@prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cx: <http://example.org/cx/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix membr: <http://example.org/users/> .
+@prefix olia: <http://purl.org/olia/olia.owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cx:Transitivedurch-Präfixverbkonstruktion a membr:Construction ;
+    cx:hasConstructionMeaning cx:Transitivedurch-Präfixverbkonstruktion_Meaning ;
+    cx:hasExample cx:Transitivedurch-Präfixverbkonstruktion_Ex_A,
+        cx:Transitivedurch-Präfixverbkonstruktion_Ex_B,
+        cx:Transitivedurch-Präfixverbkonstruktion_Ex_C ;
+    cx:hasMetadata cx:Transitivedurch-Präfixverbkonstruktion_MD ;
+    cx:hasSlots cx:Transitivedurch-Präfixverbkonstruktion_slots ;
+    cx:inheritsFrom cx:Monotransitivkonstruktion,
+        cx:Präfixverbkonstruktion ;
+    cx:partOfLanguage "Mittelhochdeutsch, schriftlich, 12. Jh." ;
+    cx:similarFormSameFunction cx:Transitivedurch-Partikelverbkonstruktion,
+        cx:Transitivedurch-Verbkonstruktion ;
+    RDFS:comment "Depends on what is doable, all MHG data is available in form of one big csv-file. Can be split into multiple files,  however." .
+
+cx:Monotransitivkonstruktion a membr:Construction ;
+    cx:annotator membr:Führer ;
+    cx:createdOn "2024-11-25"^^xsd:date ;
+    cx:hasTitle "Monotransitivkonstruktion" .
+
+cx:Präfixverbkonstruktion a membr:Construction ;
+    cx:annotator membr:Führer_A_Meaning ;
+    cx:hasTranslation "er, sie, der, die Christen" .
+
+cx:Transitivedurch-Präfixverbkonstruktion_A_Form a cx:SlotForm ;
+    cx:hasSyntacticForm cx:Transitivedurch-Präfixverbkonstruktion_A_Morphosyntax .
+
+cx:Transitivedurch-Präfixverbkonstruktion_A_Index a cx:Individual ;
+    cx:hasAnimacy cx:animate .
+
+cx:Transitivedurch-Präfixverbkonstruktion_A_Meaning a cx:SlotMeaning ;
+    cx:hasIndex cx:Transitivedurch-Präfixverbkonstruktion_A_Index ;
+    cx:hasSemanticContribution olia:ActorMacroRole ;
+    cx:hasSemanticProperty "Figur" .
+
+cx:Transitivedurch-Präfixverbkonstruktion_A_Morphosyntax a cx:NP ;
+    cx:hasSyntacticFunction "Subject" .
+
+cx:Transitivedurch-Präfixverbkonstruktion_B a cx:SlotMandatory ;
+    cx:WordOrder "2 vor 3" ;
+    cx:hasSlotForm cx:Transitivedurch-Präfixverbkonstruktion_B_Form ;
+    cx:hasSlotMeaning cx:Transitivedurch-Präfixverbkonstruktion_B_Meaning ;
+    cx:hasStem "durh" ;
+    cx:hasTranslation "'durch'" .
+
+cx:Transitivedurch-Präfixverbkonstruktion_B_Form a cx:SlotForm ;
+    cx:hasSyntacticForm cx:Transitivedurch-Präfixverbkonstruktion_B_Morphosyntax .
+
+cx:Transitivedurch-Präfixverbkonstruktion_B_Meaning a cx:SlotMeaning ;
+    cx:hasSemanticContribution olia:DirectionRole .
+
+cx:Transitivedurch-Präfixverbkonstruktion_B_Morphosyntax a cx:Präfix .
+
+cx:Transitivedurch-Präfixverbkonstruktion_C a cx:SlotMandatory ;
+    cx:WordOrder "3 nach 2" ;
+    cx:hasSlotForm cx:Transitivedurch-Präfixverbkonstruktion_C_Form ;
+    cx:hasSlotMeaning cx:Transitivedurch-Präfixverbkonstruktion_C_Meaning ;
+    cx:hasStem "bîzen, houwen, brëchen, rîten, dringen" ;
+    cx:hasTranslation "beißen, hauen, brechen, reiten, dringen" .
+
+cx:Transitivedurch-Präfixverbkonstruktion_C_Form a cx:SlotForm ;
+    cx:hasSyntacticForm cx:Transitivedurch-Präfixverbkonstruktion_C_Morphosyntax .
+
+cx:Transitivedurch-Präfixverbkonstruktion_C_Index a cx:Event ;
+    cx:hasVoice cx:active .
+
+cx:Transitivedurch-Präfixverbkonstruktion_C_Meaning a cx:SlotMeaning ;
+    cx:hasIndex cx:Transitivedurch-Präfixverbkonstruktion_C_Index ;
+    cx:hasSemanticProperty "'zerstörerische' Verben oder allg. Bewegungsverben" .
+
+cx:Transitivedurch-Präfixverbkonstruktion_C_Morphosyntax a cx:Verb .
+
+cx:Transitivedurch-Präfixverbkonstruktion_D a cx:SlotMandatory ;
+    cx:hasSlotForm cx:Transitivedurch-Präfixverbkonstruktion_D_Form ;
+    cx:hasSlotMeaning cx:Transitivedurch-Präfixverbkonstruktion_D_Meaning ;
+    cx:hasTranslation "sie, die Seite, die Lande, das Schlachtfeld, die Schar" ;
+    RDFS:comment "Akkusativ ist schon interpretiert; formale Basis oft formgleich mit anderen Fällen" .
+
+cx:Transitivedurch-Präfixverbkonstruktion_D_Form a cx:SlotForm ;
+    cx:hasSyntacticForm cx:Transitivedurch-Präfixverbkonstruktion_D_Morphosyntax .
+
+cx:Transitivedurch-Präfixverbkonstruktion_D_Meaning a cx:SlotMeaning ;
+    cx:hasSemanticContribution "Undergoer, Location" ;
+    cx:hasSemanticProperty "Gegenständliches oder Lokalitäten" .
+
+cx:Transitivedurch-Präfixverbkonstruktion_D_Morphosyntax a cx:NP ;
+    cx:hasCaseFeature olia:AccusativeCase ;
+    cx:hasSyntacticFunction "Object" .
+
+cx:Transitivedurch-Präfixverbkonstruktion_E a cx:SlotOptional ;
+    cx:hasSlotForm cx:Transitivedurch-Präfixverbkonstruktion_E_Form ;
+    cx:hasSlotMeaning cx:Transitivedurch-Präfixverbkonstruktion_E_Meaning ;
+    cx:hasTranslation "da, somit" .
+
+cx:Transitivedurch-Präfixverbkonstruktion_E_Form a cx:SlotForm ;
+    cx:hasSyntacticForm cx:Transitivedurch-Präfixverbkonstruktion_E_Morphosyntax .
+
+cx:Transitivedurch-Präfixverbkonstruktion_E_Meaning a cx:SlotMeaning ;
+    cx:hasSemanticContribution olia:TimeRole .
+
+cx:Transitivedurch-Präfixverbkonstruktion_E_Morphosyntax a cx:AdvP ;
+    cx:hasSyntacticFunction "Temporaladverbiale" .
+
+cx:Transitivedurch-Präfixverbkonstruktion_Ex_A a cx:Example ;
+    cx:hasGlosses "NG_nom - Prä - Verb - NG_akk" ;
+    cx:hasText "Thie criſtenen thurhthrungen ſie" ;
+    cx:hasTranslation "Die Christen durchdrungen sie" ;
+    RDFS:comment "Intermediär" .
+
+cx:Transitivedurch-Präfixverbkonstruktion_Ex_B a cx:Example ;
+    cx:hasGlosses "pN_nom - PP - Verb - NG_akk " ;
+    cx:hasText "der durch reit div lant" ;
+    cx:hasTranslation "der durchreitet die Lande" ;
+    RDFS:comment "Intermediär/Multidirektional" .
+
+cx:Transitivedurch-Präfixverbkonstruktion_Ex_C a cx:Example ;
+    cx:hasGlosses "pN_nom - PP - Verb - NG_akk" ;
+    cx:hasText "ſi durh hiwen daz wal" ;
+    cx:hasTranslation "sie durchbrechen das Schlachtfeld" ;
+    RDFS:comment "teil-intermediär" .
+
+cx:Transitivedurch-Präfixverbkonstruktion_F a cx:SlotOptional ;
+    RDFS:comment "please delete!" .
+
+cx:Transitivedurch-Präfixverbkonstruktion_G a cx:SlotOptional ;
+    cx:hasSlotForm cx:Transitivedurch-Präfixverbkonstruktion_G_Form ;
+    cx:hasSlotMeaning cx:Transitivedurch-Präfixverbkonstruktion_G_Meaning ;
+    cx:hasStem "er" ;
+    cx:hasTranslation "ihr, ihm" .
+
+cx:Transitivedurch-Präfixverbkonstruktion_G_Form a cx:SlotForm ;
+    cx:hasSyntacticForm cx:Transitivedurch-Präfixverbkonstruktion_G_Morphosyntax .
+
+cx:Transitivedurch-Präfixverbkonstruktion_G_Index a cx:Individual ;
+    cx:hasAnimacy cx:animate .
+
+cx:Transitivedurch-Präfixverbkonstruktion_G_Meaning a cx:SlotMeaning ;
+    cx:hasIndex cx:Transitivedurch-Präfixverbkonstruktion_G_Index ;
+    cx:hasSemanticContribution olia:AddresseeRole .
+
+cx:Transitivedurch-Präfixverbkonstruktion_G_Morphosyntax a cx:Pronomen ;
+    cx:hasCaseFeature olia:DativeCase ;
+    cx:hasSyntacticFunction "Dativobjekt" .
+
+cx:Transitivedurch-Präfixverbkonstruktion_MD a cx:Metadata ;
+    cx:annotator membr:Führer ;
+    cx:creationDate "2024-11-25"^^xsd:date ;
+    cx:hasFindings """Subjekt ist Figur, Objekt ist Grund; \r
+Gegenstände als Objekt erlauben nur intermediäre Interpretationen, während Lokalitäten auch multidirektionale Interpretationen erlauben""" ;
+    cx:hasRQ membr:Project_Führer ;
+    cx:hasSources cx:Transitivedurch-Präfixverbkonstruktion_Sources ;
+    cx:hasTitle "Mittelhochdeutsch, schriftlich, 12. Jh. Transitive durch-Präfixverbkonstruktion" .
+
+cx:Transitivedurch-Präfixverbkonstruktion_Meaning a cx:ConstructionMeaning ;
+    cx:hasImageSchema "teil-intermediäres durch, intermediäres durch, multidirektionales durch" ;
+    cx:hasMeaning "'jemand bewegt sich durch etwas/einen Ort'" .
+
+cx:Transitivedurch-Präfixverbkonstruktion_Sources a cx:Collection ;
+    cx:basedOn <https://www.linguistics.ruhr-uni-bochum.de/rem/> .
+
+cx:Transitivedurch-Präfixverbkonstruktion_slots a rdf:Seq ;
+    rdf:_1 cx:Transitivedurch-Präfixverbkonstruktion_A ;
+    rdf:_2 cx:Transitivedurch-Präfixverbkonstruktion_B ;
+    rdf:_3 cx:Transitivedurch-Präfixverbkonstruktion_C ;
+    rdf:_4 cx:Transitivedurch-Präfixverbkonstruktion_D ;
+    rdf:_5 cx:Transitivedurch-Präfixverbkonstruktion_E ;
+    rdf:_6 cx:Transitivedurch-Präfixverbkonstruktion_F ;
+    rdf:_7 cx:Transitivedurch-Präfixverbkonstruktion_G .
+
+cx:Transitivedurch-Verbkonstruktion a membr:Construction ;
+    cx:annotator membr:Führer ;
+    cx:createdOn "2024-11-25"^^xsd:date ;
+    cx:hasTitle "Transitive durch-Verbkonstruktion" .
+
+<https://www.linguistics.ruhr-uni-bochum.de/rem/> dc:creator "Dipper, Stefanie",
+        "Klein, Thomas",
+        "Roussel, Adam",
+        "Wegera, Klaus-Peter",
+        "Wich-Reif, Claudia" ;
+    dc:date "2024" ;
+    dc:title "Referenzkorpus Mittelhochdeutsch (1050-1350)" ;
+    dc:type "dataset" .
+

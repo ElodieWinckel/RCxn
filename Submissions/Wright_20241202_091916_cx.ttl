@@ -1,0 +1,70 @@
+@prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cx: <http://example.org/cx/> .
+@prefix membr: <http://example.org/users/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cx:Toughmovementconstruction a membr:Construction ;
+    cx:hasConstructionMeaning cx:Toughmovementconstruction_Meaning ;
+    cx:hasExample cx:Toughmovementconstruction_Ex_A ;
+    cx:hasMetadata cx:Toughmovementconstruction_MD ;
+    cx:hasSlots cx:Toughmovementconstruction_slots ;
+    cx:partOfLanguage "English" ;
+    RDFS:comment "No research data that will be linked" .
+
+cx:Toughmovementconstruction_A a cx:SlotMandatory ;
+    cx:WordOrder "Element 1 immediately precedes Element 2" ;
+    cx:hasSlotForm cx:Toughmovementconstruction_A_Form .
+
+cx:Toughmovementconstruction_A_Form a cx:SlotForm ;
+    cx:hasSyntacticForm cx:Toughmovementconstruction_A_Morphosyntax .
+
+cx:Toughmovementconstruction_A_Morphosyntax a cx:NP .
+
+cx:Toughmovementconstruction_B a cx:SlotMandatory ;
+    cx:WordOrder "Element 2 immediately precedes Element 3" ;
+    cx:hasSlotForm cx:Toughmovementconstruction_B_Form ;
+    cx:hasStem "BE" .
+
+cx:Toughmovementconstruction_B_Form a cx:SlotForm ;
+    cx:hasSyntacticForm cx:Toughmovementconstruction_B_Morphosyntax .
+
+cx:Toughmovementconstruction_B_Morphosyntax a cx:VP .
+
+cx:Toughmovementconstruction_C a cx:SlotMandatory ;
+    cx:WordOrder "Element 3, which immediately follows Element 2" ;
+    cx:hasSlotForm cx:Toughmovementconstruction_C_Form ;
+    cx:hasSlotMeaning cx:Toughmovementconstruction_C_Meaning .
+
+cx:Toughmovementconstruction_C_Form a cx:SlotForm ;
+    cx:hasSyntacticForm cx:Toughmovementconstruction_C_Morphosyntax .
+
+cx:Toughmovementconstruction_C_Index a cx:Event ;
+    cx:hasTenseFeature "Infinitive" .
+
+cx:Toughmovementconstruction_C_Meaning a cx:SlotMeaning ;
+    cx:hasIndex cx:Toughmovementconstruction_C_Index .
+
+cx:Toughmovementconstruction_C_Morphosyntax a cx:AdjP .
+
+cx:Toughmovementconstruction_Ex_A a cx:Example ;
+    cx:hasGlosses "NP BE Adj to-Inf" ;
+    cx:hasText "John is easy to please." .
+
+cx:Toughmovementconstruction_MD a cx:Metadata ;
+    cx:annotator membr:Wright ;
+    cx:creationDate "2024-12-02"^^xsd:date ;
+    cx:hasRQ membr:Project_Wright ;
+    cx:hasSources cx:Toughmovementconstruction_Sources ;
+    cx:hasTitle "English Tough movement construction" .
+
+cx:Toughmovementconstruction_Meaning a cx:ConstructionMeaning .
+
+cx:Toughmovementconstruction_Sources a cx:Collection ;
+    RDFS:seeAlso <https://constructicon.de/constructions/45> .
+
+cx:Toughmovementconstruction_slots a rdf:Seq ;
+    rdf:_1 cx:Toughmovementconstruction_A ;
+    rdf:_2 cx:Toughmovementconstruction_B ;
+    rdf:_3 cx:Toughmovementconstruction_C .
+

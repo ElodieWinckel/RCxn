@@ -1,0 +1,205 @@
+@prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cx: <http://example.org/cx/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix membr: <http://example.org/users/> .
+@prefix olia: <http://purl.org/olia/olia.owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cx:Transitiveobjectrelativeclause a membr:Construction ;
+    cx:hasConstructionMeaning cx:Transitiveobjectrelativeclause_Meaning ;
+    cx:hasExample cx:Transitiveobjectrelativeclause_Ex_A,
+        cx:Transitiveobjectrelativeclause_Ex_B,
+        cx:Transitiveobjectrelativeclause_Ex_C,
+        cx:Transitiveobjectrelativeclause_Ex_D ;
+    cx:hasMetadata cx:Transitiveobjectrelativeclause_MD ;
+    cx:hasSlots cx:Transitiveobjectrelativeclause_slots ;
+    cx:inheritsFrom cx:Spanishobjectrelativeclause,
+        cx:Spanishrelativeclause,
+        cx:Spanishtransitiveconstruction ;
+    cx:partOfLanguage "Spoken Peninsular Spanish" ;
+    RDFS:comment "2 graphs (PDF- accuracy and reaction time). Tables with model output - if relevant (CSV or docx)" .
+
+membr:Project_FernandezSantos membr:SubProject membr:Project_FernandezSantos_241125 .
+
+<http://journals.sagepub.com/doi/10.1080/17470218.2012.674951> dc:creator "López-Higes, Ramón",
+        "Martín-Aragoneses, MaríaTeresa",
+        "del Río, David" ;
+    dc:date "11/2012" ;
+    dc:identifier "DOI 10.1080/17470218.2012.674951",
+        "ISSN 1747-0218, 1747-0226" ;
+    dc:title "Canonical word order and interference-based integration costs during sentence comprehension: The case of Spanish subject- and object-relative clauses" ;
+    dc:type "journalArticle" .
+
+<https://www.cambridge.org/core/product/identifier/S1866980823000698/type/journal_article> dc:creator "Dąbrowska, Ewa",
+        "Llompart, Miquel" ;
+    dc:date "2024-01-11" ;
+    dc:identifier "DOI 10.1017/langcog.2023.69",
+        "ISSN 1866-9808, 1866-9859" ;
+    dc:title "Explicit instruction improves the comprehension of Spanish object relatives by young monolingual children" ;
+    dc:type "journalArticle" .
+
+<https://www.glossa-journal.org/article/id/11254/> dc:creator "Presotto, Giacomo",
+        "Torregrossa, Jacopo" ;
+    dc:date "2024-8-8" ;
+    dc:identifier "DOI 10.16995/glossa.11254",
+        "ISSN 2397-1835" ;
+    dc:rights "https://creativecommons.org/licenses/by/4.0" ;
+    dc:title "Intervention and amelioration effects in the acquisition of Spanish object relative clauses: the role of word order and DOM" ;
+    dc:type "journalArticle" .
+
+cx:Spanishobjectrelativeclause a membr:Construction ;
+    cx:annotator membr:FernandezSantos ;
+    cx:createdOn "2024-11-25"^^xsd:date ;
+    cx:hasTitle "Spanish object relative clause" .
+
+cx:Spanishrelativeclause a membr:Construction ;
+    cx:annotator membr:FernandezSantos ;
+    cx:createdOn "2024-11-25"^^xsd:date ;
+    cx:hasTitle "Spanish relative clause" .
+
+cx:Spanishtransitiveconstruction a membr:Construction ;
+    cx:annotator membr:FernandezSantos ;
+    cx:createdOn "2024-11-25"^^xsd:date ;
+    cx:hasTitle "Spanish transitive construction" .
+
+cx:Transitiveobjectrelativeclause_A a cx:SlotMandatory ;
+    cx:hasSlotForm cx:Transitiveobjectrelativeclause_A_Form ;
+    cx:hasSlotMeaning cx:Transitiveobjectrelativeclause_A_Meaning .
+
+cx:Transitiveobjectrelativeclause_A_Form a cx:SlotForm ;
+    cx:hasSyntacticForm cx:Transitiveobjectrelativeclause_A_Morphosyntax .
+
+cx:Transitiveobjectrelativeclause_A_Index a cx:Individual ;
+    cx:hasAnimacy cx:animate ;
+    cx:hasNumberFeature olia:Singular .
+
+cx:Transitiveobjectrelativeclause_A_Meaning a cx:SlotMeaning ;
+    cx:hasIndex cx:Transitiveobjectrelativeclause_A_Index .
+
+cx:Transitiveobjectrelativeclause_A_Morphosyntax a cx:NP ;
+    cx:hasSyntacticFunction "Object (within the clause)" .
+
+cx:Transitiveobjectrelativeclause_B a cx:SlotOptional ;
+    cx:WordOrder "If present, Element 2 immediately after Element 1" ;
+    cx:hasSlotForm cx:Transitiveobjectrelativeclause_B_Form ;
+    cx:hasStem "a + article" ;
+    cx:hasTranslation "to:the" .
+
+cx:Transitiveobjectrelativeclause_B_Form a cx:SlotForm ;
+    cx:hasSyntacticForm cx:Transitiveobjectrelativeclause_B_Morphosyntax .
+
+cx:Transitiveobjectrelativeclause_B_Morphosyntax a cx:PP ;
+    cx:hasSyntacticFunction "direct object marker" .
+
+cx:Transitiveobjectrelativeclause_C a cx:SlotMandatory ;
+    cx:WordOrder "immediately after Element 1 (if Element 2 not present), or immediately after Element 2 if present" ;
+    cx:hasSlotForm cx:Transitiveobjectrelativeclause_C_Form ;
+    cx:hasTranslation "that" .
+
+cx:Transitiveobjectrelativeclause_C_Form a cx:SlotForm ;
+    cx:hasSyntacticForm cx:Transitiveobjectrelativeclause_C_Morphosyntax .
+
+cx:Transitiveobjectrelativeclause_C_Morphosyntax a cx:relativiser .
+
+cx:Transitiveobjectrelativeclause_D a cx:SlotMandatory ;
+    cx:WordOrder "Immediately after Element 3" ;
+    cx:hasSlotForm cx:Transitiveobjectrelativeclause_D_Form ;
+    cx:hasSlotMeaning cx:Transitiveobjectrelativeclause_D_Meaning .
+
+cx:Transitiveobjectrelativeclause_D_Form a cx:SlotForm ;
+    cx:hasSyntacticForm cx:Transitiveobjectrelativeclause_D_Morphosyntax .
+
+cx:Transitiveobjectrelativeclause_D_Index a cx:Individual ;
+    cx:hasAnimacy cx:animate ;
+    cx:hasNumberFeature olia:Singular .
+
+cx:Transitiveobjectrelativeclause_D_Meaning a cx:SlotMeaning ;
+    cx:hasIndex cx:Transitiveobjectrelativeclause_D_Index .
+
+cx:Transitiveobjectrelativeclause_D_Morphosyntax a cx:NP ;
+    cx:hasSyntacticFunction "subject (within the clause)" .
+
+cx:Transitiveobjectrelativeclause_E a cx:SlotMandatory ;
+    cx:WordOrder "immediately after Element 4" ;
+    cx:hasSlotForm cx:Transitiveobjectrelativeclause_E_Form ;
+    cx:hasSlotMeaning cx:Transitiveobjectrelativeclause_E_Meaning .
+
+cx:Transitiveobjectrelativeclause_E_Form a cx:SlotForm ;
+    cx:hasSyntacticForm cx:Transitiveobjectrelativeclause_E_Morphosyntax .
+
+cx:Transitiveobjectrelativeclause_E_Index a cx:Event ;
+    cx:hasTenseFeature olia:Present ;
+    cx:hasVoice cx:active .
+
+cx:Transitiveobjectrelativeclause_E_Meaning a cx:SlotMeaning ;
+    cx:hasIndex cx:Transitiveobjectrelativeclause_E_Index .
+
+cx:Transitiveobjectrelativeclause_E_Morphosyntax a cx:Verb .
+
+cx:Transitiveobjectrelativeclause_Ex_A a cx:Example ;
+    cx:hasGlosses "The grandpa to:the that the kid hugs" ;
+    cx:hasText "El abuelo al que el niño abraza" ;
+    cx:hasTranslation "The grandpa that is being hugged by the kid" ;
+    RDFS:comment "a-variant verb-final" .
+
+cx:Transitiveobjectrelativeclause_Ex_B a cx:Example ;
+    cx:hasGlosses "The grandpa that the kid hugs" ;
+    cx:hasText "El abuelo que el niño abraza" ;
+    cx:hasTranslation "The grandpa that is being hugged by the kid" ;
+    RDFS:comment "plain-variant verb-final" .
+
+cx:Transitiveobjectrelativeclause_Ex_C a cx:Example ;
+    cx:hasGlosses "The grandpa to:the that hugs the kid" ;
+    cx:hasText "El abuelo al que abraza el niño" ;
+    cx:hasTranslation "The grandpa that is being hugged by the kid" ;
+    RDFS:comment "a-variant verb-medial" .
+
+cx:Transitiveobjectrelativeclause_Ex_D a cx:Example ;
+    cx:hasGlosses "The grandpa that hugs the kid" ;
+    cx:hasText "El abuelo que abraza el niño" ;
+    cx:hasTranslation "The grandpa that is being hugged by the kid" ;
+    RDFS:comment "plain-variant verb-medial" .
+
+cx:Transitiveobjectrelativeclause_MD a cx:Metadata ;
+    cx:annotator membr:FernandezSantos ;
+    cx:creationDate "2024-11-25"^^xsd:date ;
+    cx:hasFindings "The late disambiguation of verb-medial plain-variant (no a + article) OR can lead to shallow processing. This in combination with high phonetic similarity with a canonical SR could lead to predictive processing overriding perceptual information (at the point of the last NP an object is expected so it’s more likely to hear \"al\" rather than \"el\"). In more general terms, expectations of canonical linguistic input in locally ambiguous structures can override acoustic perception." ;
+    cx:hasRQ membr:Project_FernandezSantos_241125 ;
+    cx:hasSources cx:Transitiveobjectrelativeclause_Sources ;
+    cx:hasTitle "Spoken Peninsular Spanish Transitive object relative clause" .
+
+cx:Transitiveobjectrelativeclause_Meaning a cx:ConstructionMeaning ;
+    cx:hasMeaning "Identificatory NP; someone carries out a transitive action that affects someone else, the function of the OR clause is to identify the affected." .
+
+cx:Transitiveobjectrelativeclause_Sources a cx:Collection ;
+    cx:basedOn <https://www.degruyter.com/document/doi/10.1515/cog-2024-0016/html> ;
+    cx:hasLiterature <https://onlinelibrary.wiley.com/doi/10.1111/lang.12066> .
+
+cx:Transitiveobjectrelativeclause_slots a rdf:Seq ;
+    rdf:_1 cx:Transitiveobjectrelativeclause_A ;
+    rdf:_2 cx:Transitiveobjectrelativeclause_B ;
+    rdf:_3 cx:Transitiveobjectrelativeclause_C ;
+    rdf:_4 cx:Transitiveobjectrelativeclause_D ;
+    rdf:_5 cx:Transitiveobjectrelativeclause_E .
+
+<https://onlinelibrary.wiley.com/doi/10.1111/lang.12066> dc:creator "Reali, Florencia" ;
+    dc:date "09/2014" ;
+    dc:identifier "DOI 10.1111/lang.12066",
+        "ISSN 00238333" ;
+    dc:title "Frequency Affects Object Relative Clause Processing: Some Evidence in Favor of Usage-Based Accounts: Frequency Affects Object Relative Clause Processing" ;
+    dc:type "journalArticle" .
+
+<https://www.degruyter.com/document/doi/10.1515/cog-2024-0016/html> dc:creator "Dąbrowska, Ewa",
+        "Fernández Santos, Sara",
+        "Llompart, Miquel" ;
+    dc:date "2024-10-10" ;
+    dc:identifier "DOI 10.1515/cog-2024-0016",
+        "ISSN 0936-5907, 1613-3641" ;
+    dc:rights "http://creativecommons.org/licenses/by/4.0" ;
+    dc:title "Comprehension of object relatives in Spanish: the role of frequency and transparency in acquisition and adult grammar" ;
+    dc:type "journalArticle" .
+
+membr:Project_FernandezSantos_241125 a membr:Project ;
+    membr:projectName "The relative role of verb position and additional morphological markers in comprehension" .
+
