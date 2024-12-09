@@ -1,0 +1,96 @@
+@prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cx: <http://example.org/cx/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix membr: <http://example.org/users/> .
+@prefix olia: <http://purl.org/olia/olia.owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cx:Dooperationwithoperand1onoperand2construction a membr:Construction ;
+    cx:hasConstructionMeaning cx:Dooperationwithoperand1onoperand2construction_Meaning ;
+    cx:hasExample cx:Dooperationwithoperand1onoperand2construction_Ex_A ;
+    cx:hasMetadata cx:Dooperationwithoperand1onoperand2construction_MD ;
+    cx:hasSlots cx:Dooperationwithoperand1onoperand2construction_slots ;
+    cx:partOfLanguage "Literary Chinese, Han to Late Qing" .
+
+cx:Dooperationwithoperand1onoperand2construction_A a cx:SlotOptional ;
+    cx:WordOrder "Immediately before element 2" ;
+    cx:hasSlotForm cx:Dooperationwithoperand1onoperand2construction_A_Form ;
+    cx:hasTranslation "with" ;
+    cx:hasTransliteration "yi" .
+
+cx:Dooperationwithoperand1onoperand2construction_A_Form a cx:SlotForm ;
+    cx:hasSyntacticForm cx:Dooperationwithoperand1onoperand2construction_A_Morphosyntax .
+
+cx:Dooperationwithoperand1onoperand2construction_A_Morphosyntax a cx:Particle .
+
+cx:Dooperationwithoperand1onoperand2construction_B a cx:SlotMandatory ;
+    cx:WordOrder "Immediately before element 3" ;
+    cx:hasSlotForm cx:Dooperationwithoperand1onoperand2construction_B_Form ;
+    cx:hasSlotMeaning cx:Dooperationwithoperand1onoperand2construction_B_Meaning ;
+    RDFS:comment "Semantically, element 2 is not optional. However, if it is the result of the directly preceding operation, what would normally be expressed by \"之\", the slot can be empty, as it is implied by 以." .
+
+cx:Dooperationwithoperand1onoperand2construction_B_Form a cx:SlotForm ;
+    cx:hasSyntacticForm cx:Dooperationwithoperand1onoperand2construction_B_Morphosyntax .
+
+cx:Dooperationwithoperand1onoperand2construction_B_Meaning a cx:SlotMeaning ;
+    cx:hasSemanticContribution olia:InstrumentRole ;
+    cx:hasSemanticProperty "In case when the operation (element 3) is \"subtraction\", this operand is the one that is being subtracted." .
+
+cx:Dooperationwithoperand1onoperand2construction_B_Morphosyntax a cx:NP .
+
+cx:Dooperationwithoperand1onoperand2construction_C a cx:SlotMandatory ;
+    cx:WordOrder "Immediately after element 2" ;
+    cx:hasSlotForm cx:Dooperationwithoperand1onoperand2construction_C_Form ;
+    RDFS:comment "colloprofile: 加 (frequent), 減 (frequent), 乘 (frequent), 除 (frequent)" .
+
+cx:Dooperationwithoperand1onoperand2construction_C_Form a cx:SlotForm ;
+    cx:hasSyntacticForm cx:Dooperationwithoperand1onoperand2construction_C_Morphosyntax .
+
+cx:Dooperationwithoperand1onoperand2construction_C_Morphosyntax a cx:VP .
+
+cx:Dooperationwithoperand1onoperand2construction_D a cx:SlotMandatory ;
+    cx:WordOrder "Immediately after element 3" ;
+    cx:hasSlotForm cx:Dooperationwithoperand1onoperand2construction_D_Form ;
+    cx:hasSlotMeaning cx:Dooperationwithoperand1onoperand2construction_D_Meaning .
+
+cx:Dooperationwithoperand1onoperand2construction_D_Form a cx:SlotForm ;
+    cx:hasSyntacticForm cx:Dooperationwithoperand1onoperand2construction_D_Morphosyntax .
+
+cx:Dooperationwithoperand1onoperand2construction_D_Meaning a cx:SlotMeaning ;
+    cx:hasSemanticContribution olia:UndergoerMacroRole ;
+    cx:hasSemanticProperty "In contrast to element 2, this element is changed as result of the operation" .
+
+cx:Dooperationwithoperand1onoperand2construction_D_Morphosyntax a cx:NP .
+
+cx:Dooperationwithoperand1onoperand2construction_Ex_A a cx:Example ;
+    cx:hasGlosses "with height multiply it " ;
+    cx:hasText "以高乘之" ;
+    cx:hasTranslation "Multiply it by the height" ;
+    cx:hasTransliteration "yi gao cheng zhi" .
+
+cx:Dooperationwithoperand1onoperand2construction_MD a cx:Metadata ;
+    cx:annotator membr:Kessler ;
+    cx:creationDate "2024-12-01"^^xsd:date ;
+    cx:hasFindings "There is remarkable stability in the use of the construction over a very long period of time" ;
+    cx:hasRQ membr:Project_Kessler ;
+    cx:hasSources cx:Dooperationwithoperand1onoperand2construction_Sources ;
+    cx:hasTitle "Literary Chinese, Han to Late Qing Do operation with operand1 on operand2 construction" .
+
+cx:Dooperationwithoperand1onoperand2construction_Meaning a cx:ConstructionMeaning ;
+    cx:hasMeaning "Do [operation] with [operand1] and [operand2]" .
+
+cx:Dooperationwithoperand1onoperand2construction_Sources a cx:Collection ;
+    cx:basedOn [ dc:creator "Chemla, Karine",
+                "Guo Shuchun 郭書春" ;
+            dc:date "2004" ;
+            dc:publisher "Dunod" ;
+            dc:title "Les neuf chapitres: Le classique mathématique de la Chine ancienne et ses commentaires" ;
+            dc:type "book" ] .
+
+cx:Dooperationwithoperand1onoperand2construction_slots a rdf:Seq ;
+    rdf:_1 cx:Dooperationwithoperand1onoperand2construction_A ;
+    rdf:_2 cx:Dooperationwithoperand1onoperand2construction_B ;
+    rdf:_3 cx:Dooperationwithoperand1onoperand2construction_C ;
+    rdf:_4 cx:Dooperationwithoperand1onoperand2construction_D .
+

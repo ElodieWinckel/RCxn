@@ -1,0 +1,75 @@
+@prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cx: <http://example.org/cx/> .
+@prefix membr: <http://example.org/users/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cx:ThisCloseToV-ing a membr:Construction ;
+    cx:hasConstructionMeaning cx:ThisCloseToV-ing_Meaning ;
+    cx:hasExample cx:ThisCloseToV-ing_Ex_A ;
+    cx:hasGesture """The gesture is part of the construction's form.\r
+The index finger and the thumb are stretched (or partially crooked) and drawn near one another while the rest of the fingers remain retracted.\r
+The gesture is sometimes used a few milliseconds before uttering "this" and is most often maintained until uttering the V-ing element (and its complement if the verb is transitive).""" ;
+    cx:hasMetadata cx:ThisCloseToV-ing_MD ;
+    cx:hasSlots cx:ThisCloseToV-ing_slots ;
+    cx:partOfLanguage "(American) English, Spoken Modality" ;
+    RDFS:comment "I would need to upload an Excel file with all the concordance lines and a link with all the video-snippets" .
+
+cx:ThisCloseToV-ing_A a cx:SlotMandatory ;
+    cx:WordOrder "Element 1 comes immediately before Element 2" ;
+    cx:hasSlotForm cx:ThisCloseToV-ing_A_Form ;
+    cx:hasSlotMeaning cx:ThisCloseToV-ing_A_Meaning ;
+    cx:hasStem "Be ; Come" .
+
+cx:ThisCloseToV-ing_A_Form a cx:SlotForm .
+
+cx:ThisCloseToV-ing_A_Index a cx:Event ;
+    cx:hasVoice cx:active .
+
+cx:ThisCloseToV-ing_A_Meaning a cx:SlotMeaning ;
+    cx:hasIndex cx:ThisCloseToV-ing_A_Index .
+
+cx:ThisCloseToV-ing_B a cx:SlotMandatory ;
+    cx:WordOrder "Element 2 comes immediately before Element 3" .
+
+cx:ThisCloseToV-ing_C a cx:SlotMandatory ;
+    cx:WordOrder "Element 3 comes immediately before Element 4" ;
+    cx:hasSlotForm cx:ThisCloseToV-ing_C_Form ;
+    RDFS:comment "colloprofile: be (0.07 PM) ; get (0.05 PM) ; have (0.015 PM)" .
+
+cx:ThisCloseToV-ing_C_Form a cx:SlotForm ;
+    cx:hasSyntacticForm cx:ThisCloseToV-ing_C_Morphosyntax .
+
+cx:ThisCloseToV-ing_C_Morphosyntax a "Root V" .
+
+cx:ThisCloseToV-ing_D a cx:SlotMandatory ;
+    cx:hasSlotForm cx:ThisCloseToV-ing_D_Form .
+
+cx:ThisCloseToV-ing_D_Form a cx:SlotForm ;
+    cx:hasSyntacticForm cx:ThisCloseToV-ing_D_Morphosyntax .
+
+cx:ThisCloseToV-ing_D_Morphosyntax a cx:Suffix .
+
+cx:ThisCloseToV-ing_Ex_A a cx:Example ;
+    cx:hasText "It was this close to happening, right? This close to happening! " ;
+    RDFS:comment "https://pisa.vrnewsscape.ucla.edu/newsscape_mp4_snippet.cgi?file=fa5d0dfc-cb7b-11e6-97cd-089e01ba0338&start=2396&end=2401" .
+
+cx:ThisCloseToV-ing_MD a cx:Metadata ;
+    cx:annotator membr:Iabdounane ;
+    cx:creationDate "2024-11-28"^^xsd:date ;
+    cx:hasFindings """The verbal form “this close to V-ing” and the close index finger - thumb gesture co-occur 93% of the time.\r
+The two forms are likely entrenched together as a single unit, thus making it one formal multimodal unit.\r
+The construction is multimodal.\r
+""" ;
+    cx:hasRQ membr:Project_Iabdounane ;
+    cx:hasTitle "(American) English, Spoken Modality This Close To V-ing" .
+
+cx:ThisCloseToV-ing_Meaning a cx:ConstructionMeaning ;
+    cx:hasMeaning "Something or someone is metaphorically very close to an outcome/goal." .
+
+cx:ThisCloseToV-ing_slots a rdf:Seq ;
+    rdf:_1 cx:ThisCloseToV-ing_A ;
+    rdf:_2 cx:ThisCloseToV-ing_B ;
+    rdf:_3 cx:ThisCloseToV-ing_C ;
+    rdf:_4 cx:ThisCloseToV-ing_D .
+

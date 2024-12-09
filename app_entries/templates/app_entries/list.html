@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}Constructions{% endblock %}
+
+{% block content %}
+
+<body>
+    <h1>Construction List</h1>
+    <ul>
+        {% for construction in constructions %}
+            <li>
+                <a href="{{ url_for('app_entries.construction_detail', uri=construction.uri.replace('http://example.org/cx/', '')) }}">
+                    {{ construction.title }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}

@@ -1,0 +1,110 @@
+{% extends "base.html" %}
+
+{% block title %}Construction Details - {{ title }}{% endblock %}
+
+{% block content %}
+
+    <h1>{{ title }}</h1>
+    <table border="1">
+        {% for triple in triples %}
+            <tr>
+                <td>{{ triple.property }}</td>
+                <td>{{ triple.object }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+    <h2>Construction elements</h2>
+    <div id="table-container"></div>
+
+    <script>
+        // Accessing elements sent by Flask
+        const elements = {{ elements | tojson }};
+
+        function createCrossTable(data) {
+            // Get unique subjects and properties
+            const subjects = [...new Set(data.map(item => item.subject))];
+            const properties = [...new Set(data.map(item => item.property))];
+
+            // Create a 2D map to store the values as arrays
+            const tableData = {};
+            properties.forEach(property => {
+                tableData[property] = {};
+                subjects.forEach(subject => {
+                    tableData[property][subject] = []; // Initialize as empty array
+                });
+            });
+
+            // Populate the map with objects
+            data.forEach(({ subject, property, object }) => {
+                tableData[property][subject].push(object); // Add all values to the array
+            });
+
+            // Generate HTML table
+            const table = document.createElement('table');
+            const tbody = document.createElement('tbody');
+
+            // Data rows
+            properties.forEach(property => {
+                const row = document.createElement('tr');
+                const cells = [
+                    `<td>${property}</td>`,
+                    ...subjects.map(subject => {
+                        const values = tableData[property][subject];
+                        return `<td>${values.join('<br>')}</td>`;
+                    })
+                ];
+                row.innerHTML = cells.join('');
+                tbody.appendChild(row);
+            });
+
+            table.appendChild(tbody);
+            return table;
+        }
+
+        // Render the table
+        const container = document.getElementById('table-container');
+        const table = createCrossTable(elements);
+        container.appendChild(table);
+    </script>
+
+<h2>Examples</h2>
+    {% for subject, rows in grouped_examples.items() %}
+        <h3>Example {{ loop.index }}</h3>
+        <table>
+            <tbody>
+                {% for row in rows %}
+                    <tr>
+                        <td>{{ row.property }}</td>
+                        <td>{{ row.object }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% endfor %}
+
+    <h2>Links</h2>
+    <table border="1">
+        {% for triple in links %}
+            <tr>
+                <td>{{ triple.property }}</td>
+                <td>{{ triple.object }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+
+    <h2>Metadata</h2>
+    <table border="1">
+        {% for triple in metadata %}
+            <tr>
+                <td>{{ triple.property }}</td>
+                <td>{{ triple.object }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+
+    <a href="{{ url_for('app_entries.list_view') }}">Back to Constructions List</a>
+</body>
+{% endblock %}

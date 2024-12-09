@@ -1,0 +1,65 @@
+@prefix cx: <http://example.org/cx/> .
+@prefix membr: <http://example.org/users/> .
+@prefix olia: <http://purl.org/olia/olia.owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/cx/TheEnglishGIVE-OUTVerbParticleConstruction.> a membr:Construction ;
+    cx:hasConstructionMeaning cx:TheEnglishGIVE-OUTVerbParticleConstruction._Meaning ;
+    cx:hasExample cx:TheEnglishGIVE-OUTVerbParticleConstruction._Ex_A ;
+    cx:hasMetadata cx:TheEnglishGIVE-OUTVerbParticleConstruction._MD ;
+    cx:hasSlots cx:TheEnglishGIVE-OUTVerbParticleConstruction._slots ;
+    cx:partOfLanguage "English" .
+
+cx:TheEnglishGIVE-OUTVerbParticleConstruction._A a cx:SlotOptional ;
+    cx:hasSlotForm cx:TheEnglishGIVE-OUTVerbParticleConstruction._A_Form ;
+    cx:hasSlotMeaning cx:TheEnglishGIVE-OUTVerbParticleConstruction._A_Meaning .
+
+cx:TheEnglishGIVE-OUTVerbParticleConstruction._A_Form a cx:SlotForm ;
+    cx:hasSyntacticForm cx:TheEnglishGIVE-OUTVerbParticleConstruction._A_Morphosyntax .
+
+cx:TheEnglishGIVE-OUTVerbParticleConstruction._A_Meaning a cx:SlotMeaning ;
+    cx:hasSemanticContribution "ÆFFECTOR" .
+
+cx:TheEnglishGIVE-OUTVerbParticleConstruction._A_Morphosyntax a cx:NP ;
+    cx:hasSyntacticFunction "SUBJ" .
+
+cx:TheEnglishGIVE-OUTVerbParticleConstruction._B a cx:SlotMandatory ;
+    cx:WordOrder "Element 2 follows the element 1" ;
+    cx:hasSlotForm cx:TheEnglishGIVE-OUTVerbParticleConstruction._B_Form ;
+    cx:hasSlotMeaning cx:TheEnglishGIVE-OUTVerbParticleConstruction._B_Meaning .
+
+cx:TheEnglishGIVE-OUTVerbParticleConstruction._B_Form a cx:SlotForm ;
+    cx:hasSyntacticForm cx:TheEnglishGIVE-OUTVerbParticleConstruction._B_Morphosyntax .
+
+cx:TheEnglishGIVE-OUTVerbParticleConstruction._B_Meaning a cx:SlotMeaning ;
+    cx:hasSemanticContribution olia:OtherRole .
+
+cx:TheEnglishGIVE-OUTVerbParticleConstruction._B_Morphosyntax a cx:Verb .
+
+cx:TheEnglishGIVE-OUTVerbParticleConstruction._C a cx:SlotMandatory ;
+    cx:WordOrder "The element 3 follows the element 2 but not necessarily directly" ;
+    cx:hasSlotForm cx:TheEnglishGIVE-OUTVerbParticleConstruction._C_Form .
+
+cx:TheEnglishGIVE-OUTVerbParticleConstruction._C_Form a cx:SlotForm ;
+    cx:hasSyntacticForm cx:TheEnglishGIVE-OUTVerbParticleConstruction._C_Morphosyntax .
+
+cx:TheEnglishGIVE-OUTVerbParticleConstruction._C_Morphosyntax a cx:part .
+
+cx:TheEnglishGIVE-OUTVerbParticleConstruction._Ex_A a cx:Example ;
+    cx:hasText "The event organizer gave out gift bags to all attendees at the end of the ceremony." .
+
+cx:TheEnglishGIVE-OUTVerbParticleConstruction._MD a cx:Metadata ;
+    cx:annotator membr:Kissane ;
+    cx:creationDate "2024-12-01"^^xsd:date ;
+    cx:hasRQ membr:Project_Kissane ;
+    cx:hasTitle "English The English GIVE-OUT Verb Particle Construction." .
+
+cx:TheEnglishGIVE-OUTVerbParticleConstruction._Meaning a cx:ConstructionMeaning ;
+    cx:hasMeaning "An ÆFFECTOR distributes items to multiple recipients or reaches a point of depletion or cessation of function." .
+
+cx:TheEnglishGIVE-OUTVerbParticleConstruction._slots a rdf:Seq ;
+    rdf:_1 cx:TheEnglishGIVE-OUTVerbParticleConstruction._A ;
+    rdf:_2 cx:TheEnglishGIVE-OUTVerbParticleConstruction._B ;
+    rdf:_3 cx:TheEnglishGIVE-OUTVerbParticleConstruction._C .
+

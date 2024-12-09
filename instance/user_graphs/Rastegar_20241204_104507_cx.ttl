@@ -1,0 +1,112 @@
+@prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cx: <http://example.org/cx/> .
+@prefix membr: <http://example.org/users/> .
+@prefix olia: <http://purl.org/olia/olia.owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cx:Idiomaticconstruction a membr:Construction ;
+    cx:hasConstructionMeaning cx:Idiomaticconstruction_Meaning ;
+    cx:hasMetadata cx:Idiomaticconstruction_MD ;
+    cx:hasSlots cx:Idiomaticconstruction_slots ;
+    cx:partOfLanguage "German" .
+
+cx:Definitearticle RDFS:label "Definite article" .
+
+cx:Idiomaticconstruction_A a cx:SlotMandatory ;
+    cx:WordOrder "Initial position in prepositional phrase" ;
+    cx:hasSlotForm cx:Idiomaticconstruction_A_Form ;
+    cx:hasSlotMeaning cx:Idiomaticconstruction_A_Meaning ;
+    cx:hasTranslation "out of" .
+
+cx:Idiomaticconstruction_A_Form a cx:SlotForm ;
+    cx:hasSyntacticForm cx:Idiomaticconstruction_A_Morphosyntax .
+
+cx:Idiomaticconstruction_A_Meaning a cx:SlotMeaning ;
+    cx:hasSemanticContribution "source" .
+
+cx:Idiomaticconstruction_A_Morphosyntax a cx:Preposition ;
+    cx:hasSyntacticFunction "Head of PP" .
+
+cx:Idiomaticconstruction_B a cx:SlotMandatory ;
+    cx:WordOrder "follows preposition, precedes noun" ;
+    cx:hasSlotForm cx:Idiomaticconstruction_B_Form ;
+    cx:hasSlotMeaning cx:Idiomaticconstruction_B_Meaning ;
+    cx:hasTranslation "the" .
+
+cx:Idiomaticconstruction_B_Form a cx:SlotForm ;
+    cx:hasSyntacticForm cx:Idiomaticconstruction_B_Morphosyntax .
+
+cx:Idiomaticconstruction_B_Index a cx:Individual ;
+    cx:hasGender cx:masculine ;
+    cx:hasNumberFeature olia:Singular .
+
+cx:Idiomaticconstruction_B_Meaning a cx:SlotMeaning ;
+    cx:hasIndex cx:Idiomaticconstruction_B_Index .
+
+cx:Idiomaticconstruction_B_Morphosyntax a cx:Definitearticle ;
+    cx:hasCaseFeature olia:DativeCase ;
+    cx:hasSyntacticFunction "Determiner" .
+
+cx:Idiomaticconstruction_C a cx:SlotMandatory ;
+    cx:WordOrder "Follows article" ;
+    cx:hasSlotForm cx:Idiomaticconstruction_C_Form ;
+    cx:hasSlotMeaning cx:Idiomaticconstruction_C_Meaning ;
+    cx:hasTranslation "sleeve" .
+
+cx:Idiomaticconstruction_C_Form a cx:SlotForm ;
+    cx:hasSyntacticForm cx:Idiomaticconstruction_C_Morphosyntax .
+
+cx:Idiomaticconstruction_C_Index a cx:Individual ;
+    cx:hasAnimacy cx:inanimate ;
+    cx:hasGender cx:masculine ;
+    cx:hasNumberFeature olia:Singular .
+
+cx:Idiomaticconstruction_C_Meaning a cx:SlotMeaning ;
+    cx:hasIndex cx:Idiomaticconstruction_C_Index ;
+    cx:hasSemanticContribution olia:LocationRole .
+
+cx:Idiomaticconstruction_C_Morphosyntax a cx:Noun ;
+    cx:hasCaseFeature olia:DativeCase .
+
+cx:Idiomaticconstruction_D a cx:SlotMandatory ;
+    cx:WordOrder "Verb-final in dependent clauses / V2 in main clauses" ;
+    cx:hasSlotForm cx:Idiomaticconstruction_D_Form ;
+    cx:hasSlotMeaning cx:Idiomaticconstruction_D_Meaning ;
+    cx:hasStem "schütteln" ;
+    cx:hasTranslation "shake" .
+
+cx:Idiomaticconstruction_D_Form a cx:SlotForm ;
+    cx:hasSyntacticForm cx:Idiomaticconstruction_D_Morphosyntax .
+
+cx:Idiomaticconstruction_D_Index a cx:Event ;
+    cx:hasMode olia:IndicativeVerb ;
+    cx:hasVoice cx:active .
+
+cx:Idiomaticconstruction_D_Meaning a cx:SlotMeaning ;
+    cx:hasIndex cx:Idiomaticconstruction_D_Index ;
+    cx:hasSemanticContribution "Action" .
+
+cx:Idiomaticconstruction_D_Morphosyntax a cx:Verb .
+
+cx:Idiomaticconstruction_MD a cx:Metadata ;
+    cx:annotator membr:Rastegar ;
+    cx:creationDate "2024-12-04"^^xsd:date ;
+    cx:hasRQ membr:Project_Rastegar ;
+    cx:hasTitle "German Idiomatic construction" .
+
+cx:Idiomaticconstruction_Meaning a cx:ConstructionMeaning ;
+    cx:hasMeaning "done with ease" .
+
+cx:Idiomaticconstruction_slots a rdf:Seq ;
+    rdf:_1 cx:Idiomaticconstruction_A ;
+    rdf:_2 cx:Idiomaticconstruction_B ;
+    rdf:_3 cx:Idiomaticconstruction_C ;
+    rdf:_4 cx:Idiomaticconstruction_D .
+
+cx:Noun RDFS:label "Noun" .
+
+cx:Preposition RDFS:label "Preposition" .
+
+cx:Verb RDFS:label "Verb" .
+

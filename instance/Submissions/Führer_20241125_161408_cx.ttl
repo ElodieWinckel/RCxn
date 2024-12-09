@@ -87,7 +87,8 @@ cx:Transitivedurch-Präfixverbkonstruktion_D_Form a cx:SlotForm ;
     cx:hasSyntacticForm cx:Transitivedurch-Präfixverbkonstruktion_D_Morphosyntax .
 
 cx:Transitivedurch-Präfixverbkonstruktion_D_Meaning a cx:SlotMeaning ;
-    cx:hasSemanticContribution "Undergoer, Location" ;
+    cx:hasSemanticContribution "Location" ;
+    cx:hasSemanticContribution "Undergoer" ;
     cx:hasSemanticProperty "Gegenständliches oder Lokalitäten" .
 
 cx:Transitivedurch-Präfixverbkonstruktion_D_Morphosyntax a cx:NP ;
@@ -126,9 +127,6 @@ cx:Transitivedurch-Präfixverbkonstruktion_Ex_C a cx:Example ;
     cx:hasTranslation "sie durchbrechen das Schlachtfeld" ;
     RDFS:comment "teil-intermediär" .
 
-cx:Transitivedurch-Präfixverbkonstruktion_F a cx:SlotOptional ;
-    RDFS:comment "please delete!" .
-
 cx:Transitivedurch-Präfixverbkonstruktion_G a cx:SlotOptional ;
     cx:hasSlotForm cx:Transitivedurch-Präfixverbkonstruktion_G_Form ;
     cx:hasSlotMeaning cx:Transitivedurch-Präfixverbkonstruktion_G_Meaning ;
@@ -159,7 +157,9 @@ Gegenstände als Objekt erlauben nur intermediäre Interpretationen, während Lo
     cx:hasTitle "Mittelhochdeutsch, schriftlich, 12. Jh. Transitive durch-Präfixverbkonstruktion" .
 
 cx:Transitivedurch-Präfixverbkonstruktion_Meaning a cx:ConstructionMeaning ;
-    cx:hasImageSchema "teil-intermediäres durch, intermediäres durch, multidirektionales durch" ;
+    cx:hasImageSchema "teil-intermediäres durch" ;
+    cx:hasImageSchema "intermediäres durch" ;
+    cx:hasImageSchema "multidirektionales durch" ;
     cx:hasMeaning "'jemand bewegt sich durch etwas/einen Ort'" .
 
 cx:Transitivedurch-Präfixverbkonstruktion_Sources a cx:Collection ;
@@ -171,8 +171,7 @@ cx:Transitivedurch-Präfixverbkonstruktion_slots a rdf:Seq ;
     rdf:_3 cx:Transitivedurch-Präfixverbkonstruktion_C ;
     rdf:_4 cx:Transitivedurch-Präfixverbkonstruktion_D ;
     rdf:_5 cx:Transitivedurch-Präfixverbkonstruktion_E ;
-    rdf:_6 cx:Transitivedurch-Präfixverbkonstruktion_F ;
-    rdf:_7 cx:Transitivedurch-Präfixverbkonstruktion_G .
+    rdf:_6 cx:Transitivedurch-Präfixverbkonstruktion_G .
 
 cx:Transitivedurch-Verbkonstruktion a membr:Construction ;
     cx:annotator membr:Führer ;

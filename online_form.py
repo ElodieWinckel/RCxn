@@ -1,0 +1,717 @@
+from flask import Flask, request, render_template, send_file
+from rdflib import Graph, URIRef, Literal, Namespace, RDF, XSD
+from datetime import datetime
+import json
+import os
+
+app = Flask(__name__)
+
+###################################################
+### FUNCTIONS REQUIRED TO EXTRACT FROM DATABASES AND ONTOLOGIES
+###################################################
+
+# Load URIs and family names from existing database of researchers (users.ttl)
+def load_uris_from_ttl(file_path):
+    g = Graph()
+    g.parse(file_path, format='turtle')
+    foaf = Namespace('http://xmlns.com/foaf/0.1/')
+    uris_and_names = [(str(s).replace("http://example.com/users/", ""),
+                       str(g.value(s, foaf.familyName))) for s in g.subjects(RDF.type, foaf.Person)]
+    return uris_and_names
+
+# Load URIs and project names from existing database of research projects (users.ttl)
+def load_projects_from_ttl(file_path):
+    g = Graph()
+    g.parse(file_path, format='turtle')
+    membr = Namespace("http://example.com/users/")
+    uris_and_names = [(str(s).replace("http://example.com/users/", ""),
+                       str(g.value(s, membr.projectName))) for s in g.subjects(RDF.type, membr.Project)]
+    return uris_and_names
+
+# Loads URIs of semantic roles in OLIA
+def load_SemanticRoles(file_path):
+    g = Graph()
+    g.parse(file_path, format='xml')
+    oliatop = Namespace("http://purl.org/olia/olia-top.owl#")
+    RDFS = Namespace("http://www.w3.org/2000/01/rdf-schema#")
+    role_names = [(str(s).replace("http://purl.org/olia/olia.owl#", "")) for s in g.subjects(RDFS.subClassOf, oliatop.SemanticRole)]
+    role_names = [(str(s).replace("Role", "")) for s in role_names]
+    role_names.sort()
+    return role_names
+
+# Loads URIs of number features in OLIA
+def load_NumberFeatures(file_path):
+    g = Graph()
+    g.parse(file_path, format='xml')
+    oliatop = Namespace("http://purl.org/olia/olia-top.owl#")
+    RDFS = Namespace("http://www.w3.org/2000/01/rdf-schema#")
+    names = [(str(s).replace("http://purl.org/olia/olia.owl#", "")) for s in g.subjects(RDFS.subClassOf, oliatop.NumberFeature)]
+    names.sort()
+    return names
+
+# Loads URIs of case features in OLIA + delete "Case" at the end of URI
+def load_CaseFeatures(file_path):
+    g = Graph()
+    g.parse(file_path, format='xml')
+    oliatop = Namespace("http://purl.org/olia/olia-top.owl#")
+    RDFS = Namespace("http://www.w3.org/2000/01/rdf-schema#")
+    names = [(str(s).replace("http://purl.org/olia/olia.owl#", "")) for s in g.subjects(RDFS.subClassOf, oliatop.CaseFeature)]
+    names = [(str(s).replace("Case", "")) for s in names]
+    names.sort()
+    return names
+
+# Loads URIs of tense features in OLIA (classes and subclasses thereof)
+def load_TenseFeatures(file_path):
+    g = Graph()
+    g.parse(file_path, format='xml')
+
+    oliatop = Namespace("http://purl.org/olia/olia-top.owl#")
+    RDFS = Namespace("http://www.w3.org/2000/01/rdf-schema#")
+
+    tense_features = []
+
+    # Find all subclasses and get their labels
+    for subclass in g.subjects(RDFS.subClassOf, oliatop.TenseFeature):
+        label = g.value(subclass, RDFS.label, None)
+        if label:
+            tense_features.append((str(subclass), str(label)))
+
+        # Find subclasses of subclasses
+        for indirect_subclass in g.subjects(RDFS.subClassOf, subclass):
+            label = g.value(indirect_subclass, RDFS.label, None)
+            if label:
+                tense_features.append((str(indirect_subclass), str(label)))
+
+    # Sort by label
+    tense_features = sorted(tense_features, key=lambda x: x[1].lower())
+
+    return tense_features
+
+# Loads URIs of modes in OLIA + delete "Verb" at the end of URI
+def load_Mode(file_path):
+    g = Graph()
+    g.parse(file_path, format='xml')
+    olia = Namespace("http://purl.org/olia/olia.owl#")
+    RDFS = Namespace("http://www.w3.org/2000/01/rdf-schema#")
+    names = [(str(s).replace("http://purl.org/olia/olia.owl#", "")) for s in g.subjects(RDFS.subClassOf, olia.FiniteVerb)]
+    names = [(str(s).replace("Verb", "")) for s in names]
+    names.sort()
+    return names
+
+# Load URIs of already existing constructions (cx.ttl)
+def load_existing_constructions_uri(file_path):
+    g = Graph()
+    g.parse(file_path, format='ttl')
+    membr = Namespace("http://example.org/users/")
+    names = [(str(s).replace("http://example.org/cx/", "")) for s in g.subjects(RDF.type, membr.Construction)]
+    return names
+
+# Load URIs and title of already existing constructions (cx.ttl)
+def load_existing_constructions_title(file_path):
+    g = Graph()
+    g.parse(file_path, format='turtle')
+    membr = Namespace("http://example.org/users/")
+    cx = Namespace("http://example.org/cx/")
+    names = [str(g.value(s, cx.hasTitle)) for s in g.subjects(RDF.type, membr.Construction)]
+    return names
+
+###################################################
+### RUN HTML FORM
+###################################################
+
+# Prepare all lists that are passed to the HTML form
+# /data/www/RCxn/
+uri_list = load_uris_from_ttl('users.ttl')
+project_list = load_projects_from_ttl('users.ttl')
+semantic_roles = load_SemanticRoles('olia.owl')
+semantic_roles.insert(0, '') # The first element of the drop-down list should be the empty string
+number_features = load_NumberFeatures('olia.owl')
+number_features.insert(0, '') # The first element of the drop-down list should be the empty string
+case_features = load_CaseFeatures('olia.owl')
+case_features.insert(0, '') # The first element of the drop-down list should be the empty string
+tense_features = load_TenseFeatures('olia.owl')
+tense_features.insert(0,("",""))
+modus = load_Mode('olia.owl')
+modus.insert(0, '') # The first element of the drop-down list should be the empty string
+list_cx_uris = load_existing_constructions_uri('cx.ttl')
+list_cx = load_existing_constructions_title("cx.ttl")
+
+@app.route('/')
+def online_form():
+    return render_template('online_form/index.html',
+                           uris=uri_list,
+                           projects=project_list,
+                           semanticroles=semantic_roles,
+                           numberfeatures=number_features,
+                           casefeatures=case_features,
+                           tensefeatures=tense_features,
+                           modus=modus,
+                           existingconstructions=list_cx)
+
+###################################################
+### RETRIEVE INFORMATION FROM THE FORM
+###################################################
+
+@app.route('/submit', methods=['POST'])
+def submit():
+    # Fields in category "Metadata"
+    user_name = request.form['uri']
+    # Fields in category "General"
+    construction_name = request.form['construction']
+    construction_name_cleaned = construction_name.replace(" ", "")
+    default_research_question_uri = request.form['projectId']
+    new_research_question = request.form['Rquestion']
+    findings = request.form['findings']
+    construction_language = request.form['language']
+    # not used for the moment (TODO) construction_status = request.form['construction_status']
+    # Fields in category "Meaning of the construction"
+    meaning = request.form['meaning']
+    image_schema = request.form['new_image_schema']
+    # Fields in category "Form-meaning pairings of the elements"
+    element_nb = int(request.form['element_nb'])
+    descriptions = []
+    for i in range(1, element_nb + 1):
+        description = request.form[f'morphosyntactic_form_{i}']
+        descriptions.append(description)
+    # Fields in category "Cotext"
+    topics = request.form.getlist('topic_element[]')
+    comments = request.form.getlist('comment_element[]')
+    focuses = request.form.getlist('focus_element[]')
+    backgrounds = request.form.getlist('background_element[]')
+    intonation = request.form['intonation']
+    gesture = request.form['gesture']
+    # Validate incompatible selections (same element as both topic and comment, or focus and background)
+    if set(topics) & set(comments):
+        return "Error: An element cannot be both Topic and Comment."
+    if set(focuses) & set(backgrounds):
+        return "Error: An element cannot be both Focus and Background."
+    # Fields in category "Links"
+    selected_inherits_from_json = request.form['selected_inherits_from']
+    if selected_inherits_from_json:
+        selected_inherits_from = json.loads(selected_inherits_from_json)
+    else:
+        selected_inherits_from = []  # Default to an empty list if no data is provided
+    selected_inherited_by_json = request.form['selected_inherited_by']
+    if selected_inherited_by_json:
+        selected_inherited_by = json.loads(selected_inherited_by_json)
+    else:
+        selected_inherited_by = []  # Default to an empty list if no data is provided
+    selected_metaphorical_extension_json = request.form['selected_metaphorical_extension']
+    if selected_metaphorical_extension_json:
+        selected_metaphorical_extension = json.loads(selected_metaphorical_extension_json)
+    else:
+        selected_metaphorical_extension = []  # Default to an empty list if no data is provided
+    # Research data (only a comment for the moment) TODO
+    research_data = request.form['researchdata']
+    # Field in the category "Sources"
+    reference_rdf = request.form['reference']
+    reference_uri = request.form['ReferenceUserItemURI']  # Field for UserItem URI
+    literature_entries = request.form.getlist('literature[]')  # Retrieve all literature entries
+    url_entries = request.form.getlist('url[]')  # Retrieve all URL entries
+
+###################################################
+### CREATE RDF GRAPH
+###################################################
+
+    g = Graph()
+
+    cx = Namespace("http://example.org/cx/")
+    g.bind("cx", cx)
+
+    membr = Namespace("http://example.org/users/")
+    g.bind("membr", membr)
+
+    olia = Namespace("http://purl.org/olia/olia.owl#")
+    g.bind("olia", olia)
+
+    RDFS = Namespace("http://www.w3.org/2000/01/rdf-schema#")
+    g.bind("RDFS", RDFS)
+
+    # Triple that defines the URI of the construction
+    g.add((cx[construction_name_cleaned], RDF.type, membr.Construction))
+
+###################################################
+### IMPLEMENT CONSTRUCTION METADATA
+###################################################
+
+    # URI for Metadata
+    metadata_uri = f"{construction_name_cleaned}_MD"
+    g.add((cx[metadata_uri], RDF.type, cx.Metadata))
+    # Triple to relate cx to its metadata
+    g.add((cx[construction_name_cleaned], cx.hasMetadata, cx[metadata_uri]))
+
+    # ANNOTATOR
+    g.add((cx[metadata_uri], cx.annotator, membr[user_name]))
+
+    # CREATION DATA
+    # Add creation date as today.
+    g.add((cx[metadata_uri], cx.creationDate, Literal(datetime.now().strftime('%Y-%m-%d'), datatype=XSD.date)))
+
+    # RESEARCH QUESTION
+    # The research question is the default one if there is no new one indicated
+    if new_research_question.strip():
+        new_research_question_uri = default_research_question_uri + "_" + datetime.now().strftime("%y%m%d")
+        research_question_uri = new_research_question_uri
+    else:
+        research_question_uri = default_research_question_uri
+    # Triple to relate cx to its research question
+    g.add((cx[metadata_uri], cx.hasRQ, membr[research_question_uri]))
+    # Triples needed if new research question has been added by user
+    if new_research_question.strip():
+        g.add((membr[new_research_question_uri], RDF.type, membr.Project))
+        g.add((membr[new_research_question_uri], membr.projectName, Literal(new_research_question)))
+        g.add((membr[default_research_question_uri], membr.SubProject, membr[new_research_question_uri]))
+
+    # FINDINGS
+    if findings.strip():
+        g.add((cx[metadata_uri], cx.hasFindings, Literal(findings)))
+    else:
+        print("No findings to add")
+
+    # TITLE
+    # The name of the construction is a concatenation of the language and the title
+    construction_complete_title = f"{construction_language} {construction_name}"
+    g.add((cx[metadata_uri], cx.hasTitle, Literal(construction_complete_title)))
+
+###################################################
+### IMPLEMENT CONSTRUCTION SOURCES
+###################################################
+
+    # URI for Sources
+    sources_uri = f"{construction_name_cleaned}_Sources"
+
+    # REFERENCE
+    # Parse and merge the RDF code from the 'Reference' field
+    if reference_rdf:
+            try:
+                reference_graph = Graph()
+                reference_graph.parse(data=reference_rdf, format='xml')  # Assuming RDF/XML format
+                # Extract the subject (URI) from the 'Reference' field
+                reference_subjects = list(reference_graph.subjects())
+                if reference_subjects:
+                    reference_subject = reference_subjects[0]  # Assuming the first subject is the main reference
+                    # Define sources uri
+                    g.add((cx[sources_uri], RDF.type,
+                           cx.Collection))  # TODO Collection (or similar) might already exist in dc
+                    # Triple to relate sources to metadata
+                    g.add((cx[metadata_uri], cx.hasSources, cx[sources_uri]))
+                    # Triple for reference
+                    g.add((cx[sources_uri], cx.basedOn, reference_subject))
+                g += reference_graph  # Merge with the existing graph
+            except Exception as e:
+                return f"Error parsing RDF Reference: {e}", 400
+
+    # LITERATURE
+    # Parse and merge all Literature RDF entries
+    for literature_rdf in literature_entries:
+            if literature_rdf:  # Only process non-empty entries
+                try:
+                    literature_graph = Graph()
+                    literature_graph.parse(data=literature_rdf, format='xml')  # Assuming RDF/XML format
+                    # Extract the subject (URI) from each 'Literature' entry
+                    literature_subjects = list(literature_graph.subjects())
+                    if literature_subjects:
+                        literature_subject = literature_subjects[0]
+                        # Define sources uri
+                        g.add((cx[sources_uri], RDF.type,
+                               cx.Collection))  # TODO Collection (or similar) might already exist in dc
+                        # Triple to relate sources to metadata
+                        g.add((cx[metadata_uri], cx.hasSources, cx[sources_uri]))
+                        # Triple for Literature
+                        g.add((cx[sources_uri], cx.hasLiterature, literature_subject))
+                    g += literature_graph  # Merge with the existing graph
+                except Exception as e:
+                    return f"Error parsing RDF Literature: {e}",
+
+    # OTHER CONSTRUCTICONS
+    # Add each URL from other constructicons (with rdfs:seeAlso)
+    for url in url_entries:
+        if url:  # Only process non-empty entries
+            # Define sources uri
+            g.add((cx[sources_uri], RDF.type, cx.Collection))  # TODO Collection (or similar) might already exist in dc
+            # Triple to relate sources to metadata
+            g.add((cx[metadata_uri], cx.hasSources, cx[sources_uri]))
+            # Triple for URL from another constructicon
+            g.add((cx[sources_uri], RDFS.seeAlso, URIRef(url)))
+
+###################################################
+### IMPLEMENT CONSTRUCTION LANGUAGE
+###################################################
+
+    g.add((cx[construction_name_cleaned], cx.partOfLanguage, Literal(construction_language)))
+
+###################################################
+### IMPLEMENT CONSTRUCTION MEANING
+###################################################
+
+    # URI for Construction Meaning
+    cx_meaning_uri = f"{construction_name_cleaned}_Meaning"
+    g.add((cx[cx_meaning_uri], RDF.type, cx.ConstructionMeaning))
+    # Triple to relate cx to it meaning
+    g.add((cx[construction_name_cleaned], cx.hasConstructionMeaning, cx[cx_meaning_uri]))
+
+    # MEANING (GENERAL)
+    if meaning.strip():
+        g.add((cx[cx_meaning_uri], cx.hasMeaning, Literal(meaning)))
+    else:
+        print("No meaning to add")
+
+    # IMAGE SCHEMA
+    if image_schema.strip():
+        g.add((cx[cx_meaning_uri], cx.hasImageSchema, Literal(image_schema))) # TODO "usesImageSchema"?
+    else:
+        print("No image-schema to add")
+
+###################################################
+### IMPLEMENT CONSTRUCTION ELEMENTS (AKA SLOTS)
+###################################################
+
+    #Create the sequence of construction elements
+    ## Create a new blank node for the sequence
+    seq_slots = URIRef(cx[f"{construction_name_cleaned}_slots"])
+    g.add((seq_slots, RDF.type, RDF.Seq))
+    # Add elements to the sequence
+    for i in range(element_nb):
+        element_uri = cx[f"{construction_name_cleaned}_{chr(65 + i)}"]
+        seq_position = URIRef(RDF[f"_{i + 1}"])
+        g.add((seq_slots, seq_position, element_uri))
+    ## Add the sequence as the object of the triple
+    g.add((cx[construction_name_cleaned], cx.hasSlots, seq_slots))
+
+    # FROM NOW ON: A LOOP THAT ADDS THE VALUE OF THE FIELDS RELATED TO THE SLOTS FOR EACH SLOT
+    for i in range(1, element_nb + 1):
+        y = i -1
+        element_uri = URIRef(cx[f"{construction_name_cleaned}_{chr(65 + y)}"])
+
+        # Retrieve information from the form
+        semantic_contribution = request.form[f'semantic_contribution_{i}']
+        semantic_property = request.form[f'semprop_{i}']
+        colloprofile = request.form[f'colloprofile_{i}']
+        other_animacy = request.form[f'other_animacy_{i}']
+        animacy = request.form[f'animacy_{i}']
+        other_gender = request.form[f'other_gender_{i}']
+        gender = request.form[f'gender_{i}']
+        number = request.form[f'number_{i}']
+        add_number = request.form[f'add_number_{i}']
+        other_person = request.form[f'other_person_{i}']
+        person = request.form[f'person_{i}']
+        tense_uri = request.form[f'tense_{i}']
+        add_tense = request.form[f'add_tense_{i}']
+        modus = request.form[f'modus_{i}']
+        add_modus = request.form[f'add_modus_{i}']
+        other_voice = request.form[f'other_voice_{i}']
+        voice = request.form[f'voice_{i}']
+        morphosyntactic_form = request.form[f'morphosyntactic_form_{i}']
+        word_order = request.form[f'WordOrder_{i}']
+        transliteration = request.form[f'transliteration_{i}']
+        translation = request.form[f'translation_{i}']
+        syntactic_function = request.form[f'syntactic_function_{i}']
+        case = request.form[f'case_{i}']
+        add_case = request.form[f'add_case_{i}']
+        root = request.form[f'root_{i}']
+        stem = request.form[f'stem_{i}']
+        add_semantic_contribution = request.form[f'add_semantic_contribution_{i}']
+        other_element_specification = request.form[f'element_specification_{i}']
+
+        # Define element/slot as belonging to a subclass of the "Slot" class,
+        # either by being a non-optional slot (SlotMandatory) or an optional slot (SlotOptional).
+        optionality = request.form[f'optionality_{i}']
+        if optionality == "non-optional":
+            optionality_uri = "SlotMandatory"
+        else:
+            optionality_uri = "SlotOptional"
+        g.add((element_uri, RDF.type, cx[optionality_uri]))
+
+        # If defined, add info about word order
+        # TODO ultimately, we want to implement it differently (with before, precedes, etc.)
+        if word_order.strip():
+            g.add((element_uri, cx.WordOrder, Literal(word_order)))
+
+        # Add a comment for collocation and any "other element specification" defined by user
+        if other_element_specification.strip():
+            g.add((element_uri, RDFS.comment, Literal(other_element_specification)))
+        if colloprofile.strip():
+            g.add((element_uri, RDFS.comment, Literal("colloprofile: "+colloprofile)))
+
+        # URI for Slot Meaning
+        slot_meaning_uri = URIRef(cx[f"{construction_name_cleaned}_{chr(65 + y)}_Meaning"])
+        # Triple to relate slot to it meaning (if needed)
+        if semantic_contribution.strip() or add_semantic_contribution.strip() or semantic_property.strip() or other_animacy.strip() or animacy.strip() or other_gender.strip() or gender.strip() or person.strip() or tense_uri.strip() or add_tense.strip() or modus.strip() or add_modus.strip() or other_voice.strip() or voice.strip():
+            g.add((element_uri, cx.hasSlotMeaning, slot_meaning_uri))
+            g.add((slot_meaning_uri, RDF.type, cx.SlotMeaning))
+
+        # If defined, attribute its semantic contribution and semantic property to the element/slot
+        # (i.e., all meaning info except index)
+        if add_semantic_contribution.strip():
+            print("Warning: new semantic contribution!")
+            g.add((slot_meaning_uri, cx.hasSemanticContribution, Literal(add_semantic_contribution)))
+        else:
+            if semantic_contribution.strip():
+                semantic_contribution = semantic_contribution + "Role"
+                g.add((slot_meaning_uri, cx.hasSemanticContribution, olia[semantic_contribution]))
+        if semantic_property.strip():
+            g.add((slot_meaning_uri, cx.hasSemanticProperty, Literal(semantic_property)))
+
+        # URI for Slot Index
+        index_uri = URIRef(cx[f"{construction_name_cleaned}_{chr(65 + y)}_Index"])
+        # Triple to relate index to meaning
+        if other_animacy.strip() or animacy.strip() or other_gender.strip() or gender.strip() or person.strip() or tense_uri.strip() or add_tense.strip() or modus.strip() or add_modus.strip() or other_voice.strip() or voice.strip():
+            g.add((slot_meaning_uri, cx.hasIndex, index_uri))
+
+        # If defined, attribute its animacy, gender, number, person, tense, mode, voice to the element/slot index
+        # If the index has animacy or gender, it refers to an individual (subtype of index)
+        # If the index has tense, mode or voice, it refers to an event (subtype of index)
+        if other_animacy.strip():
+            print("Warning: new value for animacy!")
+            g.add((index_uri, cx.hasAnimacy, Literal(other_animacy)))
+            g.add((index_uri, RDF.type, cx.Individual))
+        else:
+            if animacy.strip():
+                g.add((index_uri, cx.hasAnimacy, cx[animacy]))
+                g.add((index_uri, RDF.type, cx.Individual))
+        if other_gender.strip():
+            print("Warning: new value for gender!")
+            g.add((index_uri, cx.hasGender, Literal(other_gender)))
+            g.add((index_uri, RDF.type, cx.Individual))
+        else:
+            if gender.strip():
+                g.add((index_uri, cx.hasGender, cx[gender]))
+                g.add((index_uri, RDF.type, cx.Individual))
+        if number.strip():
+            g.add((index_uri, cx.hasNumberFeature, olia[number]))
+        else:
+            if add_number.strip():
+                print("Warning: new value for number!")
+                g.add((index_uri, cx.hasNumberFeature, Literal(add_number)))
+        if other_person.strip():
+            print("Warning: new value for person!")
+            g.add((index_uri, cx.hasPerson, Literal(other_person)))
+        else:
+            if person.strip():
+                g.add((index_uri, cx.hasPerson, cx[person]))
+        if add_tense.strip():
+            print("Warning: new value for tense!")
+            g.add((index_uri, cx.hasTenseFeature, Literal(add_tense)))
+            g.add((index_uri, RDF.type, cx.Event))
+        else:
+            if tense_uri.strip():
+                g.add((index_uri, cx.hasTenseFeature, URIRef(tense_uri)))  # We need to use URIRef here because the prefix will be sometimes olia and sometimes oliatop
+                g.add((index_uri, RDF.type, cx.Event))
+        if add_modus.strip():
+            print("Warning: new value for mode!")
+            g.add((index_uri, cx.hasMode, Literal(add_modus)))
+            g.add((index_uri, RDF.type, cx.Event))
+        else:
+            if modus.strip():
+                modus = modus + "Verb"
+                g.add((index_uri, cx.hasMode, olia[modus]))
+                g.add((index_uri, RDF.type, cx.Event))
+        if other_voice.strip():
+            print("Warning: new value for voice!")
+            g.add((index_uri, cx.hasVoice, Literal(other_voice)))
+            g.add((index_uri, RDF.type, cx.Event))
+        else:
+            if voice.strip():
+                g.add((index_uri, cx.hasVoice, cx[voice]))
+                g.add((index_uri, RDF.type, cx.Event))
+
+        # URI for Slot Form
+        slot_form_uri = URIRef(cx[f"{construction_name_cleaned}_{chr(65 + y)}_Form"])
+        # Triple to relate slot to it meaning (if needed)
+        if morphosyntactic_form.strip() or root.strip() or stem.strip():
+            g.add((element_uri, cx.hasSlotForm, slot_form_uri))
+            g.add((slot_form_uri, RDF.type, cx.SlotForm))
+
+        # If defined, attribute its root and stem to the element/slot
+        # (i.e., all formal aspects except morpho-syntactic form
+        if root.strip():
+            g.add((element_uri, cx.hasRoot, Literal(root)))
+        if stem.strip():
+            g.add((element_uri, cx.hasStem, Literal(stem)))
+        if translation.strip():
+            g.add((element_uri, cx.hasTranslation, Literal(translation)))
+        if transliteration.strip():
+            g.add((element_uri, cx.hasTransliteration, Literal(transliteration)))
+
+        # If defined, attribute its morphosyntactic form, syntactic function, translation and case to the element/slot.
+        if morphosyntactic_form.strip():
+            # URI for morphosyntax
+            morphsyn_form_uri = URIRef(cx[f"{construction_name_cleaned}_{chr(65 + y)}_Morphosyntax"])
+            morphosyntactic_form_cleaned = morphosyntactic_form.replace(" ", "")
+            g.add((morphsyn_form_uri, RDF.type, cx[morphosyntactic_form_cleaned]))
+            g.add((cx[morphosyntactic_form_cleaned], RDFS.label, Literal(morphosyntactic_form)))
+            # Triple to relate slot to it meaning
+            g.add((slot_form_uri, cx.hasSyntacticForm, morphsyn_form_uri))
+        if syntactic_function.strip():
+            morphsyn_form_uri = URIRef(cx[f"{construction_name_cleaned}_{chr(65 + y)}_Morphosyntax"])
+            g.add((morphsyn_form_uri, RDF.type, cx[morphosyntactic_form_cleaned]))
+            g.add((morphsyn_form_uri, cx.hasSyntacticFunction, Literal(syntactic_function)))
+        if add_case.strip():
+            morphsyn_form_uri = URIRef(cx[f"{construction_name_cleaned}_{chr(65 + y)}_Morphosyntax"])
+            g.add((morphsyn_form_uri, RDF.type, cx[morphosyntactic_form_cleaned]))
+            print("Warning: new value for case!")
+            g.add((morphsyn_form_uri, cx.hasCaseFeature, Literal(add_case)))
+        else:
+            if case.strip():
+                morphsyn_form_uri = URIRef(cx[f"{construction_name_cleaned}_{chr(65 + y)}_Morphosyntax"])
+                g.add((morphsyn_form_uri, RDF.type, cx[morphosyntactic_form_cleaned]))
+                case = case + "Case"
+                g.add((morphsyn_form_uri, cx.hasCaseFeature, olia[case]))
+
+###################################################
+### IMPLEMENT CONSTRUCTION COTEXT
+###################################################
+
+    # INFORMATION STRUCTURE #TODO: For the moment, each slot gets an IS; maybe we want the cx to have an IS instead
+    for topic in topics:
+        g.add((cx[topic], cx.hasIS, cx.Topic))
+    for comment in comments:
+        g.add((cx[comment], cx.hasIS, cx.Comment))
+    for focus in focuses:
+        g.add((cx[focus], cx.hasIS, cx.Focus))
+    for background in backgrounds:
+        g.add((cx[background], cx.hasIS, cx.Background))
+
+    # INTONATION #TODO
+    if intonation.strip():
+        g.add((cx[construction_name_cleaned], cx.hasIntonation, Literal(intonation)))
+
+    # GESTURE #TODO
+    if gesture.strip():
+        g.add((cx[construction_name_cleaned], cx.hasGesture, Literal(gesture)))
+
+###################################################
+### IMPLEMENT LINKS BETWEEN CONSTRUCTIONS
+###################################################
+
+    # Add RDF triples for each construction this one inherits from
+    for inherit_construction in selected_inherits_from:
+        cleaned_inherit_construction = inherit_construction.replace(" ", "")
+        g.add((cx[construction_name_cleaned], cx.inheritsFrom, cx[cleaned_inherit_construction]))
+        # User can enter the name of a construction that has not been implemented yet
+        # When this happens, create a new construction entry, with title, annotator and creation date
+        if cleaned_inherit_construction not in list_cx_uris:
+            g.add((cx[cleaned_inherit_construction], RDF.type, membr.Construction))
+            g.add((cx[cleaned_inherit_construction], cx.annotator, membr[user_name]))
+            g.add((cx[cleaned_inherit_construction], cx.createdOn,
+                   Literal(datetime.now().strftime('%Y-%m-%d'), datatype=XSD.date)))
+            g.add((cx[cleaned_inherit_construction], cx.hasTitle, Literal(inherit_construction)))
+            print("New construction needed!")
+
+    # Add RDF triples for each construction this one is inherited by
+    for inherit_construction in selected_inherited_by:
+        cleaned_inherit_construction = inherit_construction.replace(" ", "")
+        g.add((cx[construction_name_cleaned], cx.inheritedBy, cx[cleaned_inherit_construction]))
+        # User can enter the name of a construction that has not been implemented yet
+        # When this happens, create a new construction entry, with title, annotator and creation date
+        if cleaned_inherit_construction not in list_cx_uris:
+            g.add((cx[cleaned_inherit_construction], RDF.type, membr.Construction))
+            g.add((cx[cleaned_inherit_construction], cx.annotator, membr[user_name]))
+            g.add((cx[cleaned_inherit_construction], cx.createdOn, Literal(datetime.now().strftime('%Y-%m-%d'), datatype=XSD.date)))
+            g.add((cx[cleaned_inherit_construction], cx.hasTitle, Literal(inherit_construction)))
+            print("New construction needed!")
+
+    # Add RDF triples for each construction this one is metaphorical extension
+    for inherit_construction in selected_metaphorical_extension:
+        cleaned_inherit_construction = inherit_construction.replace(" ", "")
+        g.add((cx[construction_name_cleaned], cx.metaphoricalExtension, cx[cleaned_inherit_construction]))
+        # User can enter the name of a construction that has not been implemented yet
+        # When this happens, create a new construction entry, with title, annotator and creation date
+        if cleaned_inherit_construction not in list_cx_uris:
+            g.add((cx[cleaned_inherit_construction], RDF.type, membr.Construction))
+            g.add((cx[cleaned_inherit_construction], cx.annotator, membr[user_name]))
+            g.add((cx[cleaned_inherit_construction], cx.createdOn,
+                       Literal(datetime.now().strftime('%Y-%m-%d'), datatype=XSD.date)))
+            g.add((cx[cleaned_inherit_construction], cx.hasTitle, Literal(inherit_construction)))
+            print("New construction needed!")
+
+    # Handle the dynamically added similarity links
+    similarity_counter = 1
+    while f'similarityLink_Cx_{similarity_counter}' in request.form:
+        # Fetch values for each similarity link
+        similarity_link = request.form[f'similarityLink_Cx_{similarity_counter}']
+        similarity_link_crossl = request.form[f'crosslinguistic_{similarity_counter}']
+        similarity_link_meaning = request.form[f'meaningSim_{similarity_counter}']
+        similarity_link_form = request.form[f'formSim_{similarity_counter}']
+        # Add RDF triples for the syntactic link
+        if similarity_link.strip():
+            cleaned_similar_construction = similarity_link.replace(" ", "")
+            if similarity_link_crossl == "Empty" or similarity_link_meaning == "Empty" or similarity_link_form == "Empty":
+                return "Error: You haven't specified all properties of a similarity link."
+            if similarity_link_crossl == "yes":
+                uri = f"CL_{similarity_link_form}Form{similarity_link_meaning}Function"
+            else:
+                uri = f"{similarity_link_form}Form{similarity_link_meaning}Function"
+            property_uri = URIRef(cx[uri])
+            g.add((cx[construction_name_cleaned], property_uri, cx[cleaned_similar_construction]))
+            if similarity_link not in list_cx_uris:
+                g.add((cx[cleaned_similar_construction], RDF.type, membr.Construction))
+                g.add((cx[cleaned_similar_construction], cx.annotator, membr[user_name]))
+                g.add((cx[cleaned_similar_construction], cx.createdOn, Literal(datetime.now().strftime('%Y-%m-%d'), datatype=XSD.date)))
+                g.add((cx[cleaned_similar_construction], cx.hasTitle, Literal(similarity_link)))
+                print("New construction needed!")
+
+        similarity_counter += 1
+
+###################################################
+### IMPLEMENT EXAMPLES
+###################################################
+
+    # Handle the dynamically added examples
+    example_counter = 1
+    while f'example_text_{example_counter}' in request.form:
+        # Fetch values for each example
+        example_text = request.form[f'example_text_{example_counter}']
+        ex_translation = request.form[f'example_translation_{example_counter}']
+        ex_transliteration = request.form[f'example_transliteration_{example_counter}']
+        ex_glosses = request.form[f'glosses_{example_counter}']
+        comment = request.form[f'comment_{example_counter}']
+
+        # Create a unique URI for each example
+        example_uri = cx[f"{construction_name_cleaned}_Ex_{chr(64 + example_counter)}"]
+
+        # Add RDF triples for the example if needed
+        if example_text.strip(): #TODO actually, there should not be any example without a text; but if users create an example by mistake, this needs to be handled
+            g.add((cx[construction_name_cleaned], cx.hasExample, example_uri))
+            g.add((example_uri, RDF.type, cx.Example))
+            g.add((example_uri, cx.hasText, Literal(example_text)))
+        if ex_translation.strip():
+            g.add((example_uri, cx.hasTranslation, Literal(ex_translation)))
+        if ex_transliteration.strip():
+            g.add((example_uri, cx.hasTransliteration, Literal(ex_transliteration)))
+        if ex_glosses.strip():
+            g.add((example_uri, cx.hasGlosses, Literal(ex_glosses)))
+        if comment.strip():
+            g.add((example_uri, RDFS.comment, Literal(comment)))
+
+        example_counter += 1
+
+###################################################
+### IMPLEMENT RESEARCH DATA #TODO
+###################################################
+
+    # Add a comment about research data:
+    if research_data.strip():
+        g.add((cx[construction_name_cleaned], RDFS.comment, Literal(research_data)))
+
+###################################################
+### SERIALIZE THE RDF GRAPH TO A .ttl FILE
+###################################################
+
+    # Create a time stamp
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+
+    # The file is stored in "user_graphs" subfolder, ensure it exists
+    os.makedirs(os.path.join(app.instance_path, "user_graphs"), exist_ok=True)
+
+    # Create the file path within the subfolder
+    file_path = os.path.join(app.instance_path, "user_graphs", f'{user_name.split("/")[-1]}_{timestamp}_cx.ttl')
+
+    # Serialize the ttl file
+    g.serialize(destination=file_path, format='turtle')
+
+    # The user downloads the file
+    return send_file(file_path, as_attachment=True)
+
+if __name__ == "__main__":
+    app.run(port=5001, debug=True)

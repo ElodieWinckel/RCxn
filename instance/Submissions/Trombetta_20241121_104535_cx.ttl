@@ -1,0 +1,127 @@
+@prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cx: <http://example.org/cx/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix membr: <http://example.org/users/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cx:Relative-Topic-ShiftConstruction a membr:Construction ;
+    cx:CL_sameFormSameFunction <http://example.org/cx/Latinlinkingcliché(i.e.,inCaesar'sandTacitus'works)> ;
+    cx:hasConstructionMeaning cx:Relative-Topic-ShiftConstruction_Meaning ;
+    cx:hasExample cx:Relative-Topic-ShiftConstruction_Ex_A,
+        cx:Relative-Topic-ShiftConstruction_Ex_B ;
+    cx:hasMetadata cx:Relative-Topic-ShiftConstruction_MD ;
+    cx:hasSlots cx:Relative-Topic-ShiftConstruction_slots ;
+    cx:inheritsFrom cx:ItalianConiunctioRelativa,
+        cx:ItalianSiPassivante,
+        cx:ItalianTemporalSubordinateClause ;
+    cx:partOfLanguage "Sixteenth-century Italian (Florence), written: historiography (Francesco Guicciardini's \"Storia d'Italia\") " ;
+    cx:similarFormDifferentFunction cx:ItalianRelativeClause ;
+    cx:similarFormSameFunction cx:Demonstrative-Topic-ShiftConstruction .
+
+cx:Demonstrative-Topic-ShiftConstruction a membr:Construction ;
+    cx:annotator membr:Trombetta ;
+    cx:createdOn "2024-11-21"^^xsd:date ;
+    cx:hasTitle "Demonstrative-Topic-Shift Construction" .
+
+cx:ItalianConiunctioRelativa a membr:Construction ;
+    cx:annotator membr:Trombetta ;
+    cx:createdOn "2024-11-21"^^xsd:date ;
+    cx:hasTitle "Italian Coniunctio Relativa" .
+
+cx:ItalianRelativeClause a membr:Construction ;
+    cx:annotator membr:Trombetta ;
+    cx:createdOn "2024-11-21"^^xsd:date ;
+    cx:hasTitle "Italian Relative Clause" .
+
+cx:ItalianSiPassivante a membr:Construction ;
+    cx:annotator membr:Trombetta ;
+    cx:createdOn "2024-11-21"^^xsd:date ;
+    cx:hasTitle "Italian Si Passivante" .
+
+cx:ItalianTemporalSubordinateClause a membr:Construction ;
+    cx:annotator membr:Trombetta ;
+    cx:createdOn "2024-11-21"^^xsd:date ;
+    cx:hasTitle "Italian Temporal Subordinate Clause" .
+
+<http://example.org/cx/Latinlinkingcliché(i.e.,inCaesar'sandTacitus'works)> a membr:Construction ;
+    cx:annotator membr:Trombetta ;
+    cx:createdOn "2024-11-21"^^xsd:date ;
+    cx:hasTitle "Latin linking cliché (i.e., in Caesar's and Tacitus' works)" .
+
+cx:Relative-Topic-ShiftConstruction_A a cx:SlotMandatory ;
+    cx:WordOrder "Element 1 immediately before element 2" ;
+    cx:hasSlotForm cx:Relative-Topic-ShiftConstruction_A_Form ;
+    cx:hasSlotMeaning cx:Relative-Topic-ShiftConstruction_A_Meaning ;
+    cx:hasStem "Il quale [N]" ;
+    RDFS:comment "Element 1 is a \"coniunctio relativa\", i.e., a structure in which a relative pronoun (e.g., il quale, la quale) introduces a subordinate clause. The head noun can be omitted, remaining contextually recoverable. When this happens, the coniunctio relativa represents an elliptical noun phrase, with the relative pronoun standing in place of the implicit nominal head. Such an NP is anaphorically linked to the preceding co-text" .
+
+cx:Relative-Topic-ShiftConstruction_A_Form a cx:SlotForm ;
+    cx:hasSyntacticForm cx:Relative-Topic-ShiftConstruction_A_Morphosyntax .
+
+cx:Relative-Topic-ShiftConstruction_A_Meaning a cx:SlotMeaning ;
+    cx:hasSemanticProperty "When the noun is expressed, it usually has a very generic meaning, e.g. \"cose\" ('things', 'issues')" .
+
+cx:Relative-Topic-ShiftConstruction_A_Morphosyntax a cx:NP .
+
+cx:Relative-Topic-ShiftConstruction_B a cx:SlotMandatory ;
+    cx:WordOrder "Element 2 immediately before element 3" .
+
+cx:Relative-Topic-ShiftConstruction_C a cx:SlotMandatory ;
+    cx:WordOrder "Element 3 follows element 2" ;
+    cx:hasSlotForm cx:Relative-Topic-ShiftConstruction_C_Form ;
+    RDFS:comment "The verb is often, though not exclusively, in the present tense. It frequently, but not exclusively, features a \"si passivante\" construction (formed by the particle 'si' combined with a transitive verb to convey a passive meaning). Additionally, the VP may have a more complex internal structure, incorporating various other elements. The verb appearing in the VP often anaphorically references an action or process already mentioned in the preceding co-text. This can occur either through direct repetition of the same verb or through synonyms" .
+
+cx:Relative-Topic-ShiftConstruction_C_Form a cx:SlotForm ;
+    cx:hasSyntacticForm cx:Relative-Topic-ShiftConstruction_C_Morphosyntax .
+
+cx:Relative-Topic-ShiftConstruction_C_Morphosyntax a cx:VP .
+
+cx:Relative-Topic-ShiftConstruction_Ex_A a cx:Example ;
+    cx:hasText "Ma era al tutto diversa la deliberazione del senato viniziano. (Discorso indiretto del portavoce veneziano). [Le quali cose mentre che con aperta disunione si trattano tra i collegati], nuovo accidente che sopravenne partorì effetti molto diversi da' pensieri degli uomini;" ;
+    cx:hasTranslation "But the decision of the Venetian Senate was completely different. (Indirect speech of the Venetian spokesman). [While these things were being discussed with open disunity among the allies], a new event that arose produced effects very different from the common expectations;" ;
+    RDFS:comment "The Construction is in square brackets, while the rest has been included to allow for an understanding of its function. The NP with the coniunctio relativa includes the noun \"cose\" ('things'), which functions as an anaphoric encapsulator, summarizing the entire portion of the preceding text related to the discussions taking place among the allies. The verb \"trattare\" ('to discuss'), appearing in the VP with a 'si passivante' (thus, without a specified agent), carries an anaphoric value and refers to the action of discussing, which is the topic of the preceding co-text. The main clause that follows the Relative-Topic-Shift Construction introduces a new topic (the new and unexpected event being mentioned). Thus, it can be seen how, thanks to its anaphoric value, the Construction connects the preceding topic, which has already been concluded, to the subsequent one, simultaneously creating an effect of both cohesion and \"separation\" between two distinct subjects" .
+
+cx:Relative-Topic-ShiftConstruction_Ex_B a cx:Example ;
+    cx:hasText "...; e si ritirorno verso Cascina, attendendo che provisioni facesse più il re contro a sì manifesta contumacia de' suoi medesimi.[Le quali mentre che s'aspettano], non mancavano da altre parti a' fiorentini nuovi e pericolosi travagli, suscitati principalmente da' potentati della lega." ;
+    cx:hasTranslation "...; and they withdrew toward Cascina, waiting for the king to take further measures against such open defiance from his own subjects. [While these were being awaited], the Florentines faced new and dangerous troubles from other quarters, stirred up primarily by the powers of the league." ;
+    RDFS:comment "The Construction is in square brackets, while the rest has been included to allow for an understanding of its function. The coniunctio relativa 'Le quali' anaphorically refers to the 'provisioni' mentioned before the Construction. The noun in the NP thus remains implicit. The verb in the VP, 'aspettare' ('to wait') functions anaphorically, as it is a synonym of 'attendere', which appears shortly before the Construction. The main clause following the Construction introduces a new topic (the new trouble that the Florentines have to face). " .
+
+cx:Relative-Topic-ShiftConstruction_MD a cx:Metadata ;
+    cx:annotator membr:Trombetta ;
+    cx:creationDate "2024-11-21"^^xsd:date ;
+    cx:hasFindings "The text reveals various types of text-level constructions, i.e., constructions capable of structuring and organizing the text. These structures, while formally appearing as sentences or phrases, operate at the textual level." ;
+    cx:hasRQ membr: ;
+    cx:hasSources cx:Relative-Topic-ShiftConstruction_Sources ;
+    cx:hasTitle "Sixteenth-century Italian (Florence), written: historiography (Francesco Guicciardini's \"Storia d'Italia\")  Relative-Topic-Shift Construction " .
+
+cx:Relative-Topic-ShiftConstruction_Meaning a cx:ConstructionMeaning ;
+    cx:hasMeaning "Transition from one (discourse) topic to another" .
+
+cx:Relative-Topic-ShiftConstruction_Sources a cx:Collection ;
+    cx:hasLiterature [ dc:creator "Mengaldo, Pier Vincenzo" ;
+            dc:date "2015" ;
+            dc:identifier "DOI 10.1417/81352",
+                "ISSN 0024-385X" ;
+            dc:title "Sintassi e narrazione nella «Storia d'Italia» di Guicciardini: effetti di legato e di staccato" ;
+            dc:type "journalArticle" ],
+        [ dc:creator "Nencioni, Giovanni" ;
+            dc:date "1984" ;
+            dc:publisher "Leo S. Olschki" ;
+            dc:title "La lingua del Guicciardini" ;
+            dc:type "bookSection" ],
+        <https://doi.org/10.1093/llc/fqw021> .
+
+cx:Relative-Topic-ShiftConstruction_slots a rdf:Seq ;
+    rdf:_1 cx:Relative-Topic-ShiftConstruction_A ;
+    rdf:_2 cx:Relative-Topic-ShiftConstruction_B ;
+    rdf:_3 cx:Relative-Topic-ShiftConstruction_C .
+
+<https://doi.org/10.1093/llc/fqw021> dc:creator "Longrée, Dominique",
+        "Mellet, Sylvie" ;
+    dc:date "2017-09-01" ;
+    dc:identifier "DOI 10.1093/llc/fqw021",
+        "ISSN 2055-7671" ;
+    dc:title "A text structure indicator and two topological methods: New ways for studying Latin historic narratives" ;
+    dc:type "journalArticle" .
+

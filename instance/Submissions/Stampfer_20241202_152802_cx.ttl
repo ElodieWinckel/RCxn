@@ -1,0 +1,86 @@
+@prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cx: <http://example.org/cx/> .
+@prefix membr: <http://example.org/users/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cx:EvaluativeAttributionConstruction a membr:Construction ;
+    cx:hasConstructionMeaning cx:EvaluativeAttributionConstruction_Meaning ;
+    cx:hasMetadata cx:EvaluativeAttributionConstruction_MD ;
+    cx:hasSlots cx:EvaluativeAttributionConstruction_slots ;
+    cx:partOfLanguage "Modern English, British & American English, several (written) genres" .
+
+cx:EvaluativeAttributionConstruction_A a cx:SlotOptional ;
+    cx:hasSlotForm cx:EvaluativeAttributionConstruction_A_Form ;
+    cx:hasSlotMeaning cx:EvaluativeAttributionConstruction_A_Meaning .
+
+cx:EvaluativeAttributionConstruction_A_Form a cx:SlotForm ;
+    cx:hasSyntacticForm cx:EvaluativeAttributionConstruction_A_Morphosyntax .
+
+cx:EvaluativeAttributionConstruction_A_Meaning a cx:SlotMeaning ;
+    cx:hasSemanticProperty "Attributor" .
+
+cx:EvaluativeAttributionConstruction_A_Morphosyntax a cx:NP .
+
+cx:EvaluativeAttributionConstruction_B a cx:SlotMandatory ;
+    cx:hasSlotForm cx:EvaluativeAttributionConstruction_B_Form .
+
+cx:EvaluativeAttributionConstruction_B_Form a cx:SlotForm ;
+    cx:hasSyntacticForm cx:EvaluativeAttributionConstruction_B_Morphosyntax .
+
+cx:EvaluativeAttributionConstruction_B_Morphosyntax a cx:VP .
+
+cx:EvaluativeAttributionConstruction_C a cx:SlotMandatory ;
+    cx:hasSlotForm cx:EvaluativeAttributionConstruction_C_Form ;
+    cx:hasSlotMeaning cx:EvaluativeAttributionConstruction_C_Meaning .
+
+cx:EvaluativeAttributionConstruction_C_Form a cx:SlotForm ;
+    cx:hasSyntacticForm cx:EvaluativeAttributionConstruction_C_Morphosyntax .
+
+cx:EvaluativeAttributionConstruction_C_Meaning a cx:SlotMeaning ;
+    cx:hasSemanticProperty "Attributee" .
+
+cx:EvaluativeAttributionConstruction_C_Morphosyntax a <http://example.org/cx/NP;PP> .
+
+cx:EvaluativeAttributionConstruction_D a cx:SlotOptional ;
+    cx:hasSlotForm cx:EvaluativeAttributionConstruction_D_Form ;
+    cx:hasStem "to be (lemma)" .
+
+cx:EvaluativeAttributionConstruction_D_Form a cx:SlotForm .
+
+cx:EvaluativeAttributionConstruction_E a cx:SlotMandatory ;
+    cx:hasSlotForm cx:EvaluativeAttributionConstruction_E_Form ;
+    cx:hasSlotMeaning cx:EvaluativeAttributionConstruction_E_Meaning .
+
+cx:EvaluativeAttributionConstruction_E_Form a cx:SlotForm ;
+    cx:hasSyntacticForm cx:EvaluativeAttributionConstruction_E_Morphosyntax .
+
+cx:EvaluativeAttributionConstruction_E_Meaning a cx:SlotMeaning ;
+    cx:hasSemanticProperty "Attribute" .
+
+cx:EvaluativeAttributionConstruction_E_Morphosyntax a <http://example.org/cx/NP;AdjP,PP;VP;clause> .
+
+cx:EvaluativeAttributionConstruction_MD a cx:Metadata ;
+    cx:annotator membr:Stampfer ;
+    cx:creationDate "2024-12-02"^^xsd:date ;
+    cx:hasRQ membr: ;
+    cx:hasTitle "Modern English, British & American English, several (written) genres Evaluative Attribution Construction" .
+
+cx:EvaluativeAttributionConstruction_Meaning a cx:ConstructionMeaning ;
+    cx:hasMeaning "An ATTRIBUTOR mentally asigns ATTRIBUTE to an ATTRIBUTEE" .
+
+cx:EvaluativeAttributionConstruction_slots a rdf:Seq ;
+    rdf:_1 cx:EvaluativeAttributionConstruction_A ;
+    rdf:_2 cx:EvaluativeAttributionConstruction_B ;
+    rdf:_3 cx:EvaluativeAttributionConstruction_C ;
+    rdf:_4 cx:EvaluativeAttributionConstruction_D ;
+    rdf:_5 cx:EvaluativeAttributionConstruction_E .
+
+cx:NP RDFS:label "NP" .
+
+<http://example.org/cx/NP;AdjP,PP;VP;clause> RDFS:label "NP; AdjP, PP; VP; clause" .
+
+<http://example.org/cx/NP;PP> RDFS:label "NP; PP" .
+
+cx:VP RDFS:label "VP" .
+

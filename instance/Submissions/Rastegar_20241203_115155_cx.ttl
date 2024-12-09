@@ -1,0 +1,119 @@
+@prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cx: <http://example.org/cx/> .
+@prefix membr: <http://example.org/users/> .
+@prefix olia: <http://purl.org/olia/olia.owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cx:Idiomaticconstructions a membr:Construction ;
+    cx:hasConstructionMeaning cx:Idiomaticconstructions_Meaning ;
+    cx:hasExample cx:Idiomaticconstructions_Ex_A,
+        cx:Idiomaticconstructions_Ex_B ;
+    cx:hasMetadata cx:Idiomaticconstructions_MD ;
+    cx:hasSlots cx:Idiomaticconstructions_slots ;
+    cx:partOfLanguage "English" .
+
+cx:Idiomaticconstructions_A a cx:SlotMandatory ;
+    cx:WordOrder "Initial position" ;
+    cx:hasSlotForm cx:Idiomaticconstructions_A_Form ;
+    cx:hasSlotMeaning cx:Idiomaticconstructions_A_Meaning .
+
+cx:Idiomaticconstructions_A_Form a cx:SlotForm ;
+    cx:hasSyntacticForm cx:Idiomaticconstructions_A_Morphosyntax .
+
+cx:Idiomaticconstructions_A_Index a cx:Individual ;
+    cx:hasAnimacy cx:animate .
+
+cx:Idiomaticconstructions_A_Meaning a cx:SlotMeaning ;
+    cx:hasIndex cx:Idiomaticconstructions_A_Index ;
+    cx:hasSemanticContribution olia:ActorMacroRole .
+
+cx:Idiomaticconstructions_A_Morphosyntax a cx:Pronoun_NP ;
+    cx:hasSyntacticFunction "Subject" .
+
+cx:Idiomaticconstructions_B a cx:SlotMandatory ;
+    cx:WordOrder "Follows subject, precedes object" ;
+    cx:hasSlotForm cx:Idiomaticconstructions_B_Form ;
+    cx:hasSlotMeaning cx:Idiomaticconstructions_B_Meaning ;
+    cx:hasStem "burn" .
+
+cx:Idiomaticconstructions_B_Form a cx:SlotForm ;
+    cx:hasSyntacticForm cx:Idiomaticconstructions_B_Morphosyntax .
+
+cx:Idiomaticconstructions_B_Index a cx:Event ;
+    cx:hasMode olia:IndicativeVerb ;
+    cx:hasVoice cx:active .
+
+cx:Idiomaticconstructions_B_Meaning a cx:SlotMeaning ;
+    cx:hasIndex cx:Idiomaticconstructions_B_Index .
+
+cx:Idiomaticconstructions_B_Morphosyntax a cx:VP .
+
+cx:Idiomaticconstructions_C a cx:SlotMandatory ;
+    cx:WordOrder "Precedes \"bridges\"" ;
+    cx:hasSlotForm cx:Idiomaticconstructions_C_Form ;
+    cx:hasSlotMeaning cx:Idiomaticconstructions_C_Meaning .
+
+cx:Idiomaticconstructions_C_Form a cx:SlotForm ;
+    cx:hasSyntacticForm cx:Idiomaticconstructions_C_Morphosyntax .
+
+cx:Idiomaticconstructions_C_Index a cx:Individual ;
+    cx:hasAnimacy cx:animate .
+
+cx:Idiomaticconstructions_C_Meaning a cx:SlotMeaning ;
+    cx:hasIndex cx:Idiomaticconstructions_C_Index ;
+    cx:hasSemanticContribution olia:PossessorRole .
+
+cx:Idiomaticconstructions_C_Morphosyntax a cx:Possessivepronoun_NP ;
+    cx:hasSyntacticFunction "Determiner/Possessive modifier" .
+
+cx:Idiomaticconstructions_D a cx:SlotMandatory ;
+    cx:WordOrder "Final position" ;
+    cx:hasSlotForm cx:Idiomaticconstructions_D_Form ;
+    cx:hasSlotMeaning cx:Idiomaticconstructions_D_Meaning ;
+    cx:hasStem "bridge" .
+
+cx:Idiomaticconstructions_D_Form a cx:SlotForm ;
+    cx:hasSyntacticForm cx:Idiomaticconstructions_D_Morphosyntax .
+
+cx:Idiomaticconstructions_D_Index a cx:Individual ;
+    cx:hasAnimacy cx:inanimate ;
+    cx:hasNumberFeature olia:Paucal .
+
+cx:Idiomaticconstructions_D_Meaning a cx:SlotMeaning ;
+    cx:hasIndex cx:Idiomaticconstructions_D_Index ;
+    cx:hasSemanticContribution olia:ThemeRole .
+
+cx:Idiomaticconstructions_D_Morphosyntax a cx:NP ;
+    cx:hasCaseFeature olia:AccusativeCase .
+
+cx:Idiomaticconstructions_Ex_A a cx:Example ;
+    cx:hasText "He had burned his bridges in Hollywood and took off for the seclusion of Taos to hide away..." .
+
+cx:Idiomaticconstructions_Ex_B a cx:Example ;
+    cx:hasText "I had, quite deliberately, burned my bridges -- there was no returning to the closet for me." .
+
+cx:Idiomaticconstructions_MD a cx:Metadata ;
+    cx:annotator membr:Rastegar ;
+    cx:creationDate "2024-12-03"^^xsd:date ;
+    cx:hasRQ membr:Project_Rastegar ;
+    cx:hasTitle "English Idiomatic constructions" .
+
+cx:Idiomaticconstructions_Meaning a cx:ConstructionMeaning ;
+    cx:hasMeaning """to end relationships. \r
+to commit oneself to a course from which there is no retreat""" .
+
+cx:Idiomaticconstructions_slots a rdf:Seq ;
+    rdf:_1 cx:Idiomaticconstructions_A ;
+    rdf:_2 cx:Idiomaticconstructions_B ;
+    rdf:_3 cx:Idiomaticconstructions_C ;
+    rdf:_4 cx:Idiomaticconstructions_D .
+
+cx:NP RDFS:label "NP" .
+
+cx:Possessivepronoun_NP RDFS:label "Possessive pronoun_NP" .
+
+cx:Pronoun_NP RDFS:label "Pronoun_NP" .
+
+cx:VP RDFS:label "VP" .
+
