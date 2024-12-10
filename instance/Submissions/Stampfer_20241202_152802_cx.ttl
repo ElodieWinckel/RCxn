@@ -40,7 +40,7 @@ cx:EvaluativeAttributionConstruction_C_Form a cx:SlotForm ;
 cx:EvaluativeAttributionConstruction_C_Meaning a cx:SlotMeaning ;
     cx:hasSemanticProperty "Attributee" .
 
-cx:EvaluativeAttributionConstruction_C_Morphosyntax a <http://example.org/cx/NP;PP> .
+cx:EvaluativeAttributionConstruction_C_Morphosyntax a "NP", "PP" .
 
 cx:EvaluativeAttributionConstruction_D a cx:SlotOptional ;
     cx:hasSlotForm cx:EvaluativeAttributionConstruction_D_Form ;
@@ -58,7 +58,7 @@ cx:EvaluativeAttributionConstruction_E_Form a cx:SlotForm ;
 cx:EvaluativeAttributionConstruction_E_Meaning a cx:SlotMeaning ;
     cx:hasSemanticProperty "Attribute" .
 
-cx:EvaluativeAttributionConstruction_E_Morphosyntax a <http://example.org/cx/NP;AdjP,PP;VP;clause> .
+cx:EvaluativeAttributionConstruction_E_Morphosyntax a "NP", "AdjP", "PP", "VP", "clause" .
 
 cx:EvaluativeAttributionConstruction_MD a cx:Metadata ;
     cx:annotator membr:Stampfer ;
@@ -75,12 +75,6 @@ cx:EvaluativeAttributionConstruction_slots a rdf:Seq ;
     rdf:_3 cx:EvaluativeAttributionConstruction_C ;
     rdf:_4 cx:EvaluativeAttributionConstruction_D ;
     rdf:_5 cx:EvaluativeAttributionConstruction_E .
-
-cx:NP RDFS:label "NP" .
-
-<http://example.org/cx/NP;AdjP,PP;VP;clause> RDFS:label "NP; AdjP, PP; VP; clause" .
-
-<http://example.org/cx/NP;PP> RDFS:label "NP; PP" .
 
 cx:VP RDFS:label "VP" .
 

@@ -65,6 +65,7 @@ cx:Relative-Topic-ShiftConstruction_A_Meaning a cx:SlotMeaning ;
 cx:Relative-Topic-ShiftConstruction_A_Morphosyntax a cx:NP .
 
 cx:Relative-Topic-ShiftConstruction_B a cx:SlotMandatory ;
+    cx:hasSurfaceForm "mentre che" ;
     cx:WordOrder "Element 2 immediately before element 3" .
 
 cx:Relative-Topic-ShiftConstruction_C a cx:SlotMandatory ;
