@@ -72,7 +72,7 @@ cx:Idiomaticconstruction_B_Index a cx:Individual ;
 cx:Idiomaticconstruction_B_Meaning a cx:SlotMeaning ;
     cx:hasIndex cx:Idiomaticconstruction_B_Index .
 
-cx:Idiomaticconstruction_B_Morphosyntax a cx:Definitearticle ;
+cx:Idiomaticconstruction_B_Morphosyntax a "Definite article" ;
     cx:hasCaseFeature olia:DativeCase ;
     cx:hasSyntacticFunction "Determiner" .
 

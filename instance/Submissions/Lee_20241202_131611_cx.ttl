@@ -51,7 +51,7 @@ cx:Generalprepositionalconstructions a membr:Construction ;
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_B_Meaning> a cx:SlotMeaning ;
     cx:hasSemanticProperty "The adjectives share the semantic property of describing vividness or clarity." .
 
-<http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_B_Morphosyntax> a cx:Adverb .
+<http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_B_Morphosyntax> a cx:Adjective .
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_C> a cx:SlotOptional ;
     cx:WordOrder "The adverbs typically appear directly before the prepositional phrase \"vor Augen\"." ;

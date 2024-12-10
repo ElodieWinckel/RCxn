@@ -18,34 +18,38 @@
     <div id="table-container"></div>
 
     <script>
-        // Accessing elements sent by Flask
-        const elements = {{ elements | tojson }};
+    // Accessing elements sent by Flask
+    const elements = {{ elements | tojson }};
 
-        function createCrossTable(data) {
-            // Get unique subjects and properties
-            const subjects = [...new Set(data.map(item => item.subject))];
-            const properties = [...new Set(data.map(item => item.property))];
+    function createCrossTable(data) {
+        // Get unique subjects and properties
+        const subjects = [...new Set(data.map(item => item.subject))];
+        const properties = [...new Set(data.map(item => item.property))];
 
-            // Create a 2D map to store the values as arrays
-            const tableData = {};
-            properties.forEach(property => {
-                tableData[property] = {};
-                subjects.forEach(subject => {
-                    tableData[property][subject] = []; // Initialize as empty array
-                });
+        // Create a 2D map to store the values as arrays
+        const tableData = {};
+        properties.forEach(property => {
+            tableData[property] = {};
+            subjects.forEach(subject => {
+                tableData[property][subject] = []; // Initialize as empty array
             });
+        });
 
-            // Populate the map with objects
-            data.forEach(({ subject, property, object }) => {
-                tableData[property][subject].push(object); // Add all values to the array
-            });
+        // Populate the map with objects
+        data.forEach(({ subject, property, object }) => {
+            tableData[property][subject].push(object); // Add all values to the array
+        });
 
-            // Generate HTML table
-            const table = document.createElement('table');
-            const tbody = document.createElement('tbody');
+        // Define the desired order of properties
+        const desiredOrder = ['hasSurfaceForm', 'hasRoot', 'hasStem', 'hasTransliteration', 'hasTranslation', 'Morphosyntax', 'Optionality', 'WordOrder', 'hasSyntacticFunction', 'hasSemanticContribution', 'hasSemanticProperty' , 'hasAnimacy', 'hasGender', 'hasNumberFeature', 'hasPerson', 'hasCaseFeature', 'hasTenseFeature', 'hasMode', 'hasVoice', 'type', 'comment'];
 
-            // Data rows
-            properties.forEach(property => {
+        // Generate HTML table
+        const table = document.createElement('table');
+        const tbody = document.createElement('tbody');
+
+        // Data rows, based on the desired order
+        desiredOrder.forEach(property => {
+            if (tableData[property]) { // Only create rows for properties present in the data
                 const row = document.createElement('tr');
                 const cells = [
                     `<td>${property}</td>`,
@@ -56,17 +60,18 @@
                 ];
                 row.innerHTML = cells.join('');
                 tbody.appendChild(row);
-            });
+            }
+        });
 
-            table.appendChild(tbody);
-            return table;
-        }
+        table.appendChild(tbody);
+        return table;
+    }
 
-        // Render the table
-        const container = document.getElementById('table-container');
-        const table = createCrossTable(elements);
-        container.appendChild(table);
-    </script>
+    // Render the table
+    const container = document.getElementById('table-container');
+    const table = createCrossTable(elements);
+    container.appendChild(table);
+</script>
 
 <h2>Examples</h2>
     {% for subject, rows in grouped_examples.items() %}

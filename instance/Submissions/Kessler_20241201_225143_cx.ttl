@@ -16,6 +16,7 @@ cx:Dooperationwithoperand1onoperand2construction a membr:Construction ;
 cx:Dooperationwithoperand1onoperand2construction_A a cx:SlotOptional ;
     cx:WordOrder "Immediately before element 2" ;
     cx:hasSlotForm cx:Dooperationwithoperand1onoperand2construction_A_Form ;
+    cx:hasSurfaceForm "以" ;
     cx:hasTranslation "with" ;
     cx:hasTransliteration "yi" .
 

@@ -111,8 +111,21 @@ def construction_detail(uri):
                         "CL_similarFormSameFunction", "CL_similarFormSimilarFunction", "CL_similarFormDifferentFunction",
                         "CL_differentFormSameFunction", "CL_differentFormSimilarFunction", "CL_differentFormDifferentFunction"
                         }
-    links = [item for item in triples if item['property'] in links_properties]
+    links_no_titles = [item for item in triples if item['property'] in links_properties]
     general = [item for item in triples if item['property'] not in links_properties]
+
+    # Collect the title of links
+    links = []
+    title_uri = "hasTitle"
+    for link in links_no_titles:
+        predicate = link['property']
+        object_value = link['object']
+        uri = URIRef(f"http://example.org/cx/{object_value}")
+        for obj in g.objects(subject=uri, predicate=URIRef(f"http://example.org/cx/{title_uri}")):
+            links.append({
+                'property': re.sub(prefixes, "", predicate),  # Cleaned property
+                'object': re.sub(prefixes, "", str(obj)),  # Cleaned object
+            })
 
     # Collect triples for elements / slots
     # Step 1: Extract the elements of the sequence
@@ -145,7 +158,7 @@ def construction_detail(uri):
                     'property': re.sub(prefixes, "", str(predicate)),
                     'object': re.sub(prefixes, "", str(obj)),
                 })
-            else:  # special case for type of morphosyntactic element
+            else:  # special case for type of morphosyntactic element # todo: change to match the new way it is done
                 elements.append({
                     'subject': re.sub(prefixes, "", str(slot_uri)),
                     'property': "Morphosyntax",
@@ -172,8 +185,10 @@ def construction_detail(uri):
     elements[:] = [item for item in elements if item['property'] != "hasSlotMeaning"]
     elements[:] = [item for item in elements if item['object'] != "SlotMeaning"]
     elements[:] = [item for item in elements if item['property'] != "hasIndex"]
+    elements[:] = [item for item in elements if item['property'] != "type"]
 
-    # Collect triples for exemples
+
+    # Collect triples for examples
     # Step 1: Extract the examples
     examples_uri = []
     for predicate, obj in g.predicate_objects(subject=entry_uri):
@@ -189,6 +204,8 @@ def construction_detail(uri):
                     'property': re.sub(prefixes, "", str(predicate)),
                     'object': re.sub(prefixes, "", str(obj)),
                 })
+    # Step 3: Sort the properties to have the text first
+    examples = sorted(examples, key=lambda x: {key: index for index, key in enumerate(['hasText', 'hasTransliteration', 'hasGlosses', 'hasTranslation', 'comment'])}.get(x['property'], 5))
     # Step 3: Group by example
     grouped_examples = {}
     for item in examples:
@@ -210,7 +227,7 @@ def construction_detail(uri):
 
     # For debug
     #print(triples)
-    print(general)
+    print(links_no_titles)
     print(links)
 
     # Fetch the title for display purposes

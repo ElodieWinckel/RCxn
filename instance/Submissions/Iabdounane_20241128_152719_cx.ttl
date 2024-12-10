@@ -19,7 +19,8 @@ cx:ThisCloseToV-ing_A a cx:SlotMandatory ;
     cx:WordOrder "Element 1 comes immediately before Element 2" ;
     cx:hasSlotForm cx:ThisCloseToV-ing_A_Form ;
     cx:hasSlotMeaning cx:ThisCloseToV-ing_A_Meaning ;
-    cx:hasStem "Be ; Come" .
+    cx:hasStem "Be" ;
+    cx:hasStem "Come" .
 
 cx:ThisCloseToV-ing_A_Form a cx:SlotForm .
 
@@ -30,6 +31,7 @@ cx:ThisCloseToV-ing_A_Meaning a cx:SlotMeaning ;
     cx:hasIndex cx:ThisCloseToV-ing_A_Index .
 
 cx:ThisCloseToV-ing_B a cx:SlotMandatory ;
+    cx:hasSurfaceForm "this close to" ;
     cx:WordOrder "Element 2 comes immediately before Element 3" .
 
 cx:ThisCloseToV-ing_C a cx:SlotMandatory ;
@@ -43,6 +45,7 @@ cx:ThisCloseToV-ing_C_Form a cx:SlotForm ;
 cx:ThisCloseToV-ing_C_Morphosyntax a "Root V" .
 
 cx:ThisCloseToV-ing_D a cx:SlotMandatory ;
+    cx:hasSurfaceForm "-ing" ;
     cx:hasSlotForm cx:ThisCloseToV-ing_D_Form .
 
 cx:ThisCloseToV-ing_D_Form a cx:SlotForm ;

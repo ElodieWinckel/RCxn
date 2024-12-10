@@ -28,7 +28,7 @@ cx:Idiomaticconstructions_A_Meaning a cx:SlotMeaning ;
     cx:hasIndex cx:Idiomaticconstructions_A_Index ;
     cx:hasSemanticContribution olia:ActorMacroRole .
 
-cx:Idiomaticconstructions_A_Morphosyntax a cx:Pronoun_NP ;
+cx:Idiomaticconstructions_A_Morphosyntax a "Pronoun NP" ;
     cx:hasSyntacticFunction "Subject" .
 
 cx:Idiomaticconstructions_B a cx:SlotMandatory ;
@@ -64,7 +64,7 @@ cx:Idiomaticconstructions_C_Meaning a cx:SlotMeaning ;
     cx:hasIndex cx:Idiomaticconstructions_C_Index ;
     cx:hasSemanticContribution olia:PossessorRole .
 
-cx:Idiomaticconstructions_C_Morphosyntax a cx:Possessivepronoun_NP ;
+cx:Idiomaticconstructions_C_Morphosyntax a "Possessive pronoun NP" ;
     cx:hasSyntacticFunction "Determiner/Possessive modifier" .
 
 cx:Idiomaticconstructions_D a cx:SlotMandatory ;
@@ -100,8 +100,8 @@ cx:Idiomaticconstructions_MD a cx:Metadata ;
     cx:hasTitle "English Burn one's bridges construction" .
 
 cx:Idiomaticconstructions_Meaning a cx:ConstructionMeaning ;
-    cx:hasMeaning """to end relationships. \r
-to commit oneself to a course from which there is no retreat""" .
+    cx:hasMeaning "to end relationships" ;
+    cx:hasMeaning "to commit oneself to a course from which there is no retreat" .
 
 cx:Idiomaticconstructions_slots a rdf:Seq ;
     rdf:_1 cx:Idiomaticconstructions_A ;

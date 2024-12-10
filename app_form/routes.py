@@ -402,6 +402,7 @@ def form_submit():
         voice = request.form[f'voice_{i}']
         morphosyntactic_form = request.form[f'morphosyntactic_form_{i}']
         word_order = request.form[f'WordOrder_{i}']
+        surface = request.form[f'surface_form_{i}']
         transliteration = request.form[f'transliteration_{i}']
         translation = request.form[f'translation_{i}']
         syntactic_function = request.form[f'syntactic_function_{i}']
@@ -527,6 +528,8 @@ def form_submit():
             g.add((element_uri, cx.hasRoot, Literal(root)))
         if stem.strip():
             g.add((element_uri, cx.hasStem, Literal(stem)))
+        if surface.strip():
+            g.add((element_uri, cx.hasSurfaceForm, Literal(surface)))
         if translation.strip():
             g.add((element_uri, cx.hasTranslation, Literal(translation)))
         if transliteration.strip():

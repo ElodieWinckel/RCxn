@@ -1,0 +1,74 @@
+@prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cx: <http://example.org/cx/> .
+@prefix membr: <http://example.org/users/> .
+@prefix olia: <http://purl.org/olia/olia.owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions> a membr:Construction ;
+    cx:hasConstructionMeaning <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_Meaning> ;
+    cx:hasMetadata <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_MD> ;
+    cx:hasSlots <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_slots> ;
+    cx:partOfLanguage "Modern standard High German" .
+
+<http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_C_Morphosyntax> a cx:Noun ;
+    cx:hasSyntacticFunction "complement of preposition (element 2)" .
+
+membr:Project_Fokashchuk membr:SubProject membr:Project_Fokashchuk_241210 .
+
+<http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_A> a cx:SlotMandatory ;
+    cx:WordOrder "NP1+P+NP2" ;
+    cx:hasIS cx:Focus ;
+    cx:hasSlotForm <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_A_Form> ;
+    cx:hasSlotMeaning <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_A_Meaning> ;
+    RDFS:comment "usually the nominative case" .
+
+<http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_A_Form> a cx:SlotForm ;
+    cx:hasSyntacticForm <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_A_Morphosyntax> .
+
+<http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_A_Index> a cx:Individual ;
+    cx:hasAnimacy cx:inanimate .
+
+<http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_A_Meaning> a cx:SlotMeaning ;
+    cx:hasIndex <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_A_Index> .
+
+<http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_A_Morphosyntax> a cx:Noun ;
+    cx:hasSyntacticFunction "head of auf/an-PP" .
+
+<http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_B> a cx:SlotMandatory ;
+    cx:hasSlotMeaning <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_B_Meaning> ;
+    cx:hasSurfaceForm "auf ; an" .
+
+<http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_B_Meaning> a cx:SlotMeaning ;
+    cx:hasSemanticContribution olia:DirectionRole .
+
+<http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_C> a cx:SlotMandatory ;
+    cx:hasIS cx:Background ;
+    cx:hasSlotMeaning <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_C_Meaning> .
+
+<http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_C_Meaning> a cx:SlotMeaning ;
+    cx:hasSemanticContribution olia:ThemeRole .
+
+<http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_MD> a cx:Metadata ;
+    cx:annotator membr:Fokashchuk ;
+    cx:creationDate "2024-12-10"^^xsd:date ;
+    cx:hasFindings """- Most constructions across languages do not employ the same prepositions in terms of their spatial meaning, which challenges the assumption of uniform metaphorical and/or metonymic extensions. This indicates that when expressing similar scenes or relations between entities, different languages focus on distinct aspects of the relationship, or activate different "active zones" (Langacker 1991).\r
+- There are some cross-linguistic correspondences when auf and an are used spatially, as auf/an are often translated as "on" in the other 3 languages. However, in abstract meanings, the semantic network diverges significantly: auf sometimes retains a connection to spatial "on", while an does not.\r
+- Another parallelism: 1. an often corresponds to "of" in English and to the absence of a preposition but the object in genitive case in Polish and Ukrainian in NP1 + an + NP2 constructions. 2. Synonyms in English, Polish, and Ukrainian tend to govern the same prepositions, whereas this pattern is much less consistent in German.""" ;
+    cx:hasRQ membr:Project_Fokashchuk_241210 ;
+    cx:hasTitle "Modern standard High German Allative NP1 + auf + NP2 & NP1 + an + NP2 constructions" .
+
+<http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_Meaning> a cx:ConstructionMeaning ;
+    cx:hasImageSchema "SUPPORT, DIRECTION, CONTACT, PROXIMITY, LOCATION, CONTAINMENT, SOURCE-PATH-GOAL, FORCE, PART-WHOLE, SURFACE" ;
+    cx:hasMeaning "The sense of direction towards another entity" .
+
+<http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_slots> a rdf:Seq ;
+    rdf:_1 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_A> ;
+    rdf:_2 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_B> ;
+    rdf:_3 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_C> .
+
+cx:Noun RDFS:label "Noun" .
+
+membr:Project_Fokashchuk_241210 a membr:Project ;
+    membr:projectName "How are German NP1 + auf/an + NP2 constructions expressed in English, Polish, and Ukrainian, and to what extent do these languages employ spatial prepositions to convey similar functions and meanings? What are the cross-linguistic similarities and differences in form and meaning of these constructions?" .
+
