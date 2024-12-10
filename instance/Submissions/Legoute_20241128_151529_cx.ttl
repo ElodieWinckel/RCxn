@@ -52,7 +52,7 @@ cx:POU-beneficiaryconstruction_C_Meaning a cx:SlotMeaning ;
 cx:POU-beneficiaryconstruction_C_Morphosyntax a cx:NP .
 
 cx:POU-beneficiaryconstruction_Ex_A a cx:Example ;
-    cx:hasGlosses "3st S   ANT  make/do   mass  pou   2st P" ;
+    cx:hasGlosses "3SG   ANT  make/do   mass  pou   2PL" ;
     cx:hasText "Yo      te           fè          mès    pou   nou." ;
     cx:hasTranslation "They made a mass in our name" ;
     RDFS:comment "Text 1, #27" .

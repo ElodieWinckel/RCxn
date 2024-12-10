@@ -71,6 +71,7 @@ cx:Idiomaticconstructions_D a cx:SlotMandatory ;
     cx:WordOrder "Final position" ;
     cx:hasSlotForm cx:Idiomaticconstructions_D_Form ;
     cx:hasSlotMeaning cx:Idiomaticconstructions_D_Meaning ;
+    cx:hasSurfaceForm "bridges" ;
     cx:hasStem "bridge" .
 
 cx:Idiomaticconstructions_D_Form a cx:SlotForm ;

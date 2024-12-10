@@ -62,8 +62,16 @@ cx:Transitivedurch-Präfixverbkonstruktion_C a cx:SlotMandatory ;
     cx:WordOrder "3 nach 2" ;
     cx:hasSlotForm cx:Transitivedurch-Präfixverbkonstruktion_C_Form ;
     cx:hasSlotMeaning cx:Transitivedurch-Präfixverbkonstruktion_C_Meaning ;
-    cx:hasStem "bîzen, houwen, brëchen, rîten, dringen" ;
-    cx:hasTranslation "beißen, hauen, brechen, reiten, dringen" .
+    cx:hasStem "bîzen" ;
+    cx:hasStem "houwen" ;
+    cx:hasStem "brëchen" ;
+    cx:hasStem "rîten" ;
+    cx:hasStem "dringen" ;
+    cx:hasTranslation "beißen" ;
+    cx:hasTranslation "hauen" ;
+    cx:hasTranslation "brechen" ;
+    cx:hasTranslation "reiten" ;
+    cx:hasTranslation "dringen" .
 
 cx:Transitivedurch-Präfixverbkonstruktion_C_Form a cx:SlotForm ;
     cx:hasSyntacticForm cx:Transitivedurch-Präfixverbkonstruktion_C_Morphosyntax .
