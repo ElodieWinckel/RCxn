@@ -14,7 +14,8 @@ g = Graph()
 for ttl_file in glob.glob("instance/Submissions/*_cx.ttl"):
     g.parse(ttl_file, format="turtle")
 
-#for ttl_file in glob.glob("instance/Submissions/*092821_cx.ttl"):
+# The following lines are for debug purposes
+#for ttl_file in glob.glob("instance/Submissions/*152802_cx.ttl"):
 #    g.parse(ttl_file, format="turtle")
 
 # The following is for debug purposes: Read triples

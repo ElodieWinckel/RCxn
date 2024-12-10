@@ -60,7 +60,7 @@ cx:POU-beneficiaryconstruction_MD a cx:Metadata ;
     cx:annotator membr:Legoute ;
     cx:creationDate "2024-11-28"^^xsd:date ;
     cx:hasFindings "POU provokes a NP to become a beneficiary" ;
-    cx:hasRQ membr:Legoute_241128 ;
+    cx:hasRQ membr:_241128 ;
     cx:hasTitle "Haitian Creole POU-beneficiary construction" .
 
 cx:POU-beneficiaryconstruction_Meaning a cx:ConstructionMeaning ;
@@ -76,6 +76,6 @@ cx:POU-purposeconstruction a membr:Construction ;
     cx:createdOn "2024-11-28"^^xsd:date ;
     cx:hasTitle "POU-purpose construction" .
 
-membr:Legoute_241128 a membr:Project ;
+membr:_241128 a membr:Project ;
     membr:projectName "POU in Haitian Creole" .
 

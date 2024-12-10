@@ -11,7 +11,7 @@
     cx:hasSlots <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_slots> ;
     cx:inheritsFrom cx:Generalprepositionalconstructions,
         <http://example.org/cx/vor+bodypartconstructions> ;
-    cx:partOfLanguage "Standard German written language within the time frame of 1900-1999." .
+    cx:partOfLanguage "Standard German written language within the time frame of 1900-1999" .
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_E_Index> cx:hasNumberFeature olia:Plural .
 
@@ -124,7 +124,7 @@ cx:Generalprepositionalconstructions a membr:Construction ;
     cx:creationDate "2024-12-02"^^xsd:date ;
     cx:hasFindings "Grammatically fixed with zero-realization, the \"vor-Augen construction\" displays a distinct collocational pattern closely tied to its meaning and contextual usage." ;
     cx:hasRQ membr:Project_Lee_241202 ;
-    cx:hasTitle "Standard German written language within the time frame of 1900-1999. [(sich) (NP) (ADJ) (ADV) [vor Augen] (VP)]" .
+    cx:hasTitle "Standard German written language within the time frame of 1900-1999 [(sich) (NP) (ADJ) (ADV) [vor Augen] (VP)]" .
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_Meaning> a cx:ConstructionMeaning ;
     cx:hasMeaning "The construction denotes a cognitive process involving the act of bringing something into focus or visualizing it mentally, including introspection, planning and imaginative conceptualization." .

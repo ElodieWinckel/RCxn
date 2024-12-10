@@ -43,6 +43,7 @@ cx:Idiomaticconstruction_A a cx:SlotMandatory ;
     cx:WordOrder "Initial position in prepositional phrase" ;
     cx:hasSlotForm cx:Idiomaticconstruction_A_Form ;
     cx:hasSlotMeaning cx:Idiomaticconstruction_A_Meaning ;
+    cx:hasSurfaceForm "aus" ;
     cx:hasTranslation "out of" .
 
 cx:Idiomaticconstruction_A_Form a cx:SlotForm ;
@@ -58,6 +59,7 @@ cx:Idiomaticconstruction_B a cx:SlotMandatory ;
     cx:WordOrder "follows preposition, precedes noun" ;
     cx:hasSlotForm cx:Idiomaticconstruction_B_Form ;
     cx:hasSlotMeaning cx:Idiomaticconstruction_B_Meaning ;
+    cx:hasSurfaceForm "dem" ;
     cx:hasTranslation "the" .
 
 cx:Idiomaticconstruction_B_Form a cx:SlotForm ;
@@ -78,6 +80,7 @@ cx:Idiomaticconstruction_C a cx:SlotMandatory ;
     cx:WordOrder "Follows article" ;
     cx:hasSlotForm cx:Idiomaticconstruction_C_Form ;
     cx:hasSlotMeaning cx:Idiomaticconstruction_C_Meaning ;
+    cx:hasSurfaceForm "Ärmel" ;
     cx:hasTranslation "sleeve" .
 
 cx:Idiomaticconstruction_C_Form a cx:SlotForm ;
@@ -131,7 +134,7 @@ cx:Idiomaticconstruction_MD a cx:Metadata ;
     cx:annotator membr:Rastegar ;
     cx:creationDate "2024-12-04"^^xsd:date ;
     cx:hasRQ membr:Project_Rastegar ;
-    cx:hasTitle "German Idiomatic construction" .
+    cx:hasTitle "German Aus dem Ärmel schütteln construction" .
 
 cx:Idiomaticconstruction_Meaning a cx:ConstructionMeaning ;
     cx:hasMeaning "done with ease" .

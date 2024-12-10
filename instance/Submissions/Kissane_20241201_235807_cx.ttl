@@ -39,6 +39,7 @@ cx:TheEnglishGIVE-OUTVerbParticleConstruction._B_Morphosyntax a cx:Verb .
 
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._C a cx:SlotMandatory ;
     cx:WordOrder "The element 3 follows the element 2 but not necessarily directly" ;
+    cx:hasSurfaceForm "out" ;
     cx:hasSlotForm cx:TheEnglishGIVE-OUTVerbParticleConstruction._C_Form .
 
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._C_Form a cx:SlotForm ;
@@ -53,7 +54,7 @@ cx:TheEnglishGIVE-OUTVerbParticleConstruction._MD a cx:Metadata ;
     cx:annotator membr:Kissane ;
     cx:creationDate "2024-12-01"^^xsd:date ;
     cx:hasRQ membr:Project_Kissane ;
-    cx:hasTitle "English The English GIVE-OUT Verb Particle Construction." .
+    cx:hasTitle "English GIVE-OUT Verb Particle Construction." .
 
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._Meaning a cx:ConstructionMeaning ;
     cx:hasMeaning "An ÆFFECTOR distributes items to multiple recipients or reaches a point of depletion or cessation of function." .
