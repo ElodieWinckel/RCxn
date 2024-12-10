@@ -64,10 +64,10 @@ cx:EvaluativeAttributionConstruction_MD a cx:Metadata ;
     cx:annotator membr:Stampfer ;
     cx:creationDate "2024-12-02"^^xsd:date ;
     cx:hasRQ membr: ;
-    cx:hasTitle "Modern English, British & American English, several (written) genres Evaluative Attribution Construction" .
+    cx:hasTitle "Modern English Evaluative Attribution Construction" .
 
 cx:EvaluativeAttributionConstruction_Meaning a cx:ConstructionMeaning ;
-    cx:hasMeaning "An ATTRIBUTOR mentally asigns ATTRIBUTE to an ATTRIBUTEE" .
+    cx:hasMeaning "An ATTRIBUTOR mentally assigns ATTRIBUTE to an ATTRIBUTEE" .
 
 cx:EvaluativeAttributionConstruction_slots a rdf:Seq ;
     rdf:_1 cx:EvaluativeAttributionConstruction_A ;

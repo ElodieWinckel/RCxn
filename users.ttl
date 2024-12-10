@@ -147,7 +147,7 @@ membr:Project_Kenanidis a membr:Project ;
     membr:projectName "Project Kenanidis"@en .
 
 membr:Project_Kessler a membr:Project ;
-    membr:projectName "Project Keßler"@en .
+    membr:projectName "Chinese Mathematics"@en .
 
 membr:Project_Kissane a membr:Project ;
     membr:projectName "Form and meaning as factors in the identification and learning of constructional slots – English phrasal verbs and verb-preposition combinations"@en .
