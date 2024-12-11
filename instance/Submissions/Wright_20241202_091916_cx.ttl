@@ -45,7 +45,8 @@ cx:Toughmovementconstruction_C_Index a cx:Event ;
 cx:Toughmovementconstruction_C_Meaning a cx:SlotMeaning ;
     cx:hasIndex cx:Toughmovementconstruction_C_Index .
 
-cx:Toughmovementconstruction_C_Morphosyntax a cx:AdjP .
+cx:Toughmovementconstruction_C_Morphosyntax a cx:AdjP ;
+    cx:comment "Adjective + to + V-inf" .
 
 cx:Toughmovementconstruction_Ex_A a cx:Example ;
     cx:hasGlosses "NP BE Adj to-Inf" ;
@@ -56,7 +57,7 @@ cx:Toughmovementconstruction_MD a cx:Metadata ;
     cx:creationDate "2024-12-02"^^xsd:date ;
     cx:hasRQ membr:Project_Wright ;
     cx:hasSources cx:Toughmovementconstruction_Sources ;
-    cx:hasTitle "English Tough movement construction" .
+    cx:hasTitle "English Tough adjective construction" .
 
 cx:Toughmovementconstruction_Meaning a cx:ConstructionMeaning .
 

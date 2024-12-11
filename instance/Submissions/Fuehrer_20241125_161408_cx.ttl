@@ -124,13 +124,13 @@ cx:Transitivedurch-Präfixverbkonstruktion_Ex_A a cx:Example ;
     RDFS:comment "Intermediär" .
 
 cx:Transitivedurch-Präfixverbkonstruktion_Ex_B a cx:Example ;
-    cx:hasGlosses "pN_nom - PP - Verb - NG_akk " ;
+    cx:hasGlosses "pN_nom - Prä - Verb - NG_akk " ;
     cx:hasText "der durch reit div lant" ;
     cx:hasTranslation "der durchreitet die Lande" ;
     RDFS:comment "Intermediär/Multidirektional" .
 
 cx:Transitivedurch-Präfixverbkonstruktion_Ex_C a cx:Example ;
-    cx:hasGlosses "pN_nom - PP - Verb - NG_akk" ;
+    cx:hasGlosses "pN_nom - Prä - Verb - NG_akk" ;
     cx:hasText "ſi durh hiwen daz wal" ;
     cx:hasTranslation "sie durchbrechen das Schlachtfeld" ;
     RDFS:comment "teil-intermediär" .
