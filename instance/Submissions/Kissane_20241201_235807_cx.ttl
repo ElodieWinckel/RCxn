@@ -26,6 +26,7 @@ cx:TheEnglishGIVE-OUTVerbParticleConstruction._A_Morphosyntax a cx:NP ;
 
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._B a cx:SlotMandatory ;
     cx:WordOrder "Element 2 follows the element 1" ;
+    cx:hasStem "give" ;
     cx:hasSlotForm cx:TheEnglishGIVE-OUTVerbParticleConstruction._B_Form ;
     cx:hasSlotMeaning cx:TheEnglishGIVE-OUTVerbParticleConstruction._B_Meaning .
 
@@ -33,7 +34,7 @@ cx:TheEnglishGIVE-OUTVerbParticleConstruction._B_Form a cx:SlotForm ;
     cx:hasSyntacticForm cx:TheEnglishGIVE-OUTVerbParticleConstruction._B_Morphosyntax .
 
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._B_Meaning a cx:SlotMeaning ;
-    cx:hasSemanticContribution olia:OtherRole .
+    cx:hasSemanticContribution "AFFECTED ACTION" .
 
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._B_Morphosyntax a cx:Verb .
 
