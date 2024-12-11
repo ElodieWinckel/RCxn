@@ -1,0 +1,81 @@
+@prefix cx: <http://example.org/cx/> .
+@prefix membr: <http://example.org/users/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc> a membr:Construction ;
+    cx:differentFormDifferentFunction <http://example.org/cx/NP[das+ADJ-eN]acc.sg.neut>,
+        <http://example.org/cx/NP[das+ADJ-eN]nom.sg.neut>,
+        <http://example.org/cx/NP[dem+ADJ-enN]dat.sg.masc>,
+        <http://example.org/cx/NP[dem+ADJ-enN]dat.sg.neut>,
+        <http://example.org/cx/NP[den+ADJ-enN]acc.sg.masc>,
+        <http://example.org/cx/NP[die+ADJ-eN]nom.sg.fem> ;
+    cx:inheritsFrom <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]> ;
+    cx:inheritsFrom <http://example.org/cx/NPnom.sg.masc> ;
+    cx:hasConstructionMeaning <http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_Meaning> ;
+    cx:hasMetadata <http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_MD> ;
+    cx:hasSlots <http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_slots> ;
+    cx:partOfLanguage "German" .
+
+<http://example.org/cx/NP[das+ADJ-eN]acc.sg.neut> a membr:Construction ;
+    cx:annotator membr:Kligge ;
+    cx:createdOn "2024-12-02"^^xsd:date ;
+    cx:hasTitle "NP[das + ADJ-e N]acc.sg.neut" .
+
+<http://example.org/cx/NP[das+ADJ-eN]nom.sg.neut> a membr:Construction ;
+    cx:annotator membr:Kligge ;
+    cx:createdOn "2024-12-02"^^xsd:date ;
+    cx:hasTitle "NP[das + ADJ-e N]nom.sg.neut" .
+
+<http://example.org/cx/NP[dem+ADJ-enN]dat.sg.masc> a membr:Construction ;
+    cx:annotator membr:Kligge ;
+    cx:createdOn "2024-12-02"^^xsd:date ;
+    cx:hasTitle "NP[dem + ADJ-en N]dat.sg.masc" .
+
+<http://example.org/cx/NP[dem+ADJ-enN]dat.sg.neut> a membr:Construction ;
+    cx:annotator membr:Kligge ;
+    cx:createdOn "2024-12-02"^^xsd:date ;
+    cx:hasTitle "NP[dem + ADJ-en N]dat.sg.neut" .
+
+<http://example.org/cx/NP[den+ADJ-enN]acc.sg.masc> a membr:Construction ;
+    cx:annotator membr:Kligge ;
+    cx:createdOn "2024-12-02"^^xsd:date ;
+    cx:hasTitle "NP[den+ ADJ-en N]acc.sg.masc" .
+
+<http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_A> a cx:SlotMandatory ;
+    cx:WordOrder "Element 1 immediately before Element 2." .
+
+<http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_B> a cx:SlotMandatory ;
+    cx:WordOrder "Element 2 immediately before Element 3." .
+
+<http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_C> a cx:SlotMandatory .
+
+<http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_MD> a cx:Metadata ;
+    cx:annotator membr:Kligge ;
+    cx:creationDate "2024-12-02"^^xsd:date ;
+    cx:hasRQ membr:Project_Kligge ;
+    cx:hasTitle "German NP[der+ ADJ-e N]nom.sg.masc" .
+
+<http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_Meaning> a cx:ConstructionMeaning ;
+    cx:hasMeaning "NPs in German have obligatory grammatical marking specifying case, number, gender." .
+
+<http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_slots> a rdf:Seq ;
+    rdf:_1 <http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_A> ;
+    rdf:_2 <http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_B> ;
+    rdf:_3 <http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_C> .
+
+<http://example.org/cx/NP[die+ADJ-eN]nom.sg.fem> a membr:Construction ;
+    cx:annotator membr:Kligge ;
+    cx:createdOn "2024-12-02"^^xsd:date ;
+    cx:hasTitle "NP[die + ADJ-e N]nom.sg.fem" .
+
+<http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]> a membr:Construction ;
+    cx:annotator membr:Kligge ;
+    cx:createdOn "2024-12-02"^^xsd:date ;
+    cx:hasTitle "NP[Def.Det-strong+ADJ-weak+N]" .
+
+<http://example.org/cx/NPnom.sg.masc> a membr:Construction ;
+    cx:annotator membr:Kligge ;
+    cx:createdOn "2024-12-02"^^xsd:date ;
+    cx:hasTitle "NP nom.sg.masc" .
+
