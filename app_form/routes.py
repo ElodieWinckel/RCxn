@@ -52,6 +52,7 @@ def load_NumberFeatures(file_path):
 def load_CaseFeatures(file_path):
     g = Graph()
     g.parse(file_path, format='xml')
+    #g.parse("http://purl.org/olia/olia-top.owl#", format='xml') #TODO: cases are not found, but no error message
     oliatop = Namespace("http://purl.org/olia/olia-top.owl#")
     RDFS = Namespace("http://www.w3.org/2000/01/rdf-schema#")
     names = [(str(s).replace("http://purl.org/olia/olia.owl#", "")) for s in g.subjects(RDFS.subClassOf, oliatop.CaseFeature)]

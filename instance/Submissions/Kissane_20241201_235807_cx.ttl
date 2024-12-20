@@ -34,7 +34,7 @@ cx:TheEnglishGIVE-OUTVerbParticleConstruction._B_Form a cx:SlotForm ;
     cx:hasSyntacticForm cx:TheEnglishGIVE-OUTVerbParticleConstruction._B_Morphosyntax .
 
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._B_Meaning a cx:SlotMeaning ;
-    cx:hasSemanticContribution "AFFECTED ACTION" .
+    cx:hasSemanticContribution "ACTION" .
 
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._B_Morphosyntax a cx:Verb .
 
@@ -47,6 +47,12 @@ cx:TheEnglishGIVE-OUTVerbParticleConstruction._C_Form a cx:SlotForm ;
     cx:hasSyntacticForm cx:TheEnglishGIVE-OUTVerbParticleConstruction._C_Morphosyntax .
 
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._C_Morphosyntax a cx:part .
+
+cx:TheEnglishGIVE-OUTVerbParticleConstruction._D a cx:SlotMandatory ;
+    cx:hasSlotMeaning cx:TheEnglishGIVE-OUTVerbParticleConstruction._D_Meaning .
+
+cx:TheEnglishGIVE-OUTVerbParticleConstruction._D_Meaning a cx:SlotMeaning ;
+    cx:hasSemanticContribution "AFFECTED" .
 
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._Ex_A a cx:Example ;
     cx:hasText "The event organizer gave out gift bags to all attendees at the end of the ceremony." .
@@ -63,5 +69,6 @@ cx:TheEnglishGIVE-OUTVerbParticleConstruction._Meaning a cx:ConstructionMeaning 
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._slots a rdf:Seq ;
     rdf:_1 cx:TheEnglishGIVE-OUTVerbParticleConstruction._A ;
     rdf:_2 cx:TheEnglishGIVE-OUTVerbParticleConstruction._B ;
-    rdf:_3 cx:TheEnglishGIVE-OUTVerbParticleConstruction._C .
+    rdf:_3 cx:TheEnglishGIVE-OUTVerbParticleConstruction._C ;
+    rdf:_3 cx:TheEnglishGIVE-OUTVerbParticleConstruction._D .
 
