@@ -4,6 +4,9 @@ import re
 from flask import Flask, render_template, redirect, url_for
 from rdflib import Graph, URIRef, Literal, Namespace, RDF, XSD
 
+# Set the working directory to the application's root directory
+os.chdir("/data/www/RCxn”)
+
 g = Graph()
 
 # The following is for debug purposes: Check for matching files

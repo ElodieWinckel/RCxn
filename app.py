@@ -1,5 +1,8 @@
 from main_app import create_app
 
+# Set the working directory to the application's root directory
+os.chdir("/data/www/RCxn”)
+
 app = create_app()
 
 @app.route("/")
