@@ -1,7 +1,8 @@
 from main_app import create_app
+import os
 
 # Set the working directory to the application's root directory
-os.chdir("/data/www/RCxn”)
+os.chdir("/data/www/RCxn")
 
 app = create_app()
 

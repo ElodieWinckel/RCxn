@@ -6,7 +6,7 @@ import json
 import os
 
 # Set the working directory to the application's root directory
-os.chdir("/data/www/RCxn”)
+os.chdir("/data/www/RCxn")
 
 ###################################################
 ### FUNCTIONS REQUIRED TO EXTRACT FROM DATABASES AND ONTOLOGIES
