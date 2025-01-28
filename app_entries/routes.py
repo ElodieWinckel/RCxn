@@ -5,8 +5,11 @@ from flask import Flask, render_template, redirect, url_for
 from rdflib import Graph, URIRef, Literal, Namespace, RDF, XSD
 import os
 
-# Set the working directory to the application's root directory
-os.chdir("/data/www/RCxn")
+# Check if the production directory exists
+if os.path.exists("/data/www/RCxn"):
+    os.chdir("/data/www/RCxn")  # # Set the working directory to the application's production path
+#else:
+#    os.chdir(os.path.dirname(os.path.abspath(__file__)))  # Development path
 
 g = Graph()
 
@@ -17,10 +20,6 @@ g = Graph()
 # Load and parse all RDF files ending in "_cx.ttl" from the folder with submissions
 for ttl_file in glob.glob("instance/Submissions/*_cx.ttl"):
     g.parse(ttl_file, format="turtle")
-
-# The following lines are for debug purposes
-#for ttl_file in glob.glob("instance/Submissions/*152802_cx.ttl"):
-#    g.parse(ttl_file, format="turtle")
 
 # The following is for debug purposes: Read triples
 #for s, p, o in g:

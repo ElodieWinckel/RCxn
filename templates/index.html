@@ -4,7 +4,7 @@
 
 {% block content %}
 
-    <button onclick="window.location.href='app_form'">Online Form</button>
-    <button onclick="window.location.href='app_entries'">Entries List</button>
+    <button onclick="window.location.href='{{ url_for('app_form.online_form') }}'">Online Form</button>
+    <button onclick="window.location.href='{{ url_for('app_entries.list_view') }}'">Entries List</button>
 
 {% endblock %}

@@ -1,8 +1,11 @@
 from main_app import create_app
 import os
 
-# Set the working directory to the application's root directory
-os.chdir("/data/www/RCxn")
+# Check if the production directory exists
+if os.path.exists("/data/www/RCxn"):
+    os.chdir("/data/www/RCxn")  # # Set the working directory to the application's production path
+#else:
+#    os.chdir(os.path.dirname(os.path.abspath(__file__)))  # Development path
 
 app = create_app()
 
