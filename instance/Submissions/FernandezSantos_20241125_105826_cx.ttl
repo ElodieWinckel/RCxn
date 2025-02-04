@@ -72,7 +72,8 @@ cx:Transitiveobjectrelativeclause_A_Form a cx:SlotForm ;
 
 cx:Transitiveobjectrelativeclause_A_Index a cx:Individual ;
     cx:hasAnimacy cx:animate ;
-    cx:hasNumberFeature olia:Singular .
+    cx:hasNumberFeature olia:Singular ;
+    cx:hasGender "[1]" .
 
 cx:Transitiveobjectrelativeclause_A_Meaning a cx:SlotMeaning ;
     cx:hasIndex cx:Transitiveobjectrelativeclause_A_Index .
@@ -113,7 +114,8 @@ cx:Transitiveobjectrelativeclause_D_Form a cx:SlotForm ;
 
 cx:Transitiveobjectrelativeclause_D_Index a cx:Individual ;
     cx:hasAnimacy cx:animate ;
-    cx:hasNumberFeature olia:Singular .
+    cx:hasNumberFeature olia:Singular ;
+    cx:hasGender "[1]" .
 
 cx:Transitiveobjectrelativeclause_D_Meaning a cx:SlotMeaning ;
     cx:hasIndex cx:Transitiveobjectrelativeclause_D_Index .
@@ -124,7 +126,8 @@ cx:Transitiveobjectrelativeclause_D_Morphosyntax a cx:NP ;
 cx:Transitiveobjectrelativeclause_E a cx:SlotMandatory ;
     cx:WordOrder "immediately after Element 4" ;
     cx:hasSlotForm cx:Transitiveobjectrelativeclause_E_Form ;
-    cx:hasSlotMeaning cx:Transitiveobjectrelativeclause_E_Meaning .
+    cx:hasSlotMeaning cx:Transitiveobjectrelativeclause_E_Meaning ;
+    RDFS:comment "verb of the 1st group" .
 
 cx:Transitiveobjectrelativeclause_E_Form a cx:SlotForm ;
     cx:hasSyntacticForm cx:Transitiveobjectrelativeclause_E_Morphosyntax .
@@ -165,13 +168,13 @@ cx:Transitiveobjectrelativeclause_Ex_D a cx:Example ;
 cx:Transitiveobjectrelativeclause_MD a cx:Metadata ;
     cx:annotator membr:FernandezSantos ;
     cx:creationDate "2024-11-25"^^xsd:date ;
-    cx:hasFindings "The late disambiguation of verb-medial plain-variant (no a + article) OR can lead to shallow processing. This in combination with high phonetic similarity with a canonical SR could lead to predictive processing overriding perceptual information (at the point of the last NP an object is expected so it’s more likely to hear \"al\" rather than \"el\"). In more general terms, expectations of canonical linguistic input in locally ambiguous structures can override acoustic perception." ;
+    cx:hasFindings "The late disambiguation of verb-medial plain-variant (no a + article) object relative can lead to shallow processing. This in combination with high phonetic similarity with a canonical SR could lead to predictive processing overriding perceptual information (at the point of the last NP an object is expected so it’s more likely to hear \"al\" rather than \"el\"). In more general terms, expectations of canonical linguistic input in locally ambiguous structures can override acoustic perception." ;
     cx:hasRQ membr:Project_FernandezSantos_241125 ;
     cx:hasSources cx:Transitiveobjectrelativeclause_Sources ;
-    cx:hasTitle "Spoken Peninsular Spanish Transitive object relative clause" .
+    cx:hasTitle "Spoken Peninsular Spanish potentially ambiguous object relative clause" .
 
 cx:Transitiveobjectrelativeclause_Meaning a cx:ConstructionMeaning ;
-    cx:hasMeaning "Identificatory NP; someone carries out a transitive action that affects someone else, the function of the OR clause is to identify the affected." .
+    cx:hasMeaning "Identificatory NP; someone carries out a transitive action that affects someone else, the function of the object relative clause is to identify the affected." .
 
 cx:Transitiveobjectrelativeclause_Sources a cx:Collection ;
     cx:basedOn <https://www.degruyter.com/document/doi/10.1515/cog-2024-0016/html> ;

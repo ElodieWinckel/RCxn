@@ -27,14 +27,10 @@ cx:TheEnglishGIVE-OUTVerbParticleConstruction._A_Morphosyntax a cx:NP ;
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._B a cx:SlotMandatory ;
     cx:WordOrder "Element 2 follows the element 1" ;
     cx:hasStem "give" ;
-    cx:hasSlotForm cx:TheEnglishGIVE-OUTVerbParticleConstruction._B_Form ;
-    cx:hasSlotMeaning cx:TheEnglishGIVE-OUTVerbParticleConstruction._B_Meaning .
+    cx:hasSlotForm cx:TheEnglishGIVE-OUTVerbParticleConstruction._B_Form .
 
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._B_Form a cx:SlotForm ;
     cx:hasSyntacticForm cx:TheEnglishGIVE-OUTVerbParticleConstruction._B_Morphosyntax .
-
-cx:TheEnglishGIVE-OUTVerbParticleConstruction._B_Meaning a cx:SlotMeaning ;
-    cx:hasSemanticContribution "ACTION" .
 
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._B_Morphosyntax a cx:Verb .
 
@@ -52,7 +48,7 @@ cx:TheEnglishGIVE-OUTVerbParticleConstruction._D a cx:SlotMandatory ;
     cx:hasSlotMeaning cx:TheEnglishGIVE-OUTVerbParticleConstruction._D_Meaning .
 
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._D_Meaning a cx:SlotMeaning ;
-    cx:hasSemanticContribution "AFFECTED" .
+    cx:hasSemanticContribution "AFFECTED ACTION" .
 
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._Ex_A a cx:Example ;
     cx:hasText "The event organizer gave out gift bags to all attendees at the end of the ceremony." .
