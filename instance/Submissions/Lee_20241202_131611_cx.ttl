@@ -15,8 +15,6 @@
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_E_Index> cx:hasNumberFeature olia:Plural .
 
-membr:Project_Lee membr:SubProject membr:Project_Lee_241202 .
-
 cx:Generalprepositionalconstructions a membr:Construction ;
     cx:annotator membr:Lee ;
     cx:createdOn "2024-12-02"^^xsd:date ;
@@ -122,8 +120,7 @@ cx:Generalprepositionalconstructions a membr:Construction ;
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_MD> a cx:Metadata ;
     cx:annotator membr:Lee ;
     cx:creationDate "2024-12-02"^^xsd:date ;
-    cx:hasFindings "Grammatically fixed with zero-realization, the \"vor-Augen construction\" displays a distinct collocational pattern closely tied to its meaning and contextual usage." ;
-    cx:hasRQ membr:Project_Lee_241202 ;
+    cx:hasFindings "Project_Lee_241202: Grammatically fixed with zero-realization, the \"vor-Augen construction\" displays a distinct collocational pattern closely tied to its meaning and contextual usage." ;
     cx:hasTitle "Standard German written language within the time frame of 1900-1999 [(sich) (NP) (ADJ) (ADV) [vor Augen] (VP)]" .
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_Meaning> a cx:ConstructionMeaning ;
@@ -142,6 +139,5 @@ cx:Generalprepositionalconstructions a membr:Construction ;
     cx:createdOn "2024-12-02"^^xsd:date ;
     cx:hasTitle "vor + body part constructions" .
 
-membr:Project_Lee_241202 a membr:Project ;
-    membr:projectName "Prepositional constructions - a corpuslinguistic study on collocation patterns and construction networks" .
+
 

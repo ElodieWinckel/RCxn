@@ -55,7 +55,6 @@ cx:Toughmovementconstruction_Ex_A a cx:Example ;
 cx:Toughmovementconstruction_MD a cx:Metadata ;
     cx:annotator membr:Wright ;
     cx:creationDate "2024-12-02"^^xsd:date ;
-    cx:hasRQ membr:Project_Wright ;
     cx:hasSources cx:Toughmovementconstruction_Sources ;
     cx:hasTitle "English Tough adjective construction" .
 

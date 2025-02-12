@@ -158,9 +158,8 @@ cx:Transitivedurch-Präfixverbkonstruktion_G_Morphosyntax a cx:Pronomen ;
 cx:Transitivedurch-Präfixverbkonstruktion_MD a cx:Metadata ;
     cx:annotator membr:Führer ;
     cx:creationDate "2024-11-25"^^xsd:date ;
-    cx:hasFindings """Subjekt ist Figur, Objekt ist Grund; \r
+    cx:hasFindings """Project_Führer: Subjekt ist Figur, Objekt ist Grund; \r
 Gegenstände als Objekt erlauben nur intermediäre Interpretationen, während Lokalitäten auch multidirektionale Interpretationen erlauben""" ;
-    cx:hasRQ membr:Project_Führer ;
     cx:hasSources cx:Transitivedurch-Präfixverbkonstruktion_Sources ;
     cx:hasTitle "Mittelhochdeutsch, schriftlich, 12. Jh. Transitive durch-Präfixverbkonstruktion" .
 

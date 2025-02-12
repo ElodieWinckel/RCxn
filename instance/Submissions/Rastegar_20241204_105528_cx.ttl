@@ -133,7 +133,6 @@ cx:Idiomaticconstruction_Ex_B a cx:Example ;
 cx:Idiomaticconstruction_MD a cx:Metadata ;
     cx:annotator membr:Rastegar ;
     cx:creationDate "2024-12-04"^^xsd:date ;
-    cx:hasRQ membr:Project_Rastegar ;
     cx:hasTitle "German Aus dem Ärmel schütteln construction" .
 
 cx:Idiomaticconstruction_Meaning a cx:ConstructionMeaning ;

@@ -73,8 +73,7 @@ cx:Dooperationwithoperand1onoperand2construction_Ex_A a cx:Example ;
 cx:Dooperationwithoperand1onoperand2construction_MD a cx:Metadata ;
     cx:annotator membr:Kessler ;
     cx:creationDate "2024-12-01"^^xsd:date ;
-    cx:hasFindings "There is remarkable stability in the use of the construction over a very long period of time" ;
-    cx:hasRQ membr:Project_Kessler ;
+    cx:hasFindings "Project_Kessler: There is remarkable stability in the use of the construction over a very long period of time" ;
     cx:hasSources cx:Dooperationwithoperand1onoperand2construction_Sources ;
     cx:hasTitle "Literary Chinese, Han to Late Qing Do operation with operand1 on operand2 construction" .
 

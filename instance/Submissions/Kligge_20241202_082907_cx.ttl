@@ -44,7 +44,6 @@
 <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_MD> a cx:Metadata ;
     cx:annotator membr:Kligge ;
     cx:creationDate "2024-12-02"^^xsd:date ;
-    cx:hasRQ membr:Project_Kligge ;
     cx:hasTitle "German NP [Def.Det-strong + ADJ-weak + N]" .
 
 <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_Meaning> a cx:ConstructionMeaning .

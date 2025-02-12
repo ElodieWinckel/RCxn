@@ -63,7 +63,6 @@ cx:EvaluativeAttributionConstruction_E_Morphosyntax a "NP", "AdjP", "PP", "VP", 
 cx:EvaluativeAttributionConstruction_MD a cx:Metadata ;
     cx:annotator membr:Stampfer ;
     cx:creationDate "2024-12-02"^^xsd:date ;
-    cx:hasRQ membr: ;
     cx:hasTitle "Modern English Evaluative Attribution Construction" .
 
 cx:EvaluativeAttributionConstruction_Meaning a cx:ConstructionMeaning ;

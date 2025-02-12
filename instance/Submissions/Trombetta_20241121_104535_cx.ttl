@@ -92,7 +92,6 @@ cx:Relative-Topic-ShiftConstruction_MD a cx:Metadata ;
     cx:annotator membr:Trombetta ;
     cx:creationDate "2024-11-21"^^xsd:date ;
     cx:hasFindings "The text reveals various types of text-level constructions, i.e., constructions capable of structuring and organizing the text. These structures, while formally appearing as sentences or phrases, operate at the textual level." ;
-    cx:hasRQ membr: ;
     cx:hasSources cx:Relative-Topic-ShiftConstruction_Sources ;
     cx:hasTitle "Sixteenth-century Italian (Florence), written: historiography (Francesco Guicciardini's \"Storia d'Italia\")  Relative-Topic-Shift Construction " .
 

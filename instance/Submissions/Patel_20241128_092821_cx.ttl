@@ -17,8 +17,6 @@
     cx:partOfLanguage "English" ;
     RDFS:comment "tables (of association scores, etc.) and possibly some figures" .
 
-membr:Project_Patel membr:SubProject membr:Project_Patel_241128 .
-
 <http://example.org/cx/come+[noise/mannerofmovement]V-ing_A> a cx:SlotOptional ;
     cx:hasSlotForm <http://example.org/cx/come+[noise/mannerofmovement]V-ing_A_Form> ;
     cx:hasSlotMeaning <http://example.org/cx/come+[noise/mannerofmovement]V-ing_A_Meaning> .
@@ -79,7 +77,6 @@ membr:Project_Patel membr:SubProject membr:Project_Patel_241128 .
 <http://example.org/cx/come+[noise/mannerofmovement]V-ing_MD> a cx:Metadata ;
     cx:annotator membr:Patel ;
     cx:creationDate "2024-11-28"^^xsd:date ;
-    cx:hasRQ membr:Project_Patel_241128 ;
     cx:hasSources <http://example.org/cx/come+[noise/mannerofmovement]V-ing_Sources> ;
     cx:hasTitle "English come + [noise/manner of movement] V-ing" .
 
@@ -103,5 +100,3 @@ membr:Project_Patel membr:SubProject membr:Project_Patel_241128 .
     dc:title "Implementing quantitative data in a qualitative contrastive approach: the case of COME+V-ING" ;
     dc:type "journalArticle" .
 
-membr:Project_Patel_241128 a membr:Project ;
-    membr:projectName "Identifying semantic sub-constructions of the V-ing pattern" .

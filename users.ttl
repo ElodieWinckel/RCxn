@@ -1,5 +1,5 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix membr: <http://example.com/users/> .
+@prefix membr: <http://example.com/users> .
 
 membr:Blake a foaf:Person ;
     foaf:currentProject membr:Project_Blake ;
@@ -123,10 +123,18 @@ membr:Project_DelaGarza a membr:Project ;
     membr:projectName "Project De la Garza"@en .
 
 membr:Project_FernandezSantos a membr:Project ;
-    membr:projectName "Artificial language learning as a window to the early entrenchment of constructions"@en .
+    membr:projectName "Artificial language learning as a window to the early entrenchment of constructions"@en ;
+    membr:SubProject membr:Project_FernandezSantos_241125 .
+
+membr:Project_FernandezSantos_241125 a membr:Project ;
+    membr:projectName "The relative role of verb position and additional morphological markers in comprehension" .
 
 membr:Project_Fokashchuk a membr:Project ;
-    membr:projectName "Functions and cognitive semantics of prepositions in complex constructions"@en .
+    membr:projectName "Functions and cognitive semantics of prepositions in complex constructions"@en ;
+    membr:SubProject membr:Project_Fokashchuk_241210 .
+
+membr:Project_Fokashchuk_241210 a membr:Project ;
+    membr:projectName "How are German NP1 + auf/an + NP2 constructions expressed in English, Polish, and Ukrainian, and to what extent do these languages employ spatial prepositions to convey similar functions and meanings? What are the cross-linguistic similarities and differences in form and meaning of these constructions?" .
 
 membr:Project_Führer a membr:Project ;
     membr:projectName "German verbs with particles or prefixes in language change: Form, meaning, and syntax"@en .
@@ -156,13 +164,24 @@ membr:Project_Kligge a membr:Project ;
     membr:projectName "Representation and acquisition of agreement relations in a usage-based framework"@en .
 
 membr:Project_Lee a membr:Project ;
-    membr:projectName "Project Lee"@en .
+    membr:projectName "Project Lee"@en ;
+    membr:SubProject membr:Project_Lee_241202 .
 
-membr:Project_Legouté a membr:Project ;
+membr:Project_Lee_241202 a membr:Project ;
+    membr:projectName "Prepositional constructions - a corpuslinguistic study on collocation patterns and construction networks" .
+
+membr:Project_Legoute a membr:Project ;
     membr:projectName "Multifunctionality in Haitian Creole: New insights from a Construction Grammar perspective"@en .
 
+membr:Project_Legoute_241128 a membr:Project ;
+    membr:projectName "POU in Haitian Creole" .
+
 membr:Project_Patel a membr:Project ;
-    membr:projectName "Corpus evidence for delineating constructions"@en .
+    membr:projectName "Corpus evidence for delineating constructions"@en ;
+    membr:SubProject membr:Project_Patel_241128 .
+
+membr:Project_Patel_241128 a membr:Project ;
+    membr:projectName "Identifying semantic sub-constructions of the V-ing pattern" .
 
 membr:Project_Prela a membr:Project ;
     membr:projectName "Project Prela"@en .

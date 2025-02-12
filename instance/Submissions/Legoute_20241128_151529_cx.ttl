@@ -13,7 +13,7 @@ cx:POU-beneficiaryconstruction a membr:Construction ;
     cx:partOfLanguage "Haitian Creole" ;
     cx:similarFormDifferentFunction cx:POU-purposeconstruction .
 
-membr: membr:SubProject membr:_241128 .
+membr: membr:SubProject membr:Project_Legoute_241128 .
 
 cx:POU-beneficiaryconstruction_A a cx:SlotMandatory ;
     cx:hasSlotForm cx:POU-beneficiaryconstruction_A_Form ;
@@ -60,8 +60,7 @@ cx:POU-beneficiaryconstruction_Ex_A a cx:Example ;
 cx:POU-beneficiaryconstruction_MD a cx:Metadata ;
     cx:annotator membr:Legoute ;
     cx:creationDate "2024-11-28"^^xsd:date ;
-    cx:hasFindings "POU provokes a NP to become a beneficiary" ;
-    cx:hasRQ membr:Project_241128 ;
+    cx:hasFindings "Project_Legoute_241128: POU provokes a NP to become a beneficiary" ;
     cx:hasTitle "Haitian Creole POU-beneficiary construction" .
 
 cx:POU-beneficiaryconstruction_Meaning a cx:ConstructionMeaning ;
@@ -77,6 +76,5 @@ cx:POU-purposeconstruction a membr:Construction ;
     cx:createdOn "2024-11-28"^^xsd:date ;
     cx:hasTitle "POU-purpose construction" .
 
-membr:Project_241128 a membr:Project ;
-    membr:projectName "POU in Haitian Creole" .
+
 

@@ -60,11 +60,10 @@ cx:ThisCloseToV-ing_Ex_A a cx:Example ;
 cx:ThisCloseToV-ing_MD a cx:Metadata ;
     cx:annotator membr:Iabdounane ;
     cx:creationDate "2024-11-28"^^xsd:date ;
-    cx:hasFindings """The verbal form “this close to V-ing” and the close index finger - thumb gesture co-occur 93% of the time.\r
+    cx:hasFindings """Project_Iabdounane: The verbal form “this close to V-ing” and the close index finger - thumb gesture co-occur 93% of the time.\r
 The two forms are likely entrenched together as a single unit, thus making it one formal multimodal unit.\r
 The construction is multimodal.\r
 """ ;
-    cx:hasRQ membr:Project_Iabdounane ;
     cx:hasTitle "(American) English, Spoken Modality This Close To V-ing" .
 
 cx:ThisCloseToV-ing_Meaning a cx:ConstructionMeaning ;
