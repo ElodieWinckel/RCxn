@@ -1,0 +1,33 @@
+@prefix cx: <http://example.org/cx/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix membr: <http://example.org/users> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rsrch: <http://example.org/rsrch> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cx:RelativeclauseCx a membr:Construction ;
+    cx:hasConstructionMeaning cx:RelativeclauseCx_Meaning ;
+    cx:hasMetadata cx:RelativeclauseCx_MD ;
+    cx:hasSlots cx:RelativeclauseCx_slots ;
+    cx:partOfLanguage "English" .
+
+membr:Project_Patel_241128 rsrch:hasResearchQuestion membr:Project_Patel_241128_250212 .
+
+cx:RelativeclauseCx_A a cx:SlotMandatory .
+
+cx:RelativeclauseCx_MD a cx:Metadata ;
+    cx:annotator membr:Patel ;
+    cx:creationDate "2025-02-12"^^xsd:date ;
+    cx:hasRQ membr:Project_Patel_241128_250212 ;
+    cx:hasTitle "English Relative clause Cx" .
+
+cx:RelativeclauseCx_Meaning a cx:ConstructionMeaning .
+
+cx:RelativeclauseCx_slots a rdf:Seq ;
+    rdf:_1 cx:RelativeclauseCx_A .
+
+membr:Patel foaf:currentProject membr:Project_Patel_241128_250212 .
+
+membr:Project_Patel_241128_250212 a membr:Project ;
+    membr:projectName "specific RQ" .
+

@@ -232,6 +232,9 @@ def form_submit():
     rsrch = Namespace("http://example.org/rsrch")
     g.bind("rsrch", rsrch)
 
+    foaf = Namespace("http://xmlns.com/foaf/0.1/")
+    g.bind("foaf", foaf)
+
     olia = Namespace("http://purl.org/olia/olia.owl#")
     g.bind("olia", olia)
 
@@ -271,6 +274,7 @@ def form_submit():
     if new_research_question.strip():
         g.add((membr[new_research_question_uri], RDF.type, membr.Project))
         g.add((membr[new_research_question_uri], membr.projectName, Literal(new_research_question)))
+        g.add((membr[user_name], foaf.currentProject, membr[new_research_question_uri]))
         g.add((membr[default_research_question_uri], rsrch.hasResearchQuestion, membr[new_research_question_uri]))
 
     # FINDINGS
