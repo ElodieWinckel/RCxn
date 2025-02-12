@@ -8,7 +8,7 @@
       <form action="{{ url_for('app_form.form_submit') }}" method="POST">
         <h1>Metadata</h1>
         <div>
-          <label for="uri">Select Your Name:</label>
+          <label for="uri">Select your name:</label>
           <select id="uri" name="uri" onchange="generateProjectName(this.value)" required>
             {% for uri, name in uris %}
               <option value="{{ uri }}">{{ name }}</option>
@@ -27,11 +27,11 @@
         </div>
         <h3>Research Question</h3>
         <div>
-          The default research question of your project is the following:
+          <label for="project-select">Select a research question:</label>
+          <select id="project-select" name="projectId">
+            <option value="">-- Select a research question --</option>
+          </select>
         </div>
-        <div id="project-container"></div>
-        <!-- Hidden input to store the ProjectID -->
-        <input type="hidden" id="project-id" name="projectId">
         <div>
           <label for="Rquestion">You can specify a more specific research question within this general one:</label>
           <input type="text" id="Rquestion" name="Rquestion">
@@ -194,24 +194,25 @@
       const projects = {{ projects|tojson|safe }};
 
       function generateProjectName(uri) {
-        const container = document.getElementById('project-container');
-        const projectId = `Project_${uri}`;
-        const projectIdInput = document.getElementById('project-id');
-        let projectFound = false;
+          const projectSelect = document.getElementById('project-select');
+          projectSelect.innerHTML = '<option value="">-- Select a research question --</option>'; // Clear existing options
 
-        for (let i = 0; i < projects.length; i++) {
-          if (projects[i][0] === projectId) {
-            container.textContent = projects[i][1];
-            projectIdInput.value = projectId;
-            projectFound = true;
-            break;
+          const projectIdPrefix = `Project_${uri}`;
+          let projectFound = false;
+
+          projects.forEach(([projectId, projectName]) => {
+              if (projectId.startsWith(projectIdPrefix)) {
+                  const option = document.createElement('option');
+                  option.value = projectId;
+                  option.textContent = projectName;
+                  projectSelect.appendChild(option);
+                  projectFound = true;
+              }
+          });
+
+          if (!projectFound) {
+              projectSelect.innerHTML += '<option value="">No projects found</option>';
           }
-        }
-
-        if (!projectFound) {
-          container.textContent = 'Project not found';
-          projectIdInput.value = '';
-        }
       }
 
       function generateFields() {

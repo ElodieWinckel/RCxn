@@ -20,7 +20,7 @@ def load_uris_from_ttl(file_path):
     g = Graph()
     g.parse(file_path, format='turtle')
     foaf = Namespace('http://xmlns.com/foaf/0.1/')
-    uris_and_names = [(str(s).replace("http://example.com/users/", ""),
+    uris_and_names = [(str(s).replace("http://example.com/users", ""),
                        str(g.value(s, foaf.familyName))) for s in g.subjects(RDF.type, foaf.Person)]
     return uris_and_names
 
@@ -28,8 +28,8 @@ def load_uris_from_ttl(file_path):
 def load_projects_from_ttl(file_path):
     g = Graph()
     g.parse(file_path, format='turtle')
-    membr = Namespace("http://example.com/users/")
-    uris_and_names = [(str(s).replace("http://example.com/users/", ""),
+    membr = Namespace("http://example.com/users")
+    uris_and_names = [(str(s).replace("http://example.com/users", ""),
                        str(g.value(s, membr.projectName))) for s in g.subjects(RDF.type, membr.Project)]
     return uris_and_names
 
@@ -108,7 +108,7 @@ def load_Mode(file_path):
 def load_existing_constructions_uri(file_path):
     g = Graph()
     g.parse(file_path, format='ttl')
-    membr = Namespace("http://example.org/users/")
+    membr = Namespace("http://example.org/users")
     names = [(str(s).replace("http://example.org/cx/", "")) for s in g.subjects(RDF.type, membr.Construction)]
     return names
 
@@ -116,7 +116,7 @@ def load_existing_constructions_uri(file_path):
 def load_existing_constructions_title(file_path):
     g = Graph()
     g.parse(file_path, format='turtle')
-    membr = Namespace("http://example.org/users/")
+    membr = Namespace("http://example.org/users")
     cx = Namespace("http://example.org/cx/")
     names = [str(g.value(s, cx.hasTitle)) for s in g.subjects(RDF.type, membr.Construction)]
     return names
@@ -141,6 +141,8 @@ modus = load_Mode('olia.owl')
 modus.insert(0, '') # The first element of the drop-down list should be the empty string
 list_cx_uris = load_existing_constructions_uri('cx.ttl')
 list_cx = load_existing_constructions_title("cx.ttl")
+
+print(project_list)
 
 @app_form_blueprint.route('/')
 def online_form():
@@ -224,8 +226,11 @@ def form_submit():
     cx = Namespace("http://example.org/cx/")
     g.bind("cx", cx)
 
-    membr = Namespace("http://example.org/users/")
+    membr = Namespace("http://example.org/users")
     g.bind("membr", membr)
+
+    rsrch = Namespace("http://example.org/rsrch")
+    g.bind("rsrch", rsrch)
 
     olia = Namespace("http://purl.org/olia/olia.owl#")
     g.bind("olia", olia)
@@ -266,7 +271,7 @@ def form_submit():
     if new_research_question.strip():
         g.add((membr[new_research_question_uri], RDF.type, membr.Project))
         g.add((membr[new_research_question_uri], membr.projectName, Literal(new_research_question)))
-        g.add((membr[default_research_question_uri], membr.SubProject, membr[new_research_question_uri]))
+        g.add((membr[default_research_question_uri], rsrch.hasResearchQuestion, membr[new_research_question_uri]))
 
     # FINDINGS
     if findings.strip():
