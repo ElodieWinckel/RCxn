@@ -6,6 +6,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 cx:Idiomaticconstructions a membr:Construction ;
+    cx:hasTitle "English Burn one's bridges construction" ;
     cx:hasConstructionMeaning cx:Idiomaticconstructions_Meaning ;
     cx:hasExample cx:Idiomaticconstructions_Ex_A,
         cx:Idiomaticconstructions_Ex_B ;
@@ -96,8 +97,7 @@ cx:Idiomaticconstructions_Ex_B a cx:Example ;
 
 cx:Idiomaticconstructions_MD a cx:Metadata ;
     cx:annotator membr:Rastegar ;
-    cx:creationDate "2024-12-03"^^xsd:date ;
-    cx:hasTitle "English Burn one's bridges construction" .
+    cx:creationDate "2024-12-03"^^xsd:date .
 
 cx:Idiomaticconstructions_Meaning a cx:ConstructionMeaning ;
     cx:hasMeaning "to end relationships" ;

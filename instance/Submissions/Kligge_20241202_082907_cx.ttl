@@ -4,6 +4,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]> a membr:Construction ;
+    cx:hasTitle "German NP [Def.Det-strong + ADJ-weak + N]" ;
     cx:hasConstructionMeaning <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_Meaning> ;
     cx:hasMetadata <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_MD> ;
     cx:hasSlots <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_slots> ;
@@ -43,8 +44,7 @@
 
 <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_MD> a cx:Metadata ;
     cx:annotator membr:Kligge ;
-    cx:creationDate "2024-12-02"^^xsd:date ;
-    cx:hasTitle "German NP [Def.Det-strong + ADJ-weak + N]" .
+    cx:creationDate "2024-12-02"^^xsd:date .
 
 <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_Meaning> a cx:ConstructionMeaning .
 

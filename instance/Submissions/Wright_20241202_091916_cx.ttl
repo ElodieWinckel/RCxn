@@ -5,6 +5,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 cx:Toughmovementconstruction a membr:Construction ;
+    cx:hasTitle "English Tough adjective construction" ;
     cx:hasConstructionMeaning cx:Toughmovementconstruction_Meaning ;
     cx:hasExample cx:Toughmovementconstruction_Ex_A ;
     cx:hasMetadata cx:Toughmovementconstruction_MD ;
@@ -55,8 +56,7 @@ cx:Toughmovementconstruction_Ex_A a cx:Example ;
 cx:Toughmovementconstruction_MD a cx:Metadata ;
     cx:annotator membr:Wright ;
     cx:creationDate "2024-12-02"^^xsd:date ;
-    cx:hasSources cx:Toughmovementconstruction_Sources ;
-    cx:hasTitle "English Tough adjective construction" .
+    cx:hasSources cx:Toughmovementconstruction_Sources .
 
 cx:Toughmovementconstruction_Meaning a cx:ConstructionMeaning .
 

@@ -5,6 +5,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://example.org/cx/TheEnglishGIVE-OUTVerbParticleConstruction.> a membr:Construction ;
+    cx:hasTitle "English GIVE-OUT Verb Particle Construction." ;
     cx:hasConstructionMeaning cx:TheEnglishGIVE-OUTVerbParticleConstruction._Meaning ;
     cx:hasExample cx:TheEnglishGIVE-OUTVerbParticleConstruction._Ex_A ;
     cx:hasMetadata cx:TheEnglishGIVE-OUTVerbParticleConstruction._MD ;
@@ -55,8 +56,7 @@ cx:TheEnglishGIVE-OUTVerbParticleConstruction._Ex_A a cx:Example ;
 
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._MD a cx:Metadata ;
     cx:annotator membr:Kissane ;
-    cx:creationDate "2024-12-01"^^xsd:date ;
-    cx:hasTitle "English GIVE-OUT Verb Particle Construction." .
+    cx:creationDate "2024-12-01"^^xsd:date .
 
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._Meaning a cx:ConstructionMeaning ;
     cx:hasMeaning "An ÆFFECTOR distributes items to multiple recipients or reaches a point of depletion or cessation of function." .

@@ -4,6 +4,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc> a membr:Construction ;
+    cx:hasTitle "German NP[der+ ADJ-e N]nom.sg.masc" ;
     cx:differentFormDifferentFunction <http://example.org/cx/NP[das+ADJ-eN]acc.sg.neut>,
         <http://example.org/cx/NP[das+ADJ-eN]nom.sg.neut>,
         <http://example.org/cx/NP[dem+ADJ-enN]dat.sg.masc>,
@@ -52,8 +53,7 @@
 
 <http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_MD> a cx:Metadata ;
     cx:annotator membr:Kligge ;
-    cx:creationDate "2024-12-02"^^xsd:date ;
-    cx:hasTitle "German NP[der+ ADJ-e N]nom.sg.masc" .
+    cx:creationDate "2024-12-02"^^xsd:date .
 
 <http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_Meaning> a cx:ConstructionMeaning ;
     cx:hasMeaning "NPs in German have obligatory grammatical marking specifying case, number, gender." .

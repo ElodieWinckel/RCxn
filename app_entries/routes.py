@@ -5,11 +5,9 @@ from flask import Flask, render_template, redirect, url_for
 from rdflib import Graph, URIRef, Literal, Namespace, RDF, XSD
 import os
 
-# Check if the production directory exists
+# Check if the production directory exists (otherwise, defaults to development directory)
 if os.path.exists("/data/www/RCxn"):
     os.chdir("/data/www/RCxn")  # # Set the working directory to the application's production path
-#else:
-#    os.chdir(os.path.dirname(os.path.abspath(__file__)))  # Development path
 
 g = Graph()
 
@@ -32,6 +30,8 @@ membr = Namespace("http://example.org/users/")
 g.bind("membr", membr)
 olia = Namespace("http://purl.org/olia/olia.owl#")
 g.bind("olia", olia)
+foaf = Namespace("http://xmlns.com/foaf/0.1/")
+g.bind("foaf", foaf)
 RDFS = Namespace("http://www.w3.org/2000/01/rdf-schema#")
 g.bind("RDFS", RDFS)
 
@@ -46,8 +46,7 @@ def list_view():
     SELECT ?construction ?title
     WHERE {
         ?construction a membr:Construction .
-        ?construction cx:hasMetadata ?meta .
-        ?meta cx:hasTitle ?title .
+        ?construction cx:hasTitle ?title .
     }
     """
 
@@ -225,7 +224,6 @@ def construction_detail(uri):
                 'property': re.sub(prefixes, "", str(predicate)),
                 'object': re.sub(prefixes, "", str(obj)),
             })
-    metadata[:] = [item for item in metadata if item['property'] != "hasTitle"]
     triples[:] = [item for item in triples if item['property'] != "hasMetadata"]
 
     # For debug
@@ -234,7 +232,7 @@ def construction_detail(uri):
     print(links)
 
     # Fetch the title for display purposes
-    title = g.value(metadata_uri, CX.hasTitle)
+    title = g.value(entry_uri, CX.hasTitle)
 
     return render_template("app_entries/construction.html", title=title, triples=general, elements=elements, grouped_examples=grouped_examples, links=links, metadata=metadata)
 

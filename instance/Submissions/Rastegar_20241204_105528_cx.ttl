@@ -6,6 +6,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 cx:Idiomaticconstruction a membr:Construction ;
+    cx:hasTitle "German Aus dem Ärmel schütteln construction" ;
     cx:CL_differentFormSameFunction cx:EnglishPullsomethingoutofahat ;
     cx:CL_similarFormDifferentFunction cx:Englishrollupyoursleeves,
         <http://example.org/cx/Farsibarāyekasiāstinbālāzadan:torollupsleevesforsomething>,
@@ -132,8 +133,7 @@ cx:Idiomaticconstruction_Ex_B a cx:Example ;
 
 cx:Idiomaticconstruction_MD a cx:Metadata ;
     cx:annotator membr:Rastegar ;
-    cx:creationDate "2024-12-04"^^xsd:date ;
-    cx:hasTitle "German Aus dem Ärmel schütteln construction" .
+    cx:creationDate "2024-12-04"^^xsd:date .
 
 cx:Idiomaticconstruction_Meaning a cx:ConstructionMeaning ;
     cx:hasMeaning "done with ease" .

@@ -6,6 +6,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 cx:POU-beneficiaryconstruction a membr:Construction ;
+    cx:hasTitle "Haitian Creole POU-beneficiary construction" ;
     cx:hasConstructionMeaning cx:POU-beneficiaryconstruction_Meaning ;
     cx:hasExample cx:POU-beneficiaryconstruction_Ex_A ;
     cx:hasMetadata cx:POU-beneficiaryconstruction_MD ;
@@ -60,8 +61,7 @@ cx:POU-beneficiaryconstruction_Ex_A a cx:Example ;
 cx:POU-beneficiaryconstruction_MD a cx:Metadata ;
     cx:annotator membr:Legoute ;
     cx:creationDate "2024-11-28"^^xsd:date ;
-    cx:hasFindings "Project_Legoute_241128: POU provokes a NP to become a beneficiary" ;
-    cx:hasTitle "Haitian Creole POU-beneficiary construction" .
+    cx:hasFindings "Project_Legoute_241128: POU provokes a NP to become a beneficiary" .
 
 cx:POU-beneficiaryconstruction_Meaning a cx:ConstructionMeaning ;
     cx:hasMeaning "Refer to a beneficiary" .

@@ -6,6 +6,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 cx:Relative-Topic-ShiftConstruction a membr:Construction ;
+    cx:hasTitle "Sixteenth-century Italian (Florence), written: historiography (Francesco Guicciardini's \"Storia d'Italia\")  Relative-Topic-Shift Construction " ;
     cx:CL_sameFormSameFunction <http://example.org/cx/Latinlinkingcliché(i.e.,inCaesar'sandTacitus'works)> ;
     cx:hasConstructionMeaning cx:Relative-Topic-ShiftConstruction_Meaning ;
     cx:hasExample cx:Relative-Topic-ShiftConstruction_Ex_A,
@@ -92,8 +93,7 @@ cx:Relative-Topic-ShiftConstruction_MD a cx:Metadata ;
     cx:annotator membr:Trombetta ;
     cx:creationDate "2024-11-21"^^xsd:date ;
     cx:hasFindings "The text reveals various types of text-level constructions, i.e., constructions capable of structuring and organizing the text. These structures, while formally appearing as sentences or phrases, operate at the textual level." ;
-    cx:hasSources cx:Relative-Topic-ShiftConstruction_Sources ;
-    cx:hasTitle "Sixteenth-century Italian (Florence), written: historiography (Francesco Guicciardini's \"Storia d'Italia\")  Relative-Topic-Shift Construction " .
+    cx:hasSources cx:Relative-Topic-ShiftConstruction_Sources .
 
 cx:Relative-Topic-ShiftConstruction_Meaning a cx:ConstructionMeaning ;
     cx:hasMeaning "Transition from one (discourse) topic to another" .

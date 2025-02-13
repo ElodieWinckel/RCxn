@@ -7,6 +7,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 cx:Dooperationwithoperand1onoperand2construction a membr:Construction ;
+    cx:hasTitle "Literary Chinese, Han to Late Qing Do operation with operand1 on operand2 construction" ;
     cx:hasConstructionMeaning cx:Dooperationwithoperand1onoperand2construction_Meaning ;
     cx:hasExample cx:Dooperationwithoperand1onoperand2construction_Ex_A ;
     cx:hasMetadata cx:Dooperationwithoperand1onoperand2construction_MD ;
@@ -74,8 +75,7 @@ cx:Dooperationwithoperand1onoperand2construction_MD a cx:Metadata ;
     cx:annotator membr:Kessler ;
     cx:creationDate "2024-12-01"^^xsd:date ;
     cx:hasFindings "Project_Kessler: There is remarkable stability in the use of the construction over a very long period of time" ;
-    cx:hasSources cx:Dooperationwithoperand1onoperand2construction_Sources ;
-    cx:hasTitle "Literary Chinese, Han to Late Qing Do operation with operand1 on operand2 construction" .
+    cx:hasSources cx:Dooperationwithoperand1onoperand2construction_Sources .
 
 cx:Dooperationwithoperand1onoperand2construction_Meaning a cx:ConstructionMeaning ;
     cx:hasMeaning "Do [operation] with [operand1] and [operand2]" .

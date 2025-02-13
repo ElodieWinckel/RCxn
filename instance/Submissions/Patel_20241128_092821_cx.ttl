@@ -7,6 +7,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://example.org/cx/come+[noise/mannerofmovement]V-ing> a membr:Construction ;
+    cx:hasTitle "English come + [noise/manner of movement] V-ing" ;
     cx:hasConstructionMeaning <http://example.org/cx/come+[noise/mannerofmovement]V-ing_Meaning> ;
     cx:hasExample <http://example.org/cx/come+[noise/mannerofmovement]V-ing_Ex_A>,
         <http://example.org/cx/come+[noise/mannerofmovement]V-ing_Ex_B>,
@@ -77,8 +78,7 @@
 <http://example.org/cx/come+[noise/mannerofmovement]V-ing_MD> a cx:Metadata ;
     cx:annotator membr:Patel ;
     cx:creationDate "2024-11-28"^^xsd:date ;
-    cx:hasSources <http://example.org/cx/come+[noise/mannerofmovement]V-ing_Sources> ;
-    cx:hasTitle "English come + [noise/manner of movement] V-ing" .
+    cx:hasSources <http://example.org/cx/come+[noise/mannerofmovement]V-ing_Sources> .
 
 <http://example.org/cx/come+[noise/mannerofmovement]V-ing_Meaning> a cx:ConstructionMeaning ;
     cx:hasMeaning "Someone or something moves towards a reference point in a specified manner, often in a manner that is fast, sudden, uncontrolled, noisy, or otherwise overwhelming." .

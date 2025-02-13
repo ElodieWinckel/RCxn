@@ -5,6 +5,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 cx:ThisCloseToV-ing a membr:Construction ;
+    cx:hasTitle "(American) English, Spoken Modality This Close To V-ing" ;
     cx:hasConstructionMeaning cx:ThisCloseToV-ing_Meaning ;
     cx:hasExample cx:ThisCloseToV-ing_Ex_A ;
     cx:hasGesture """The gesture is part of the construction's form.\r
@@ -63,8 +64,7 @@ cx:ThisCloseToV-ing_MD a cx:Metadata ;
     cx:hasFindings """Project_Iabdounane: The verbal form “this close to V-ing” and the close index finger - thumb gesture co-occur 93% of the time.\r
 The two forms are likely entrenched together as a single unit, thus making it one formal multimodal unit.\r
 The construction is multimodal.\r
-""" ;
-    cx:hasTitle "(American) English, Spoken Modality This Close To V-ing" .
+""" .
 
 cx:ThisCloseToV-ing_Meaning a cx:ConstructionMeaning ;
     cx:hasMeaning "Something or someone is metaphorically very close to an outcome/goal." .
