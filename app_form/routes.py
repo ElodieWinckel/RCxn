@@ -142,8 +142,6 @@ modus.insert(0, '') # The first element of the drop-down list should be the empt
 list_cx_uris = load_existing_constructions_uri('cx.ttl')
 list_cx = load_existing_constructions_title("cx.ttl")
 
-print(project_list)
-
 @app_form_blueprint.route('/')
 def online_form():
     return render_template('app_form/form.html',
@@ -262,16 +260,9 @@ def form_submit():
     g.add((cx[metadata_uri], cx.creationDate, Literal(datetime.now().strftime('%Y-%m-%d'), datatype=XSD.date)))
 
     # RESEARCH QUESTION
-    # The research question is the default one if there is no new one indicated
-    if new_research_question.strip():
-        new_research_question_uri = default_research_question_uri + "_" + datetime.now().strftime("%y%m%d")
-        research_question_uri = new_research_question_uri
-    else:
-        research_question_uri = default_research_question_uri
-    # Triple to relate cx to its research question
-    g.add((cx[metadata_uri], cx.hasRQ, membr[research_question_uri]))
     # Triples needed if new research question has been added by user
     if new_research_question.strip():
+        new_research_question_uri = default_research_question_uri + "_" + datetime.now().strftime("%y%m%d")
         g.add((membr[new_research_question_uri], RDF.type, membr.Project))
         g.add((membr[new_research_question_uri], membr.projectName, Literal(new_research_question)))
         g.add((membr[user_name], foaf.currentProject, membr[new_research_question_uri]))
