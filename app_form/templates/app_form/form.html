@@ -1006,7 +1006,7 @@
     }
 
     // List of existing constructions for autocomplete
-    var existingConstructions = {{ existingconstructions | safe }};
+    var existingConstructions = {{ existingconstructions | tojson | safe }};
     $(function() {
       $("#inheritsFrom").autocomplete({
         source: existingConstructions
@@ -1041,7 +1041,7 @@
     }
 
     // List of existing constructions for autocomplete
-    var existingConstructions = {{ existingconstructions | safe }};
+    var existingConstructions = {{ existingconstructions | tojson | safe }};
     $(function() {
       $("#inheritedBy").autocomplete({
         source: existingConstructions
@@ -1076,7 +1076,7 @@
     }
 
     // List of existing constructions for autocomplete
-    var existingConstructions = {{ existingconstructions | safe }};
+    var existingConstructions = {{ existingconstructions | tojson | safe }};
     $(function() {
       $("#metaphoricalExtension").autocomplete({
         source: existingConstructions

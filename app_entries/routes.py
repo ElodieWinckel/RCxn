@@ -39,7 +39,7 @@ g.bind("RDFS", RDFS)
 def list_view():
     constructions = []
 
-    # SPARQL query to get the title for each construction via the metadata URI
+    # SPARQL query to get the title for each construction
     query = """
     PREFIX cx: <http://example.org/cx/>
     PREFIX membr: <http://example.org/users/>

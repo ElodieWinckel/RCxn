@@ -2,6 +2,7 @@ from . import app_form_blueprint
 from flask import current_app, request, render_template, send_file
 from rdflib import Graph, URIRef, Literal, Namespace, RDF, XSD
 from datetime import datetime
+import glob
 import json
 import os
 
@@ -104,22 +105,38 @@ def load_Mode(file_path):
     names.sort()
     return names
 
-# Load URIs of already existing constructions (cx.ttl)
-def load_existing_constructions_uri(file_path):
+# Load URIs and title of already existing constructions
+def load_existing_constructions(file_path):
     g = Graph()
-    g.parse(file_path, format='ttl')
-    membr = Namespace("http://example.org/users")
-    names = [(str(s).replace("http://example.org/cx/", "")) for s in g.subjects(RDF.type, membr.Construction)]
-    return names
+    for ttl_file in glob.glob(file_path):
+        g.parse(ttl_file, format="turtle")
+    constructions = []
 
-# Load URIs and title of already existing constructions (cx.ttl)
-def load_existing_constructions_title(file_path):
-    g = Graph()
-    g.parse(file_path, format='turtle')
-    membr = Namespace("http://example.org/users")
-    cx = Namespace("http://example.org/cx/")
-    names = [str(g.value(s, cx.hasTitle)) for s in g.subjects(RDF.type, membr.Construction)]
-    return names
+    # SPARQL query to get the title for each construction
+    query = """
+        PREFIX cx: <http://example.org/cx/>
+        PREFIX membr: <http://example.org/users/>
+        SELECT ?construction ?title
+        WHERE {
+            ?construction a membr:Construction .
+            ?construction cx:hasTitle ?title .
+        }
+        """
+
+    # Execute the SPARQL query
+    results = g.query(query)
+
+    # Process query results
+    for row in results:
+        construction_uri = str(row.construction).replace("http://example.org/cx/", "")
+        title = str(row.title)
+
+        # Append construction details as dictionary
+        constructions.append({
+            'uri': construction_uri,
+            'title': title
+        })
+    return constructions
 
 ###################################################
 ### RUN HTML FORM
@@ -139,8 +156,10 @@ tense_features = load_TenseFeatures('olia.owl')
 tense_features.insert(0,("",""))
 modus = load_Mode('olia.owl')
 modus.insert(0, '') # The first element of the drop-down list should be the empty string
-list_cx_uris = load_existing_constructions_uri('cx.ttl')
-list_cx = load_existing_constructions_title("cx.ttl")
+list_cx = load_existing_constructions("instance/Submissions/*_cx.ttl")
+list_cx_titles = [entry["title"] for entry in list_cx]
+
+print(list_cx)
 
 @app_form_blueprint.route('/')
 def online_form():
@@ -152,7 +171,7 @@ def online_form():
                            casefeatures=case_features,
                            tensefeatures=tense_features,
                            modus=modus,
-                           existingconstructions=list_cx)
+                           existingconstructions=list_cx_titles)
 
 ###################################################
 ### RETRIEVE INFORMATION FROM THE FORM
@@ -277,7 +296,7 @@ def form_submit():
     # TITLE
     # The name of the construction is a concatenation of the language and the title
     construction_complete_title = f"{construction_language} {construction_name}"
-    g.add((cx[metadata_uri], cx.hasTitle, Literal(construction_complete_title)))
+    g.add((cx[construction_name_cleaned], cx.hasTitle, Literal(construction_complete_title)))
 
 ###################################################
 ### IMPLEMENT CONSTRUCTION SOURCES
@@ -595,56 +614,87 @@ def form_submit():
 
     # Add RDF triples for each construction this one inherits from
     for inherit_construction in selected_inherits_from:
-        cleaned_inherit_construction = inherit_construction.replace(" ", "")
-        g.add((cx[construction_name_cleaned], cx.inheritsFrom, cx[cleaned_inherit_construction]))
-        # User can enter the name of a construction that has not been implemented yet
-        # When this happens, create a new construction entry, with title, annotator and creation date
-        if cleaned_inherit_construction not in list_cx_uris:
+        # Users can select a construction already in the constructicon
+        # When this happens, the uri has to be identified
+        if inherit_construction in {entry['title'] for entry in list_cx}:
+            cleaned_inherit_construction = next(
+                (entry['uri'] for entry in list_cx if entry['title'] == inherit_construction),
+                None  # Default if not found
+            )
+        else: # Users can also enter the name of a construction that has not been implemented yet
+            # When this happens, create a new construction entry, with title, annotator and creation date
+            cleaned_inherit_construction = inherit_construction.replace(" ", "")
+            metadata_inherit_construction = f"{cleaned_inherit_construction}_MD"
             g.add((cx[cleaned_inherit_construction], RDF.type, membr.Construction))
-            g.add((cx[cleaned_inherit_construction], cx.annotator, membr[user_name]))
-            g.add((cx[cleaned_inherit_construction], cx.createdOn,
+            g.add((cx[cleaned_inherit_construction], cx.hasMetadata, cx[metadata_inherit_construction]))
+            g.add((cx[metadata_inherit_construction], RDF.type, cx.Metadata))
+            g.add((cx[metadata_inherit_construction], cx.annotator, membr[user_name]))
+            g.add((cx[metadata_inherit_construction], cx.createdOn,
                    Literal(datetime.now().strftime('%Y-%m-%d'), datatype=XSD.date)))
             g.add((cx[cleaned_inherit_construction], cx.hasTitle, Literal(inherit_construction)))
             print("New construction needed!")
+        # In any case, write a triplet defining this construction as inherited from
+        g.add((cx[construction_name_cleaned], cx.inheritsFrom, cx[cleaned_inherit_construction]))
 
     # Add RDF triples for each construction this one is inherited by
     for inherit_construction in selected_inherited_by:
-        cleaned_inherit_construction = inherit_construction.replace(" ", "")
-        g.add((cx[construction_name_cleaned], cx.inheritedBy, cx[cleaned_inherit_construction]))
-        # User can enter the name of a construction that has not been implemented yet
-        # When this happens, create a new construction entry, with title, annotator and creation date
-        if cleaned_inherit_construction not in list_cx_uris:
+        # Users can select a construction already in the constructicon
+        # When this happens, the uri has to be identified
+        if inherit_construction in {entry['title'] for entry in list_cx}:
+            cleaned_inherit_construction = next(
+                (entry['uri'] for entry in list_cx if entry['title'] == inherit_construction),
+                None  # Default if not found
+            )
+        else:  # Users can also enter the name of a construction that has not been implemented yet
+            # When this happens, create a new construction entry, with title, annotator and creation date
+            cleaned_inherit_construction = inherit_construction.replace(" ", "")
+            metadata_inherit_construction = f"{cleaned_inherit_construction}_MD"
             g.add((cx[cleaned_inherit_construction], RDF.type, membr.Construction))
-            g.add((cx[cleaned_inherit_construction], cx.annotator, membr[user_name]))
-            g.add((cx[cleaned_inherit_construction], cx.createdOn, Literal(datetime.now().strftime('%Y-%m-%d'), datatype=XSD.date)))
+            g.add((cx[cleaned_inherit_construction], cx.hasMetadata, cx[metadata_inherit_construction]))
+            g.add((cx[metadata_inherit_construction], RDF.type, cx.Metadata))
+            g.add((cx[metadata_inherit_construction], cx.annotator, membr[user_name]))
+            g.add((cx[metadata_inherit_construction], cx.createdOn,
+                   Literal(datetime.now().strftime('%Y-%m-%d'), datatype=XSD.date)))
             g.add((cx[cleaned_inherit_construction], cx.hasTitle, Literal(inherit_construction)))
             print("New construction needed!")
+        # In any case, write a triplet defining this construction as inherited from
+        g.add((cx[construction_name_cleaned], cx.inheritedBy, cx[cleaned_inherit_construction]))
 
     # Add RDF triples for each construction this one is metaphorical extension
     for inherit_construction in selected_metaphorical_extension:
-        cleaned_inherit_construction = inherit_construction.replace(" ", "")
-        g.add((cx[construction_name_cleaned], cx.metaphoricalExtension, cx[cleaned_inherit_construction]))
-        # User can enter the name of a construction that has not been implemented yet
-        # When this happens, create a new construction entry, with title, annotator and creation date
-        if cleaned_inherit_construction not in list_cx_uris:
+        # Users can select a construction already in the constructicon
+        # When this happens, the uri has to be identified
+        if inherit_construction in {entry['title'] for entry in list_cx}:
+            cleaned_inherit_construction = next(
+                (entry['uri'] for entry in list_cx if entry['title'] == inherit_construction),
+                None  # Default if not found
+            )
+        else:  # Users can also enter the name of a construction that has not been implemented yet
+            # When this happens, create a new construction entry, with title, annotator and creation date
+            cleaned_inherit_construction = inherit_construction.replace(" ", "")
+            metadata_inherit_construction = f"{cleaned_inherit_construction}_MD"
             g.add((cx[cleaned_inherit_construction], RDF.type, membr.Construction))
-            g.add((cx[cleaned_inherit_construction], cx.annotator, membr[user_name]))
-            g.add((cx[cleaned_inherit_construction], cx.createdOn,
-                       Literal(datetime.now().strftime('%Y-%m-%d'), datatype=XSD.date)))
+            g.add((cx[cleaned_inherit_construction], cx.hasMetadata, cx[metadata_inherit_construction]))
+            g.add((cx[metadata_inherit_construction], RDF.type, cx.Metadata))
+            g.add((cx[metadata_inherit_construction], cx.annotator, membr[user_name]))
+            g.add((cx[metadata_inherit_construction], cx.createdOn,
+                   Literal(datetime.now().strftime('%Y-%m-%d'), datatype=XSD.date)))
             g.add((cx[cleaned_inherit_construction], cx.hasTitle, Literal(inherit_construction)))
             print("New construction needed!")
+        # In any case, write a triplet defining this construction as inherited from
+        g.add((cx[construction_name_cleaned], cx.metaphoricalExtension, cx[cleaned_inherit_construction]))
 
     # Handle the dynamically added similarity links
     similarity_counter = 1
     while f'similarityLink_Cx_{similarity_counter}' in request.form:
         # Fetch values for each similarity link
-        similarity_link = request.form[f'similarityLink_Cx_{similarity_counter}']
-        similarity_link_crossl = request.form[f'crosslinguistic_{similarity_counter}']
-        similarity_link_meaning = request.form[f'meaningSim_{similarity_counter}']
-        similarity_link_form = request.form[f'formSim_{similarity_counter}']
+        similarity_link = request.form[f'similarityLink_Cx_{similarity_counter}'] # name of the construction
+        similarity_link_crossl = request.form[f'crosslinguistic_{similarity_counter}'] # whether the link is cross-linguistic
+        similarity_link_meaning = request.form[f'meaningSim_{similarity_counter}'] # type of meaning link
+        similarity_link_form = request.form[f'formSim_{similarity_counter}'] # type of form link
         # Add RDF triples for the syntactic link
         if similarity_link.strip():
-            cleaned_similar_construction = similarity_link.replace(" ", "")
+            # Identify the URI of the property
             if similarity_link_crossl == "Empty" or similarity_link_meaning == "Empty" or similarity_link_form == "Empty":
                 return "Error: You haven't specified all properties of a similarity link."
             if similarity_link_crossl == "yes":
@@ -652,13 +702,27 @@ def form_submit():
             else:
                 uri = f"{similarity_link_form}Form{similarity_link_meaning}Function"
             property_uri = URIRef(cx[uri])
-            g.add((cx[construction_name_cleaned], property_uri, cx[cleaned_similar_construction]))
-            if similarity_link not in list_cx_uris:
-                g.add((cx[cleaned_similar_construction], RDF.type, membr.Construction))
-                g.add((cx[cleaned_similar_construction], cx.annotator, membr[user_name]))
-                g.add((cx[cleaned_similar_construction], cx.createdOn, Literal(datetime.now().strftime('%Y-%m-%d'), datatype=XSD.date)))
-                g.add((cx[cleaned_similar_construction], cx.hasTitle, Literal(similarity_link)))
+            # Users can select a construction already in the constructicon
+            # When this happens, the uri has to be identified
+            if similarity_link in {entry['title'] for entry in list_cx}:
+                cleaned_inherit_construction = next(
+                    (entry['uri'] for entry in list_cx if entry['title'] == similarity_link),
+                    None  # Default if not found
+                )
+            else:  # Users can also enter the name of a construction that has not been implemented yet
+                # When this happens, create a new construction entry, with title, annotator and creation date
+                cleaned_inherit_construction = similarity_link.replace(" ", "")
+                metadata_inherit_construction = f"{cleaned_inherit_construction}_MD"
+                g.add((cx[cleaned_inherit_construction], RDF.type, membr.Construction))
+                g.add((cx[cleaned_inherit_construction], cx.hasMetadata, cx[metadata_inherit_construction]))
+                g.add((cx[metadata_inherit_construction], RDF.type, cx.Metadata))
+                g.add((cx[metadata_inherit_construction], cx.annotator, membr[user_name]))
+                g.add((cx[metadata_inherit_construction], cx.createdOn,
+                       Literal(datetime.now().strftime('%Y-%m-%d'), datatype=XSD.date)))
+                g.add((cx[cleaned_inherit_construction], cx.hasTitle, Literal(similarity_link)))
                 print("New construction needed!")
+            # In any case, write a triplet defining this construction as having similarity link
+            g.add((cx[construction_name_cleaned], property_uri, cx[cleaned_inherit_construction]))
 
         similarity_counter += 1
 

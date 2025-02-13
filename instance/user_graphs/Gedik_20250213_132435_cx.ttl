@@ -1,25 +1,19 @@
 @prefix cx: <http://example.org/cx/> .
-@prefix membr: <http://example.org/users/> .
+@prefix membr: <http://example.org/users> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 cx:RelativeclauseCx a membr:Construction ;
     cx:hasConstructionMeaning cx:RelativeclauseCx_Meaning ;
-    cx:hasExample cx:RelativeclauseCx_Ex_A ;
     cx:hasMetadata cx:RelativeclauseCx_MD ;
     cx:hasSlots cx:RelativeclauseCx_slots ;
     cx:partOfLanguage "English" .
 
 cx:RelativeclauseCx_A a cx:SlotMandatory .
 
-cx:RelativeclauseCx_Ex_A a cx:Example ;
-    cx:hasGlosses "the company that he runs" ;
-    cx:hasText "l'entreprise qu'il dirige" .
-
 cx:RelativeclauseCx_MD a cx:Metadata ;
-    cx:annotator membr:Winckel ;
-    cx:creationDate "2024-11-18"^^xsd:date ;
-    cx:hasRQ membr:Project_Winckel ;
+    cx:annotator membr:Gedik ;
+    cx:creationDate "2025-02-13"^^xsd:date ;
     cx:hasTitle "English Relative clause Cx" .
 
 cx:RelativeclauseCx_Meaning a cx:ConstructionMeaning .
