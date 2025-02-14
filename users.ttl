@@ -1,5 +1,5 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix membr: <http://example.com/users> .
+@prefix membr: <http://example.com/users#> .
 @prefix rsrch: <http://example.com/rsrch> .
 
 membr:Blake a foaf:Person ;

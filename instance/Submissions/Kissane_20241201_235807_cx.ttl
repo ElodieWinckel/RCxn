@@ -1,5 +1,5 @@
 @prefix cx: <http://example.org/cx/> .
-@prefix membr: <http://example.org/users/> .
+@prefix membr: <http://example.org/users#> .
 @prefix olia: <http://purl.org/olia/olia.owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .

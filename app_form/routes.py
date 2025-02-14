@@ -21,7 +21,7 @@ def load_uris_from_ttl(file_path):
     g = Graph()
     g.parse(file_path, format='turtle')
     foaf = Namespace('http://xmlns.com/foaf/0.1/')
-    uris_and_names = [(str(s).replace("http://example.com/users", ""),
+    uris_and_names = [(str(s).replace("http://example.com/users#", ""),
                        str(g.value(s, foaf.familyName))) for s in g.subjects(RDF.type, foaf.Person)]
     return uris_and_names
 
@@ -29,8 +29,8 @@ def load_uris_from_ttl(file_path):
 def load_projects_from_ttl(file_path):
     g = Graph()
     g.parse(file_path, format='turtle')
-    membr = Namespace("http://example.com/users")
-    uris_and_names = [(str(s).replace("http://example.com/users", ""),
+    membr = Namespace("http://example.com/users#")
+    uris_and_names = [(str(s).replace("http://example.com/users#", ""),
                        str(g.value(s, membr.projectName))) for s in g.subjects(RDF.type, membr.Project)]
     return uris_and_names
 
@@ -115,7 +115,7 @@ def load_existing_constructions(file_path):
     # SPARQL query to get the title for each construction
     query = """
         PREFIX cx: <http://example.org/cx/>
-        PREFIX membr: <http://example.org/users/>
+        PREFIX membr: <http://example.org/users#>
         SELECT ?construction ?title
         WHERE {
             ?construction a membr:Construction .
@@ -243,7 +243,7 @@ def form_submit():
     cx = Namespace("http://example.org/cx/")
     g.bind("cx", cx)
 
-    membr = Namespace("http://example.org/users")
+    membr = Namespace("http://example.org/users#")
     g.bind("membr", membr)
 
     rsrch = Namespace("http://example.org/rsrch")

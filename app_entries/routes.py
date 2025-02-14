@@ -12,7 +12,7 @@ if os.path.exists("/data/www/RCxn"):
 g = Graph()
 
 # The following is for debug purposes: Check for matching files
-#matching_files = glob.glob("instance/Submissions/*_cx.ttl")
+#matching_files = glob.glob("instance/Submissions/*4546_cx.ttl")
 #print("Matching files:", matching_files)
 
 # Load and parse all RDF files ending in "_cx.ttl" from the folder with submissions
@@ -26,7 +26,7 @@ for ttl_file in glob.glob("instance/Submissions/*_cx.ttl"):
 # Define the namespaces
 CX = Namespace("http://example.org/cx/")
 g.bind("cx", CX)
-membr = Namespace("http://example.org/users/")
+membr = Namespace("http://example.org/users#")
 g.bind("membr", membr)
 olia = Namespace("http://purl.org/olia/olia.owl#")
 g.bind("olia", olia)
@@ -42,7 +42,7 @@ def list_view():
     # SPARQL query to get the title for each construction
     query = """
     PREFIX cx: <http://example.org/cx/>
-    PREFIX membr: <http://example.org/users/>
+    PREFIX membr: <http://example.org/users#>
     SELECT ?construction ?title
     WHERE {
         ?construction a membr:Construction .
@@ -52,6 +52,7 @@ def list_view():
 
     # Execute the SPARQL query
     results = g.query(query)
+    print(g)
 
     # Process query results
     for row in results:
@@ -72,7 +73,7 @@ def list_view():
 @app_entries_blueprint.route('/construction/<path:uri>', endpoint='construction_detail')
 def construction_detail(uri):
     # A list of prefixes that we might want to delete later from the URI
-    prefixes = "http://example.org/cx/|http://example.org/users/|http://purl.org/olia/olia.owl#|http://www.w3.org/2000/01/rdf-schema#|http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    prefixes = "http://example.org/cx/|http://example.org/users#|http://purl.org/olia/olia.owl#|http://www.w3.org/2000/01/rdf-schema#|http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 
     # Rebuild the full URI for the construction
     entry_uri = URIRef("http://example.org/cx/" + uri)
