@@ -60,11 +60,7 @@ cx:ThisCloseToV-ing_Ex_A a cx:Example ;
 
 cx:ThisCloseToV-ing_MD a cx:Metadata ;
     cx:annotator membr:Iabdounane ;
-    cx:creationDate "2024-11-28"^^xsd:date ;
-    cx:hasFindings """Project_Iabdounane: The verbal form “this close to V-ing” and the close index finger - thumb gesture co-occur 93% of the time.\r
-The two forms are likely entrenched together as a single unit, thus making it one formal multimodal unit.\r
-The construction is multimodal.\r
-""" .
+    cx:creationDate "2024-11-28"^^xsd:date .
 
 cx:ThisCloseToV-ing_Meaning a cx:ConstructionMeaning ;
     cx:hasMeaning "Something or someone is metaphorically very close to an outcome/goal." .

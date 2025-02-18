@@ -60,8 +60,7 @@ cx:POU-beneficiaryconstruction_Ex_A a cx:Example ;
 
 cx:POU-beneficiaryconstruction_MD a cx:Metadata ;
     cx:annotator membr:Legoute ;
-    cx:creationDate "2024-11-28"^^xsd:date ;
-    cx:hasFindings "Project_Legoute_241128: POU provokes a NP to become a beneficiary" .
+    cx:creationDate "2024-11-28"^^xsd:date .
 
 cx:POU-beneficiaryconstruction_Meaning a cx:ConstructionMeaning ;
     cx:hasMeaning "Refer to a beneficiary" .

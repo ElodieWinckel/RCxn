@@ -57,7 +57,6 @@ cx:Argumentstructureconstruction_C_Morphosyntax a cx:oneorsevarlXP ;
 cx:Argumentstructureconstruction_MD a cx:Metadata ;
     cx:annotator membr:Ramezani ;
     cx:creationDate "2025-02-14"^^xsd:date ;
-    cx:hasFindings "So far we have results from LLM analysis that can significantly recognize constructions and differentiate between them" ;
     cx:hasSources cx:Argumentstructureconstruction_Sources .
 
 cx:Argumentstructureconstruction_Meaning a cx:ConstructionMeaning ;
@@ -122,9 +121,3 @@ cx:Verb RDFS:label "Verb" .
 cx:XP RDFS:label "XP" .
 
 cx:oneorsevarlXP RDFS:label  "one or several XP(s)" .
-
-membr:Project_Ramezani_250214 a membr:Project ;
-    membr:projectName "Apart from the brain, we are analyzing these constructions in LLMs and we are going to compare representations at the end." .
-
-membr:Ramezani foaf:currentProject membr:Project_Ramezani_250214 .
-

@@ -167,7 +167,6 @@ cx:Transitiveobjectrelativeclause_Ex_D a cx:Example ;
 cx:Transitiveobjectrelativeclause_MD a cx:Metadata ;
     cx:annotator membr:FernandezSantos ;
     cx:creationDate "2024-11-25"^^xsd:date ;
-    cx:hasFindings "Project_FernandezSantos_241125: The late disambiguation of verb-medial plain-variant (no a + article) object relative can lead to shallow processing. This in combination with high phonetic similarity with a canonical SR could lead to predictive processing overriding perceptual information (at the point of the last NP an object is expected so it’s more likely to hear \"al\" rather than \"el\"). In more general terms, expectations of canonical linguistic input in locally ambiguous structures can override acoustic perception." ;
     cx:hasSources cx:Transitiveobjectrelativeclause_Sources .
 
 cx:Transitiveobjectrelativeclause_Meaning a cx:ConstructionMeaning ;
