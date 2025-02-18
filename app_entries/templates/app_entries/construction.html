@@ -99,6 +99,17 @@
     </table>
 
 
+    <h2>Research</h2>
+    <table border="1">
+        {% for triple in research %}
+            <tr>
+                <td>{{ triple.property }}</td>
+                <td>{{ triple.object }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+
     <h2>Metadata</h2>
     <table border="1">
         {% for triple in metadata %}

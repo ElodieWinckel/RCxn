@@ -9,8 +9,6 @@ import os
 # Check if the production directory exists
 if os.path.exists("/data/www/RCxn"):
     os.chdir("/data/www/RCxn")  # # Set the working directory to the application's production path
-#else:
-#    os.chdir(os.path.dirname(os.path.abspath(__file__)))  # Development path
 
 ###################################################
 ### FUNCTIONS REQUIRED TO EXTRACT FROM DATABASES AND ONTOLOGIES
@@ -158,8 +156,6 @@ modus = load_Mode('olia.owl')
 modus.insert(0, '') # The first element of the drop-down list should be the empty string
 list_cx = load_existing_constructions("instance/Submissions/*_cx.ttl")
 list_cx_titles = [entry["title"] for entry in list_cx]
-
-print(list_cx)
 
 @app_form_blueprint.route('/')
 def online_form():

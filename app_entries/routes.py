@@ -19,6 +19,10 @@ g = Graph()
 for ttl_file in glob.glob("instance/Submissions/*_cx.ttl"):
     g.parse(ttl_file, format="turtle")
 
+# Load and parse all RDF files in the Abox
+for ttl_file in glob.glob("Abox/*.ttl"):
+    g.parse(ttl_file, format="turtle")
+
 # The following is for debug purposes: Read triples
 #for s, p, o in g:
     #print(s, p, o)
@@ -28,6 +32,8 @@ CX = Namespace("http://example.org/cx/")
 g.bind("cx", CX)
 membr = Namespace("http://example.org/users#")
 g.bind("membr", membr)
+rsrch = Namespace("http://example.com/rsrch")
+g.bind("rsrch", rsrch)
 olia = Namespace("http://purl.org/olia/olia.owl#")
 g.bind("olia", olia)
 foaf = Namespace("http://xmlns.com/foaf/0.1/")
@@ -52,7 +58,6 @@ def list_view():
 
     # Execute the SPARQL query
     results = g.query(query)
-    print(g)
 
     # Process query results
     for row in results:
@@ -227,13 +232,35 @@ def construction_detail(uri):
             })
     triples[:] = [item for item in triples if item['property'] != "hasMetadata"]
 
+    # Collect triples for research question and findings
+    research = []
+    for finding in g.subjects(RDF.type, rsrch.Finding):
+        # Check for the triple with form (X, cx:basedOn, entry_uri)
+        if (finding, CX.basedOn, entry_uri) in g:
+            # Get the rdfs:label for this finding
+            finding_labels = g.objects(finding, RDFS.label)
+            for finding_label in finding_labels:
+                research.append({'property': 'Findings', 'object': str(finding_label)})
+            # Next, query all URIs of type foaf:Project that correspond to this finding
+            for project in g.subjects(rsrch.hasFindings, finding):
+                project_names = g.objects(project, rsrch.projectName)
+                for project_name in project_names:
+                    research.append({'property': 'Research Question', 'object': str(project_name)})
+    # Sorting the list so that 'Research Question' comes before 'Findings'
+    research.sort(key=lambda x: x['property'], reverse=True)
+
     # For debug
-    #print(triples)
-    print(links_no_titles)
-    print(links)
+    #print(research)
 
     # Fetch the title for display purposes
     title = g.value(entry_uri, CX.hasTitle)
 
-    return render_template("app_entries/construction.html", title=title, triples=general, elements=elements, grouped_examples=grouped_examples, links=links, metadata=metadata)
+    return render_template("app_entries/construction.html",
+                           title=title,
+                           triples=general,
+                           elements=elements,
+                           grouped_examples=grouped_examples,
+                           links=links,
+                           metadata=metadata,
+                           research=research)
 
