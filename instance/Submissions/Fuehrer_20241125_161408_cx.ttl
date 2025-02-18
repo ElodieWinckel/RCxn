@@ -22,12 +22,12 @@ cx:Transitivedurch-Präfixverbkonstruktion a membr:Construction ;
     RDFS:comment "Depends on what is doable, all MHG data is available in form of one big csv-file. Can be split into multiple files,  however." .
 
 cx:Monotransitivkonstruktion a membr:Construction ;
-    cx:annotator membr:Führer ;
+    cx:annotator membr:Fuehrer ;
     cx:createdOn "2024-11-25"^^xsd:date ;
     cx:hasTitle "Monotransitivkonstruktion" .
 
 cx:Präfixverbkonstruktion a membr:Construction ;
-    cx:annotator membr:Führer_A_Meaning ;
+    cx:annotator membr:Fuehrer ;
     cx:hasTranslation "er, sie, der, die Christen" .
 
 cx:Transitivedurch-Präfixverbkonstruktion_A_Form a cx:SlotForm ;
@@ -157,7 +157,7 @@ cx:Transitivedurch-Präfixverbkonstruktion_G_Morphosyntax a cx:Pronomen ;
     cx:hasSyntacticFunction "Dativobjekt" .
 
 cx:Transitivedurch-Präfixverbkonstruktion_MD a cx:Metadata ;
-    cx:annotator membr:Führer ;
+    cx:annotator membr:Fuehrer ;
     cx:creationDate "2024-11-25"^^xsd:date ;
     cx:hasSources cx:Transitivedurch-Präfixverbkonstruktion_Sources .
 
@@ -179,7 +179,7 @@ cx:Transitivedurch-Präfixverbkonstruktion_slots a rdf:Seq ;
     rdf:_6 cx:Transitivedurch-Präfixverbkonstruktion_G .
 
 cx:Transitivedurch-Verbkonstruktion a membr:Construction ;
-    cx:annotator membr:Führer ;
+    cx:annotator membr:Fuehrer ;
     cx:createdOn "2024-11-25"^^xsd:date ;
     cx:hasTitle "Transitive durch-Verbkonstruktion" .
 

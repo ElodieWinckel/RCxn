@@ -15,7 +15,7 @@ if os.path.exists("/data/www/RCxn"):
 ###################################################
 
 # Load URIs and family names from existing database of researchers (users.ttl)
-def load_uris_from_ttl(file_path):
+def load_user_names_from_ttl(file_path):
     g = Graph()
     g.parse(file_path, format='turtle')
     foaf = Namespace('http://xmlns.com/foaf/0.1/')
@@ -27,9 +27,9 @@ def load_uris_from_ttl(file_path):
 def load_projects_from_ttl(file_path):
     g = Graph()
     g.parse(file_path, format='turtle')
-    membr = Namespace("http://example.com/users#")
+    rsrch = Namespace("http://example.org/rsrch#")
     uris_and_names = [(str(s).replace("http://example.com/users#", ""),
-                       str(g.value(s, membr.projectName))) for s in g.subjects(RDF.type, membr.Project)]
+                       str(g.value(s, rsrch.projectName))) for s in g.subjects(RDF.type, rsrch.Project)]
     return uris_and_names
 
 # Loads URIs of semantic roles in OLIA
@@ -142,7 +142,7 @@ def load_existing_constructions(file_path):
 
 # Prepare all lists that are passed to the HTML form
 # /data/www/RCxn/
-uri_list = load_uris_from_ttl('Abox/users.ttl')
+uri_list = load_user_names_from_ttl('Abox/users.ttl')
 project_list = load_projects_from_ttl('Abox/users.ttl')
 semantic_roles = load_SemanticRoles('olia.owl')
 semantic_roles.insert(0, '') # The first element of the drop-down list should be the empty string
@@ -156,6 +156,8 @@ modus = load_Mode('olia.owl')
 modus.insert(0, '') # The first element of the drop-down list should be the empty string
 list_cx = load_existing_constructions("instance/Submissions/*_cx.ttl")
 list_cx_titles = [entry["title"] for entry in list_cx]
+
+print(project_list)
 
 @app_form_blueprint.route('/')
 def online_form():
@@ -242,7 +244,7 @@ def form_submit():
     membr = Namespace("http://example.org/users#")
     g.bind("membr", membr)
 
-    rsrch = Namespace("http://example.org/rsrch")
+    rsrch = Namespace("http://example.org/rsrch#")
     g.bind("rsrch", rsrch)
 
     foaf = Namespace("http://xmlns.com/foaf/0.1/")
@@ -277,15 +279,22 @@ def form_submit():
     # RESEARCH QUESTION
     # Triples needed if new research question has been added by user
     if new_research_question.strip():
-        new_research_question_uri = default_research_question_uri + "_" + datetime.now().strftime("%y%m%d")
-        g.add((membr[new_research_question_uri], RDF.type, membr.Project))
-        g.add((membr[new_research_question_uri], membr.projectName, Literal(new_research_question)))
+        new_research_question_uri = default_research_question_uri + "_" + datetime.now().strftime("%y%m%d%H%M")
+        g.add((membr[new_research_question_uri], RDF.type, rsrch.Project))
+        g.add((membr[new_research_question_uri], rsrch.projectName, Literal(new_research_question)))
         g.add((membr[user_name], foaf.currentProject, membr[new_research_question_uri]))
         g.add((membr[default_research_question_uri], rsrch.hasResearchQuestion, membr[new_research_question_uri]))
+        current_research_question = new_research_question_uri
+    else:
+        current_research_question = default_research_question_uri
 
     # FINDINGS
     if findings.strip():
-        g.add((cx[metadata_uri], cx.hasFindings, Literal(findings)))
+        new_finding = current_research_question + "_F" + datetime.now().strftime("%y%m%d%H%M")
+        g.add((membr[current_research_question], rsrch.hasFindings, membr[new_finding]))
+        g.add((membr[new_finding], RDF.type, rsrch.Finding))
+        g.add((membr[new_finding], RDFS.label, Literal(findings)))
+        g.add((membr[new_finding], cx.basedOn, cx[construction_name_cleaned]))
     else:
         print("No findings to add")
 

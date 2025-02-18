@@ -1,6 +1,6 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix membr: <http://example.com/users#> .
-@prefix rsrch: <http://example.com/rsrch> .
+@prefix rsrch: <http://example.org/rsrch#> .
 @prefix cx: <http://example.org/cx/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
@@ -25,7 +25,7 @@ membr:Fokashchuk a foaf:Person ;
     foaf:givenName "Iryna" .
 
 membr:Fuehrer a foaf:Person ;
-    foaf:currentProject membr:Project_Führer ;
+    foaf:currentProject membr:Project_Fuehrer ;
     foaf:familyName "Führer" ;
     foaf:givenName "Bastian" .
 
@@ -119,17 +119,17 @@ membr:Wright a foaf:Person ;
     foaf:familyName "Wright" ;
     foaf:givenName "Richenda" .
 
-membr:Project_Blake a membr:Project ;
+membr:Project_Blake a rsrch:Project ;
     rsrch:projectName "Project Blake"@en .
 
-membr:Project_DelaGarza a membr:Project ;
+membr:Project_DelaGarza a rsrch:Project ;
     rsrch:projectName "Project De la Garza"@en .
 
-membr:Project_FernandezSantos a membr:Project ;
+membr:Project_FernandezSantos a rsrch:Project ;
     rsrch:projectName "Artificial language learning as a window to the early entrenchment of constructions"@en ;
     rsrch:hasResearchQuestion membr:Project_FernandezSantos_241125 .
 
-membr:Project_FernandezSantos_241125 a membr:Project ;
+membr:Project_FernandezSantos_241125 a rsrch:Project ;
     rsrch:projectName "The relative role of verb position and additional morphological markers in comprehension" ;
     rsrch:hasFindings membr:Project_FernandezSantos_241125_F250218 .
 
@@ -137,11 +137,11 @@ membr:Project_FernandezSantos_241125_F250218 a rsrch:Finding ;
     rdfs:label "The late disambiguation of verb-medial plain-variant (no a + article) object relative can lead to shallow processing. This in combination with high phonetic similarity with a canonical SR could lead to predictive processing overriding perceptual information (at the point of the last NP an object is expected so it’s more likely to hear \"al\" rather than \"el\"). In more general terms, expectations of canonical linguistic input in locally ambiguous structures can override acoustic perception." ;
     cx:basedOn cx:Transitiveobjectrelativeclause .
 
-membr:Project_Fokashchuk a membr:Project ;
+membr:Project_Fokashchuk a rsrch:Project ;
     rsrch:projectName "Functions and cognitive semantics of prepositions in complex constructions"@en ;
     rsrch:hasResearchQuestion membr:Project_Fokashchuk_241210 .
 
-membr:Project_Fokashchuk_241210 a membr:Project ;
+membr:Project_Fokashchuk_241210 a rsrch:Project ;
     rsrch:projectName "How are German NP1 + auf/an + NP2 constructions expressed in English, Polish, and Ukrainian, and to what extent do these languages employ spatial prepositions to convey similar functions and meanings? What are the cross-linguistic similarities and differences in form and meaning of these constructions?" ;
     rsrch:hasFindings membr:Project_Fokashchuk_241210_F250218 .
 
@@ -151,22 +151,22 @@ membr:Project_Fokashchuk_241210_F250218 a rsrch:Finding ;
 (3) Another parallelism: (a) an often corresponds to "of" in English and to the absence of a preposition but the object in genitive case in Polish and Ukrainian in NP1 + an + NP2 constructions. (b) Synonyms in English, Polish, and Ukrainian tend to govern the same prepositions, whereas this pattern is much less consistent in German.""" ;
     cx:basedOn <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions>.
 
-membr:Project_Führer a membr:Project ;
+membr:Project_Fuehrer a rsrch:Project ;
     rsrch:projectName "German verbs with particles or prefixes in language change: Form, meaning, and syntax"@en ;
-    rsrch:hasFindings membr:Project_Führer_F250218 .
+    rsrch:hasFindings membr:Project_Fuehrer_F250218 .
 
-membr:Project_Führer_F250218 a rsrch:Finding ;
+membr:Project_Fuehrer_F250218 a rsrch:Finding ;
     rdfs:label """Subjekt ist Figur, Objekt ist Grund; \r
 Gegenstände als Objekt erlauben nur intermediäre Interpretationen, während Lokalitäten auch multidirektionale Interpretationen erlauben""" ;
     cx:basedOn cx:Transitivedurch-Präfixverbkonstruktion .
 
-membr:Project_Gedik a membr:Project ;
+membr:Project_Gedik a rsrch:Project ;
     rsrch:projectName "Project Gedik"@en .
 
-membr:Project_GroseHodge a membr:Project ;
+membr:Project_GroseHodge a rsrch:Project ;
     rsrch:projectName "Project Grose-Hodge"@en .
 
-membr:Project_Iabdounane a membr:Project ;
+membr:Project_Iabdounane a rsrch:Project ;
     rsrch:projectName "Multimodal constructional space"@en ;
     rsrch:hasFindings membr:Project_Iabdounane_F250218 .
 
@@ -177,13 +177,13 @@ The construction is multimodal.\r
 """ ;
     cx:basedOn cx:ThisCloseToV-ing .
 
-membr:Project_Kassler a membr:Project ;
+membr:Project_Kassler a rsrch:Project ;
     rsrch:projectName "Project Kassler"@en .
 
-membr:Project_Kenanidis a membr:Project ;
+membr:Project_Kenanidis a rsrch:Project ;
     rsrch:projectName "Project Kenanidis"@en .
 
-membr:Project_Kessler a membr:Project ;
+membr:Project_Kessler a rsrch:Project ;
     rsrch:projectName "Chinese Mathematics"@en ;
     rsrch:hasFindings membr:Project_Kessler_F250218 .
 
@@ -191,17 +191,17 @@ membr:Project_Kessler_F250218 a rsrch:Finding ;
     rdfs:label "There is remarkable stability in the use of the construction over a very long period of time" ;
     cx:basedOn cx:Dooperationwithoperand1onoperand2construction .
 
-membr:Project_Kissane a membr:Project ;
+membr:Project_Kissane a rsrch:Project ;
     rsrch:projectName "Form and meaning as factors in the identification and learning of constructional slots – English phrasal verbs and verb-preposition combinations"@en .
 
-membr:Project_Kligge a membr:Project ;
+membr:Project_Kligge a rsrch:Project ;
     rsrch:projectName "Representation and acquisition of agreement relations in a usage-based framework"@en .
 
-membr:Project_Lee a membr:Project ;
+membr:Project_Lee a rsrch:Project ;
     rsrch:projectName "Project Lee"@en ;
     rsrch:hasResearchQuestion membr:Project_Lee_241202 .
 
-membr:Project_Lee_241202 a membr:Project ;
+membr:Project_Lee_241202 a rsrch:Project ;
     rsrch:projectName "Prepositional constructions - a corpuslinguistic study on collocation patterns and construction networks" ;
     rsrch:hasFindings membr:Project_Lee_241202_F250218 .
 
@@ -209,10 +209,10 @@ membr:Project_Lee_241202_F250218 a rsrch:Finding ;
     rdfs:label "Grammatically fixed with zero-realization, the \"vor-Augen construction\" displays a distinct collocational pattern closely tied to its meaning and contextual usage." ;
     cx:basedOn <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_MD> .
 
-membr:Project_Legoute a membr:Project ;
+membr:Project_Legoute a rsrch:Project ;
     rsrch:projectName "Multifunctionality in Haitian Creole: New insights from a Construction Grammar perspective"@en .
 
-membr:Project_Legoute_241128 a membr:Project ;
+membr:Project_Legoute_241128 a rsrch:Project ;
     rsrch:projectName "POU in Haitian Creole" ;
     rsrch:hasFindings membr:Project_Legoute_241128_F250218 .
 
@@ -220,20 +220,20 @@ membr:Project_Legoute_241128_F250218 a rsrch:Finding ;
     rdfs:label "POU provokes a NP to become a beneficiary" ;
     cx:basedOn cx:POU-beneficiaryconstruction .
 
-membr:Project_Patel a membr:Project ;
+membr:Project_Patel a rsrch:Project ;
     rsrch:projectName "Corpus evidence for delineating constructions"@en ;
     rsrch:hasResearchQuestion membr:Project_Patel_241128 .
 
-membr:Project_Patel_241128 a membr:Project ;
+membr:Project_Patel_241128 a rsrch:Project ;
     rsrch:projectName "Identifying semantic sub-constructions of the V-ing pattern" .
 
-membr:Project_Prela a membr:Project ;
+membr:Project_Prela a rsrch:Project ;
     rsrch:projectName "Project Prela"@en .
 
-membr:Project_Ramezani a membr:Project ;
+membr:Project_Ramezani a rsrch:Project ;
     rsrch:projectName "Representation and processing of constructions in the brain"@en .
 
-membr:Project_Ramezani_250214 a membr:Project ;
+membr:Project_Ramezani_250214 a rsrch:Project ;
     rsrch:projectName "Apart from the brain, we are analyzing argument structure constructions in LLMs and we are going to compare representations at the end." ;
     rsrch:hasFindings membr:Project_Ramezani_250214_F250218 .
 
@@ -241,13 +241,13 @@ membr:Project_Ramezani_250214_F250218 a rsrch:Finding ;
     rdfs:label "So far we have results from LLM analysis that can significantly recognize and differentiate between argument structure constructions." ;
     cx:basedOn cx:Argumentstructureconstruction .
 
-membr:Project_Rastegar a membr:Project ;
+membr:Project_Rastegar a rsrch:Project ;
     rsrch:projectName "Representation and acquisition of idiomatic constructions in L1 and L2 learners"@en .
 
-membr:Project_Stampfer a membr:Project ;
+membr:Project_Stampfer a rsrch:Project ;
     rsrch:projectName "Semantically related argument structures in the history of English"@en .
 
-membr:Project_Trombetta a membr:Project ;
+membr:Project_Trombetta a rsrch:Project ;
     rsrch:projectName "Constructions beyond the sentence: text-structuring in (esp.) sixteenth-century historiographical texts"@en ;
     rsrch:hasFindings membr:Project_Trombetta_F250218 .
 
@@ -255,9 +255,9 @@ membr:Project_Trombetta_F250218 a rsrch:Finding ;
     rdfs:label "The text reveals various types of text-level constructions, i.e., constructions capable of structuring and organizing the text. These structures, while formally appearing as sentences or phrases, operate at the textual level." ;
     cx:basedOn cx:Relative-Topic-ShiftConstruction .
 
-membr:Project_Winckel a membr:Project ;
+membr:Project_Winckel a rsrch:Project ;
     rsrch:projectName "Building a Research Constructicon"@en .
 
-membr:Project_Wright a membr:Project ;
+membr:Project_Wright a rsrch:Project ;
     rsrch:projectName "Project Wright"@en .
 
