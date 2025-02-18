@@ -119,8 +119,8 @@ def load_existing_constructions_title(file_path):
 ###################################################
 
 # Prepare all lists that are passed to the HTML form
-uri_list = load_uris_from_ttl('../users.ttl')
-project_list = load_projects_from_ttl('../users.ttl')
+uri_list = load_uris_from_ttl('../Abox/users.ttl')
+project_list = load_projects_from_ttl('../Abox/users.ttl')
 semantic_roles = load_SemanticRoles('../olia.owl')
 semantic_roles.insert(0, '') # The first element of the drop-down list should be the empty string
 number_features = load_NumberFeatures('../olia.owl')
@@ -131,8 +131,8 @@ tense_features = load_TenseFeatures('../olia.owl')
 tense_features.insert(0,("",""))
 modus = load_Mode('../olia.owl')
 modus.insert(0, '') # The first element of the drop-down list should be the empty string
-list_cx_uris = load_existing_constructions_uri('../cx.ttl')
-list_cx = load_existing_constructions_title("../cx.ttl")
+list_cx_uris = load_existing_constructions_uri('cx.ttl')
+list_cx = load_existing_constructions_title("cx.ttl")
 
 @app.route('/')
 def index():

@@ -103,7 +103,7 @@ def load_existing_constructions_uri(file_path):
     membr = Namespace("http://example.org/users/")
     names = [(str(s).replace("http://example.org/cx/", "")) for s in g.subjects(RDF.type, membr.Construction)]
     return names
-list_of_cxs_URI = load_existing_constructions_uri("cx.ttl")
+list_of_cxs_URI = load_existing_constructions_uri("old_files/cx.ttl")
 print(list_of_cxs_URI)
 
 # Load URIs and title of already existing constructions (cx.ttl)
@@ -115,5 +115,5 @@ def load_existing_constructions_title(file_path):
     names = [str(g.value(s, cx.hasTitle)) for s in g.subjects(RDF.type, membr.Construction)]
     return names
 
-cxs = load_existing_constructions_title("cx.ttl")
+cxs = load_existing_constructions_title("old_files/cx.ttl")
 print(cxs)
