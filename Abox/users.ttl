@@ -135,7 +135,7 @@ membr:Project_FernandezSantos_241125 a rsrch:Project ;
 
 membr:Project_FernandezSantos_241125_F250218 a rsrch:Finding ;
     rdfs:label "The late disambiguation of verb-medial plain-variant (no a + article) object relative can lead to shallow processing. This in combination with high phonetic similarity with a canonical SR could lead to predictive processing overriding perceptual information (at the point of the last NP an object is expected so it’s more likely to hear \"al\" rather than \"el\"). In more general terms, expectations of canonical linguistic input in locally ambiguous structures can override acoustic perception." ;
-    cx:basedOn cx:Transitiveobjectrelativeclause .
+    rsrch:basedOn cx:Transitiveobjectrelativeclause .
 
 membr:Project_Fokashchuk a rsrch:Project ;
     rsrch:projectName "Functions and cognitive semantics of prepositions in complex constructions"@en ;
@@ -149,7 +149,7 @@ membr:Project_Fokashchuk_241210_F250218 a rsrch:Finding ;
     rdfs:label  """(1) Most constructions across languages do not employ the same prepositions in terms of their spatial meaning, which challenges the assumption of uniform metaphorical and/or metonymic extensions. This indicates that when expressing similar scenes or relations between entities, different languages focus on distinct aspects of the relationship, or activate different "active zones" (Langacker 1991).\r
 (2) There are some cross-linguistic correspondences when auf and an are used spatially, as auf/an are often translated as "on" in the other 3 languages. However, in abstract meanings, the semantic network diverges significantly: auf sometimes retains a connection to spatial "on", while an does not.\r
 (3) Another parallelism: (a) an often corresponds to "of" in English and to the absence of a preposition but the object in genitive case in Polish and Ukrainian in NP1 + an + NP2 constructions. (b) Synonyms in English, Polish, and Ukrainian tend to govern the same prepositions, whereas this pattern is much less consistent in German.""" ;
-    cx:basedOn <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions>.
+    rsrch:basedOn <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions>.
 
 membr:Project_Fuehrer a rsrch:Project ;
     rsrch:projectName "German verbs with particles or prefixes in language change: Form, meaning, and syntax"@en ;
@@ -158,7 +158,7 @@ membr:Project_Fuehrer a rsrch:Project ;
 membr:Project_Fuehrer_F250218 a rsrch:Finding ;
     rdfs:label """Subjekt ist Figur, Objekt ist Grund; \r
 Gegenstände als Objekt erlauben nur intermediäre Interpretationen, während Lokalitäten auch multidirektionale Interpretationen erlauben""" ;
-    cx:basedOn cx:Transitivedurch-Präfixverbkonstruktion .
+    rsrch:basedOn cx:Transitivedurch-Präfixverbkonstruktion .
 
 membr:Project_Gedik a rsrch:Project ;
     rsrch:projectName "Project Gedik"@en .
@@ -175,7 +175,7 @@ membr:Project_Iabdounane_F250218 a rsrch:Finding ;
 The two forms are likely entrenched together as a single unit, thus making it one formal multimodal unit.\r
 The construction is multimodal.\r
 """ ;
-    cx:basedOn cx:ThisCloseToV-ing .
+    rsrch:basedOn cx:ThisCloseToV-ing .
 
 membr:Project_Kassler a rsrch:Project ;
     rsrch:projectName "Project Kassler"@en .
@@ -189,7 +189,7 @@ membr:Project_Kessler a rsrch:Project ;
 
 membr:Project_Kessler_F250218 a rsrch:Finding ;
     rdfs:label "There is remarkable stability in the use of the construction over a very long period of time" ;
-    cx:basedOn cx:Dooperationwithoperand1onoperand2construction .
+    rsrch:basedOn cx:Dooperationwithoperand1onoperand2construction .
 
 membr:Project_Kissane a rsrch:Project ;
     rsrch:projectName "Form and meaning as factors in the identification and learning of constructional slots – English phrasal verbs and verb-preposition combinations"@en .
@@ -207,7 +207,7 @@ membr:Project_Lee_241202 a rsrch:Project ;
 
 membr:Project_Lee_241202_F250218 a rsrch:Finding ;
     rdfs:label "Grammatically fixed with zero-realization, the \"vor-Augen construction\" displays a distinct collocational pattern closely tied to its meaning and contextual usage." ;
-    cx:basedOn <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_MD> .
+    rsrch:basedOn <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_MD> .
 
 membr:Project_Legoute a rsrch:Project ;
     rsrch:projectName "Multifunctionality in Haitian Creole: New insights from a Construction Grammar perspective"@en .
@@ -218,7 +218,7 @@ membr:Project_Legoute_241128 a rsrch:Project ;
 
 membr:Project_Legoute_241128_F250218 a rsrch:Finding ;
     rdfs:label "POU provokes a NP to become a beneficiary" ;
-    cx:basedOn cx:POU-beneficiaryconstruction .
+    rsrch:basedOn cx:POU-beneficiaryconstruction .
 
 membr:Project_Patel a rsrch:Project ;
     rsrch:projectName "Corpus evidence for delineating constructions"@en ;
@@ -239,7 +239,7 @@ membr:Project_Ramezani_250214 a rsrch:Project ;
 
 membr:Project_Ramezani_250214_F250218 a rsrch:Finding ;
     rdfs:label "So far we have results from LLM analysis that can significantly recognize and differentiate between argument structure constructions." ;
-    cx:basedOn cx:Argumentstructureconstruction .
+    rsrch:basedOn cx:Argumentstructureconstruction .
 
 membr:Project_Rastegar a rsrch:Project ;
     rsrch:projectName "Representation and acquisition of idiomatic constructions in L1 and L2 learners"@en .
@@ -253,7 +253,7 @@ membr:Project_Trombetta a rsrch:Project ;
 
 membr:Project_Trombetta_F250218 a rsrch:Finding ;
     rdfs:label "The text reveals various types of text-level constructions, i.e., constructions capable of structuring and organizing the text. These structures, while formally appearing as sentences or phrases, operate at the textual level." ;
-    cx:basedOn cx:Relative-Topic-ShiftConstruction .
+    rsrch:basedOn cx:Relative-Topic-ShiftConstruction .
 
 membr:Project_Winckel a rsrch:Project ;
     rsrch:projectName "Building a Research Constructicon"@en .

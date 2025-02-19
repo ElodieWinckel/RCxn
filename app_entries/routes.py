@@ -235,8 +235,8 @@ def construction_detail(uri):
     # Collect triples for research question and findings
     research = []
     for finding in g.subjects(RDF.type, rsrch.Finding):
-        # Check for the triple with form (X, cx:basedOn, entry_uri)
-        if (finding, CX.basedOn, entry_uri) in g:
+        # Check for the triple with form (X, rsrch:basedOn, entry_uri)
+        if (finding, rsrch.basedOn, entry_uri) in g:
             # Get the rdfs:label for this finding
             finding_labels = g.objects(finding, RDFS.label)
             for finding_label in finding_labels:

@@ -303,13 +303,13 @@ def form_submit():
     # FINDINGS
     if findingsId.strip(): # first check if an already existing finding was used
                             # NB: Important to do it first, since some "new finding" could be stored in cache.
-        g.add((membr[findingsId], cx.basedOn, cx[construction_name_cleaned]))
+        g.add((membr[findingsId], rsrch.basedOn, cx[construction_name_cleaned]))
     else: # otherwise use new finding
         new_finding = current_research_question + "_F" + datetime.now().strftime("%y%m%d%H%M")
         g.add((membr[current_research_question], rsrch.hasFindings, membr[new_finding]))
         g.add((membr[new_finding], RDF.type, rsrch.Finding))
         g.add((membr[new_finding], RDFS.label, Literal(findings)))
-        g.add((membr[new_finding], cx.basedOn, cx[construction_name_cleaned]))
+        g.add((membr[new_finding], rsrch.basedOn, cx[construction_name_cleaned]))
 
     # TITLE
     # The name of the construction is a concatenation of the language and the title
@@ -339,7 +339,7 @@ def form_submit():
                     # Triple to relate sources to metadata
                     g.add((cx[metadata_uri], cx.hasSources, cx[sources_uri]))
                     # Triple for reference
-                    g.add((cx[sources_uri], cx.basedOn, reference_subject))
+                    g.add((cx[sources_uri], cx.basedOn, reference_subject)) # TODO basedOn already exists to relate a finding to a construction or to research data, find another name
                 g += reference_graph  # Merge with the existing graph
             except Exception as e:
                 return f"Error parsing RDF Reference: {e}", 400
