@@ -126,7 +126,7 @@ cx:Transitiveobjectrelativeclause_E a cx:SlotMandatory ;
     cx:WordOrder "immediately after Element 4" ;
     cx:hasSlotForm cx:Transitiveobjectrelativeclause_E_Form ;
     cx:hasSlotMeaning cx:Transitiveobjectrelativeclause_E_Meaning ;
-    RDFS:comment "verb of the 1st group" .
+    RDFS:comment "1st conjugation verb" .
 
 cx:Transitiveobjectrelativeclause_E_Form a cx:SlotForm ;
     cx:hasSyntacticForm cx:Transitiveobjectrelativeclause_E_Morphosyntax .
