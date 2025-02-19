@@ -32,6 +32,16 @@ def load_projects_from_ttl(file_path):
                        str(g.value(s, rsrch.projectName))) for s in g.subjects(RDF.type, rsrch.Project)]
     return uris_and_names
 
+# Load URIs and finding labels from existing database of research projects (users.ttl)
+def load_findings_from_ttl(file_path):
+    g = Graph()
+    g.parse(file_path, format='turtle')
+    rsrch = Namespace("http://example.org/rsrch#")
+    RDFS = Namespace("http://www.w3.org/2000/01/rdf-schema#")
+    uris_and_names = [(str(s).replace("http://example.com/users#", ""),
+                       str(g.value(s, RDFS.label))) for s in g.subjects(RDF.type, rsrch.Finding)]
+    return uris_and_names
+
 # Loads URIs of semantic roles in OLIA
 def load_SemanticRoles(file_path):
     g = Graph()
@@ -144,6 +154,7 @@ def load_existing_constructions(file_path):
 # /data/www/RCxn/
 uri_list = load_user_names_from_ttl('Abox/users.ttl')
 project_list = load_projects_from_ttl('Abox/users.ttl')
+findings_list = load_findings_from_ttl('Abox/users.ttl')
 semantic_roles = load_SemanticRoles('olia.owl')
 semantic_roles.insert(0, '') # The first element of the drop-down list should be the empty string
 number_features = load_NumberFeatures('olia.owl')
@@ -155,15 +166,14 @@ tense_features.insert(0,("",""))
 modus = load_Mode('olia.owl')
 modus.insert(0, '') # The first element of the drop-down list should be the empty string
 list_cx = load_existing_constructions("instance/Submissions/*_cx.ttl")
-list_cx_titles = [entry["title"] for entry in list_cx]
-
-print(project_list)
+list_cx_titles = [entry["title"] for entry in list_cx] # list with only titles of Constructions already in the constructicon
 
 @app_form_blueprint.route('/')
 def online_form():
     return render_template('app_form/form.html',
                            uris=uri_list,
                            projects=project_list,
+                           findings=findings_list,
                            semanticroles=semantic_roles,
                            numberfeatures=number_features,
                            casefeatures=case_features,
@@ -184,7 +194,9 @@ def form_submit():
     construction_name_cleaned = construction_name.replace(" ", "")
     default_research_question_uri = request.form['projectId']
     new_research_question = request.form['Rquestion']
-    findings = request.form['findings']
+    findingsId = request.form['findingsId'] # Flask receives either: (a) The selected findingsId if an existing finding is chosen,
+    findings = request.form['findings'] # or (b) the manually entered text from findings if "Create new findings" is selected.
+    print(findings)
     construction_language = request.form['language']
     # not used for the moment (TODO) construction_status = request.form['construction_status']
     # Fields in category "Meaning of the construction"
@@ -289,14 +301,15 @@ def form_submit():
         current_research_question = default_research_question_uri
 
     # FINDINGS
-    if findings.strip():
+    if findingsId.strip(): # first check if an already existing finding was used
+                            # NB: Important to do it first, since some "new finding" could be stored in cache.
+        g.add((membr[findingsId], cx.basedOn, cx[construction_name_cleaned]))
+    else: # otherwise use new finding
         new_finding = current_research_question + "_F" + datetime.now().strftime("%y%m%d%H%M")
         g.add((membr[current_research_question], rsrch.hasFindings, membr[new_finding]))
         g.add((membr[new_finding], RDF.type, rsrch.Finding))
         g.add((membr[new_finding], RDFS.label, Literal(findings)))
         g.add((membr[new_finding], cx.basedOn, cx[construction_name_cleaned]))
-    else:
-        print("No findings to add")
 
     # TITLE
     # The name of the construction is a concatenation of the language and the title

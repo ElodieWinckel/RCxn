@@ -28,21 +28,28 @@
         <h3>Research Question</h3>
         <div>
           <label for="project-select">Select a research question:</label>
-          <select id="project-select" name="projectId" required>
+          <select id="project-select" name="projectId" onchange="generateFindingsName(this.value)" required>
             <option value="">-- Select a research question --</option>
           </select>
         </div>
         <div>
           <label for="Rquestion">You can specify a more specific research question within this general one:</label>
           <input type="text" id="Rquestion" name="Rquestion">
-          <label for="Rquestion">(optional field)</label>
         </div>
         <h3>Findings</h3>
         <div>
+          <label for="findings-select">Select findings related to this research question:</label>
+          <select id="findings-select" name="findingsId" required onchange="toggleFindingsField()">
+            <option value="">-- Select findings --</option>
+          </select>
+        </div>
+
+        <div id="findings-container" style="display: none;">
           <label for="findings">What are the findings?</label>
           <textarea id="findings" name="findings" rows="3" style="resize: none;"></textarea>
           <label for="findings">(recommended field)</label>
         </div>
+
         <h3>Language</h3>
         <div>
           <label for="language">Language (also: time frame, dialect area, written/spoken modality text genre)</label>
@@ -191,6 +198,8 @@
     </div>
 
     <script>
+
+      // script for generating the list of projects attached to a specific user
       const projects = {{ projects|tojson|safe }};
 
       function generateProjectName(uri) {
@@ -214,6 +223,48 @@
               projectSelect.innerHTML += '<option value="">No projects found</option>';
           }
       }
+
+      // script for generating the list of findings attached to a specific project
+      const findings = {{ findings|tojson|safe }};
+
+      function generateFindingsName(Rquestion) {
+    const findingsSelect = document.getElementById('findings-select');
+    findingsSelect.innerHTML = '<option value="">-- Select a finding --</option>'; // Clear existing options
+
+    const findingsIdPrefix = Rquestion.includes('_F') ? Rquestion : `${Rquestion}_F`;
+    let findingsFound = false;
+
+    findings.forEach(([findingsId, findingsName]) => {
+          if (findingsId.startsWith(findingsIdPrefix)) {
+              const option = document.createElement('option');
+              option.value = findingsId;
+              option.textContent = findingsName;
+              findingsSelect.appendChild(option);
+              findingsFound = true;
+          }
+        });
+
+        // Always add the "Create new findings" option at the end
+        const newFindingsOption = document.createElement('option');
+        newFindingsOption.value = 'new';
+        newFindingsOption.textContent = 'Create new findings';
+        findingsSelect.appendChild(newFindingsOption);
+    }
+
+
+      function toggleFindingsField() {
+          const findingsSelect = document.getElementById('findings-select');
+          const findingsContainer = document.getElementById('findings-container');
+
+          if (findingsSelect.value === 'new') {
+              findingsContainer.style.display = 'block'; // Show text field
+          } else {
+              findingsContainer.style.display = 'none';  // Hide text field
+          }
+      }
+
+
+      // part of the script that generates the fields for constructions elements
 
       function generateFields() {
         const elementNb = document.getElementById('element_nb').value;
