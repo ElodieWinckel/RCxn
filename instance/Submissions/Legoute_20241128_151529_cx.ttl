@@ -4,9 +4,10 @@
 @prefix membr: <http://example.org/users#> .
 @prefix olia: <http://purl.org/olia/olia.owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-cx:POU-beneficiaryconstruction a membr:Construction ;
+cx:POU-beneficiaryconstruction a rcxn:Construction ;
     cx:hasTitle "Haitian Creole POU-beneficiary construction" ;
     cx:hasConstructionMeaning cx:POU-beneficiaryconstruction_Meaning ;
     cx:hasExample cx:POU-beneficiaryconstruction_Ex_A ;
@@ -71,7 +72,7 @@ cx:POU-beneficiaryconstruction_slots a rdf:Seq ;
     rdf:_2 cx:POU-beneficiaryconstruction_B ;
     rdf:_3 cx:POU-beneficiaryconstruction_C .
 
-cx:POU-purposeconstruction a membr:Construction ;
+cx:POU-purposeconstruction a rcxn:Construction ;
     cx:annotator membr:Legoute ;
     cx:createdOn "2024-11-28"^^xsd:date ;
     cx:hasTitle "POU-purpose construction" .

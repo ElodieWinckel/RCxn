@@ -2,10 +2,11 @@
 @prefix cx: <http://example.org/cx/> .
 @prefix membr: <http://example.org/users#> .
 @prefix olia: <http://purl.org/olia/olia.owl#> .
+@prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-cx:Idiomaticconstructions a membr:Construction ;
+cx:Idiomaticconstructions a rcxn:Construction ;
     cx:hasTitle "English Burn one's bridges construction" ;
     cx:hasConstructionMeaning cx:Idiomaticconstructions_Meaning ;
     cx:hasExample cx:Idiomaticconstructions_Ex_A,

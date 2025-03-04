@@ -4,11 +4,12 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links#> .
 @prefix membr: <http://example.org/users#> .
+@prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rsrch: <http://example.org/rsrch> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-cx:Argumentstructureconstruction a membr:Construction ;
+cx:Argumentstructureconstruction a rcxn:Construction ;
     cx:hasConstructionMeaning cx:Argumentstructureconstruction_Meaning ;
     cx:hasMetadata cx:Argumentstructureconstruction_MD ;
     cx:hasSlots cx:Argumentstructureconstruction_slots ;
@@ -73,7 +74,7 @@ cx:Argumentstructureconstruction_slots a rdf:Seq ;
     rdf:_2 cx:Argumentstructureconstruction_B ;
     rdf:_3 cx:Argumentstructureconstruction_C .
 
-cx:EnglishCause-Motionconstruction a membr:Construction ;
+cx:EnglishCause-Motionconstruction a rcxn:Construction ;
     cx:hasMetadata cx:EnglishCause-Motionconstruction_MD ;
     cx:hasTitle "English Cause-Motion construction" .
 
@@ -81,7 +82,7 @@ cx:EnglishCause-Motionconstruction_MD a cx:Metadata ;
     cx:annotator membr:Ramezani ;
     cx:createdOn "2025-02-14"^^xsd:date .
 
-cx:EnglishDitransitiveconstruction a membr:Construction ;
+cx:EnglishDitransitiveconstruction a rcxn:Construction ;
     cx:hasMetadata cx:EnglishDitransitiveconstruction_MD ;
     cx:hasTitle "English Ditransitive construction" .
 
@@ -89,7 +90,7 @@ cx:EnglishDitransitiveconstruction_MD a cx:Metadata ;
     cx:annotator membr:Ramezani ;
     cx:createdOn "2025-02-14"^^xsd:date .
 
-cx:EnglishResultativeconstruction a membr:Construction ;
+cx:EnglishResultativeconstruction a rcxn:Construction ;
     cx:hasMetadata cx:EnglishResultativeconstruction_MD ;
     cx:hasTitle "English Resultative construction" .
 
@@ -97,7 +98,7 @@ cx:EnglishResultativeconstruction_MD a cx:Metadata ;
     cx:annotator membr:Ramezani ;
     cx:createdOn "2025-02-14"^^xsd:date .
 
-cx:EnglishTransitiveconstruction a membr:Construction ;
+cx:EnglishTransitiveconstruction a rcxn:Construction ;
     cx:hasMetadata cx:EnglishTransitiveconstruction_MD ;
     cx:hasTitle "English Transitive construction" .
 

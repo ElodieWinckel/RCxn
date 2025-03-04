@@ -1,10 +1,11 @@
 @prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix cx: <http://example.org/cx/> .
 @prefix membr: <http://example.org/users#> .
+@prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-cx:EvaluativeAttributionConstruction a membr:Construction ;
+cx:EvaluativeAttributionConstruction a rcxn:Construction ;
     cx:hasTitle "Modern English Evaluative Attribution Construction" ;
     cx:hasConstructionMeaning cx:EvaluativeAttributionConstruction_Meaning ;
     cx:hasMetadata cx:EvaluativeAttributionConstruction_MD ;

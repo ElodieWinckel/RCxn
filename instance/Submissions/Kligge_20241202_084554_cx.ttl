@@ -2,9 +2,10 @@
 @prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links#> .
 @prefix membr: <http://example.org/users#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc> a membr:Construction ;
+<http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc> a rcxn:Construction ;
     cx:hasTitle "German NP[der+ ADJ-e N]nom.sg.masc" ;
     links:differentFormDifferentFunction <http://example.org/cx/NP[das+ADJ-eN]acc.sg.neut>,
         <http://example.org/cx/NP[das+ADJ-eN]nom.sg.neut>,
@@ -19,27 +20,27 @@
     cx:hasSlots <http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_slots> ;
     cx:partOfLanguage "German" .
 
-<http://example.org/cx/NP[das+ADJ-eN]acc.sg.neut> a membr:Construction ;
+<http://example.org/cx/NP[das+ADJ-eN]acc.sg.neut> a rcxn:Construction ;
     cx:annotator membr:Kligge ;
     cx:createdOn "2024-12-02"^^xsd:date ;
     cx:hasTitle "NP[das + ADJ-e N]acc.sg.neut" .
 
-<http://example.org/cx/NP[das+ADJ-eN]nom.sg.neut> a membr:Construction ;
+<http://example.org/cx/NP[das+ADJ-eN]nom.sg.neut> a rcxn:Construction ;
     cx:annotator membr:Kligge ;
     cx:createdOn "2024-12-02"^^xsd:date ;
     cx:hasTitle "NP[das + ADJ-e N]nom.sg.neut" .
 
-<http://example.org/cx/NP[dem+ADJ-enN]dat.sg.masc> a membr:Construction ;
+<http://example.org/cx/NP[dem+ADJ-enN]dat.sg.masc> a rcxn:Construction ;
     cx:annotator membr:Kligge ;
     cx:createdOn "2024-12-02"^^xsd:date ;
     cx:hasTitle "NP[dem + ADJ-en N]dat.sg.masc" .
 
-<http://example.org/cx/NP[dem+ADJ-enN]dat.sg.neut> a membr:Construction ;
+<http://example.org/cx/NP[dem+ADJ-enN]dat.sg.neut> a rcxn:Construction ;
     cx:annotator membr:Kligge ;
     cx:createdOn "2024-12-02"^^xsd:date ;
     cx:hasTitle "NP[dem + ADJ-en N]dat.sg.neut" .
 
-<http://example.org/cx/NP[den+ADJ-enN]acc.sg.masc> a membr:Construction ;
+<http://example.org/cx/NP[den+ADJ-enN]acc.sg.masc> a rcxn:Construction ;
     cx:annotator membr:Kligge ;
     cx:createdOn "2024-12-02"^^xsd:date ;
     cx:hasTitle "NP[den+ ADJ-en N]acc.sg.masc" .
@@ -64,17 +65,17 @@
     rdf:_2 <http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_B> ;
     rdf:_3 <http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_C> .
 
-<http://example.org/cx/NP[die+ADJ-eN]nom.sg.fem> a membr:Construction ;
+<http://example.org/cx/NP[die+ADJ-eN]nom.sg.fem> a rcxn:Construction ;
     cx:annotator membr:Kligge ;
     cx:createdOn "2024-12-02"^^xsd:date ;
     cx:hasTitle "NP[die + ADJ-e N]nom.sg.fem" .
 
-<http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]> a membr:Construction ;
+<http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]> a rcxn:Construction ;
     cx:annotator membr:Kligge ;
     cx:createdOn "2024-12-02"^^xsd:date ;
     cx:hasTitle "NP[Def.Det-strong+ADJ-weak+N]" .
 
-<http://example.org/cx/NPnom.sg.masc> a membr:Construction ;
+<http://example.org/cx/NPnom.sg.masc> a rcxn:Construction ;
     cx:annotator membr:Kligge ;
     cx:createdOn "2024-12-02"^^xsd:date ;
     cx:hasTitle "NP nom.sg.masc" .

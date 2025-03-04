@@ -4,9 +4,10 @@
 @prefix membr: <http://example.org/users#> .
 @prefix olia: <http://purl.org/olia/olia.owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-cx:Dooperationwithoperand1onoperand2construction a membr:Construction ;
+cx:Dooperationwithoperand1onoperand2construction a rcxn:Construction ;
     cx:hasTitle "Literary Chinese, Han to Late Qing Do operation with operand1 on operand2 construction" ;
     cx:hasConstructionMeaning cx:Dooperationwithoperand1onoperand2construction_Meaning ;
     cx:hasExample cx:Dooperationwithoperand1onoperand2construction_Ex_A ;

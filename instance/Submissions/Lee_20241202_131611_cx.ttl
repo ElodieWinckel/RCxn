@@ -4,9 +4,10 @@
 @prefix membr: <http://example.org/users#> .
 @prefix olia: <http://purl.org/olia/olia.owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]> a membr:Construction ;
+<http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]> a rcxn:Construction ;
     cx:hasTitle "Standard German written language within the time frame of 1900-1999 [(sich) (NP) (ADJ) (ADV) [vor Augen] (VP)]" ;
     cx:hasConstructionMeaning <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_Meaning> ;
     cx:hasMetadata <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_MD> ;
@@ -17,7 +18,7 @@
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_E_Index> cx:hasNumberFeature olia:Plural .
 
-cx:Generalprepositionalconstructions a membr:Construction ;
+cx:Generalprepositionalconstructions a rcxn:Construction ;
     cx:annotator membr:Lee ;
     cx:createdOn "2024-12-02"^^xsd:date ;
     cx:hasTitle "General prepositional constructions" .
@@ -134,7 +135,7 @@ cx:Generalprepositionalconstructions a membr:Construction ;
     rdf:_5 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_E> ;
     rdf:_6 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_F> .
 
-<http://example.org/cx/vor+bodypartconstructions> a membr:Construction ;
+<http://example.org/cx/vor+bodypartconstructions> a rcxn:Construction ;
     cx:annotator membr:Lee ;
     cx:createdOn "2024-12-02"^^xsd:date ;
     cx:hasTitle "vor + body part constructions" .

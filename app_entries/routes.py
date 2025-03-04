@@ -30,16 +30,14 @@ for ttl_file in glob.glob("Abox/*.ttl"):
 # Define the namespaces
 CX = Namespace("http://example.org/cx/")
 g.bind("cx", CX)
-membr = Namespace("http://example.org/users#")
-g.bind("membr", membr)
-rsrch = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#")
-g.bind("rsrch", rsrch)
 olia = Namespace("http://purl.org/olia/olia.owl#")
 g.bind("olia", olia)
-foaf = Namespace("http://xmlns.com/foaf/0.1/")
-g.bind("foaf", foaf)
+rcxn = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#")
+g.bind("rcxn", rcxn)
 RDFS = Namespace("http://www.w3.org/2000/01/rdf-schema#")
 g.bind("RDFS", RDFS)
+rsrch = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#")
+g.bind("rsrch", rsrch)
 
 @app_entries_blueprint.route("/")
 def list_view():
@@ -48,10 +46,10 @@ def list_view():
     # SPARQL query to get the title for each construction
     query = """
     PREFIX cx: <http://example.org/cx/>
-    PREFIX membr: <http://example.org/users#>
+    PREFIX rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#>
     SELECT ?construction ?title
     WHERE {
-        ?construction a membr:Construction .
+        ?construction a rcxn:Construction .
         ?construction cx:hasTitle ?title .
     }
     """
@@ -241,7 +239,7 @@ def construction_detail(uri):
             finding_labels = g.objects(finding, RDFS.label)
             for finding_label in finding_labels:
                 research.append({'property': 'Findings', 'object': str(finding_label)})
-            # Next, query all URIs of type foaf:Project that correspond to this finding
+            # Next, query all URIs that correspond to this finding
             for project in g.subjects(rsrch.hasFindings, finding):
                 project_names = g.objects(project, rsrch.projectName)
                 for project_name in project_names:

@@ -3,10 +3,11 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links#> .
 @prefix membr: <http://example.org/users#> .
+@prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-cx:Relative-Topic-ShiftConstruction a membr:Construction ;
+cx:Relative-Topic-ShiftConstruction a rcxn:Construction ;
     cx:hasTitle "Sixteenth-century Italian (Florence), written: historiography (Francesco Guicciardini's \"Storia d'Italia\")  Relative-Topic-Shift Construction " ;
     links:CL_sameFormSameFunction <http://example.org/cx/Latinlinkingcliché(i.e.,inCaesar'sandTacitus'works)> ;
     cx:hasConstructionMeaning cx:Relative-Topic-ShiftConstruction_Meaning ;
@@ -21,32 +22,32 @@ cx:Relative-Topic-ShiftConstruction a membr:Construction ;
     links:similarFormDifferentFunction cx:ItalianRelativeClause ;
     links:similarFormSameFunction cx:Demonstrative-Topic-ShiftConstruction .
 
-cx:Demonstrative-Topic-ShiftConstruction a membr:Construction ;
+cx:Demonstrative-Topic-ShiftConstruction a rcxn:Construction ;
     cx:annotator membr:Trombetta ;
     cx:createdOn "2024-11-21"^^xsd:date ;
     cx:hasTitle "Demonstrative-Topic-Shift Construction" .
 
-cx:ItalianConiunctioRelativa a membr:Construction ;
+cx:ItalianConiunctioRelativa a rcxn:Construction ;
     cx:annotator membr:Trombetta ;
     cx:createdOn "2024-11-21"^^xsd:date ;
     cx:hasTitle "Italian Coniunctio Relativa" .
 
-cx:ItalianRelativeClause a membr:Construction ;
+cx:ItalianRelativeClause a rcxn:Construction ;
     cx:annotator membr:Trombetta ;
     cx:createdOn "2024-11-21"^^xsd:date ;
     cx:hasTitle "Italian Relative Clause" .
 
-cx:ItalianSiPassivante a membr:Construction ;
+cx:ItalianSiPassivante a rcxn:Construction ;
     cx:annotator membr:Trombetta ;
     cx:createdOn "2024-11-21"^^xsd:date ;
     cx:hasTitle "Italian Si Passivante" .
 
-cx:ItalianTemporalSubordinateClause a membr:Construction ;
+cx:ItalianTemporalSubordinateClause a rcxn:Construction ;
     cx:annotator membr:Trombetta ;
     cx:createdOn "2024-11-21"^^xsd:date ;
     cx:hasTitle "Italian Temporal Subordinate Clause" .
 
-<http://example.org/cx/Latinlinkingcliché(i.e.,inCaesar'sandTacitus'works)> a membr:Construction ;
+<http://example.org/cx/Latinlinkingcliché(i.e.,inCaesar'sandTacitus'works)> a rcxn:Construction ;
     cx:annotator membr:Trombetta ;
     cx:createdOn "2024-11-21"^^xsd:date ;
     cx:hasTitle "Latin linking cliché (i.e., in Caesar's and Tacitus' works)" .

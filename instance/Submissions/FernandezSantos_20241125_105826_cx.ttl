@@ -5,9 +5,10 @@
 @prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links#> .
 @prefix olia: <http://purl.org/olia/olia.owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-cx:Transitiveobjectrelativeclause a membr:Construction ;
+cx:Transitiveobjectrelativeclause a rcxn:Construction ;
     cx:hasTitle "Spoken Peninsular Spanish potentially ambiguous object relative clause" ;
     cx:hasConstructionMeaning cx:Transitiveobjectrelativeclause_Meaning ;
     cx:hasExample cx:Transitiveobjectrelativeclause_Ex_A,
@@ -48,17 +49,17 @@ cx:Transitiveobjectrelativeclause a membr:Construction ;
     dc:title "Intervention and amelioration effects in the acquisition of Spanish object relative clauses: the role of word order and DOM" ;
     dc:type "journalArticle" .
 
-cx:Spanishobjectrelativeclause a membr:Construction ;
+cx:Spanishobjectrelativeclause a rcxn:Construction ;
     cx:annotator membr:FernandezSantos ;
     cx:createdOn "2024-11-25"^^xsd:date ;
     cx:hasTitle "Spanish object relative clause" .
 
-cx:Spanishrelativeclause a membr:Construction ;
+cx:Spanishrelativeclause a rcxn:Construction ;
     cx:annotator membr:FernandezSantos ;
     cx:createdOn "2024-11-25"^^xsd:date ;
     cx:hasTitle "Spanish relative clause" .
 
-cx:Spanishtransitiveconstruction a membr:Construction ;
+cx:Spanishtransitiveconstruction a rcxn:Construction ;
     cx:annotator membr:FernandezSantos ;
     cx:createdOn "2024-11-25"^^xsd:date ;
     cx:hasTitle "Spanish transitive construction" .

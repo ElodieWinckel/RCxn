@@ -3,10 +3,11 @@
 @prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links#> .
 @prefix membr: <http://example.org/users#> .
 @prefix olia: <http://purl.org/olia/olia.owl#> .
+@prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-cx:Idiomaticconstruction a membr:Construction ;
+cx:Idiomaticconstruction a rcxn:Construction ;
     cx:hasTitle "German Aus dem Ärmel schütteln construction" ;
     links:CL_differentFormSameFunction cx:EnglishPullsomethingoutofahat ;
     links:CL_similarFormDifferentFunction cx:Englishrollupyoursleeves,
@@ -21,22 +22,22 @@ cx:Idiomaticconstruction a membr:Construction ;
 
 cx:Definitearticle RDFS:label "Definite article" .
 
-cx:EnglishPullsomethingoutofahat a membr:Construction ;
+cx:EnglishPullsomethingoutofahat a rcxn:Construction ;
     cx:annotator membr:Rastegar ;
     cx:createdOn "2024-12-04"^^xsd:date ;
     cx:hasTitle "English Pull something out of a hat" .
 
-cx:Englishrollupyoursleeves a membr:Construction ;
+cx:Englishrollupyoursleeves a rcxn:Construction ;
     cx:annotator membr:Rastegar ;
     cx:createdOn "2024-12-04"^^xsd:date ;
     cx:hasTitle "English roll up your sleeves" .
 
-<http://example.org/cx/Farsibarāyekasiāstinbālāzadan:torollupsleevesforsomething> a membr:Construction ;
+<http://example.org/cx/Farsibarāyekasiāstinbālāzadan:torollupsleevesforsomething> a rcxn:Construction ;
     cx:annotator membr:Rastegar ;
     cx:createdOn "2024-12-04"^^xsd:date ;
     cx:hasTitle "Farsi barāye kasi āstin bālā zadan: to roll up sleeves for something" .
 
-<http://example.org/cx/Farsimārāstin-exodparvarāndan:tonurtureasnakeinone'sbosom> a membr:Construction ;
+<http://example.org/cx/Farsimārāstin-exodparvarāndan:tonurtureasnakeinone'sbosom> a rcxn:Construction ;
     cx:annotator membr:Rastegar ;
     cx:createdOn "2024-12-04"^^xsd:date ;
     cx:hasTitle "Farsi mār āstin-e xod parvarāndan: to nurture a snake in one's bosom" .

@@ -1,10 +1,11 @@
 @prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix cx: <http://example.org/cx/> .
 @prefix membr: <http://example.org/users#> .
+@prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-cx:Toughmovementconstruction a membr:Construction ;
+cx:Toughmovementconstruction a rcxn:Construction ;
     cx:hasTitle "English Tough adjective construction" ;
     cx:hasConstructionMeaning cx:Toughmovementconstruction_Meaning ;
     cx:hasExample cx:Toughmovementconstruction_Ex_A ;

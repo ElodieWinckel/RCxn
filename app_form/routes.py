@@ -123,10 +123,10 @@ def load_existing_constructions(file_path):
     # SPARQL query to get the title for each construction
     query = """
         PREFIX cx: <http://example.org/cx/>
-        PREFIX membr: <http://example.org/users#>
+        PREFIX rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#>
         SELECT ?construction ?title
         WHERE {
-            ?construction a membr:Construction .
+            ?construction a rcxn:Construction .
             ?construction cx:hasTitle ?title .
         }
         """
@@ -256,6 +256,9 @@ def form_submit():
     membr = Namespace("http://example.org/users#")
     g.bind("membr", membr)
 
+    rcxn = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#")
+    g.bind("rcxn", rcxn)
+
     rsrch = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#")
     g.bind("rsrch", rsrch)
 
@@ -272,7 +275,7 @@ def form_submit():
     g.bind("RDFS", RDFS)
 
     # Triple that defines the URI of the construction
-    g.add((cx[construction_name_cleaned], RDF.type, membr.Construction))
+    g.add((cx[construction_name_cleaned], RDF.type, rcxn.Construction))
 
 ###################################################
 ### IMPLEMENT CONSTRUCTION METADATA
@@ -304,7 +307,7 @@ def form_submit():
         current_research_question = default_research_question_uri
 
     # FINDINGS
-    if findingsId.strip(): # first check if an already existing finding was used
+    if findingsId.strip() and findingsId != "new": # first check if an already existing finding was used
                             # NB: Important to do it first, since some "new finding" could be stored in cache.
         g.add((membr[findingsId], rsrch.basedOn, cx[construction_name_cleaned]))
     else: # otherwise use new finding
@@ -646,7 +649,7 @@ def form_submit():
             # When this happens, create a new construction entry, with title, annotator and creation date
             cleaned_inherit_construction = inherit_construction.replace(" ", "")
             metadata_inherit_construction = f"{cleaned_inherit_construction}_MD"
-            g.add((cx[cleaned_inherit_construction], RDF.type, membr.Construction))
+            g.add((cx[cleaned_inherit_construction], RDF.type, rcxn.Construction))
             g.add((cx[cleaned_inherit_construction], cx.hasMetadata, cx[metadata_inherit_construction]))
             g.add((cx[metadata_inherit_construction], RDF.type, cx.Metadata))
             g.add((cx[metadata_inherit_construction], cx.annotator, membr[user_name]))
@@ -670,7 +673,7 @@ def form_submit():
             # When this happens, create a new construction entry, with title, annotator and creation date
             cleaned_inherit_construction = inherit_construction.replace(" ", "")
             metadata_inherit_construction = f"{cleaned_inherit_construction}_MD"
-            g.add((cx[cleaned_inherit_construction], RDF.type, membr.Construction))
+            g.add((cx[cleaned_inherit_construction], RDF.type, rcxn.Construction))
             g.add((cx[cleaned_inherit_construction], cx.hasMetadata, cx[metadata_inherit_construction]))
             g.add((cx[metadata_inherit_construction], RDF.type, cx.Metadata))
             g.add((cx[metadata_inherit_construction], cx.annotator, membr[user_name]))
@@ -694,7 +697,7 @@ def form_submit():
             # When this happens, create a new construction entry, with title, annotator and creation date
             cleaned_inherit_construction = inherit_construction.replace(" ", "")
             metadata_inherit_construction = f"{cleaned_inherit_construction}_MD"
-            g.add((cx[cleaned_inherit_construction], RDF.type, membr.Construction))
+            g.add((cx[cleaned_inherit_construction], RDF.type, rcxn.Construction))
             g.add((cx[cleaned_inherit_construction], cx.hasMetadata, cx[metadata_inherit_construction]))
             g.add((cx[metadata_inherit_construction], RDF.type, cx.Metadata))
             g.add((cx[metadata_inherit_construction], cx.annotator, membr[user_name]))
@@ -734,7 +737,7 @@ def form_submit():
                 # When this happens, create a new construction entry, with title, annotator and creation date
                 cleaned_inherit_construction = similarity_link.replace(" ", "")
                 metadata_inherit_construction = f"{cleaned_inherit_construction}_MD"
-                g.add((cx[cleaned_inherit_construction], RDF.type, membr.Construction))
+                g.add((cx[cleaned_inherit_construction], RDF.type, rcxn.Construction))
                 g.add((cx[cleaned_inherit_construction], cx.hasMetadata, cx[metadata_inherit_construction]))
                 g.add((cx[metadata_inherit_construction], RDF.type, cx.Metadata))
                 g.add((cx[metadata_inherit_construction], cx.annotator, membr[user_name]))

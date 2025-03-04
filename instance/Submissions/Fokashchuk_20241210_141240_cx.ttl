@@ -3,9 +3,10 @@
 @prefix membr: <http://example.org/users#> .
 @prefix olia: <http://purl.org/olia/olia.owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions> a membr:Construction ;
+<http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions> a rcxn:Construction ;
     cx:hasTitle "Modern standard High German Allative NP1 + auf + NP2 & NP1 + an + NP2 constructions" ;
     cx:hasConstructionMeaning <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_Meaning> ;
     cx:hasMetadata <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_MD> ;
