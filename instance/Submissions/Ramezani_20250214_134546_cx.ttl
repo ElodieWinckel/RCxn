@@ -2,6 +2,7 @@
 @prefix cx: <http://example.org/cx/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links#> .
 @prefix membr: <http://example.org/users#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rsrch: <http://example.org/rsrch> .
@@ -12,7 +13,7 @@ cx:Argumentstructureconstruction a membr:Construction ;
     cx:hasMetadata cx:Argumentstructureconstruction_MD ;
     cx:hasSlots cx:Argumentstructureconstruction_slots ;
     cx:hasTitle "English Argument structure construction" ;
-    cx:inheritedBy cx:EnglishCause-Motionconstruction,
+    links:inheritedBy cx:EnglishCause-Motionconstruction,
         cx:EnglishDitransitiveconstruction,
         cx:EnglishResultativeconstruction,
         cx:EnglishTransitiveconstruction ;

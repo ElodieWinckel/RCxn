@@ -1,24 +1,25 @@
 @prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix cx: <http://example.org/cx/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links#> .
 @prefix membr: <http://example.org/users#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 cx:Relative-Topic-ShiftConstruction a membr:Construction ;
     cx:hasTitle "Sixteenth-century Italian (Florence), written: historiography (Francesco Guicciardini's \"Storia d'Italia\")  Relative-Topic-Shift Construction " ;
-    cx:CL_sameFormSameFunction <http://example.org/cx/Latinlinkingcliché(i.e.,inCaesar'sandTacitus'works)> ;
+    links:CL_sameFormSameFunction <http://example.org/cx/Latinlinkingcliché(i.e.,inCaesar'sandTacitus'works)> ;
     cx:hasConstructionMeaning cx:Relative-Topic-ShiftConstruction_Meaning ;
     cx:hasExample cx:Relative-Topic-ShiftConstruction_Ex_A,
         cx:Relative-Topic-ShiftConstruction_Ex_B ;
     cx:hasMetadata cx:Relative-Topic-ShiftConstruction_MD ;
     cx:hasSlots cx:Relative-Topic-ShiftConstruction_slots ;
-    cx:inheritsFrom cx:ItalianConiunctioRelativa,
+    links:inheritsFrom cx:ItalianConiunctioRelativa,
         cx:ItalianSiPassivante,
         cx:ItalianTemporalSubordinateClause ;
     cx:partOfLanguage "Sixteenth-century Italian (Florence), written: historiography (Francesco Guicciardini's \"Storia d'Italia\") " ;
-    cx:similarFormDifferentFunction cx:ItalianRelativeClause ;
-    cx:similarFormSameFunction cx:Demonstrative-Topic-ShiftConstruction .
+    links:similarFormDifferentFunction cx:ItalianRelativeClause ;
+    links:similarFormSameFunction cx:Demonstrative-Topic-ShiftConstruction .
 
 cx:Demonstrative-Topic-ShiftConstruction a membr:Construction ;
     cx:annotator membr:Trombetta ;

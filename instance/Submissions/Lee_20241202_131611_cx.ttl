@@ -1,5 +1,6 @@
 @prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix cx: <http://example.org/cx/> .
+@prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links#> .
 @prefix membr: <http://example.org/users#> .
 @prefix olia: <http://purl.org/olia/olia.owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -10,7 +11,7 @@
     cx:hasConstructionMeaning <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_Meaning> ;
     cx:hasMetadata <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_MD> ;
     cx:hasSlots <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_slots> ;
-    cx:inheritsFrom cx:Generalprepositionalconstructions,
+    links:inheritsFrom cx:Generalprepositionalconstructions,
         <http://example.org/cx/vor+bodypartconstructions> ;
     cx:partOfLanguage "Standard German written language within the time frame of 1900-1999" .
 

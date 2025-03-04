@@ -12,10 +12,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:terms="http://purl.org/dc/terms/">
-    <owl:Ontology rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch">
-        <owl:imports rdf:resource="http://purl.org/dc/elements/1.1/"/>
-        <owl:imports rdf:resource="http://xmlns.com/foaf/0.1/"/>
-    </owl:Ontology>
+    <owl:Ontology rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch"/>
     
 
 

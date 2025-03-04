@@ -1,5 +1,6 @@
 @prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix cx: <http://example.org/cx/> .
+@prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links#> .
 @prefix membr: <http://example.org/users#> .
 @prefix olia: <http://purl.org/olia/olia.owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -7,8 +8,8 @@
 
 cx:Idiomaticconstruction a membr:Construction ;
     cx:hasTitle "German Aus dem Ärmel schütteln construction" ;
-    cx:CL_differentFormSameFunction cx:EnglishPullsomethingoutofahat ;
-    cx:CL_similarFormDifferentFunction cx:Englishrollupyoursleeves,
+    links:CL_differentFormSameFunction cx:EnglishPullsomethingoutofahat ;
+    links:CL_similarFormDifferentFunction cx:Englishrollupyoursleeves,
         <http://example.org/cx/Farsibarāyekasiāstinbālāzadan:torollupsleevesforsomething>,
         <http://example.org/cx/Farsimārāstin-exodparvarāndan:tonurtureasnakeinone'sbosom> ;
     cx:hasConstructionMeaning cx:Idiomaticconstruction_Meaning ;

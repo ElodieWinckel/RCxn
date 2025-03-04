@@ -1,6 +1,7 @@
 @prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix cx: <http://example.org/cx/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links#> .
 @prefix membr: <http://example.org/users#> .
 @prefix olia: <http://purl.org/olia/olia.owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -14,7 +15,7 @@ cx:Transitivedurch-Präfixverbkonstruktion a membr:Construction ;
         cx:Transitivedurch-Präfixverbkonstruktion_Ex_C ;
     cx:hasMetadata cx:Transitivedurch-Präfixverbkonstruktion_MD ;
     cx:hasSlots cx:Transitivedurch-Präfixverbkonstruktion_slots ;
-    cx:inheritsFrom cx:Monotransitivkonstruktion,
+    links:inheritsFrom cx:Monotransitivkonstruktion,
         cx:Präfixverbkonstruktion ;
     cx:partOfLanguage "Mittelhochdeutsch, schriftlich, 12. Jh." ;
     cx:similarFormSameFunction cx:Transitivedurch-Partikelverbkonstruktion,

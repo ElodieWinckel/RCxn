@@ -1,18 +1,19 @@
 @prefix cx: <http://example.org/cx/> .
+@prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links#> .
 @prefix membr: <http://example.org/users#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc> a membr:Construction ;
     cx:hasTitle "German NP[der+ ADJ-e N]nom.sg.masc" ;
-    cx:differentFormDifferentFunction <http://example.org/cx/NP[das+ADJ-eN]acc.sg.neut>,
+    links:differentFormDifferentFunction <http://example.org/cx/NP[das+ADJ-eN]acc.sg.neut>,
         <http://example.org/cx/NP[das+ADJ-eN]nom.sg.neut>,
         <http://example.org/cx/NP[dem+ADJ-enN]dat.sg.masc>,
         <http://example.org/cx/NP[dem+ADJ-enN]dat.sg.neut>,
         <http://example.org/cx/NP[den+ADJ-enN]acc.sg.masc>,
         <http://example.org/cx/NP[die+ADJ-eN]nom.sg.fem> ;
-    cx:inheritsFrom <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]> ;
-    cx:inheritsFrom <http://example.org/cx/NPnom.sg.masc> ;
+    links:inheritsFrom <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]> ;
+    links:inheritsFrom <http://example.org/cx/NPnom.sg.masc> ;
     cx:hasConstructionMeaning <http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_Meaning> ;
     cx:hasMetadata <http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_MD> ;
     cx:hasSlots <http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_slots> ;

@@ -1,4 +1,5 @@
 @prefix cx: <http://example.org/cx/> .
+@prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links#> .
 @prefix membr: <http://example.org/users#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -8,13 +9,13 @@
     cx:hasConstructionMeaning <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_Meaning> ;
     cx:hasMetadata <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_MD> ;
     cx:hasSlots <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_slots> ;
-    cx:inheritedBy <http://example.org/cx/NP[das+ADJ-e+N]nom.sg.neut>,
+    links:inheritedBy <http://example.org/cx/NP[das+ADJ-e+N]nom.sg.neut>,
         <http://example.org/cx/NP[dem+ADJ-en+N]dat.sg.masc/neut>,
         <http://example.org/cx/NP[der+ADJ-e+N]nom.sg.masc>,
         <http://example.org/cx/NP[die+ADJ-e+N]nom.sg.fem>,
         <http://example.org/cx/etc.> ;
     cx:partOfLanguage "German" ;
-    cx:similarFormSameFunction <http://example.org/cx/NP[ADJ-strong+ADJ-strong+N]>,
+    links:similarFormSameFunction <http://example.org/cx/NP[ADJ-strong+ADJ-strong+N]>,
         <http://example.org/cx/NP[ADJ-strong+ADJ-weak+N]>,
         <http://example.org/cx/NP[def.DET-strong+N]>,
         <http://example.org/cx/NP[indef.DET-strong+ADJ-weak+N]>,

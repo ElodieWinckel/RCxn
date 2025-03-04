@@ -259,6 +259,9 @@ def form_submit():
     rsrch = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#")
     g.bind("rsrch", rsrch)
 
+    links = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links#")
+    g.bind("links", links)
+
     foaf = Namespace("http://xmlns.com/foaf/0.1/")
     g.bind("foaf", foaf)
 
@@ -652,7 +655,7 @@ def form_submit():
             g.add((cx[cleaned_inherit_construction], cx.hasTitle, Literal(inherit_construction)))
             print("New construction needed!")
         # In any case, write a triplet defining this construction as inherited from
-        g.add((cx[construction_name_cleaned], cx.inheritsFrom, cx[cleaned_inherit_construction]))
+        g.add((cx[construction_name_cleaned], links.inheritsFrom, cx[cleaned_inherit_construction]))
 
     # Add RDF triples for each construction this one is inherited by
     for inherit_construction in selected_inherited_by:
@@ -676,7 +679,7 @@ def form_submit():
             g.add((cx[cleaned_inherit_construction], cx.hasTitle, Literal(inherit_construction)))
             print("New construction needed!")
         # In any case, write a triplet defining this construction as inherited from
-        g.add((cx[construction_name_cleaned], cx.inheritedBy, cx[cleaned_inherit_construction]))
+        g.add((cx[construction_name_cleaned], links.inheritedBy, cx[cleaned_inherit_construction]))
 
     # Add RDF triples for each construction this one is metaphorical extension
     for inherit_construction in selected_metaphorical_extension:
@@ -700,7 +703,7 @@ def form_submit():
             g.add((cx[cleaned_inherit_construction], cx.hasTitle, Literal(inherit_construction)))
             print("New construction needed!")
         # In any case, write a triplet defining this construction as inherited from
-        g.add((cx[construction_name_cleaned], cx.metaphoricalExtension, cx[cleaned_inherit_construction]))
+        g.add((cx[construction_name_cleaned], links.metaphoricalExtension, cx[cleaned_inherit_construction]))
 
     # Handle the dynamically added similarity links
     similarity_counter = 1
@@ -719,7 +722,7 @@ def form_submit():
                 uri = f"CL_{similarity_link_form}Form{similarity_link_meaning}Function"
             else:
                 uri = f"{similarity_link_form}Form{similarity_link_meaning}Function"
-            property_uri = URIRef(cx[uri])
+            property_uri = URIRef(links[uri])
             # Users can select a construction already in the constructicon
             # When this happens, the uri has to be identified
             if similarity_link in {entry['title'] for entry in list_cx}:

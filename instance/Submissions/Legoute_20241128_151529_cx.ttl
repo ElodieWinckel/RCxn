@@ -1,5 +1,6 @@
 @prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix cx: <http://example.org/cx/> .
+@prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links#> .
 @prefix membr: <http://example.org/users#> .
 @prefix olia: <http://purl.org/olia/olia.owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -12,7 +13,7 @@ cx:POU-beneficiaryconstruction a membr:Construction ;
     cx:hasMetadata cx:POU-beneficiaryconstruction_MD ;
     cx:hasSlots cx:POU-beneficiaryconstruction_slots ;
     cx:partOfLanguage "Haitian Creole" ;
-    cx:similarFormDifferentFunction cx:POU-purposeconstruction .
+    links:similarFormDifferentFunction cx:POU-purposeconstruction .
 
 membr: membr:SubProject membr:Project_Legoute_241128 .
 
