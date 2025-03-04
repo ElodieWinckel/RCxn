@@ -78,7 +78,7 @@ def list_view():
 @app_entries_blueprint.route('/construction/<path:uri>', endpoint='construction_detail')
 def construction_detail(uri):
     # A list of prefixes that we might want to delete later from the URI
-    prefixes = "http://example.org/cx/|http://example.org/users#|http://purl.org/olia/olia.owl#|http://www.w3.org/2000/01/rdf-schema#|http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    prefixes = "http://example.org/cx/|https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links#|http://example.org/users#|http://purl.org/olia/olia.owl#|http://www.w3.org/2000/01/rdf-schema#|http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 
     # Rebuild the full URI for the construction
     entry_uri = URIRef("http://example.org/cx/" + uri)
