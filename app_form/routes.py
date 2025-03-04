@@ -27,7 +27,7 @@ def load_user_names_from_ttl(file_path):
 def load_projects_from_ttl(file_path):
     g = Graph()
     g.parse(file_path, format='turtle')
-    rsrch = Namespace("http://example.org/rsrch#")
+    rsrch = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#")
     uris_and_names = [(str(s).replace("http://example.com/users#", ""),
                        str(g.value(s, rsrch.projectName))) for s in g.subjects(RDF.type, rsrch.Project)]
     return uris_and_names
@@ -36,7 +36,7 @@ def load_projects_from_ttl(file_path):
 def load_findings_from_ttl(file_path):
     g = Graph()
     g.parse(file_path, format='turtle')
-    rsrch = Namespace("http://example.org/rsrch#")
+    rsrch = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#")
     RDFS = Namespace("http://www.w3.org/2000/01/rdf-schema#")
     uris_and_names = [(str(s).replace("http://example.com/users#", ""),
                        str(g.value(s, RDFS.label))) for s in g.subjects(RDF.type, rsrch.Finding)]
@@ -256,7 +256,7 @@ def form_submit():
     membr = Namespace("http://example.org/users#")
     g.bind("membr", membr)
 
-    rsrch = Namespace("http://example.org/rsrch#")
+    rsrch = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#")
     g.bind("rsrch", rsrch)
 
     foaf = Namespace("http://xmlns.com/foaf/0.1/")

@@ -31,7 +31,7 @@ def extract_rdf_elements_from_python(file_path, output_file):
 
 
 # Example usage
-python_file = "app.py"  # Replace with the path to your Python file
+python_file = "app_form/routes.py"  # Replace with the path to your Python file
 output_file = "rdf_elements_output.txt"  # File where results will be saved
 
 extract_rdf_elements_from_python(python_file, output_file)

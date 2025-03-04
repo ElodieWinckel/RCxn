@@ -1,0 +1,139 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch/"
+     xml:base="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:wot="http://xmlns.com/wot/0.1/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch">
+        <owl:imports rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <owl:imports rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#hasFindings -->
+
+    <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#hasFindings">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#Project"/>
+        <rdfs:range rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#Finding"/>
+        <dc:description xml:lang="en">Property that links a research question to the finding(s) answering this research question.</dc:description>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#hasResearchQuestion -->
+
+    <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#hasResearchQuestion">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#Project"/>
+        <rdfs:range rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#Project"/>
+        <dc:description xml:lang="en">Property that breaks down a project or research question and relates it to smaller research questions.</dc:description>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#projectName -->
+
+    <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#projectName">
+        <rdfs:domain rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#Project"/>
+        <dc:description xml:lang="en">Property that relates the URI of a project to its exact label.</dc:description>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2000/10/swap/pim/contact#Person -->
+
+    <owl:Class rdf:about="http://www.w3.org/2000/10/swap/pim/contact#Person"/>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#Finding -->
+
+    <owl:Class rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#Finding">
+        <rdfs:comment xml:lang="en">Research on a research question leads to one or several finding(s). They are statements, answers to the research question.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#Member -->
+
+    <owl:Class rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#Member">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/10/swap/pim/contact#Person"/>
+        <dc:description>Member of the research group and/or contributors to the Constructicon.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#PI -->
+
+    <owl:Class rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#PI">
+        <rdfs:subClassOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#Member"/>
+        <owl:disjointWith rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#Researcher"/>
+        <dc:description xml:lang="en">Researchers supervising or otherwise involved in the research project.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#PostDoc -->
+
+    <owl:Class rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#PostDoc">
+        <rdfs:subClassOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#Member"/>
+        <owl:disjointWith rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#Researcher"/>
+        <dc:description xml:lang="en">Post-doctoral researcher working in the research group.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#Project -->
+
+    <owl:Class rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#Project">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Project"/>
+        <dc:description xml:lang="en">A research question, i.e., a concise inquiry that defines the academic focus of a researcher. Within the terminology of the Research Training Group, the main research question of a PhD candidate for their thesis is called a “project”.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#Researcher -->
+
+    <owl:Class rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#Researcher">
+        <rdfs:subClassOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#Member"/>
+        <dc:description xml:lang="en">PhD student researcher working in the research group.</dc:description>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
