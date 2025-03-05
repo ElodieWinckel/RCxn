@@ -18,7 +18,7 @@ cx:POU-beneficiaryconstruction a rcxn:Construction ;
 
 membr: membr:SubProject membr:Project_Legoute_241128 .
 
-cx:POU-beneficiaryconstruction_A a cx:SlotMandatory ;
+cx:POU-beneficiaryconstruction_A a rcxn:SlotMandatory ;
     cx:hasSlotForm cx:POU-beneficiaryconstruction_A_Form ;
     cx:hasSlotMeaning cx:POU-beneficiaryconstruction_A_Meaning ;
     RDFS:comment "not always concrete" .
@@ -31,7 +31,7 @@ cx:POU-beneficiaryconstruction_A_Meaning a cx:SlotMeaning ;
 
 cx:POU-beneficiaryconstruction_A_Morphosyntax a cx:Phrase .
 
-cx:POU-beneficiaryconstruction_B a cx:SlotMandatory ;
+cx:POU-beneficiaryconstruction_B a rcxn:SlotMandatory ;
     cx:WordOrder "element POU is always before the NP" ;
     cx:hasSlotForm cx:POU-beneficiaryconstruction_B_Form ;
     cx:hasSurfaceForm "POU" ;
@@ -42,7 +42,7 @@ cx:POU-beneficiaryconstruction_B_Form a cx:SlotForm ;
 
 cx:POU-beneficiaryconstruction_B_Morphosyntax a "Invariable syntactic morpheme" .
 
-cx:POU-beneficiaryconstruction_C a cx:SlotMandatory ;
+cx:POU-beneficiaryconstruction_C a rcxn:SlotMandatory ;
     cx:hasSlotForm cx:POU-beneficiaryconstruction_C_Form ;
     cx:hasSlotMeaning cx:POU-beneficiaryconstruction_C_Meaning .
 

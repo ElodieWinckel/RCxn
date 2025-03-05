@@ -15,7 +15,7 @@ cx:Idiomaticconstructions a rcxn:Construction ;
     cx:hasSlots cx:Idiomaticconstructions_slots ;
     cx:partOfLanguage "English" .
 
-cx:Idiomaticconstructions_A a cx:SlotMandatory ;
+cx:Idiomaticconstructions_A a rcxn:SlotMandatory ;
     cx:WordOrder "Initial position" ;
     cx:hasSlotForm cx:Idiomaticconstructions_A_Form ;
     cx:hasSlotMeaning cx:Idiomaticconstructions_A_Meaning .
@@ -33,7 +33,7 @@ cx:Idiomaticconstructions_A_Meaning a cx:SlotMeaning ;
 cx:Idiomaticconstructions_A_Morphosyntax a "Pronoun NP" ;
     cx:hasSyntacticFunction "Subject" .
 
-cx:Idiomaticconstructions_B a cx:SlotMandatory ;
+cx:Idiomaticconstructions_B a rcxn:SlotMandatory ;
     cx:WordOrder "Follows subject, precedes object" ;
     cx:hasSlotForm cx:Idiomaticconstructions_B_Form ;
     cx:hasSlotMeaning cx:Idiomaticconstructions_B_Meaning ;
@@ -51,7 +51,7 @@ cx:Idiomaticconstructions_B_Meaning a cx:SlotMeaning ;
 
 cx:Idiomaticconstructions_B_Morphosyntax a cx:VP .
 
-cx:Idiomaticconstructions_C a cx:SlotMandatory ;
+cx:Idiomaticconstructions_C a rcxn:SlotMandatory ;
     cx:WordOrder "Precedes \"bridges\"" ;
     cx:hasSlotForm cx:Idiomaticconstructions_C_Form ;
     cx:hasSlotMeaning cx:Idiomaticconstructions_C_Meaning .
@@ -69,7 +69,7 @@ cx:Idiomaticconstructions_C_Meaning a cx:SlotMeaning ;
 cx:Idiomaticconstructions_C_Morphosyntax a "Possessive pronoun NP" ;
     cx:hasSyntacticFunction "Determiner/Possessive modifier" .
 
-cx:Idiomaticconstructions_D a cx:SlotMandatory ;
+cx:Idiomaticconstructions_D a rcxn:SlotMandatory ;
     cx:WordOrder "Final position" ;
     cx:hasSlotForm cx:Idiomaticconstructions_D_Form ;
     cx:hasSlotMeaning cx:Idiomaticconstructions_D_Meaning ;

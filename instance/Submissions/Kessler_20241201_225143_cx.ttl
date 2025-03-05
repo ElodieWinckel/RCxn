@@ -15,7 +15,7 @@ cx:Dooperationwithoperand1onoperand2construction a rcxn:Construction ;
     cx:hasSlots cx:Dooperationwithoperand1onoperand2construction_slots ;
     cx:partOfLanguage "Literary Chinese, Han to Late Qing" .
 
-cx:Dooperationwithoperand1onoperand2construction_A a cx:SlotOptional ;
+cx:Dooperationwithoperand1onoperand2construction_A a rcxn:SlotOptional ;
     cx:WordOrder "Immediately before element 2" ;
     cx:hasSlotForm cx:Dooperationwithoperand1onoperand2construction_A_Form ;
     cx:hasSurfaceForm "以" ;
@@ -27,7 +27,7 @@ cx:Dooperationwithoperand1onoperand2construction_A_Form a cx:SlotForm ;
 
 cx:Dooperationwithoperand1onoperand2construction_A_Morphosyntax a cx:Particle .
 
-cx:Dooperationwithoperand1onoperand2construction_B a cx:SlotMandatory ;
+cx:Dooperationwithoperand1onoperand2construction_B a rcxn:SlotMandatory ;
     cx:WordOrder "Immediately before element 3" ;
     cx:hasSlotForm cx:Dooperationwithoperand1onoperand2construction_B_Form ;
     cx:hasSlotMeaning cx:Dooperationwithoperand1onoperand2construction_B_Meaning ;
@@ -42,7 +42,7 @@ cx:Dooperationwithoperand1onoperand2construction_B_Meaning a cx:SlotMeaning ;
 
 cx:Dooperationwithoperand1onoperand2construction_B_Morphosyntax a cx:NP .
 
-cx:Dooperationwithoperand1onoperand2construction_C a cx:SlotMandatory ;
+cx:Dooperationwithoperand1onoperand2construction_C a rcxn:SlotMandatory ;
     cx:WordOrder "Immediately after element 2" ;
     cx:hasSlotForm cx:Dooperationwithoperand1onoperand2construction_C_Form ;
     RDFS:comment "colloprofile: 加 (frequent), 減 (frequent), 乘 (frequent), 除 (frequent)" .
@@ -52,7 +52,7 @@ cx:Dooperationwithoperand1onoperand2construction_C_Form a cx:SlotForm ;
 
 cx:Dooperationwithoperand1onoperand2construction_C_Morphosyntax a cx:VP .
 
-cx:Dooperationwithoperand1onoperand2construction_D a cx:SlotMandatory ;
+cx:Dooperationwithoperand1onoperand2construction_D a rcxn:SlotMandatory ;
     cx:WordOrder "Immediately after element 3" ;
     cx:hasSlotForm cx:Dooperationwithoperand1onoperand2construction_D_Form ;
     cx:hasSlotMeaning cx:Dooperationwithoperand1onoperand2construction_D_Meaning .

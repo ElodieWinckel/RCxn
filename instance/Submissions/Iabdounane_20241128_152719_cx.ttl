@@ -17,7 +17,7 @@ The gesture is sometimes used a few milliseconds before uttering "this" and is m
     cx:partOfLanguage "(American) English, Spoken Modality" ;
     RDFS:comment "I would need to upload an Excel file with all the concordance lines and a link with all the video-snippets" .
 
-cx:ThisCloseToV-ing_A a cx:SlotMandatory ;
+cx:ThisCloseToV-ing_A a rcxn:SlotMandatory ;
     cx:WordOrder "Element 1 comes immediately before Element 2" ;
     cx:hasSlotForm cx:ThisCloseToV-ing_A_Form ;
     cx:hasSlotMeaning cx:ThisCloseToV-ing_A_Meaning ;
@@ -32,11 +32,11 @@ cx:ThisCloseToV-ing_A_Index a cx:Event ;
 cx:ThisCloseToV-ing_A_Meaning a cx:SlotMeaning ;
     cx:hasIndex cx:ThisCloseToV-ing_A_Index .
 
-cx:ThisCloseToV-ing_B a cx:SlotMandatory ;
+cx:ThisCloseToV-ing_B a rcxn:SlotMandatory ;
     cx:hasSurfaceForm "this close to" ;
     cx:WordOrder "Element 2 comes immediately before Element 3" .
 
-cx:ThisCloseToV-ing_C a cx:SlotMandatory ;
+cx:ThisCloseToV-ing_C a rcxn:SlotMandatory ;
     cx:WordOrder "Element 3 comes immediately before Element 4" ;
     cx:hasSlotForm cx:ThisCloseToV-ing_C_Form ;
     RDFS:comment "colloprofile: be (0.07 PM) ; get (0.05 PM) ; have (0.015 PM)" .
@@ -46,7 +46,7 @@ cx:ThisCloseToV-ing_C_Form a cx:SlotForm ;
 
 cx:ThisCloseToV-ing_C_Morphosyntax a "Root V" .
 
-cx:ThisCloseToV-ing_D a cx:SlotMandatory ;
+cx:ThisCloseToV-ing_D a rcxn:SlotMandatory ;
     cx:hasSurfaceForm "-ing" ;
     cx:hasSlotForm cx:ThisCloseToV-ing_D_Form .
 

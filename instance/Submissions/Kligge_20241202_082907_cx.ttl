@@ -33,15 +33,15 @@
     cx:createdOn "2024-12-02"^^xsd:date ;
     rcxn:hasTitle "NP [ADJ-strong + ADJ-weak+ N]" .
 
-<http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_A> a cx:SlotMandatory ;
+<http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_A> a rcxn:SlotMandatory ;
     cx:Morphosyntax "Definite DET" ;
     cx:WordOrder "element 1 immediately before element 2".
 
-<http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_B> a cx:SlotMandatory ;
+<http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_B> a rcxn:SlotMandatory ;
     cx:Morphosyntax "Adjective" ;
     cx:WordOrder "element 2 immediately before element 3".
 
-<http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_C> a cx:SlotMandatory ;
+<http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_C> a rcxn:SlotMandatory ;
     cx:Morphosyntax "Noun" .
 
 <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_MD> a cx:Metadata ;

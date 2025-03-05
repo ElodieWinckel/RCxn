@@ -64,7 +64,7 @@ cx:Spanishtransitiveconstruction a rcxn:Construction ;
     cx:createdOn "2024-11-25"^^xsd:date ;
     rcxn:hasTitle "Spanish transitive construction" .
 
-cx:Transitiveobjectrelativeclause_A a cx:SlotMandatory ;
+cx:Transitiveobjectrelativeclause_A a rcxn:SlotMandatory ;
     cx:hasSlotForm cx:Transitiveobjectrelativeclause_A_Form ;
     cx:hasSlotMeaning cx:Transitiveobjectrelativeclause_A_Meaning .
 
@@ -82,7 +82,7 @@ cx:Transitiveobjectrelativeclause_A_Meaning a cx:SlotMeaning ;
 cx:Transitiveobjectrelativeclause_A_Morphosyntax a cx:NP ;
     cx:hasSyntacticFunction "Object (within the clause)" .
 
-cx:Transitiveobjectrelativeclause_B a cx:SlotOptional ;
+cx:Transitiveobjectrelativeclause_B a rcxn:SlotOptional ;
     cx:WordOrder "If present, Element 2 immediately after Element 1" ;
     cx:hasSlotForm cx:Transitiveobjectrelativeclause_B_Form ;
     cx:hasStem "a + article" ;
@@ -94,7 +94,7 @@ cx:Transitiveobjectrelativeclause_B_Form a cx:SlotForm ;
 cx:Transitiveobjectrelativeclause_B_Morphosyntax a cx:PP ;
     cx:hasSyntacticFunction "direct object marker" .
 
-cx:Transitiveobjectrelativeclause_C a cx:SlotMandatory ;
+cx:Transitiveobjectrelativeclause_C a rcxn:SlotMandatory ;
     cx:WordOrder "immediately after Element 1 (if Element 2 not present), or immediately after Element 2 if present" ;
     cx:hasSlotForm cx:Transitiveobjectrelativeclause_C_Form ;
     cx:hasSurfaceForm "que" ;
@@ -105,7 +105,7 @@ cx:Transitiveobjectrelativeclause_C_Form a cx:SlotForm ;
 
 cx:Transitiveobjectrelativeclause_C_Morphosyntax a cx:relativiser .
 
-cx:Transitiveobjectrelativeclause_D a cx:SlotMandatory ;
+cx:Transitiveobjectrelativeclause_D a rcxn:SlotMandatory ;
     cx:WordOrder "Immediately after Element 3" ;
     cx:hasSlotForm cx:Transitiveobjectrelativeclause_D_Form ;
     cx:hasSlotMeaning cx:Transitiveobjectrelativeclause_D_Meaning .
@@ -124,7 +124,7 @@ cx:Transitiveobjectrelativeclause_D_Meaning a cx:SlotMeaning ;
 cx:Transitiveobjectrelativeclause_D_Morphosyntax a cx:NP ;
     cx:hasSyntacticFunction "subject (within the clause)" .
 
-cx:Transitiveobjectrelativeclause_E a cx:SlotMandatory ;
+cx:Transitiveobjectrelativeclause_E a rcxn:SlotMandatory ;
     cx:WordOrder "immediately after Element 4" ;
     cx:hasSlotForm cx:Transitiveobjectrelativeclause_E_Form ;
     cx:hasSlotMeaning cx:Transitiveobjectrelativeclause_E_Meaning ;

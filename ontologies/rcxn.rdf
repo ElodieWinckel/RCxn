@@ -91,6 +91,14 @@
     <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#ConstructionMeaning -->
 
     <owl:Class rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#ConstructionMeaning"/>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#Slot -->
+
+    <owl:Class rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#Slot">
+        <rdfs:comment xml:lang="en">Construction elements in the construction. They encompass both slot elements, which are positions where specific lexical items or phrases can be inserted, and lexically defined elements, which are fixed words or phrases that contribute to the construction&apos;s specific form and meaning. In constructicography, construction elements are linked together by &quot;sequential&quot; links.</rdfs:comment>
+    </owl:Class>
 </rdf:RDF>
 
 

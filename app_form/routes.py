@@ -469,7 +469,7 @@ def form_submit():
             optionality_uri = "SlotMandatory"
         else:
             optionality_uri = "SlotOptional"
-        g.add((element_uri, RDF.type, cx[optionality_uri]))
+        g.add((element_uri, RDF.type, rcxn[optionality_uri]))
 
         # If defined, add info about word order
         # TODO ultimately, we want to implement it differently (with before, precedes, etc.)

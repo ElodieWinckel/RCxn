@@ -52,7 +52,7 @@ cx:ItalianTemporalSubordinateClause a rcxn:Construction ;
     cx:createdOn "2024-11-21"^^xsd:date ;
     rcxn:hasTitle "Latin linking cliché (i.e., in Caesar's and Tacitus' works)" .
 
-cx:Relative-Topic-ShiftConstruction_A a cx:SlotMandatory ;
+cx:Relative-Topic-ShiftConstruction_A a rcxn:SlotMandatory ;
     cx:WordOrder "Element 1 immediately before element 2" ;
     cx:hasSlotForm cx:Relative-Topic-ShiftConstruction_A_Form ;
     cx:hasSlotMeaning cx:Relative-Topic-ShiftConstruction_A_Meaning ;
@@ -67,11 +67,11 @@ cx:Relative-Topic-ShiftConstruction_A_Meaning a cx:SlotMeaning ;
 
 cx:Relative-Topic-ShiftConstruction_A_Morphosyntax a cx:NP .
 
-cx:Relative-Topic-ShiftConstruction_B a cx:SlotMandatory ;
+cx:Relative-Topic-ShiftConstruction_B a rcxn:SlotMandatory ;
     cx:hasSurfaceForm "mentre che" ;
     cx:WordOrder "Element 2 immediately before element 3" .
 
-cx:Relative-Topic-ShiftConstruction_C a cx:SlotMandatory ;
+cx:Relative-Topic-ShiftConstruction_C a rcxn:SlotMandatory ;
     cx:WordOrder "Element 3 follows element 2" ;
     cx:hasSlotForm cx:Relative-Topic-ShiftConstruction_C_Form ;
     RDFS:comment "The verb is often, though not exclusively, in the present tense. It frequently, but not exclusively, features a \"si passivante\" construction (formed by the particle 'si' combined with a transitive verb to convey a passive meaning). Additionally, the VP may have a more complex internal structure, incorporating various other elements. The verb appearing in the VP often anaphorically references an action or process already mentioned in the preceding co-text. This can occur either through direct repetition of the same verb or through synonyms" .

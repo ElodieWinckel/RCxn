@@ -16,7 +16,7 @@
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_C_Morphosyntax> a cx:NP ;
     cx:hasSyntacticFunction "complement of preposition (element 2)" .
 
-<http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_A> a cx:SlotMandatory ;
+<http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_A> a rcxn:SlotMandatory ;
     cx:WordOrder "NP1+P+NP2" ;
     cx:hasIS cx:Focus ;
     cx:hasSlotForm <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_A_Form> ;
@@ -35,7 +35,7 @@
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_A_Morphosyntax> a cx:NP ;
     cx:hasSyntacticFunction "head of auf/an-PP" .
 
-<http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_B> a cx:SlotMandatory ;
+<http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_B> a rcxn:SlotMandatory ;
     cx:hasSlotMeaning <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_B_Meaning> ;
     cx:hasSurfaceForm "auf" ;
     cx:hasSurfaceForm "an" .
@@ -43,7 +43,7 @@
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_B_Meaning> a cx:SlotMeaning ;
     cx:hasSemanticContribution olia:DirectionRole .
 
-<http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_C> a cx:SlotMandatory ;
+<http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_C> a rcxn:SlotMandatory ;
     cx:hasIS cx:Background ;
     cx:hasSlotMeaning <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_C_Meaning> .
 

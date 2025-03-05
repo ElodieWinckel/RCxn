@@ -23,7 +23,7 @@ cx:Generalprepositionalconstructions a rcxn:Construction ;
     cx:createdOn "2024-12-02"^^xsd:date ;
     rcxn:hasTitle "General prepositional constructions" .
 
-<http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_A> a cx:SlotOptional ;
+<http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_A> a rcxn:SlotOptional ;
     cx:WordOrder "In most cases, NP precedes the prepositional phrase \"vor Augen\"." ;
     cx:hasIS cx:Topic ;
     cx:hasSlotForm <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_A_Form> ;
@@ -39,7 +39,7 @@ cx:Generalprepositionalconstructions a rcxn:Construction ;
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_A_Morphosyntax> a cx:NP ;
     cx:hasSyntacticFunction "Object" .
 
-<http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_B> a cx:SlotOptional ;
+<http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_B> a rcxn:SlotOptional ;
     cx:WordOrder "The adjectives mostly directly precedes the prepositional phrase \"vor Augen\"." ;
     cx:hasSlotForm <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_B_Form> ;
     cx:hasSlotMeaning <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_B_Meaning> ;
@@ -54,7 +54,7 @@ cx:Generalprepositionalconstructions a rcxn:Construction ;
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_B_Morphosyntax> a cx:Adjective .
 
-<http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_C> a cx:SlotOptional ;
+<http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_C> a rcxn:SlotOptional ;
     cx:WordOrder "The adverbs typically appear directly before the prepositional phrase \"vor Augen\"." ;
     cx:hasSlotForm <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_C_Form> ;
     cx:hasSlotMeaning <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_C_Meaning> ;
@@ -68,7 +68,7 @@ cx:Generalprepositionalconstructions a rcxn:Construction ;
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_C_Morphosyntax> a cx:Adverb .
 
-<http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_D> a cx:SlotMandatory ;
+<http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_D> a rcxn:SlotMandatory ;
     cx:WordOrder "The preposition \"vor\" appears in direct syntactic proximity to the noun \"Augen\", forming a fixed prepositional phrase. " ;
     cx:hasIS cx:Background,
         cx:Comment ;
@@ -86,7 +86,7 @@ cx:Generalprepositionalconstructions a rcxn:Construction ;
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_D_Morphosyntax> a cx:Preposition ;
     cx:hasSyntacticFunction "Head of a prepositional phrase" .
 
-<http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_E> a cx:SlotMandatory ;
+<http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_E> a rcxn:SlotMandatory ;
     cx:WordOrder "The noun always directly follows the preposition \"vor\"." ;
     cx:hasIS cx:Background,
         cx:Comment ;
@@ -104,7 +104,7 @@ cx:Generalprepositionalconstructions a rcxn:Construction ;
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_E_Morphosyntax> a cx:Noun ;
     cx:hasSyntacticFunction "Prepositional complement" .
 
-<http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_F> a cx:SlotOptional ;
+<http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_F> a rcxn:SlotOptional ;
     cx:WordOrder "The position of the verb within the construction is relatively flexible." ;
     cx:hasIS cx:Comment ;
     cx:hasSlotForm <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_F_Form> ;

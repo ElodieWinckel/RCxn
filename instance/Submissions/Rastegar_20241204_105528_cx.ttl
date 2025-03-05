@@ -42,7 +42,7 @@ cx:Englishrollupyoursleeves a rcxn:Construction ;
     cx:createdOn "2024-12-04"^^xsd:date ;
     rcxn:hasTitle "Farsi mār āstin-e xod parvarāndan: to nurture a snake in one's bosom" .
 
-cx:Idiomaticconstruction_A a cx:SlotMandatory ;
+cx:Idiomaticconstruction_A a rcxn:SlotMandatory ;
     cx:WordOrder "Initial position in prepositional phrase" ;
     cx:hasSlotForm cx:Idiomaticconstruction_A_Form ;
     cx:hasSlotMeaning cx:Idiomaticconstruction_A_Meaning ;
@@ -58,7 +58,7 @@ cx:Idiomaticconstruction_A_Meaning a cx:SlotMeaning ;
 cx:Idiomaticconstruction_A_Morphosyntax a cx:Preposition ;
     cx:hasSyntacticFunction "Head of PP" .
 
-cx:Idiomaticconstruction_B a cx:SlotMandatory ;
+cx:Idiomaticconstruction_B a rcxn:SlotMandatory ;
     cx:WordOrder "follows preposition, precedes noun" ;
     cx:hasSlotForm cx:Idiomaticconstruction_B_Form ;
     cx:hasSlotMeaning cx:Idiomaticconstruction_B_Meaning ;
@@ -79,7 +79,7 @@ cx:Idiomaticconstruction_B_Morphosyntax a "Definite article" ;
     cx:hasCaseFeature olia:DativeCase ;
     cx:hasSyntacticFunction "Determiner" .
 
-cx:Idiomaticconstruction_C a cx:SlotMandatory ;
+cx:Idiomaticconstruction_C a rcxn:SlotMandatory ;
     cx:WordOrder "Follows article" ;
     cx:hasSlotForm cx:Idiomaticconstruction_C_Form ;
     cx:hasSlotMeaning cx:Idiomaticconstruction_C_Meaning ;
@@ -101,7 +101,7 @@ cx:Idiomaticconstruction_C_Meaning a cx:SlotMeaning ;
 cx:Idiomaticconstruction_C_Morphosyntax a cx:Noun ;
     cx:hasCaseFeature olia:DativeCase .
 
-cx:Idiomaticconstruction_D a cx:SlotMandatory ;
+cx:Idiomaticconstruction_D a rcxn:SlotMandatory ;
     cx:WordOrder "Verb-final in dependent clauses / V2 in main clauses" ;
     cx:hasSlotForm cx:Idiomaticconstruction_D_Form ;
     cx:hasSlotMeaning cx:Idiomaticconstruction_D_Meaning ;

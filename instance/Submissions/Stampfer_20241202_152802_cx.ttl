@@ -12,7 +12,7 @@ cx:EvaluativeAttributionConstruction a rcxn:Construction ;
     cx:hasSlots cx:EvaluativeAttributionConstruction_slots ;
     cx:partOfLanguage "Modern English, British & American English, several (written) genres" .
 
-cx:EvaluativeAttributionConstruction_A a cx:SlotOptional ;
+cx:EvaluativeAttributionConstruction_A a rcxn:SlotOptional ;
     cx:hasSlotForm cx:EvaluativeAttributionConstruction_A_Form ;
     cx:hasSlotMeaning cx:EvaluativeAttributionConstruction_A_Meaning .
 
@@ -24,7 +24,7 @@ cx:EvaluativeAttributionConstruction_A_Meaning a cx:SlotMeaning ;
 
 cx:EvaluativeAttributionConstruction_A_Morphosyntax a cx:NP .
 
-cx:EvaluativeAttributionConstruction_B a cx:SlotMandatory ;
+cx:EvaluativeAttributionConstruction_B a rcxn:SlotMandatory ;
     cx:hasSlotForm cx:EvaluativeAttributionConstruction_B_Form .
 
 cx:EvaluativeAttributionConstruction_B_Form a cx:SlotForm ;
@@ -32,7 +32,7 @@ cx:EvaluativeAttributionConstruction_B_Form a cx:SlotForm ;
 
 cx:EvaluativeAttributionConstruction_B_Morphosyntax a cx:VP .
 
-cx:EvaluativeAttributionConstruction_C a cx:SlotMandatory ;
+cx:EvaluativeAttributionConstruction_C a rcxn:SlotMandatory ;
     cx:hasSlotForm cx:EvaluativeAttributionConstruction_C_Form ;
     cx:hasSlotMeaning cx:EvaluativeAttributionConstruction_C_Meaning .
 
@@ -44,13 +44,13 @@ cx:EvaluativeAttributionConstruction_C_Meaning a cx:SlotMeaning ;
 
 cx:EvaluativeAttributionConstruction_C_Morphosyntax a "NP", "PP" .
 
-cx:EvaluativeAttributionConstruction_D a cx:SlotOptional ;
+cx:EvaluativeAttributionConstruction_D a rcxn:SlotOptional ;
     cx:hasSlotForm cx:EvaluativeAttributionConstruction_D_Form ;
     cx:hasStem "to be (lemma)" .
 
 cx:EvaluativeAttributionConstruction_D_Form a cx:SlotForm .
 
-cx:EvaluativeAttributionConstruction_E a cx:SlotMandatory ;
+cx:EvaluativeAttributionConstruction_E a rcxn:SlotMandatory ;
     cx:hasSlotForm cx:EvaluativeAttributionConstruction_E_Form ;
     cx:hasSlotMeaning cx:EvaluativeAttributionConstruction_E_Meaning .
 

@@ -46,7 +46,7 @@ cx:Transitivedurch-Präfixverbkonstruktion_A_Meaning a cx:SlotMeaning ;
 cx:Transitivedurch-Präfixverbkonstruktion_A_Morphosyntax a cx:NP ;
     cx:hasSyntacticFunction "Subject" .
 
-cx:Transitivedurch-Präfixverbkonstruktion_B a cx:SlotMandatory ;
+cx:Transitivedurch-Präfixverbkonstruktion_B a rcxn:SlotMandatory ;
     cx:WordOrder "2 vor 3" ;
     cx:hasSlotForm cx:Transitivedurch-Präfixverbkonstruktion_B_Form ;
     cx:hasSlotMeaning cx:Transitivedurch-Präfixverbkonstruktion_B_Meaning ;
@@ -61,7 +61,7 @@ cx:Transitivedurch-Präfixverbkonstruktion_B_Meaning a cx:SlotMeaning ;
 
 cx:Transitivedurch-Präfixverbkonstruktion_B_Morphosyntax a cx:Präfix .
 
-cx:Transitivedurch-Präfixverbkonstruktion_C a cx:SlotMandatory ;
+cx:Transitivedurch-Präfixverbkonstruktion_C a rcxn:SlotMandatory ;
     cx:WordOrder "3 nach 2" ;
     cx:hasSlotForm cx:Transitivedurch-Präfixverbkonstruktion_C_Form ;
     cx:hasSlotMeaning cx:Transitivedurch-Präfixverbkonstruktion_C_Meaning ;
@@ -88,7 +88,7 @@ cx:Transitivedurch-Präfixverbkonstruktion_C_Meaning a cx:SlotMeaning ;
 
 cx:Transitivedurch-Präfixverbkonstruktion_C_Morphosyntax a cx:Verb .
 
-cx:Transitivedurch-Präfixverbkonstruktion_D a cx:SlotMandatory ;
+cx:Transitivedurch-Präfixverbkonstruktion_D a rcxn:SlotMandatory ;
     cx:hasSlotForm cx:Transitivedurch-Präfixverbkonstruktion_D_Form ;
     cx:hasSlotMeaning cx:Transitivedurch-Präfixverbkonstruktion_D_Meaning ;
     cx:hasTranslation "sie, die Seite, die Lande, das Schlachtfeld, die Schar" ;
@@ -106,7 +106,7 @@ cx:Transitivedurch-Präfixverbkonstruktion_D_Morphosyntax a cx:NP ;
     cx:hasCaseFeature olia:AccusativeCase ;
     cx:hasSyntacticFunction "Object" .
 
-cx:Transitivedurch-Präfixverbkonstruktion_E a cx:SlotOptional ;
+cx:Transitivedurch-Präfixverbkonstruktion_E a rcxn:SlotOptional ;
     cx:hasSlotForm cx:Transitivedurch-Präfixverbkonstruktion_E_Form ;
     cx:hasSlotMeaning cx:Transitivedurch-Präfixverbkonstruktion_E_Meaning ;
     cx:hasTranslation "da, somit" .
@@ -138,7 +138,7 @@ cx:Transitivedurch-Präfixverbkonstruktion_Ex_C a cx:Example ;
     cx:hasTranslation "sie durchbrechen das Schlachtfeld" ;
     RDFS:comment "teil-intermediär" .
 
-cx:Transitivedurch-Präfixverbkonstruktion_G a cx:SlotOptional ;
+cx:Transitivedurch-Präfixverbkonstruktion_G a rcxn:SlotOptional ;
     cx:hasSlotForm cx:Transitivedurch-Präfixverbkonstruktion_G_Form ;
     cx:hasSlotMeaning cx:Transitivedurch-Präfixverbkonstruktion_G_Meaning ;
     cx:hasStem "er" ;
