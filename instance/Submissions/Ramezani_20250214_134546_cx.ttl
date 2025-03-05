@@ -10,7 +10,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 cx:Argumentstructureconstruction a rcxn:Construction ;
-    cx:hasConstructionMeaning cx:Argumentstructureconstruction_Meaning ;
+    rcxn:hasConstructionMeaning cx:Argumentstructureconstruction_Meaning ;
     cx:hasMetadata cx:Argumentstructureconstruction_MD ;
     cx:hasSlots cx:Argumentstructureconstruction_slots ;
     rcxn:hasTitle "English Argument structure construction" ;

@@ -7,7 +7,7 @@
 
 cx:ThisCloseToV-ing a rcxn:Construction ;
     rcxn:hasTitle "(American) English, Spoken Modality This Close To V-ing" ;
-    cx:hasConstructionMeaning cx:ThisCloseToV-ing_Meaning ;
+    rcxn:hasConstructionMeaning cx:ThisCloseToV-ing_Meaning ;
     cx:hasExample cx:ThisCloseToV-ing_Ex_A ;
     cx:hasGesture """The gesture is part of the construction's form.\r
 The index finger and the thumb are stretched (or partially crooked) and drawn near one another while the rest of the fingers remain retracted.\r

@@ -8,7 +8,7 @@
 
 cx:Idiomaticconstructions a rcxn:Construction ;
     rcxn:hasTitle "English Burn one's bridges construction" ;
-    cx:hasConstructionMeaning cx:Idiomaticconstructions_Meaning ;
+    rcxn:hasConstructionMeaning cx:Idiomaticconstructions_Meaning ;
     cx:hasExample cx:Idiomaticconstructions_Ex_A,
         cx:Idiomaticconstructions_Ex_B ;
     cx:hasMetadata cx:Idiomaticconstructions_MD ;

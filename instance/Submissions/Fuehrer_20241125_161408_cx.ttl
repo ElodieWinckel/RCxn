@@ -10,7 +10,7 @@
 
 cx:Transitivedurch-Präfixverbkonstruktion a rcxn:Construction ;
     rcxn:hasTitle "Mittelhochdeutsch, schriftlich, 12. Jh. Transitive durch-Präfixverbkonstruktion" ;
-    cx:hasConstructionMeaning cx:Transitivedurch-Präfixverbkonstruktion_Meaning ;
+    rcxn:hasConstructionMeaning cx:Transitivedurch-Präfixverbkonstruktion_Meaning ;
     cx:hasExample cx:Transitivedurch-Präfixverbkonstruktion_Ex_A,
         cx:Transitivedurch-Präfixverbkonstruktion_Ex_B,
         cx:Transitivedurch-Präfixverbkonstruktion_Ex_C ;

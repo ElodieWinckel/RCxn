@@ -7,7 +7,7 @@
 
 cx:Toughmovementconstruction a rcxn:Construction ;
     rcxn:hasTitle "English Tough adjective construction" ;
-    cx:hasConstructionMeaning cx:Toughmovementconstruction_Meaning ;
+    rcxn:hasConstructionMeaning cx:Toughmovementconstruction_Meaning ;
     cx:hasExample cx:Toughmovementconstruction_Ex_A ;
     cx:hasMetadata cx:Toughmovementconstruction_MD ;
     cx:hasSlots cx:Toughmovementconstruction_slots ;

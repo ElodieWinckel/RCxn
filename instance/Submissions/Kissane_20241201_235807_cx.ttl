@@ -7,7 +7,7 @@
 
 <http://example.org/cx/TheEnglishGIVE-OUTVerbParticleConstruction.> a rcxn:Construction ;
     rcxn:hasTitle "English GIVE-OUT Verb Particle Construction." ;
-    cx:hasConstructionMeaning cx:TheEnglishGIVE-OUTVerbParticleConstruction._Meaning ;
+    rcxn:hasConstructionMeaning cx:TheEnglishGIVE-OUTVerbParticleConstruction._Meaning ;
     cx:hasExample cx:TheEnglishGIVE-OUTVerbParticleConstruction._Ex_A ;
     cx:hasMetadata cx:TheEnglishGIVE-OUTVerbParticleConstruction._MD ;
     cx:hasSlots cx:TheEnglishGIVE-OUTVerbParticleConstruction._slots ;

@@ -9,7 +9,7 @@
 
 cx:POU-beneficiaryconstruction a rcxn:Construction ;
     rcxn:hasTitle "Haitian Creole POU-beneficiary construction" ;
-    cx:hasConstructionMeaning cx:POU-beneficiaryconstruction_Meaning ;
+    rcxn:hasConstructionMeaning cx:POU-beneficiaryconstruction_Meaning ;
     cx:hasExample cx:POU-beneficiaryconstruction_Ex_A ;
     cx:hasMetadata cx:POU-beneficiaryconstruction_MD ;
     cx:hasSlots cx:POU-beneficiaryconstruction_slots ;

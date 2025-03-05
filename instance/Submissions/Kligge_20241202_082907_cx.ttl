@@ -7,7 +7,7 @@
 
 <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]> a rcxn:Construction ;
     rcxn:hasTitle "German NP [Def.Det-strong + ADJ-weak + N]" ;
-    cx:hasConstructionMeaning <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_Meaning> ;
+    rcxn:hasConstructionMeaning <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_Meaning> ;
     cx:hasMetadata <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_MD> ;
     cx:hasSlots <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_slots> ;
     links:inheritedBy <http://example.org/cx/NP[das+ADJ-e+N]nom.sg.neut>,

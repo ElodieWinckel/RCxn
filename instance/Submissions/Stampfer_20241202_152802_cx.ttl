@@ -7,7 +7,7 @@
 
 cx:EvaluativeAttributionConstruction a rcxn:Construction ;
     rcxn:hasTitle "Modern English Evaluative Attribution Construction" ;
-    cx:hasConstructionMeaning cx:EvaluativeAttributionConstruction_Meaning ;
+    rcxn:hasConstructionMeaning cx:EvaluativeAttributionConstruction_Meaning ;
     cx:hasMetadata cx:EvaluativeAttributionConstruction_MD ;
     cx:hasSlots cx:EvaluativeAttributionConstruction_slots ;
     cx:partOfLanguage "Modern English, British & American English, several (written) genres" .

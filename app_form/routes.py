@@ -396,7 +396,7 @@ def form_submit():
     cx_meaning_uri = f"{construction_name_cleaned}_Meaning"
     g.add((cx[cx_meaning_uri], RDF.type, rcxn.ConstructionMeaning))
     # Triple to relate cx to it meaning
-    g.add((cx[construction_name_cleaned], cx.hasConstructionMeaning, cx[cx_meaning_uri]))
+    g.add((cx[construction_name_cleaned], rcxn.hasConstructionMeaning, cx[cx_meaning_uri]))
 
     # MEANING (GENERAL)
     if meaning.strip():

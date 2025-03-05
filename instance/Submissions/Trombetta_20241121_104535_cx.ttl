@@ -10,7 +10,7 @@
 cx:Relative-Topic-ShiftConstruction a rcxn:Construction ;
     rcxn:hasTitle "Sixteenth-century Italian (Florence), written: historiography (Francesco Guicciardini's \"Storia d'Italia\")  Relative-Topic-Shift Construction " ;
     links:CL_sameFormSameFunction <http://example.org/cx/Latinlinkingcliché(i.e.,inCaesar'sandTacitus'works)> ;
-    cx:hasConstructionMeaning cx:Relative-Topic-ShiftConstruction_Meaning ;
+    rcxn:hasConstructionMeaning cx:Relative-Topic-ShiftConstruction_Meaning ;
     cx:hasExample cx:Relative-Topic-ShiftConstruction_Ex_A,
         cx:Relative-Topic-ShiftConstruction_Ex_B ;
     cx:hasMetadata cx:Relative-Topic-ShiftConstruction_MD ;

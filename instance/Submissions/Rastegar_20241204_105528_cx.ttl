@@ -13,7 +13,7 @@ cx:Idiomaticconstruction a rcxn:Construction ;
     links:CL_similarFormDifferentFunction cx:Englishrollupyoursleeves,
         <http://example.org/cx/Farsibarāyekasiāstinbālāzadan:torollupsleevesforsomething>,
         <http://example.org/cx/Farsimārāstin-exodparvarāndan:tonurtureasnakeinone'sbosom> ;
-    cx:hasConstructionMeaning cx:Idiomaticconstruction_Meaning ;
+    rcxn:hasConstructionMeaning cx:Idiomaticconstruction_Meaning ;
     cx:hasExample cx:Idiomaticconstruction_Ex_A,
         cx:Idiomaticconstruction_Ex_B ;
     cx:hasMetadata cx:Idiomaticconstruction_MD ;
