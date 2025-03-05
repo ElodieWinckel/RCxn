@@ -96,7 +96,7 @@ cx:Relative-Topic-ShiftConstruction_MD a cx:Metadata ;
     cx:creationDate "2024-11-21"^^xsd:date ;
     cx:hasSources cx:Relative-Topic-ShiftConstruction_Sources .
 
-cx:Relative-Topic-ShiftConstruction_Meaning a cx:ConstructionMeaning ;
+cx:Relative-Topic-ShiftConstruction_Meaning a rcxn:ConstructionMeaning ;
     cx:hasMeaning "Transition from one (discourse) topic to another" .
 
 cx:Relative-Topic-ShiftConstruction_Sources a cx:Collection ;

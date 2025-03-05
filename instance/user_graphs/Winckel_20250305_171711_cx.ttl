@@ -1,29 +1,18 @@
 @prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix cx: <http://example.org/cx/> .
-@prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links#> .
 @prefix membr: <http://example.org/users#> .
 @prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-membr:Project_Winckel rsrch:hasFindings membr:Project_Winckel_F2503051538 .
-
-cx:JapaneseRC a rcxn:Construction ;
-    cx:hasMetadata cx:JapaneseRC_MD ;
-    rcxn:hasTitle "Japanese RC" .
-
-cx:JapaneseRC_MD a cx:Metadata ;
-    cx:annotator membr:Winckel ;
-    cx:createdOn "2025-03-05"^^xsd:date .
+membr:Project_Winckel rsrch:hasFindings membr:Project_Winckel_F2503051717 .
 
 cx:RelativeclauseCx a rcxn:Construction ;
     cx:hasConstructionMeaning cx:RelativeclauseCx_Meaning ;
     cx:hasMetadata cx:RelativeclauseCx_MD ;
     cx:hasSlots cx:RelativeclauseCx_slots ;
     cx:partOfLanguage "German" ;
-    links:inheritedBy cx:Transitiveobjectrelativeclause ;
-    links:inheritsFrom cx:JapaneseRC ;
     rcxn:hasTitle "German Relative clause Cx" .
 
 cx:RelativeclauseCx_A a cx:SlotMandatory .
@@ -32,12 +21,13 @@ cx:RelativeclauseCx_MD a cx:Metadata ;
     cx:annotator membr:Winckel ;
     cx:creationDate "2025-03-05"^^xsd:date .
 
-cx:RelativeclauseCx_Meaning a cx:ConstructionMeaning .
+cx:RelativeclauseCx_Meaning a rcxn:ConstructionMeaning ;
+    cx:hasMeaning "Something has a property." .
 
 cx:RelativeclauseCx_slots a rdf:Seq ;
     rdf:_1 cx:RelativeclauseCx_A .
 
-membr:Project_Winckel_F2503051538 a rsrch:Finding ;
+membr:Project_Winckel_F2503051717 a rsrch:Finding ;
     RDFS:label "RC exist" ;
     rsrch:basedOn cx:RelativeclauseCx .
 

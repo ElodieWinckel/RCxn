@@ -171,7 +171,7 @@ cx:Transitiveobjectrelativeclause_MD a cx:Metadata ;
     cx:creationDate "2024-11-25"^^xsd:date ;
     cx:hasSources cx:Transitiveobjectrelativeclause_Sources .
 
-cx:Transitiveobjectrelativeclause_Meaning a cx:ConstructionMeaning ;
+cx:Transitiveobjectrelativeclause_Meaning a rcxn:ConstructionMeaning ;
     cx:hasMeaning "Identificatory NP; someone carries out a transitive action that affects someone else, the function of the object relative clause is to identify the affected." .
 
 cx:Transitiveobjectrelativeclause_Sources a cx:Collection ;

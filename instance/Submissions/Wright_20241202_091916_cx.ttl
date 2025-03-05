@@ -59,7 +59,7 @@ cx:Toughmovementconstruction_MD a cx:Metadata ;
     cx:creationDate "2024-12-02"^^xsd:date ;
     cx:hasSources cx:Toughmovementconstruction_Sources .
 
-cx:Toughmovementconstruction_Meaning a cx:ConstructionMeaning .
+cx:Toughmovementconstruction_Meaning a rcxn:ConstructionMeaning .
 
 cx:Toughmovementconstruction_Sources a cx:Collection ;
     RDFS:seeAlso <https://constructicon.de/constructions/45> .

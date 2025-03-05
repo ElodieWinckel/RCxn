@@ -48,7 +48,7 @@
     cx:annotator membr:Kligge ;
     cx:creationDate "2024-12-02"^^xsd:date .
 
-<http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_Meaning> a cx:ConstructionMeaning .
+<http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_Meaning> a rcxn:ConstructionMeaning .
 
 <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_slots> a rdf:Seq ;
     rdf:_1 <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_A> ;

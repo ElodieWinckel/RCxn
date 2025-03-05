@@ -100,7 +100,7 @@ cx:Idiomaticconstructions_MD a cx:Metadata ;
     cx:annotator membr:Rastegar ;
     cx:creationDate "2024-12-03"^^xsd:date .
 
-cx:Idiomaticconstructions_Meaning a cx:ConstructionMeaning ;
+cx:Idiomaticconstructions_Meaning a rcxn:ConstructionMeaning ;
     cx:hasMeaning "to end relationships" ;
     cx:hasMeaning "to commit oneself to a course from which there is no retreat" .
 

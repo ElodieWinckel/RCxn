@@ -13,6 +13,34 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topObjectProperty -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty">
+        <rdfs:domain rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#Construction"/>
+        <rdfs:comment xml:lang="en">Property that relates a construction to its name.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#hasTitle -->
+
+    <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#hasTitle">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Classes
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -21,20 +49,18 @@
     
 
 
-    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#ConstructiconComponent -->
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#Construction -->
 
-    <owl:Class rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#ConstructiconComponent">
-        <rdfs:comment xml:lang="en">Components used in the constructicon that are non-linguistic. Different from linguistic annotations and concepts.</rdfs:comment>
+    <owl:Class rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#Construction">
+        <owl:disjointWith rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#ConstructionMeaning"/>
+        <rdfs:comment xml:lang="en">Construction; linguistic sign with a form component and a meaning component. A network of constructions builds a Constructicon.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#Construction -->
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#ConstructionMeaning -->
 
-    <owl:Class rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#Construction">
-        <rdfs:subClassOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#ConstructiconComponent"/>
-        <rdfs:comment xml:lang="en">Construction; linguistic sign with a form component and a meaning component. A network of constructions builds a Constructicon.</rdfs:comment>
-    </owl:Class>
+    <owl:Class rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#ConstructionMeaning"/>
 </rdf:RDF>
 
 

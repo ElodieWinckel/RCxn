@@ -81,7 +81,7 @@
     cx:creationDate "2024-11-28"^^xsd:date ;
     cx:hasSources <http://example.org/cx/come+[noise/mannerofmovement]V-ing_Sources> .
 
-<http://example.org/cx/come+[noise/mannerofmovement]V-ing_Meaning> a cx:ConstructionMeaning ;
+<http://example.org/cx/come+[noise/mannerofmovement]V-ing_Meaning> a rcxn:ConstructionMeaning ;
     cx:hasMeaning "Someone or something moves towards a reference point in a specified manner, often in a manner that is fast, sudden, uncontrolled, noisy, or otherwise overwhelming." .
 
 <http://example.org/cx/come+[noise/mannerofmovement]V-ing_Sources> a cx:Collection ;

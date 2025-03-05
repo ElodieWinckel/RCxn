@@ -163,7 +163,7 @@ cx:Transitivedurch-Präfixverbkonstruktion_MD a cx:Metadata ;
     cx:creationDate "2024-11-25"^^xsd:date ;
     cx:hasSources cx:Transitivedurch-Präfixverbkonstruktion_Sources .
 
-cx:Transitivedurch-Präfixverbkonstruktion_Meaning a cx:ConstructionMeaning ;
+cx:Transitivedurch-Präfixverbkonstruktion_Meaning a rcxn:ConstructionMeaning ;
     cx:hasImageSchema "teil-intermediäres durch" ;
     cx:hasImageSchema "intermediäres durch" ;
     cx:hasImageSchema "multidirektionales durch" ;

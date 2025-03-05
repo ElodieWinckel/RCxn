@@ -61,7 +61,7 @@ cx:Argumentstructureconstruction_MD a cx:Metadata ;
     cx:creationDate "2025-02-14"^^xsd:date ;
     cx:hasSources cx:Argumentstructureconstruction_Sources .
 
-cx:Argumentstructureconstruction_Meaning a cx:ConstructionMeaning ;
+cx:Argumentstructureconstruction_Meaning a rcxn:ConstructionMeaning ;
     cx:hasMeaning """The central senses of argument structure construction have been argued to be in association with humanly relevant scenes like: transferring something to someone, causing something to change state or move, experiencing something,\r
 something undergoing a change of state or location""" .
 

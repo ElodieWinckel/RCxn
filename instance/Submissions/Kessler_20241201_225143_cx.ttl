@@ -77,7 +77,7 @@ cx:Dooperationwithoperand1onoperand2construction_MD a cx:Metadata ;
     cx:creationDate "2024-12-01"^^xsd:date ;
     cx:hasSources cx:Dooperationwithoperand1onoperand2construction_Sources .
 
-cx:Dooperationwithoperand1onoperand2construction_Meaning a cx:ConstructionMeaning ;
+cx:Dooperationwithoperand1onoperand2construction_Meaning a rcxn:ConstructionMeaning ;
     cx:hasMeaning "Do [operation] with [operand1] and [operand2]" .
 
 cx:Dooperationwithoperand1onoperand2construction_Sources a cx:Collection ;

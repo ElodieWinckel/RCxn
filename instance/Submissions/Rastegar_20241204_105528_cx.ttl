@@ -137,7 +137,7 @@ cx:Idiomaticconstruction_MD a cx:Metadata ;
     cx:annotator membr:Rastegar ;
     cx:creationDate "2024-12-04"^^xsd:date .
 
-cx:Idiomaticconstruction_Meaning a cx:ConstructionMeaning ;
+cx:Idiomaticconstruction_Meaning a rcxn:ConstructionMeaning ;
     cx:hasMeaning "done with ease" .
 
 cx:Idiomaticconstruction_slots a rdf:Seq ;

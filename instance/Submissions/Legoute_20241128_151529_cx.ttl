@@ -64,7 +64,7 @@ cx:POU-beneficiaryconstruction_MD a cx:Metadata ;
     cx:annotator membr:Legoute ;
     cx:creationDate "2024-11-28"^^xsd:date .
 
-cx:POU-beneficiaryconstruction_Meaning a cx:ConstructionMeaning ;
+cx:POU-beneficiaryconstruction_Meaning a rcxn:ConstructionMeaning ;
     cx:hasMeaning "Refer to a beneficiary" .
 
 cx:POU-beneficiaryconstruction_slots a rdf:Seq ;

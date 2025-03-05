@@ -66,7 +66,7 @@ cx:EvaluativeAttributionConstruction_MD a cx:Metadata ;
     cx:annotator membr:Stampfer ;
     cx:creationDate "2024-12-02"^^xsd:date .
 
-cx:EvaluativeAttributionConstruction_Meaning a cx:ConstructionMeaning ;
+cx:EvaluativeAttributionConstruction_Meaning a rcxn:ConstructionMeaning ;
     cx:hasMeaning "An ATTRIBUTOR mentally assigns ATTRIBUTE to an ATTRIBUTEE" .
 
 cx:EvaluativeAttributionConstruction_slots a rdf:Seq ;
