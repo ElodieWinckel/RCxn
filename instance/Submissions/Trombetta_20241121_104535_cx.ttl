@@ -97,7 +97,7 @@ cx:Relative-Topic-ShiftConstruction_MD a cx:Metadata ;
     cx:hasSources cx:Relative-Topic-ShiftConstruction_Sources .
 
 cx:Relative-Topic-ShiftConstruction_Meaning a rcxn:ConstructionMeaning ;
-    cx:hasMeaning "Transition from one (discourse) topic to another" .
+    rcxn:hasMeaning "Transition from one (discourse) topic to another" .
 
 cx:Relative-Topic-ShiftConstruction_Sources a cx:Collection ;
     cx:hasLiterature [ dc:creator "Mengaldo, Pier Vincenzo" ;

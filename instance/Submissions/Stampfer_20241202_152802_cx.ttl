@@ -67,7 +67,7 @@ cx:EvaluativeAttributionConstruction_MD a cx:Metadata ;
     cx:creationDate "2024-12-02"^^xsd:date .
 
 cx:EvaluativeAttributionConstruction_Meaning a rcxn:ConstructionMeaning ;
-    cx:hasMeaning "An ATTRIBUTOR mentally assigns ATTRIBUTE to an ATTRIBUTEE" .
+    rcxn:hasMeaning "An ATTRIBUTOR mentally assigns ATTRIBUTE to an ATTRIBUTEE" .
 
 cx:EvaluativeAttributionConstruction_slots a rdf:Seq ;
     rdf:_1 cx:EvaluativeAttributionConstruction_A ;

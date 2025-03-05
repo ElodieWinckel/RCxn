@@ -58,7 +58,7 @@
     cx:creationDate "2024-12-02"^^xsd:date .
 
 <http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_Meaning> a rcxn:ConstructionMeaning ;
-    cx:hasMeaning "NPs in German have obligatory grammatical marking specifying case, number, gender." .
+    rcxn:hasMeaning "NPs in German have obligatory grammatical marking specifying case, number, gender." .
 
 <http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_slots> a rdf:Seq ;
     rdf:_1 <http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_A> ;

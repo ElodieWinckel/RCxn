@@ -64,7 +64,7 @@ cx:ThisCloseToV-ing_MD a cx:Metadata ;
     cx:creationDate "2024-11-28"^^xsd:date .
 
 cx:ThisCloseToV-ing_Meaning a rcxn:ConstructionMeaning ;
-    cx:hasMeaning "Something or someone is metaphorically very close to an outcome/goal." .
+    rcxn:hasMeaning "Something or someone is metaphorically very close to an outcome/goal." .
 
 cx:ThisCloseToV-ing_slots a rdf:Seq ;
     rdf:_1 cx:ThisCloseToV-ing_A ;

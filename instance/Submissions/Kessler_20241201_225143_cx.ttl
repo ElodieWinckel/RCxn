@@ -78,7 +78,7 @@ cx:Dooperationwithoperand1onoperand2construction_MD a cx:Metadata ;
     cx:hasSources cx:Dooperationwithoperand1onoperand2construction_Sources .
 
 cx:Dooperationwithoperand1onoperand2construction_Meaning a rcxn:ConstructionMeaning ;
-    cx:hasMeaning "Do [operation] with [operand1] and [operand2]" .
+    rcxn:hasMeaning "Do [operation] with [operand1] and [operand2]" .
 
 cx:Dooperationwithoperand1onoperand2construction_Sources a cx:Collection ;
     cx:basedOn [ dc:creator "Chemla, Karine",

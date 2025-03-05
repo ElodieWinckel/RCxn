@@ -400,7 +400,7 @@ def form_submit():
 
     # MEANING (GENERAL)
     if meaning.strip():
-        g.add((cx[cx_meaning_uri], cx.hasMeaning, Literal(meaning)))
+        g.add((cx[cx_meaning_uri], rcxn.hasMeaning, Literal(meaning)))
     else:
         print("No meaning to add")
 

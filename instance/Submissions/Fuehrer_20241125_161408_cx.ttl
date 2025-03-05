@@ -167,7 +167,7 @@ cx:Transitivedurch-Präfixverbkonstruktion_Meaning a rcxn:ConstructionMeaning ;
     cx:hasImageSchema "teil-intermediäres durch" ;
     cx:hasImageSchema "intermediäres durch" ;
     cx:hasImageSchema "multidirektionales durch" ;
-    cx:hasMeaning "'jemand bewegt sich durch etwas/einen Ort'" .
+    rcxn:hasMeaning "'jemand bewegt sich durch etwas/einen Ort'" .
 
 cx:Transitivedurch-Präfixverbkonstruktion_Sources a cx:Collection ;
     cx:basedOn <https://www.linguistics.ruhr-uni-bochum.de/rem/> .

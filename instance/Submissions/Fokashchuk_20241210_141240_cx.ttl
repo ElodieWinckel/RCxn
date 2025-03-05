@@ -56,7 +56,7 @@
 
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_Meaning> a rcxn:ConstructionMeaning ;
     cx:hasImageSchema "SUPPORT, DIRECTION, CONTACT, PROXIMITY, LOCATION, CONTAINMENT, SOURCE-PATH-GOAL, FORCE, PART-WHOLE, SURFACE" ;
-    cx:hasMeaning "The sense of direction towards another entity" .
+    rcxn:hasMeaning "The sense of direction towards another entity" .
 
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_slots> a rdf:Seq ;
     rdf:_1 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_A> ;

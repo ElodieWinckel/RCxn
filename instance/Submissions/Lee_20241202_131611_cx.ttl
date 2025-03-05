@@ -125,7 +125,7 @@ cx:Generalprepositionalconstructions a rcxn:Construction ;
     cx:creationDate "2024-12-02"^^xsd:date .
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_Meaning> a rcxn:ConstructionMeaning ;
-    cx:hasMeaning "The construction denotes a cognitive process involving the act of bringing something into focus or visualizing it mentally, including introspection, planning and imaginative conceptualization." .
+    rcxn:hasMeaning "The construction denotes a cognitive process involving the act of bringing something into focus or visualizing it mentally, including introspection, planning and imaginative conceptualization." .
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_slots> a rdf:Seq ;
     rdf:_1 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_A> ;
