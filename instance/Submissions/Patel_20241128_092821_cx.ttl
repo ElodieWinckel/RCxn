@@ -8,7 +8,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://example.org/cx/come+[noise/mannerofmovement]V-ing> a rcxn:Construction ;
-    cx:hasTitle "English come + [noise/manner of movement] V-ing" ;
+    rcxn:hasTitle "English come + [noise/manner of movement] V-ing" ;
     cx:hasConstructionMeaning <http://example.org/cx/come+[noise/mannerofmovement]V-ing_Meaning> ;
     cx:hasExample <http://example.org/cx/come+[noise/mannerofmovement]V-ing_Ex_A>,
         <http://example.org/cx/come+[noise/mannerofmovement]V-ing_Ex_B>,

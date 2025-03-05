@@ -6,7 +6,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]> a rcxn:Construction ;
-    cx:hasTitle "German NP [Def.Det-strong + ADJ-weak + N]" ;
+    rcxn:hasTitle "German NP [Def.Det-strong + ADJ-weak + N]" ;
     cx:hasConstructionMeaning <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_Meaning> ;
     cx:hasMetadata <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_MD> ;
     cx:hasSlots <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_slots> ;
@@ -26,12 +26,12 @@
 <http://example.org/cx/NP[ADJ-strong+ADJ-strong+N]> a rcxn:Construction ;
     cx:annotator membr:Kligge ;
     cx:createdOn "2024-12-02"^^xsd:date ;
-    cx:hasTitle "NP [ADJ-strong + ADJ-strong + N]" .
+    rcxn:hasTitle "NP [ADJ-strong + ADJ-strong + N]" .
 
 <http://example.org/cx/NP[ADJ-strong+ADJ-weak+N]> a rcxn:Construction ;
     cx:annotator membr:Kligge ;
     cx:createdOn "2024-12-02"^^xsd:date ;
-    cx:hasTitle "NP [ADJ-strong + ADJ-weak+ N]" .
+    rcxn:hasTitle "NP [ADJ-strong + ADJ-weak+ N]" .
 
 <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_A> a cx:SlotMandatory ;
     cx:Morphosyntax "Definite DET" ;
@@ -58,45 +58,45 @@
 <http://example.org/cx/NP[das+ADJ-e+N]nom.sg.neut> a rcxn:Construction ;
     cx:annotator membr:Kligge ;
     cx:createdOn "2024-12-02"^^xsd:date ;
-    cx:hasTitle "NP [das+ ADJ-e+ N]nom.sg.neut" .
+    rcxn:hasTitle "NP [das+ ADJ-e+ N]nom.sg.neut" .
 
 <http://example.org/cx/NP[def.DET-strong+N]> a rcxn:Construction ;
     cx:annotator membr:Kligge ;
     cx:createdOn "2024-12-02"^^xsd:date ;
-    cx:hasTitle "NP [def.DET-strong + N]" .
+    rcxn:hasTitle "NP [def.DET-strong + N]" .
 
 <http://example.org/cx/NP[dem+ADJ-en+N]dat.sg.masc/neut> a rcxn:Construction ;
     cx:annotator membr:Kligge ;
     cx:createdOn "2024-12-02"^^xsd:date ;
-    cx:hasTitle "NP [dem + ADJ-en+ N]dat.sg.masc/neut" .
+    rcxn:hasTitle "NP [dem + ADJ-en+ N]dat.sg.masc/neut" .
 
 <http://example.org/cx/NP[der+ADJ-e+N]nom.sg.masc> a rcxn:Construction ;
     cx:annotator membr:Kligge ;
     cx:createdOn "2024-12-02"^^xsd:date ;
-    cx:hasTitle "NP [der+ ADJ-e+ N]nom.sg.masc" .
+    rcxn:hasTitle "NP [der+ ADJ-e+ N]nom.sg.masc" .
 
 <http://example.org/cx/NP[die+ADJ-e+N]nom.sg.fem> a rcxn:Construction ;
     cx:annotator membr:Kligge ;
     cx:createdOn "2024-12-02"^^xsd:date ;
-    cx:hasTitle "NP [die + ADJ-e+ N]nom.sg.fem" .
+    rcxn:hasTitle "NP [die + ADJ-e+ N]nom.sg.fem" .
 
 <http://example.org/cx/NP[indef.DET-strong+ADJ-weak+N]> a rcxn:Construction ;
     cx:annotator membr:Kligge ;
     cx:createdOn "2024-12-02"^^xsd:date ;
-    cx:hasTitle "NP [indef.DET-strong + ADJ-weak + N]" .
+    rcxn:hasTitle "NP [indef.DET-strong + ADJ-weak + N]" .
 
 <http://example.org/cx/NP[indef.DET-strong+N]> a rcxn:Construction ;
     cx:annotator membr:Kligge ;
     cx:createdOn "2024-12-02"^^xsd:date ;
-    cx:hasTitle "NP [indef.DET-strong + N]" .
+    rcxn:hasTitle "NP [indef.DET-strong + N]" .
 
 <http://example.org/cx/NP[indef.DET-zero+N]> a rcxn:Construction ;
     cx:annotator membr:Kligge ;
     cx:createdOn "2024-12-02"^^xsd:date ;
-    cx:hasTitle "NP [indef.DET-zero + N]" .
+    rcxn:hasTitle "NP [indef.DET-zero + N]" .
 
 <http://example.org/cx/etc.> a rcxn:Construction ;
     cx:annotator membr:Kligge ;
     cx:createdOn "2024-12-02"^^xsd:date ;
-    cx:hasTitle "etc." .
+    rcxn:hasTitle "etc." .
 

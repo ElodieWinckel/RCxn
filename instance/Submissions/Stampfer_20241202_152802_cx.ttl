@@ -6,7 +6,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 cx:EvaluativeAttributionConstruction a rcxn:Construction ;
-    cx:hasTitle "Modern English Evaluative Attribution Construction" ;
+    rcxn:hasTitle "Modern English Evaluative Attribution Construction" ;
     cx:hasConstructionMeaning cx:EvaluativeAttributionConstruction_Meaning ;
     cx:hasMetadata cx:EvaluativeAttributionConstruction_MD ;
     cx:hasSlots cx:EvaluativeAttributionConstruction_slots ;

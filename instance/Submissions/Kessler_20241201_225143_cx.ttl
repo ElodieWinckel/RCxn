@@ -8,7 +8,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 cx:Dooperationwithoperand1onoperand2construction a rcxn:Construction ;
-    cx:hasTitle "Literary Chinese, Han to Late Qing Do operation with operand1 on operand2 construction" ;
+    rcxn:hasTitle "Literary Chinese, Han to Late Qing Do operation with operand1 on operand2 construction" ;
     cx:hasConstructionMeaning cx:Dooperationwithoperand1onoperand2construction_Meaning ;
     cx:hasExample cx:Dooperationwithoperand1onoperand2construction_Ex_A ;
     cx:hasMetadata cx:Dooperationwithoperand1onoperand2construction_MD ;

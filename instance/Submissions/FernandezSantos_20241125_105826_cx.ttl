@@ -9,7 +9,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 cx:Transitiveobjectrelativeclause a rcxn:Construction ;
-    cx:hasTitle "Spoken Peninsular Spanish potentially ambiguous object relative clause" ;
+    rcxn:hasTitle "Spoken Peninsular Spanish potentially ambiguous object relative clause" ;
     cx:hasConstructionMeaning cx:Transitiveobjectrelativeclause_Meaning ;
     cx:hasExample cx:Transitiveobjectrelativeclause_Ex_A,
         cx:Transitiveobjectrelativeclause_Ex_B,
@@ -52,17 +52,17 @@ cx:Transitiveobjectrelativeclause a rcxn:Construction ;
 cx:Spanishobjectrelativeclause a rcxn:Construction ;
     cx:annotator membr:FernandezSantos ;
     cx:createdOn "2024-11-25"^^xsd:date ;
-    cx:hasTitle "Spanish object relative clause" .
+    rcxn:hasTitle "Spanish object relative clause" .
 
 cx:Spanishrelativeclause a rcxn:Construction ;
     cx:annotator membr:FernandezSantos ;
     cx:createdOn "2024-11-25"^^xsd:date ;
-    cx:hasTitle "Spanish relative clause" .
+    rcxn:hasTitle "Spanish relative clause" .
 
 cx:Spanishtransitiveconstruction a rcxn:Construction ;
     cx:annotator membr:FernandezSantos ;
     cx:createdOn "2024-11-25"^^xsd:date ;
-    cx:hasTitle "Spanish transitive construction" .
+    rcxn:hasTitle "Spanish transitive construction" .
 
 cx:Transitiveobjectrelativeclause_A a cx:SlotMandatory ;
     cx:hasSlotForm cx:Transitiveobjectrelativeclause_A_Form ;

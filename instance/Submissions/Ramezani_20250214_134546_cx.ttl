@@ -13,7 +13,7 @@ cx:Argumentstructureconstruction a rcxn:Construction ;
     cx:hasConstructionMeaning cx:Argumentstructureconstruction_Meaning ;
     cx:hasMetadata cx:Argumentstructureconstruction_MD ;
     cx:hasSlots cx:Argumentstructureconstruction_slots ;
-    cx:hasTitle "English Argument structure construction" ;
+    rcxn:hasTitle "English Argument structure construction" ;
     links:inheritedBy cx:EnglishCause-Motionconstruction,
         cx:EnglishDitransitiveconstruction,
         cx:EnglishResultativeconstruction,
@@ -76,7 +76,7 @@ cx:Argumentstructureconstruction_slots a rdf:Seq ;
 
 cx:EnglishCause-Motionconstruction a rcxn:Construction ;
     cx:hasMetadata cx:EnglishCause-Motionconstruction_MD ;
-    cx:hasTitle "English Cause-Motion construction" .
+    rcxn:hasTitle "English Cause-Motion construction" .
 
 cx:EnglishCause-Motionconstruction_MD a cx:Metadata ;
     cx:annotator membr:Ramezani ;
@@ -84,7 +84,7 @@ cx:EnglishCause-Motionconstruction_MD a cx:Metadata ;
 
 cx:EnglishDitransitiveconstruction a rcxn:Construction ;
     cx:hasMetadata cx:EnglishDitransitiveconstruction_MD ;
-    cx:hasTitle "English Ditransitive construction" .
+    rcxn:hasTitle "English Ditransitive construction" .
 
 cx:EnglishDitransitiveconstruction_MD a cx:Metadata ;
     cx:annotator membr:Ramezani ;
@@ -92,7 +92,7 @@ cx:EnglishDitransitiveconstruction_MD a cx:Metadata ;
 
 cx:EnglishResultativeconstruction a rcxn:Construction ;
     cx:hasMetadata cx:EnglishResultativeconstruction_MD ;
-    cx:hasTitle "English Resultative construction" .
+    rcxn:hasTitle "English Resultative construction" .
 
 cx:EnglishResultativeconstruction_MD a cx:Metadata ;
     cx:annotator membr:Ramezani ;
@@ -100,7 +100,7 @@ cx:EnglishResultativeconstruction_MD a cx:Metadata ;
 
 cx:EnglishTransitiveconstruction a rcxn:Construction ;
     cx:hasMetadata cx:EnglishTransitiveconstruction_MD ;
-    cx:hasTitle "English Transitive construction" .
+    rcxn:hasTitle "English Transitive construction" .
 
 cx:EnglishTransitiveconstruction_MD a cx:Metadata ;
     cx:annotator membr:Ramezani ;

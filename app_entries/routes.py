@@ -45,12 +45,11 @@ def list_view():
 
     # SPARQL query to get the title for each construction
     query = """
-    PREFIX cx: <http://example.org/cx/>
     PREFIX rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#>
     SELECT ?construction ?title
     WHERE {
         ?construction a rcxn:Construction .
-        ?construction cx:hasTitle ?title .
+        ?construction rcxn:hasTitle ?title .
     }
     """
 
@@ -76,7 +75,12 @@ def list_view():
 @app_entries_blueprint.route('/construction/<path:uri>', endpoint='construction_detail')
 def construction_detail(uri):
     # A list of prefixes that we might want to delete later from the URI
-    prefixes = "http://example.org/cx/|https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links#|http://example.org/users#|http://purl.org/olia/olia.owl#|http://www.w3.org/2000/01/rdf-schema#|http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    prefixes = ("http://example.org/cx/|"
+                "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links#|"
+                "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#|"
+                "http://example.org/users#|http://purl.org/olia/olia.owl#|"
+                "http://www.w3.org/2000/01/rdf-schema#|"
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#")
 
     # Rebuild the full URI for the construction
     entry_uri = URIRef("http://example.org/cx/" + uri)
@@ -127,7 +131,7 @@ def construction_detail(uri):
         predicate = link['property']
         object_value = link['object']
         uri = URIRef(f"http://example.org/cx/{object_value}")
-        for obj in g.objects(subject=uri, predicate=URIRef(f"http://example.org/cx/{title_uri}")):
+        for obj in g.objects(subject=uri, predicate=URIRef(f"https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#{title_uri}")):
             links.append({
                 'property': re.sub(prefixes, "", predicate),  # Cleaned property
                 'object': re.sub(prefixes, "", str(obj)),  # Cleaned object
@@ -251,7 +255,7 @@ def construction_detail(uri):
     #print(research)
 
     # Fetch the title for display purposes
-    title = g.value(entry_uri, CX.hasTitle)
+    title = g.value(entry_uri, rcxn.hasTitle)
 
     return render_template("app_entries/construction.html",
                            title=title,

@@ -8,7 +8,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 cx:Idiomaticconstruction a rcxn:Construction ;
-    cx:hasTitle "German Aus dem Ärmel schütteln construction" ;
+    rcxn:hasTitle "German Aus dem Ärmel schütteln construction" ;
     links:CL_differentFormSameFunction cx:EnglishPullsomethingoutofahat ;
     links:CL_similarFormDifferentFunction cx:Englishrollupyoursleeves,
         <http://example.org/cx/Farsibarāyekasiāstinbālāzadan:torollupsleevesforsomething>,
@@ -25,22 +25,22 @@ cx:Definitearticle RDFS:label "Definite article" .
 cx:EnglishPullsomethingoutofahat a rcxn:Construction ;
     cx:annotator membr:Rastegar ;
     cx:createdOn "2024-12-04"^^xsd:date ;
-    cx:hasTitle "English Pull something out of a hat" .
+    rcxn:hasTitle "English Pull something out of a hat" .
 
 cx:Englishrollupyoursleeves a rcxn:Construction ;
     cx:annotator membr:Rastegar ;
     cx:createdOn "2024-12-04"^^xsd:date ;
-    cx:hasTitle "English roll up your sleeves" .
+    rcxn:hasTitle "English roll up your sleeves" .
 
 <http://example.org/cx/Farsibarāyekasiāstinbālāzadan:torollupsleevesforsomething> a rcxn:Construction ;
     cx:annotator membr:Rastegar ;
     cx:createdOn "2024-12-04"^^xsd:date ;
-    cx:hasTitle "Farsi barāye kasi āstin bālā zadan: to roll up sleeves for something" .
+    rcxn:hasTitle "Farsi barāye kasi āstin bālā zadan: to roll up sleeves for something" .
 
 <http://example.org/cx/Farsimārāstin-exodparvarāndan:tonurtureasnakeinone'sbosom> a rcxn:Construction ;
     cx:annotator membr:Rastegar ;
     cx:createdOn "2024-12-04"^^xsd:date ;
-    cx:hasTitle "Farsi mār āstin-e xod parvarāndan: to nurture a snake in one's bosom" .
+    rcxn:hasTitle "Farsi mār āstin-e xod parvarāndan: to nurture a snake in one's bosom" .
 
 cx:Idiomaticconstruction_A a cx:SlotMandatory ;
     cx:WordOrder "Initial position in prepositional phrase" ;

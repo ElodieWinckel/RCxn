@@ -9,7 +9,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 cx:Transitivedurch-Präfixverbkonstruktion a rcxn:Construction ;
-    cx:hasTitle "Mittelhochdeutsch, schriftlich, 12. Jh. Transitive durch-Präfixverbkonstruktion" ;
+    rcxn:hasTitle "Mittelhochdeutsch, schriftlich, 12. Jh. Transitive durch-Präfixverbkonstruktion" ;
     cx:hasConstructionMeaning cx:Transitivedurch-Präfixverbkonstruktion_Meaning ;
     cx:hasExample cx:Transitivedurch-Präfixverbkonstruktion_Ex_A,
         cx:Transitivedurch-Präfixverbkonstruktion_Ex_B,
@@ -26,7 +26,7 @@ cx:Transitivedurch-Präfixverbkonstruktion a rcxn:Construction ;
 cx:Monotransitivkonstruktion a rcxn:Construction ;
     cx:annotator membr:Fuehrer ;
     cx:createdOn "2024-11-25"^^xsd:date ;
-    cx:hasTitle "Monotransitivkonstruktion" .
+    rcxn:hasTitle "Monotransitivkonstruktion" .
 
 cx:Präfixverbkonstruktion a rcxn:Construction ;
     cx:annotator membr:Fuehrer ;

@@ -122,12 +122,11 @@ def load_existing_constructions(file_path):
 
     # SPARQL query to get the title for each construction
     query = """
-        PREFIX cx: <http://example.org/cx/>
         PREFIX rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#>
         SELECT ?construction ?title
         WHERE {
             ?construction a rcxn:Construction .
-            ?construction cx:hasTitle ?title .
+            ?construction rcxn:hasTitle ?title .
         }
         """
 
@@ -320,7 +319,7 @@ def form_submit():
     # TITLE
     # The name of the construction is a concatenation of the language and the title
     construction_complete_title = f"{construction_language} {construction_name}"
-    g.add((cx[construction_name_cleaned], cx.hasTitle, Literal(construction_complete_title)))
+    g.add((cx[construction_name_cleaned], rcxn.hasTitle, Literal(construction_complete_title)))
 
 ###################################################
 ### IMPLEMENT CONSTRUCTION SOURCES
@@ -655,7 +654,7 @@ def form_submit():
             g.add((cx[metadata_inherit_construction], cx.annotator, membr[user_name]))
             g.add((cx[metadata_inherit_construction], cx.createdOn,
                    Literal(datetime.now().strftime('%Y-%m-%d'), datatype=XSD.date)))
-            g.add((cx[cleaned_inherit_construction], cx.hasTitle, Literal(inherit_construction)))
+            g.add((cx[cleaned_inherit_construction], rcxn.hasTitle, Literal(inherit_construction)))
             print("New construction needed!")
         # In any case, write a triplet defining this construction as inherited from
         g.add((cx[construction_name_cleaned], links.inheritsFrom, cx[cleaned_inherit_construction]))
@@ -679,7 +678,7 @@ def form_submit():
             g.add((cx[metadata_inherit_construction], cx.annotator, membr[user_name]))
             g.add((cx[metadata_inherit_construction], cx.createdOn,
                    Literal(datetime.now().strftime('%Y-%m-%d'), datatype=XSD.date)))
-            g.add((cx[cleaned_inherit_construction], cx.hasTitle, Literal(inherit_construction)))
+            g.add((cx[cleaned_inherit_construction], rcxn.hasTitle, Literal(inherit_construction)))
             print("New construction needed!")
         # In any case, write a triplet defining this construction as inherited from
         g.add((cx[construction_name_cleaned], links.inheritedBy, cx[cleaned_inherit_construction]))
@@ -703,7 +702,7 @@ def form_submit():
             g.add((cx[metadata_inherit_construction], cx.annotator, membr[user_name]))
             g.add((cx[metadata_inherit_construction], cx.createdOn,
                    Literal(datetime.now().strftime('%Y-%m-%d'), datatype=XSD.date)))
-            g.add((cx[cleaned_inherit_construction], cx.hasTitle, Literal(inherit_construction)))
+            g.add((cx[cleaned_inherit_construction], rcxn.hasTitle, Literal(inherit_construction)))
             print("New construction needed!")
         # In any case, write a triplet defining this construction as inherited from
         g.add((cx[construction_name_cleaned], links.metaphoricalExtension, cx[cleaned_inherit_construction]))
@@ -743,7 +742,7 @@ def form_submit():
                 g.add((cx[metadata_inherit_construction], cx.annotator, membr[user_name]))
                 g.add((cx[metadata_inherit_construction], cx.createdOn,
                        Literal(datetime.now().strftime('%Y-%m-%d'), datatype=XSD.date)))
-                g.add((cx[cleaned_inherit_construction], cx.hasTitle, Literal(similarity_link)))
+                g.add((cx[cleaned_inherit_construction], rcxn.hasTitle, Literal(similarity_link)))
                 print("New construction needed!")
             # In any case, write a triplet defining this construction as having similarity link
             g.add((cx[construction_name_cleaned], property_uri, cx[cleaned_inherit_construction]))

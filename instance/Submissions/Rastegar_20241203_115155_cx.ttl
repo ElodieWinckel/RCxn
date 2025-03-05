@@ -7,7 +7,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 cx:Idiomaticconstructions a rcxn:Construction ;
-    cx:hasTitle "English Burn one's bridges construction" ;
+    rcxn:hasTitle "English Burn one's bridges construction" ;
     cx:hasConstructionMeaning cx:Idiomaticconstructions_Meaning ;
     cx:hasExample cx:Idiomaticconstructions_Ex_A,
         cx:Idiomaticconstructions_Ex_B ;

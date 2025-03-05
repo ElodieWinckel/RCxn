@@ -6,7 +6,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 cx:Toughmovementconstruction a rcxn:Construction ;
-    cx:hasTitle "English Tough adjective construction" ;
+    rcxn:hasTitle "English Tough adjective construction" ;
     cx:hasConstructionMeaning cx:Toughmovementconstruction_Meaning ;
     cx:hasExample cx:Toughmovementconstruction_Ex_A ;
     cx:hasMetadata cx:Toughmovementconstruction_MD ;

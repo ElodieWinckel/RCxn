@@ -6,7 +6,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://example.org/cx/TheEnglishGIVE-OUTVerbParticleConstruction.> a rcxn:Construction ;
-    cx:hasTitle "English GIVE-OUT Verb Particle Construction." ;
+    rcxn:hasTitle "English GIVE-OUT Verb Particle Construction." ;
     cx:hasConstructionMeaning cx:TheEnglishGIVE-OUTVerbParticleConstruction._Meaning ;
     cx:hasExample cx:TheEnglishGIVE-OUTVerbParticleConstruction._Ex_A ;
     cx:hasMetadata cx:TheEnglishGIVE-OUTVerbParticleConstruction._MD ;

@@ -7,7 +7,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions> a rcxn:Construction ;
-    cx:hasTitle "Modern standard High German Allative NP1 + auf + NP2 & NP1 + an + NP2 constructions" ;
+    rcxn:hasTitle "Modern standard High German Allative NP1 + auf + NP2 & NP1 + an + NP2 constructions" ;
     cx:hasConstructionMeaning <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_Meaning> ;
     cx:hasMetadata <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_MD> ;
     cx:hasSlots <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_slots> ;
