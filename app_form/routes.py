@@ -406,7 +406,7 @@ def form_submit():
 
     # IMAGE SCHEMA
     if image_schema.strip():
-        g.add((cx[cx_meaning_uri], cx.hasImageSchema, Literal(image_schema))) # TODO "usesImageSchema"?
+        g.add((cx[cx_meaning_uri], rcxn.usesImageSchema, Literal(image_schema)))
     else:
         print("No image-schema to add")
 

@@ -40,11 +40,30 @@
     
 
 
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#hasMeaning -->
+
+    <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#hasMeaning">
+        <rdfs:comment xml:lang="en">Property that relates the meaning component of a construction to the corresponding plaintext description of this meaning.</rdfs:comment>
+        <rdfs:label xml:lang="en">Meaning of the construction</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#hasTitle -->
 
     <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#hasTitle">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:label xml:lang="en">Title</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#usesImageSchema -->
+
+    <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#usesImageSchema">
+        <rdfs:domain rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#ConstructionMeaning"/>
+        <rdfs:comment xml:lang="en">Relates the meaning component of a construction to the cognitive pattern that it is based on (i.e., containment or path) and that helps convey meaning through spatial or experiential metaphors.</rdfs:comment>
+        <rdfs:label xml:lang="en">Image-Schema</rdfs:label>
     </owl:ObjectProperty>
     
 

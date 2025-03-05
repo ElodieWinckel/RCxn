@@ -55,7 +55,7 @@
     cx:creationDate "2024-12-10"^^xsd:date .
 
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_Meaning> a rcxn:ConstructionMeaning ;
-    cx:hasImageSchema "SUPPORT, DIRECTION, CONTACT, PROXIMITY, LOCATION, CONTAINMENT, SOURCE-PATH-GOAL, FORCE, PART-WHOLE, SURFACE" ;
+    rcxn:usesImageSchema "SUPPORT, DIRECTION, CONTACT, PROXIMITY, LOCATION, CONTAINMENT, SOURCE-PATH-GOAL, FORCE, PART-WHOLE, SURFACE" ;
     rcxn:hasMeaning "The sense of direction towards another entity" .
 
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_slots> a rdf:Seq ;
