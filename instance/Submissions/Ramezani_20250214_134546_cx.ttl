@@ -12,7 +12,7 @@
 cx:Argumentstructureconstruction a rcxn:Construction ;
     rcxn:hasConstructionMeaning cx:Argumentstructureconstruction_Meaning ;
     cx:hasMetadata cx:Argumentstructureconstruction_MD ;
-    cx:hasSlots cx:Argumentstructureconstruction_slots ;
+    rcxn:hasSlots cx:Argumentstructureconstruction_slots ;
     rcxn:hasTitle "English Argument structure construction" ;
     links:inheritedBy cx:EnglishCause-Motionconstruction,
         cx:EnglishDitransitiveconstruction,

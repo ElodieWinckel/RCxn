@@ -10,7 +10,7 @@ cx:Toughmovementconstruction a rcxn:Construction ;
     rcxn:hasConstructionMeaning cx:Toughmovementconstruction_Meaning ;
     cx:hasExample cx:Toughmovementconstruction_Ex_A ;
     cx:hasMetadata cx:Toughmovementconstruction_MD ;
-    cx:hasSlots cx:Toughmovementconstruction_slots ;
+    rcxn:hasSlots cx:Toughmovementconstruction_slots ;
     cx:partOfLanguage "English" ;
     RDFS:comment "No research data that will be linked" .
 

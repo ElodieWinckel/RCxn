@@ -15,7 +15,7 @@
         <http://example.org/cx/come+[noise/mannerofmovement]V-ing_Ex_C>,
         <http://example.org/cx/come+[noise/mannerofmovement]V-ing_Ex_D> ;
     cx:hasMetadata <http://example.org/cx/come+[noise/mannerofmovement]V-ing_MD> ;
-    cx:hasSlots <http://example.org/cx/come+[noise/mannerofmovement]V-ing_slots> ;
+    rcxn:hasSlots <http://example.org/cx/come+[noise/mannerofmovement]V-ing_slots> ;
     cx:partOfLanguage "English" ;
     RDFS:comment "tables (of association scores, etc.) and possibly some figures" .
 

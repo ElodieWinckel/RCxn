@@ -13,7 +13,7 @@ cx:ThisCloseToV-ing a rcxn:Construction ;
 The index finger and the thumb are stretched (or partially crooked) and drawn near one another while the rest of the fingers remain retracted.\r
 The gesture is sometimes used a few milliseconds before uttering "this" and is most often maintained until uttering the V-ing element (and its complement if the verb is transitive).""" ;
     cx:hasMetadata cx:ThisCloseToV-ing_MD ;
-    cx:hasSlots cx:ThisCloseToV-ing_slots ;
+    rcxn:hasSlots cx:ThisCloseToV-ing_slots ;
     cx:partOfLanguage "(American) English, Spoken Modality" ;
     RDFS:comment "I would need to upload an Excel file with all the concordance lines and a link with all the video-snippets" .
 

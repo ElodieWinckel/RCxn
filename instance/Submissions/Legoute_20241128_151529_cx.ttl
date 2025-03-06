@@ -12,7 +12,7 @@ cx:POU-beneficiaryconstruction a rcxn:Construction ;
     rcxn:hasConstructionMeaning cx:POU-beneficiaryconstruction_Meaning ;
     cx:hasExample cx:POU-beneficiaryconstruction_Ex_A ;
     cx:hasMetadata cx:POU-beneficiaryconstruction_MD ;
-    cx:hasSlots cx:POU-beneficiaryconstruction_slots ;
+    rcxn:hasSlots cx:POU-beneficiaryconstruction_slots ;
     cx:partOfLanguage "Haitian Creole" ;
     links:similarFormDifferentFunction cx:POU-purposeconstruction .
 

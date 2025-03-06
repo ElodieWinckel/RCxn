@@ -14,7 +14,7 @@ cx:Relative-Topic-ShiftConstruction a rcxn:Construction ;
     cx:hasExample cx:Relative-Topic-ShiftConstruction_Ex_A,
         cx:Relative-Topic-ShiftConstruction_Ex_B ;
     cx:hasMetadata cx:Relative-Topic-ShiftConstruction_MD ;
-    cx:hasSlots cx:Relative-Topic-ShiftConstruction_slots ;
+    rcxn:hasSlots cx:Relative-Topic-ShiftConstruction_slots ;
     links:inheritsFrom cx:ItalianConiunctioRelativa,
         cx:ItalianSiPassivante,
         cx:ItalianTemporalSubordinateClause ;

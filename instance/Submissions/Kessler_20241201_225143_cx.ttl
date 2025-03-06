@@ -12,7 +12,7 @@ cx:Dooperationwithoperand1onoperand2construction a rcxn:Construction ;
     rcxn:hasConstructionMeaning cx:Dooperationwithoperand1onoperand2construction_Meaning ;
     cx:hasExample cx:Dooperationwithoperand1onoperand2construction_Ex_A ;
     cx:hasMetadata cx:Dooperationwithoperand1onoperand2construction_MD ;
-    cx:hasSlots cx:Dooperationwithoperand1onoperand2construction_slots ;
+    rcxn:hasSlots cx:Dooperationwithoperand1onoperand2construction_slots ;
     cx:partOfLanguage "Literary Chinese, Han to Late Qing" .
 
 cx:Dooperationwithoperand1onoperand2construction_A a rcxn:SlotOptional ;

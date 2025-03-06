@@ -10,7 +10,7 @@
     rcxn:hasConstructionMeaning cx:TheEnglishGIVE-OUTVerbParticleConstruction._Meaning ;
     cx:hasExample cx:TheEnglishGIVE-OUTVerbParticleConstruction._Ex_A ;
     cx:hasMetadata cx:TheEnglishGIVE-OUTVerbParticleConstruction._MD ;
-    cx:hasSlots cx:TheEnglishGIVE-OUTVerbParticleConstruction._slots ;
+    rcxn:hasSlots cx:TheEnglishGIVE-OUTVerbParticleConstruction._slots ;
     cx:partOfLanguage "English" .
 
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._A a rcxn:SlotOptional ;

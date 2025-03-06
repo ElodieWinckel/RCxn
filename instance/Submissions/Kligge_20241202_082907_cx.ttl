@@ -9,7 +9,7 @@
     rcxn:hasTitle "German NP [Def.Det-strong + ADJ-weak + N]" ;
     rcxn:hasConstructionMeaning <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_Meaning> ;
     cx:hasMetadata <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_MD> ;
-    cx:hasSlots <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_slots> ;
+    rcxn:hasSlots <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_slots> ;
     links:inheritedBy <http://example.org/cx/NP[das+ADJ-e+N]nom.sg.neut>,
         <http://example.org/cx/NP[dem+ADJ-en+N]dat.sg.masc/neut>,
         <http://example.org/cx/NP[der+ADJ-e+N]nom.sg.masc>,

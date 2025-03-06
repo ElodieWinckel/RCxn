@@ -12,7 +12,7 @@ cx:Idiomaticconstructions a rcxn:Construction ;
     cx:hasExample cx:Idiomaticconstructions_Ex_A,
         cx:Idiomaticconstructions_Ex_B ;
     cx:hasMetadata cx:Idiomaticconstructions_MD ;
-    cx:hasSlots cx:Idiomaticconstructions_slots ;
+    rcxn:hasSlots cx:Idiomaticconstructions_slots ;
     cx:partOfLanguage "English" .
 
 cx:Idiomaticconstructions_A a rcxn:SlotMandatory ;

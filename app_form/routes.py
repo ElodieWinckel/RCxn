@@ -424,7 +424,7 @@ def form_submit():
         seq_position = URIRef(RDF[f"_{i + 1}"])
         g.add((seq_slots, seq_position, element_uri))
     ## Add the sequence as the object of the triple
-    g.add((cx[construction_name_cleaned], cx.hasSlots, seq_slots))
+    g.add((cx[construction_name_cleaned], rcxn.hasSlots, seq_slots))
 
     # FROM NOW ON: A LOOP THAT ADDS THE VALUE OF THE FIELDS RELATED TO THE SLOTS FOR EACH SLOT
     for i in range(1, element_nb + 1):

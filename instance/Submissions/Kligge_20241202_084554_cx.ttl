@@ -17,7 +17,7 @@
     links:inheritsFrom <http://example.org/cx/NPnom.sg.masc> ;
     rcxn:hasConstructionMeaning <http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_Meaning> ;
     cx:hasMetadata <http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_MD> ;
-    cx:hasSlots <http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_slots> ;
+    rcxn:hasSlots <http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_slots> ;
     cx:partOfLanguage "German" .
 
 <http://example.org/cx/NP[das+ADJ-eN]acc.sg.neut> a rcxn:Construction ;

@@ -15,7 +15,7 @@ cx:Transitivedurch-Präfixverbkonstruktion a rcxn:Construction ;
         cx:Transitivedurch-Präfixverbkonstruktion_Ex_B,
         cx:Transitivedurch-Präfixverbkonstruktion_Ex_C ;
     cx:hasMetadata cx:Transitivedurch-Präfixverbkonstruktion_MD ;
-    cx:hasSlots cx:Transitivedurch-Präfixverbkonstruktion_slots ;
+    rcxn:hasSlots cx:Transitivedurch-Präfixverbkonstruktion_slots ;
     links:inheritsFrom cx:Monotransitivkonstruktion,
         cx:Präfixverbkonstruktion ;
     cx:partOfLanguage "Mittelhochdeutsch, schriftlich, 12. Jh." ;

@@ -10,7 +10,7 @@
     rcxn:hasTitle "Modern standard High German Allative NP1 + auf + NP2 & NP1 + an + NP2 constructions" ;
     rcxn:hasConstructionMeaning <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_Meaning> ;
     cx:hasMetadata <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_MD> ;
-    cx:hasSlots <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_slots> ;
+    rcxn:hasSlots <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_slots> ;
     cx:partOfLanguage "Modern standard High German" .
 
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_C_Morphosyntax> a cx:NP ;

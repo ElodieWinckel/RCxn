@@ -17,7 +17,7 @@ cx:Idiomaticconstruction a rcxn:Construction ;
     cx:hasExample cx:Idiomaticconstruction_Ex_A,
         cx:Idiomaticconstruction_Ex_B ;
     cx:hasMetadata cx:Idiomaticconstruction_MD ;
-    cx:hasSlots cx:Idiomaticconstruction_slots ;
+    rcxn:hasSlots cx:Idiomaticconstruction_slots ;
     cx:partOfLanguage "German" .
 
 cx:Definitearticle RDFS:label "Definite article" .
