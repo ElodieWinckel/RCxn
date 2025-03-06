@@ -56,9 +56,9 @@
     
 
 
-    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#hasSlot -->
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#hasSlots -->
 
-    <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#hasSlot">
+    <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#hasSlots">
         <rdfs:domain rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#Construction"/>
     </owl:ObjectProperty>
     
@@ -119,6 +119,14 @@
     <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#ConstructionMeaning -->
 
     <owl:Class rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#ConstructionMeaning"/>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#Metadata -->
+
+    <owl:Class rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#Metadata">
+        <rdfs:comment xml:lang="en">Non-linguistic information on the construction entry, such as the persons involved in the creation of the entry or the sources.</rdfs:comment>
+    </owl:Class>
     
 
 

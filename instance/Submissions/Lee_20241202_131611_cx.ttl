@@ -120,7 +120,7 @@ cx:Generalprepositionalconstructions a rcxn:Construction ;
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_F_Morphosyntax> a cx:Verb .
 
-<http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_MD> a cx:Metadata ;
+<http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_MD> a rcxn:Metadata ;
     cx:annotator membr:Lee ;
     cx:creationDate "2024-12-02"^^xsd:date .
 

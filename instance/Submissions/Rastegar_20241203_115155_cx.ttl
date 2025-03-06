@@ -96,7 +96,7 @@ cx:Idiomaticconstructions_Ex_A a cx:Example ;
 cx:Idiomaticconstructions_Ex_B a cx:Example ;
     cx:hasText "I had, quite deliberately, burned my bridges -- there was no returning to the closet for me." .
 
-cx:Idiomaticconstructions_MD a cx:Metadata ;
+cx:Idiomaticconstructions_MD a rcxn:Metadata ;
     cx:annotator membr:Rastegar ;
     cx:creationDate "2024-12-03"^^xsd:date .
 

@@ -60,7 +60,7 @@ cx:POU-beneficiaryconstruction_Ex_A a cx:Example ;
     cx:hasTranslation "They made a mass in our name" ;
     RDFS:comment "Text 1, #27" .
 
-cx:POU-beneficiaryconstruction_MD a cx:Metadata ;
+cx:POU-beneficiaryconstruction_MD a rcxn:Metadata ;
     cx:annotator membr:Legoute ;
     cx:creationDate "2024-11-28"^^xsd:date .
 

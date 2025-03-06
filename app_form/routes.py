@@ -282,7 +282,7 @@ def form_submit():
 
     # URI for Metadata
     metadata_uri = f"{construction_name_cleaned}_MD"
-    g.add((cx[metadata_uri], RDF.type, cx.Metadata))
+    g.add((cx[metadata_uri], RDF.type, rcxn.Metadata))
     # Triple to relate cx to its metadata
     g.add((cx[construction_name_cleaned], cx.hasMetadata, cx[metadata_uri]))
 
@@ -650,7 +650,7 @@ def form_submit():
             metadata_inherit_construction = f"{cleaned_inherit_construction}_MD"
             g.add((cx[cleaned_inherit_construction], RDF.type, rcxn.Construction))
             g.add((cx[cleaned_inherit_construction], cx.hasMetadata, cx[metadata_inherit_construction]))
-            g.add((cx[metadata_inherit_construction], RDF.type, cx.Metadata))
+            g.add((cx[metadata_inherit_construction], RDF.type, rcxn.Metadata))
             g.add((cx[metadata_inherit_construction], cx.annotator, membr[user_name]))
             g.add((cx[metadata_inherit_construction], cx.createdOn,
                    Literal(datetime.now().strftime('%Y-%m-%d'), datatype=XSD.date)))
@@ -674,7 +674,7 @@ def form_submit():
             metadata_inherit_construction = f"{cleaned_inherit_construction}_MD"
             g.add((cx[cleaned_inherit_construction], RDF.type, rcxn.Construction))
             g.add((cx[cleaned_inherit_construction], cx.hasMetadata, cx[metadata_inherit_construction]))
-            g.add((cx[metadata_inherit_construction], RDF.type, cx.Metadata))
+            g.add((cx[metadata_inherit_construction], RDF.type, rcxn.Metadata))
             g.add((cx[metadata_inherit_construction], cx.annotator, membr[user_name]))
             g.add((cx[metadata_inherit_construction], cx.createdOn,
                    Literal(datetime.now().strftime('%Y-%m-%d'), datatype=XSD.date)))
@@ -698,7 +698,7 @@ def form_submit():
             metadata_inherit_construction = f"{cleaned_inherit_construction}_MD"
             g.add((cx[cleaned_inherit_construction], RDF.type, rcxn.Construction))
             g.add((cx[cleaned_inherit_construction], cx.hasMetadata, cx[metadata_inherit_construction]))
-            g.add((cx[metadata_inherit_construction], RDF.type, cx.Metadata))
+            g.add((cx[metadata_inherit_construction], RDF.type, rcxn.Metadata))
             g.add((cx[metadata_inherit_construction], cx.annotator, membr[user_name]))
             g.add((cx[metadata_inherit_construction], cx.createdOn,
                    Literal(datetime.now().strftime('%Y-%m-%d'), datatype=XSD.date)))
@@ -738,7 +738,7 @@ def form_submit():
                 metadata_inherit_construction = f"{cleaned_inherit_construction}_MD"
                 g.add((cx[cleaned_inherit_construction], RDF.type, rcxn.Construction))
                 g.add((cx[cleaned_inherit_construction], cx.hasMetadata, cx[metadata_inherit_construction]))
-                g.add((cx[metadata_inherit_construction], RDF.type, cx.Metadata))
+                g.add((cx[metadata_inherit_construction], RDF.type, rcxn.Metadata))
                 g.add((cx[metadata_inherit_construction], cx.annotator, membr[user_name]))
                 g.add((cx[metadata_inherit_construction], cx.createdOn,
                        Literal(datetime.now().strftime('%Y-%m-%d'), datatype=XSD.date)))

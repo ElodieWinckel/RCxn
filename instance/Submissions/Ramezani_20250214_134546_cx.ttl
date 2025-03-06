@@ -56,7 +56,7 @@ cx:Argumentstructureconstruction_C_Form a cx:SlotForm ;
 cx:Argumentstructureconstruction_C_Morphosyntax a cx:oneorsevarlXP ;
     cx:hasSyntacticFunction "Complement(s)" .
 
-cx:Argumentstructureconstruction_MD a cx:Metadata ;
+cx:Argumentstructureconstruction_MD a rcxn:Metadata ;
     cx:annotator membr:Ramezani ;
     cx:creationDate "2025-02-14"^^xsd:date ;
     cx:hasSources cx:Argumentstructureconstruction_Sources .

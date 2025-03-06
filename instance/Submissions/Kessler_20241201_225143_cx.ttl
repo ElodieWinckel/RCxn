@@ -72,7 +72,7 @@ cx:Dooperationwithoperand1onoperand2construction_Ex_A a cx:Example ;
     cx:hasTranslation "Multiply it by the height" ;
     cx:hasTransliteration "yi gao cheng zhi" .
 
-cx:Dooperationwithoperand1onoperand2construction_MD a cx:Metadata ;
+cx:Dooperationwithoperand1onoperand2construction_MD a rcxn:Metadata ;
     cx:annotator membr:Kessler ;
     cx:creationDate "2024-12-01"^^xsd:date ;
     cx:hasSources cx:Dooperationwithoperand1onoperand2construction_Sources .

@@ -59,7 +59,7 @@ cx:ThisCloseToV-ing_Ex_A a cx:Example ;
     cx:hasText "It was this close to happening, right? This close to happening! " ;
     RDFS:comment "https://pisa.vrnewsscape.ucla.edu/newsscape_mp4_snippet.cgi?file=fa5d0dfc-cb7b-11e6-97cd-089e01ba0338&start=2396&end=2401" .
 
-cx:ThisCloseToV-ing_MD a cx:Metadata ;
+cx:ThisCloseToV-ing_MD a rcxn:Metadata ;
     cx:annotator membr:Iabdounane ;
     cx:creationDate "2024-11-28"^^xsd:date .
 

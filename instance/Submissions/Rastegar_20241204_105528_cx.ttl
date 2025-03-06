@@ -133,7 +133,7 @@ cx:Idiomaticconstruction_Ex_B a cx:Example ;
     cx:hasTranslation "Since the sum cannot be simply pulled out of thin air, an investor was needed." ;
     RDFS:comment "Shows the construction in zu-infinitive form with sein ; again in negative context." .
 
-cx:Idiomaticconstruction_MD a cx:Metadata ;
+cx:Idiomaticconstruction_MD a rcxn:Metadata ;
     cx:annotator membr:Rastegar ;
     cx:creationDate "2024-12-04"^^xsd:date .
 

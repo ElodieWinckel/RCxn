@@ -76,7 +76,7 @@
 <http://example.org/cx/come+[noise/mannerofmovement]V-ing_Ex_D> a cx:Example ;
     cx:hasText "A second or two later , [everything] [came] [crashing] [down] in a big heap on the railway line below ." .
 
-<http://example.org/cx/come+[noise/mannerofmovement]V-ing_MD> a cx:Metadata ;
+<http://example.org/cx/come+[noise/mannerofmovement]V-ing_MD> a rcxn:Metadata ;
     cx:annotator membr:Patel ;
     cx:creationDate "2024-11-28"^^xsd:date ;
     cx:hasSources <http://example.org/cx/come+[noise/mannerofmovement]V-ing_Sources> .

@@ -166,7 +166,7 @@ cx:Transitiveobjectrelativeclause_Ex_D a cx:Example ;
     cx:hasTranslation "The grandpa that is being hugged by the kid" ;
     RDFS:comment "plain-variant verb-medial" .
 
-cx:Transitiveobjectrelativeclause_MD a cx:Metadata ;
+cx:Transitiveobjectrelativeclause_MD a rcxn:Metadata ;
     cx:annotator membr:FernandezSantos ;
     cx:creationDate "2024-11-25"^^xsd:date ;
     cx:hasSources cx:Transitiveobjectrelativeclause_Sources .

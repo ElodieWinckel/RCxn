@@ -44,7 +44,7 @@
 <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_C> a rcxn:SlotMandatory ;
     cx:Morphosyntax "Noun" .
 
-<http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_MD> a cx:Metadata ;
+<http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_MD> a rcxn:Metadata ;
     cx:annotator membr:Kligge ;
     cx:creationDate "2024-12-02"^^xsd:date .
 

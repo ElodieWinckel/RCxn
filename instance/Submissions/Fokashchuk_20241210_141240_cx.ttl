@@ -50,7 +50,7 @@
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_C_Meaning> a cx:SlotMeaning ;
     cx:hasSemanticContribution olia:ThemeRole .
 
-<http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_MD> a cx:Metadata ;
+<http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_MD> a rcxn:Metadata ;
     cx:annotator membr:Fokashchuk ;
     cx:creationDate "2024-12-10"^^xsd:date .
 

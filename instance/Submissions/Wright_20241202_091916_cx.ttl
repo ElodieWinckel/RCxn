@@ -54,7 +54,7 @@ cx:Toughmovementconstruction_Ex_A a cx:Example ;
     cx:hasGlosses "NP BE Adj to-Inf" ;
     cx:hasText "John is easy to please." .
 
-cx:Toughmovementconstruction_MD a cx:Metadata ;
+cx:Toughmovementconstruction_MD a rcxn:Metadata ;
     cx:annotator membr:Wright ;
     cx:creationDate "2024-12-02"^^xsd:date ;
     cx:hasSources cx:Toughmovementconstruction_Sources .

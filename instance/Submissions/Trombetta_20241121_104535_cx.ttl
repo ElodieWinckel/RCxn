@@ -91,7 +91,7 @@ cx:Relative-Topic-ShiftConstruction_Ex_B a cx:Example ;
     cx:hasTranslation "...; and they withdrew toward Cascina, waiting for the king to take further measures against such open defiance from his own subjects. [While these were being awaited], the Florentines faced new and dangerous troubles from other quarters, stirred up primarily by the powers of the league." ;
     RDFS:comment "The Construction is in square brackets, while the rest has been included to allow for an understanding of its function. The coniunctio relativa 'Le quali' anaphorically refers to the 'provisioni' mentioned before the Construction. The noun in the NP thus remains implicit. The verb in the VP, 'aspettare' ('to wait') functions anaphorically, as it is a synonym of 'attendere', which appears shortly before the Construction. The main clause following the Construction introduces a new topic (the new trouble that the Florentines have to face). " .
 
-cx:Relative-Topic-ShiftConstruction_MD a cx:Metadata ;
+cx:Relative-Topic-ShiftConstruction_MD a rcxn:Metadata ;
     cx:annotator membr:Trombetta ;
     cx:creationDate "2024-11-21"^^xsd:date ;
     cx:hasSources cx:Relative-Topic-ShiftConstruction_Sources .

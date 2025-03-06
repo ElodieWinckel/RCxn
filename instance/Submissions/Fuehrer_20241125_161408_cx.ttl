@@ -158,7 +158,7 @@ cx:Transitivedurch-Präfixverbkonstruktion_G_Morphosyntax a cx:Pronomen ;
     cx:hasCaseFeature olia:DativeCase ;
     cx:hasSyntacticFunction "Dativobjekt" .
 
-cx:Transitivedurch-Präfixverbkonstruktion_MD a cx:Metadata ;
+cx:Transitivedurch-Präfixverbkonstruktion_MD a rcxn:Metadata ;
     cx:annotator membr:Fuehrer ;
     cx:creationDate "2024-11-25"^^xsd:date ;
     cx:hasSources cx:Transitivedurch-Präfixverbkonstruktion_Sources .
