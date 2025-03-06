@@ -10,7 +10,7 @@
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]> a rcxn:Construction ;
     rcxn:hasTitle "Standard German written language within the time frame of 1900-1999 [(sich) (NP) (ADJ) (ADV) [vor Augen] (VP)]" ;
     rcxn:hasConstructionMeaning <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_Meaning> ;
-    cx:hasMetadata <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_MD> ;
+    rcxn:hasMetadata <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_MD> ;
     rcxn:hasSlots <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_slots> ;
     links:inheritsFrom cx:Generalprepositionalconstructions,
         <http://example.org/cx/vor+bodypartconstructions> ;

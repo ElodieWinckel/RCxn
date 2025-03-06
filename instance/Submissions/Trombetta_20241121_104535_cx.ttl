@@ -13,7 +13,7 @@ cx:Relative-Topic-ShiftConstruction a rcxn:Construction ;
     rcxn:hasConstructionMeaning cx:Relative-Topic-ShiftConstruction_Meaning ;
     cx:hasExample cx:Relative-Topic-ShiftConstruction_Ex_A,
         cx:Relative-Topic-ShiftConstruction_Ex_B ;
-    cx:hasMetadata cx:Relative-Topic-ShiftConstruction_MD ;
+    rcxn:hasMetadata cx:Relative-Topic-ShiftConstruction_MD ;
     rcxn:hasSlots cx:Relative-Topic-ShiftConstruction_slots ;
     links:inheritsFrom cx:ItalianConiunctioRelativa,
         cx:ItalianSiPassivante,

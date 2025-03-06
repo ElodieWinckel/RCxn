@@ -11,7 +11,7 @@ cx:POU-beneficiaryconstruction a rcxn:Construction ;
     rcxn:hasTitle "Haitian Creole POU-beneficiary construction" ;
     rcxn:hasConstructionMeaning cx:POU-beneficiaryconstruction_Meaning ;
     cx:hasExample cx:POU-beneficiaryconstruction_Ex_A ;
-    cx:hasMetadata cx:POU-beneficiaryconstruction_MD ;
+    rcxn:hasMetadata cx:POU-beneficiaryconstruction_MD ;
     rcxn:hasSlots cx:POU-beneficiaryconstruction_slots ;
     cx:partOfLanguage "Haitian Creole" ;
     links:similarFormDifferentFunction cx:POU-purposeconstruction .

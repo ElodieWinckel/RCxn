@@ -11,7 +11,7 @@ cx:Idiomaticconstructions a rcxn:Construction ;
     rcxn:hasConstructionMeaning cx:Idiomaticconstructions_Meaning ;
     cx:hasExample cx:Idiomaticconstructions_Ex_A,
         cx:Idiomaticconstructions_Ex_B ;
-    cx:hasMetadata cx:Idiomaticconstructions_MD ;
+    rcxn:hasMetadata cx:Idiomaticconstructions_MD ;
     rcxn:hasSlots cx:Idiomaticconstructions_slots ;
     cx:partOfLanguage "English" .
 

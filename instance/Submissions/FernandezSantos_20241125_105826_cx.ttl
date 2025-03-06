@@ -15,7 +15,7 @@ cx:Transitiveobjectrelativeclause a rcxn:Construction ;
         cx:Transitiveobjectrelativeclause_Ex_B,
         cx:Transitiveobjectrelativeclause_Ex_C,
         cx:Transitiveobjectrelativeclause_Ex_D ;
-    cx:hasMetadata cx:Transitiveobjectrelativeclause_MD ;
+    rcxn:hasMetadata cx:Transitiveobjectrelativeclause_MD ;
     rcxn:hasSlots cx:Transitiveobjectrelativeclause_slots ;
     links:inheritsFrom cx:Spanishobjectrelativeclause,
         cx:Spanishrelativeclause,

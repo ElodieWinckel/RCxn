@@ -9,7 +9,7 @@
     rcxn:hasTitle "English GIVE-OUT Verb Particle Construction." ;
     rcxn:hasConstructionMeaning cx:TheEnglishGIVE-OUTVerbParticleConstruction._Meaning ;
     cx:hasExample cx:TheEnglishGIVE-OUTVerbParticleConstruction._Ex_A ;
-    cx:hasMetadata cx:TheEnglishGIVE-OUTVerbParticleConstruction._MD ;
+    rcxn:hasMetadata cx:TheEnglishGIVE-OUTVerbParticleConstruction._MD ;
     rcxn:hasSlots cx:TheEnglishGIVE-OUTVerbParticleConstruction._slots ;
     cx:partOfLanguage "English" .
 

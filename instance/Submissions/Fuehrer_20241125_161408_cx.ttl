@@ -14,7 +14,7 @@ cx:Transitivedurch-Präfixverbkonstruktion a rcxn:Construction ;
     cx:hasExample cx:Transitivedurch-Präfixverbkonstruktion_Ex_A,
         cx:Transitivedurch-Präfixverbkonstruktion_Ex_B,
         cx:Transitivedurch-Präfixverbkonstruktion_Ex_C ;
-    cx:hasMetadata cx:Transitivedurch-Präfixverbkonstruktion_MD ;
+    rcxn:hasMetadata cx:Transitivedurch-Präfixverbkonstruktion_MD ;
     rcxn:hasSlots cx:Transitivedurch-Präfixverbkonstruktion_slots ;
     links:inheritsFrom cx:Monotransitivkonstruktion,
         cx:Präfixverbkonstruktion ;

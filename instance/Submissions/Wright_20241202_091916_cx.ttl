@@ -9,7 +9,7 @@ cx:Toughmovementconstruction a rcxn:Construction ;
     rcxn:hasTitle "English Tough adjective construction" ;
     rcxn:hasConstructionMeaning cx:Toughmovementconstruction_Meaning ;
     cx:hasExample cx:Toughmovementconstruction_Ex_A ;
-    cx:hasMetadata cx:Toughmovementconstruction_MD ;
+    rcxn:hasMetadata cx:Toughmovementconstruction_MD ;
     rcxn:hasSlots cx:Toughmovementconstruction_slots ;
     cx:partOfLanguage "English" ;
     RDFS:comment "No research data that will be linked" .

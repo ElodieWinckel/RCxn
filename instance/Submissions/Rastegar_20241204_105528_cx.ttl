@@ -16,7 +16,7 @@ cx:Idiomaticconstruction a rcxn:Construction ;
     rcxn:hasConstructionMeaning cx:Idiomaticconstruction_Meaning ;
     cx:hasExample cx:Idiomaticconstruction_Ex_A,
         cx:Idiomaticconstruction_Ex_B ;
-    cx:hasMetadata cx:Idiomaticconstruction_MD ;
+    rcxn:hasMetadata cx:Idiomaticconstruction_MD ;
     rcxn:hasSlots cx:Idiomaticconstruction_slots ;
     cx:partOfLanguage "German" .
 

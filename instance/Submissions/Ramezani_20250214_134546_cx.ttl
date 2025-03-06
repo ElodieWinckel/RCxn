@@ -11,7 +11,7 @@
 
 cx:Argumentstructureconstruction a rcxn:Construction ;
     rcxn:hasConstructionMeaning cx:Argumentstructureconstruction_Meaning ;
-    cx:hasMetadata cx:Argumentstructureconstruction_MD ;
+    rcxn:hasMetadata cx:Argumentstructureconstruction_MD ;
     rcxn:hasSlots cx:Argumentstructureconstruction_slots ;
     rcxn:hasTitle "English Argument structure construction" ;
     links:inheritedBy cx:EnglishCause-Motionconstruction,
@@ -75,7 +75,7 @@ cx:Argumentstructureconstruction_slots a rdf:Seq ;
     rdf:_3 cx:Argumentstructureconstruction_C .
 
 cx:EnglishCause-Motionconstruction a rcxn:Construction ;
-    cx:hasMetadata cx:EnglishCause-Motionconstruction_MD ;
+    rcxn:hasMetadata cx:EnglishCause-Motionconstruction_MD ;
     rcxn:hasTitle "English Cause-Motion construction" .
 
 cx:EnglishCause-Motionconstruction_MD a cx:Metadata ;
@@ -83,7 +83,7 @@ cx:EnglishCause-Motionconstruction_MD a cx:Metadata ;
     cx:createdOn "2025-02-14"^^xsd:date .
 
 cx:EnglishDitransitiveconstruction a rcxn:Construction ;
-    cx:hasMetadata cx:EnglishDitransitiveconstruction_MD ;
+    rcxn:hasMetadata cx:EnglishDitransitiveconstruction_MD ;
     rcxn:hasTitle "English Ditransitive construction" .
 
 cx:EnglishDitransitiveconstruction_MD a cx:Metadata ;
@@ -91,7 +91,7 @@ cx:EnglishDitransitiveconstruction_MD a cx:Metadata ;
     cx:createdOn "2025-02-14"^^xsd:date .
 
 cx:EnglishResultativeconstruction a rcxn:Construction ;
-    cx:hasMetadata cx:EnglishResultativeconstruction_MD ;
+    rcxn:hasMetadata cx:EnglishResultativeconstruction_MD ;
     rcxn:hasTitle "English Resultative construction" .
 
 cx:EnglishResultativeconstruction_MD a cx:Metadata ;
@@ -99,7 +99,7 @@ cx:EnglishResultativeconstruction_MD a cx:Metadata ;
     cx:createdOn "2025-02-14"^^xsd:date .
 
 cx:EnglishTransitiveconstruction a rcxn:Construction ;
-    cx:hasMetadata cx:EnglishTransitiveconstruction_MD ;
+    rcxn:hasMetadata cx:EnglishTransitiveconstruction_MD ;
     rcxn:hasTitle "English Transitive construction" .
 
 cx:EnglishTransitiveconstruction_MD a cx:Metadata ;

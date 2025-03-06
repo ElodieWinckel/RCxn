@@ -56,6 +56,16 @@
     
 
 
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#hasMetadata -->
+
+    <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#hasMetadata">
+        <rdfs:domain rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#Construction"/>
+        <rdfs:range rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#Metadata"/>
+        <rdfs:comment xml:lang="en">Relates a construction to its metadata.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#hasSlots -->
 
     <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#hasSlots">

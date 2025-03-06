@@ -232,7 +232,6 @@ def construction_detail(uri):
                 'property': re.sub(prefixes, "", str(predicate)),
                 'object': re.sub(prefixes, "", str(obj)),
             })
-    triples[:] = [item for item in triples if item['property'] != "hasMetadata"]
 
     # Collect triples for research question and findings
     research = []

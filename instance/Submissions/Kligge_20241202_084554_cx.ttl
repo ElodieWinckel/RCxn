@@ -16,7 +16,7 @@
     links:inheritsFrom <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]> ;
     links:inheritsFrom <http://example.org/cx/NPnom.sg.masc> ;
     rcxn:hasConstructionMeaning <http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_Meaning> ;
-    cx:hasMetadata <http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_MD> ;
+    rcxn:hasMetadata <http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_MD> ;
     rcxn:hasSlots <http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_slots> ;
     cx:partOfLanguage "German" .
 
