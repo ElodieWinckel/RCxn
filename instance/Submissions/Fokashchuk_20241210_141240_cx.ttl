@@ -51,7 +51,7 @@
     cx:hasSemanticContribution olia:ThemeRole .
 
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_MD> a rcxn:Metadata ;
-    cx:annotator membr:Fokashchuk ;
+    rcxn:annotator membr:Fokashchuk ;
     cx:creationDate "2024-12-10"^^xsd:date .
 
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_Meaning> a rcxn:ConstructionMeaning ;

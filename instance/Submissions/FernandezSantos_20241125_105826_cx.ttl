@@ -50,19 +50,28 @@ cx:Transitiveobjectrelativeclause a rcxn:Construction ;
     dc:type "journalArticle" .
 
 cx:Spanishobjectrelativeclause a rcxn:Construction ;
-    cx:annotator membr:FernandezSantos ;
-    cx:createdOn "2024-11-25"^^xsd:date ;
+    rcxn:hasMetadata cx:Spanishobjectrelativeclause_MD ;
     rcxn:hasTitle "Spanish object relative clause" .
 
+cx:Spanishobjectrelativeclause_MD a rcxn:Metadata ;
+    rcxn:annotator membr:FernandezSantos ;
+    cx:createdOn "2024-11-25"^^xsd:date .
+
 cx:Spanishrelativeclause a rcxn:Construction ;
-    cx:annotator membr:FernandezSantos ;
-    cx:createdOn "2024-11-25"^^xsd:date ;
+    rcxn:hasMetadata cx:Spanishrelativeclause_MD ;
     rcxn:hasTitle "Spanish relative clause" .
 
+cx:Spanishrelativeclause_MD a rcxn:Metadata ;
+    rcxn:annotator membr:FernandezSantos ;
+    cx:createdOn "2024-11-25"^^xsd:date .
+
 cx:Spanishtransitiveconstruction a rcxn:Construction ;
-    cx:annotator membr:FernandezSantos ;
-    cx:createdOn "2024-11-25"^^xsd:date ;
+    rcxn:hasMetadata cx:Spanishtransitiveconstruction_MD ;
     rcxn:hasTitle "Spanish transitive construction" .
+
+cx:Spanishtransitiveconstruction_MD a rcxn:Metadata ;
+    rcxn:annotator membr:FernandezSantos ;
+    cx:createdOn "2024-11-25"^^xsd:date .
 
 cx:Transitiveobjectrelativeclause_A a rcxn:SlotMandatory ;
     cx:hasSlotForm cx:Transitiveobjectrelativeclause_A_Form ;
@@ -167,7 +176,7 @@ cx:Transitiveobjectrelativeclause_Ex_D a cx:Example ;
     RDFS:comment "plain-variant verb-medial" .
 
 cx:Transitiveobjectrelativeclause_MD a rcxn:Metadata ;
-    cx:annotator membr:FernandezSantos ;
+    rcxn:annotator membr:FernandezSantos ;
     cx:creationDate "2024-11-25"^^xsd:date ;
     cx:hasSources cx:Transitiveobjectrelativeclause_Sources .
 

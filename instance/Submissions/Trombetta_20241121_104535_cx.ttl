@@ -23,32 +23,52 @@ cx:Relative-Topic-ShiftConstruction a rcxn:Construction ;
     links:similarFormSameFunction cx:Demonstrative-Topic-ShiftConstruction .
 
 cx:Demonstrative-Topic-ShiftConstruction a rcxn:Construction ;
-    cx:annotator membr:Trombetta ;
-    cx:createdOn "2024-11-21"^^xsd:date ;
+    rcxn:hasMetadata cx:Demonstrative-Topic-ShiftConstruction_MD ;
     rcxn:hasTitle "Demonstrative-Topic-Shift Construction" .
 
+cx:Demonstrative-Topic-ShiftConstruction_MD a rcxn:Metadata ;
+    rcxn:annotator membr:Trombetta ;
+    cx:createdOn "2024-11-21"^^xsd:date .
+
 cx:ItalianConiunctioRelativa a rcxn:Construction ;
-    cx:annotator membr:Trombetta ;
-    cx:createdOn "2024-11-21"^^xsd:date ;
+    rcxn:hasMetadata cx:ItalianConiunctioRelativa_MD ;
     rcxn:hasTitle "Italian Coniunctio Relativa" .
 
+cx:ItalianConiunctioRelativa_MD a rcxn:Metadata ;
+    rcxn:annotator membr:Trombetta ;
+    cx:createdOn "2024-11-21"^^xsd:date .
+
 cx:ItalianRelativeClause a rcxn:Construction ;
-    cx:annotator membr:Trombetta ;
-    cx:createdOn "2024-11-21"^^xsd:date ;
+    rcxn:hasMetadata cx:ItalianRelativeClause_MD ;
     rcxn:hasTitle "Italian Relative Clause" .
 
+cx:ItalianRelativeClause_MD a rcxn:Metadata ;
+    rcxn:annotator membr:Trombetta ;
+    cx:createdOn "2024-11-21"^^xsd:date .
+
 cx:ItalianSiPassivante a rcxn:Construction ;
-    cx:annotator membr:Trombetta ;
-    cx:createdOn "2024-11-21"^^xsd:date ;
+    rcxn:hasMetadata cx:ItalianSiPassivante_MD ;
     rcxn:hasTitle "Italian Si Passivante" .
 
+cx:ItalianSiPassivante_MD a rcxn:Metadata ;
+    rcxn:annotator membr:Trombetta ;
+    cx:createdOn "2024-11-21"^^xsd:date .
+
 cx:ItalianTemporalSubordinateClause a rcxn:Construction ;
-    cx:annotator membr:Trombetta ;
+    rcxn:hasMetadata cx:ItalianTemporalSubordinateClause_MD ;
+    rcxn:hasTitle "Italian Temporal Subordinate Clause" .
+
+cx:ItalianTemporalSubordinateClause_MD a rcxn:Metadata ;
+    rcxn:annotator membr:Trombetta ;
     cx:createdOn "2024-11-21"^^xsd:date ;
     rcxn:hasTitle "Italian Temporal Subordinate Clause" .
 
 <http://example.org/cx/Latinlinkingcliché(i.e.,inCaesar'sandTacitus'works)> a rcxn:Construction ;
-    cx:annotator membr:Trombetta ;
+    rcxn:hasMetadata <http://example.org/cx/Latinlinkingcliché(i.e.,inCaesar'sandTacitus'works)_MD> ;
+    rcxn:hasTitle "Latin linking cliché (i.e., in Caesar's and Tacitus' works)" .
+
+<http://example.org/cx/Latinlinkingcliché(i.e.,inCaesar'sandTacitus'works)_MD> a rcxn:Metadata ;
+    rcxn:annotator membr:Trombetta ;
     cx:createdOn "2024-11-21"^^xsd:date ;
     rcxn:hasTitle "Latin linking cliché (i.e., in Caesar's and Tacitus' works)" .
 
@@ -92,7 +112,7 @@ cx:Relative-Topic-ShiftConstruction_Ex_B a cx:Example ;
     RDFS:comment "The Construction is in square brackets, while the rest has been included to allow for an understanding of its function. The coniunctio relativa 'Le quali' anaphorically refers to the 'provisioni' mentioned before the Construction. The noun in the NP thus remains implicit. The verb in the VP, 'aspettare' ('to wait') functions anaphorically, as it is a synonym of 'attendere', which appears shortly before the Construction. The main clause following the Construction introduces a new topic (the new trouble that the Florentines have to face). " .
 
 cx:Relative-Topic-ShiftConstruction_MD a rcxn:Metadata ;
-    cx:annotator membr:Trombetta ;
+    rcxn:annotator membr:Trombetta ;
     cx:creationDate "2024-11-21"^^xsd:date ;
     cx:hasSources cx:Relative-Topic-ShiftConstruction_Sources .
 

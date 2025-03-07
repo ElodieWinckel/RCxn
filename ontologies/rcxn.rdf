@@ -5,7 +5,8 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rsrch="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#">
     <owl:Ontology rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn"/>
     
 
@@ -27,6 +28,18 @@
         <rdfs:domain rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#Construction"/>
         <rdfs:comment xml:lang="en">Property that relates a construction to its name.</rdfs:comment>
     </rdf:Description>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#annotator -->
+
+    <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#annotator">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#Metadata"/>
+        <rdfs:range rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#Member"/>
+        <rdfs:comment xml:lang="en">Relates a construction entry to the person who created it.</rdfs:comment>
+        <rdfs:label xml:lang="en">Annotator</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
@@ -164,6 +177,12 @@
         <rdfs:subClassOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#Slot"/>
         <rdfs:comment xml:lang="en">Optional construction elements; the meaning of the construction is not dependent on its realization.</rdfs:comment>
     </owl:Class>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#Member -->
+
+    <owl:Class rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#Member"/>
 </rdf:RDF>
 
 

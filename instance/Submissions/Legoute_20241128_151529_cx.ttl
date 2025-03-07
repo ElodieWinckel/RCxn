@@ -61,7 +61,7 @@ cx:POU-beneficiaryconstruction_Ex_A a cx:Example ;
     RDFS:comment "Text 1, #27" .
 
 cx:POU-beneficiaryconstruction_MD a rcxn:Metadata ;
-    cx:annotator membr:Legoute ;
+    rcxn:annotator membr:Legoute ;
     cx:creationDate "2024-11-28"^^xsd:date .
 
 cx:POU-beneficiaryconstruction_Meaning a rcxn:ConstructionMeaning ;
@@ -73,9 +73,12 @@ cx:POU-beneficiaryconstruction_slots a rdf:Seq ;
     rdf:_3 cx:POU-beneficiaryconstruction_C .
 
 cx:POU-purposeconstruction a rcxn:Construction ;
-    cx:annotator membr:Legoute ;
-    cx:createdOn "2024-11-28"^^xsd:date ;
+    rcxn:hasMetadata cx:POU-purposeconstruction_MD ;
     rcxn:hasTitle "POU-purpose construction" .
+
+cx:POU-purposeconstruction_MD a rcxn:Metadata ;
+    rcxn:annotator membr:Legoute ;
+    cx:createdOn "2024-11-28"^^xsd:date .
 
 
 

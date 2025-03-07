@@ -63,7 +63,7 @@ cx:EvaluativeAttributionConstruction_E_Meaning a cx:SlotMeaning ;
 cx:EvaluativeAttributionConstruction_E_Morphosyntax a "NP", "AdjP", "PP", "VP", "clause" .
 
 cx:EvaluativeAttributionConstruction_MD a rcxn:Metadata ;
-    cx:annotator membr:Stampfer ;
+    rcxn:annotator membr:Stampfer ;
     cx:creationDate "2024-12-02"^^xsd:date .
 
 cx:EvaluativeAttributionConstruction_Meaning a rcxn:ConstructionMeaning ;

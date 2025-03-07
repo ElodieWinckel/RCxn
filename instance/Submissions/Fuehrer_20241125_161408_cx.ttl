@@ -24,13 +24,20 @@ cx:Transitivedurch-Präfixverbkonstruktion a rcxn:Construction ;
     RDFS:comment "Depends on what is doable, all MHG data is available in form of one big csv-file. Can be split into multiple files,  however." .
 
 cx:Monotransitivkonstruktion a rcxn:Construction ;
-    cx:annotator membr:Fuehrer ;
-    cx:createdOn "2024-11-25"^^xsd:date ;
+    rcxn:hasMetadata cx:Monotransitivkonstruktion_MD ;
     rcxn:hasTitle "Monotransitivkonstruktion" .
 
+cx:Monotransitivkonstruktion_MD a rcxn:Metadata ;
+    rcxn:annotator membr:Fuehrer ;
+    cx:createdOn "2024-11-25"^^xsd:date .
+
 cx:Präfixverbkonstruktion a rcxn:Construction ;
-    cx:annotator membr:Fuehrer ;
-    cx:hasTranslation "er, sie, der, die Christen" .
+    rcxn:hasMetadata cx:Präfixverbkonstruktion_MD ;
+    rcxn:hasTitle "Präfixverbkonstruktion" .
+
+cx:Präfixverbkonstruktion_MD a rcxn:Metadata ;
+    rcxn:annotator membr:Fuehrer ;
+    cx:createdOn "2024-11-25"^^xsd:date .
 
 cx:Transitivedurch-Präfixverbkonstruktion_A_Form a cx:SlotForm ;
     cx:hasSyntacticForm cx:Transitivedurch-Präfixverbkonstruktion_A_Morphosyntax .
@@ -159,7 +166,7 @@ cx:Transitivedurch-Präfixverbkonstruktion_G_Morphosyntax a cx:Pronomen ;
     cx:hasSyntacticFunction "Dativobjekt" .
 
 cx:Transitivedurch-Präfixverbkonstruktion_MD a rcxn:Metadata ;
-    cx:annotator membr:Fuehrer ;
+    rcxn:annotator membr:Fuehrer ;
     cx:creationDate "2024-11-25"^^xsd:date ;
     cx:hasSources cx:Transitivedurch-Präfixverbkonstruktion_Sources .
 
@@ -181,9 +188,12 @@ cx:Transitivedurch-Präfixverbkonstruktion_slots a rdf:Seq ;
     rdf:_6 cx:Transitivedurch-Präfixverbkonstruktion_G .
 
 cx:Transitivedurch-Verbkonstruktion a rcxn:Construction ;
-    cx:annotator membr:Fuehrer ;
-    cx:createdOn "2024-11-25"^^xsd:date ;
+    rcxn:hasMetadata cx:Transitivedurch-Verbkonstruktion_MD ;
     cx:hasTitle "Transitive durch-Verbkonstruktion" .
+
+cx:Transitivedurch-Verbkonstruktion_MD a rcxn:Metadata ;
+    rcxn:annotator membr:Fuehrer ;
+    cx:createdOn "2024-11-25"^^xsd:date .
 
 <https://www.linguistics.ruhr-uni-bochum.de/rem/> dc:creator "Dipper, Stefanie",
         "Klein, Thomas",

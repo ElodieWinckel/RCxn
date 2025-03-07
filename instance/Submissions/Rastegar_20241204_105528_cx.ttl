@@ -23,22 +23,32 @@ cx:Idiomaticconstruction a rcxn:Construction ;
 cx:Definitearticle RDFS:label "Definite article" .
 
 cx:EnglishPullsomethingoutofahat a rcxn:Construction ;
-    cx:annotator membr:Rastegar ;
+    rcxn:annotator membr:Rastegar ;
     cx:createdOn "2024-12-04"^^xsd:date ;
     rcxn:hasTitle "English Pull something out of a hat" .
 
 cx:Englishrollupyoursleeves a rcxn:Construction ;
-    cx:annotator membr:Rastegar ;
-    cx:createdOn "2024-12-04"^^xsd:date ;
+    rcxn:hasMetadata cx:Englishrollupyoursleeves_MD ;
     rcxn:hasTitle "English roll up your sleeves" .
 
+cx:Englishrollupyoursleeves_MD a rcxn:Metadata ;
+    rcxn:annotator membr:Rastegar ;
+    cx:createdOn "2024-12-04"^^xsd:date .
+
 <http://example.org/cx/Farsibarāyekasiāstinbālāzadan:torollupsleevesforsomething> a rcxn:Construction ;
-    cx:annotator membr:Rastegar ;
-    cx:createdOn "2024-12-04"^^xsd:date ;
+    rcxn:hasMetadata <http://example.org/cx/Farsibarāyekasiāstinbālāzadan:torollupsleevesforsomething_MD> ;
     rcxn:hasTitle "Farsi barāye kasi āstin bālā zadan: to roll up sleeves for something" .
 
+<http://example.org/cx/Farsibarāyekasiāstinbālāzadan:torollupsleevesforsomething_MD> a rcxn:Metadata ;
+    rcxn:annotator membr:Rastegar ;
+    cx:createdOn "2024-12-04"^^xsd:date .
+
 <http://example.org/cx/Farsimārāstin-exodparvarāndan:tonurtureasnakeinone'sbosom> a rcxn:Construction ;
-    cx:annotator membr:Rastegar ;
+    rcxn:hasMetadata <http://example.org/cx/Farsimārāstin-exodparvarāndan:tonurtureasnakeinone'sbosom_MD> ;
+    rcxn:hasTitle "Farsi mār āstin-e xod parvarāndan: to nurture a snake in one's bosom" .
+
+<http://example.org/cx/Farsimārāstin-exodparvarāndan:tonurtureasnakeinone'sbosom_MD> a rcxn:Metadata ;
+    rcxn:annotator membr:Rastegar ;
     cx:createdOn "2024-12-04"^^xsd:date ;
     rcxn:hasTitle "Farsi mār āstin-e xod parvarāndan: to nurture a snake in one's bosom" .
 
@@ -134,7 +144,7 @@ cx:Idiomaticconstruction_Ex_B a cx:Example ;
     RDFS:comment "Shows the construction in zu-infinitive form with sein ; again in negative context." .
 
 cx:Idiomaticconstruction_MD a rcxn:Metadata ;
-    cx:annotator membr:Rastegar ;
+    rcxn:annotator membr:Rastegar ;
     cx:creationDate "2024-12-04"^^xsd:date .
 
 cx:Idiomaticconstruction_Meaning a rcxn:ConstructionMeaning ;

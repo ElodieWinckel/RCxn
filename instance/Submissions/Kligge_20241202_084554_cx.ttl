@@ -54,7 +54,7 @@
 <http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_C> a rcxn:SlotMandatory .
 
 <http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_MD> a rcxn:Metadata ;
-    cx:annotator membr:Kligge ;
+    rcxn:annotator membr:Kligge ;
     cx:creationDate "2024-12-02"^^xsd:date .
 
 <http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_Meaning> a rcxn:ConstructionMeaning ;

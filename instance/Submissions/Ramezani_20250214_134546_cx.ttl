@@ -57,7 +57,7 @@ cx:Argumentstructureconstruction_C_Morphosyntax a cx:oneorsevarlXP ;
     cx:hasSyntacticFunction "Complement(s)" .
 
 cx:Argumentstructureconstruction_MD a rcxn:Metadata ;
-    cx:annotator membr:Ramezani ;
+    rcxn:annotator membr:Ramezani ;
     cx:creationDate "2025-02-14"^^xsd:date ;
     cx:hasSources cx:Argumentstructureconstruction_Sources .
 
@@ -79,7 +79,7 @@ cx:EnglishCause-Motionconstruction a rcxn:Construction ;
     rcxn:hasTitle "English Cause-Motion construction" .
 
 cx:EnglishCause-Motionconstruction_MD a cx:Metadata ;
-    cx:annotator membr:Ramezani ;
+    rcxn:annotator membr:Ramezani ;
     cx:createdOn "2025-02-14"^^xsd:date .
 
 cx:EnglishDitransitiveconstruction a rcxn:Construction ;
@@ -87,7 +87,7 @@ cx:EnglishDitransitiveconstruction a rcxn:Construction ;
     rcxn:hasTitle "English Ditransitive construction" .
 
 cx:EnglishDitransitiveconstruction_MD a cx:Metadata ;
-    cx:annotator membr:Ramezani ;
+    rcxn:annotator membr:Ramezani ;
     cx:createdOn "2025-02-14"^^xsd:date .
 
 cx:EnglishResultativeconstruction a rcxn:Construction ;
@@ -95,7 +95,7 @@ cx:EnglishResultativeconstruction a rcxn:Construction ;
     rcxn:hasTitle "English Resultative construction" .
 
 cx:EnglishResultativeconstruction_MD a cx:Metadata ;
-    cx:annotator membr:Ramezani ;
+    rcxn:annotator membr:Ramezani ;
     cx:createdOn "2025-02-14"^^xsd:date .
 
 cx:EnglishTransitiveconstruction a rcxn:Construction ;
@@ -103,7 +103,7 @@ cx:EnglishTransitiveconstruction a rcxn:Construction ;
     rcxn:hasTitle "English Transitive construction" .
 
 cx:EnglishTransitiveconstruction_MD a cx:Metadata ;
-    cx:annotator membr:Ramezani ;
+    rcxn:annotator membr:Ramezani ;
     cx:createdOn "2025-02-14"^^xsd:date .
 
 cx:Verb RDFS:label "Verb" .

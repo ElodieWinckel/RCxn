@@ -56,7 +56,7 @@ cx:TheEnglishGIVE-OUTVerbParticleConstruction._Ex_A a cx:Example ;
     cx:hasText "The event organizer gave out gift bags to all attendees at the end of the ceremony." .
 
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._MD a rcxn:Metadata ;
-    cx:annotator membr:Kissane ;
+    rcxn:annotator membr:Kissane ;
     cx:creationDate "2024-12-01"^^xsd:date .
 
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._Meaning a rcxn:ConstructionMeaning ;
