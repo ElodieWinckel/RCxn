@@ -57,7 +57,7 @@ cx:TheEnglishGIVE-OUTVerbParticleConstruction._Ex_A a cx:Example ;
 
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._MD a rcxn:Metadata ;
     rcxn:annotator membr:Kissane ;
-    cx:creationDate "2024-12-01"^^xsd:date .
+    rcxn:creationDate "2024-12-01"^^xsd:date .
 
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "An ÆFFECTOR distributes items to multiple recipients or reaches a point of depletion or cessation of function." .

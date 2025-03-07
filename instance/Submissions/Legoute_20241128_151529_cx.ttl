@@ -62,7 +62,7 @@ cx:POU-beneficiaryconstruction_Ex_A a cx:Example ;
 
 cx:POU-beneficiaryconstruction_MD a rcxn:Metadata ;
     rcxn:annotator membr:Legoute ;
-    cx:creationDate "2024-11-28"^^xsd:date .
+    rcxn:creationDate "2024-11-28"^^xsd:date .
 
 cx:POU-beneficiaryconstruction_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "Refer to a beneficiary" .
@@ -78,7 +78,7 @@ cx:POU-purposeconstruction a rcxn:Construction ;
 
 cx:POU-purposeconstruction_MD a rcxn:Metadata ;
     rcxn:annotator membr:Legoute ;
-    cx:createdOn "2024-11-28"^^xsd:date .
+    rcxn:creationDate "2024-11-28"^^xsd:date .
 
 
 

@@ -55,7 +55,7 @@ cx:Spanishobjectrelativeclause a rcxn:Construction ;
 
 cx:Spanishobjectrelativeclause_MD a rcxn:Metadata ;
     rcxn:annotator membr:FernandezSantos ;
-    cx:createdOn "2024-11-25"^^xsd:date .
+    rcxn:creationDate "2024-11-25"^^xsd:date .
 
 cx:Spanishrelativeclause a rcxn:Construction ;
     rcxn:hasMetadata cx:Spanishrelativeclause_MD ;
@@ -63,7 +63,7 @@ cx:Spanishrelativeclause a rcxn:Construction ;
 
 cx:Spanishrelativeclause_MD a rcxn:Metadata ;
     rcxn:annotator membr:FernandezSantos ;
-    cx:createdOn "2024-11-25"^^xsd:date .
+    rcxn:creationDate "2024-11-25"^^xsd:date .
 
 cx:Spanishtransitiveconstruction a rcxn:Construction ;
     rcxn:hasMetadata cx:Spanishtransitiveconstruction_MD ;
@@ -71,7 +71,7 @@ cx:Spanishtransitiveconstruction a rcxn:Construction ;
 
 cx:Spanishtransitiveconstruction_MD a rcxn:Metadata ;
     rcxn:annotator membr:FernandezSantos ;
-    cx:createdOn "2024-11-25"^^xsd:date .
+    rcxn:creationDate "2024-11-25"^^xsd:date .
 
 cx:Transitiveobjectrelativeclause_A a rcxn:SlotMandatory ;
     cx:hasSlotForm cx:Transitiveobjectrelativeclause_A_Form ;

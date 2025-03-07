@@ -29,7 +29,7 @@
 
 <http://example.org/cx/NP[ADJ-strong+ADJ-strong+N]_MD> a rcxn:Metadata ;
     rcxn:annotator membr:Kligge ;
-    cx:createdOn "2024-12-02"^^xsd:date .
+    rcxn:creationDate "2024-12-02"^^xsd:date .
 
 <http://example.org/cx/NP[ADJ-strong+ADJ-weak+N]> a rcxn:Construction ;
     rcxn:hasMetadata <http://example.org/cx/NP[ADJ-strong+ADJ-weak+N]_MD> ;
@@ -37,7 +37,7 @@
 
 <http://example.org/cx/NP[ADJ-strong+ADJ-weak+N]_MD> a rcxn:Metadata ;
     rcxn:annotator membr:Kligge ;
-    cx:createdOn "2024-12-02"^^xsd:date .
+    rcxn:creationDate "2024-12-02"^^xsd:date .
 
 <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_A> a rcxn:SlotMandatory ;
     cx:Morphosyntax "Definite DET" ;
@@ -52,7 +52,7 @@
 
 <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_MD> a rcxn:Metadata ;
     rcxn:annotator membr:Kligge ;
-    cx:creationDate "2024-12-02"^^xsd:date .
+    rcxn:creationDate "2024-12-02"^^xsd:date .
 
 <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_Meaning> a rcxn:ConstructionMeaning .
 
@@ -67,7 +67,7 @@
 
 <http://example.org/cx/NP[das+ADJ-e+N]nom.sg.neut_MD> a rcxn:Metadata ;
     rcxn:annotator membr:Kligge ;
-    cx:createdOn "2024-12-02"^^xsd:date .
+    rcxn:creationDate "2024-12-02"^^xsd:date .
 
 <http://example.org/cx/NP[def.DET-strong+N]> a rcxn:Construction ;
     rcxn:hasMetadata <http://example.org/cx/NP[def.DET-strong+N]_MD> ;
@@ -75,7 +75,7 @@
 
 <http://example.org/cx/NP[def.DET-strong+N]_MD> a rcxn:Metadata ;
     rcxn:annotator membr:Kligge ;
-    cx:createdOn "2024-12-02"^^xsd:date .
+    rcxn:creationDate "2024-12-02"^^xsd:date .
 
 <http://example.org/cx/NP[dem+ADJ-en+N]dat.sg.masc/neut> a rcxn:Construction ;
     rcxn:hasMetadata <http://example.org/cx/NP[dem+ADJ-en+N]dat.sg.masc/neut_MD> ;
@@ -83,7 +83,7 @@
 
 <http://example.org/cx/NP[dem+ADJ-en+N]dat.sg.masc/neut_MD> a rcxn:Metadata ;
     rcxn:annotator membr:Kligge ;
-    cx:createdOn "2024-12-02"^^xsd:date .
+    rcxn:creationDate "2024-12-02"^^xsd:date .
 
 <http://example.org/cx/NP[der+ADJ-e+N]nom.sg.masc> a rcxn:Construction ;
     rcxn:hasMetadata <http://example.org/cx/NP[der+ADJ-e+N]nom.sg.masc_MD> ;
@@ -91,7 +91,7 @@
 
 <http://example.org/cx/NP[der+ADJ-e+N]nom.sg.masc_MD> a rcxn:Metadata ;
     rcxn:annotator membr:Kligge ;
-    cx:createdOn "2024-12-02"^^xsd:date .
+    rcxn:creationDate "2024-12-02"^^xsd:date .
 
 <http://example.org/cx/NP[die+ADJ-e+N]nom.sg.fem> a rcxn:Construction ;
     rcxn:hasMetadata <http://example.org/cx/NP[die+ADJ-e+N]nom.sg.fem_MD> ;
@@ -99,7 +99,7 @@
 
 <http://example.org/cx/NP[die+ADJ-e+N]nom.sg.fem_MD> a rcxn:Metadata ;
     rcxn:annotator membr:Kligge ;
-    cx:createdOn "2024-12-02"^^xsd:date .
+    rcxn:creationDate "2024-12-02"^^xsd:date .
 
 <http://example.org/cx/NP[indef.DET-strong+ADJ-weak+N]> a rcxn:Construction ;
     rcxn:hasMetadata <http://example.org/cx/NP[indef.DET-strong+ADJ-weak+N]_MD> ;
@@ -107,7 +107,7 @@
 
 <http://example.org/cx/NP[indef.DET-strong+ADJ-weak+N]_MD> a rcxn:Metadata ;
     rcxn:annotator membr:Kligge ;
-    cx:createdOn "2024-12-02"^^xsd:date .
+    rcxn:creationDate "2024-12-02"^^xsd:date .
 
 <http://example.org/cx/NP[indef.DET-strong+N]> a rcxn:Construction ;
     rcxn:hasMetadata <http://example.org/cx/NP[indef.DET-strong+N]_MD> ;
@@ -115,7 +115,7 @@
 
 <http://example.org/cx/NP[indef.DET-strong+N]_MD> a rcxn:Metadata ;
     rcxn:annotator membr:Kligge ;
-    cx:createdOn "2024-12-02"^^xsd:date .
+    rcxn:creationDate "2024-12-02"^^xsd:date .
 
 <http://example.org/cx/NP[indef.DET-zero+N]> a rcxn:Construction ;
     rcxn:hasMetadata <http://example.org/cx/NP[indef.DET-zero+N]_MD> ;
@@ -123,7 +123,7 @@
 
 <http://example.org/cx/NP[indef.DET-zero+N]_MD> a rcxn:Metadata ;
     rcxn:annotator membr:Kligge ;
-    cx:createdOn "2024-12-02"^^xsd:date .
+    rcxn:creationDate "2024-12-02"^^xsd:date .
 
 <http://example.org/cx/etc.> a rcxn:Construction ;
     rcxn:hasMetadata <http://example.org/cx/etc._MD> ;
@@ -131,4 +131,4 @@
 
 <http://example.org/cx/etc._MD> a rcxn:Metadata ;
     rcxn:annotator membr:Kligge ;
-    cx:createdOn "2024-12-02"^^xsd:date .
+    rcxn:creationDate "2024-12-02"^^xsd:date .

@@ -98,7 +98,7 @@ cx:Idiomaticconstructions_Ex_B a cx:Example ;
 
 cx:Idiomaticconstructions_MD a rcxn:Metadata ;
     rcxn:annotator membr:Rastegar ;
-    cx:creationDate "2024-12-03"^^xsd:date .
+    rcxn:creationDate "2024-12-03"^^xsd:date .
 
 cx:Idiomaticconstructions_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "to end relationships" ,

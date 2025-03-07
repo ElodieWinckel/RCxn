@@ -64,7 +64,7 @@ cx:EvaluativeAttributionConstruction_E_Morphosyntax a "NP", "AdjP", "PP", "VP", 
 
 cx:EvaluativeAttributionConstruction_MD a rcxn:Metadata ;
     rcxn:annotator membr:Stampfer ;
-    cx:creationDate "2024-12-02"^^xsd:date .
+    rcxn:creationDate "2024-12-02"^^xsd:date .
 
 cx:EvaluativeAttributionConstruction_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "An ATTRIBUTOR mentally assigns ATTRIBUTE to an ATTRIBUTEE" .

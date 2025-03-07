@@ -24,7 +24,7 @@ cx:Definitearticle RDFS:label "Definite article" .
 
 cx:EnglishPullsomethingoutofahat a rcxn:Construction ;
     rcxn:annotator membr:Rastegar ;
-    cx:createdOn "2024-12-04"^^xsd:date ;
+    rcxn:creationDate "2024-12-04"^^xsd:date ;
     rcxn:hasTitle "English Pull something out of a hat" .
 
 cx:Englishrollupyoursleeves a rcxn:Construction ;
@@ -33,7 +33,7 @@ cx:Englishrollupyoursleeves a rcxn:Construction ;
 
 cx:Englishrollupyoursleeves_MD a rcxn:Metadata ;
     rcxn:annotator membr:Rastegar ;
-    cx:createdOn "2024-12-04"^^xsd:date .
+    rcxn:creationDate "2024-12-04"^^xsd:date .
 
 <http://example.org/cx/Farsibarāyekasiāstinbālāzadan:torollupsleevesforsomething> a rcxn:Construction ;
     rcxn:hasMetadata <http://example.org/cx/Farsibarāyekasiāstinbālāzadan:torollupsleevesforsomething_MD> ;
@@ -41,7 +41,7 @@ cx:Englishrollupyoursleeves_MD a rcxn:Metadata ;
 
 <http://example.org/cx/Farsibarāyekasiāstinbālāzadan:torollupsleevesforsomething_MD> a rcxn:Metadata ;
     rcxn:annotator membr:Rastegar ;
-    cx:createdOn "2024-12-04"^^xsd:date .
+    rcxn:creationDate "2024-12-04"^^xsd:date .
 
 <http://example.org/cx/Farsimārāstin-exodparvarāndan:tonurtureasnakeinone'sbosom> a rcxn:Construction ;
     rcxn:hasMetadata <http://example.org/cx/Farsimārāstin-exodparvarāndan:tonurtureasnakeinone'sbosom_MD> ;
@@ -49,7 +49,7 @@ cx:Englishrollupyoursleeves_MD a rcxn:Metadata ;
 
 <http://example.org/cx/Farsimārāstin-exodparvarāndan:tonurtureasnakeinone'sbosom_MD> a rcxn:Metadata ;
     rcxn:annotator membr:Rastegar ;
-    cx:createdOn "2024-12-04"^^xsd:date ;
+    rcxn:creationDate "2024-12-04"^^xsd:date ;
     rcxn:hasTitle "Farsi mār āstin-e xod parvarāndan: to nurture a snake in one's bosom" .
 
 cx:Idiomaticconstruction_A a rcxn:SlotMandatory ;
@@ -145,7 +145,7 @@ cx:Idiomaticconstruction_Ex_B a cx:Example ;
 
 cx:Idiomaticconstruction_MD a rcxn:Metadata ;
     rcxn:annotator membr:Rastegar ;
-    cx:creationDate "2024-12-04"^^xsd:date .
+    rcxn:creationDate "2024-12-04"^^xsd:date .
 
 cx:Idiomaticconstruction_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "done with ease" .

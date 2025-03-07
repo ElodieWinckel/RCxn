@@ -61,7 +61,7 @@ cx:ThisCloseToV-ing_Ex_A a cx:Example ;
 
 cx:ThisCloseToV-ing_MD a rcxn:Metadata ;
     rcxn:annotator membr:Iabdounane ;
-    cx:creationDate "2024-11-28"^^xsd:date .
+    rcxn:creationDate "2024-11-28"^^xsd:date .
 
 cx:ThisCloseToV-ing_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "Something or someone is metaphorically very close to an outcome/goal." .

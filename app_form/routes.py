@@ -291,7 +291,7 @@ def form_submit():
 
     # CREATION DATA
     # Add creation date as today.
-    g.add((cx[metadata_uri], cx.creationDate, Literal(datetime.now().strftime('%Y-%m-%d'), datatype=XSD.date)))
+    g.add((cx[metadata_uri], rcxn.creationDate, Literal(datetime.now().strftime('%Y-%m-%d'), datatype=XSD.date)))
 
     # RESEARCH QUESTION
     # Triples needed if new research question has been added by user
@@ -652,7 +652,7 @@ def form_submit():
             g.add((cx[cleaned_inherit_construction], rcxn.hasMetadata, cx[metadata_inherit_construction]))
             g.add((cx[metadata_inherit_construction], RDF.type, rcxn.Metadata))
             g.add((cx[metadata_inherit_construction], cx.annotator, membr[user_name]))
-            g.add((cx[metadata_inherit_construction], cx.createdOn,
+            g.add((cx[metadata_inherit_construction], rcxn.creationDate,
                    Literal(datetime.now().strftime('%Y-%m-%d'), datatype=XSD.date)))
             g.add((cx[cleaned_inherit_construction], rcxn.hasTitle, Literal(inherit_construction)))
             print("New construction needed!")
@@ -676,7 +676,7 @@ def form_submit():
             g.add((cx[cleaned_inherit_construction], rcxn.hasMetadata, cx[metadata_inherit_construction]))
             g.add((cx[metadata_inherit_construction], RDF.type, rcxn.Metadata))
             g.add((cx[metadata_inherit_construction], cx.annotator, membr[user_name]))
-            g.add((cx[metadata_inherit_construction], cx.createdOn,
+            g.add((cx[metadata_inherit_construction], rcxn.creationDate,
                    Literal(datetime.now().strftime('%Y-%m-%d'), datatype=XSD.date)))
             g.add((cx[cleaned_inherit_construction], rcxn.hasTitle, Literal(inherit_construction)))
             print("New construction needed!")
@@ -700,7 +700,7 @@ def form_submit():
             g.add((cx[cleaned_inherit_construction], rcxn.hasMetadata, cx[metadata_inherit_construction]))
             g.add((cx[metadata_inherit_construction], RDF.type, rcxn.Metadata))
             g.add((cx[metadata_inherit_construction], cx.annotator, membr[user_name]))
-            g.add((cx[metadata_inherit_construction], cx.createdOn,
+            g.add((cx[metadata_inherit_construction], rcxn.creationDate,
                    Literal(datetime.now().strftime('%Y-%m-%d'), datatype=XSD.date)))
             g.add((cx[cleaned_inherit_construction], rcxn.hasTitle, Literal(inherit_construction)))
             print("New construction needed!")
@@ -740,7 +740,7 @@ def form_submit():
                 g.add((cx[cleaned_inherit_construction], rcxn.hasMetadata, cx[metadata_inherit_construction]))
                 g.add((cx[metadata_inherit_construction], RDF.type, rcxn.Metadata))
                 g.add((cx[metadata_inherit_construction], cx.annotator, membr[user_name]))
-                g.add((cx[metadata_inherit_construction], cx.createdOn,
+                g.add((cx[metadata_inherit_construction], rcxn.creationDate,
                        Literal(datetime.now().strftime('%Y-%m-%d'), datatype=XSD.date)))
                 g.add((cx[cleaned_inherit_construction], rcxn.hasTitle, Literal(similarity_link)))
                 print("New construction needed!")

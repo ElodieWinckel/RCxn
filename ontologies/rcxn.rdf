@@ -26,7 +26,6 @@
 
     <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty">
         <rdfs:domain rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#Construction"/>
-        <rdfs:comment xml:lang="en">Property that relates a construction to its name.</rdfs:comment>
     </rdf:Description>
     
 
@@ -37,7 +36,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#Metadata"/>
         <rdfs:range rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#Member"/>
-        <rdfs:comment xml:lang="en">Relates a construction entry to the person who created it.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Relates a construction entry&apos;s metadata to the person who created it.</rdfs:comment>
         <rdfs:label xml:lang="en">Annotator</rdfs:label>
     </owl:ObjectProperty>
     
@@ -83,6 +82,7 @@
 
     <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#hasSlots">
         <rdfs:domain rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#Construction"/>
+        <rdfs:label xml:lang="en">Relates a construction to the sequence of construction elements that constitutes it.</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -98,6 +98,7 @@
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:range>
+        <rdfs:comment xml:lang="en">Property that relates a construction to its name.</rdfs:comment>
         <rdfs:label xml:lang="en">Title</rdfs:label>
     </owl:ObjectProperty>
     
@@ -115,6 +116,23 @@
         </rdfs:range>
         <rdfs:comment xml:lang="en">Relates the meaning component of a construction to the cognitive pattern that it is based on (i.e., containment or path) and that helps convey meaning through spatial or experiential metaphors.</rdfs:comment>
         <rdfs:label xml:lang="en">Image-Schema</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#creationDate -->
+
+    <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#creationDate">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#Metadata"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">Indicates the date where the construction entry was created and links it to the construction’s metadata.</rdfs:comment>
+        <rdfs:label xml:lang="en">Creation date</rdfs:label>
     </owl:ObjectProperty>
     
 

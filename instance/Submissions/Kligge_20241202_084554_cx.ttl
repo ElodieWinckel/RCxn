@@ -22,27 +22,27 @@
 
 <http://example.org/cx/NP[das+ADJ-eN]acc.sg.neut> a rcxn:Construction ;
     cx:annotator membr:Kligge ;
-    cx:createdOn "2024-12-02"^^xsd:date ;
+    rcxn:creationDate "2024-12-02"^^xsd:date ;
     rcxn:hasTitle "NP[das + ADJ-e N]acc.sg.neut" .
 
 <http://example.org/cx/NP[das+ADJ-eN]nom.sg.neut> a rcxn:Construction ;
     cx:annotator membr:Kligge ;
-    cx:createdOn "2024-12-02"^^xsd:date ;
+    rcxn:creationDate "2024-12-02"^^xsd:date ;
     rcxn:hasTitle "NP[das + ADJ-e N]nom.sg.neut" .
 
 <http://example.org/cx/NP[dem+ADJ-enN]dat.sg.masc> a rcxn:Construction ;
     cx:annotator membr:Kligge ;
-    cx:createdOn "2024-12-02"^^xsd:date ;
+    rcxn:creationDate "2024-12-02"^^xsd:date ;
     rcxn:hasTitle "NP[dem + ADJ-en N]dat.sg.masc" .
 
 <http://example.org/cx/NP[dem+ADJ-enN]dat.sg.neut> a rcxn:Construction ;
     cx:annotator membr:Kligge ;
-    cx:createdOn "2024-12-02"^^xsd:date ;
+    rcxn:creationDate "2024-12-02"^^xsd:date ;
     rcxn:hasTitle "NP[dem + ADJ-en N]dat.sg.neut" .
 
 <http://example.org/cx/NP[den+ADJ-enN]acc.sg.masc> a rcxn:Construction ;
     cx:annotator membr:Kligge ;
-    cx:createdOn "2024-12-02"^^xsd:date ;
+    rcxn:creationDate "2024-12-02"^^xsd:date ;
     rcxn:hasTitle "NP[den+ ADJ-en N]acc.sg.masc" .
 
 <http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_A> a rcxn:SlotMandatory ;
@@ -55,7 +55,7 @@
 
 <http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_MD> a rcxn:Metadata ;
     rcxn:annotator membr:Kligge ;
-    cx:creationDate "2024-12-02"^^xsd:date .
+    rcxn:creationDate "2024-12-02"^^xsd:date .
 
 <http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_Meaning> a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "NPs in German have obligatory grammatical marking specifying case, number, gender." .
@@ -67,16 +67,16 @@
 
 <http://example.org/cx/NP[die+ADJ-eN]nom.sg.fem> a rcxn:Construction ;
     cx:annotator membr:Kligge ;
-    cx:createdOn "2024-12-02"^^xsd:date ;
+    rcxn:creationDate "2024-12-02"^^xsd:date ;
     rcxn:hasTitle "NP[die + ADJ-e N]nom.sg.fem" .
 
 <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]> a rcxn:Construction ;
     cx:annotator membr:Kligge ;
-    cx:createdOn "2024-12-02"^^xsd:date ;
+    rcxn:creationDate "2024-12-02"^^xsd:date ;
     rcxn:hasTitle "NP[Def.Det-strong+ADJ-weak+N]" .
 
 <http://example.org/cx/NPnom.sg.masc> a rcxn:Construction ;
     cx:annotator membr:Kligge ;
-    cx:createdOn "2024-12-02"^^xsd:date ;
+    rcxn:creationDate "2024-12-02"^^xsd:date ;
     rcxn:hasTitle "NP nom.sg.masc" .
 

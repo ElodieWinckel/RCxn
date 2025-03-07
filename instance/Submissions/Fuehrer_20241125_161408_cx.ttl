@@ -29,7 +29,7 @@ cx:Monotransitivkonstruktion a rcxn:Construction ;
 
 cx:Monotransitivkonstruktion_MD a rcxn:Metadata ;
     rcxn:annotator membr:Fuehrer ;
-    cx:createdOn "2024-11-25"^^xsd:date .
+    rcxn:creationDate "2024-11-25"^^xsd:date .
 
 cx:Präfixverbkonstruktion a rcxn:Construction ;
     rcxn:hasMetadata cx:Präfixverbkonstruktion_MD ;
@@ -37,7 +37,7 @@ cx:Präfixverbkonstruktion a rcxn:Construction ;
 
 cx:Präfixverbkonstruktion_MD a rcxn:Metadata ;
     rcxn:annotator membr:Fuehrer ;
-    cx:createdOn "2024-11-25"^^xsd:date .
+    rcxn:creationDate "2024-11-25"^^xsd:date .
 
 cx:Transitivedurch-Präfixverbkonstruktion_A_Form a cx:SlotForm ;
     cx:hasSyntacticForm cx:Transitivedurch-Präfixverbkonstruktion_A_Morphosyntax .
@@ -167,7 +167,7 @@ cx:Transitivedurch-Präfixverbkonstruktion_G_Morphosyntax a cx:Pronomen ;
 
 cx:Transitivedurch-Präfixverbkonstruktion_MD a rcxn:Metadata ;
     rcxn:annotator membr:Fuehrer ;
-    cx:creationDate "2024-11-25"^^xsd:date ;
+    rcxn:creationDate "2024-11-25"^^xsd:date ;
     cx:hasSources cx:Transitivedurch-Präfixverbkonstruktion_Sources .
 
 cx:Transitivedurch-Präfixverbkonstruktion_Meaning a rcxn:ConstructionMeaning ;
@@ -193,7 +193,7 @@ cx:Transitivedurch-Verbkonstruktion a rcxn:Construction ;
 
 cx:Transitivedurch-Verbkonstruktion_MD a rcxn:Metadata ;
     rcxn:annotator membr:Fuehrer ;
-    cx:createdOn "2024-11-25"^^xsd:date .
+    rcxn:creationDate "2024-11-25"^^xsd:date .
 
 <https://www.linguistics.ruhr-uni-bochum.de/rem/> dc:creator "Dipper, Stefanie",
         "Klein, Thomas",
