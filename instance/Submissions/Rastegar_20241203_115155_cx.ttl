@@ -36,11 +36,11 @@ cx:Idiomaticconstructions_A_Morphosyntax a "Pronoun NP" ;
 cx:Idiomaticconstructions_B a rcxn:SlotMandatory ;
     cx:WordOrder "Follows subject, precedes object" ;
     rcxn:hasSlotForm cx:Idiomaticconstructions_B_Form ;
-    cx:hasSlotMeaning cx:Idiomaticconstructions_B_Meaning ;
-    cx:hasStem "burn" .
+    cx:hasSlotMeaning cx:Idiomaticconstructions_B_Meaning .
 
 cx:Idiomaticconstructions_B_Form a rcxn:SlotForm ;
-    cx:hasSyntacticForm cx:Idiomaticconstructions_B_Morphosyntax .
+    cx:hasSyntacticForm cx:Idiomaticconstructions_B_Morphosyntax ;
+    rcxn:hasStem "burn" .
 
 cx:Idiomaticconstructions_B_Index a cx:Event ;
     cx:hasMode olia:IndicativeVerb ;
@@ -73,11 +73,11 @@ cx:Idiomaticconstructions_D a rcxn:SlotMandatory ;
     cx:WordOrder "Final position" ;
     rcxn:hasSlotForm cx:Idiomaticconstructions_D_Form ;
     cx:hasSlotMeaning cx:Idiomaticconstructions_D_Meaning ;
-    cx:hasSurfaceForm "bridges" ;
-    cx:hasStem "bridge" .
+    cx:hasSurfaceForm "bridges" .
 
 cx:Idiomaticconstructions_D_Form a rcxn:SlotForm ;
-    cx:hasSyntacticForm cx:Idiomaticconstructions_D_Morphosyntax .
+    cx:hasSyntacticForm cx:Idiomaticconstructions_D_Morphosyntax ;
+    rcxn:hasStem "bridge" .
 
 cx:Idiomaticconstructions_D_Index a cx:Individual ;
     cx:hasAnimacy cx:inanimate ;

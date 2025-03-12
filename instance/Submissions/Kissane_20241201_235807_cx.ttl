@@ -28,10 +28,10 @@ cx:TheEnglishGIVE-OUTVerbParticleConstruction._A_Morphosyntax a cx:NP ;
 
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._B a rcxn:SlotMandatory ;
     cx:WordOrder "Element 2 follows the element 1" ;
-    cx:hasStem "give" ;
     rcxn:hasSlotForm cx:TheEnglishGIVE-OUTVerbParticleConstruction._B_Form .
 
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._B_Form a rcxn:SlotForm ;
+    rcxn:hasStem "give" ;
     cx:hasSyntacticForm cx:TheEnglishGIVE-OUTVerbParticleConstruction._B_Morphosyntax .
 
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._B_Morphosyntax a cx:Verb .

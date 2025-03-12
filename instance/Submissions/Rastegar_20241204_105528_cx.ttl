@@ -115,10 +115,10 @@ cx:Idiomaticconstruction_D a rcxn:SlotMandatory ;
     cx:WordOrder "Verb-final in dependent clauses / V2 in main clauses" ;
     rcxn:hasSlotForm cx:Idiomaticconstruction_D_Form ;
     cx:hasSlotMeaning cx:Idiomaticconstruction_D_Meaning ;
-    cx:hasStem "schütteln" ;
     cx:hasTranslation "shake" .
 
 cx:Idiomaticconstruction_D_Form a rcxn:SlotForm ;
+    rcxn:hasStem "schütteln" ;
     cx:hasSyntacticForm cx:Idiomaticconstruction_D_Morphosyntax .
 
 cx:Idiomaticconstruction_D_Index a cx:Event ;

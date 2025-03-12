@@ -57,10 +57,10 @@ cx:Transitivedurch-Präfixverbkonstruktion_B a rcxn:SlotMandatory ;
     cx:WordOrder "2 vor 3" ;
     rcxn:hasSlotForm cx:Transitivedurch-Präfixverbkonstruktion_B_Form ;
     cx:hasSlotMeaning cx:Transitivedurch-Präfixverbkonstruktion_B_Meaning ;
-    cx:hasStem "durh" ;
     cx:hasTranslation "'durch'" .
 
 cx:Transitivedurch-Präfixverbkonstruktion_B_Form a rcxn:SlotForm ;
+    rcxn:hasStem "durh" ;
     cx:hasSyntacticForm cx:Transitivedurch-Präfixverbkonstruktion_B_Morphosyntax .
 
 cx:Transitivedurch-Präfixverbkonstruktion_B_Meaning a cx:SlotMeaning ;
@@ -72,11 +72,6 @@ cx:Transitivedurch-Präfixverbkonstruktion_C a rcxn:SlotMandatory ;
     cx:WordOrder "3 nach 2" ;
     rcxn:hasSlotForm cx:Transitivedurch-Präfixverbkonstruktion_C_Form ;
     cx:hasSlotMeaning cx:Transitivedurch-Präfixverbkonstruktion_C_Meaning ;
-    cx:hasStem "bîzen" ;
-    cx:hasStem "houwen" ;
-    cx:hasStem "brëchen" ;
-    cx:hasStem "rîten" ;
-    cx:hasStem "dringen" ;
     cx:hasTranslation "beißen" ;
     cx:hasTranslation "hauen" ;
     cx:hasTranslation "brechen" ;
@@ -84,6 +79,11 @@ cx:Transitivedurch-Präfixverbkonstruktion_C a rcxn:SlotMandatory ;
     cx:hasTranslation "dringen" .
 
 cx:Transitivedurch-Präfixverbkonstruktion_C_Form a rcxn:SlotForm ;
+    rcxn:hasStem "bîzen" ;
+    rcxn:hasStem "houwen" ;
+    rcxn:hasStem "brëchen" ;
+    rcxn:hasStem "rîten" ;
+    rcxn:hasStem "dringen" ;
     cx:hasSyntacticForm cx:Transitivedurch-Präfixverbkonstruktion_C_Morphosyntax .
 
 cx:Transitivedurch-Präfixverbkonstruktion_C_Index a cx:Event ;
@@ -148,10 +148,10 @@ cx:Transitivedurch-Präfixverbkonstruktion_Ex_C a cx:Example ;
 cx:Transitivedurch-Präfixverbkonstruktion_G a rcxn:SlotOptional ;
     rcxn:hasSlotForm cx:Transitivedurch-Präfixverbkonstruktion_G_Form ;
     cx:hasSlotMeaning cx:Transitivedurch-Präfixverbkonstruktion_G_Meaning ;
-    cx:hasStem "er" ;
     cx:hasTranslation "ihr, ihm" .
 
 cx:Transitivedurch-Präfixverbkonstruktion_G_Form a rcxn:SlotForm ;
+    rcxn:hasStem "er" ;
     cx:hasSyntacticForm cx:Transitivedurch-Präfixverbkonstruktion_G_Morphosyntax .
 
 cx:Transitivedurch-Präfixverbkonstruktion_G_Index a cx:Individual ;

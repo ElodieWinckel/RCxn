@@ -576,7 +576,7 @@ def form_submit():
         if root.strip():
             g.add((slot_form_uri, rcxn.hasRoot, Literal(root)))
         if stem.strip():
-            g.add((element_uri, cx.hasStem, Literal(stem)))
+            g.add((slot_form_uri, rcxn.hasStem, Literal(stem)))
         if surface.strip():
             g.add((element_uri, cx.hasSurfaceForm, Literal(surface)))
         if translation.strip():

@@ -25,11 +25,11 @@ cx:Toughmovementconstruction_A_Morphosyntax a cx:NP .
 
 cx:Toughmovementconstruction_B a rcxn:SlotMandatory ;
     cx:WordOrder "Element 2 immediately precedes Element 3" ;
-    rcxn:hasSlotForm cx:Toughmovementconstruction_B_Form ;
-    cx:hasStem "BE" .
+    rcxn:hasSlotForm cx:Toughmovementconstruction_B_Form .
 
 cx:Toughmovementconstruction_B_Form a rcxn:SlotForm ;
-    cx:hasSyntacticForm cx:Toughmovementconstruction_B_Morphosyntax .
+    cx:hasSyntacticForm cx:Toughmovementconstruction_B_Morphosyntax ;
+    rcxn:hasStem "BE" .
 
 cx:Toughmovementconstruction_B_Morphosyntax a cx:VP .
 

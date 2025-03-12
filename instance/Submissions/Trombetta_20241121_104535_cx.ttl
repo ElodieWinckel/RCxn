@@ -76,10 +76,10 @@ cx:Relative-Topic-ShiftConstruction_A a rcxn:SlotMandatory ;
     cx:WordOrder "Element 1 immediately before element 2" ;
     rcxn:hasSlotForm cx:Relative-Topic-ShiftConstruction_A_Form ;
     cx:hasSlotMeaning cx:Relative-Topic-ShiftConstruction_A_Meaning ;
-    cx:hasStem "Il quale [N]" ;
     RDFS:comment "Element 1 is a \"coniunctio relativa\", i.e., a structure in which a relative pronoun (e.g., il quale, la quale) introduces a subordinate clause. The head noun can be omitted, remaining contextually recoverable. When this happens, the coniunctio relativa represents an elliptical noun phrase, with the relative pronoun standing in place of the implicit nominal head. Such an NP is anaphorically linked to the preceding co-text" .
 
 cx:Relative-Topic-ShiftConstruction_A_Form a rcxn:SlotForm ;
+    cx:hasSurfaceForm "Il quale [N]" ;
     cx:hasSyntacticForm cx:Relative-Topic-ShiftConstruction_A_Morphosyntax .
 
 cx:Relative-Topic-ShiftConstruction_A_Meaning a cx:SlotMeaning ;

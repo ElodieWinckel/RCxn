@@ -77,10 +77,10 @@ cx:Generalprepositionalconstructions_MD a rcxn:Metadata ;
         cx:Comment ;
     rcxn:hasSlotForm <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_D_Form> ;
     cx:hasSlotMeaning <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_D_Meaning> ;
-    cx:hasStem "vor" ;
     cx:hasTranslation "in front of " .
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_D_Form> a rcxn:SlotForm ;
+    rcxn:hasStem "vor" ;
     cx:hasSyntacticForm <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_D_Morphosyntax> .
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_D_Meaning> a cx:SlotMeaning ;
@@ -95,10 +95,10 @@ cx:Generalprepositionalconstructions_MD a rcxn:Metadata ;
         cx:Comment ;
     rcxn:hasSlotForm <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_E_Form> ;
     cx:hasSlotMeaning <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_E_Meaning> ;
-    cx:hasStem "Auge" ;
     cx:hasTranslation "eyes" .
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_E_Form> a rcxn:SlotForm ;
+    rcxn:hasStem "Auge" ;
     cx:hasSyntacticForm <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_E_Morphosyntax> .
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_E_Meaning> a cx:SlotMeaning ;

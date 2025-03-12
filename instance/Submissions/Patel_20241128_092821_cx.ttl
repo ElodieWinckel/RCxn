@@ -35,10 +35,10 @@
 <http://example.org/cx/come+[noise/mannerofmovement]V-ing_B> a rcxn:SlotMandatory ;
     cx:WordOrder "Element 2 immediately before element 3" ;
     rcxn:hasSlotForm <http://example.org/cx/come+[noise/mannerofmovement]V-ing_B_Form> ;
-    cx:hasStem "come" ;
     RDFS:comment "perspective may imply subjective perception, enhanced expressivity, or inevitability of the action decribed by element 3" .
 
 <http://example.org/cx/come+[noise/mannerofmovement]V-ing_B_Form> a rcxn:SlotForm ;
+    rcxn:hasStem "come" ;
     cx:hasSyntacticForm <http://example.org/cx/come+[noise/mannerofmovement]V-ing_B_Morphosyntax> .
 
 <http://example.org/cx/come+[noise/mannerofmovement]V-ing_B_Morphosyntax> a cx:Verb .

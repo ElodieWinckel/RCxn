@@ -106,6 +106,7 @@
             </owl:Restriction>
         </rdfs:range>
         <rdfs:comment xml:lang="en">Describes the form of a construction element as based on a certain root.</rdfs:comment>
+        <rdfs:label xml:lang="en">Root</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -125,6 +126,22 @@
     <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#hasSlots">
         <rdfs:domain rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#Construction"/>
         <rdfs:comment xml:lang="en">Relates a construction to the sequence of construction elements that constitutes it.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#hasStem -->
+
+    <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#hasStem">
+        <rdfs:domain rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#SlotForm"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">Describes the form of a construction element as based on a certain stem.</rdfs:comment>
+        <rdfs:label xml:lang="en">Stem</rdfs:label>
     </owl:ObjectProperty>
     
 

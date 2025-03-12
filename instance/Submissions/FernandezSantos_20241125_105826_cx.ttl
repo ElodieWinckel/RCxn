@@ -94,10 +94,10 @@ cx:Transitiveobjectrelativeclause_A_Morphosyntax a cx:NP ;
 cx:Transitiveobjectrelativeclause_B a rcxn:SlotOptional ;
     cx:WordOrder "If present, Element 2 immediately after Element 1" ;
     rcxn:hasSlotForm cx:Transitiveobjectrelativeclause_B_Form ;
-    cx:hasStem "a + article" ;
     cx:hasTranslation "to:the" .
 
 cx:Transitiveobjectrelativeclause_B_Form a rcxn:SlotForm ;
+    rcxn:hasStem "a + article" ;
     cx:hasSyntacticForm cx:Transitiveobjectrelativeclause_B_Morphosyntax .
 
 cx:Transitiveobjectrelativeclause_B_Morphosyntax a cx:PP ;

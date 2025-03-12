@@ -160,9 +160,9 @@ def construction_detail(uri):
                     'property': "Optionality",
                     'object': re.sub(prefixes, "", str(obj)),
                 })
-        # Step 3: Collect triples for morphosyntax of each sequence member
-        subject_morpho = URIRef(str(slot_uri) + "_Morphosyntax")
-        for predicate, obj in g.predicate_objects(subject=subject_morpho):
+        # Step 3: Collect triples for form of each sequence member
+        subject_slotform = URIRef(str(slot_uri) + "_Form")
+        for predicate, obj in g.predicate_objects(subject=subject_slotform):
             if str(predicate) != "http://www.w3.org/1999/02/22-rdf-syntax-ns#type":
                 elements.append({
                     'subject': re.sub(prefixes, "", str(slot_uri)),

@@ -45,10 +45,10 @@ cx:EvaluativeAttributionConstruction_C_Meaning a cx:SlotMeaning ;
 cx:EvaluativeAttributionConstruction_C_Morphosyntax a "NP", "PP" .
 
 cx:EvaluativeAttributionConstruction_D a rcxn:SlotOptional ;
-    rcxn:hasSlotForm cx:EvaluativeAttributionConstruction_D_Form ;
-    cx:hasStem "to be (lemma)" .
+    rcxn:hasSlotForm cx:EvaluativeAttributionConstruction_D_Form .
 
-cx:EvaluativeAttributionConstruction_D_Form a rcxn:SlotForm .
+cx:EvaluativeAttributionConstruction_D_Form a rcxn:SlotForm ;
+    rcxn:hasStem "to be (lemma)" .
 
 cx:EvaluativeAttributionConstruction_E a rcxn:SlotMandatory ;
     rcxn:hasSlotForm cx:EvaluativeAttributionConstruction_E_Form ;

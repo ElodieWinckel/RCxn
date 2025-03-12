@@ -20,11 +20,11 @@ The gesture is sometimes used a few milliseconds before uttering "this" and is m
 cx:ThisCloseToV-ing_A a rcxn:SlotMandatory ;
     cx:WordOrder "Element 1 comes immediately before Element 2" ;
     rcxn:hasSlotForm cx:ThisCloseToV-ing_A_Form ;
-    cx:hasSlotMeaning cx:ThisCloseToV-ing_A_Meaning ;
-    cx:hasStem "Be" ;
-    cx:hasStem "Come" .
+    cx:hasSlotMeaning cx:ThisCloseToV-ing_A_Meaning .
 
-cx:ThisCloseToV-ing_A_Form a rcxn:SlotForm .
+cx:ThisCloseToV-ing_A_Form a rcxn:SlotForm ;
+    rcxn:hasStem "Be" ;
+    rcxn:hasStem "Come" .
 
 cx:ThisCloseToV-ing_A_Index a cx:Event ;
     cx:hasVoice cx:active .
