@@ -140,8 +140,8 @@
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:range>
-        <rdfs:comment xml:lang="en">Describes the form of a construction element as based on a certain stem.</rdfs:comment>
-        <rdfs:label xml:lang="en">Stem</rdfs:label>
+        <rdfs:comment xml:lang="en">Describes the form of a construction element as based on a certain stem or lemma.</rdfs:comment>
+        <rdfs:label xml:lang="en">Stem / Lemma</rdfs:label>
     </owl:ObjectProperty>
     
 
