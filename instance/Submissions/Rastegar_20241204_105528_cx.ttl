@@ -59,7 +59,7 @@ cx:Idiomaticconstruction_A a rcxn:SlotMandatory ;
     cx:hasSurfaceForm "aus" ;
     cx:hasTranslation "out of" .
 
-cx:Idiomaticconstruction_A_Form a cx:SlotForm ;
+cx:Idiomaticconstruction_A_Form a rcxn:SlotForm ;
     cx:hasSyntacticForm cx:Idiomaticconstruction_A_Morphosyntax .
 
 cx:Idiomaticconstruction_A_Meaning a cx:SlotMeaning ;
@@ -75,7 +75,7 @@ cx:Idiomaticconstruction_B a rcxn:SlotMandatory ;
     cx:hasSurfaceForm "dem" ;
     cx:hasTranslation "the" .
 
-cx:Idiomaticconstruction_B_Form a cx:SlotForm ;
+cx:Idiomaticconstruction_B_Form a rcxn:SlotForm ;
     cx:hasSyntacticForm cx:Idiomaticconstruction_B_Morphosyntax .
 
 cx:Idiomaticconstruction_B_Index a cx:Individual ;
@@ -96,7 +96,7 @@ cx:Idiomaticconstruction_C a rcxn:SlotMandatory ;
     cx:hasSurfaceForm "Ärmel" ;
     cx:hasTranslation "sleeve" .
 
-cx:Idiomaticconstruction_C_Form a cx:SlotForm ;
+cx:Idiomaticconstruction_C_Form a rcxn:SlotForm ;
     cx:hasSyntacticForm cx:Idiomaticconstruction_C_Morphosyntax .
 
 cx:Idiomaticconstruction_C_Index a cx:Individual ;
@@ -118,7 +118,7 @@ cx:Idiomaticconstruction_D a rcxn:SlotMandatory ;
     cx:hasStem "schütteln" ;
     cx:hasTranslation "shake" .
 
-cx:Idiomaticconstruction_D_Form a cx:SlotForm ;
+cx:Idiomaticconstruction_D_Form a rcxn:SlotForm ;
     cx:hasSyntacticForm cx:Idiomaticconstruction_D_Morphosyntax .
 
 cx:Idiomaticconstruction_D_Index a cx:Event ;

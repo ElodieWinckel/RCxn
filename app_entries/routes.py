@@ -111,6 +111,7 @@ def construction_detail(uri):
     triples[:] = [item for item in triples if item['property'] != "hasSlots"]
     triples[:] = [item for item in triples if item['property'] != "hasExample"]
     triples[:] = [item for item in triples if item['property'] != "hasMetadata"]
+    triples[:] = [item for item in triples if item['property'] != "hasTitle"]
 
     # Separate into General and Links
     links_properties = {"inheritsFrom", "inheritedBy",

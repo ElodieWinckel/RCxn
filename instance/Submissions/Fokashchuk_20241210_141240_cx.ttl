@@ -23,7 +23,7 @@
     cx:hasSlotMeaning <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_A_Meaning> ;
     RDFS:comment "usually the nominative case" .
 
-<http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_A_Form> a cx:SlotForm ;
+<http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_A_Form> a rcxn:SlotForm ;
     cx:hasSyntacticForm <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_A_Morphosyntax> .
 
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_A_Index> a cx:Individual ;

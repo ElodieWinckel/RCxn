@@ -20,7 +20,7 @@ cx:Idiomaticconstructions_A a rcxn:SlotMandatory ;
     cx:hasSlotForm cx:Idiomaticconstructions_A_Form ;
     cx:hasSlotMeaning cx:Idiomaticconstructions_A_Meaning .
 
-cx:Idiomaticconstructions_A_Form a cx:SlotForm ;
+cx:Idiomaticconstructions_A_Form a rcxn:SlotForm ;
     cx:hasSyntacticForm cx:Idiomaticconstructions_A_Morphosyntax .
 
 cx:Idiomaticconstructions_A_Index a cx:Individual ;
@@ -39,7 +39,7 @@ cx:Idiomaticconstructions_B a rcxn:SlotMandatory ;
     cx:hasSlotMeaning cx:Idiomaticconstructions_B_Meaning ;
     cx:hasStem "burn" .
 
-cx:Idiomaticconstructions_B_Form a cx:SlotForm ;
+cx:Idiomaticconstructions_B_Form a rcxn:SlotForm ;
     cx:hasSyntacticForm cx:Idiomaticconstructions_B_Morphosyntax .
 
 cx:Idiomaticconstructions_B_Index a cx:Event ;
@@ -56,7 +56,7 @@ cx:Idiomaticconstructions_C a rcxn:SlotMandatory ;
     cx:hasSlotForm cx:Idiomaticconstructions_C_Form ;
     cx:hasSlotMeaning cx:Idiomaticconstructions_C_Meaning .
 
-cx:Idiomaticconstructions_C_Form a cx:SlotForm ;
+cx:Idiomaticconstructions_C_Form a rcxn:SlotForm ;
     cx:hasSyntacticForm cx:Idiomaticconstructions_C_Morphosyntax .
 
 cx:Idiomaticconstructions_C_Index a cx:Individual ;
@@ -76,7 +76,7 @@ cx:Idiomaticconstructions_D a rcxn:SlotMandatory ;
     cx:hasSurfaceForm "bridges" ;
     cx:hasStem "bridge" .
 
-cx:Idiomaticconstructions_D_Form a cx:SlotForm ;
+cx:Idiomaticconstructions_D_Form a rcxn:SlotForm ;
     cx:hasSyntacticForm cx:Idiomaticconstructions_D_Morphosyntax .
 
 cx:Idiomaticconstructions_D_Index a cx:Individual ;

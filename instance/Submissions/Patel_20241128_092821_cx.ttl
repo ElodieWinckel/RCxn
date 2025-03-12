@@ -23,7 +23,7 @@
     cx:hasSlotForm <http://example.org/cx/come+[noise/mannerofmovement]V-ing_A_Form> ;
     cx:hasSlotMeaning <http://example.org/cx/come+[noise/mannerofmovement]V-ing_A_Meaning> .
 
-<http://example.org/cx/come+[noise/mannerofmovement]V-ing_A_Form> a cx:SlotForm ;
+<http://example.org/cx/come+[noise/mannerofmovement]V-ing_A_Form> a rcxn:SlotForm ;
     cx:hasSyntacticForm <http://example.org/cx/come+[noise/mannerofmovement]V-ing_A_Morphosyntax> .
 
 <http://example.org/cx/come+[noise/mannerofmovement]V-ing_A_Meaning> a cx:SlotMeaning ;
@@ -38,7 +38,7 @@
     cx:hasStem "come" ;
     RDFS:comment "perspective may imply subjective perception, enhanced expressivity, or inevitability of the action decribed by element 3" .
 
-<http://example.org/cx/come+[noise/mannerofmovement]V-ing_B_Form> a cx:SlotForm ;
+<http://example.org/cx/come+[noise/mannerofmovement]V-ing_B_Form> a rcxn:SlotForm ;
     cx:hasSyntacticForm <http://example.org/cx/come+[noise/mannerofmovement]V-ing_B_Morphosyntax> .
 
 <http://example.org/cx/come+[noise/mannerofmovement]V-ing_B_Morphosyntax> a cx:Verb .
@@ -48,7 +48,7 @@
     RDFS:comment "colloprofile: tumbling (36); hurrying (22); barging (11); hurtling (22); striding (20); crashing (27); rushing (56); bounding (14); bursting (19); crowding (11); pouring (23); running (109); surging (7); roaring (12); streaming (7); trotting (10); flying (22); shambling (4); riding (21); blundering (5); leaping (7); stumbling (6); clattering (5); floating (5); thundering (5); charging (9); spilling (5); storming (5); lolloping (3); drifting (7); tearing (7); galloping (4); panting (6); racing (11); scurrying (4); loping (3); prancing (3); straggling (3)",
         "present participle" .
 
-<http://example.org/cx/come+[noise/mannerofmovement]V-ing_C_Form> a cx:SlotForm ;
+<http://example.org/cx/come+[noise/mannerofmovement]V-ing_C_Form> a rcxn:SlotForm ;
     cx:hasSyntacticForm <http://example.org/cx/come+[noise/mannerofmovement]V-ing_C_Morphosyntax> .
 
 <http://example.org/cx/come+[noise/mannerofmovement]V-ing_C_Morphosyntax> a "Verb+-ing" .
@@ -59,7 +59,7 @@
 <http://example.org/cx/come+[noise/mannerofmovement]V-ing_D_Meaning> a cx:SlotMeaning ;
     cx:hasSemanticContribution olia:GoalRole .
 
-<http://example.org/cx/come+[noise/mannerofmovement]V-ing_D_Form> a cx:SlotForm ;
+<http://example.org/cx/come+[noise/mannerofmovement]V-ing_D_Form> a rcxn:SlotForm ;
     cx:hasSyntacticForm <http://example.org/cx/come+[noise/mannerofmovement]V-ing_D_Morphosyntax> .
 
 <http://example.org/cx/come+[noise/mannerofmovement]V-ing_D_Morphosyntax> a cx:PP, cx:Particle .

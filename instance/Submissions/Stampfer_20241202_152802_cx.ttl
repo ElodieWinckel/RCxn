@@ -16,7 +16,7 @@ cx:EvaluativeAttributionConstruction_A a rcxn:SlotOptional ;
     cx:hasSlotForm cx:EvaluativeAttributionConstruction_A_Form ;
     cx:hasSlotMeaning cx:EvaluativeAttributionConstruction_A_Meaning .
 
-cx:EvaluativeAttributionConstruction_A_Form a cx:SlotForm ;
+cx:EvaluativeAttributionConstruction_A_Form a rcxn:SlotForm ;
     cx:hasSyntacticForm cx:EvaluativeAttributionConstruction_A_Morphosyntax .
 
 cx:EvaluativeAttributionConstruction_A_Meaning a cx:SlotMeaning ;
@@ -27,7 +27,7 @@ cx:EvaluativeAttributionConstruction_A_Morphosyntax a cx:NP .
 cx:EvaluativeAttributionConstruction_B a rcxn:SlotMandatory ;
     cx:hasSlotForm cx:EvaluativeAttributionConstruction_B_Form .
 
-cx:EvaluativeAttributionConstruction_B_Form a cx:SlotForm ;
+cx:EvaluativeAttributionConstruction_B_Form a rcxn:SlotForm ;
     cx:hasSyntacticForm cx:EvaluativeAttributionConstruction_B_Morphosyntax .
 
 cx:EvaluativeAttributionConstruction_B_Morphosyntax a cx:VP .
@@ -36,7 +36,7 @@ cx:EvaluativeAttributionConstruction_C a rcxn:SlotMandatory ;
     cx:hasSlotForm cx:EvaluativeAttributionConstruction_C_Form ;
     cx:hasSlotMeaning cx:EvaluativeAttributionConstruction_C_Meaning .
 
-cx:EvaluativeAttributionConstruction_C_Form a cx:SlotForm ;
+cx:EvaluativeAttributionConstruction_C_Form a rcxn:SlotForm ;
     cx:hasSyntacticForm cx:EvaluativeAttributionConstruction_C_Morphosyntax .
 
 cx:EvaluativeAttributionConstruction_C_Meaning a cx:SlotMeaning ;
@@ -48,13 +48,13 @@ cx:EvaluativeAttributionConstruction_D a rcxn:SlotOptional ;
     cx:hasSlotForm cx:EvaluativeAttributionConstruction_D_Form ;
     cx:hasStem "to be (lemma)" .
 
-cx:EvaluativeAttributionConstruction_D_Form a cx:SlotForm .
+cx:EvaluativeAttributionConstruction_D_Form a rcxn:SlotForm .
 
 cx:EvaluativeAttributionConstruction_E a rcxn:SlotMandatory ;
     cx:hasSlotForm cx:EvaluativeAttributionConstruction_E_Form ;
     cx:hasSlotMeaning cx:EvaluativeAttributionConstruction_E_Meaning .
 
-cx:EvaluativeAttributionConstruction_E_Form a cx:SlotForm ;
+cx:EvaluativeAttributionConstruction_E_Form a rcxn:SlotForm ;
     cx:hasSyntacticForm cx:EvaluativeAttributionConstruction_E_Morphosyntax .
 
 cx:EvaluativeAttributionConstruction_E_Meaning a cx:SlotMeaning ;

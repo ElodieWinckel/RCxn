@@ -22,7 +22,7 @@ cx:Dooperationwithoperand1onoperand2construction_A a rcxn:SlotOptional ;
     cx:hasTranslation "with" ;
     cx:hasTransliteration "yi" .
 
-cx:Dooperationwithoperand1onoperand2construction_A_Form a cx:SlotForm ;
+cx:Dooperationwithoperand1onoperand2construction_A_Form a rcxn:SlotForm ;
     cx:hasSyntacticForm cx:Dooperationwithoperand1onoperand2construction_A_Morphosyntax .
 
 cx:Dooperationwithoperand1onoperand2construction_A_Morphosyntax a cx:Particle .
@@ -33,7 +33,7 @@ cx:Dooperationwithoperand1onoperand2construction_B a rcxn:SlotMandatory ;
     cx:hasSlotMeaning cx:Dooperationwithoperand1onoperand2construction_B_Meaning ;
     RDFS:comment "Semantically, element 2 is not optional. However, if it is the result of the directly preceding operation, what would normally be expressed by \"之\", the slot can be empty, as it is implied by 以." .
 
-cx:Dooperationwithoperand1onoperand2construction_B_Form a cx:SlotForm ;
+cx:Dooperationwithoperand1onoperand2construction_B_Form a rcxn:SlotForm ;
     cx:hasSyntacticForm cx:Dooperationwithoperand1onoperand2construction_B_Morphosyntax .
 
 cx:Dooperationwithoperand1onoperand2construction_B_Meaning a cx:SlotMeaning ;
@@ -47,7 +47,7 @@ cx:Dooperationwithoperand1onoperand2construction_C a rcxn:SlotMandatory ;
     cx:hasSlotForm cx:Dooperationwithoperand1onoperand2construction_C_Form ;
     RDFS:comment "colloprofile: 加 (frequent), 減 (frequent), 乘 (frequent), 除 (frequent)" .
 
-cx:Dooperationwithoperand1onoperand2construction_C_Form a cx:SlotForm ;
+cx:Dooperationwithoperand1onoperand2construction_C_Form a rcxn:SlotForm ;
     cx:hasSyntacticForm cx:Dooperationwithoperand1onoperand2construction_C_Morphosyntax .
 
 cx:Dooperationwithoperand1onoperand2construction_C_Morphosyntax a cx:VP .
@@ -57,7 +57,7 @@ cx:Dooperationwithoperand1onoperand2construction_D a rcxn:SlotMandatory ;
     cx:hasSlotForm cx:Dooperationwithoperand1onoperand2construction_D_Form ;
     cx:hasSlotMeaning cx:Dooperationwithoperand1onoperand2construction_D_Meaning .
 
-cx:Dooperationwithoperand1onoperand2construction_D_Form a cx:SlotForm ;
+cx:Dooperationwithoperand1onoperand2construction_D_Form a rcxn:SlotForm ;
     cx:hasSyntacticForm cx:Dooperationwithoperand1onoperand2construction_D_Morphosyntax .
 
 cx:Dooperationwithoperand1onoperand2construction_D_Meaning a cx:SlotMeaning ;

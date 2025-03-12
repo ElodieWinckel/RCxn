@@ -79,7 +79,7 @@ cx:Relative-Topic-ShiftConstruction_A a rcxn:SlotMandatory ;
     cx:hasStem "Il quale [N]" ;
     RDFS:comment "Element 1 is a \"coniunctio relativa\", i.e., a structure in which a relative pronoun (e.g., il quale, la quale) introduces a subordinate clause. The head noun can be omitted, remaining contextually recoverable. When this happens, the coniunctio relativa represents an elliptical noun phrase, with the relative pronoun standing in place of the implicit nominal head. Such an NP is anaphorically linked to the preceding co-text" .
 
-cx:Relative-Topic-ShiftConstruction_A_Form a cx:SlotForm ;
+cx:Relative-Topic-ShiftConstruction_A_Form a rcxn:SlotForm ;
     cx:hasSyntacticForm cx:Relative-Topic-ShiftConstruction_A_Morphosyntax .
 
 cx:Relative-Topic-ShiftConstruction_A_Meaning a cx:SlotMeaning ;
@@ -96,7 +96,7 @@ cx:Relative-Topic-ShiftConstruction_C a rcxn:SlotMandatory ;
     cx:hasSlotForm cx:Relative-Topic-ShiftConstruction_C_Form ;
     RDFS:comment "The verb is often, though not exclusively, in the present tense. It frequently, but not exclusively, features a \"si passivante\" construction (formed by the particle 'si' combined with a transitive verb to convey a passive meaning). Additionally, the VP may have a more complex internal structure, incorporating various other elements. The verb appearing in the VP often anaphorically references an action or process already mentioned in the preceding co-text. This can occur either through direct repetition of the same verb or through synonyms" .
 
-cx:Relative-Topic-ShiftConstruction_C_Form a cx:SlotForm ;
+cx:Relative-Topic-ShiftConstruction_C_Form a rcxn:SlotForm ;
     cx:hasSyntacticForm cx:Relative-Topic-ShiftConstruction_C_Morphosyntax .
 
 cx:Relative-Topic-ShiftConstruction_C_Morphosyntax a cx:VP .

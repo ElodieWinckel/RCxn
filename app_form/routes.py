@@ -569,10 +569,10 @@ def form_submit():
         # Triple to relate slot to it meaning (if needed)
         if morphosyntactic_form.strip() or root.strip() or stem.strip():
             g.add((element_uri, cx.hasSlotForm, slot_form_uri))
-            g.add((slot_form_uri, RDF.type, cx.SlotForm))
+            g.add((slot_form_uri, RDF.type, rcxn.SlotForm))
 
         # If defined, attribute its root and stem to the element/slot
-        # (i.e., all formal aspects except morpho-syntactic form
+        # (i.e., all formal aspects except morpho-syntactic form)
         if root.strip():
             g.add((element_uri, cx.hasRoot, Literal(root)))
         if stem.strip():

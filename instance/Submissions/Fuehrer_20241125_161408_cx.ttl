@@ -39,7 +39,7 @@ cx:Präfixverbkonstruktion_MD a rcxn:Metadata ;
     rcxn:annotator membr:Fuehrer ;
     rcxn:creationDate "2024-11-25"^^xsd:date .
 
-cx:Transitivedurch-Präfixverbkonstruktion_A_Form a cx:SlotForm ;
+cx:Transitivedurch-Präfixverbkonstruktion_A_Form a rcxn:SlotForm ;
     cx:hasSyntacticForm cx:Transitivedurch-Präfixverbkonstruktion_A_Morphosyntax .
 
 cx:Transitivedurch-Präfixverbkonstruktion_A_Index a cx:Individual ;
@@ -60,7 +60,7 @@ cx:Transitivedurch-Präfixverbkonstruktion_B a rcxn:SlotMandatory ;
     cx:hasStem "durh" ;
     cx:hasTranslation "'durch'" .
 
-cx:Transitivedurch-Präfixverbkonstruktion_B_Form a cx:SlotForm ;
+cx:Transitivedurch-Präfixverbkonstruktion_B_Form a rcxn:SlotForm ;
     cx:hasSyntacticForm cx:Transitivedurch-Präfixverbkonstruktion_B_Morphosyntax .
 
 cx:Transitivedurch-Präfixverbkonstruktion_B_Meaning a cx:SlotMeaning ;
@@ -83,7 +83,7 @@ cx:Transitivedurch-Präfixverbkonstruktion_C a rcxn:SlotMandatory ;
     cx:hasTranslation "reiten" ;
     cx:hasTranslation "dringen" .
 
-cx:Transitivedurch-Präfixverbkonstruktion_C_Form a cx:SlotForm ;
+cx:Transitivedurch-Präfixverbkonstruktion_C_Form a rcxn:SlotForm ;
     cx:hasSyntacticForm cx:Transitivedurch-Präfixverbkonstruktion_C_Morphosyntax .
 
 cx:Transitivedurch-Präfixverbkonstruktion_C_Index a cx:Event ;
@@ -101,7 +101,7 @@ cx:Transitivedurch-Präfixverbkonstruktion_D a rcxn:SlotMandatory ;
     cx:hasTranslation "sie, die Seite, die Lande, das Schlachtfeld, die Schar" ;
     RDFS:comment "Akkusativ ist schon interpretiert; formale Basis oft formgleich mit anderen Fällen" .
 
-cx:Transitivedurch-Präfixverbkonstruktion_D_Form a cx:SlotForm ;
+cx:Transitivedurch-Präfixverbkonstruktion_D_Form a rcxn:SlotForm ;
     cx:hasSyntacticForm cx:Transitivedurch-Präfixverbkonstruktion_D_Morphosyntax .
 
 cx:Transitivedurch-Präfixverbkonstruktion_D_Meaning a cx:SlotMeaning ;
@@ -118,7 +118,7 @@ cx:Transitivedurch-Präfixverbkonstruktion_E a rcxn:SlotOptional ;
     cx:hasSlotMeaning cx:Transitivedurch-Präfixverbkonstruktion_E_Meaning ;
     cx:hasTranslation "da, somit" .
 
-cx:Transitivedurch-Präfixverbkonstruktion_E_Form a cx:SlotForm ;
+cx:Transitivedurch-Präfixverbkonstruktion_E_Form a rcxn:SlotForm ;
     cx:hasSyntacticForm cx:Transitivedurch-Präfixverbkonstruktion_E_Morphosyntax .
 
 cx:Transitivedurch-Präfixverbkonstruktion_E_Meaning a cx:SlotMeaning ;
@@ -151,7 +151,7 @@ cx:Transitivedurch-Präfixverbkonstruktion_G a rcxn:SlotOptional ;
     cx:hasStem "er" ;
     cx:hasTranslation "ihr, ihm" .
 
-cx:Transitivedurch-Präfixverbkonstruktion_G_Form a cx:SlotForm ;
+cx:Transitivedurch-Präfixverbkonstruktion_G_Form a rcxn:SlotForm ;
     cx:hasSyntacticForm cx:Transitivedurch-Präfixverbkonstruktion_G_Morphosyntax .
 
 cx:Transitivedurch-Präfixverbkonstruktion_G_Index a cx:Individual ;

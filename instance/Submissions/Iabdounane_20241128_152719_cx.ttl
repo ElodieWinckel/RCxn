@@ -24,7 +24,7 @@ cx:ThisCloseToV-ing_A a rcxn:SlotMandatory ;
     cx:hasStem "Be" ;
     cx:hasStem "Come" .
 
-cx:ThisCloseToV-ing_A_Form a cx:SlotForm .
+cx:ThisCloseToV-ing_A_Form a rcxn:SlotForm .
 
 cx:ThisCloseToV-ing_A_Index a cx:Event ;
     cx:hasVoice cx:active .
@@ -41,7 +41,7 @@ cx:ThisCloseToV-ing_C a rcxn:SlotMandatory ;
     cx:hasSlotForm cx:ThisCloseToV-ing_C_Form ;
     RDFS:comment "colloprofile: be (0.07 PM) ; get (0.05 PM) ; have (0.015 PM)" .
 
-cx:ThisCloseToV-ing_C_Form a cx:SlotForm ;
+cx:ThisCloseToV-ing_C_Form a rcxn:SlotForm ;
     cx:hasSyntacticForm cx:ThisCloseToV-ing_C_Morphosyntax .
 
 cx:ThisCloseToV-ing_C_Morphosyntax a "Root V" .
@@ -50,7 +50,7 @@ cx:ThisCloseToV-ing_D a rcxn:SlotMandatory ;
     cx:hasSurfaceForm "-ing" ;
     cx:hasSlotForm cx:ThisCloseToV-ing_D_Form .
 
-cx:ThisCloseToV-ing_D_Form a cx:SlotForm ;
+cx:ThisCloseToV-ing_D_Form a rcxn:SlotForm ;
     cx:hasSyntacticForm cx:ThisCloseToV-ing_D_Morphosyntax .
 
 cx:ThisCloseToV-ing_D_Morphosyntax a cx:Suffix .

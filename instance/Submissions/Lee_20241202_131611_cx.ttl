@@ -33,7 +33,7 @@ cx:Generalprepositionalconstructions_MD a rcxn:Metadata ;
     cx:hasSlotMeaning <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_A_Meaning> ;
     RDFS:comment "colloprofile: Ziel (39); Bild (24); Tod (22); Beispiel (16); Welt (13); Tatsache (12); Volk (10)" .
 
-<http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_A_Form> a cx:SlotForm ;
+<http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_A_Form> a rcxn:SlotForm ;
     cx:hasSyntacticForm <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_A_Morphosyntax> .
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_A_Meaning> a cx:SlotMeaning ;
@@ -49,7 +49,7 @@ cx:Generalprepositionalconstructions_MD a rcxn:Metadata ;
     RDFS:comment "The adjectives are also frequently modified by an adverb \"so\", forming adverbial phrases such as \"so deutlich, so klar\", etc. ",
         "colloprofile: deutlich (51); klar (47); anschaulich (10); eindringlich (9); lebendig (9); unmittelbar (9); lebhaft (7)" .
 
-<http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_B_Form> a cx:SlotForm ;
+<http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_B_Form> a rcxn:SlotForm ;
     cx:hasSyntacticForm <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_B_Morphosyntax> .
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_B_Meaning> a cx:SlotMeaning ;
@@ -63,7 +63,7 @@ cx:Generalprepositionalconstructions_MD a rcxn:Metadata ;
     cx:hasSlotMeaning <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_C_Meaning> ;
     RDFS:comment "colloprofile: immer (42); wieder (32); stets (27); noch (25); täglich (9)" .
 
-<http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_C_Form> a cx:SlotForm ;
+<http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_C_Form> a rcxn:SlotForm ;
     cx:hasSyntacticForm <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_C_Morphosyntax> .
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_C_Meaning> a cx:SlotMeaning ;
@@ -80,7 +80,7 @@ cx:Generalprepositionalconstructions_MD a rcxn:Metadata ;
     cx:hasStem "vor" ;
     cx:hasTranslation "in front of " .
 
-<http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_D_Form> a cx:SlotForm ;
+<http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_D_Form> a rcxn:SlotForm ;
     cx:hasSyntacticForm <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_D_Morphosyntax> .
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_D_Meaning> a cx:SlotMeaning ;
@@ -98,7 +98,7 @@ cx:Generalprepositionalconstructions_MD a rcxn:Metadata ;
     cx:hasStem "Auge" ;
     cx:hasTranslation "eyes" .
 
-<http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_E_Form> a cx:SlotForm ;
+<http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_E_Form> a rcxn:SlotForm ;
     cx:hasSyntacticForm <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_E_Morphosyntax> .
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_E_Meaning> a cx:SlotMeaning ;
@@ -115,7 +115,7 @@ cx:Generalprepositionalconstructions_MD a rcxn:Metadata ;
     RDFS:comment "When the verb führen or halten occur, the reflexive pronoun \"sich\" is obligatory present (Element 1).",
         "colloprofile: führen (225); halten (143); haben (129); stellen (25); stehen (15)" .
 
-<http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_F_Form> a cx:SlotForm ;
+<http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_F_Form> a rcxn:SlotForm ;
     cx:hasSyntacticForm <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_F_Morphosyntax> .
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_F_Meaning> a cx:SlotMeaning ;

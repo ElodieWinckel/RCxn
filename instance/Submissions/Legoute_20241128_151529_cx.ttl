@@ -23,7 +23,7 @@ cx:POU-beneficiaryconstruction_A a rcxn:SlotMandatory ;
     cx:hasSlotMeaning cx:POU-beneficiaryconstruction_A_Meaning ;
     RDFS:comment "not always concrete" .
 
-cx:POU-beneficiaryconstruction_A_Form a cx:SlotForm ;
+cx:POU-beneficiaryconstruction_A_Form a rcxn:SlotForm ;
     cx:hasSyntacticForm cx:POU-beneficiaryconstruction_A_Morphosyntax .
 
 cx:POU-beneficiaryconstruction_A_Meaning a cx:SlotMeaning ;
@@ -37,7 +37,7 @@ cx:POU-beneficiaryconstruction_B a rcxn:SlotMandatory ;
     cx:hasSurfaceForm "POU" ;
     cx:hasTranslation "For" .
 
-cx:POU-beneficiaryconstruction_B_Form a cx:SlotForm ;
+cx:POU-beneficiaryconstruction_B_Form a rcxn:SlotForm ;
     cx:hasSyntacticForm cx:POU-beneficiaryconstruction_B_Morphosyntax .
 
 cx:POU-beneficiaryconstruction_B_Morphosyntax a "Invariable syntactic morpheme" .
@@ -46,7 +46,7 @@ cx:POU-beneficiaryconstruction_C a rcxn:SlotMandatory ;
     cx:hasSlotForm cx:POU-beneficiaryconstruction_C_Form ;
     cx:hasSlotMeaning cx:POU-beneficiaryconstruction_C_Meaning .
 
-cx:POU-beneficiaryconstruction_C_Form a cx:SlotForm ;
+cx:POU-beneficiaryconstruction_C_Form a rcxn:SlotForm ;
     cx:hasSyntacticForm cx:POU-beneficiaryconstruction_C_Morphosyntax .
 
 cx:POU-beneficiaryconstruction_C_Meaning a cx:SlotMeaning ;

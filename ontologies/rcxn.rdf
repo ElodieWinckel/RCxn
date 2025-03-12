@@ -201,6 +201,14 @@
     <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#Member -->
 
     <owl:Class rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#Member"/>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#SlotForm -->
+
+    <owl:Class rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#SlotForm">
+        <rdfs:comment xml:lang="en">Formal side of a construction element.</rdfs:comment>
+    </owl:Class>
 </rdf:RDF>
 
 
