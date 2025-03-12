@@ -16,7 +16,7 @@ cx:Toughmovementconstruction a rcxn:Construction ;
 
 cx:Toughmovementconstruction_A a rcxn:SlotMandatory ;
     cx:WordOrder "Element 1 immediately precedes Element 2" ;
-    cx:hasSlotForm cx:Toughmovementconstruction_A_Form .
+    rcxn:hasSlotForm cx:Toughmovementconstruction_A_Form .
 
 cx:Toughmovementconstruction_A_Form a rcxn:SlotForm ;
     cx:hasSyntacticForm cx:Toughmovementconstruction_A_Morphosyntax .
@@ -25,7 +25,7 @@ cx:Toughmovementconstruction_A_Morphosyntax a cx:NP .
 
 cx:Toughmovementconstruction_B a rcxn:SlotMandatory ;
     cx:WordOrder "Element 2 immediately precedes Element 3" ;
-    cx:hasSlotForm cx:Toughmovementconstruction_B_Form ;
+    rcxn:hasSlotForm cx:Toughmovementconstruction_B_Form ;
     cx:hasStem "BE" .
 
 cx:Toughmovementconstruction_B_Form a rcxn:SlotForm ;
@@ -35,7 +35,7 @@ cx:Toughmovementconstruction_B_Morphosyntax a cx:VP .
 
 cx:Toughmovementconstruction_C a rcxn:SlotMandatory ;
     cx:WordOrder "Element 3, which immediately follows Element 2" ;
-    cx:hasSlotForm cx:Toughmovementconstruction_C_Form ;
+    rcxn:hasSlotForm cx:Toughmovementconstruction_C_Form ;
     cx:hasSlotMeaning cx:Toughmovementconstruction_C_Meaning .
 
 cx:Toughmovementconstruction_C_Form a rcxn:SlotForm ;

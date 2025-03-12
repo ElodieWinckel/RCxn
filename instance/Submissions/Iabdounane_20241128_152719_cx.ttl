@@ -19,7 +19,7 @@ The gesture is sometimes used a few milliseconds before uttering "this" and is m
 
 cx:ThisCloseToV-ing_A a rcxn:SlotMandatory ;
     cx:WordOrder "Element 1 comes immediately before Element 2" ;
-    cx:hasSlotForm cx:ThisCloseToV-ing_A_Form ;
+    rcxn:hasSlotForm cx:ThisCloseToV-ing_A_Form ;
     cx:hasSlotMeaning cx:ThisCloseToV-ing_A_Meaning ;
     cx:hasStem "Be" ;
     cx:hasStem "Come" .
@@ -38,7 +38,7 @@ cx:ThisCloseToV-ing_B a rcxn:SlotMandatory ;
 
 cx:ThisCloseToV-ing_C a rcxn:SlotMandatory ;
     cx:WordOrder "Element 3 comes immediately before Element 4" ;
-    cx:hasSlotForm cx:ThisCloseToV-ing_C_Form ;
+    rcxn:hasSlotForm cx:ThisCloseToV-ing_C_Form ;
     RDFS:comment "colloprofile: be (0.07 PM) ; get (0.05 PM) ; have (0.015 PM)" .
 
 cx:ThisCloseToV-ing_C_Form a rcxn:SlotForm ;
@@ -48,7 +48,7 @@ cx:ThisCloseToV-ing_C_Morphosyntax a "Root V" .
 
 cx:ThisCloseToV-ing_D a rcxn:SlotMandatory ;
     cx:hasSurfaceForm "-ing" ;
-    cx:hasSlotForm cx:ThisCloseToV-ing_D_Form .
+    rcxn:hasSlotForm cx:ThisCloseToV-ing_D_Form .
 
 cx:ThisCloseToV-ing_D_Form a rcxn:SlotForm ;
     cx:hasSyntacticForm cx:ThisCloseToV-ing_D_Morphosyntax .

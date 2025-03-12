@@ -55,7 +55,7 @@ cx:Transitivedurch-Präfixverbkonstruktion_A_Morphosyntax a cx:NP ;
 
 cx:Transitivedurch-Präfixverbkonstruktion_B a rcxn:SlotMandatory ;
     cx:WordOrder "2 vor 3" ;
-    cx:hasSlotForm cx:Transitivedurch-Präfixverbkonstruktion_B_Form ;
+    rcxn:hasSlotForm cx:Transitivedurch-Präfixverbkonstruktion_B_Form ;
     cx:hasSlotMeaning cx:Transitivedurch-Präfixverbkonstruktion_B_Meaning ;
     cx:hasStem "durh" ;
     cx:hasTranslation "'durch'" .
@@ -70,7 +70,7 @@ cx:Transitivedurch-Präfixverbkonstruktion_B_Morphosyntax a cx:Präfix .
 
 cx:Transitivedurch-Präfixverbkonstruktion_C a rcxn:SlotMandatory ;
     cx:WordOrder "3 nach 2" ;
-    cx:hasSlotForm cx:Transitivedurch-Präfixverbkonstruktion_C_Form ;
+    rcxn:hasSlotForm cx:Transitivedurch-Präfixverbkonstruktion_C_Form ;
     cx:hasSlotMeaning cx:Transitivedurch-Präfixverbkonstruktion_C_Meaning ;
     cx:hasStem "bîzen" ;
     cx:hasStem "houwen" ;
@@ -96,7 +96,7 @@ cx:Transitivedurch-Präfixverbkonstruktion_C_Meaning a cx:SlotMeaning ;
 cx:Transitivedurch-Präfixverbkonstruktion_C_Morphosyntax a cx:Verb .
 
 cx:Transitivedurch-Präfixverbkonstruktion_D a rcxn:SlotMandatory ;
-    cx:hasSlotForm cx:Transitivedurch-Präfixverbkonstruktion_D_Form ;
+    rcxn:hasSlotForm cx:Transitivedurch-Präfixverbkonstruktion_D_Form ;
     cx:hasSlotMeaning cx:Transitivedurch-Präfixverbkonstruktion_D_Meaning ;
     cx:hasTranslation "sie, die Seite, die Lande, das Schlachtfeld, die Schar" ;
     RDFS:comment "Akkusativ ist schon interpretiert; formale Basis oft formgleich mit anderen Fällen" .
@@ -114,7 +114,7 @@ cx:Transitivedurch-Präfixverbkonstruktion_D_Morphosyntax a cx:NP ;
     cx:hasSyntacticFunction "Object" .
 
 cx:Transitivedurch-Präfixverbkonstruktion_E a rcxn:SlotOptional ;
-    cx:hasSlotForm cx:Transitivedurch-Präfixverbkonstruktion_E_Form ;
+    rcxn:hasSlotForm cx:Transitivedurch-Präfixverbkonstruktion_E_Form ;
     cx:hasSlotMeaning cx:Transitivedurch-Präfixverbkonstruktion_E_Meaning ;
     cx:hasTranslation "da, somit" .
 
@@ -146,7 +146,7 @@ cx:Transitivedurch-Präfixverbkonstruktion_Ex_C a cx:Example ;
     RDFS:comment "teil-intermediär" .
 
 cx:Transitivedurch-Präfixverbkonstruktion_G a rcxn:SlotOptional ;
-    cx:hasSlotForm cx:Transitivedurch-Präfixverbkonstruktion_G_Form ;
+    rcxn:hasSlotForm cx:Transitivedurch-Präfixverbkonstruktion_G_Form ;
     cx:hasSlotMeaning cx:Transitivedurch-Präfixverbkonstruktion_G_Meaning ;
     cx:hasStem "er" ;
     cx:hasTranslation "ihr, ihm" .

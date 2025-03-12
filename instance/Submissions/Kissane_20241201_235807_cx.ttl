@@ -14,7 +14,7 @@
     cx:partOfLanguage "English" .
 
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._A a rcxn:SlotOptional ;
-    cx:hasSlotForm cx:TheEnglishGIVE-OUTVerbParticleConstruction._A_Form ;
+    rcxn:hasSlotForm cx:TheEnglishGIVE-OUTVerbParticleConstruction._A_Form ;
     cx:hasSlotMeaning cx:TheEnglishGIVE-OUTVerbParticleConstruction._A_Meaning .
 
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._A_Form a rcxn:SlotForm ;
@@ -29,7 +29,7 @@ cx:TheEnglishGIVE-OUTVerbParticleConstruction._A_Morphosyntax a cx:NP ;
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._B a rcxn:SlotMandatory ;
     cx:WordOrder "Element 2 follows the element 1" ;
     cx:hasStem "give" ;
-    cx:hasSlotForm cx:TheEnglishGIVE-OUTVerbParticleConstruction._B_Form .
+    rcxn:hasSlotForm cx:TheEnglishGIVE-OUTVerbParticleConstruction._B_Form .
 
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._B_Form a rcxn:SlotForm ;
     cx:hasSyntacticForm cx:TheEnglishGIVE-OUTVerbParticleConstruction._B_Morphosyntax .
@@ -39,7 +39,7 @@ cx:TheEnglishGIVE-OUTVerbParticleConstruction._B_Morphosyntax a cx:Verb .
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._C a rcxn:SlotMandatory ;
     cx:WordOrder "The element 3 follows the element 2 but not necessarily directly" ;
     cx:hasSurfaceForm "out" ;
-    cx:hasSlotForm cx:TheEnglishGIVE-OUTVerbParticleConstruction._C_Form .
+    rcxn:hasSlotForm cx:TheEnglishGIVE-OUTVerbParticleConstruction._C_Form .
 
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._C_Form a rcxn:SlotForm ;
     cx:hasSyntacticForm cx:TheEnglishGIVE-OUTVerbParticleConstruction._C_Morphosyntax .

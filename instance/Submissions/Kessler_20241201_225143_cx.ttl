@@ -17,7 +17,7 @@ cx:Dooperationwithoperand1onoperand2construction a rcxn:Construction ;
 
 cx:Dooperationwithoperand1onoperand2construction_A a rcxn:SlotOptional ;
     cx:WordOrder "Immediately before element 2" ;
-    cx:hasSlotForm cx:Dooperationwithoperand1onoperand2construction_A_Form ;
+    rcxn:hasSlotForm cx:Dooperationwithoperand1onoperand2construction_A_Form ;
     cx:hasSurfaceForm "以" ;
     cx:hasTranslation "with" ;
     cx:hasTransliteration "yi" .
@@ -29,7 +29,7 @@ cx:Dooperationwithoperand1onoperand2construction_A_Morphosyntax a cx:Particle .
 
 cx:Dooperationwithoperand1onoperand2construction_B a rcxn:SlotMandatory ;
     cx:WordOrder "Immediately before element 3" ;
-    cx:hasSlotForm cx:Dooperationwithoperand1onoperand2construction_B_Form ;
+    rcxn:hasSlotForm cx:Dooperationwithoperand1onoperand2construction_B_Form ;
     cx:hasSlotMeaning cx:Dooperationwithoperand1onoperand2construction_B_Meaning ;
     RDFS:comment "Semantically, element 2 is not optional. However, if it is the result of the directly preceding operation, what would normally be expressed by \"之\", the slot can be empty, as it is implied by 以." .
 
@@ -44,7 +44,7 @@ cx:Dooperationwithoperand1onoperand2construction_B_Morphosyntax a cx:NP .
 
 cx:Dooperationwithoperand1onoperand2construction_C a rcxn:SlotMandatory ;
     cx:WordOrder "Immediately after element 2" ;
-    cx:hasSlotForm cx:Dooperationwithoperand1onoperand2construction_C_Form ;
+    rcxn:hasSlotForm cx:Dooperationwithoperand1onoperand2construction_C_Form ;
     RDFS:comment "colloprofile: 加 (frequent), 減 (frequent), 乘 (frequent), 除 (frequent)" .
 
 cx:Dooperationwithoperand1onoperand2construction_C_Form a rcxn:SlotForm ;
@@ -54,7 +54,7 @@ cx:Dooperationwithoperand1onoperand2construction_C_Morphosyntax a cx:VP .
 
 cx:Dooperationwithoperand1onoperand2construction_D a rcxn:SlotMandatory ;
     cx:WordOrder "Immediately after element 3" ;
-    cx:hasSlotForm cx:Dooperationwithoperand1onoperand2construction_D_Form ;
+    rcxn:hasSlotForm cx:Dooperationwithoperand1onoperand2construction_D_Form ;
     cx:hasSlotMeaning cx:Dooperationwithoperand1onoperand2construction_D_Meaning .
 
 cx:Dooperationwithoperand1onoperand2construction_D_Form a rcxn:SlotForm ;

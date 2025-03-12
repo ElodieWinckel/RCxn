@@ -17,7 +17,7 @@ cx:Idiomaticconstructions a rcxn:Construction ;
 
 cx:Idiomaticconstructions_A a rcxn:SlotMandatory ;
     cx:WordOrder "Initial position" ;
-    cx:hasSlotForm cx:Idiomaticconstructions_A_Form ;
+    rcxn:hasSlotForm cx:Idiomaticconstructions_A_Form ;
     cx:hasSlotMeaning cx:Idiomaticconstructions_A_Meaning .
 
 cx:Idiomaticconstructions_A_Form a rcxn:SlotForm ;
@@ -35,7 +35,7 @@ cx:Idiomaticconstructions_A_Morphosyntax a "Pronoun NP" ;
 
 cx:Idiomaticconstructions_B a rcxn:SlotMandatory ;
     cx:WordOrder "Follows subject, precedes object" ;
-    cx:hasSlotForm cx:Idiomaticconstructions_B_Form ;
+    rcxn:hasSlotForm cx:Idiomaticconstructions_B_Form ;
     cx:hasSlotMeaning cx:Idiomaticconstructions_B_Meaning ;
     cx:hasStem "burn" .
 
@@ -53,7 +53,7 @@ cx:Idiomaticconstructions_B_Morphosyntax a cx:VP .
 
 cx:Idiomaticconstructions_C a rcxn:SlotMandatory ;
     cx:WordOrder "Precedes \"bridges\"" ;
-    cx:hasSlotForm cx:Idiomaticconstructions_C_Form ;
+    rcxn:hasSlotForm cx:Idiomaticconstructions_C_Form ;
     cx:hasSlotMeaning cx:Idiomaticconstructions_C_Meaning .
 
 cx:Idiomaticconstructions_C_Form a rcxn:SlotForm ;
@@ -71,7 +71,7 @@ cx:Idiomaticconstructions_C_Morphosyntax a "Possessive pronoun NP" ;
 
 cx:Idiomaticconstructions_D a rcxn:SlotMandatory ;
     cx:WordOrder "Final position" ;
-    cx:hasSlotForm cx:Idiomaticconstructions_D_Form ;
+    rcxn:hasSlotForm cx:Idiomaticconstructions_D_Form ;
     cx:hasSlotMeaning cx:Idiomaticconstructions_D_Meaning ;
     cx:hasSurfaceForm "bridges" ;
     cx:hasStem "bridge" .

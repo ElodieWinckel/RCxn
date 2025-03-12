@@ -19,7 +19,7 @@
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_A> a rcxn:SlotMandatory ;
     cx:WordOrder "NP1+P+NP2" ;
     cx:hasIS cx:Focus ;
-    cx:hasSlotForm <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_A_Form> ;
+    rcxn:hasSlotForm <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_A_Form> ;
     cx:hasSlotMeaning <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_A_Meaning> ;
     RDFS:comment "usually the nominative case" .
 

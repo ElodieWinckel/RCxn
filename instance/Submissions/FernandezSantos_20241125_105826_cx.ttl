@@ -74,7 +74,7 @@ cx:Spanishtransitiveconstruction_MD a rcxn:Metadata ;
     rcxn:creationDate "2024-11-25"^^xsd:date .
 
 cx:Transitiveobjectrelativeclause_A a rcxn:SlotMandatory ;
-    cx:hasSlotForm cx:Transitiveobjectrelativeclause_A_Form ;
+    rcxn:hasSlotForm cx:Transitiveobjectrelativeclause_A_Form ;
     cx:hasSlotMeaning cx:Transitiveobjectrelativeclause_A_Meaning .
 
 cx:Transitiveobjectrelativeclause_A_Form a rcxn:SlotForm ;
@@ -93,7 +93,7 @@ cx:Transitiveobjectrelativeclause_A_Morphosyntax a cx:NP ;
 
 cx:Transitiveobjectrelativeclause_B a rcxn:SlotOptional ;
     cx:WordOrder "If present, Element 2 immediately after Element 1" ;
-    cx:hasSlotForm cx:Transitiveobjectrelativeclause_B_Form ;
+    rcxn:hasSlotForm cx:Transitiveobjectrelativeclause_B_Form ;
     cx:hasStem "a + article" ;
     cx:hasTranslation "to:the" .
 
@@ -105,7 +105,7 @@ cx:Transitiveobjectrelativeclause_B_Morphosyntax a cx:PP ;
 
 cx:Transitiveobjectrelativeclause_C a rcxn:SlotMandatory ;
     cx:WordOrder "immediately after Element 1 (if Element 2 not present), or immediately after Element 2 if present" ;
-    cx:hasSlotForm cx:Transitiveobjectrelativeclause_C_Form ;
+    rcxn:hasSlotForm cx:Transitiveobjectrelativeclause_C_Form ;
     cx:hasSurfaceForm "que" ;
     cx:hasTranslation "that" .
 
@@ -116,7 +116,7 @@ cx:Transitiveobjectrelativeclause_C_Morphosyntax a cx:relativiser .
 
 cx:Transitiveobjectrelativeclause_D a rcxn:SlotMandatory ;
     cx:WordOrder "Immediately after Element 3" ;
-    cx:hasSlotForm cx:Transitiveobjectrelativeclause_D_Form ;
+    rcxn:hasSlotForm cx:Transitiveobjectrelativeclause_D_Form ;
     cx:hasSlotMeaning cx:Transitiveobjectrelativeclause_D_Meaning .
 
 cx:Transitiveobjectrelativeclause_D_Form a rcxn:SlotForm ;
@@ -135,7 +135,7 @@ cx:Transitiveobjectrelativeclause_D_Morphosyntax a cx:NP ;
 
 cx:Transitiveobjectrelativeclause_E a rcxn:SlotMandatory ;
     cx:WordOrder "immediately after Element 4" ;
-    cx:hasSlotForm cx:Transitiveobjectrelativeclause_E_Form ;
+    rcxn:hasSlotForm cx:Transitiveobjectrelativeclause_E_Form ;
     cx:hasSlotMeaning cx:Transitiveobjectrelativeclause_E_Meaning ;
     RDFS:comment "1st conjugation verb" .
 

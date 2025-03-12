@@ -54,7 +54,7 @@ cx:Englishrollupyoursleeves_MD a rcxn:Metadata ;
 
 cx:Idiomaticconstruction_A a rcxn:SlotMandatory ;
     cx:WordOrder "Initial position in prepositional phrase" ;
-    cx:hasSlotForm cx:Idiomaticconstruction_A_Form ;
+    rcxn:hasSlotForm cx:Idiomaticconstruction_A_Form ;
     cx:hasSlotMeaning cx:Idiomaticconstruction_A_Meaning ;
     cx:hasSurfaceForm "aus" ;
     cx:hasTranslation "out of" .
@@ -70,7 +70,7 @@ cx:Idiomaticconstruction_A_Morphosyntax a cx:Preposition ;
 
 cx:Idiomaticconstruction_B a rcxn:SlotMandatory ;
     cx:WordOrder "follows preposition, precedes noun" ;
-    cx:hasSlotForm cx:Idiomaticconstruction_B_Form ;
+    rcxn:hasSlotForm cx:Idiomaticconstruction_B_Form ;
     cx:hasSlotMeaning cx:Idiomaticconstruction_B_Meaning ;
     cx:hasSurfaceForm "dem" ;
     cx:hasTranslation "the" .
@@ -91,7 +91,7 @@ cx:Idiomaticconstruction_B_Morphosyntax a "Definite article" ;
 
 cx:Idiomaticconstruction_C a rcxn:SlotMandatory ;
     cx:WordOrder "Follows article" ;
-    cx:hasSlotForm cx:Idiomaticconstruction_C_Form ;
+    rcxn:hasSlotForm cx:Idiomaticconstruction_C_Form ;
     cx:hasSlotMeaning cx:Idiomaticconstruction_C_Meaning ;
     cx:hasSurfaceForm "Ärmel" ;
     cx:hasTranslation "sleeve" .
@@ -113,7 +113,7 @@ cx:Idiomaticconstruction_C_Morphosyntax a cx:Noun ;
 
 cx:Idiomaticconstruction_D a rcxn:SlotMandatory ;
     cx:WordOrder "Verb-final in dependent clauses / V2 in main clauses" ;
-    cx:hasSlotForm cx:Idiomaticconstruction_D_Form ;
+    rcxn:hasSlotForm cx:Idiomaticconstruction_D_Form ;
     cx:hasSlotMeaning cx:Idiomaticconstruction_D_Meaning ;
     cx:hasStem "schütteln" ;
     cx:hasTranslation "shake" .

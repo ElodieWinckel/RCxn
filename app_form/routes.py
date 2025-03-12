@@ -568,7 +568,7 @@ def form_submit():
         slot_form_uri = URIRef(cx[f"{construction_name_cleaned}_{chr(65 + y)}_Form"])
         # Triple to relate slot to it meaning (if needed)
         if morphosyntactic_form.strip() or root.strip() or stem.strip():
-            g.add((element_uri, cx.hasSlotForm, slot_form_uri))
+            g.add((element_uri, rcxn.hasSlotForm, slot_form_uri))
             g.add((slot_form_uri, RDF.type, rcxn.SlotForm))
 
         # If defined, attribute its root and stem to the element/slot
