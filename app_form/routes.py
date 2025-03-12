@@ -574,7 +574,7 @@ def form_submit():
         # If defined, attribute its root and stem to the element/slot
         # (i.e., all formal aspects except morpho-syntactic form)
         if root.strip():
-            g.add((element_uri, cx.hasRoot, Literal(root)))
+            g.add((slot_form_uri, rcxn.hasRoot, Literal(root)))
         if stem.strip():
             g.add((element_uri, cx.hasStem, Literal(stem)))
         if surface.strip():
