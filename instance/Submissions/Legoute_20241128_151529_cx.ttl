@@ -34,10 +34,10 @@ cx:POU-beneficiaryconstruction_A_Morphosyntax a cx:Phrase .
 cx:POU-beneficiaryconstruction_B a rcxn:SlotMandatory ;
     cx:WordOrder "element POU is always before the NP" ;
     rcxn:hasSlotForm cx:POU-beneficiaryconstruction_B_Form ;
-    cx:hasSurfaceForm "POU" ;
     cx:hasTranslation "For" .
 
 cx:POU-beneficiaryconstruction_B_Form a rcxn:SlotForm ;
+    rcxn:hasSurfaceForm "POU" ;
     cx:hasSyntacticForm cx:POU-beneficiaryconstruction_B_Morphosyntax .
 
 cx:POU-beneficiaryconstruction_B_Morphosyntax a "Invariable syntactic morpheme" .

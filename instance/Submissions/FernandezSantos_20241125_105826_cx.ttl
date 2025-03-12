@@ -106,10 +106,10 @@ cx:Transitiveobjectrelativeclause_B_Morphosyntax a cx:PP ;
 cx:Transitiveobjectrelativeclause_C a rcxn:SlotMandatory ;
     cx:WordOrder "immediately after Element 1 (if Element 2 not present), or immediately after Element 2 if present" ;
     rcxn:hasSlotForm cx:Transitiveobjectrelativeclause_C_Form ;
-    cx:hasSurfaceForm "que" ;
     cx:hasTranslation "that" .
 
 cx:Transitiveobjectrelativeclause_C_Form a rcxn:SlotForm ;
+    rcxn:hasSurfaceForm "que" ;
     cx:hasSyntacticForm cx:Transitiveobjectrelativeclause_C_Morphosyntax .
 
 cx:Transitiveobjectrelativeclause_C_Morphosyntax a cx:relativiser .

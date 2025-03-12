@@ -56,10 +56,10 @@ cx:Idiomaticconstruction_A a rcxn:SlotMandatory ;
     cx:WordOrder "Initial position in prepositional phrase" ;
     rcxn:hasSlotForm cx:Idiomaticconstruction_A_Form ;
     cx:hasSlotMeaning cx:Idiomaticconstruction_A_Meaning ;
-    cx:hasSurfaceForm "aus" ;
     cx:hasTranslation "out of" .
 
 cx:Idiomaticconstruction_A_Form a rcxn:SlotForm ;
+    rcxn:hasSurfaceForm "aus" ;
     cx:hasSyntacticForm cx:Idiomaticconstruction_A_Morphosyntax .
 
 cx:Idiomaticconstruction_A_Meaning a cx:SlotMeaning ;
@@ -72,10 +72,10 @@ cx:Idiomaticconstruction_B a rcxn:SlotMandatory ;
     cx:WordOrder "follows preposition, precedes noun" ;
     rcxn:hasSlotForm cx:Idiomaticconstruction_B_Form ;
     cx:hasSlotMeaning cx:Idiomaticconstruction_B_Meaning ;
-    cx:hasSurfaceForm "dem" ;
     cx:hasTranslation "the" .
 
 cx:Idiomaticconstruction_B_Form a rcxn:SlotForm ;
+    rcxn:hasSurfaceForm "dem" ;
     cx:hasSyntacticForm cx:Idiomaticconstruction_B_Morphosyntax .
 
 cx:Idiomaticconstruction_B_Index a cx:Individual ;
@@ -93,10 +93,10 @@ cx:Idiomaticconstruction_C a rcxn:SlotMandatory ;
     cx:WordOrder "Follows article" ;
     rcxn:hasSlotForm cx:Idiomaticconstruction_C_Form ;
     cx:hasSlotMeaning cx:Idiomaticconstruction_C_Meaning ;
-    cx:hasSurfaceForm "Ärmel" ;
     cx:hasTranslation "sleeve" .
 
 cx:Idiomaticconstruction_C_Form a rcxn:SlotForm ;
+    rcxn:hasSurfaceForm "Ärmel" ;
     cx:hasSyntacticForm cx:Idiomaticconstruction_C_Morphosyntax .
 
 cx:Idiomaticconstruction_C_Index a cx:Individual ;

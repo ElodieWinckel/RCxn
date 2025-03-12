@@ -72,12 +72,12 @@ cx:Idiomaticconstructions_C_Morphosyntax a "Possessive pronoun NP" ;
 cx:Idiomaticconstructions_D a rcxn:SlotMandatory ;
     cx:WordOrder "Final position" ;
     rcxn:hasSlotForm cx:Idiomaticconstructions_D_Form ;
-    cx:hasSlotMeaning cx:Idiomaticconstructions_D_Meaning ;
-    cx:hasSurfaceForm "bridges" .
+    cx:hasSlotMeaning cx:Idiomaticconstructions_D_Meaning .
 
 cx:Idiomaticconstructions_D_Form a rcxn:SlotForm ;
     cx:hasSyntacticForm cx:Idiomaticconstructions_D_Morphosyntax ;
-    rcxn:hasStem "bridge" .
+    rcxn:hasStem "bridge" ;
+    rcxn:hasSurfaceForm "bridges" .
 
 cx:Idiomaticconstructions_D_Index a cx:Individual ;
     cx:hasAnimacy cx:inanimate ;

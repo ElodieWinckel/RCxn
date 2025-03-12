@@ -37,11 +37,14 @@
 
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_B> a rcxn:SlotMandatory ;
     cx:hasSlotMeaning <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_B_Meaning> ;
-    cx:hasSurfaceForm "auf" ;
-    cx:hasSurfaceForm "an" .
+    rcxn:hasSlotForm <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_B_Form> .
 
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_B_Meaning> a cx:SlotMeaning ;
     cx:hasSemanticContribution olia:DirectionRole .
+
+<http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_B_Form> a cx:SlotForm ;
+    rcxn:hasSurfaceForm "auf" ;
+    rcxn:hasSurfaceForm "an" .
 
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_C> a rcxn:SlotMandatory ;
     cx:hasIS cx:Background ;

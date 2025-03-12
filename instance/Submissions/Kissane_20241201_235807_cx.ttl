@@ -38,10 +38,10 @@ cx:TheEnglishGIVE-OUTVerbParticleConstruction._B_Morphosyntax a cx:Verb .
 
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._C a rcxn:SlotMandatory ;
     cx:WordOrder "The element 3 follows the element 2 but not necessarily directly" ;
-    cx:hasSurfaceForm "out" ;
     rcxn:hasSlotForm cx:TheEnglishGIVE-OUTVerbParticleConstruction._C_Form .
 
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._C_Form a rcxn:SlotForm ;
+    rcxn:hasSurfaceForm "out" ;
     cx:hasSyntacticForm cx:TheEnglishGIVE-OUTVerbParticleConstruction._C_Morphosyntax .
 
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._C_Morphosyntax a cx:part .

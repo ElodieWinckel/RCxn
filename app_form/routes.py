@@ -567,7 +567,7 @@ def form_submit():
         # URI for Slot Form
         slot_form_uri = URIRef(cx[f"{construction_name_cleaned}_{chr(65 + y)}_Form"])
         # Triple to relate slot to it meaning (if needed)
-        if morphosyntactic_form.strip() or root.strip() or stem.strip():
+        if morphosyntactic_form.strip() or root.strip() or stem.strip() or surface.strip():
             g.add((element_uri, rcxn.hasSlotForm, slot_form_uri))
             g.add((slot_form_uri, RDF.type, rcxn.SlotForm))
 
@@ -578,7 +578,7 @@ def form_submit():
         if stem.strip():
             g.add((slot_form_uri, rcxn.hasStem, Literal(stem)))
         if surface.strip():
-            g.add((element_uri, cx.hasSurfaceForm, Literal(surface)))
+            g.add((slot_form_uri, rcxn.hasSurfaceForm, Literal(surface)))
         if translation.strip():
             g.add((element_uri, cx.hasTranslation, Literal(translation)))
         if transliteration.strip():

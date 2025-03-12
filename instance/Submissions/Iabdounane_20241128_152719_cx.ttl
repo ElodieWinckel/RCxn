@@ -33,8 +33,11 @@ cx:ThisCloseToV-ing_A_Meaning a cx:SlotMeaning ;
     cx:hasIndex cx:ThisCloseToV-ing_A_Index .
 
 cx:ThisCloseToV-ing_B a rcxn:SlotMandatory ;
-    cx:hasSurfaceForm "this close to" ;
+    rcxn:hasSlotForm cx:ThisCloseToV-ing_B_Form ;
     cx:WordOrder "Element 2 comes immediately before Element 3" .
+
+cx:ThisCloseToV-ing_B_Form a rcxn:SlotForm ;
+    rcxn:hasSurfaceForm "this close to" .
 
 cx:ThisCloseToV-ing_C a rcxn:SlotMandatory ;
     cx:WordOrder "Element 3 comes immediately before Element 4" ;
@@ -47,10 +50,10 @@ cx:ThisCloseToV-ing_C_Form a rcxn:SlotForm ;
 cx:ThisCloseToV-ing_C_Morphosyntax a "Root V" .
 
 cx:ThisCloseToV-ing_D a rcxn:SlotMandatory ;
-    cx:hasSurfaceForm "-ing" ;
     rcxn:hasSlotForm cx:ThisCloseToV-ing_D_Form .
 
 cx:ThisCloseToV-ing_D_Form a rcxn:SlotForm ;
+    rcxn:hasSurfaceForm "-ing" ;
     cx:hasSyntacticForm cx:ThisCloseToV-ing_D_Morphosyntax .
 
 cx:ThisCloseToV-ing_D_Morphosyntax a cx:Suffix .
