@@ -163,18 +163,12 @@ def construction_detail(uri):
         # Step 3: Collect triples for form of each sequence member
         subject_slotform = URIRef(str(slot_uri) + "_Form")
         for predicate, obj in g.predicate_objects(subject=subject_slotform):
-            if str(predicate) != "http://www.w3.org/1999/02/22-rdf-syntax-ns#type":
-                elements.append({
-                    'subject': re.sub(prefixes, "", str(slot_uri)),
-                    'property': re.sub(prefixes, "", str(predicate)),
-                    'object': re.sub(prefixes, "", str(obj)),
-                })
-            else:  # special case for type of morphosyntactic element # todo: change to match the new way it is done
-                elements.append({
-                    'subject': re.sub(prefixes, "", str(slot_uri)),
-                    'property': "Morphosyntax",
-                    'object': re.sub(prefixes, "", str(obj)),
-                })
+            elements.append({
+                'subject': re.sub(prefixes, "", str(slot_uri)),
+                'property': re.sub(prefixes, "", str(predicate)),
+                'object': re.sub(prefixes, "", str(obj)),
+            })
+
         # Step 4: Collect triples for index of each sequence member
         subject_index = URIRef(str(slot_uri) + "_Index")
         for predicate, obj in g.predicate_objects(subject=subject_index):

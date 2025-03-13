@@ -24,12 +24,10 @@ cx:POU-beneficiaryconstruction_A a rcxn:SlotMandatory ;
     RDFS:comment "not always concrete" .
 
 cx:POU-beneficiaryconstruction_A_Form a rcxn:SlotForm ;
-    cx:hasSyntacticForm cx:POU-beneficiaryconstruction_A_Morphosyntax .
+    rcxn:hasSyntacticForm "Phrase" .
 
 cx:POU-beneficiaryconstruction_A_Meaning a cx:SlotMeaning ;
     cx:hasSemanticContribution olia:ThemeRole .
-
-cx:POU-beneficiaryconstruction_A_Morphosyntax a cx:Phrase .
 
 cx:POU-beneficiaryconstruction_B a rcxn:SlotMandatory ;
     cx:WordOrder "element POU is always before the NP" ;
@@ -38,21 +36,17 @@ cx:POU-beneficiaryconstruction_B a rcxn:SlotMandatory ;
 
 cx:POU-beneficiaryconstruction_B_Form a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "POU" ;
-    cx:hasSyntacticForm cx:POU-beneficiaryconstruction_B_Morphosyntax .
-
-cx:POU-beneficiaryconstruction_B_Morphosyntax a "Invariable syntactic morpheme" .
+    rcxn:hasSyntacticForm "Invariable syntactic morpheme" .
 
 cx:POU-beneficiaryconstruction_C a rcxn:SlotMandatory ;
     rcxn:hasSlotForm cx:POU-beneficiaryconstruction_C_Form ;
     cx:hasSlotMeaning cx:POU-beneficiaryconstruction_C_Meaning .
 
 cx:POU-beneficiaryconstruction_C_Form a rcxn:SlotForm ;
-    cx:hasSyntacticForm cx:POU-beneficiaryconstruction_C_Morphosyntax .
+    rcxn:hasSyntacticForm "NP" .
 
 cx:POU-beneficiaryconstruction_C_Meaning a cx:SlotMeaning ;
     cx:hasSemanticContribution "Beneficiary" .
-
-cx:POU-beneficiaryconstruction_C_Morphosyntax a cx:NP .
 
 cx:POU-beneficiaryconstruction_Ex_A a cx:Example ;
     cx:hasGlosses "3SG   ANT  make/do   mass  pou   2PL" ;

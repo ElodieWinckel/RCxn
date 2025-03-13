@@ -78,7 +78,8 @@ cx:Transitiveobjectrelativeclause_A a rcxn:SlotMandatory ;
     cx:hasSlotMeaning cx:Transitiveobjectrelativeclause_A_Meaning .
 
 cx:Transitiveobjectrelativeclause_A_Form a rcxn:SlotForm ;
-    cx:hasSyntacticForm cx:Transitiveobjectrelativeclause_A_Morphosyntax .
+    rcxn:hasSyntacticForm "NP" ;
+    cx:hasSyntacticFunction "Object (within the clause)" .
 
 cx:Transitiveobjectrelativeclause_A_Index a cx:Individual ;
     cx:hasAnimacy cx:animate ;
@@ -88,9 +89,6 @@ cx:Transitiveobjectrelativeclause_A_Index a cx:Individual ;
 cx:Transitiveobjectrelativeclause_A_Meaning a cx:SlotMeaning ;
     cx:hasIndex cx:Transitiveobjectrelativeclause_A_Index .
 
-cx:Transitiveobjectrelativeclause_A_Morphosyntax a cx:NP ;
-    cx:hasSyntacticFunction "Object (within the clause)" .
-
 cx:Transitiveobjectrelativeclause_B a rcxn:SlotOptional ;
     cx:WordOrder "If present, Element 2 immediately after Element 1" ;
     rcxn:hasSlotForm cx:Transitiveobjectrelativeclause_B_Form ;
@@ -98,9 +96,7 @@ cx:Transitiveobjectrelativeclause_B a rcxn:SlotOptional ;
 
 cx:Transitiveobjectrelativeclause_B_Form a rcxn:SlotForm ;
     rcxn:hasStem "a + article" ;
-    cx:hasSyntacticForm cx:Transitiveobjectrelativeclause_B_Morphosyntax .
-
-cx:Transitiveobjectrelativeclause_B_Morphosyntax a cx:PP ;
+    rcxn:hasSyntacticForm "PP" ;
     cx:hasSyntacticFunction "direct object marker" .
 
 cx:Transitiveobjectrelativeclause_C a rcxn:SlotMandatory ;
@@ -110,9 +106,7 @@ cx:Transitiveobjectrelativeclause_C a rcxn:SlotMandatory ;
 
 cx:Transitiveobjectrelativeclause_C_Form a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "que" ;
-    cx:hasSyntacticForm cx:Transitiveobjectrelativeclause_C_Morphosyntax .
-
-cx:Transitiveobjectrelativeclause_C_Morphosyntax a cx:relativiser .
+    rcxn:hasSyntacticForm "relativiser" .
 
 cx:Transitiveobjectrelativeclause_D a rcxn:SlotMandatory ;
     cx:WordOrder "Immediately after Element 3" ;
@@ -120,7 +114,8 @@ cx:Transitiveobjectrelativeclause_D a rcxn:SlotMandatory ;
     cx:hasSlotMeaning cx:Transitiveobjectrelativeclause_D_Meaning .
 
 cx:Transitiveobjectrelativeclause_D_Form a rcxn:SlotForm ;
-    cx:hasSyntacticForm cx:Transitiveobjectrelativeclause_D_Morphosyntax .
+    rcxn:hasSyntacticForm "NP" ;
+    cx:hasSyntacticFunction "subject (within the clause)" .
 
 cx:Transitiveobjectrelativeclause_D_Index a cx:Individual ;
     cx:hasAnimacy cx:animate ;
@@ -130,9 +125,6 @@ cx:Transitiveobjectrelativeclause_D_Index a cx:Individual ;
 cx:Transitiveobjectrelativeclause_D_Meaning a cx:SlotMeaning ;
     cx:hasIndex cx:Transitiveobjectrelativeclause_D_Index .
 
-cx:Transitiveobjectrelativeclause_D_Morphosyntax a cx:NP ;
-    cx:hasSyntacticFunction "subject (within the clause)" .
-
 cx:Transitiveobjectrelativeclause_E a rcxn:SlotMandatory ;
     cx:WordOrder "immediately after Element 4" ;
     rcxn:hasSlotForm cx:Transitiveobjectrelativeclause_E_Form ;
@@ -140,7 +132,7 @@ cx:Transitiveobjectrelativeclause_E a rcxn:SlotMandatory ;
     RDFS:comment "1st conjugation verb" .
 
 cx:Transitiveobjectrelativeclause_E_Form a rcxn:SlotForm ;
-    cx:hasSyntacticForm cx:Transitiveobjectrelativeclause_E_Morphosyntax .
+    rcxn:hasSyntacticForm "Verb" .
 
 cx:Transitiveobjectrelativeclause_E_Index a cx:Event ;
     cx:hasTenseFeature olia:Present ;
@@ -148,8 +140,6 @@ cx:Transitiveobjectrelativeclause_E_Index a cx:Event ;
 
 cx:Transitiveobjectrelativeclause_E_Meaning a cx:SlotMeaning ;
     cx:hasIndex cx:Transitiveobjectrelativeclause_E_Index .
-
-cx:Transitiveobjectrelativeclause_E_Morphosyntax a cx:Verb .
 
 cx:Transitiveobjectrelativeclause_Ex_A a cx:Example ;
     cx:hasGlosses "The grandpa to:the that the kid hugs" ;

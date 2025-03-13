@@ -571,8 +571,7 @@ def form_submit():
             g.add((element_uri, rcxn.hasSlotForm, slot_form_uri))
             g.add((slot_form_uri, RDF.type, rcxn.SlotForm))
 
-        # If defined, attribute its root and stem to the element/slot
-        # (i.e., all formal aspects except morpho-syntactic form)
+        # Formal aspects attributed to the URI for element/slot form
         if root.strip():
             g.add((slot_form_uri, rcxn.hasRoot, Literal(root)))
         if stem.strip():
@@ -583,31 +582,19 @@ def form_submit():
             g.add((element_uri, cx.hasTranslation, Literal(translation)))
         if transliteration.strip():
             g.add((element_uri, cx.hasTransliteration, Literal(transliteration)))
-
-        # If defined, attribute its morphosyntactic form, syntactic function, translation and case to the element/slot.
         if morphosyntactic_form.strip():
-            # URI for morphosyntax
-            morphsyn_form_uri = URIRef(cx[f"{construction_name_cleaned}_{chr(65 + y)}_Morphosyntax"])
-            morphosyntactic_form_cleaned = morphosyntactic_form.replace(" ", "")
-            g.add((morphsyn_form_uri, RDF.type, cx[morphosyntactic_form_cleaned]))
-            g.add((cx[morphosyntactic_form_cleaned], RDFS.label, Literal(morphosyntactic_form)))
-            # Triple to relate slot to it meaning
-            g.add((slot_form_uri, cx.hasSyntacticForm, morphsyn_form_uri))
+            g.add((slot_form_uri, rcxn.hasSyntacticForm, Literal(morphosyntactic_form)))
+
+        # If defined, attribute its syntactic function and case to the element/slot.
         if syntactic_function.strip():
-            morphsyn_form_uri = URIRef(cx[f"{construction_name_cleaned}_{chr(65 + y)}_Morphosyntax"])
-            g.add((morphsyn_form_uri, RDF.type, cx[morphosyntactic_form_cleaned]))
-            g.add((morphsyn_form_uri, cx.hasSyntacticFunction, Literal(syntactic_function)))
+            g.add((element_uri, cx.hasSyntacticFunction, Literal(syntactic_function)))
         if add_case.strip():
-            morphsyn_form_uri = URIRef(cx[f"{construction_name_cleaned}_{chr(65 + y)}_Morphosyntax"])
-            g.add((morphsyn_form_uri, RDF.type, cx[morphosyntactic_form_cleaned]))
             print("Warning: new value for case!")
-            g.add((morphsyn_form_uri, cx.hasCaseFeature, Literal(add_case)))
+            g.add((element_uri, cx.hasCaseFeature, Literal(add_case)))
         else:
             if case.strip():
-                morphsyn_form_uri = URIRef(cx[f"{construction_name_cleaned}_{chr(65 + y)}_Morphosyntax"])
-                g.add((morphsyn_form_uri, RDF.type, cx[morphosyntactic_form_cleaned]))
                 case = case + "Case"
-                g.add((morphsyn_form_uri, cx.hasCaseFeature, olia[case]))
+                g.add((element_uri, cx.hasCaseFeature, olia[case]))
 
 ###################################################
 ### IMPLEMENT CONSTRUCTION COTEXT

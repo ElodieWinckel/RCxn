@@ -19,19 +19,15 @@ cx:Toughmovementconstruction_A a rcxn:SlotMandatory ;
     rcxn:hasSlotForm cx:Toughmovementconstruction_A_Form .
 
 cx:Toughmovementconstruction_A_Form a rcxn:SlotForm ;
-    cx:hasSyntacticForm cx:Toughmovementconstruction_A_Morphosyntax .
-
-cx:Toughmovementconstruction_A_Morphosyntax a cx:NP .
+    rcxn:hasSyntacticForm "NP" .
 
 cx:Toughmovementconstruction_B a rcxn:SlotMandatory ;
     cx:WordOrder "Element 2 immediately precedes Element 3" ;
     rcxn:hasSlotForm cx:Toughmovementconstruction_B_Form .
 
 cx:Toughmovementconstruction_B_Form a rcxn:SlotForm ;
-    cx:hasSyntacticForm cx:Toughmovementconstruction_B_Morphosyntax ;
+    rcxn:hasSyntacticForm "VP" ;
     rcxn:hasStem "BE" .
-
-cx:Toughmovementconstruction_B_Morphosyntax a cx:VP .
 
 cx:Toughmovementconstruction_C a rcxn:SlotMandatory ;
     cx:WordOrder "Element 3, which immediately follows Element 2" ;
@@ -39,16 +35,14 @@ cx:Toughmovementconstruction_C a rcxn:SlotMandatory ;
     cx:hasSlotMeaning cx:Toughmovementconstruction_C_Meaning .
 
 cx:Toughmovementconstruction_C_Form a rcxn:SlotForm ;
-    cx:hasSyntacticForm cx:Toughmovementconstruction_C_Morphosyntax .
+    rcxn:hasSyntacticForm "AdjP" ;
+    cx:comment "Adjective + to + V-inf" .
 
 cx:Toughmovementconstruction_C_Index a cx:Event ;
     cx:hasTenseFeature "Infinitive" .
 
 cx:Toughmovementconstruction_C_Meaning a cx:SlotMeaning ;
     cx:hasIndex cx:Toughmovementconstruction_C_Index .
-
-cx:Toughmovementconstruction_C_Morphosyntax a cx:AdjP ;
-    cx:comment "Adjective + to + V-inf" .
 
 cx:Toughmovementconstruction_Ex_A a cx:Example ;
     cx:hasGlosses "NP BE Adj to-Inf" ;

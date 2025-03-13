@@ -40,15 +40,24 @@
     rcxn:creationDate "2024-12-02"^^xsd:date .
 
 <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_A> a rcxn:SlotMandatory ;
-    cx:Morphosyntax "Definite DET" ;
-    cx:WordOrder "element 1 immediately before element 2".
+    rcxn:hasSlotForm <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_A_Form> ;
+    cx:WordOrder "element 1 immediately before element 2" .
+
+<http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_A_Form> a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm "Definite Determiner" .
 
 <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_B> a rcxn:SlotMandatory ;
-    cx:Morphosyntax "Adjective" ;
+    rcxn:hasSlotForm <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_B_Form> ;
     cx:WordOrder "element 2 immediately before element 3".
 
+<http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_B_Form> a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm "Adjective" .
+
 <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_C> a rcxn:SlotMandatory ;
-    cx:Morphosyntax "Noun" .
+    rcxn:hasSlotForm <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_C_Form> .
+
+<http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_C_Form> a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm "Noun" .
 
 <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_MD> a rcxn:Metadata ;
     rcxn:annotator membr:Kligge ;

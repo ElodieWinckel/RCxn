@@ -45,18 +45,14 @@ cx:ThisCloseToV-ing_C a rcxn:SlotMandatory ;
     RDFS:comment "colloprofile: be (0.07 PM) ; get (0.05 PM) ; have (0.015 PM)" .
 
 cx:ThisCloseToV-ing_C_Form a rcxn:SlotForm ;
-    cx:hasSyntacticForm cx:ThisCloseToV-ing_C_Morphosyntax .
-
-cx:ThisCloseToV-ing_C_Morphosyntax a "Root V" .
+    rcxn:hasSyntacticForm "Root V" .
 
 cx:ThisCloseToV-ing_D a rcxn:SlotMandatory ;
     rcxn:hasSlotForm cx:ThisCloseToV-ing_D_Form .
 
 cx:ThisCloseToV-ing_D_Form a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "-ing" ;
-    cx:hasSyntacticForm cx:ThisCloseToV-ing_D_Morphosyntax .
-
-cx:ThisCloseToV-ing_D_Morphosyntax a cx:Suffix .
+    rcxn:hasSyntacticForm "Suffix" .
 
 cx:ThisCloseToV-ing_Ex_A a cx:Example ;
     cx:hasText "It was this close to happening, right? This close to happening! " ;

@@ -13,9 +13,6 @@
     rcxn:hasSlots <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_slots> ;
     cx:partOfLanguage "Modern standard High German" .
 
-<http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_C_Morphosyntax> a cx:NP ;
-    cx:hasSyntacticFunction "complement of preposition (element 2)" .
-
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_A> a rcxn:SlotMandatory ;
     cx:WordOrder "NP1+P+NP2" ;
     cx:hasIS cx:Focus ;
@@ -24,16 +21,14 @@
     RDFS:comment "usually the nominative case" .
 
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_A_Form> a rcxn:SlotForm ;
-    cx:hasSyntacticForm <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_A_Morphosyntax> .
+    rcxn:hasSyntacticForm "NP" ;
+    cx:hasSyntacticFunction "head of auf/an-PP" .
 
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_A_Index> a cx:Individual ;
     cx:hasAnimacy cx:inanimate .
 
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_A_Meaning> a cx:SlotMeaning ;
     cx:hasIndex <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_A_Index> .
-
-<http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_A_Morphosyntax> a cx:NP ;
-    cx:hasSyntacticFunction "head of auf/an-PP" .
 
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_B> a rcxn:SlotMandatory ;
     cx:hasSlotMeaning <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_B_Meaning> ;
@@ -52,6 +47,10 @@
 
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_C_Meaning> a cx:SlotMeaning ;
     cx:hasSemanticContribution olia:ThemeRole .
+
+<http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_C_Form> a cx:SlotForm ;
+    rcxn:hasSyntacticForm "NP" ;
+    cx:hasSyntacticFunction "complement of preposition (element 2)" .
 
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_MD> a rcxn:Metadata ;
     rcxn:annotator membr:Fokashchuk ;

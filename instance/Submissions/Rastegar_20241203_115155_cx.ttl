@@ -21,7 +21,8 @@ cx:Idiomaticconstructions_A a rcxn:SlotMandatory ;
     cx:hasSlotMeaning cx:Idiomaticconstructions_A_Meaning .
 
 cx:Idiomaticconstructions_A_Form a rcxn:SlotForm ;
-    cx:hasSyntacticForm cx:Idiomaticconstructions_A_Morphosyntax .
+    cx:hasSyntacticForm "Pronoun NP" ;
+    cx:hasSyntacticFunction "Subject" .
 
 cx:Idiomaticconstructions_A_Index a cx:Individual ;
     cx:hasAnimacy cx:animate .
@@ -30,16 +31,13 @@ cx:Idiomaticconstructions_A_Meaning a cx:SlotMeaning ;
     cx:hasIndex cx:Idiomaticconstructions_A_Index ;
     cx:hasSemanticContribution olia:ActorMacroRole .
 
-cx:Idiomaticconstructions_A_Morphosyntax a "Pronoun NP" ;
-    cx:hasSyntacticFunction "Subject" .
-
 cx:Idiomaticconstructions_B a rcxn:SlotMandatory ;
     cx:WordOrder "Follows subject, precedes object" ;
     rcxn:hasSlotForm cx:Idiomaticconstructions_B_Form ;
     cx:hasSlotMeaning cx:Idiomaticconstructions_B_Meaning .
 
 cx:Idiomaticconstructions_B_Form a rcxn:SlotForm ;
-    cx:hasSyntacticForm cx:Idiomaticconstructions_B_Morphosyntax ;
+    cx:hasSyntacticForm "VP" ;
     rcxn:hasStem "burn" .
 
 cx:Idiomaticconstructions_B_Index a cx:Event ;
@@ -49,15 +47,14 @@ cx:Idiomaticconstructions_B_Index a cx:Event ;
 cx:Idiomaticconstructions_B_Meaning a cx:SlotMeaning ;
     cx:hasIndex cx:Idiomaticconstructions_B_Index .
 
-cx:Idiomaticconstructions_B_Morphosyntax a cx:VP .
-
 cx:Idiomaticconstructions_C a rcxn:SlotMandatory ;
     cx:WordOrder "Precedes \"bridges\"" ;
     rcxn:hasSlotForm cx:Idiomaticconstructions_C_Form ;
     cx:hasSlotMeaning cx:Idiomaticconstructions_C_Meaning .
 
 cx:Idiomaticconstructions_C_Form a rcxn:SlotForm ;
-    cx:hasSyntacticForm cx:Idiomaticconstructions_C_Morphosyntax .
+    cx:hasSyntacticForm "Possessive pronoun NP" ;
+    cx:hasSyntacticFunction "Determiner/Possessive modifier" .
 
 cx:Idiomaticconstructions_C_Index a cx:Individual ;
     cx:hasAnimacy cx:animate .
@@ -66,16 +63,14 @@ cx:Idiomaticconstructions_C_Meaning a cx:SlotMeaning ;
     cx:hasIndex cx:Idiomaticconstructions_C_Index ;
     cx:hasSemanticContribution olia:PossessorRole .
 
-cx:Idiomaticconstructions_C_Morphosyntax a "Possessive pronoun NP" ;
-    cx:hasSyntacticFunction "Determiner/Possessive modifier" .
-
 cx:Idiomaticconstructions_D a rcxn:SlotMandatory ;
     cx:WordOrder "Final position" ;
     rcxn:hasSlotForm cx:Idiomaticconstructions_D_Form ;
     cx:hasSlotMeaning cx:Idiomaticconstructions_D_Meaning .
 
 cx:Idiomaticconstructions_D_Form a rcxn:SlotForm ;
-    cx:hasSyntacticForm cx:Idiomaticconstructions_D_Morphosyntax ;
+    cx:hasSyntacticForm "NP" ;
+    cx:hasCaseFeature olia:AccusativeCase ;
     rcxn:hasStem "bridge" ;
     rcxn:hasSurfaceForm "bridges" .
 
@@ -86,9 +81,6 @@ cx:Idiomaticconstructions_D_Index a cx:Individual ;
 cx:Idiomaticconstructions_D_Meaning a cx:SlotMeaning ;
     cx:hasIndex cx:Idiomaticconstructions_D_Index ;
     cx:hasSemanticContribution olia:ThemeRole .
-
-cx:Idiomaticconstructions_D_Morphosyntax a cx:NP ;
-    cx:hasCaseFeature olia:AccusativeCase .
 
 cx:Idiomaticconstructions_Ex_A a cx:Example ;
     cx:hasText "He had burned his bridges in Hollywood and took off for the seclusion of Taos to hide away..." .

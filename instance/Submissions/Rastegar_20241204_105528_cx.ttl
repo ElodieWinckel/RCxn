@@ -60,13 +60,11 @@ cx:Idiomaticconstruction_A a rcxn:SlotMandatory ;
 
 cx:Idiomaticconstruction_A_Form a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "aus" ;
-    cx:hasSyntacticForm cx:Idiomaticconstruction_A_Morphosyntax .
+    rcxn:hasSyntacticForm "Preposition" ;
+    cx:hasSyntacticFunction "Head of PP" .
 
 cx:Idiomaticconstruction_A_Meaning a cx:SlotMeaning ;
     cx:hasSemanticContribution "source" .
-
-cx:Idiomaticconstruction_A_Morphosyntax a cx:Preposition ;
-    cx:hasSyntacticFunction "Head of PP" .
 
 cx:Idiomaticconstruction_B a rcxn:SlotMandatory ;
     cx:WordOrder "follows preposition, precedes noun" ;
@@ -76,7 +74,9 @@ cx:Idiomaticconstruction_B a rcxn:SlotMandatory ;
 
 cx:Idiomaticconstruction_B_Form a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "dem" ;
-    cx:hasSyntacticForm cx:Idiomaticconstruction_B_Morphosyntax .
+    rcxn:hasSyntacticForm "Definite article" ;
+    cx:hasCaseFeature olia:DativeCase ;
+    cx:hasSyntacticFunction "Determiner" .
 
 cx:Idiomaticconstruction_B_Index a cx:Individual ;
     cx:hasGender cx:masculine ;
@@ -84,10 +84,6 @@ cx:Idiomaticconstruction_B_Index a cx:Individual ;
 
 cx:Idiomaticconstruction_B_Meaning a cx:SlotMeaning ;
     cx:hasIndex cx:Idiomaticconstruction_B_Index .
-
-cx:Idiomaticconstruction_B_Morphosyntax a "Definite article" ;
-    cx:hasCaseFeature olia:DativeCase ;
-    cx:hasSyntacticFunction "Determiner" .
 
 cx:Idiomaticconstruction_C a rcxn:SlotMandatory ;
     cx:WordOrder "Follows article" ;
@@ -97,7 +93,8 @@ cx:Idiomaticconstruction_C a rcxn:SlotMandatory ;
 
 cx:Idiomaticconstruction_C_Form a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "Ärmel" ;
-    cx:hasSyntacticForm cx:Idiomaticconstruction_C_Morphosyntax .
+    rcxn:hasSyntacticForm "Noun" ;
+    cx:hasCaseFeature olia:DativeCase .
 
 cx:Idiomaticconstruction_C_Index a cx:Individual ;
     cx:hasAnimacy cx:inanimate ;
@@ -108,9 +105,6 @@ cx:Idiomaticconstruction_C_Meaning a cx:SlotMeaning ;
     cx:hasIndex cx:Idiomaticconstruction_C_Index ;
     cx:hasSemanticContribution olia:LocationRole .
 
-cx:Idiomaticconstruction_C_Morphosyntax a cx:Noun ;
-    cx:hasCaseFeature olia:DativeCase .
-
 cx:Idiomaticconstruction_D a rcxn:SlotMandatory ;
     cx:WordOrder "Verb-final in dependent clauses / V2 in main clauses" ;
     rcxn:hasSlotForm cx:Idiomaticconstruction_D_Form ;
@@ -119,7 +113,7 @@ cx:Idiomaticconstruction_D a rcxn:SlotMandatory ;
 
 cx:Idiomaticconstruction_D_Form a rcxn:SlotForm ;
     rcxn:hasStem "schütteln" ;
-    cx:hasSyntacticForm cx:Idiomaticconstruction_D_Morphosyntax .
+    rcxn:hasSyntacticForm "Verb" .
 
 cx:Idiomaticconstruction_D_Index a cx:Event ;
     cx:hasMode olia:IndicativeVerb ;
@@ -128,8 +122,6 @@ cx:Idiomaticconstruction_D_Index a cx:Event ;
 cx:Idiomaticconstruction_D_Meaning a cx:SlotMeaning ;
     cx:hasIndex cx:Idiomaticconstruction_D_Index ;
     cx:hasSemanticContribution "Action" .
-
-cx:Idiomaticconstruction_D_Morphosyntax a cx:Verb .
 
 cx:Idiomaticconstruction_Ex_A a cx:Example ;
     cx:hasGlosses "a daycare-spot(ACC) can one not just.like.that out the sleeve shake" ;

@@ -34,13 +34,11 @@ cx:Generalprepositionalconstructions_MD a rcxn:Metadata ;
     RDFS:comment "colloprofile: Ziel (39); Bild (24); Tod (22); Beispiel (16); Welt (13); Tatsache (12); Volk (10)" .
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_A_Form> a rcxn:SlotForm ;
-    cx:hasSyntacticForm <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_A_Morphosyntax> .
+    rcxn:hasSyntacticForm "NP" ;
+    cx:hasSyntacticFunction "Object" .
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_A_Meaning> a cx:SlotMeaning ;
     cx:hasSemanticProperty "The NP predominantly denotes abstract concepts, particularly those that are 1) subject to mental representation (Ziel, Bild, Beispiel), 2) abstract existential element or phenomenon (Welt, Tod, Tatsache), 3) collective entities." .
-
-<http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_A_Morphosyntax> a cx:NP ;
-    cx:hasSyntacticFunction "Object" .
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_B> a rcxn:SlotOptional ;
     cx:WordOrder "The adjectives mostly directly precedes the prepositional phrase \"vor Augen\"." ;
@@ -50,12 +48,10 @@ cx:Generalprepositionalconstructions_MD a rcxn:Metadata ;
         "colloprofile: deutlich (51); klar (47); anschaulich (10); eindringlich (9); lebendig (9); unmittelbar (9); lebhaft (7)" .
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_B_Form> a rcxn:SlotForm ;
-    cx:hasSyntacticForm <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_B_Morphosyntax> .
+    rcxn:hasSyntacticForm "Adjective" .
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_B_Meaning> a cx:SlotMeaning ;
     cx:hasSemanticProperty "The adjectives share the semantic property of describing vividness or clarity." .
-
-<http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_B_Morphosyntax> a cx:Adjective .
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_C> a rcxn:SlotOptional ;
     cx:WordOrder "The adverbs typically appear directly before the prepositional phrase \"vor Augen\"." ;
@@ -64,12 +60,10 @@ cx:Generalprepositionalconstructions_MD a rcxn:Metadata ;
     RDFS:comment "colloprofile: immer (42); wieder (32); stets (27); noch (25); täglich (9)" .
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_C_Form> a rcxn:SlotForm ;
-    cx:hasSyntacticForm <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_C_Morphosyntax> .
+    rcxn:hasSyntacticForm "Adverb" .
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_C_Meaning> a cx:SlotMeaning ;
     cx:hasSemanticProperty "The adverbs share a semantic property of expressing recurrence or regularity." .
-
-<http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_C_Morphosyntax> a cx:Adverb .
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_D> a rcxn:SlotMandatory ;
     cx:WordOrder "The preposition \"vor\" appears in direct syntactic proximity to the noun \"Augen\", forming a fixed prepositional phrase. " ;
@@ -81,13 +75,11 @@ cx:Generalprepositionalconstructions_MD a rcxn:Metadata ;
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_D_Form> a rcxn:SlotForm ;
     rcxn:hasStem "vor" ;
-    cx:hasSyntacticForm <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_D_Morphosyntax> .
+    rcxn:hasSyntacticForm "Preposition" ;
+    cx:hasSyntacticFunction "Head of a prepositional phrase" .
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_D_Meaning> a cx:SlotMeaning ;
     cx:hasSemanticContribution olia:LocationRole .
-
-<http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_D_Morphosyntax> a cx:Preposition ;
-    cx:hasSyntacticFunction "Head of a prepositional phrase" .
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_E> a rcxn:SlotMandatory ;
     cx:WordOrder "The noun always directly follows the preposition \"vor\"." ;
@@ -99,13 +91,11 @@ cx:Generalprepositionalconstructions_MD a rcxn:Metadata ;
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_E_Form> a rcxn:SlotForm ;
     rcxn:hasStem "Auge" ;
-    cx:hasSyntacticForm <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_E_Morphosyntax> .
+    rcxn:hasSyntacticForm "Noun" ;
+    cx:hasSyntacticFunction "Prepositional complement" .
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_E_Meaning> a cx:SlotMeaning ;
     cx:hasSemanticProperty "The noun does not refer to the literal body part but rather conveys a metaphorically extended meaning, representing perception, awareness or mental visualization." .
-
-<http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_E_Morphosyntax> a cx:Noun ;
-    cx:hasSyntacticFunction "Prepositional complement" .
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_F> a rcxn:SlotOptional ;
     cx:WordOrder "The position of the verb within the construction is relatively flexible." ;
@@ -116,12 +106,10 @@ cx:Generalprepositionalconstructions_MD a rcxn:Metadata ;
         "colloprofile: führen (225); halten (143); haben (129); stellen (25); stehen (15)" .
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_F_Form> a rcxn:SlotForm ;
-    cx:hasSyntacticForm <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_F_Morphosyntax> .
+    rcxn:hasSyntacticForm "Verb" .
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_F_Meaning> a cx:SlotMeaning ;
     cx:hasSemanticProperty "Though these verbs are highly polysemous, they either relate to the positioning of something in space, either actively (führen, stellen) or passively (stehen), or imply control or possession (halten, haben, führen)" .
-
-<http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_F_Morphosyntax> a cx:Verb .
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_MD> a rcxn:Metadata ;
     rcxn:annotator membr:Lee ;

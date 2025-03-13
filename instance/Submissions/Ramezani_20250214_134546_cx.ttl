@@ -34,26 +34,20 @@ cx:Argumentstructureconstruction_A a rcxn:SlotMandatory ;
     rcxn:hasSlotForm cx:Argumentstructureconstruction_A_Form .
 
 cx:Argumentstructureconstruction_A_Form a rcxn:SlotForm ;
-    cx:hasSyntacticForm cx:Argumentstructureconstruction_A_Morphosyntax .
-
-cx:Argumentstructureconstruction_A_Morphosyntax a cx:XP ;
+    rcxn:hasSyntacticForm "XP" ;
     cx:hasSyntacticFunction "Subject" .
 
 cx:Argumentstructureconstruction_B a rcxn:SlotMandatory ;
     rcxn:hasSlotForm cx:Argumentstructureconstruction_B_Form .
 
 cx:Argumentstructureconstruction_B_Form a rcxn:SlotForm ;
-    cx:hasSyntacticForm cx:Argumentstructureconstruction_B_Morphosyntax .
-
-cx:Argumentstructureconstruction_B_Morphosyntax a cx:Verb .
+    rcxn:hasSyntacticForm "Verb" .
 
 cx:Argumentstructureconstruction_C a rcxn:SlotMandatory ;
     rcxn:hasSlotForm cx:Argumentstructureconstruction_C_Form .
 
 cx:Argumentstructureconstruction_C_Form a rcxn:SlotForm ;
-    cx:hasSyntacticForm cx:Argumentstructureconstruction_C_Morphosyntax .
-
-cx:Argumentstructureconstruction_C_Morphosyntax a cx:oneorsevarlXP ;
+    rcxn:hasSyntacticForm "one or several XPs" ;
     cx:hasSyntacticFunction "Complement(s)" .
 
 cx:Argumentstructureconstruction_MD a rcxn:Metadata ;
