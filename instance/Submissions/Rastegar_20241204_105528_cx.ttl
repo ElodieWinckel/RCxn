@@ -56,12 +56,12 @@ cx:Idiomaticconstruction_A a rcxn:SlotMandatory ;
     cx:WordOrder "Initial position in prepositional phrase" ;
     rcxn:hasSlotForm cx:Idiomaticconstruction_A_Form ;
     cx:hasSlotMeaning cx:Idiomaticconstruction_A_Meaning ;
-    cx:hasTranslation "out of" .
+    cx:hasTranslation "out of" ;
+    rcxn:hasSyntacticFunction "Head of PP" .
 
 cx:Idiomaticconstruction_A_Form a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "aus" ;
-    rcxn:hasSyntacticForm "Preposition" ;
-    cx:hasSyntacticFunction "Head of PP" .
+    rcxn:hasSyntacticForm "Preposition" .
 
 cx:Idiomaticconstruction_A_Meaning a cx:SlotMeaning ;
     cx:hasSemanticContribution "source" .
@@ -70,13 +70,13 @@ cx:Idiomaticconstruction_B a rcxn:SlotMandatory ;
     cx:WordOrder "follows preposition, precedes noun" ;
     rcxn:hasSlotForm cx:Idiomaticconstruction_B_Form ;
     cx:hasSlotMeaning cx:Idiomaticconstruction_B_Meaning ;
-    cx:hasTranslation "the" .
+    cx:hasTranslation "the" ;
+    rcxn:hasSyntacticFunction "Determiner" .
 
 cx:Idiomaticconstruction_B_Form a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "dem" ;
     rcxn:hasSyntacticForm "Definite article" ;
-    cx:hasCaseFeature olia:DativeCase ;
-    cx:hasSyntacticFunction "Determiner" .
+    cx:hasCaseFeature olia:DativeCase .
 
 cx:Idiomaticconstruction_B_Index a cx:Individual ;
     cx:hasGender cx:masculine ;

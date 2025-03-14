@@ -18,11 +18,11 @@ cx:Idiomaticconstructions a rcxn:Construction ;
 cx:Idiomaticconstructions_A a rcxn:SlotMandatory ;
     cx:WordOrder "Initial position" ;
     rcxn:hasSlotForm cx:Idiomaticconstructions_A_Form ;
-    cx:hasSlotMeaning cx:Idiomaticconstructions_A_Meaning .
+    cx:hasSlotMeaning cx:Idiomaticconstructions_A_Meaning ;
+    rcxn:hasSyntacticFunction "Subject" .
 
 cx:Idiomaticconstructions_A_Form a rcxn:SlotForm ;
-    cx:hasSyntacticForm "Pronoun NP" ;
-    cx:hasSyntacticFunction "Subject" .
+    cx:hasSyntacticForm "Pronoun NP" .
 
 cx:Idiomaticconstructions_A_Index a cx:Individual ;
     cx:hasAnimacy cx:animate .
@@ -50,11 +50,11 @@ cx:Idiomaticconstructions_B_Meaning a cx:SlotMeaning ;
 cx:Idiomaticconstructions_C a rcxn:SlotMandatory ;
     cx:WordOrder "Precedes \"bridges\"" ;
     rcxn:hasSlotForm cx:Idiomaticconstructions_C_Form ;
-    cx:hasSlotMeaning cx:Idiomaticconstructions_C_Meaning .
+    cx:hasSlotMeaning cx:Idiomaticconstructions_C_Meaning ;
+    rcxn:hasSyntacticFunction "Determiner/Possessive modifier" .
 
 cx:Idiomaticconstructions_C_Form a rcxn:SlotForm ;
-    cx:hasSyntacticForm "Possessive pronoun NP" ;
-    cx:hasSyntacticFunction "Determiner/Possessive modifier" .
+    cx:hasSyntacticForm "Possessive pronoun NP" .
 
 cx:Idiomaticconstructions_C_Index a cx:Individual ;
     cx:hasAnimacy cx:animate .

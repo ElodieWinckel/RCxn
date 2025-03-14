@@ -587,7 +587,7 @@ def form_submit():
 
         # If defined, attribute its syntactic function and case to the element/slot.
         if syntactic_function.strip():
-            g.add((element_uri, cx.hasSyntacticFunction, Literal(syntactic_function)))
+            g.add((element_uri, rcxn.hasSyntacticFunction, Literal(syntactic_function)))
         if add_case.strip():
             print("Warning: new value for case!")
             g.add((element_uri, cx.hasCaseFeature, Literal(add_case)))

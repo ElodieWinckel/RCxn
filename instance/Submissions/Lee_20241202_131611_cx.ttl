@@ -31,11 +31,11 @@ cx:Generalprepositionalconstructions_MD a rcxn:Metadata ;
     cx:hasIS cx:Topic ;
     rcxn:hasSlotForm <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_A_Form> ;
     cx:hasSlotMeaning <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_A_Meaning> ;
-    RDFS:comment "colloprofile: Ziel (39); Bild (24); Tod (22); Beispiel (16); Welt (13); Tatsache (12); Volk (10)" .
+    RDFS:comment "colloprofile: Ziel (39); Bild (24); Tod (22); Beispiel (16); Welt (13); Tatsache (12); Volk (10)" ;
+    rcxn:hasSyntacticFunction "Object" .
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_A_Form> a rcxn:SlotForm ;
-    rcxn:hasSyntacticForm "NP" ;
-    cx:hasSyntacticFunction "Object" .
+    rcxn:hasSyntacticForm "NP" .
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_A_Meaning> a cx:SlotMeaning ;
     cx:hasSemanticProperty "The NP predominantly denotes abstract concepts, particularly those that are 1) subject to mental representation (Ziel, Bild, Beispiel), 2) abstract existential element or phenomenon (Welt, Tod, Tatsache), 3) collective entities." .
@@ -71,12 +71,12 @@ cx:Generalprepositionalconstructions_MD a rcxn:Metadata ;
         cx:Comment ;
     rcxn:hasSlotForm <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_D_Form> ;
     cx:hasSlotMeaning <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_D_Meaning> ;
-    cx:hasTranslation "in front of " .
+    cx:hasTranslation "in front of " ;
+    rcxn:hasSyntacticFunction "Head of a prepositional phrase" .
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_D_Form> a rcxn:SlotForm ;
     rcxn:hasStem "vor" ;
-    rcxn:hasSyntacticForm "Preposition" ;
-    cx:hasSyntacticFunction "Head of a prepositional phrase" .
+    rcxn:hasSyntacticForm "Preposition" .
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_D_Meaning> a cx:SlotMeaning ;
     cx:hasSemanticContribution olia:LocationRole .
@@ -87,12 +87,12 @@ cx:Generalprepositionalconstructions_MD a rcxn:Metadata ;
         cx:Comment ;
     rcxn:hasSlotForm <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_E_Form> ;
     cx:hasSlotMeaning <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_E_Meaning> ;
-    cx:hasTranslation "eyes" .
+    cx:hasTranslation "eyes" ;
+    rcxn:hasSyntacticFunction "Prepositional complement" .
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_E_Form> a rcxn:SlotForm ;
     rcxn:hasStem "Auge" ;
-    rcxn:hasSyntacticForm "Noun" ;
-    cx:hasSyntacticFunction "Prepositional complement" .
+    rcxn:hasSyntacticForm "Noun" .
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_E_Meaning> a cx:SlotMeaning ;
     cx:hasSemanticProperty "The noun does not refer to the literal body part but rather conveys a metaphorically extended meaning, representing perception, awareness or mental visualization." .

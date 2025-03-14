@@ -21,11 +21,11 @@
 
 <http://example.org/cx/come+[noise/mannerofmovement]V-ing_A> a rcxn:SlotOptional ;
     rcxn:hasSlotForm <http://example.org/cx/come+[noise/mannerofmovement]V-ing_A_Form> ;
-    cx:hasSlotMeaning <http://example.org/cx/come+[noise/mannerofmovement]V-ing_A_Meaning> .
+    cx:hasSlotMeaning <http://example.org/cx/come+[noise/mannerofmovement]V-ing_A_Meaning> ;
+    rcxn:hasSyntacticFunction "subject" .
 
 <http://example.org/cx/come+[noise/mannerofmovement]V-ing_A_Form> a rcxn:SlotForm ;
-    rcxn:hasSyntacticForm "NP" ;
-    cx:hasSyntacticFunction "subject" .
+    rcxn:hasSyntacticForm "NP" .
 
 <http://example.org/cx/come+[noise/mannerofmovement]V-ing_A_Meaning> a cx:SlotMeaning ;
     cx:hasSemanticContribution olia:UndergoerMacroRole .

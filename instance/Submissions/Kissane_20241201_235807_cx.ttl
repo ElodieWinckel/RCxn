@@ -15,11 +15,11 @@
 
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._A a rcxn:SlotOptional ;
     rcxn:hasSlotForm cx:TheEnglishGIVE-OUTVerbParticleConstruction._A_Form ;
-    cx:hasSlotMeaning cx:TheEnglishGIVE-OUTVerbParticleConstruction._A_Meaning .
+    cx:hasSlotMeaning cx:TheEnglishGIVE-OUTVerbParticleConstruction._A_Meaning ;
+    rcxn:hasSyntacticFunction "SUBJ" .
 
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._A_Form a rcxn:SlotForm ;
-    rcxn:hasSyntacticForm "NP" ;
-    cx:hasSyntacticFunction "SUBJ" .
+    rcxn:hasSyntacticForm "NP" .
 
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._A_Meaning a cx:SlotMeaning ;
     cx:hasSemanticContribution "ÆFFECTOR" .

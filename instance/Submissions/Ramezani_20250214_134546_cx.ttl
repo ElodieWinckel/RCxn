@@ -31,11 +31,11 @@ This is a similar publicly available dataset: https://github.com/SPOClab-ca/neur
 membr:Project_Ramezani rsrch:hasResearchQuestion membr:Project_Ramezani_250214 .
 
 cx:Argumentstructureconstruction_A a rcxn:SlotMandatory ;
-    rcxn:hasSlotForm cx:Argumentstructureconstruction_A_Form .
+    rcxn:hasSlotForm cx:Argumentstructureconstruction_A_Form ;
+    rcxn:hasSyntacticFunction "Subject" .
 
 cx:Argumentstructureconstruction_A_Form a rcxn:SlotForm ;
-    rcxn:hasSyntacticForm "XP" ;
-    cx:hasSyntacticFunction "Subject" .
+    rcxn:hasSyntacticForm "XP" .
 
 cx:Argumentstructureconstruction_B a rcxn:SlotMandatory ;
     rcxn:hasSlotForm cx:Argumentstructureconstruction_B_Form .
@@ -44,11 +44,11 @@ cx:Argumentstructureconstruction_B_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm "Verb" .
 
 cx:Argumentstructureconstruction_C a rcxn:SlotMandatory ;
-    rcxn:hasSlotForm cx:Argumentstructureconstruction_C_Form .
+    rcxn:hasSlotForm cx:Argumentstructureconstruction_C_Form ;
+    rcxn:hasSyntacticFunction "Complement(s)" .
 
 cx:Argumentstructureconstruction_C_Form a rcxn:SlotForm ;
-    rcxn:hasSyntacticForm "one or several XPs" ;
-    cx:hasSyntacticFunction "Complement(s)" .
+    rcxn:hasSyntacticForm "one or several XPs" .
 
 cx:Argumentstructureconstruction_MD a rcxn:Metadata ;
     rcxn:annotator membr:Ramezani ;

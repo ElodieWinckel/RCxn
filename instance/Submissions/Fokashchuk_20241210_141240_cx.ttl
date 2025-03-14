@@ -18,11 +18,11 @@
     cx:hasIS cx:Focus ;
     rcxn:hasSlotForm <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_A_Form> ;
     cx:hasSlotMeaning <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_A_Meaning> ;
-    RDFS:comment "usually the nominative case" .
+    RDFS:comment "usually the nominative case" ;
+    rcxn:hasSyntacticFunction "head of auf/an-PP" .
 
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_A_Form> a rcxn:SlotForm ;
-    rcxn:hasSyntacticForm "NP" ;
-    cx:hasSyntacticFunction "head of auf/an-PP" .
+    rcxn:hasSyntacticForm "NP" .
 
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_A_Index> a cx:Individual ;
     cx:hasAnimacy cx:inanimate .
@@ -43,14 +43,14 @@
 
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_C> a rcxn:SlotMandatory ;
     cx:hasIS cx:Background ;
-    cx:hasSlotMeaning <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_C_Meaning> .
+    cx:hasSlotMeaning <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_C_Meaning> ;
+    rcxn:hasSyntacticFunction "complement of preposition (element 2)" .
 
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_C_Meaning> a cx:SlotMeaning ;
     cx:hasSemanticContribution olia:ThemeRole .
 
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_C_Form> a cx:SlotForm ;
-    rcxn:hasSyntacticForm "NP" ;
-    cx:hasSyntacticFunction "complement of preposition (element 2)" .
+    rcxn:hasSyntacticForm "NP" .
 
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_MD> a rcxn:Metadata ;
     rcxn:annotator membr:Fokashchuk ;
