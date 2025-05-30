@@ -40,7 +40,10 @@ cx:Präfixverbkonstruktion_MD a rcxn:Metadata ;
     rcxn:creationDate "2024-11-25"^^xsd:date .
 
 cx:Transitivedurch-Präfixverbkonstruktion_A a rcxn:Slot ;
-    rcxn:hasSyntacticFunction "Subject" .
+    rcxn:hasSyntacticFunction "Subject" ;
+    cx:hasIndex cx:Transitivedurch-Präfixverbkonstruktion_A_Index ;
+    cx:hasSemanticContribution olia:ActorMacroRole ;
+    cx:hasSemanticProperty "Figur" .
 
 cx:Transitivedurch-Präfixverbkonstruktion_A_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm "NP" .
@@ -48,28 +51,21 @@ cx:Transitivedurch-Präfixverbkonstruktion_A_Form a rcxn:SlotForm ;
 cx:Transitivedurch-Präfixverbkonstruktion_A_Index a cx:Individual ;
     cx:hasAnimacy cx:animate .
 
-cx:Transitivedurch-Präfixverbkonstruktion_A_Meaning a cx:SlotMeaning ;
-    cx:hasIndex cx:Transitivedurch-Präfixverbkonstruktion_A_Index ;
-    cx:hasSemanticContribution olia:ActorMacroRole ;
-    cx:hasSemanticProperty "Figur" .
-
 cx:Transitivedurch-Präfixverbkonstruktion_B a rcxn:SlotMandatory ;
     cx:WordOrder "2 vor 3" ;
     rcxn:hasSlotForm cx:Transitivedurch-Präfixverbkonstruktion_B_Form ;
-    cx:hasSlotMeaning cx:Transitivedurch-Präfixverbkonstruktion_B_Meaning ;
-    cx:hasTranslation "'durch'" .
+    cx:hasTranslation "'durch'" ;
+    cx:hasSemanticContribution olia:DirectionRole .
 
 cx:Transitivedurch-Präfixverbkonstruktion_B_Form a rcxn:SlotForm ;
     rcxn:hasStem "durh" ;
     rcxn:hasSyntacticForm "Präfix" .
 
-cx:Transitivedurch-Präfixverbkonstruktion_B_Meaning a cx:SlotMeaning ;
-    cx:hasSemanticContribution olia:DirectionRole .
-
 cx:Transitivedurch-Präfixverbkonstruktion_C a rcxn:SlotMandatory ;
     cx:WordOrder "3 nach 2" ;
     rcxn:hasSlotForm cx:Transitivedurch-Präfixverbkonstruktion_C_Form ;
-    cx:hasSlotMeaning cx:Transitivedurch-Präfixverbkonstruktion_C_Meaning ;
+    cx:hasIndex cx:Transitivedurch-Präfixverbkonstruktion_C_Index ;
+    cx:hasSemanticProperty "'zerstörerische' Verben oder allg. Bewegungsverben" ;
     cx:hasTranslation "beißen" ;
     cx:hasTranslation "hauen" ;
     cx:hasTranslation "brechen" ;
@@ -87,13 +83,11 @@ cx:Transitivedurch-Präfixverbkonstruktion_C_Form a rcxn:SlotForm ;
 cx:Transitivedurch-Präfixverbkonstruktion_C_Index a cx:Event ;
     cx:hasVoice cx:active .
 
-cx:Transitivedurch-Präfixverbkonstruktion_C_Meaning a cx:SlotMeaning ;
-    cx:hasIndex cx:Transitivedurch-Präfixverbkonstruktion_C_Index ;
-    cx:hasSemanticProperty "'zerstörerische' Verben oder allg. Bewegungsverben" .
-
 cx:Transitivedurch-Präfixverbkonstruktion_D a rcxn:SlotMandatory ;
     rcxn:hasSlotForm cx:Transitivedurch-Präfixverbkonstruktion_D_Form ;
-    cx:hasSlotMeaning cx:Transitivedurch-Präfixverbkonstruktion_D_Meaning ;
+    cx:hasSemanticContribution "Location" ;
+    cx:hasSemanticContribution "Undergoer" ;
+    cx:hasSemanticProperty "Gegenständliches oder Lokalitäten" ;
     cx:hasTranslation "sie" , "die Seite" , "die Lande" , "das Schlachtfeld" , "die Schar" ;
     RDFS:comment "Akkusativ ist schon interpretiert; formale Basis oft formgleich mit anderen Fällen" ;
     rcxn:hasSyntacticFunction "Object" .
@@ -102,23 +96,15 @@ cx:Transitivedurch-Präfixverbkonstruktion_D_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm "NP" ;
     cx:hasCaseFeature olia:AccusativeCase .
 
-cx:Transitivedurch-Präfixverbkonstruktion_D_Meaning a cx:SlotMeaning ;
-    cx:hasSemanticContribution "Location" ;
-    cx:hasSemanticContribution "Undergoer" ;
-    cx:hasSemanticProperty "Gegenständliches oder Lokalitäten" .
-
 cx:Transitivedurch-Präfixverbkonstruktion_E a rcxn:SlotOptional ;
     rcxn:hasSlotForm cx:Transitivedurch-Präfixverbkonstruktion_E_Form ;
-    cx:hasSlotMeaning cx:Transitivedurch-Präfixverbkonstruktion_E_Meaning ;
     cx:hasTranslation "da" ,
         "somit" ;
-    rcxn:hasSyntacticFunction "Temporaladverbiale" .
+    rcxn:hasSyntacticFunction "Temporaladverbiale" ;
+    cx:hasSemanticContribution olia:TimeRole .
 
 cx:Transitivedurch-Präfixverbkonstruktion_E_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm "AdvP" .
-
-cx:Transitivedurch-Präfixverbkonstruktion_E_Meaning a cx:SlotMeaning ;
-    cx:hasSemanticContribution olia:TimeRole .
 
 cx:Transitivedurch-Präfixverbkonstruktion_Ex_A a cx:Example ;
     cx:hasGlosses "NG_nom - Prä - Verb - NG_akk" ;
@@ -140,7 +126,8 @@ cx:Transitivedurch-Präfixverbkonstruktion_Ex_C a cx:Example ;
 
 cx:Transitivedurch-Präfixverbkonstruktion_G a rcxn:SlotOptional ;
     rcxn:hasSlotForm cx:Transitivedurch-Präfixverbkonstruktion_G_Form ;
-    cx:hasSlotMeaning cx:Transitivedurch-Präfixverbkonstruktion_G_Meaning ;
+    cx:hasIndex cx:Transitivedurch-Präfixverbkonstruktion_G_Index ;
+    cx:hasSemanticContribution olia:AddresseeRole ;
     cx:hasTranslation "ihr",
         "ihm" ;
     rcxn:hasSyntacticFunction "Dativobjekt" .
@@ -152,10 +139,6 @@ cx:Transitivedurch-Präfixverbkonstruktion_G_Form a rcxn:SlotForm ;
 
 cx:Transitivedurch-Präfixverbkonstruktion_G_Index a cx:Individual ;
     cx:hasAnimacy cx:animate .
-
-cx:Transitivedurch-Präfixverbkonstruktion_G_Meaning a cx:SlotMeaning ;
-    cx:hasIndex cx:Transitivedurch-Präfixverbkonstruktion_G_Index ;
-    cx:hasSemanticContribution olia:AddresseeRole .
 
 cx:Transitivedurch-Präfixverbkonstruktion_MD a rcxn:Metadata ;
     rcxn:annotator membr:Fuehrer ;

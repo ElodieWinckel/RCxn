@@ -21,14 +21,11 @@
 
 <http://example.org/cx/come+[noise/mannerofmovement]V-ing_A> a rcxn:SlotOptional ;
     rcxn:hasSlotForm <http://example.org/cx/come+[noise/mannerofmovement]V-ing_A_Form> ;
-    cx:hasSlotMeaning <http://example.org/cx/come+[noise/mannerofmovement]V-ing_A_Meaning> ;
-    rcxn:hasSyntacticFunction "subject" .
+    rcxn:hasSyntacticFunction "subject" ;
+    cx:hasSemanticContribution olia:UndergoerMacroRole .
 
 <http://example.org/cx/come+[noise/mannerofmovement]V-ing_A_Form> a rcxn:SlotForm ;
     rcxn:hasSyntacticForm "NP" .
-
-<http://example.org/cx/come+[noise/mannerofmovement]V-ing_A_Meaning> a cx:SlotMeaning ;
-    cx:hasSemanticContribution olia:UndergoerMacroRole .
 
 <http://example.org/cx/come+[noise/mannerofmovement]V-ing_B> a rcxn:SlotMandatory ;
     cx:WordOrder "Element 2 immediately before element 3" ;
@@ -48,9 +45,6 @@
     rcxn:hasSyntacticForm "Verb+-ing" .
 
 <http://example.org/cx/come+[noise/mannerofmovement]V-ing_D> a rcxn:SlotOptional ;
-    cx:hasSlotMeaning <http://example.org/cx/come+[noise/mannerofmovement]V-ing_D_Meaning> .
-
-<http://example.org/cx/come+[noise/mannerofmovement]V-ing_D_Meaning> a cx:SlotMeaning ;
     cx:hasSemanticContribution olia:GoalRole .
 
 <http://example.org/cx/come+[noise/mannerofmovement]V-ing_D_Form> a rcxn:SlotForm ;

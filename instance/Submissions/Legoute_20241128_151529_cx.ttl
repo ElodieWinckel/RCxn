@@ -20,14 +20,11 @@ membr: membr:SubProject membr:Project_Legoute_241128 .
 
 cx:POU-beneficiaryconstruction_A a rcxn:SlotMandatory ;
     rcxn:hasSlotForm cx:POU-beneficiaryconstruction_A_Form ;
-    cx:hasSlotMeaning cx:POU-beneficiaryconstruction_A_Meaning ;
-    RDFS:comment "not always concrete" .
+    RDFS:comment "not always concrete" ;
+    cx:hasSemanticContribution olia:ThemeRole .
 
 cx:POU-beneficiaryconstruction_A_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm "Phrase" .
-
-cx:POU-beneficiaryconstruction_A_Meaning a cx:SlotMeaning ;
-    cx:hasSemanticContribution olia:ThemeRole .
 
 cx:POU-beneficiaryconstruction_B a rcxn:SlotMandatory ;
     cx:WordOrder "element POU is always before the NP" ;
@@ -40,13 +37,10 @@ cx:POU-beneficiaryconstruction_B_Form a rcxn:SlotForm ;
 
 cx:POU-beneficiaryconstruction_C a rcxn:SlotMandatory ;
     rcxn:hasSlotForm cx:POU-beneficiaryconstruction_C_Form ;
-    cx:hasSlotMeaning cx:POU-beneficiaryconstruction_C_Meaning .
+    cx:hasSemanticContribution "Beneficiary" .
 
 cx:POU-beneficiaryconstruction_C_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm "NP" .
-
-cx:POU-beneficiaryconstruction_C_Meaning a cx:SlotMeaning ;
-    cx:hasSemanticContribution "Beneficiary" .
 
 cx:POU-beneficiaryconstruction_Ex_A a cx:Example ;
     cx:hasGlosses "3SG   ANT  make/do   mass  pou   2PL" ;

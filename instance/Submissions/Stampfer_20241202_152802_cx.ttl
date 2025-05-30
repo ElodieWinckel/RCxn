@@ -14,13 +14,10 @@ cx:EvaluativeAttributionConstruction a rcxn:Construction ;
 
 cx:EvaluativeAttributionConstruction_A a rcxn:SlotOptional ;
     rcxn:hasSlotForm cx:EvaluativeAttributionConstruction_A_Form ;
-    cx:hasSlotMeaning cx:EvaluativeAttributionConstruction_A_Meaning .
+    cx:hasSemanticProperty "Attributor" .
 
 cx:EvaluativeAttributionConstruction_A_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm "NP" .
-
-cx:EvaluativeAttributionConstruction_A_Meaning a cx:SlotMeaning ;
-    cx:hasSemanticProperty "Attributor" .
 
 cx:EvaluativeAttributionConstruction_B a rcxn:SlotMandatory ;
     rcxn:hasSlotForm cx:EvaluativeAttributionConstruction_B_Form .
@@ -30,13 +27,10 @@ cx:EvaluativeAttributionConstruction_B_Form a rcxn:SlotForm ;
 
 cx:EvaluativeAttributionConstruction_C a rcxn:SlotMandatory ;
     rcxn:hasSlotForm cx:EvaluativeAttributionConstruction_C_Form ;
-    cx:hasSlotMeaning cx:EvaluativeAttributionConstruction_C_Meaning .
+    cx:hasSemanticProperty "Attributee" .
 
 cx:EvaluativeAttributionConstruction_C_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm "NP", "PP" .
-
-cx:EvaluativeAttributionConstruction_C_Meaning a cx:SlotMeaning ;
-    cx:hasSemanticProperty "Attributee" .
 
 cx:EvaluativeAttributionConstruction_D a rcxn:SlotOptional ;
     rcxn:hasSlotForm cx:EvaluativeAttributionConstruction_D_Form .
@@ -46,13 +40,10 @@ cx:EvaluativeAttributionConstruction_D_Form a rcxn:SlotForm ;
 
 cx:EvaluativeAttributionConstruction_E a rcxn:SlotMandatory ;
     rcxn:hasSlotForm cx:EvaluativeAttributionConstruction_E_Form ;
-    cx:hasSlotMeaning cx:EvaluativeAttributionConstruction_E_Meaning .
+    cx:hasSemanticProperty "Attribute" .
 
 cx:EvaluativeAttributionConstruction_E_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm "NP", "AdjP", "PP", "VP", "clause" .
-
-cx:EvaluativeAttributionConstruction_E_Meaning a cx:SlotMeaning ;
-    cx:hasSemanticProperty "Attribute" .
 
 cx:EvaluativeAttributionConstruction_MD a rcxn:Metadata ;
     rcxn:annotator membr:Stampfer ;

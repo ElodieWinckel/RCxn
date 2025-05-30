@@ -75,15 +75,12 @@ cx:ItalianTemporalSubordinateClause_MD a rcxn:Metadata ;
 cx:Relative-Topic-ShiftConstruction_A a rcxn:SlotMandatory ;
     cx:WordOrder "Element 1 immediately before element 2" ;
     rcxn:hasSlotForm cx:Relative-Topic-ShiftConstruction_A_Form ;
-    cx:hasSlotMeaning cx:Relative-Topic-ShiftConstruction_A_Meaning ;
+    cx:hasSemanticProperty "When the noun is expressed, it usually has a very generic meaning, e.g. \"cose\" ('things', 'issues')" ;
     RDFS:comment "Element 1 is a \"coniunctio relativa\", i.e., a structure in which a relative pronoun (e.g., il quale, la quale) introduces a subordinate clause. The head noun can be omitted, remaining contextually recoverable. When this happens, the coniunctio relativa represents an elliptical noun phrase, with the relative pronoun standing in place of the implicit nominal head. Such an NP is anaphorically linked to the preceding co-text" .
 
 cx:Relative-Topic-ShiftConstruction_A_Form a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "Il quale [N]" ;
     rcxn:hasSyntacticForm "NP" .
-
-cx:Relative-Topic-ShiftConstruction_A_Meaning a cx:SlotMeaning ;
-    cx:hasSemanticProperty "When the noun is expressed, it usually has a very generic meaning, e.g. \"cose\" ('things', 'issues')" .
 
 cx:Relative-Topic-ShiftConstruction_B a rcxn:SlotMandatory ;
     rcxn:hasSlotForm cx:Relative-Topic-ShiftConstruction_B_Form ;

@@ -177,18 +177,8 @@ def construction_detail(uri):
                 'property': re.sub(prefixes, "", str(predicate)),
                 'object': re.sub(prefixes, "", str(obj)),
             })
-        # Step 5: Collect triples for meaning of each sequence member
-        subject_meaning = URIRef(str(slot_uri) + "_Meaning")
-        for predicate, obj in g.predicate_objects(subject=subject_meaning):
-            elements.append({
-                'subject': re.sub(prefixes, "", str(slot_uri)),
-                'property': re.sub(prefixes, "", str(predicate)),
-                'object': re.sub(prefixes, "", str(obj)),
-            })
-    # Step 6: Delete functional URIs
+    # Step 5: Delete functional URIs
     elements[:] = [item for item in elements if item['property'] != "hasSlotForm"]
-    elements[:] = [item for item in elements if item['property'] != "hasSlotMeaning"]
-    elements[:] = [item for item in elements if item['object'] != "SlotMeaning"]
     elements[:] = [item for item in elements if item['property'] != "hasIndex"]
     elements[:] = [item for item in elements if item['property'] != "type"]
 

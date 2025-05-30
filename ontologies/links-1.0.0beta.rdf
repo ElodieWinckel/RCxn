@@ -1,0 +1,566 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links#"
+     xml:base="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+    <owl:Ontology rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#CL_differentForm -->
+
+    <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#CL_differentForm">
+        <rdfs:subPropertyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#CL_formSimilarity"/>
+        <rdfs:label xml:lang="en">cross-linguistic different form</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#CL_differentFormSameFunction -->
+
+    <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#CL_differentFormSameFunction">
+        <rdfs:subPropertyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#CL_differentForm"/>
+        <rdfs:subPropertyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#CL_sameFunction"/>
+        <rdfs:label xml:lang="en">cross-linguistic different form and same function</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#CL_differentFormSimilarFunction -->
+
+    <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#CL_differentFormSimilarFunction">
+        <rdfs:subPropertyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#CL_differentForm"/>
+        <rdfs:subPropertyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#CL_similarFunction"/>
+        <rdfs:label xml:lang="en">cross-linguistic different form and similar function</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#CL_differentFunction -->
+
+    <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#CL_differentFunction">
+        <rdfs:subPropertyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#CL_functionSimilarity"/>
+        <rdfs:label xml:lang="en">cross-linguistic different function</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#CL_formSimilarity -->
+
+    <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#CL_formSimilarity">
+        <rdfs:subPropertyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#CrossLinguisticLink"/>
+        <rdfs:label xml:lang="en">cross-linguistic similarity in form</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#CL_functionSimilarity -->
+
+    <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#CL_functionSimilarity">
+        <rdfs:subPropertyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#CrossLinguisticLink"/>
+        <rdfs:label xml:lang="en">cross-linguistic similarity in function</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#CL_sameForm -->
+
+    <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#CL_sameForm">
+        <rdfs:subPropertyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#CL_formSimilarity"/>
+        <rdfs:label xml:lang="en">cross-linguistic same form</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#CL_sameFormDifferentFunction -->
+
+    <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#CL_sameFormDifferentFunction">
+        <rdfs:subPropertyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#CL_differentFunction"/>
+        <rdfs:subPropertyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#CL_sameForm"/>
+        <rdfs:label xml:lang="en">cross-linguistic same form and different function</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#CL_sameFormSameFunction -->
+
+    <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#CL_sameFormSameFunction">
+        <rdfs:subPropertyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#CL_sameForm"/>
+        <rdfs:subPropertyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#CL_sameFunction"/>
+        <rdfs:label xml:lang="en">cross-linguistic same form and same function</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#CL_sameFormSimilarFunction -->
+
+    <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#CL_sameFormSimilarFunction">
+        <rdfs:subPropertyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#CL_sameForm"/>
+        <rdfs:subPropertyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#CL_similarFunction"/>
+        <rdfs:label xml:lang="en">cross-linguistic same form and similar function</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#CL_sameFunction -->
+
+    <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#CL_sameFunction">
+        <rdfs:subPropertyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#CL_functionSimilarity"/>
+        <rdfs:label xml:lang="en">cross-linguistic same function</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#CL_similarForm -->
+
+    <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#CL_similarForm">
+        <rdfs:subPropertyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#CL_formSimilarity"/>
+        <rdfs:label xml:lang="en">cross-linguistic similar form</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#CL_similarFormDifferentFunction -->
+
+    <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#CL_similarFormDifferentFunction">
+        <rdfs:subPropertyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#CL_differentFunction"/>
+        <rdfs:subPropertyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#CL_similarForm"/>
+        <rdfs:label xml:lang="en">cross-linguistic similar form and different function</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#CL_similarFormSameFunction -->
+
+    <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#CL_similarFormSameFunction">
+        <rdfs:subPropertyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#CL_sameFunction"/>
+        <rdfs:subPropertyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#CL_similarForm"/>
+        <rdfs:label xml:lang="en">cross-linguistic similar form and same function</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#CL_similarFormSimilarFunction -->
+
+    <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#CL_similarFormSimilarFunction">
+        <rdfs:subPropertyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#CL_similarForm"/>
+        <rdfs:subPropertyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#CL_similarFunction"/>
+        <rdfs:label xml:lang="en">cross-linguistic similar form and similar function</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#CL_similarFunction -->
+
+    <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#CL_similarFunction">
+        <rdfs:subPropertyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#CL_functionSimilarity"/>
+        <rdfs:label xml:lang="en">cross-linguistic similar function</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#CrossLinguisticLink -->
+
+    <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#CrossLinguisticLink">
+        <rdfs:subPropertyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#Link"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <dc:description xml:lang="en">connects a construction in a language A with a construction in a language B, where A and B are distinct languages</dc:description>
+        <rdfs:label xml:lang="en">cross-linguistic link</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#LanguageInternalLink -->
+
+    <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#LanguageInternalLink">
+        <rdfs:subPropertyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#Link"/>
+        <dc:description xml:lang="en">connects a construction with another construction; both constructions belong to the same language</dc:description>
+        <rdfs:label xml:lang="en">language-internal link</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#Link -->
+
+    <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#Link">
+        <rdfs:domain rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#Construction"/>
+        <rdfs:range rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#Construction"/>
+        <dc:description xml:lang="en">connects two constructions in a &quot;network of signs&quot;</dc:description>
+        <rdfs:label xml:lang="en">link</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#ParagRel -->
+
+    <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#ParagRel">
+        <rdfs:subPropertyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#LanguageInternalLink"/>
+        <rdfs:label xml:lang="en">paradigmatic relation</rdfs:label>
+        <skos:altLabel xml:lang="en">elaboration link</skos:altLabel>
+    </owl:ObjectProperty>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#ParagRel"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <owl:annotatedTarget xml:lang="en">elaboration link</owl:annotatedTarget>
+        <rdfs:isDefinedBy>Langacker, Ronald W. 1988. An overview of cognitive grammar. In Brygida Rudzka-Ostyn (ed.), Topics in Cognitive Linguistics (Current Issues in Linguistic Theory), 3. John Benjamins Publishing Company. https://doi.org/10.1075/cilt.50.03lan.</rdfs:isDefinedBy>
+    </owl:Axiom>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#ParagRelHorizontal -->
+
+    <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#ParagRelHorizontal">
+        <rdfs:subPropertyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#ParagRel"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <dc:description xml:lang="en">link between &quot;similar or contrastive constructions, even when these constructions are not (immediately) subsumed under a schema&quot; (Diessel 2019:200)</dc:description>
+        <rdfs:label xml:lang="en">horizontal paradigmatic link</rdfs:label>
+        <skos:altLabel xml:lang="en">horizontal relation</skos:altLabel>
+    </owl:ObjectProperty>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#ParagRelHorizontal"/>
+        <owl:annotatedProperty rdf:resource="http://purl.org/dc/elements/1.1/description"/>
+        <owl:annotatedTarget xml:lang="en">link between &quot;similar or contrastive constructions, even when these constructions are not (immediately) subsumed under a schema&quot; (Diessel 2019:200)</owl:annotatedTarget>
+        <rdfs:isDefinedBy>Diessel, Holger. 2019. The Grammar Network: How Linguistic Structure Is Shaped by Language Use. Cambridge: Cambridge University Press. https://doi.org/10.1017/9781108671040.</rdfs:isDefinedBy>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#ParagRelHorizontal"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <owl:annotatedTarget xml:lang="en">horizontal relation</owl:annotatedTarget>
+        <rdfs:isDefinedBy>Diessel, Holger. 2019. The Grammar Network: How Linguistic Structure Is Shaped by Language Use. Cambridge: Cambridge University Press. https://doi.org/10.1017/9781108671040. (p. 200)</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy>Diessel, Holger. 2023. The Constructicon: Taxonomies and Networks. Elements in Construction Grammar. Cambridge University Press. https://doi.org/10.1017/9781009327848. (p. 16)</rdfs:isDefinedBy>
+    </owl:Axiom>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#ParagRelVertical -->
+
+    <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#ParagRelVertical">
+        <rdfs:subPropertyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#ParagRel"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <dc:description xml:lang="en">Based on the mechanism of inheritance, by which a child-construction receives properties from its parent-construction</dc:description>
+        <rdfs:label xml:lang="en">vertical paradigmatic link</rdfs:label>
+        <skos:altLabel xml:lang="en">taxonomic relation</skos:altLabel>
+    </owl:ObjectProperty>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#ParagRelVertical"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <owl:annotatedTarget xml:lang="en">taxonomic relation</owl:annotatedTarget>
+        <dc:description>A link &quot;connecting linguistic representations at different levels of abstraction&quot; (Diessel 2019:43).</dc:description>
+        <rdfs:isDefinedBy>Diessel, Holger. 2019. The Grammar Network: How Linguistic Structure Is Shaped by Language Use. Cambridge: Cambridge University Press. https://doi.org/10.1017/9781108671040. (p. 43-62)</rdfs:isDefinedBy>
+    </owl:Axiom>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#differentForm -->
+
+    <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#differentForm">
+        <rdfs:subPropertyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#formSimilarity"/>
+        <rdfs:label xml:lang="en">different form</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#differentFormSameFunction -->
+
+    <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#differentFormSameFunction">
+        <rdfs:subPropertyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#differentForm"/>
+        <rdfs:subPropertyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#sameFunction"/>
+        <rdfs:label xml:lang="en">different form and same function</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#differentFormSimilarFunction -->
+
+    <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#differentFormSimilarFunction">
+        <rdfs:subPropertyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#differentForm"/>
+        <rdfs:subPropertyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#similarFunction"/>
+        <rdfs:label xml:lang="en">different form and similar function</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#differentFunction -->
+
+    <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#differentFunction">
+        <rdfs:subPropertyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#functionSimilarity"/>
+        <rdfs:label xml:lang="en">different function</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#directedPolysemyLink -->
+
+    <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#directedPolysemyLink">
+        <rdfs:subPropertyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#polysemyLink"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <dc:description xml:lang="en">connects the construction with the most prototypical meaning to the construction whose meaning is less prototypical</dc:description>
+        <rdfs:label xml:lang="en">asymmetrical polysemy link</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#formSimilarity -->
+
+    <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#formSimilarity">
+        <rdfs:subPropertyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#ParagRelHorizontal"/>
+        <rdfs:label xml:lang="en">similarity in form</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#functionSimilarity -->
+
+    <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#functionSimilarity">
+        <rdfs:subPropertyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#ParagRelHorizontal"/>
+        <rdfs:label xml:lang="en">similarity in function</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#inheritedBy -->
+
+    <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#inheritedBy">
+        <rdfs:subPropertyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#ParagRelVertical"/>
+        <owl:inverseOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#inheritsFrom"/>
+        <dc:description xml:lang="en">Takes as a subject the more general (parent) construction and as an object the more specific (child) construction.</dc:description>
+        <rdfs:comment xml:lang="en">In usage-based approaches, &quot;the downward direction is motivated by categorization&quot; (Diessel 2023:17)</rdfs:comment>
+        <rdfs:label xml:lang="en">inherited by</rdfs:label>
+        <skos:altLabel xml:lang="en">instance link</skos:altLabel>
+    </owl:ObjectProperty>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#inheritedBy"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <owl:annotatedTarget xml:lang="en">In usage-based approaches, &quot;the downward direction is motivated by categorization&quot; (Diessel 2023:17)</owl:annotatedTarget>
+        <rdfs:isDefinedBy>Diessel, Holger. 2023. The Constructicon: Taxonomies and Networks. Elements in Construction Grammar. Cambridge University Press. https://doi.org/10.1017/9781009327848.</rdfs:isDefinedBy>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#inheritedBy"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <owl:annotatedTarget xml:lang="en">instance link</owl:annotatedTarget>
+        <dc:description xml:lang="en">&quot;Instance links are posited when a particular construction is a special case of another construction; that is, an instance link exists between constructions iff one construction is a more fully specified version of the other.&quot; (Goldberg 1995:79)</dc:description>
+        <rdfs:isDefinedBy xml:lang="en">Goldberg, Adele E. 1995. Constructions: A Construction Grammar Approach to Argument Structure. University of Chicago Press. (p. 79-81)</rdfs:isDefinedBy>
+    </owl:Axiom>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#inheritsFrom -->
+
+    <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#inheritsFrom">
+        <rdfs:subPropertyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#ParagRelVertical"/>
+        <dc:description>Takes as a subject the more specific (child) construction and as an object more general (parent) construction.</dc:description>
+        <rdfs:comment xml:lang="en">In usage-based approaches, &quot;[t]he upwards direction is the result of abstraction [...] or schematization [...]&quot; (Diessel 2023:17)</rdfs:comment>
+        <rdfs:label xml:lang="en">inherits from</rdfs:label>
+        <skos:altLabel xml:lang="en">subpart link</skos:altLabel>
+    </owl:ObjectProperty>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#inheritsFrom"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <owl:annotatedTarget xml:lang="en">In usage-based approaches, &quot;[t]he upwards direction is the result of abstraction [...] or schematization [...]&quot; (Diessel 2023:17)</owl:annotatedTarget>
+        <rdfs:isDefinedBy>Diessel, Holger. 2023. The Constructicon: Taxonomies and Networks. Elements in Construction Grammar. Cambridge University Press. https://doi.org/10.1017/9781009327848.</rdfs:isDefinedBy>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#inheritsFrom"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <owl:annotatedTarget xml:lang="en">subpart link</owl:annotatedTarget>
+        <dc:description xml:lang="en">&quot;A subpart link is posited when oe construction is a proper subpart of another construction and exists independently [...] Because of the way instance and subpart links are defined, every construction C1 which is an instance of another construction C2, and thus is dominated by C2 via an instance link, simultaneously dominates C2 by a subpart link.&quot; (Goldberg 1995:78-80)</dc:description>
+        <rdfs:isDefinedBy xml:lang="en">Goldberg, Adele E. 1995. Constructions: A Construction Grammar Approach to Argument Structure. University of Chicago Press. (p. 79-81)</rdfs:isDefinedBy>
+    </owl:Axiom>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#metaphoricalLink -->
+
+    <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#metaphoricalLink">
+        <rdfs:subPropertyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#LanguageInternalLink"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:comment xml:lang="en">links a construction with literal meaning to its metaphorical extension</rdfs:comment>
+        <rdfs:isDefinedBy>Goldberg (1995: 74-81)</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">metaphorical link</rdfs:label>
+    </owl:ObjectProperty>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#metaphoricalLink"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <owl:annotatedTarget xml:lang="en">links a construction with literal meaning to its metaphorical extension</owl:annotatedTarget>
+        <rdfs:comment xml:lang="en">it is a subcase of horizontal links with same form and different function (Smirnova and Sommerer 2020: 25), except that horizontal paradigmatic links are symmetric while metaphorical is not (see Ungerer &amp; Hartmann 2023: 36, fn. 12).</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#polysemyLink -->
+
+    <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#polysemyLink">
+        <rdfs:subPropertyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#LanguageInternalLink"/>
+        <dc:description xml:lang="en">&quot;Polysemy links capture the nature of the semantic relations between a particular sense of a construction and any extensions from this sense.&quot; (Goldberg 1995:75)</dc:description>
+        <rdfs:isDefinedBy>Goldberg, Adele E. 1995. Constructions: A Construction Grammar Approach to Argument Structure. University of Chicago Press. (p. 75-77)</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">polysemy link</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#sameForm -->
+
+    <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#sameForm">
+        <rdfs:subPropertyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#formSimilarity"/>
+        <rdfs:label xml:lang="en">same form</rdfs:label>
+        <skos:altLabel xml:lang="en">homonym</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#sameFormDifferentFunction -->
+
+    <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#sameFormDifferentFunction">
+        <rdfs:subPropertyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#differentFunction"/>
+        <rdfs:subPropertyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#sameForm"/>
+        <rdfs:label xml:lang="en">same form and different function</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#sameFormSimilarFunction -->
+
+    <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#sameFormSimilarFunction">
+        <rdfs:subPropertyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#sameForm"/>
+        <rdfs:subPropertyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#similarFunction"/>
+        <rdfs:label xml:lang="en">same form and similar function</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#sameFunction -->
+
+    <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#sameFunction">
+        <rdfs:subPropertyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#functionSimilarity"/>
+        <dc:description xml:lang="en">links two constructions that can be substituted for one another within a given context, i.e. with similarities in function and meaning, e.g. the double object alternation in English (V NP NP / V NP PP).</dc:description>
+        <rdfs:label xml:lang="en">same function</rdfs:label>
+        <skos:altLabel xml:lang="en">allostruction</skos:altLabel>
+    </owl:ObjectProperty>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#sameFunction"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <owl:annotatedTarget xml:lang="en">allostruction</owl:annotatedTarget>
+        <rdfs:isDefinedBy>Cappelle, Bert. 2006. Particle placement and the case for “allostructions.” Constructions. https://doi.org/10.24338/cons-381.</rdfs:isDefinedBy>
+    </owl:Axiom>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#similarForm -->
+
+    <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#similarForm">
+        <rdfs:subPropertyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#formSimilarity"/>
+        <rdfs:label xml:lang="en">similar form</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#similarFormDifferentFunction -->
+
+    <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#similarFormDifferentFunction">
+        <rdfs:subPropertyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#differentFunction"/>
+        <rdfs:subPropertyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#similarForm"/>
+        <rdfs:label xml:lang="en">similar form and different function</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#similarFormSameFunction -->
+
+    <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#similarFormSameFunction">
+        <rdfs:subPropertyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#sameFunction"/>
+        <rdfs:subPropertyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#similarForm"/>
+        <rdfs:label xml:lang="en">similar form and same function</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#similarFormSimilarFunction -->
+
+    <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#similarFormSimilarFunction">
+        <rdfs:subPropertyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#similarForm"/>
+        <rdfs:subPropertyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#similarFunction"/>
+        <rdfs:label xml:lang="en">similar form and similar function</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#similarFunction -->
+
+    <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#similarFunction">
+        <rdfs:subPropertyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#functionSimilarity"/>
+        <rdfs:label xml:lang="en">similar function</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#undirectedPolysemyLink -->
+
+    <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#undirectedPolysemyLink">
+        <rdfs:subPropertyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0.0beta#polysemyLink"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:label xml:lang="en">symmetrical polysemy link</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#Construction -->
+
+    <owl:Class rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#Construction">
+        <dc:description xml:lang="en">Construction; part of a Constructicon</dc:description>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+

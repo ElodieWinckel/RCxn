@@ -18,8 +18,9 @@ cx:Idiomaticconstructions a rcxn:Construction ;
 cx:Idiomaticconstructions_A a rcxn:SlotMandatory ;
     cx:WordOrder "Initial position" ;
     rcxn:hasSlotForm cx:Idiomaticconstructions_A_Form ;
-    cx:hasSlotMeaning cx:Idiomaticconstructions_A_Meaning ;
-    rcxn:hasSyntacticFunction "Subject" .
+    rcxn:hasSyntacticFunction "Subject" ;
+    cx:hasIndex cx:Idiomaticconstructions_A_Index ;
+    cx:hasSemanticContribution olia:ActorMacroRole .
 
 cx:Idiomaticconstructions_A_Form a rcxn:SlotForm ;
     cx:hasSyntacticForm "Pronoun NP" .
@@ -27,14 +28,10 @@ cx:Idiomaticconstructions_A_Form a rcxn:SlotForm ;
 cx:Idiomaticconstructions_A_Index a cx:Individual ;
     cx:hasAnimacy cx:animate .
 
-cx:Idiomaticconstructions_A_Meaning a cx:SlotMeaning ;
-    cx:hasIndex cx:Idiomaticconstructions_A_Index ;
-    cx:hasSemanticContribution olia:ActorMacroRole .
-
 cx:Idiomaticconstructions_B a rcxn:SlotMandatory ;
     cx:WordOrder "Follows subject, precedes object" ;
     rcxn:hasSlotForm cx:Idiomaticconstructions_B_Form ;
-    cx:hasSlotMeaning cx:Idiomaticconstructions_B_Meaning .
+    cx:hasIndex cx:Idiomaticconstructions_B_Index .
 
 cx:Idiomaticconstructions_B_Form a rcxn:SlotForm ;
     cx:hasSyntacticForm "VP" ;
@@ -44,14 +41,12 @@ cx:Idiomaticconstructions_B_Index a cx:Event ;
     cx:hasMode olia:IndicativeVerb ;
     cx:hasVoice cx:active .
 
-cx:Idiomaticconstructions_B_Meaning a cx:SlotMeaning ;
-    cx:hasIndex cx:Idiomaticconstructions_B_Index .
-
 cx:Idiomaticconstructions_C a rcxn:SlotMandatory ;
     cx:WordOrder "Precedes \"bridges\"" ;
     rcxn:hasSlotForm cx:Idiomaticconstructions_C_Form ;
-    cx:hasSlotMeaning cx:Idiomaticconstructions_C_Meaning ;
-    rcxn:hasSyntacticFunction "Determiner/Possessive modifier" .
+    rcxn:hasSyntacticFunction "Determiner/Possessive modifier" ;
+    cx:hasIndex cx:Idiomaticconstructions_C_Index ;
+    cx:hasSemanticContribution olia:PossessorRole .
 
 cx:Idiomaticconstructions_C_Form a rcxn:SlotForm ;
     cx:hasSyntacticForm "Possessive pronoun NP" .
@@ -59,14 +54,11 @@ cx:Idiomaticconstructions_C_Form a rcxn:SlotForm ;
 cx:Idiomaticconstructions_C_Index a cx:Individual ;
     cx:hasAnimacy cx:animate .
 
-cx:Idiomaticconstructions_C_Meaning a cx:SlotMeaning ;
-    cx:hasIndex cx:Idiomaticconstructions_C_Index ;
-    cx:hasSemanticContribution olia:PossessorRole .
-
 cx:Idiomaticconstructions_D a rcxn:SlotMandatory ;
     cx:WordOrder "Final position" ;
     rcxn:hasSlotForm cx:Idiomaticconstructions_D_Form ;
-    cx:hasSlotMeaning cx:Idiomaticconstructions_D_Meaning .
+    cx:hasIndex cx:Idiomaticconstructions_D_Index ;
+    cx:hasSemanticContribution olia:ThemeRole .
 
 cx:Idiomaticconstructions_D_Form a rcxn:SlotForm ;
     cx:hasSyntacticForm "NP" ;
@@ -77,10 +69,6 @@ cx:Idiomaticconstructions_D_Form a rcxn:SlotForm ;
 cx:Idiomaticconstructions_D_Index a cx:Individual ;
     cx:hasAnimacy cx:inanimate ;
     cx:hasNumberFeature olia:Paucal .
-
-cx:Idiomaticconstructions_D_Meaning a cx:SlotMeaning ;
-    cx:hasIndex cx:Idiomaticconstructions_D_Index ;
-    cx:hasSemanticContribution olia:ThemeRole .
 
 cx:Idiomaticconstructions_Ex_A a cx:Example ;
     cx:hasText "He had burned his bridges in Hollywood and took off for the seclusion of Taos to hide away..." .

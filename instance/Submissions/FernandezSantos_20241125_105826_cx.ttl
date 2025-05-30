@@ -75,8 +75,8 @@ cx:Spanishtransitiveconstruction_MD a rcxn:Metadata ;
 
 cx:Transitiveobjectrelativeclause_A a rcxn:SlotMandatory ;
     rcxn:hasSlotForm cx:Transitiveobjectrelativeclause_A_Form ;
-    cx:hasSlotMeaning cx:Transitiveobjectrelativeclause_A_Meaning ;
-    rcxn:hasSyntacticFunction "Object (within the clause)" .
+    rcxn:hasSyntacticFunction "Object (within the clause)" ;
+    cx:hasIndex cx:Transitiveobjectrelativeclause_A_Index .
 
 cx:Transitiveobjectrelativeclause_A_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm "NP" .
@@ -85,9 +85,6 @@ cx:Transitiveobjectrelativeclause_A_Index a cx:Individual ;
     cx:hasAnimacy cx:animate ;
     cx:hasNumberFeature olia:Singular ;
     cx:hasGender "[1]" .
-
-cx:Transitiveobjectrelativeclause_A_Meaning a cx:SlotMeaning ;
-    cx:hasIndex cx:Transitiveobjectrelativeclause_A_Index .
 
 cx:Transitiveobjectrelativeclause_B a rcxn:SlotOptional ;
     cx:WordOrder "If present, Element 2 immediately after Element 1" ;
@@ -111,8 +108,8 @@ cx:Transitiveobjectrelativeclause_C_Form a rcxn:SlotForm ;
 cx:Transitiveobjectrelativeclause_D a rcxn:SlotMandatory ;
     cx:WordOrder "Immediately after Element 3" ;
     rcxn:hasSlotForm cx:Transitiveobjectrelativeclause_D_Form ;
-    cx:hasSlotMeaning cx:Transitiveobjectrelativeclause_D_Meaning ;
-    rcxn:hasSyntacticFunction "subject (within the clause)" .
+    rcxn:hasSyntacticFunction "subject (within the clause)" ;
+    cx:hasIndex cx:Transitiveobjectrelativeclause_D_Index .
 
 cx:Transitiveobjectrelativeclause_D_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm "NP" .
@@ -122,13 +119,10 @@ cx:Transitiveobjectrelativeclause_D_Index a cx:Individual ;
     cx:hasNumberFeature olia:Singular ;
     cx:hasGender "[1]" .
 
-cx:Transitiveobjectrelativeclause_D_Meaning a cx:SlotMeaning ;
-    cx:hasIndex cx:Transitiveobjectrelativeclause_D_Index .
-
 cx:Transitiveobjectrelativeclause_E a rcxn:SlotMandatory ;
     cx:WordOrder "immediately after Element 4" ;
     rcxn:hasSlotForm cx:Transitiveobjectrelativeclause_E_Form ;
-    cx:hasSlotMeaning cx:Transitiveobjectrelativeclause_E_Meaning ;
+    cx:hasIndex cx:Transitiveobjectrelativeclause_E_Index ;
     RDFS:comment "1st conjugation verb" .
 
 cx:Transitiveobjectrelativeclause_E_Form a rcxn:SlotForm ;
@@ -137,9 +131,6 @@ cx:Transitiveobjectrelativeclause_E_Form a rcxn:SlotForm ;
 cx:Transitiveobjectrelativeclause_E_Index a cx:Event ;
     cx:hasTenseFeature olia:Present ;
     cx:hasVoice cx:active .
-
-cx:Transitiveobjectrelativeclause_E_Meaning a cx:SlotMeaning ;
-    cx:hasIndex cx:Transitiveobjectrelativeclause_E_Index .
 
 cx:Transitiveobjectrelativeclause_Ex_A a cx:Example ;
     cx:hasGlosses "The grandpa to:the that the kid hugs" ;

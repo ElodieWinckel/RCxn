@@ -32,7 +32,7 @@ cx:Toughmovementconstruction_B_Form a rcxn:SlotForm ;
 cx:Toughmovementconstruction_C a rcxn:SlotMandatory ;
     cx:WordOrder "Element 3, which immediately follows Element 2" ;
     rcxn:hasSlotForm cx:Toughmovementconstruction_C_Form ;
-    cx:hasSlotMeaning cx:Toughmovementconstruction_C_Meaning .
+    cx:hasIndex cx:Toughmovementconstruction_C_Index .
 
 cx:Toughmovementconstruction_C_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm "AdjP" ;
@@ -40,9 +40,6 @@ cx:Toughmovementconstruction_C_Form a rcxn:SlotForm ;
 
 cx:Toughmovementconstruction_C_Index a cx:Event ;
     cx:hasTenseFeature "Infinitive" .
-
-cx:Toughmovementconstruction_C_Meaning a cx:SlotMeaning ;
-    cx:hasIndex cx:Toughmovementconstruction_C_Index .
 
 cx:Toughmovementconstruction_Ex_A a cx:Example ;
     cx:hasGlosses "NP BE Adj to-Inf" ;

@@ -55,23 +55,20 @@ cx:Englishrollupyoursleeves_MD a rcxn:Metadata ;
 cx:Idiomaticconstruction_A a rcxn:SlotMandatory ;
     cx:WordOrder "Initial position in prepositional phrase" ;
     rcxn:hasSlotForm cx:Idiomaticconstruction_A_Form ;
-    cx:hasSlotMeaning cx:Idiomaticconstruction_A_Meaning ;
     cx:hasTranslation "out of" ;
-    rcxn:hasSyntacticFunction "Head of PP" .
+    rcxn:hasSyntacticFunction "Head of PP" ;
+    cx:hasSemanticContribution "source" .
 
 cx:Idiomaticconstruction_A_Form a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "aus" ;
     rcxn:hasSyntacticForm "Preposition" .
 
-cx:Idiomaticconstruction_A_Meaning a cx:SlotMeaning ;
-    cx:hasSemanticContribution "source" .
-
 cx:Idiomaticconstruction_B a rcxn:SlotMandatory ;
     cx:WordOrder "follows preposition, precedes noun" ;
     rcxn:hasSlotForm cx:Idiomaticconstruction_B_Form ;
-    cx:hasSlotMeaning cx:Idiomaticconstruction_B_Meaning ;
     cx:hasTranslation "the" ;
-    rcxn:hasSyntacticFunction "Determiner" .
+    rcxn:hasSyntacticFunction "Determiner" ;
+    cx:hasIndex cx:Idiomaticconstruction_B_Index .
 
 cx:Idiomaticconstruction_B_Form a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "dem" ;
@@ -82,14 +79,12 @@ cx:Idiomaticconstruction_B_Index a cx:Individual ;
     cx:hasGender cx:masculine ;
     cx:hasNumberFeature olia:Singular .
 
-cx:Idiomaticconstruction_B_Meaning a cx:SlotMeaning ;
-    cx:hasIndex cx:Idiomaticconstruction_B_Index .
-
 cx:Idiomaticconstruction_C a rcxn:SlotMandatory ;
     cx:WordOrder "Follows article" ;
     rcxn:hasSlotForm cx:Idiomaticconstruction_C_Form ;
-    cx:hasSlotMeaning cx:Idiomaticconstruction_C_Meaning ;
-    cx:hasTranslation "sleeve" .
+    cx:hasTranslation "sleeve" ;
+    cx:hasIndex cx:Idiomaticconstruction_C_Index ;
+    cx:hasSemanticContribution olia:LocationRole .
 
 cx:Idiomaticconstruction_C_Form a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "Ärmel" ;
@@ -101,15 +96,12 @@ cx:Idiomaticconstruction_C_Index a cx:Individual ;
     cx:hasGender cx:masculine ;
     cx:hasNumberFeature olia:Singular .
 
-cx:Idiomaticconstruction_C_Meaning a cx:SlotMeaning ;
-    cx:hasIndex cx:Idiomaticconstruction_C_Index ;
-    cx:hasSemanticContribution olia:LocationRole .
-
 cx:Idiomaticconstruction_D a rcxn:SlotMandatory ;
     cx:WordOrder "Verb-final in dependent clauses / V2 in main clauses" ;
     rcxn:hasSlotForm cx:Idiomaticconstruction_D_Form ;
-    cx:hasSlotMeaning cx:Idiomaticconstruction_D_Meaning ;
-    cx:hasTranslation "shake" .
+    cx:hasTranslation "shake" ;
+    cx:hasIndex cx:Idiomaticconstruction_D_Index ;
+    cx:hasSemanticContribution "Action" .
 
 cx:Idiomaticconstruction_D_Form a rcxn:SlotForm ;
     rcxn:hasStem "schütteln" ;
@@ -118,10 +110,6 @@ cx:Idiomaticconstruction_D_Form a rcxn:SlotForm ;
 cx:Idiomaticconstruction_D_Index a cx:Event ;
     cx:hasMode olia:IndicativeVerb ;
     cx:hasVoice cx:active .
-
-cx:Idiomaticconstruction_D_Meaning a cx:SlotMeaning ;
-    cx:hasIndex cx:Idiomaticconstruction_D_Index ;
-    cx:hasSemanticContribution "Action" .
 
 cx:Idiomaticconstruction_Ex_A a cx:Example ;
     cx:hasGlosses "a daycare-spot(ACC) can one not just.like.that out the sleeve shake" ;
