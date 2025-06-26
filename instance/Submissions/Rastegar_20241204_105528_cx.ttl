@@ -3,6 +3,7 @@
 @prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links#> .
 @prefix membr: <http://example.org/users#> .
 @prefix olia: <http://purl.org/olia/olia.owl#> .
+@prefix oliatop: <http://purl.org/olia/olia-top.owl#> .
 @prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -57,7 +58,7 @@ cx:Idiomaticconstruction_A a rcxn:SlotMandatory ;
     rcxn:hasSlotForm cx:Idiomaticconstruction_A_Form ;
     cx:hasTranslation "out of" ;
     rcxn:hasSyntacticFunction "Head of PP" ;
-    cx:hasSemanticContribution "source" .
+    rcxn:hasOtherSemanticContribution "source" .
 
 cx:Idiomaticconstruction_A_Form a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "aus" ;
@@ -84,7 +85,7 @@ cx:Idiomaticconstruction_C a rcxn:SlotMandatory ;
     rcxn:hasSlotForm cx:Idiomaticconstruction_C_Form ;
     cx:hasTranslation "sleeve" ;
     cx:hasIndex cx:Idiomaticconstruction_C_Index ;
-    cx:hasSemanticContribution olia:LocationRole .
+    rcxn:hasSemanticRole oliatop:LocationRole .
 
 cx:Idiomaticconstruction_C_Form a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "Ärmel" ;
@@ -101,7 +102,7 @@ cx:Idiomaticconstruction_D a rcxn:SlotMandatory ;
     rcxn:hasSlotForm cx:Idiomaticconstruction_D_Form ;
     cx:hasTranslation "shake" ;
     cx:hasIndex cx:Idiomaticconstruction_D_Index ;
-    cx:hasSemanticContribution "Action" .
+    rcxn:hasOtherSemanticContribution "Action" .
 
 cx:Idiomaticconstruction_D_Form a rcxn:SlotForm ;
     rcxn:hasStem "schütteln" ;

@@ -270,6 +270,9 @@ def form_submit():
     olia = Namespace("http://purl.org/olia/olia.owl#")
     g.bind("olia", olia)
 
+    oliatop = Namespace("http://purl.org/olia/olia-top.owl#")
+    g.bind("oliatop", oliatop)
+
     RDFS = Namespace("http://www.w3.org/2000/01/rdf-schema#")
     g.bind("RDFS", RDFS)
 
@@ -485,12 +488,11 @@ def form_submit():
         # If defined, attribute its semantic contribution and semantic property to the element/slot
         # (i.e., all meaning info except index)
         if add_semantic_contribution.strip():
-            print("Warning: new semantic contribution!")
-            g.add((element_uri, cx.hasSemanticContribution, Literal(add_semantic_contribution)))
+            g.add((element_uri, rcxn.hasOtherSemanticContribution, Literal(add_semantic_contribution)))
         else:
             if semantic_contribution.strip():
                 semantic_contribution = semantic_contribution + "Role"
-                g.add((element_uri, cx.hasSemanticContribution, olia[semantic_contribution]))
+                g.add((element_uri, rcxn.hasSemanticRole, oliatop[semantic_contribution]))
         if semantic_property.strip():
             g.add((element_uri, rcxn.hasSemanticProperty, Literal(semantic_property)))
 

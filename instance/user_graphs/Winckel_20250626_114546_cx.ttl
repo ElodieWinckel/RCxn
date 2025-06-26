@@ -1,0 +1,38 @@
+@prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cx: <http://example.org/cx/> .
+@prefix membr: <http://example.org/users#> .
+@prefix oliatop: <http://purl.org/olia/olia-top.owl#> .
+@prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+membr:Project_Winckel rsrch:hasFindings membr:Project_Winckel_F2506261145 .
+
+cx:Argumentstructureconstruction a rcxn:Construction ;
+    cx:partOfLanguage "German" ;
+    rcxn:hasConstructionMeaning cx:Argumentstructureconstruction_Meaning ;
+    rcxn:hasMetadata cx:Argumentstructureconstruction_MD ;
+    rcxn:hasSlots cx:Argumentstructureconstruction_slots ;
+    rcxn:hasTitle "German Argument structure construction" .
+
+cx:Argumentstructureconstruction_A a rcxn:SlotMandatory ;
+    rcxn:hasSemanticRole oliatop:ConditionRole .
+
+cx:Argumentstructureconstruction_B a rcxn:SlotMandatory ;
+    rcxn:hasOtherSemanticContribution "Addressor" .
+
+cx:Argumentstructureconstruction_MD a rcxn:Metadata ;
+    cx:annotator membr:Winckel ;
+    rcxn:creationDate "2025-06-26"^^xsd:date .
+
+cx:Argumentstructureconstruction_Meaning a rcxn:ConstructionMeaning .
+
+cx:Argumentstructureconstruction_slots a rdf:Seq ;
+    rdf:_1 cx:Argumentstructureconstruction_A ;
+    rdf:_2 cx:Argumentstructureconstruction_B .
+
+membr:Project_Winckel_F2506261145 a rsrch:Finding ;
+    RDFS:label "RC exist" ;
+    rsrch:basedOn cx:Argumentstructureconstruction .
+

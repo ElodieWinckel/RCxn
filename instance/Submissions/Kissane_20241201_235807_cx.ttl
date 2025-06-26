@@ -16,7 +16,7 @@
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._A a rcxn:SlotOptional ;
     rcxn:hasSlotForm cx:TheEnglishGIVE-OUTVerbParticleConstruction._A_Form ;
     rcxn:hasSyntacticFunction "SUBJ" ;
-    cx:hasSemanticContribution "ÆFFECTOR" .
+    rcxn:hasOtherSemanticContribution "ÆFFECTOR" .
 
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._A_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm "NP" .
@@ -38,7 +38,7 @@ cx:TheEnglishGIVE-OUTVerbParticleConstruction._C_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm "particle" .
 
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._D a rcxn:SlotMandatory ;
-    cx:hasSemanticContribution "AFFECTED ACTION" .
+    cx:hasOtherSemanticContribution "AFFECTED ACTION" .
 
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._Ex_A a cx:Example ;
     cx:hasText "The event organizer gave out gift bags to all attendees at the end of the ceremony." .

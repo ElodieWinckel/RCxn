@@ -95,6 +95,22 @@
     
 
 
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#hasOtherSemanticContribution -->
+
+    <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#hasOtherSemanticContribution">
+        <rdfs:subPropertyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#hasSemanticContribution"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">Describes the meaning of the construction element in the construction that cannot be captured by the semantic roles of the OLiA ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">Semantic contribution</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#hasRoot -->
 
     <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#hasRoot">
@@ -111,6 +127,15 @@
     
 
 
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#hasSemanticContribution -->
+
+    <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#hasSemanticContribution">
+        <rdfs:domain rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#Slot"/>
+        <rdfs:comment xml:lang="en">Describes the meaning (e.g., semantic role) of the construction element in the construction.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#hasSemanticProperty -->
 
     <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#hasSemanticProperty">
@@ -123,6 +148,17 @@
         </rdfs:range>
         <rdfs:comment xml:lang="en">Describes any loosely defined semantic category that the construction element (typically a word) should belong to. E.g. “the noun has a generic meaning” or “the verb denotes a destructive event”</rdfs:comment>
         <rdfs:label xml:lang="en">Semantic property</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#hasSemanticRole -->
+
+    <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#hasSemanticRole">
+        <rdfs:subPropertyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#hasSemanticContribution"/>
+        <rdfs:range rdf:resource="http://purl.org/olia/olia-top.owl#SemanticRole"/>
+        <rdfs:comment xml:lang="en">Describes the semantic role of the construction element in the construction. The semantic roles are defined by the OLiA ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">Semantic role</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -251,6 +287,12 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://purl.org/olia/olia-top.owl#SemanticRole -->
+
+    <owl:Class rdf:about="http://purl.org/olia/olia-top.owl#SemanticRole"/>
     
 
 

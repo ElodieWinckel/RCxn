@@ -2,6 +2,7 @@
 @prefix cx: <http://example.org/cx/> .
 @prefix membr: <http://example.org/users#> .
 @prefix olia: <http://purl.org/olia/olia.owl#> .
+@prefix oliatop: <http://purl.org/olia/olia-top.owl#> .
 @prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -20,7 +21,7 @@ cx:Idiomaticconstructions_A a rcxn:SlotMandatory ;
     rcxn:hasSlotForm cx:Idiomaticconstructions_A_Form ;
     rcxn:hasSyntacticFunction "Subject" ;
     cx:hasIndex cx:Idiomaticconstructions_A_Index ;
-    cx:hasSemanticContribution olia:ActorMacroRole .
+    rcxn:hasSemanticRole oliatop:ActorMacroRole .
 
 cx:Idiomaticconstructions_A_Form a rcxn:SlotForm ;
     cx:hasSyntacticForm "Pronoun NP" .
@@ -46,7 +47,7 @@ cx:Idiomaticconstructions_C a rcxn:SlotMandatory ;
     rcxn:hasSlotForm cx:Idiomaticconstructions_C_Form ;
     rcxn:hasSyntacticFunction "Determiner/Possessive modifier" ;
     cx:hasIndex cx:Idiomaticconstructions_C_Index ;
-    cx:hasSemanticContribution olia:PossessorRole .
+    rcxn:hasSemanticRole oliatop:PossessorRole .
 
 cx:Idiomaticconstructions_C_Form a rcxn:SlotForm ;
     cx:hasSyntacticForm "Possessive pronoun NP" .
@@ -58,7 +59,7 @@ cx:Idiomaticconstructions_D a rcxn:SlotMandatory ;
     cx:WordOrder "Final position" ;
     rcxn:hasSlotForm cx:Idiomaticconstructions_D_Form ;
     cx:hasIndex cx:Idiomaticconstructions_D_Index ;
-    cx:hasSemanticContribution olia:ThemeRole .
+    rcxn:hasSemanticRole oliatop:ThemeRole .
 
 cx:Idiomaticconstructions_D_Form a rcxn:SlotForm ;
     cx:hasSyntacticForm "NP" ;

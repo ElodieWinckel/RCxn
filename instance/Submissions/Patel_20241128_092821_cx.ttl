@@ -3,6 +3,7 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix membr: <http://example.org/users#> .
 @prefix olia: <http://purl.org/olia/olia.owl#> .
+@prefix oliatop: <http://purl.org/olia/olia-top.owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -22,7 +23,7 @@
 <http://example.org/cx/come+[noise/mannerofmovement]V-ing_A> a rcxn:SlotOptional ;
     rcxn:hasSlotForm <http://example.org/cx/come+[noise/mannerofmovement]V-ing_A_Form> ;
     rcxn:hasSyntacticFunction "subject" ;
-    cx:hasSemanticContribution olia:UndergoerMacroRole .
+    rcxn:hasSemanticRole oliatop:UndergoerMacroRole .
 
 <http://example.org/cx/come+[noise/mannerofmovement]V-ing_A_Form> a rcxn:SlotForm ;
     rcxn:hasSyntacticForm "NP" .
@@ -45,7 +46,7 @@
     rcxn:hasSyntacticForm "Verb+-ing" .
 
 <http://example.org/cx/come+[noise/mannerofmovement]V-ing_D> a rcxn:SlotOptional ;
-    cx:hasSemanticContribution olia:GoalRole .
+    rcxn:hasSemanticRole oliatop:GoalRole .
 
 <http://example.org/cx/come+[noise/mannerofmovement]V-ing_D_Form> a rcxn:SlotForm ;
     rcxn:hasSyntacticForm "PP" , "Particle" .

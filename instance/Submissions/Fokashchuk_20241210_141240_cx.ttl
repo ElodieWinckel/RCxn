@@ -2,6 +2,7 @@
 @prefix cx: <http://example.org/cx/> .
 @prefix membr: <http://example.org/users#> .
 @prefix olia: <http://purl.org/olia/olia.owl#> .
+@prefix oliatop: <http://purl.org/olia/olia-top.owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -29,7 +30,7 @@
 
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_B> a rcxn:SlotMandatory ;
     rcxn:hasSlotForm <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_B_Form> ;
-    cx:hasSemanticContribution olia:DirectionRole .
+    rcxn:hasSemanticRole oliatop:DirectionRole .
 
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_B_Form> a cx:SlotForm ;
     rcxn:hasSurfaceForm "auf" ;
@@ -38,7 +39,7 @@
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_C> a rcxn:SlotMandatory ;
     cx:hasIS cx:Background ;
     rcxn:hasSyntacticFunction "complement of preposition (element 2)" ;
-    cx:hasSemanticContribution olia:ThemeRole .
+    rcxn:hasSemanticRole oliatop:ThemeRole .
 
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_C_Form> a cx:SlotForm ;
     rcxn:hasSyntacticForm "NP" .

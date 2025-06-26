@@ -3,6 +3,7 @@
 @prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links#> .
 @prefix membr: <http://example.org/users#> .
 @prefix olia: <http://purl.org/olia/olia.owl#> .
+@prefix oliatop: <http://purl.org/olia/olia-top.owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -63,7 +64,7 @@ cx:Generalprepositionalconstructions_MD a rcxn:Metadata ;
     rcxn:hasSlotForm <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_D_Form> ;
     cx:hasTranslation "in front of " ;
     rcxn:hasSyntacticFunction "Head of a prepositional phrase" ;
-    cx:hasSemanticContribution olia:LocationRole .
+    rcxn:hasSemanticRole oliatop:LocationRole .
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_D_Form> a rcxn:SlotForm ;
     rcxn:hasStem "vor" ;

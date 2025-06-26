@@ -79,6 +79,7 @@ def construction_detail(uri):
                 "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links#|"
                 "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#|"
                 "http://example.org/users#|http://purl.org/olia/olia.owl#|"
+                "http://purl.org/olia/olia-top.owl#|"
                 "http://www.w3.org/2000/01/rdf-schema#|"
                 "http://www.w3.org/1999/02/22-rdf-syntax-ns#")
 
