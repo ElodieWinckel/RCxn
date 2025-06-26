@@ -43,7 +43,7 @@ cx:Transitivedurch-Präfixverbkonstruktion_A a rcxn:Slot ;
     rcxn:hasSyntacticFunction "Subject" ;
     cx:hasIndex cx:Transitivedurch-Präfixverbkonstruktion_A_Index ;
     cx:hasSemanticContribution olia:ActorMacroRole ;
-    cx:hasSemanticProperty "Figur" .
+    rcxn:hasSemanticProperty "Figur" .
 
 cx:Transitivedurch-Präfixverbkonstruktion_A_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm "NP" .
@@ -65,7 +65,7 @@ cx:Transitivedurch-Präfixverbkonstruktion_C a rcxn:SlotMandatory ;
     cx:WordOrder "3 nach 2" ;
     rcxn:hasSlotForm cx:Transitivedurch-Präfixverbkonstruktion_C_Form ;
     cx:hasIndex cx:Transitivedurch-Präfixverbkonstruktion_C_Index ;
-    cx:hasSemanticProperty "'zerstörerische' Verben oder allg. Bewegungsverben" ;
+    rcxn:hasSemanticProperty "'zerstörerische' Verben oder allg. Bewegungsverben" ;
     cx:hasTranslation "beißen" ;
     cx:hasTranslation "hauen" ;
     cx:hasTranslation "brechen" ;
@@ -87,7 +87,7 @@ cx:Transitivedurch-Präfixverbkonstruktion_D a rcxn:SlotMandatory ;
     rcxn:hasSlotForm cx:Transitivedurch-Präfixverbkonstruktion_D_Form ;
     cx:hasSemanticContribution "Location" ;
     cx:hasSemanticContribution "Undergoer" ;
-    cx:hasSemanticProperty "Gegenständliches oder Lokalitäten" ;
+    rcxn:hasSemanticProperty "Gegenständliches oder Lokalitäten" ;
     cx:hasTranslation "sie" , "die Seite" , "die Lande" , "das Schlachtfeld" , "die Schar" ;
     RDFS:comment "Akkusativ ist schon interpretiert; formale Basis oft formgleich mit anderen Fällen" ;
     rcxn:hasSyntacticFunction "Object" .

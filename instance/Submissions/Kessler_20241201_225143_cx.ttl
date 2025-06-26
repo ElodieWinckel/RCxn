@@ -29,7 +29,7 @@ cx:Dooperationwithoperand1onoperand2construction_B a rcxn:SlotMandatory ;
     cx:WordOrder "Immediately before element 3" ;
     rcxn:hasSlotForm cx:Dooperationwithoperand1onoperand2construction_B_Form ;
     cx:hasSemanticContribution olia:InstrumentRole ;
-    cx:hasSemanticProperty "In case when the operation (element 3) is \"subtraction\", this operand is the one that is being subtracted." ;
+    rcxn:hasSemanticProperty "In case when the operation (element 3) is \"subtraction\", this operand is the one that is being subtracted." ;
     RDFS:comment "Semantically, element 2 is not optional. However, if it is the result of the directly preceding operation, what would normally be expressed by \"之\", the slot can be empty, as it is implied by 以." .
 
 cx:Dooperationwithoperand1onoperand2construction_B_Form a rcxn:SlotForm ;
@@ -47,7 +47,7 @@ cx:Dooperationwithoperand1onoperand2construction_D a rcxn:SlotMandatory ;
     cx:WordOrder "Immediately after element 3" ;
     rcxn:hasSlotForm cx:Dooperationwithoperand1onoperand2construction_D_Form ;
     cx:hasSemanticContribution olia:UndergoerMacroRole ;
-    cx:hasSemanticProperty "In contrast to element 2, this element is changed as result of the operation" .
+    rcxn:hasSemanticProperty "In contrast to element 2, this element is changed as result of the operation" .
 
 cx:Dooperationwithoperand1onoperand2construction_D_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm "NP" .

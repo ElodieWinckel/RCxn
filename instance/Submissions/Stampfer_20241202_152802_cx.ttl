@@ -14,7 +14,7 @@ cx:EvaluativeAttributionConstruction a rcxn:Construction ;
 
 cx:EvaluativeAttributionConstruction_A a rcxn:SlotOptional ;
     rcxn:hasSlotForm cx:EvaluativeAttributionConstruction_A_Form ;
-    cx:hasSemanticProperty "Attributor" .
+    rcxn:hasSemanticContribution "Attributor" .
 
 cx:EvaluativeAttributionConstruction_A_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm "NP" .
@@ -27,7 +27,7 @@ cx:EvaluativeAttributionConstruction_B_Form a rcxn:SlotForm ;
 
 cx:EvaluativeAttributionConstruction_C a rcxn:SlotMandatory ;
     rcxn:hasSlotForm cx:EvaluativeAttributionConstruction_C_Form ;
-    cx:hasSemanticProperty "Attributee" .
+    rcxn:hasSemanticContribution "Attributee" .
 
 cx:EvaluativeAttributionConstruction_C_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm "NP", "PP" .
@@ -40,7 +40,7 @@ cx:EvaluativeAttributionConstruction_D_Form a rcxn:SlotForm ;
 
 cx:EvaluativeAttributionConstruction_E a rcxn:SlotMandatory ;
     rcxn:hasSlotForm cx:EvaluativeAttributionConstruction_E_Form ;
-    cx:hasSemanticProperty "Attribute" .
+    rcxn:hasSemanticContribution "Attribute" .
 
 cx:EvaluativeAttributionConstruction_E_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm "NP", "AdjP", "PP", "VP", "clause" .

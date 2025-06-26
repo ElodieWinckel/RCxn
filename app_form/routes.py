@@ -492,7 +492,7 @@ def form_submit():
                 semantic_contribution = semantic_contribution + "Role"
                 g.add((element_uri, cx.hasSemanticContribution, olia[semantic_contribution]))
         if semantic_property.strip():
-            g.add((element_uri, cx.hasSemanticProperty, Literal(semantic_property)))
+            g.add((element_uri, rcxn.hasSemanticProperty, Literal(semantic_property)))
 
         # URI for Slot Index
         index_uri = URIRef(cx[f"{construction_name_cleaned}_{chr(65 + y)}_Index"])

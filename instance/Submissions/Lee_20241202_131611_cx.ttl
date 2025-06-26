@@ -32,7 +32,7 @@ cx:Generalprepositionalconstructions_MD a rcxn:Metadata ;
     rcxn:hasSlotForm <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_A_Form> ;
     RDFS:comment "colloprofile: Ziel (39); Bild (24); Tod (22); Beispiel (16); Welt (13); Tatsache (12); Volk (10)" ;
     rcxn:hasSyntacticFunction "Object" ;
-    cx:hasSemanticProperty "The NP predominantly denotes abstract concepts, particularly those that are 1) subject to mental representation (Ziel, Bild, Beispiel), 2) abstract existential element or phenomenon (Welt, Tod, Tatsache), 3) collective entities." .
+    rcxn:hasSemanticProperty "The NP predominantly denotes abstract concepts, particularly those that are 1) subject to mental representation (Ziel, Bild, Beispiel), 2) abstract existential element or phenomenon (Welt, Tod, Tatsache), 3) collective entities." .
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_A_Form> a rcxn:SlotForm ;
     rcxn:hasSyntacticForm "NP" .
@@ -42,7 +42,7 @@ cx:Generalprepositionalconstructions_MD a rcxn:Metadata ;
     rcxn:hasSlotForm <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_B_Form> ;
     RDFS:comment "The adjectives are also frequently modified by an adverb \"so\", forming adverbial phrases such as \"so deutlich, so klar\", etc. ",
         "colloprofile: deutlich (51); klar (47); anschaulich (10); eindringlich (9); lebendig (9); unmittelbar (9); lebhaft (7)" ;
-    cx:hasSemanticProperty "The adjectives share the semantic property of describing vividness or clarity." .
+    rcxn:hasSemanticProperty "The adjectives share the semantic property of describing vividness or clarity." .
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_B_Form> a rcxn:SlotForm ;
     rcxn:hasSyntacticForm "Adjective" .
@@ -51,7 +51,7 @@ cx:Generalprepositionalconstructions_MD a rcxn:Metadata ;
     cx:WordOrder "The adverbs typically appear directly before the prepositional phrase \"vor Augen\"." ;
     rcxn:hasSlotForm <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_C_Form> ;
     RDFS:comment "colloprofile: immer (42); wieder (32); stets (27); noch (25); täglich (9)" ;
-    cx:hasSemanticProperty "The adverbs share a semantic property of expressing recurrence or regularity." .
+    rcxn:hasSemanticProperty "The adverbs share a semantic property of expressing recurrence or regularity." .
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_C_Form> a rcxn:SlotForm ;
     rcxn:hasSyntacticForm "Adverb" .
@@ -76,7 +76,7 @@ cx:Generalprepositionalconstructions_MD a rcxn:Metadata ;
     rcxn:hasSlotForm <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_E_Form> ;
     cx:hasTranslation "eyes" ;
     rcxn:hasSyntacticFunction "Prepositional complement" ;
-    cx:hasSemanticProperty "The noun does not refer to the literal body part but rather conveys a metaphorically extended meaning, representing perception, awareness or mental visualization." .
+    rcxn:hasSemanticProperty "The noun does not refer to the literal body part but rather conveys a metaphorically extended meaning, representing perception, awareness or mental visualization." .
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_E_Form> a rcxn:SlotForm ;
     rcxn:hasStem "Auge" ;
@@ -88,7 +88,7 @@ cx:Generalprepositionalconstructions_MD a rcxn:Metadata ;
     rcxn:hasSlotForm <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_F_Form> ;
     RDFS:comment "When the verb führen or halten occur, the reflexive pronoun \"sich\" is obligatory present (Element 1).",
         "colloprofile: führen (225); halten (143); haben (129); stellen (25); stehen (15)" ;
-    cx:hasSemanticProperty "Though these verbs are highly polysemous, they either relate to the positioning of something in space, either actively (führen, stellen) or passively (stehen), or imply control or possession (halten, haben, führen)" .
+    rcxn:hasSemanticProperty "Though these verbs are highly polysemous, they either relate to the positioning of something in space, either actively (führen, stellen) or passively (stehen), or imply control or possession (halten, haben, führen)" .
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_F_Form> a rcxn:SlotForm ;
     rcxn:hasSyntacticForm "Verb" .
