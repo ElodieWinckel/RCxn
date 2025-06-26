@@ -482,30 +482,23 @@ def form_submit():
         if colloprofile.strip():
             g.add((element_uri, RDFS.comment, Literal("colloprofile: "+colloprofile)))
 
-        # URI for Slot Meaning
-        slot_meaning_uri = URIRef(cx[f"{construction_name_cleaned}_{chr(65 + y)}_Meaning"])
-        # Triple to relate slot to it meaning (if needed)
-        if semantic_contribution.strip() or add_semantic_contribution.strip() or semantic_property.strip() or other_animacy.strip() or animacy.strip() or other_gender.strip() or gender.strip() or person.strip() or tense_uri.strip() or add_tense.strip() or modus.strip() or add_modus.strip() or other_voice.strip() or voice.strip():
-            g.add((element_uri, cx.hasSlotMeaning, slot_meaning_uri))
-            g.add((slot_meaning_uri, RDF.type, cx.SlotMeaning))
-
         # If defined, attribute its semantic contribution and semantic property to the element/slot
         # (i.e., all meaning info except index)
         if add_semantic_contribution.strip():
             print("Warning: new semantic contribution!")
-            g.add((slot_meaning_uri, cx.hasSemanticContribution, Literal(add_semantic_contribution)))
+            g.add((element_uri, cx.hasSemanticContribution, Literal(add_semantic_contribution)))
         else:
             if semantic_contribution.strip():
                 semantic_contribution = semantic_contribution + "Role"
-                g.add((slot_meaning_uri, cx.hasSemanticContribution, olia[semantic_contribution]))
+                g.add((element_uri, cx.hasSemanticContribution, olia[semantic_contribution]))
         if semantic_property.strip():
-            g.add((slot_meaning_uri, cx.hasSemanticProperty, Literal(semantic_property)))
+            g.add((element_uri, cx.hasSemanticProperty, Literal(semantic_property)))
 
         # URI for Slot Index
         index_uri = URIRef(cx[f"{construction_name_cleaned}_{chr(65 + y)}_Index"])
         # Triple to relate index to meaning
         if other_animacy.strip() or animacy.strip() or other_gender.strip() or gender.strip() or person.strip() or tense_uri.strip() or add_tense.strip() or modus.strip() or add_modus.strip() or other_voice.strip() or voice.strip():
-            g.add((slot_meaning_uri, cx.hasIndex, index_uri))
+            g.add((element_uri, cx.hasIndex, index_uri))
 
         # If defined, attribute its animacy, gender, number, person, tense, mode, voice to the element/slot index
         # If the index has animacy or gender, it refers to an individual (subtype of index)
