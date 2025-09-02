@@ -1,0 +1,267 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/em27upeq/ontologies/2025/7/untitled-ontology-83/"
+     xml:base="http://www.semanticweb.org/em27upeq/ontologies/2025/7/untitled-ontology-83/"
+     xmlns:lg="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#isVarietyOf -->
+
+    <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#isVarietyOf">
+        <rdfs:domain rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#variety"/>
+        <rdfs:range rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#lg"/>
+        <rdfs:comment xml:lang="en">Property that relates a more specific language variety to a more generic language (language variety or macrolanguage).</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#partOfLanguage -->
+
+    <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#partOfLanguage">
+        <rdfs:range rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#lg"/>
+        <rdfs:label xml:lang="en">Part of language</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#lg -->
+
+    <owl:Class rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#lg">
+        <rdfs:comment xml:lang="en">Language constructional space that the construction is a part of.</rdfs:comment>
+        <rdfs:label xml:lang="en">Language</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#macrolanguage -->
+
+    <owl:Class rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#macrolanguage">
+        <rdfs:subClassOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#lg"/>
+        <rdfs:isDefinedBy>ISO 639-3</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Macrolanguage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#variety -->
+
+    <owl:Class rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#variety">
+        <rdfs:subClassOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#lg"/>
+        <rdfs:label xml:lang="en">Language Variety</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#deu -->
+
+    <owl:NamedIndividual rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#deu">
+        <rdf:type rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#macrolanguage"/>
+        <rdfs:label xml:lang="en">German</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#deuStdHigh -->
+
+    <owl:NamedIndividual rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#deuStdHigh">
+        <rdf:type rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#variety"/>
+        <lg:isVarietyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#deu"/>
+        <rdfs:label xml:lang="en">Standard High German</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#deuWrSt20 -->
+
+    <owl:NamedIndividual rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#deuWrSt20">
+        <rdf:type rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#variety"/>
+        <lg:isVarietyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#deu"/>
+        <rdfs:label xml:lang="en">Written Standard German of the 20th century</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#eng -->
+
+    <owl:NamedIndividual rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#eng">
+        <rdf:type rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#macrolanguage"/>
+        <rdfs:label xml:lang="en">English</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#engUsSpo -->
+
+    <owl:NamedIndividual rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#engUsSpo">
+        <rdf:type rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#variety"/>
+        <lg:isVarietyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#eng"/>
+        <rdfs:label xml:lang="en">Spoken American English</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#engUsUkWr -->
+
+    <owl:NamedIndividual rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#engUsUkWr">
+        <rdf:type rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#variety"/>
+        <lg:isVarietyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#eng"/>
+        <rdfs:label xml:lang="en">Written British &amp; American English</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#fas -->
+
+    <owl:NamedIndividual rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#fas">
+        <rdf:type rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#macrolanguage"/>
+        <rdfs:label xml:lang="en">Persian</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#gmh -->
+
+    <owl:NamedIndividual rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#gmh">
+        <rdf:type rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#macrolanguage"/>
+        <rdfs:label xml:lang="en">Middle High German (ca. 1050-1500)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#gmhWr12 -->
+
+    <owl:NamedIndividual rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#gmhWr12">
+        <rdf:type rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#variety"/>
+        <lg:isVarietyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#gmh"/>
+        <rdfs:label xml:lang="en">Written Middle High Geman of the 12th century</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#hat -->
+
+    <owl:NamedIndividual rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#hat">
+        <rdf:type rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#macrolanguage"/>
+        <rdfs:label xml:lang="en">Haitian Creole</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#ita -->
+
+    <owl:NamedIndividual rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#ita">
+        <rdf:type rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#macrolanguage"/>
+        <rdfs:label xml:lang="en">Italian</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#itaStoria -->
+
+    <owl:NamedIndividual rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#itaStoria">
+        <rdf:type rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#variety"/>
+        <lg:isVarietyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#ita"/>
+        <rdfs:label xml:lang="en">Written (historiography) Italian of the 16th century in Francesco Guicciardini&apos;s &quot;Storia d&apos;Italia&quot;</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#lat -->
+
+    <owl:NamedIndividual rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#lat">
+        <rdf:type rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#macrolanguage"/>
+        <rdfs:label xml:lang="en">Latin</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#lzh -->
+
+    <owl:NamedIndividual rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#lzh">
+        <rdf:type rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#variety"/>
+        <lg:isVarietyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#zho"/>
+        <rdfs:label xml:lang="en">Literary Chinese</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#pes -->
+
+    <owl:NamedIndividual rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#pes">
+        <rdf:type rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#variety"/>
+        <lg:isVarietyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#fas"/>
+        <rdfs:label xml:lang="en">Iranian Persian</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#spa -->
+
+    <owl:NamedIndividual rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#spa">
+        <rdf:type rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#macrolanguage"/>
+        <rdfs:label xml:lang="en">Spanish</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#spaSpoPen -->
+
+    <owl:NamedIndividual rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#spaSpoPen">
+        <rdf:type rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#variety"/>
+        <lg:isVarietyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#spa"/>
+        <rdfs:label xml:lang="en">Spoken Peninsular Spanish</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#zho -->
+
+    <owl:NamedIndividual rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#zho">
+        <rdf:type rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#macrolanguage"/>
+        <rdfs:label xml:lang="en">Chinese</rdfs:label>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+

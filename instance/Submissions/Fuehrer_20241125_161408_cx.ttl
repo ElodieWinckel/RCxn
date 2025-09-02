@@ -1,6 +1,7 @@
 @prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix cx: <http://example.org/cx/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
 @prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links#> .
 @prefix membr: <http://example.org/users#> .
 @prefix olia: <http://purl.org/olia/olia.owl#> .
@@ -10,7 +11,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 cx:Transitivedurch-Präfixverbkonstruktion a rcxn:Construction ;
-    rcxn:hasTitle "Mittelhochdeutsch, schriftlich, 12. Jh. Transitive durch-Präfixverbkonstruktion" ;
+    rcxn:hasTitle "Transitive durch-Präfixverbkonstruktion" ;
     rcxn:hasConstructionMeaning cx:Transitivedurch-Präfixverbkonstruktion_Meaning ;
     cx:hasExample cx:Transitivedurch-Präfixverbkonstruktion_Ex_A,
         cx:Transitivedurch-Präfixverbkonstruktion_Ex_B,
@@ -19,14 +20,15 @@ cx:Transitivedurch-Präfixverbkonstruktion a rcxn:Construction ;
     rcxn:hasSlots cx:Transitivedurch-Präfixverbkonstruktion_slots ;
     links:inheritsFrom cx:Monotransitivkonstruktion,
         cx:Präfixverbkonstruktion ;
-    cx:partOfLanguage "Mittelhochdeutsch, schriftlich, 12. Jh." ;
+    lg:partOfLanguage lg:gmhWr12 ;
     cx:similarFormSameFunction cx:Transitivedurch-Partikelverbkonstruktion,
         cx:Transitivedurch-Verbkonstruktion ;
     RDFS:comment "Depends on what is doable, all MHG data is available in form of one big csv-file. Can be split into multiple files,  however." .
 
 cx:Monotransitivkonstruktion a rcxn:Construction ;
     rcxn:hasMetadata cx:Monotransitivkonstruktion_MD ;
-    rcxn:hasTitle "Monotransitivkonstruktion" .
+    rcxn:hasTitle "Monotransitivkonstruktion" ;
+    lg:partOfLanguage lg:gmh.
 
 cx:Monotransitivkonstruktion_MD a rcxn:Metadata ;
     rcxn:annotator membr:Fuehrer ;
@@ -34,7 +36,8 @@ cx:Monotransitivkonstruktion_MD a rcxn:Metadata ;
 
 cx:Präfixverbkonstruktion a rcxn:Construction ;
     rcxn:hasMetadata cx:Präfixverbkonstruktion_MD ;
-    rcxn:hasTitle "Präfixverbkonstruktion" .
+    rcxn:hasTitle "Präfixverbkonstruktion" ;
+    lg:partOfLanguage lg:gmh.
 
 cx:Präfixverbkonstruktion_MD a rcxn:Metadata ;
     rcxn:annotator membr:Fuehrer ;
@@ -165,7 +168,8 @@ cx:Transitivedurch-Präfixverbkonstruktion_slots a rdf:Seq ;
 
 cx:Transitivedurch-Verbkonstruktion a rcxn:Construction ;
     rcxn:hasMetadata cx:Transitivedurch-Verbkonstruktion_MD ;
-    cx:hasTitle "Transitive durch-Verbkonstruktion" .
+    cx:hasTitle "Transitive durch-Verbkonstruktion" ;
+    lg:partOfLanguage lg:gmh.
 
 cx:Transitivedurch-Verbkonstruktion_MD a rcxn:Metadata ;
     rcxn:annotator membr:Fuehrer ;

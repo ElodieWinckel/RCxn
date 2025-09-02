@@ -189,14 +189,14 @@ def form_submit():
     # Fields in category "Metadata"
     user_name = request.form['uri']
     # Fields in category "General"
+    construction_language_uri = request.form['language']  # the URI
+    # construction_language = request.form['language_label']  # the label, no use for the moment
     construction_name = request.form['construction']
-    construction_name_cleaned = construction_name.replace(" ", "")
+    construction_name_cleaned = construction_language_uri + "_" + construction_name.replace(" ", "")
     default_research_question_uri = request.form['projectId']
     new_research_question = request.form['Rquestion']
     findingsId = request.form['findingsId'] # Flask receives either: (a) The selected findingsId if an existing finding is chosen,
     findings = request.form['findings'] # or (b) the manually entered text from findings if "Create new findings" is selected.
-    print(findings)
-    construction_language = request.form['language']
     # not used for the moment (TODO) construction_status = request.form['construction_status']
     # Fields in category "Meaning of the construction"
     meaning = request.form['meaning']
@@ -276,6 +276,9 @@ def form_submit():
     RDFS = Namespace("http://www.w3.org/2000/01/rdf-schema#")
     g.bind("RDFS", RDFS)
 
+    lg = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#")
+    g.bind("lg", lg)
+
     # Triple that defines the URI of the construction
     g.add((cx[construction_name_cleaned], RDF.type, rcxn.Construction))
 
@@ -320,8 +323,7 @@ def form_submit():
         g.add((membr[new_finding], rsrch.basedOn, cx[construction_name_cleaned]))
 
     # TITLE
-    # The name of the construction is a concatenation of the language and the title
-    construction_complete_title = f"{construction_language} {construction_name}"
+    construction_complete_title = f"{construction_name}"
     g.add((cx[construction_name_cleaned], rcxn.hasTitle, Literal(construction_complete_title)))
 
 ###################################################
@@ -389,7 +391,7 @@ def form_submit():
 ### IMPLEMENT CONSTRUCTION LANGUAGE
 ###################################################
 
-    g.add((cx[construction_name_cleaned], cx.partOfLanguage, Literal(construction_language)))
+    g.add((cx[construction_name_cleaned], lg.partOfLanguage, lg[construction_language_uri]))
 
 ###################################################
 ### IMPLEMENT CONSTRUCTION MEANING

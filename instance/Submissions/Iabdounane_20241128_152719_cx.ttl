@@ -1,12 +1,13 @@
 @prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix cx: <http://example.org/cx/> .
+@prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
 @prefix membr: <http://example.org/users#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 cx:ThisCloseToV-ing a rcxn:Construction ;
-    rcxn:hasTitle "(American) English, Spoken Modality This Close To V-ing" ;
+    rcxn:hasTitle "This Close To V-ing" ;
     rcxn:hasConstructionMeaning cx:ThisCloseToV-ing_Meaning ;
     cx:hasExample cx:ThisCloseToV-ing_Ex_A ;
     cx:hasGesture """The gesture is part of the construction's form.\r
@@ -14,7 +15,7 @@ The index finger and the thumb are stretched (or partially crooked) and drawn ne
 The gesture is sometimes used a few milliseconds before uttering "this" and is most often maintained until uttering the V-ing element (and its complement if the verb is transitive).""" ;
     rcxn:hasMetadata cx:ThisCloseToV-ing_MD ;
     rcxn:hasSlots cx:ThisCloseToV-ing_slots ;
-    cx:partOfLanguage "(American) English, Spoken Modality" ;
+    lg:partOfLanguage lg:engUsSpo ;
     RDFS:comment "I would need to upload an Excel file with all the concordance lines and a link with all the video-snippets" .
 
 cx:ThisCloseToV-ing_A a rcxn:SlotMandatory ;

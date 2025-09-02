@@ -51,10 +51,9 @@
         </div>
 
         <h3>Language</h3>
-        <div>
-          <label for="language">Language (also: time frame, dialect area, written/spoken modality text genre)</label>
-          <input type="text" id="language" name="language" size="50" required>
-        </div>
+        <div id="treeDropdown"></div>
+          <input type="hidden" id="language" name="language" required/>
+          <input type="hidden" id="language_label" name="language_label"/>
         <h3>Construction Status</h3>
         <div>
           <label for="construction_status">Is this a construction?</label>
@@ -262,6 +261,22 @@
               findingsContainer.style.display = 'none';  // Hide text field
           }
       }
+
+      $(function() {
+        $('#treeDropdown').jstree({
+          "core" : {
+            "data" : {
+              "url" : "/static/data/language_tree.json",  // Flask will serve this file
+              "dataType" : "json"
+            }
+          }
+        });
+      // Save selection to hidden field
+        $('#treeDropdown').on("select_node.jstree", function (e, data) {
+        $("#language").val(data.node.id);       // store the URI
+        $("#language_label").val(data.node.text); // store the label
+      });
+      });
 
 
       // part of the script that generates the fields for constructions elements

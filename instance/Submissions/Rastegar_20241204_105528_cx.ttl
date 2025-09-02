@@ -1,5 +1,6 @@
 @prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix cx: <http://example.org/cx/> .
+@prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
 @prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links#> .
 @prefix membr: <http://example.org/users#> .
 @prefix olia: <http://purl.org/olia/olia.owl#> .
@@ -9,7 +10,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 cx:Idiomaticconstruction a rcxn:Construction ;
-    rcxn:hasTitle "German Aus dem Ärmel schütteln construction" ;
+    rcxn:hasTitle "Aus dem Ärmel schütteln construction" ;
     links:CL_differentFormSameFunction cx:EnglishPullsomethingoutofahat ;
     links:CL_similarFormDifferentFunction cx:Englishrollupyoursleeves,
         <http://example.org/cx/Farsibarāyekasiāstinbālāzadan:torollupsleevesforsomething>,
@@ -19,18 +20,20 @@ cx:Idiomaticconstruction a rcxn:Construction ;
         cx:Idiomaticconstruction_Ex_B ;
     rcxn:hasMetadata cx:Idiomaticconstruction_MD ;
     rcxn:hasSlots cx:Idiomaticconstruction_slots ;
-    cx:partOfLanguage "German" .
+    lg:partOfLanguage lg:deu .
 
 cx:Definitearticle RDFS:label "Definite article" .
 
 cx:EnglishPullsomethingoutofahat a rcxn:Construction ;
     rcxn:annotator membr:Rastegar ;
     rcxn:creationDate "2024-12-04"^^xsd:date ;
-    rcxn:hasTitle "English Pull something out of a hat" .
+    rcxn:hasTitle "Pull something out of a hat" ;
+    lg:partOfLanguage lg:eng .
 
 cx:Englishrollupyoursleeves a rcxn:Construction ;
     rcxn:hasMetadata cx:Englishrollupyoursleeves_MD ;
-    rcxn:hasTitle "English roll up your sleeves" .
+    rcxn:hasTitle "Roll up your sleeves" ;
+    lg:partOfLanguage lg:eng .
 
 cx:Englishrollupyoursleeves_MD a rcxn:Metadata ;
     rcxn:annotator membr:Rastegar ;
@@ -38,7 +41,8 @@ cx:Englishrollupyoursleeves_MD a rcxn:Metadata ;
 
 <http://example.org/cx/Farsibarāyekasiāstinbālāzadan:torollupsleevesforsomething> a rcxn:Construction ;
     rcxn:hasMetadata <http://example.org/cx/Farsibarāyekasiāstinbālāzadan:torollupsleevesforsomething_MD> ;
-    rcxn:hasTitle "Farsi barāye kasi āstin bālā zadan: to roll up sleeves for something" .
+    rcxn:hasTitle "barāye kasi āstin bālā zadan: to roll up sleeves for something" ;
+    lg:partOfLanguage lg:pes .
 
 <http://example.org/cx/Farsibarāyekasiāstinbālāzadan:torollupsleevesforsomething_MD> a rcxn:Metadata ;
     rcxn:annotator membr:Rastegar ;
@@ -46,12 +50,14 @@ cx:Englishrollupyoursleeves_MD a rcxn:Metadata ;
 
 <http://example.org/cx/Farsimārāstin-exodparvarāndan:tonurtureasnakeinone'sbosom> a rcxn:Construction ;
     rcxn:hasMetadata <http://example.org/cx/Farsimārāstin-exodparvarāndan:tonurtureasnakeinone'sbosom_MD> ;
-    rcxn:hasTitle "Farsi mār āstin-e xod parvarāndan: to nurture a snake in one's bosom" .
+    rcxn:hasTitle "mār āstin-e xod parvarāndan: to nurture a snake in one's bosom" ;
+    lg:partOfLanguage lg:pes .
 
 <http://example.org/cx/Farsimārāstin-exodparvarāndan:tonurtureasnakeinone'sbosom_MD> a rcxn:Metadata ;
     rcxn:annotator membr:Rastegar ;
     rcxn:creationDate "2024-12-04"^^xsd:date ;
-    rcxn:hasTitle "Farsi mār āstin-e xod parvarāndan: to nurture a snake in one's bosom" .
+    rcxn:hasTitle "mār āstin-e xod parvarāndan: to nurture a snake in one's bosom" ;
+    lg:partOfLanguage lg:pes .
 
 cx:Idiomaticconstruction_A a rcxn:SlotMandatory ;
     cx:WordOrder "Initial position in prepositional phrase" ;

@@ -1,5 +1,6 @@
 @prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix cx: <http://example.org/cx/> .
+@prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
 @prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links#> .
 @prefix membr: <http://example.org/users#> .
 @prefix olia: <http://purl.org/olia/olia.owl#> .
@@ -9,19 +10,20 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]> a rcxn:Construction ;
-    rcxn:hasTitle "Standard German written language within the time frame of 1900-1999 [(sich) (NP) (ADJ) (ADV) [vor Augen] (VP)]" ;
+    rcxn:hasTitle "(sich) (NP) (ADJ) (ADV) [vor Augen] (VP)" ;
     rcxn:hasConstructionMeaning <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_Meaning> ;
     rcxn:hasMetadata <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_MD> ;
     rcxn:hasSlots <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_slots> ;
     links:inheritsFrom cx:Generalprepositionalconstructions,
         <http://example.org/cx/vor+bodypartconstructions> ;
-    cx:partOfLanguage "Standard German written language within the time frame of 1900-1999" .
+    lg:partOfLanguage lg:deuWrSt20 .
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_E_Index> cx:hasNumberFeature olia:Plural .
 
 cx:Generalprepositionalconstructions a rcxn:Construction ;
     rcxn:hasMetadata cx:Generalprepositionalconstructions_MD ;
-    rcxn:hasTitle "General prepositional constructions" .
+    rcxn:hasTitle "General prepositional constructions" ;
+    lg:partOfLanguage lg:deu .
 
 cx:Generalprepositionalconstructions_MD a rcxn:Metadata ;
     rcxn:annotator membr:Lee ;
@@ -111,7 +113,8 @@ cx:Generalprepositionalconstructions_MD a rcxn:Metadata ;
 
 <http://example.org/cx/vor+bodypartconstructions> a rcxn:Construction ;
     rcxn:hasMetadata <http://example.org/cx/vor+bodypartconstructions_MD> ;
-    rcxn:hasTitle "vor + body part constructions" .
+    rcxn:hasTitle "vor + body part constructions" ;
+    lg:partOfLanguage lg:deu .
 
 <http://example.org/cx/vor+bodypartconstructions> a rcxn:Metadata ;
     rcxn:annotator membr:Lee ;

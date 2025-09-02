@@ -2,7 +2,7 @@ from . import app_entries_blueprint
 import glob
 import re
 from flask import Flask, render_template, redirect, url_for
-from rdflib import Graph, URIRef, Literal, Namespace, RDF, XSD
+from rdflib import Graph, URIRef, Literal, Namespace, RDF, RDFS
 import os
 
 # Check if the production directory exists (otherwise, defaults to development directory)
@@ -34,10 +34,37 @@ olia = Namespace("http://purl.org/olia/olia.owl#")
 g.bind("olia", olia)
 rcxn = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#")
 g.bind("rcxn", rcxn)
-RDFS = Namespace("http://www.w3.org/2000/01/rdf-schema#")
-g.bind("RDFS", RDFS)
 rsrch = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#")
 g.bind("rsrch", rsrch)
+lg = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#")
+g.bind("lg", lg)
+
+# Load the ontologies
+ont = Graph()
+for xlm_file in glob.glob("ontologies/*.rdf"):
+    ont.parse(xlm_file, format="xml")
+# for debug purposes
+#for s, l in list(ont.subject_objects(RDFS.label)):
+#    print(s, "→", l)
+
+def get_metalanguage(lang_uri, graph, is_variety_of):
+    """
+    Walks up the isVarietyOf chain until it finds
+    the top-level 'metalanguage' (no parent).
+    """
+    current = lang_uri
+    visited = set()  # to avoid infinite loops if bad data
+    while True:
+        parents = list(graph.objects(subject=current, predicate=is_variety_of))
+        if not parents:
+            # no further parent, return current as the metalanguage
+            return current
+        parent = parents[0]
+        if parent in visited:
+            # cycle detected
+            return current
+        visited.add(parent)
+        current = parent
 
 @app_entries_blueprint.route("/")
 def list_view():
@@ -46,10 +73,12 @@ def list_view():
     # SPARQL query to get the title for each construction
     query = """
     PREFIX rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#>
-    SELECT ?construction ?title
+    PREFIX lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#>
+    SELECT ?construction ?title ?language
     WHERE {
         ?construction a rcxn:Construction .
         ?construction rcxn:hasTitle ?title .
+        ?construction lg:partOfLanguage ?language .
     }
     """
 
@@ -60,15 +89,24 @@ def list_view():
     for row in results:
         construction_uri = str(row.construction)
         title = str(row.title)
+        variety_uri = row.language
+        variety = str(next(ont.objects(subject=variety_uri, predicate=RDFS.label), ""))
+        metalanguage_uri = get_metalanguage(variety_uri, ont, lg.isVarietyOf)
+        metalanguage_label = str(next(ont.objects(subject=metalanguage_uri, predicate=RDFS.label), ""))
 
         # Append construction details as dictionary
         constructions.append({
             'uri': construction_uri,
-            'title': title
+            'title': title,
+            'variety': variety,
+            'metalanguage': metalanguage_label
         })
 
     # Sorting in alphabetical order
-    constructions = sorted(constructions, key=lambda x: x['title'])
+    constructions = sorted(
+        constructions,
+        key=lambda x: (x['metalanguage'].lower(), x['title'].lower())
+    )
 
     return render_template("app_entries/list.html", constructions=constructions)
 
@@ -81,7 +119,24 @@ def construction_detail(uri):
                 "http://example.org/users#|http://purl.org/olia/olia.owl#|"
                 "http://purl.org/olia/olia-top.owl#|"
                 "http://www.w3.org/2000/01/rdf-schema#|"
-                "http://www.w3.org/1999/02/22-rdf-syntax-ns#")
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#|"
+                "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#")
+
+    def get_label_or_iri(term, data_graph, ont_graph):
+        """Return rdfs:label from ontologies if available, else fallback."""
+        if isinstance(term, Literal):
+            return str(term)
+        elif isinstance(term, URIRef):
+            # First try ontology graph
+            for label in ont_graph.objects(term, RDFS.label):
+                return str(label)
+            # Fallback: maybe the data graph has labels too
+            for label in data_graph.objects(term, RDFS.label):
+                return str(label)
+            # Last resort: strip prefixes
+            return re.sub(prefixes, "", str(term))
+        else:
+            return str(term)
 
     # Rebuild the full URI for the construction
     entry_uri = URIRef("http://example.org/cx/" + uri)
@@ -95,10 +150,10 @@ def construction_detail(uri):
     # Collect all triples where entry_uri is the subject
     triples = []
     for predicate, obj in g.predicate_objects(subject=entry_uri):
-        if str(predicate) != "http://www.w3.org/1999/02/22-rdf-syntax-ns#type":
+        if str(predicate) != str(RDF.type):
             triples.append({
-                'property': re.sub(prefixes, "", str(predicate)),
-                'object': re.sub(prefixes, "", str(obj)),
+                'property': get_label_or_iri(predicate, g, ont),
+                'object': get_label_or_iri(obj, g, ont),
             })
 
     # Add triples for meaning

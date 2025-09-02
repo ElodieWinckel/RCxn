@@ -1,4 +1,5 @@
 @prefix cx: <http://example.org/cx/> .
+@prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
 @prefix membr: <http://example.org/users#> .
 @prefix olia: <http://purl.org/olia/olia.owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -6,12 +7,12 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://example.org/cx/TheEnglishGIVE-OUTVerbParticleConstruction.> a rcxn:Construction ;
-    rcxn:hasTitle "English GIVE-OUT Verb Particle Construction." ;
+    rcxn:hasTitle "GIVE-OUT Verb Particle Construction." ;
     rcxn:hasConstructionMeaning cx:TheEnglishGIVE-OUTVerbParticleConstruction._Meaning ;
     cx:hasExample cx:TheEnglishGIVE-OUTVerbParticleConstruction._Ex_A ;
     rcxn:hasMetadata cx:TheEnglishGIVE-OUTVerbParticleConstruction._MD ;
     rcxn:hasSlots cx:TheEnglishGIVE-OUTVerbParticleConstruction._slots ;
-    cx:partOfLanguage "English" .
+    lg:partOfLanguage lg:eng .
 
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._A a rcxn:SlotOptional ;
     rcxn:hasSlotForm cx:TheEnglishGIVE-OUTVerbParticleConstruction._A_Form ;

@@ -1,19 +1,24 @@
 {% extends "base.html" %}
-
-{% block title %}Constructions{% endblock %}
-
 {% block content %}
 
-<body>
-    <h1>Construction List</h1>
-    <ul>
-        {% for construction in constructions %}
-            <li>
-                <a href="{{ url_for('app_entries.construction_detail', uri=construction.uri.replace('http://example.org/cx/', '')) }}">
-                    {{ construction.title }}
-                </a>
-            </li>
-        {% endfor %}
-    </ul>
+<div class="container" style="max-width: 1000px; margin: auto;">
+  <h2>Constructions</h2>
+
+  {% for group in constructions|groupby('metalanguage') %}
+    <h3 style="margin-top: 25px;">{{ group.grouper }}</h3>
+
+    <!-- rows -->
+    {% for c in group.list %}
+      <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 10px; padding: 4px 0;">
+        <div>{{ c.variety }}</div>
+        <div>
+          <a href="{{ url_for('app_entries.construction_detail', uri=c.uri|replace('http://example.org/cx/', '')) }}">
+            {{ c.title }}
+          </a>
+        </div>
+      </div>
+    {% endfor %}
+  {% endfor %}
+</div>
 
 {% endblock %}

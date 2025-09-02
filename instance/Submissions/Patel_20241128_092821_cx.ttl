@@ -1,6 +1,7 @@
 @prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix cx: <http://example.org/cx/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
 @prefix membr: <http://example.org/users#> .
 @prefix olia: <http://purl.org/olia/olia.owl#> .
 @prefix oliatop: <http://purl.org/olia/olia-top.owl#> .
@@ -9,7 +10,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://example.org/cx/come+[noise/mannerofmovement]V-ing> a rcxn:Construction ;
-    rcxn:hasTitle "English come + [noise/manner of movement] V-ing" ;
+    rcxn:hasTitle "come + [noise/manner of movement] V-ing" ;
     rcxn:hasConstructionMeaning <http://example.org/cx/come+[noise/mannerofmovement]V-ing_Meaning> ;
     cx:hasExample <http://example.org/cx/come+[noise/mannerofmovement]V-ing_Ex_A>,
         <http://example.org/cx/come+[noise/mannerofmovement]V-ing_Ex_B>,
@@ -17,7 +18,7 @@
         <http://example.org/cx/come+[noise/mannerofmovement]V-ing_Ex_D> ;
     rcxn:hasMetadata <http://example.org/cx/come+[noise/mannerofmovement]V-ing_MD> ;
     rcxn:hasSlots <http://example.org/cx/come+[noise/mannerofmovement]V-ing_slots> ;
-    cx:partOfLanguage "English" ;
+    lg:partOfLanguage lg:eng ;
     RDFS:comment "tables (of association scores, etc.) and possibly some figures" .
 
 <http://example.org/cx/come+[noise/mannerofmovement]V-ing_A> a rcxn:SlotOptional ;

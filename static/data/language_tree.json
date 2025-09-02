@@ -1,0 +1,61 @@
+[
+  {
+    "id": "zho",
+    "text": "Chinese",
+    "children": [
+      {"id": "lzh", "text": "Literary Chinese"}
+    ]
+  },
+  {
+    "id": "eng",
+    "text": "English",
+    "children": [
+      {"id": "engUsSpo", "text": "Spoken American English"},
+      {"id": "engUsUkWr", "text": "Written British & American English"}
+    ]
+  },
+  {
+    "id": "fas",
+    "text": "Persian",
+    "children": [
+      {"id": "pes", "text": "Iranian Persian"}
+    ]
+  },
+  {
+    "id": "deu",
+    "text": "German",
+    "children": [
+      {"id": "deuStdHigh", "text": "Standard High German"},
+      {"id": "deuWrSt20", "text": "Written Standard German of the 20th century"}
+    ]
+  },
+  {
+    "id": "hat",
+    "text": "Haitian Creole"
+  },
+  {
+    "id": "ita",
+    "text": "Italian",
+    "children": [
+      {"id": "itaStoria", "text": "Written (historiography) Italian of the 16th century in Francesco Guicciardini's \"Storia d'Italia\""}
+    ]
+  },
+  {
+    "id": "lat",
+    "text": "Latin"
+  },
+  {
+    "id": "gmh",
+    "text": "Middle High German (ca. 1050-1500)",
+    "children": [
+      {"id": "gmhWr12", "text":  "Written Middle High Geman of the 12th century"}
+    ]
+  },
+  {
+    "id": "spa",
+    "text": "Spanish",
+    "children": [
+      {"id":  "spaSpoPen", "text": "Spoken Peninsular Spanish"}
+    ]
+  }
+]

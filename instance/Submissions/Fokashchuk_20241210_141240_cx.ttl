@@ -1,5 +1,6 @@
 @prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix cx: <http://example.org/cx/> .
+@prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
 @prefix membr: <http://example.org/users#> .
 @prefix olia: <http://purl.org/olia/olia.owl#> .
 @prefix oliatop: <http://purl.org/olia/olia-top.owl#> .
@@ -8,11 +9,11 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions> a rcxn:Construction ;
-    rcxn:hasTitle "Modern standard High German Allative NP1 + auf + NP2 & NP1 + an + NP2 constructions" ;
+    rcxn:hasTitle "Allative NP1 + auf + NP2 & NP1 + an + NP2 constructions" ;
     rcxn:hasConstructionMeaning <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_Meaning> ;
     rcxn:hasMetadata <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_MD> ;
     rcxn:hasSlots <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_slots> ;
-    cx:partOfLanguage "Modern standard High German" .
+    lg:partOfLanguage lg:deuStdHigh .
 
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_A> a rcxn:SlotMandatory ;
     cx:WordOrder "NP1+P+NP2" ;

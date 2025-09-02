@@ -1,0 +1,26 @@
+# I follow the ISO 639-3 codes and names (https://iso639-3.sil.org/sites/iso639-3/files/downloads/iso-639-3_Name_Index.tab)
+# ISO code in parenthesis (); made-up code in brackets []
+
+Chinese (zho)
+	Literary Chinese (lzh)
+English (eng)
+	Spoken American English [engUsSpo]
+	Written British & American English [engUsUkWr]
+Persian (fas)
+	Iranian Persian (pes)
+German (deu)
+	Standard High German [deuStdHigh]
+	Written Standard German of the 20th century [deuWrSt20]
+Haitian Creole (hat)
+Italian (ita)
+	Written (historiography) Italian of the 16th century in Francesco Guicciardini's "Storia d'Italia" [itaStoria]
+Latin (lat)
+Middle High German (ca. 1050-1500) (gmh)
+	Written Middle High Geman of the 12th century [gmhWr12]
+Spanish (spa)
+	Spoken Peninsular Spanish [spaSpoPen]
+
+
+@prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
+
+lg:partOfLanguage

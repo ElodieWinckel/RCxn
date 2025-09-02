@@ -1,6 +1,7 @@
 @prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix cx: <http://example.org/cx/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
 @prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links#> .
 @prefix membr: <http://example.org/users#> .
 @prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
@@ -8,7 +9,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 cx:Relative-Topic-ShiftConstruction a rcxn:Construction ;
-    rcxn:hasTitle "Sixteenth-century Italian (Florence), written: historiography (Francesco Guicciardini's \"Storia d'Italia\")  Relative-Topic-Shift Construction " ;
+    rcxn:hasTitle "Relative-Topic-Shift Construction " ;
     links:CL_sameFormSameFunction <http://example.org/cx/Latinlinkingcliché(i.e.,inCaesar'sandTacitus'works)> ;
     rcxn:hasConstructionMeaning cx:Relative-Topic-ShiftConstruction_Meaning ;
     cx:hasExample cx:Relative-Topic-ShiftConstruction_Ex_A,
@@ -18,13 +19,14 @@ cx:Relative-Topic-ShiftConstruction a rcxn:Construction ;
     links:inheritsFrom cx:ItalianConiunctioRelativa,
         cx:ItalianSiPassivante,
         cx:ItalianTemporalSubordinateClause ;
-    cx:partOfLanguage "Sixteenth-century Italian (Florence), written: historiography (Francesco Guicciardini's \"Storia d'Italia\") " ;
+    lg:partOfLanguage lg:itaStoria ;
     links:similarFormDifferentFunction cx:ItalianRelativeClause ;
     links:similarFormSameFunction cx:Demonstrative-Topic-ShiftConstruction .
 
 cx:Demonstrative-Topic-ShiftConstruction a rcxn:Construction ;
     rcxn:hasMetadata cx:Demonstrative-Topic-ShiftConstruction_MD ;
-    rcxn:hasTitle "Demonstrative-Topic-Shift Construction" .
+    rcxn:hasTitle "Demonstrative-Topic-Shift Construction" ;
+    lg:partOfLanguage lg:ita .
 
 cx:Demonstrative-Topic-ShiftConstruction_MD a rcxn:Metadata ;
     rcxn:annotator membr:Trombetta ;
@@ -32,7 +34,8 @@ cx:Demonstrative-Topic-ShiftConstruction_MD a rcxn:Metadata ;
 
 cx:ItalianConiunctioRelativa a rcxn:Construction ;
     rcxn:hasMetadata cx:ItalianConiunctioRelativa_MD ;
-    rcxn:hasTitle "Italian Coniunctio Relativa" .
+    rcxn:hasTitle "Coniunctio Relativa" ;
+    lg:partOfLanguage lg:ita .
 
 cx:ItalianConiunctioRelativa_MD a rcxn:Metadata ;
     rcxn:annotator membr:Trombetta ;
@@ -40,7 +43,8 @@ cx:ItalianConiunctioRelativa_MD a rcxn:Metadata ;
 
 cx:ItalianRelativeClause a rcxn:Construction ;
     rcxn:hasMetadata cx:ItalianRelativeClause_MD ;
-    rcxn:hasTitle "Italian Relative Clause" .
+    rcxn:hasTitle "Relative Clause" ;
+    lg:partOfLanguage lg:ita .
 
 cx:ItalianRelativeClause_MD a rcxn:Metadata ;
     rcxn:annotator membr:Trombetta ;
@@ -48,7 +52,8 @@ cx:ItalianRelativeClause_MD a rcxn:Metadata ;
 
 cx:ItalianSiPassivante a rcxn:Construction ;
     rcxn:hasMetadata cx:ItalianSiPassivante_MD ;
-    rcxn:hasTitle "Italian Si Passivante" .
+    rcxn:hasTitle "Si Passivante" ;
+    lg:partOfLanguage lg:ita .
 
 cx:ItalianSiPassivante_MD a rcxn:Metadata ;
     rcxn:annotator membr:Trombetta ;
@@ -56,21 +61,21 @@ cx:ItalianSiPassivante_MD a rcxn:Metadata ;
 
 cx:ItalianTemporalSubordinateClause a rcxn:Construction ;
     rcxn:hasMetadata cx:ItalianTemporalSubordinateClause_MD ;
-    rcxn:hasTitle "Italian Temporal Subordinate Clause" .
+    rcxn:hasTitle "Temporal Subordinate Clause" ;
+    lg:partOfLanguage lg:ita .
 
 cx:ItalianTemporalSubordinateClause_MD a rcxn:Metadata ;
     rcxn:annotator membr:Trombetta ;
-    rcxn:creationDate "2024-11-21"^^xsd:date ;
-    rcxn:hasTitle "Italian Temporal Subordinate Clause" .
+    rcxn:creationDate "2024-11-21"^^xsd:date .
 
 <http://example.org/cx/Latinlinkingcliché(i.e.,inCaesar'sandTacitus'works)> a rcxn:Construction ;
     rcxn:hasMetadata <http://example.org/cx/Latinlinkingcliché(i.e.,inCaesar'sandTacitus'works)_MD> ;
-    rcxn:hasTitle "Latin linking cliché (i.e., in Caesar's and Tacitus' works)" .
+    rcxn:hasTitle "linking cliché (i.e., in Caesar's and Tacitus' works)" ;
+    lg:partOfLanguage lg:lat .
 
 <http://example.org/cx/Latinlinkingcliché(i.e.,inCaesar'sandTacitus'works)_MD> a rcxn:Metadata ;
     rcxn:annotator membr:Trombetta ;
-    rcxn:creationDate "2024-11-21"^^xsd:date ;
-    rcxn:hasTitle "Latin linking cliché (i.e., in Caesar's and Tacitus' works)" .
+    rcxn:creationDate "2024-11-21"^^xsd:date .
 
 cx:Relative-Topic-ShiftConstruction_A a rcxn:SlotMandatory ;
     cx:WordOrder "Element 1 immediately before element 2" ;

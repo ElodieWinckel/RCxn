@@ -3,13 +3,14 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix membr: <http://example.org/users#> .
 @prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links#> .
+@prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
 @prefix olia: <http://purl.org/olia/olia.owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 cx:Transitiveobjectrelativeclause a rcxn:Construction ;
-    rcxn:hasTitle "Spoken Peninsular Spanish potentially ambiguous object relative clause" ;
+    rcxn:hasTitle "Potentially ambiguous object relative clause" ;
     rcxn:hasConstructionMeaning cx:Transitiveobjectrelativeclause_Meaning ;
     cx:hasExample cx:Transitiveobjectrelativeclause_Ex_A,
         cx:Transitiveobjectrelativeclause_Ex_B,
@@ -20,7 +21,7 @@ cx:Transitiveobjectrelativeclause a rcxn:Construction ;
     links:inheritsFrom cx:Spanishobjectrelativeclause,
         cx:Spanishrelativeclause,
         cx:Spanishtransitiveconstruction ;
-    cx:partOfLanguage "Spoken Peninsular Spanish" ;
+    lg:partOfLanguage lg:spaSpoPen ;
     RDFS:comment "2 graphs (PDF- accuracy and reaction time). Tables with model output - if relevant (CSV or docx)" .
 
 <http://journals.sagepub.com/doi/10.1080/17470218.2012.674951> dc:creator "López-Higes, Ramón",
@@ -51,15 +52,18 @@ cx:Transitiveobjectrelativeclause a rcxn:Construction ;
 
 cx:Spanishobjectrelativeclause a rcxn:Construction ;
     rcxn:hasMetadata cx:Spanishobjectrelativeclause_MD ;
-    rcxn:hasTitle "Spanish object relative clause" .
+    rcxn:hasTitle "Spanish object relative clause" ;
+    lg:partOfLanguage lg:spa.
 
 cx:Spanishobjectrelativeclause_MD a rcxn:Metadata ;
     rcxn:annotator membr:FernandezSantos ;
-    rcxn:creationDate "2024-11-25"^^xsd:date .
+    rcxn:creationDate "2024-11-25"^^xsd:date ;
+    lg:partOfLanguage lg:spa.
 
 cx:Spanishrelativeclause a rcxn:Construction ;
     rcxn:hasMetadata cx:Spanishrelativeclause_MD ;
-    rcxn:hasTitle "Spanish relative clause" .
+    rcxn:hasTitle "Spanish relative clause" ;
+    lg:partOfLanguage lg:spa.
 
 cx:Spanishrelativeclause_MD a rcxn:Metadata ;
     rcxn:annotator membr:FernandezSantos ;
@@ -67,7 +71,8 @@ cx:Spanishrelativeclause_MD a rcxn:Metadata ;
 
 cx:Spanishtransitiveconstruction a rcxn:Construction ;
     rcxn:hasMetadata cx:Spanishtransitiveconstruction_MD ;
-    rcxn:hasTitle "Spanish transitive construction" .
+    rcxn:hasTitle "Spanish transitive construction" ;
+    lg:partOfLanguage lg:spa.
 
 cx:Spanishtransitiveconstruction_MD a rcxn:Metadata ;
     rcxn:annotator membr:FernandezSantos ;
