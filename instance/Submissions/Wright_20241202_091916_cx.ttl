@@ -20,14 +20,14 @@ cx:Toughmovementconstruction_A a rcxn:SlotMandatory ;
     rcxn:hasSlotForm cx:Toughmovementconstruction_A_Form .
 
 cx:Toughmovementconstruction_A_Form a rcxn:SlotForm ;
-    rcxn:hasSyntacticForm "NP" .
+    rcxn:hasSyntacticForm cx:eng_NounPhrase .
 
 cx:Toughmovementconstruction_B a rcxn:SlotMandatory ;
     cx:WordOrder "Element 2 immediately precedes Element 3" ;
     rcxn:hasSlotForm cx:Toughmovementconstruction_B_Form .
 
 cx:Toughmovementconstruction_B_Form a rcxn:SlotForm ;
-    rcxn:hasSyntacticForm "VP" ;
+    rcxn:hasSyntacticForm cx:eng_VerbPhrase ;
     rcxn:hasStem "BE" .
 
 cx:Toughmovementconstruction_C a rcxn:SlotMandatory ;
@@ -36,7 +36,7 @@ cx:Toughmovementconstruction_C a rcxn:SlotMandatory ;
     cx:hasIndex cx:Toughmovementconstruction_C_Index .
 
 cx:Toughmovementconstruction_C_Form a rcxn:SlotForm ;
-    rcxn:hasSyntacticForm "AdjP" ;
+    rcxn:hasSyntacticForm cx:eng_AdjectivePhrase ;
     cx:comment "Adjective + to + V-inf" .
 
 cx:Toughmovementconstruction_C_Index a cx:Event ;

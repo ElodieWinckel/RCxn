@@ -25,7 +25,7 @@ cx:Idiomaticconstructions_A a rcxn:SlotMandatory ;
     rcxn:hasSemanticRole oliatop:ActorMacroRole .
 
 cx:Idiomaticconstructions_A_Form a rcxn:SlotForm ;
-    cx:hasSyntacticForm "Pronoun NP" .
+    cx:hasSyntacticForm cx:eng_Pronoun .
 
 cx:Idiomaticconstructions_A_Index a cx:Individual ;
     cx:hasAnimacy cx:animate .
@@ -36,7 +36,7 @@ cx:Idiomaticconstructions_B a rcxn:SlotMandatory ;
     cx:hasIndex cx:Idiomaticconstructions_B_Index .
 
 cx:Idiomaticconstructions_B_Form a rcxn:SlotForm ;
-    cx:hasSyntacticForm "VP" ;
+    cx:hasSyntacticForm cx:eng_VerbPhrase ;
     rcxn:hasStem "burn" .
 
 cx:Idiomaticconstructions_B_Index a cx:Event ;
@@ -51,7 +51,7 @@ cx:Idiomaticconstructions_C a rcxn:SlotMandatory ;
     rcxn:hasSemanticRole oliatop:PossessorRole .
 
 cx:Idiomaticconstructions_C_Form a rcxn:SlotForm ;
-    cx:hasSyntacticForm "Possessive pronoun NP" .
+    cx:hasSyntacticForm cx:eng_PossessivePronoun .
 
 cx:Idiomaticconstructions_C_Index a cx:Individual ;
     cx:hasAnimacy cx:animate .
@@ -63,7 +63,7 @@ cx:Idiomaticconstructions_D a rcxn:SlotMandatory ;
     rcxn:hasSemanticRole oliatop:ThemeRole .
 
 cx:Idiomaticconstructions_D_Form a rcxn:SlotForm ;
-    cx:hasSyntacticForm "NP" ;
+    cx:hasSyntacticForm cx:eng_NounPhrase ;
     cx:hasCaseFeature olia:AccusativeCase ;
     rcxn:hasStem "bridge" ;
     rcxn:hasSurfaceForm "bridges" .
@@ -92,11 +92,14 @@ cx:Idiomaticconstructions_slots a rdf:Seq ;
     rdf:_3 cx:Idiomaticconstructions_C ;
     rdf:_4 cx:Idiomaticconstructions_D .
 
-cx:NP RDFS:label "NP" .
+cx:eng_Pronoun a rcxn:Construction ;
+    rcxn:hasTitle "Pronoun" ;
+    lg:partOfLanguage lg:eng .
 
-cx:Possessivepronoun_NP RDFS:label "Possessive pronoun NP" .
+cx:eng_VerbPhrase a rcxn:Construction ;
+    rcxn:hasTitle "Verb Phrase" ;
+    lg:partOfLanguage lg:eng .
 
-cx:Pronoun_NP RDFS:label "Pronoun NP" .
-
-cx:VP RDFS:label "VP" .
-
+cx:eng_PossessivePronoun a rcxn:Construction ;
+    rcxn:hasTitle "Possessive Pronoun" ;
+    lg:partOfLanguage lg:eng .

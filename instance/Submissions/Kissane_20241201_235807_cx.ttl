@@ -20,7 +20,7 @@ cx:TheEnglishGIVE-OUTVerbParticleConstruction._A a rcxn:SlotOptional ;
     rcxn:hasOtherSemanticContribution "ÆFFECTOR" .
 
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._A_Form a rcxn:SlotForm ;
-    rcxn:hasSyntacticForm "NP" .
+    rcxn:hasSyntacticForm cx:eng_NounPhrase .
 
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._B a rcxn:SlotMandatory ;
     cx:WordOrder "Element 2 follows the element 1" ;
@@ -28,7 +28,7 @@ cx:TheEnglishGIVE-OUTVerbParticleConstruction._B a rcxn:SlotMandatory ;
 
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._B_Form a rcxn:SlotForm ;
     rcxn:hasStem "give" ;
-    rcxn:hasSyntacticForm "Verb" .
+    rcxn:hasSyntacticForm cx:eng_Verb .
 
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._C a rcxn:SlotMandatory ;
     cx:WordOrder "The element 3 follows the element 2 but not necessarily directly" ;
@@ -36,7 +36,7 @@ cx:TheEnglishGIVE-OUTVerbParticleConstruction._C a rcxn:SlotMandatory ;
 
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._C_Form a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "out" ;
-    rcxn:hasSyntacticForm "particle" .
+    rcxn:hasSyntacticForm cx:eng_Particle .
 
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._D a rcxn:SlotMandatory ;
     cx:hasOtherSemanticContribution "AFFECTED ACTION" .
@@ -57,3 +57,14 @@ cx:TheEnglishGIVE-OUTVerbParticleConstruction._slots a rdf:Seq ;
     rdf:_3 cx:TheEnglishGIVE-OUTVerbParticleConstruction._C ;
     rdf:_3 cx:TheEnglishGIVE-OUTVerbParticleConstruction._D .
 
+cx:eng_NounPhrase a rcxn:Construction ;
+    rcxn:hasTitle "Noun Phrase" ;
+    lg:partOfLanguage lg:eng.
+
+cx:eng_Verb a rcxn:Construction ;
+    rcxn:hasTitle "Verb" ;
+    lg:partOfLanguage lg:eng.
+
+cx:eng_Particle a rcxn:Construction ;
+    rcxn:hasTitle "Particle" ;
+    lg:partOfLanguage lg:eng.

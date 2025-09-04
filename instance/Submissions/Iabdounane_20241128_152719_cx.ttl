@@ -43,14 +43,14 @@ cx:ThisCloseToV-ing_C a rcxn:SlotMandatory ;
     RDFS:comment "colloprofile: be (0.07 PM) ; get (0.05 PM) ; have (0.015 PM)" .
 
 cx:ThisCloseToV-ing_C_Form a rcxn:SlotForm ;
-    rcxn:hasSyntacticForm "Root V" .
+    rcxn:hasSyntacticForm cx:eng_VerbRoot .
 
 cx:ThisCloseToV-ing_D a rcxn:SlotMandatory ;
     rcxn:hasSlotForm cx:ThisCloseToV-ing_D_Form .
 
 cx:ThisCloseToV-ing_D_Form a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "-ing" ;
-    rcxn:hasSyntacticForm "Suffix" .
+    rcxn:hasSyntacticForm cx:eng_Suffix .
 
 cx:ThisCloseToV-ing_Ex_A a cx:Example ;
     cx:hasText "It was this close to happening, right? This close to happening! " ;
@@ -69,3 +69,10 @@ cx:ThisCloseToV-ing_slots a rdf:Seq ;
     rdf:_3 cx:ThisCloseToV-ing_C ;
     rdf:_4 cx:ThisCloseToV-ing_D .
 
+cx:eng_VerbRoot a rcxn:Construction ;
+    rcxn:hasTitle "Verb Root" ;
+    lg:partOfLanguage lg:eng.
+
+cx:eng_Suffix a rcxn:Construction ;
+    rcxn:hasTitle "Suffix" ;
+    lg:partOfLanguage lg:eng.

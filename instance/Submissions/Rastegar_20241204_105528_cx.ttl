@@ -68,7 +68,7 @@ cx:Idiomaticconstruction_A a rcxn:SlotMandatory ;
 
 cx:Idiomaticconstruction_A_Form a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "aus" ;
-    rcxn:hasSyntacticForm "Preposition" .
+    rcxn:hasSyntacticForm cx:deu_Preposition .
 
 cx:Idiomaticconstruction_B a rcxn:SlotMandatory ;
     cx:WordOrder "follows preposition, precedes noun" ;
@@ -79,7 +79,7 @@ cx:Idiomaticconstruction_B a rcxn:SlotMandatory ;
 
 cx:Idiomaticconstruction_B_Form a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "dem" ;
-    rcxn:hasSyntacticForm "Definite article" ;
+    rcxn:hasSyntacticForm cx:deu_DefiniteArticle ;
     cx:hasCaseFeature olia:DativeCase .
 
 cx:Idiomaticconstruction_B_Index a cx:Individual ;
@@ -95,7 +95,7 @@ cx:Idiomaticconstruction_C a rcxn:SlotMandatory ;
 
 cx:Idiomaticconstruction_C_Form a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "Ärmel" ;
-    rcxn:hasSyntacticForm "Noun" ;
+    rcxn:hasSyntacticForm cx:deu_Noun ;
     cx:hasCaseFeature olia:DativeCase .
 
 cx:Idiomaticconstruction_C_Index a cx:Individual ;
@@ -112,7 +112,7 @@ cx:Idiomaticconstruction_D a rcxn:SlotMandatory ;
 
 cx:Idiomaticconstruction_D_Form a rcxn:SlotForm ;
     rcxn:hasStem "schütteln" ;
-    rcxn:hasSyntacticForm "Verb" .
+    rcxn:hasSyntacticForm cx:deu_Verb .
 
 cx:Idiomaticconstruction_D_Index a cx:Event ;
     cx:hasMode olia:IndicativeVerb ;
@@ -143,9 +143,6 @@ cx:Idiomaticconstruction_slots a rdf:Seq ;
     rdf:_3 cx:Idiomaticconstruction_C ;
     rdf:_4 cx:Idiomaticconstruction_D .
 
-cx:Noun RDFS:label "Noun" .
-
-cx:Preposition RDFS:label "Preposition" .
-
-cx:Verb RDFS:label "Verb" .
-
+cx:deu_DefiniteArticle a rcxn:Construction ;
+    rcxn:hasTitle "Definite Article" ;
+    lg:partOfLanguage lg:deu .

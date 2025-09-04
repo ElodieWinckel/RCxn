@@ -24,7 +24,7 @@
     rcxn:hasSyntacticFunction "head of auf/an-PP" .
 
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_A_Form> a rcxn:SlotForm ;
-    rcxn:hasSyntacticForm "NP" .
+    rcxn:hasSyntacticForm cx:deu_NounPhrase .
 
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_A_Index> a cx:Individual ;
     cx:hasAnimacy cx:inanimate .
@@ -43,7 +43,7 @@
     rcxn:hasSemanticRole oliatop:ThemeRole .
 
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_C_Form> a cx:SlotForm ;
-    rcxn:hasSyntacticForm "NP" .
+    rcxn:hasSyntacticForm cx:deu_NounPhrase .
 
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_MD> a rcxn:Metadata ;
     rcxn:annotator membr:Fokashchuk ;
@@ -58,5 +58,6 @@
     rdf:_2 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_B> ;
     rdf:_3 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_C> .
 
-cx:Noun RDFS:label "Noun" .
-
+cx:deu_NounPhrase  a rcxn:Construction ;
+    rcxn:hasTitle "Noun Phrase" ;
+    lg:partOfLanguage lg:deu.

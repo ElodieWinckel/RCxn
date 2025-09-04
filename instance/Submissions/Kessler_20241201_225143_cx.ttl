@@ -25,7 +25,7 @@ cx:Dooperationwithoperand1onoperand2construction_A a rcxn:SlotOptional ;
 
 cx:Dooperationwithoperand1onoperand2construction_A_Form a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "以" ;
-    rcxn:hasSyntacticForm "Particle" .
+    rcxn:hasSyntacticForm cx:zho_Particle .
 
 cx:Dooperationwithoperand1onoperand2construction_B a rcxn:SlotMandatory ;
     cx:WordOrder "Immediately before element 3" ;
@@ -35,7 +35,7 @@ cx:Dooperationwithoperand1onoperand2construction_B a rcxn:SlotMandatory ;
     RDFS:comment "Semantically, element 2 is not optional. However, if it is the result of the directly preceding operation, what would normally be expressed by \"之\", the slot can be empty, as it is implied by 以." .
 
 cx:Dooperationwithoperand1onoperand2construction_B_Form a rcxn:SlotForm ;
-    rcxn:hasSyntacticForm "NP" .
+    rcxn:hasSyntacticForm cx:zho_NounPhrase .
 
 cx:Dooperationwithoperand1onoperand2construction_C a rcxn:SlotMandatory ;
     cx:WordOrder "Immediately after element 2" ;
@@ -43,7 +43,7 @@ cx:Dooperationwithoperand1onoperand2construction_C a rcxn:SlotMandatory ;
     RDFS:comment "colloprofile: 加 (frequent), 減 (frequent), 乘 (frequent), 除 (frequent)" .
 
 cx:Dooperationwithoperand1onoperand2construction_C_Form a rcxn:SlotForm ;
-    rcxn:hasSyntacticForm "VP" .
+    rcxn:hasSyntacticForm cx:zho_VerbPhrase .
 
 cx:Dooperationwithoperand1onoperand2construction_D a rcxn:SlotMandatory ;
     cx:WordOrder "Immediately after element 3" ;
@@ -52,7 +52,7 @@ cx:Dooperationwithoperand1onoperand2construction_D a rcxn:SlotMandatory ;
     rcxn:hasSemanticProperty "In contrast to element 2, this element is changed as result of the operation" .
 
 cx:Dooperationwithoperand1onoperand2construction_D_Form a rcxn:SlotForm ;
-    rcxn:hasSyntacticForm "NP" .
+    rcxn:hasSyntacticForm cx:zho_NounPhrase .
 
 cx:Dooperationwithoperand1onoperand2construction_Ex_A a cx:Example ;
     cx:hasGlosses "with height multiply it " ;
@@ -82,3 +82,14 @@ cx:Dooperationwithoperand1onoperand2construction_slots a rdf:Seq ;
     rdf:_3 cx:Dooperationwithoperand1onoperand2construction_C ;
     rdf:_4 cx:Dooperationwithoperand1onoperand2construction_D .
 
+cx:zho_Particle a rcxn:Construction ;
+    rcxn:hasTitle "Particle" ;
+    lg:partOfLanguage lg:zho.
+
+cx:zho_NounPhrase a rcxn:Construction ;
+    rcxn:hasTitle "Noun Phrase" ;
+    lg:partOfLanguage lg:zho.
+
+cx:zho_VerbPhrase a rcxn:Construction ;
+    rcxn:hasTitle "Verb Phrase" ;
+    lg:partOfLanguage lg:zho.

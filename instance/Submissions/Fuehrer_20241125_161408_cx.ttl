@@ -50,7 +50,7 @@ cx:Transitivedurch-Präfixverbkonstruktion_A a rcxn:Slot ;
     rcxn:hasSemanticProperty "Figur" .
 
 cx:Transitivedurch-Präfixverbkonstruktion_A_Form a rcxn:SlotForm ;
-    rcxn:hasSyntacticForm "NP" .
+    rcxn:hasSyntacticForm cx:gmh_NounPhrase .
 
 cx:Transitivedurch-Präfixverbkonstruktion_A_Index a cx:Individual ;
     cx:hasAnimacy cx:animate .
@@ -63,7 +63,7 @@ cx:Transitivedurch-Präfixverbkonstruktion_B a rcxn:SlotMandatory ;
 
 cx:Transitivedurch-Präfixverbkonstruktion_B_Form a rcxn:SlotForm ;
     rcxn:hasStem "durh" ;
-    rcxn:hasSyntacticForm "Präfix" .
+    rcxn:hasSyntacticForm cx:gmh_Prefix .
 
 cx:Transitivedurch-Präfixverbkonstruktion_C a rcxn:SlotMandatory ;
     cx:WordOrder "3 nach 2" ;
@@ -82,7 +82,7 @@ cx:Transitivedurch-Präfixverbkonstruktion_C_Form a rcxn:SlotForm ;
     rcxn:hasStem "brëchen" ;
     rcxn:hasStem "rîten" ;
     rcxn:hasStem "dringen" ;
-    rcxn:hasSyntacticForm "Verb" .
+    rcxn:hasSyntacticForm cx:gmh_Verb .
 
 cx:Transitivedurch-Präfixverbkonstruktion_C_Index a cx:Event ;
     cx:hasVoice cx:active .
@@ -97,7 +97,7 @@ cx:Transitivedurch-Präfixverbkonstruktion_D a rcxn:SlotMandatory ;
     rcxn:hasSyntacticFunction "Object" .
 
 cx:Transitivedurch-Präfixverbkonstruktion_D_Form a rcxn:SlotForm ;
-    rcxn:hasSyntacticForm "NP" ;
+    rcxn:hasSyntacticForm cx:gmh_NounPhrase ;
     cx:hasCaseFeature olia:AccusativeCase .
 
 cx:Transitivedurch-Präfixverbkonstruktion_E a rcxn:SlotOptional ;
@@ -108,7 +108,7 @@ cx:Transitivedurch-Präfixverbkonstruktion_E a rcxn:SlotOptional ;
     rcxn:hasSemanticRole oliatop:TimeRole .
 
 cx:Transitivedurch-Präfixverbkonstruktion_E_Form a rcxn:SlotForm ;
-    rcxn:hasSyntacticForm "AdvP" .
+    rcxn:hasSyntacticForm cx:gmh_AdverbialPhrase .
 
 cx:Transitivedurch-Präfixverbkonstruktion_Ex_A a cx:Example ;
     cx:hasGlosses "NG_nom - Prä - Verb - NG_akk" ;
@@ -138,7 +138,7 @@ cx:Transitivedurch-Präfixverbkonstruktion_G a rcxn:SlotOptional ;
 
 cx:Transitivedurch-Präfixverbkonstruktion_G_Form a rcxn:SlotForm ;
     rcxn:hasStem "er" ;
-    rcxn:hasSyntacticForm "Pronomen" ;
+    rcxn:hasSyntacticForm cx:gmh_Pronoun ;
     cx:hasCaseFeature olia:DativeCase .
 
 cx:Transitivedurch-Präfixverbkonstruktion_G_Index a cx:Individual ;
@@ -184,3 +184,22 @@ cx:Transitivedurch-Verbkonstruktion_MD a rcxn:Metadata ;
     dc:title "Referenzkorpus Mittelhochdeutsch (1050-1350)" ;
     dc:type "dataset" .
 
+cx:gmh_NounPhrase a rcxn:Construction ;
+    rcxn:hasTitle "Noun Phrase" ;
+    lg:partOfLanguage lg:gmh.
+
+cx:gmh_Prefix a rcxn:Construction ;
+    rcxn:hasTitle "Prefix" ;
+    lg:partOfLanguage lg:gmh.
+
+cx:gmh_Verb a rcxn:Construction ;
+    rcxn:hasTitle "Verb" ;
+    lg:partOfLanguage lg:gmh.
+
+cx:gmh_AdverbialPhrase a rcxn:Construction ;
+    rcxn:hasTitle "Adverbial Phrase" ;
+    lg:partOfLanguage lg:gmh.
+
+cx:gmh_Pronoun a rcxn:Construction ;
+    rcxn:hasTitle "Pronoun" ;
+    lg:partOfLanguage lg:gmh.

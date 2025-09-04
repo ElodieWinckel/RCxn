@@ -84,7 +84,7 @@ cx:Transitiveobjectrelativeclause_A a rcxn:SlotMandatory ;
     cx:hasIndex cx:Transitiveobjectrelativeclause_A_Index .
 
 cx:Transitiveobjectrelativeclause_A_Form a rcxn:SlotForm ;
-    rcxn:hasSyntacticForm "NP" .
+    rcxn:hasSyntacticForm cx:spa_NounPhrase .
 
 cx:Transitiveobjectrelativeclause_A_Index a cx:Individual ;
     cx:hasAnimacy cx:animate ;
@@ -99,7 +99,7 @@ cx:Transitiveobjectrelativeclause_B a rcxn:SlotOptional ;
 
 cx:Transitiveobjectrelativeclause_B_Form a rcxn:SlotForm ;
     rcxn:hasStem "a + article" ;
-    rcxn:hasSyntacticForm "PP" .
+    rcxn:hasSyntacticForm cx:spa_PrepositionalPhrase .
 
 cx:Transitiveobjectrelativeclause_C a rcxn:SlotMandatory ;
     cx:WordOrder "immediately after Element 1 (if Element 2 not present), or immediately after Element 2 if present" ;
@@ -108,7 +108,7 @@ cx:Transitiveobjectrelativeclause_C a rcxn:SlotMandatory ;
 
 cx:Transitiveobjectrelativeclause_C_Form a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "que" ;
-    rcxn:hasSyntacticForm "relativiser" .
+    rcxn:hasSyntacticForm cx:spa_Relativizer .
 
 cx:Transitiveobjectrelativeclause_D a rcxn:SlotMandatory ;
     cx:WordOrder "Immediately after Element 3" ;
@@ -117,7 +117,7 @@ cx:Transitiveobjectrelativeclause_D a rcxn:SlotMandatory ;
     cx:hasIndex cx:Transitiveobjectrelativeclause_D_Index .
 
 cx:Transitiveobjectrelativeclause_D_Form a rcxn:SlotForm ;
-    rcxn:hasSyntacticForm "NP" .
+    rcxn:hasSyntacticForm cx:spa_NounPhrase .
 
 cx:Transitiveobjectrelativeclause_D_Index a cx:Individual ;
     cx:hasAnimacy cx:animate ;
@@ -131,7 +131,7 @@ cx:Transitiveobjectrelativeclause_E a rcxn:SlotMandatory ;
     RDFS:comment "1st conjugation verb" .
 
 cx:Transitiveobjectrelativeclause_E_Form a rcxn:SlotForm ;
-    rcxn:hasSyntacticForm "Verb" .
+    rcxn:hasSyntacticForm cx:spa_Verb .
 
 cx:Transitiveobjectrelativeclause_E_Index a cx:Event ;
     cx:hasTenseFeature olia:Present ;
@@ -197,4 +197,18 @@ cx:Transitiveobjectrelativeclause_slots a rdf:Seq ;
     dc:title "Comprehension of object relatives in Spanish: the role of frequency and transparency in acquisition and adult grammar" ;
     dc:type "journalArticle" .
 
+cx:spa_NounPhrase a rcxn:Construction ;
+    rcxn:hasTitle "Noun Phrase" ;
+    lg:partOfLanguage lg:spa.
 
+cx:spa_PrepositionalPhrase a rcxn:Construction ;
+    rcxn:hasTitle "Prepositional Phrase" ;
+    lg:partOfLanguage lg:spa.
+
+cx:spa_Relativizer a rcxn:Construction ;
+    rcxn:hasTitle "Relativizer" ;
+    lg:partOfLanguage lg:spa.
+
+cx:spa_Verb a rcxn:Construction ;
+    rcxn:hasTitle "Verb" ;
+    lg:partOfLanguage lg:spa.

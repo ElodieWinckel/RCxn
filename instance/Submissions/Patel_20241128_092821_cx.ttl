@@ -27,7 +27,7 @@
     rcxn:hasSemanticRole oliatop:UndergoerMacroRole .
 
 <http://example.org/cx/come+[noise/mannerofmovement]V-ing_A_Form> a rcxn:SlotForm ;
-    rcxn:hasSyntacticForm "NP" .
+    rcxn:hasSyntacticForm cx:eng_NounPhrase .
 
 <http://example.org/cx/come+[noise/mannerofmovement]V-ing_B> a rcxn:SlotMandatory ;
     cx:WordOrder "Element 2 immediately before element 3" ;
@@ -36,7 +36,7 @@
 
 <http://example.org/cx/come+[noise/mannerofmovement]V-ing_B_Form> a rcxn:SlotForm ;
     rcxn:hasStem "come" ;
-    rcxn:hasSyntacticForm "Verb" .
+    rcxn:hasSyntacticForm cx:eng_Verb .
 
 <http://example.org/cx/come+[noise/mannerofmovement]V-ing_C> a rcxn:SlotMandatory ;
     rcxn:hasSlotForm <http://example.org/cx/come+[noise/mannerofmovement]V-ing_C_Form> ;
@@ -44,13 +44,13 @@
         "present participle" .
 
 <http://example.org/cx/come+[noise/mannerofmovement]V-ing_C_Form> a rcxn:SlotForm ;
-    rcxn:hasSyntacticForm "Verb+-ing" .
+    rcxn:hasSyntacticForm cx:eng_VerbING .
 
 <http://example.org/cx/come+[noise/mannerofmovement]V-ing_D> a rcxn:SlotOptional ;
     rcxn:hasSemanticRole oliatop:GoalRole .
 
 <http://example.org/cx/come+[noise/mannerofmovement]V-ing_D_Form> a rcxn:SlotForm ;
-    rcxn:hasSyntacticForm "PP" , "Particle" .
+    rcxn:hasSyntacticForm cx:eng_PrepositionalPhrase , cx:eng_Particle .
 
 <http://example.org/cx/come+[noise/mannerofmovement]V-ing_Ex_A> a cx:Example ;
     cx:hasText "The back door burst open and [six-year-old Sally] [came] [running] excitedly [into the room] ." .
@@ -89,3 +89,10 @@
     dc:title "Implementing quantitative data in a qualitative contrastive approach: the case of COME+V-ING" ;
     dc:type "journalArticle" .
 
+cx:eng_VerbING a rcxn:Construction ;
+    rcxn:hasTitle "Verb + -ing" ;
+    lg:partOfLanguage lg:eng .
+
+cx:eng_PrepositionalPhrase a rcxn:Construction ;
+    rcxn:hasTitle "Prepositional Phrase" ;
+    lg:partOfLanguage lg:eng .

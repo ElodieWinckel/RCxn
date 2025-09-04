@@ -18,20 +18,20 @@ cx:EvaluativeAttributionConstruction_A a rcxn:SlotOptional ;
     rcxn:hasOtherSemanticContribution "Attributor" .
 
 cx:EvaluativeAttributionConstruction_A_Form a rcxn:SlotForm ;
-    rcxn:hasSyntacticForm "NP" .
+    rcxn:hasSyntacticForm cx:eng_NounPhrase .
 
 cx:EvaluativeAttributionConstruction_B a rcxn:SlotMandatory ;
     rcxn:hasSlotForm cx:EvaluativeAttributionConstruction_B_Form .
 
 cx:EvaluativeAttributionConstruction_B_Form a rcxn:SlotForm ;
-    rcxn:hasSyntacticForm "VP" .
+    rcxn:hasSyntacticForm cx:eng_VerbPhrase .
 
 cx:EvaluativeAttributionConstruction_C a rcxn:SlotMandatory ;
     rcxn:hasSlotForm cx:EvaluativeAttributionConstruction_C_Form ;
     rcxn:hasOtherSemanticContribution "Attributee" .
 
 cx:EvaluativeAttributionConstruction_C_Form a rcxn:SlotForm ;
-    rcxn:hasSyntacticForm "NP", "PP" .
+    rcxn:hasSyntacticForm cx:eng_NounPhrase, cx:eng_PrepositionalPhrase .
 
 cx:EvaluativeAttributionConstruction_D a rcxn:SlotOptional ;
     rcxn:hasSlotForm cx:EvaluativeAttributionConstruction_D_Form .
@@ -44,7 +44,7 @@ cx:EvaluativeAttributionConstruction_E a rcxn:SlotMandatory ;
     rcxn:hasOtherSemanticContribution "Attribute" .
 
 cx:EvaluativeAttributionConstruction_E_Form a rcxn:SlotForm ;
-    rcxn:hasSyntacticForm "NP", "AdjP", "PP", "VP", "clause" .
+    rcxn:hasSyntacticForm cx:eng_NounPhrase, cx:eng_AdjectivePhrase, cx:eng_PrepositionalPhrase, cx:eng_VerbPhrase, cx:eng_clause .
 
 cx:EvaluativeAttributionConstruction_MD a rcxn:Metadata ;
     rcxn:annotator membr:Stampfer ;
@@ -60,5 +60,10 @@ cx:EvaluativeAttributionConstruction_slots a rdf:Seq ;
     rdf:_4 cx:EvaluativeAttributionConstruction_D ;
     rdf:_5 cx:EvaluativeAttributionConstruction_E .
 
-cx:VP RDFS:label "VP" .
+cx:eng_AdjectivePhrase a rcxn:Construction ;
+    rcxn:hasTitle "Adjective Phrase" ;
+    lg:partOfLanguage lg:eng .
 
+cx:eng_clause a rcxn:Construction ;
+    rcxn:hasTitle "Clause" ;
+    lg:partOfLanguage lg:eng .

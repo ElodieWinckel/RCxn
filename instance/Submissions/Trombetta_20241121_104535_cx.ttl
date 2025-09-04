@@ -85,7 +85,7 @@ cx:Relative-Topic-ShiftConstruction_A a rcxn:SlotMandatory ;
 
 cx:Relative-Topic-ShiftConstruction_A_Form a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "Il quale [N]" ;
-    rcxn:hasSyntacticForm "NP" .
+    rcxn:hasSyntacticForm cx:ita_NounPhrase .
 
 cx:Relative-Topic-ShiftConstruction_B a rcxn:SlotMandatory ;
     rcxn:hasSlotForm cx:Relative-Topic-ShiftConstruction_B_Form ;
@@ -100,7 +100,7 @@ cx:Relative-Topic-ShiftConstruction_C a rcxn:SlotMandatory ;
     RDFS:comment "The verb is often, though not exclusively, in the present tense. It frequently, but not exclusively, features a \"si passivante\" construction (formed by the particle 'si' combined with a transitive verb to convey a passive meaning). Additionally, the VP may have a more complex internal structure, incorporating various other elements. The verb appearing in the VP often anaphorically references an action or process already mentioned in the preceding co-text. This can occur either through direct repetition of the same verb or through synonyms" .
 
 cx:Relative-Topic-ShiftConstruction_C_Form a rcxn:SlotForm ;
-    rcxn:hasSyntacticForm "VP" .
+    rcxn:hasSyntacticForm cx:ita_VerbPhrase .
 
 cx:Relative-Topic-ShiftConstruction_Ex_A a cx:Example ;
     cx:hasText "Ma era al tutto diversa la deliberazione del senato viniziano. (Discorso indiretto del portavoce veneziano). [Le quali cose mentre che con aperta disunione si trattano tra i collegati], nuovo accidente che sopravenne partorì effetti molto diversi da' pensieri degli uomini;" ;
@@ -147,3 +147,11 @@ cx:Relative-Topic-ShiftConstruction_slots a rdf:Seq ;
     dc:title "A text structure indicator and two topological methods: New ways for studying Latin historic narratives" ;
     dc:type "journalArticle" .
 
+cx:ita_NounPhrase a rcxn:Construction ;
+    rcxn:hasTitle "Noun Phrase" ;
+    lg:partOfLanguage lg:ita .
+
+
+cx:ita_VerbPhrase a rcxn:Construction ;
+    rcxn:hasTitle "Verb Phrase" ;
+    lg:partOfLanguage lg:ita .

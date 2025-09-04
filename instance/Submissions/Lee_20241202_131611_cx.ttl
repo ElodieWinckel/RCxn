@@ -38,7 +38,7 @@ cx:Generalprepositionalconstructions_MD a rcxn:Metadata ;
     rcxn:hasSemanticProperty "The NP predominantly denotes abstract concepts, particularly those that are 1) subject to mental representation (Ziel, Bild, Beispiel), 2) abstract existential element or phenomenon (Welt, Tod, Tatsache), 3) collective entities." .
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_A_Form> a rcxn:SlotForm ;
-    rcxn:hasSyntacticForm "NP" .
+    rcxn:hasSyntacticForm cx:deu_NounPhrase .
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_B> a rcxn:SlotOptional ;
     cx:WordOrder "The adjectives mostly directly precedes the prepositional phrase \"vor Augen\"." ;
@@ -48,7 +48,7 @@ cx:Generalprepositionalconstructions_MD a rcxn:Metadata ;
     rcxn:hasSemanticProperty "The adjectives share the semantic property of describing vividness or clarity." .
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_B_Form> a rcxn:SlotForm ;
-    rcxn:hasSyntacticForm "Adjective" .
+    rcxn:hasSyntacticForm cx:deu_Adjective .
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_C> a rcxn:SlotOptional ;
     cx:WordOrder "The adverbs typically appear directly before the prepositional phrase \"vor Augen\"." ;
@@ -57,7 +57,7 @@ cx:Generalprepositionalconstructions_MD a rcxn:Metadata ;
     rcxn:hasSemanticProperty "The adverbs share a semantic property of expressing recurrence or regularity." .
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_C_Form> a rcxn:SlotForm ;
-    rcxn:hasSyntacticForm "Adverb" .
+    rcxn:hasSyntacticForm cx:deu_Adverb .
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_D> a rcxn:SlotMandatory ;
     cx:WordOrder "The preposition \"vor\" appears in direct syntactic proximity to the noun \"Augen\", forming a fixed prepositional phrase. " ;
@@ -70,7 +70,7 @@ cx:Generalprepositionalconstructions_MD a rcxn:Metadata ;
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_D_Form> a rcxn:SlotForm ;
     rcxn:hasStem "vor" ;
-    rcxn:hasSyntacticForm "Preposition" .
+    rcxn:hasSyntacticForm cx:deu_Preposition .
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_E> a rcxn:SlotMandatory ;
     cx:WordOrder "The noun always directly follows the preposition \"vor\"." ;
@@ -83,7 +83,7 @@ cx:Generalprepositionalconstructions_MD a rcxn:Metadata ;
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_E_Form> a rcxn:SlotForm ;
     rcxn:hasStem "Auge" ;
-    rcxn:hasSyntacticForm "Noun" .
+    rcxn:hasSyntacticForm cx:deu_Noun .
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_F> a rcxn:SlotOptional ;
     cx:WordOrder "The position of the verb within the construction is relatively flexible." ;
@@ -94,7 +94,7 @@ cx:Generalprepositionalconstructions_MD a rcxn:Metadata ;
     rcxn:hasSemanticProperty "Though these verbs are highly polysemous, they either relate to the positioning of something in space, either actively (führen, stellen) or passively (stehen), or imply control or possession (halten, haben, führen)" .
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_F_Form> a rcxn:SlotForm ;
-    rcxn:hasSyntacticForm "Verb" .
+    rcxn:hasSyntacticForm cx:deu_Verb .
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_MD> a rcxn:Metadata ;
     rcxn:annotator membr:Lee ;
@@ -120,5 +120,14 @@ cx:Generalprepositionalconstructions_MD a rcxn:Metadata ;
     rcxn:annotator membr:Lee ;
     rcxn:creationDate "2024-12-02"^^xsd:date .
 
+cx:deu_Adverb a rcxn:Construction ;
+    rcxn:hasTitle "Adverb" ;
+    lg:partOfLanguage lg:deu .
 
+cx:deu_Preposition a rcxn:Construction ;
+    rcxn:hasTitle "Preposition" ;
+    lg:partOfLanguage lg:deu .
 
+cx:deu_Verb a rcxn:Construction ;
+    rcxn:hasTitle "Verb" ;
+    lg:partOfLanguage lg:deu .

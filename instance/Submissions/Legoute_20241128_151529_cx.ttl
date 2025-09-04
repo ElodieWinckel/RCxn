@@ -26,7 +26,7 @@ cx:POU-beneficiaryconstruction_A a rcxn:SlotMandatory ;
     rcxn:hasSemanticRole oliatop:ThemeRole .
 
 cx:POU-beneficiaryconstruction_A_Form a rcxn:SlotForm ;
-    rcxn:hasSyntacticForm "Phrase" .
+    rcxn:hasSyntacticForm cx:hat_Phrase .
 
 cx:POU-beneficiaryconstruction_B a rcxn:SlotMandatory ;
     cx:WordOrder "element POU is always before the NP" ;
@@ -35,14 +35,14 @@ cx:POU-beneficiaryconstruction_B a rcxn:SlotMandatory ;
 
 cx:POU-beneficiaryconstruction_B_Form a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "POU" ;
-    rcxn:hasSyntacticForm "Invariable syntactic morpheme" .
+    rcxn:hasSyntacticForm cx:hat_InvariableSyntacticMorpheme .
 
 cx:POU-beneficiaryconstruction_C a rcxn:SlotMandatory ;
     rcxn:hasSlotForm cx:POU-beneficiaryconstruction_C_Form ;
     cx:hasOtherSemanticContribution "Beneficiary" .
 
 cx:POU-beneficiaryconstruction_C_Form a rcxn:SlotForm ;
-    rcxn:hasSyntacticForm "NP" .
+    rcxn:hasSyntacticForm cx:hat_NounPhrase .
 
 cx:POU-beneficiaryconstruction_Ex_A a cx:Example ;
     cx:hasGlosses "3SG   ANT  make/do   mass  pou   2PL" ;
@@ -71,5 +71,14 @@ cx:POU-purposeconstruction_MD a rcxn:Metadata ;
     rcxn:annotator membr:Legoute ;
     rcxn:creationDate "2024-11-28"^^xsd:date .
 
+cx:hat_Phrase a rcxn:Construction ;
+    rcxn:hasTitle "Phrase" ;
+    lg:partOfLanguage lg:hat.
 
+cx:hat_InvariableSyntacticMorpheme a rcxn:Construction ;
+    rcxn:hasTitle "Invariable Syntactic Morpheme" ;
+    lg:partOfLanguage lg:hat.
 
+cx:hat_NounPhrase a rcxn:Construction ;
+    rcxn:hasTitle "Noun Phrase" ;
+    lg:partOfLanguage lg:hat.
