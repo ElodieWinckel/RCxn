@@ -22,42 +22,52 @@
     const elements = {{ elements | tojson }};
 
     function createCrossTable(data) {
-        // Get unique subjects and properties
         const subjects = [...new Set(data.map(item => item.subject))];
         const properties = [...new Set(data.map(item => item.property))];
 
-        // Create a 2D map to store the values as arrays
+        // 2D map to store arrays of {object, href}
         const tableData = {};
         properties.forEach(property => {
             tableData[property] = {};
             subjects.forEach(subject => {
-                tableData[property][subject] = []; // Initialize as empty array
+                tableData[property][subject] = [];
             });
         });
 
-        // Populate the map with objects
-        data.forEach(({ subject, property, object }) => {
-            tableData[property][subject].push(object); // Add all values to the array
+        // Populate with object + href
+        data.forEach(({ subject, property, object, href }) => {
+            tableData[property][subject].push({ object, href });
         });
 
-        // Define the desired order of properties
-        const desiredOrder = ['hasSurfaceForm', 'hasRoot', 'hasStem', 'hasTransliteration', 'hasTranslation', 'hasSyntacticForm', 'Optionality', 'WordOrder', 'hasSyntacticFunction', 'hasSemanticRole', 'hasOtherSemanticContribution', 'hasSemanticProperty' , 'hasAnimacy', 'hasGender', 'hasNumberFeature', 'hasPerson', 'hasCaseFeature', 'hasTenseFeature', 'hasMode', 'hasVoice', 'type', 'comment'];
+        const desiredOrder = [
+            'hasSurfaceForm', 'hasRoot', 'hasStem', 'hasTransliteration',
+            'hasTranslation', 'hasSyntacticForm', 'Optionality', 'WordOrder',
+            'hasSyntacticFunction', 'hasSemanticRole', 'hasOtherSemanticContribution',
+            'hasSemanticProperty', 'hasAnimacy', 'hasGender', 'hasNumberFeature',
+            'hasPerson', 'hasCaseFeature', 'hasTenseFeature', 'hasMode',
+            'hasVoice', 'type', 'comment'
+        ];
 
-        // Generate HTML table
         const table = document.createElement('table');
         const tbody = document.createElement('tbody');
 
-        // Data rows, based on the desired order
         desiredOrder.forEach(property => {
-            if (tableData[property]) { // Only create rows for properties present in the data
+            if (tableData[property]) {
                 const row = document.createElement('tr');
+
                 const cells = [
                     `<td>${property}</td>`,
                     ...subjects.map(subject => {
                         const values = tableData[property][subject];
-                        return `<td>${values.join('<br>')}</td>`;
+                        // Render each object as a clickable link
+                        return `<td>${values.map(v =>
+                            v.href
+                              ? `<a href="${v.href}" target="_blank">${v.object}</a>`
+                              : v.object
+                        ).join('<br>')}</td>`;
                     })
                 ];
+
                 row.innerHTML = cells.join('');
                 tbody.appendChild(row);
             }

@@ -43,9 +43,6 @@ g.bind("lg", lg)
 ont = Graph()
 for xlm_file in glob.glob("ontologies/*.rdf"):
     ont.parse(xlm_file, format="xml")
-# for debug purposes
-#for s, l in list(ont.subject_objects(RDFS.label)):
-#    print(s, "→", l)
 
 def get_metalanguage(lang_uri, graph, is_variety_of):
     """
@@ -147,6 +144,16 @@ def construction_detail(uri):
     # Rebuilt the full URI for metadata
     metadata_uri = URIRef("http://example.org/cx/" + uri + "_MD")
 
+    # List of all properties whose object should be a hyperlink
+    links_properties = {"inheritsFrom", "inheritedBy",
+                        "sameFormSameFunction", "sameFormSimilarFunction", "sameFormDifferentFunction",
+                        "similarFormSameFunction", "similarFormSimilarFunction", "similarFormDifferentFunction",
+                        "differentFormSameFunction", "differentFormSimilarFunction", "differentFormDifferentFunction",
+                        "CL_sameFormSameFunction", "CL_sameFormSimilarFunction", "CL_sameFormDifferentFunction",
+                        "CL_similarFormSameFunction", "CL_similarFormSimilarFunction", "CL_similarFormDifferentFunction",
+                        "CL_differentFormSameFunction", "CL_differentFormSimilarFunction", "CL_differentFormDifferentFunction"
+                        }
+
     # Collect all triples where entry_uri is the subject
     triples = []
     for predicate, obj in g.predicate_objects(subject=entry_uri):
@@ -170,14 +177,6 @@ def construction_detail(uri):
     triples[:] = [item for item in triples if item['property'] != "hasTitle"]
 
     # Separate into General and Links
-    links_properties = {"inheritsFrom", "inheritedBy",
-                        "sameFormSameFunction", "sameFormSimilarFunction", "sameFormDifferentFunction",
-                        "similarFormSameFunction", "similarFormSimilarFunction", "similarFormDifferentFunction",
-                        "differentFormSameFunction", "differentFormSimilarFunction", "differentFormDifferentFunction",
-                        "CL_sameFormSameFunction", "CL_sameFormSimilarFunction", "CL_sameFormDifferentFunction",
-                        "CL_similarFormSameFunction", "CL_similarFormSimilarFunction", "CL_similarFormDifferentFunction",
-                        "CL_differentFormSameFunction", "CL_differentFormSimilarFunction", "CL_differentFormDifferentFunction"
-                        }
     links_no_titles = [item for item in triples if item['property'] in links_properties]
     general = [item for item in triples if item['property'] not in links_properties]
 
@@ -219,11 +218,20 @@ def construction_detail(uri):
         # Step 3: Collect triples for form of each sequence member
         subject_slotform = URIRef(str(slot_uri) + "_Form")
         for predicate, obj in g.predicate_objects(subject=subject_slotform):
-            elements.append({
-                'subject': re.sub(prefixes, "", str(slot_uri)),
-                'property': re.sub(prefixes, "", str(predicate)),
-                'object': re.sub(prefixes, "", str(obj)),
-            })
+            if str(predicate) == "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#hasSyntacticForm":  # special case for syntactic form that should be displayed as a link
+                title = g.value(obj, rcxn.hasTitle)
+                elements.append({
+                    'subject': re.sub(prefixes, "", str(slot_uri)),
+                    'property': re.sub(prefixes, "", str(predicate)),
+                    'object': re.sub(prefixes, "", str(title)),
+                    'href': re.sub(prefixes, "", str(obj)),
+                })
+            else:
+                elements.append({
+                    'subject': re.sub(prefixes, "", str(slot_uri)),
+                    'property': re.sub(prefixes, "", str(predicate)),
+                    'object': re.sub(prefixes, "", str(obj)),
+                })
 
         # Step 4: Collect triples for index of each sequence member
         subject_index = URIRef(str(slot_uri) + "_Index")
@@ -291,10 +299,7 @@ def construction_detail(uri):
     # Sorting the list so that 'Research Question' comes before 'Findings'
     research.sort(key=lambda x: x['property'], reverse=True)
 
-    # For debug
-    #print(research)
-
-    # Fetch the title for display purposes
+    # Fetch the title to display
     title = g.value(entry_uri, rcxn.hasTitle)
 
     return render_template("app_entries/construction.html",
