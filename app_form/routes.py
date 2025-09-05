@@ -454,7 +454,12 @@ def form_submit():
         add_modus = request.form[f'add_modus_{i}']
         other_voice = request.form[f'other_voice_{i}']
         voice = request.form[f'voice_{i}']
-        morphosyntactic_form = request.form[f'morphosyntactic_form_{i}']
+        morphosyntactic_form_json = request.form.get(f"morphosyntactic_form_{i}", "[]")
+        try:
+            morphosyntactic_form = json.loads(morphosyntactic_form_json)
+        except json.JSONDecodeError:
+            morphosyntactic_form = []
+        print(morphosyntactic_form)
         word_order = request.form[f'WordOrder_{i}']
         surface = request.form[f'surface_form_{i}']
         transliteration = request.form[f'transliteration_{i}']
@@ -564,7 +569,7 @@ def form_submit():
         # URI for Slot Form
         slot_form_uri = URIRef(cx[f"{construction_name_cleaned}_{chr(65 + y)}_Form"])
         # Triple to relate slot to it meaning (if needed)
-        if morphosyntactic_form.strip() or root.strip() or stem.strip() or surface.strip():
+        if morphosyntactic_form or root.strip() or stem.strip() or surface.strip():
             g.add((element_uri, rcxn.hasSlotForm, slot_form_uri))
             g.add((slot_form_uri, RDF.type, rcxn.SlotForm))
 
@@ -579,8 +584,29 @@ def form_submit():
             g.add((element_uri, cx.hasTranslation, Literal(translation)))
         if transliteration.strip():
             g.add((element_uri, cx.hasTransliteration, Literal(transliteration)))
-        if morphosyntactic_form.strip():
-            g.add((slot_form_uri, rcxn.hasSyntacticForm, Literal(morphosyntactic_form)))
+        if morphosyntactic_form:
+            for morphosyn in morphosyntactic_form:
+                # Users can select a construction already in the constructicon
+                # When this happens, the uri has to be identified
+                if morphosyn in {entry['title'] for entry in list_cx}:
+                    cleaned_morphosyn_construction = next(
+                        (entry['uri'] for entry in list_cx if entry['title'] == morphosyn),
+                        None  # Default if not found
+                    )
+                else:  # Users can also enter the name of a construction that has not been implemented yet
+                    # When this happens, create a new construction entry, with title, annotator and creation date
+                    cleaned_morphosyn_construction = morphosyn.replace(" ", "")
+                    metadata_morphosyn_construction = f"{cleaned_morphosyn_construction}_MD"
+                    g.add((cx[cleaned_morphosyn_construction], RDF.type, rcxn.Construction))
+                    g.add((cx[cleaned_morphosyn_construction], rcxn.hasMetadata, cx[metadata_morphosyn_construction]))
+                    g.add((cx[metadata_morphosyn_construction], RDF.type, rcxn.Metadata))
+                    g.add((cx[metadata_morphosyn_construction], cx.annotator, membr[user_name]))
+                    g.add((cx[metadata_morphosyn_construction], rcxn.creationDate,
+                           Literal(datetime.now().strftime('%Y-%m-%d'), datatype=XSD.date)))
+                    g.add((cx[cleaned_morphosyn_construction], rcxn.hasTitle, Literal(morphosyn)))
+                    print("New construction needed!")
+                # In any case, write a triplet defining this construction the object of hasSyntacticForm
+                g.add((slot_form_uri, rcxn.hasSyntacticForm, cx[cleaned_morphosyn_construction]))
 
         # If defined, attribute its syntactic function and case to the element/slot.
         if syntactic_function.strip():

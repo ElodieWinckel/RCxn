@@ -1,0 +1,47 @@
+@prefix cx: <http://example.org/cx/> .
+@prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
+@prefix membr: <http://example.org/users#> .
+@prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+membr:Project_FernandezSantos_241125_F250218 rsrch:basedOn cx:spa_Argumentstructureconstruction .
+
+cx:LatinRCconstruction a rcxn:Construction ;
+    rcxn:hasMetadata cx:LatinRCconstruction_MD ;
+    rcxn:hasTitle "Latin RC construction" .
+
+cx:LatinRCconstruction_MD a rcxn:Metadata ;
+    cx:annotator membr:FernandezSantos ;
+    rcxn:creationDate "2025-09-05"^^xsd:date .
+
+cx:spa_Argumentstructureconstruction a rcxn:Construction ;
+    lg:partOfLanguage lg:spa ;
+    rcxn:hasConstructionMeaning cx:spa_Argumentstructureconstruction_Meaning ;
+    rcxn:hasMetadata cx:spa_Argumentstructureconstruction_MD ;
+    rcxn:hasSlots cx:spa_Argumentstructureconstruction_slots ;
+    rcxn:hasTitle "Argument structure construction" .
+
+cx:spa_Argumentstructureconstruction_A a rcxn:SlotMandatory ;
+    rcxn:hasSlotForm cx:spa_Argumentstructureconstruction_A_Form .
+
+cx:spa_Argumentstructureconstruction_A_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions> .
+
+cx:spa_Argumentstructureconstruction_B a rcxn:SlotMandatory ;
+    rcxn:hasSlotForm cx:spa_Argumentstructureconstruction_B_Form .
+
+cx:spa_Argumentstructureconstruction_B_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:LatinRCconstruction .
+
+cx:spa_Argumentstructureconstruction_MD a rcxn:Metadata ;
+    cx:annotator membr:FernandezSantos ;
+    rcxn:creationDate "2025-09-05"^^xsd:date .
+
+cx:spa_Argumentstructureconstruction_Meaning a rcxn:ConstructionMeaning .
+
+cx:spa_Argumentstructureconstruction_slots a rdf:Seq ;
+    rdf:_1 cx:spa_Argumentstructureconstruction_A ;
+    rdf:_2 cx:spa_Argumentstructureconstruction_B .
+

@@ -473,69 +473,72 @@
           container.appendChild(translationInput);
           container.appendChild(document.createElement('br'));
 
-          // Create fields for morpho-syntactic form
-          const morphoLabel = document.createElement('label');
-          morphoLabel.textContent = `(Morpho-)syntactic form (optional):`;
-          // Create an info icon
-          const morphInfoIcon = document.createElement('span');
-          morphInfoIcon.className = 'info-icon';
-          morphInfoIcon.textContent = 'ℹ️'; // Unicode info symbol
-          // Create the tooltip text container with HTML content
-          const morphoTooltipText = document.createElement('span');
-          morphoTooltipText.className = 'tooltiptext';
-          morphoTooltipText.innerHTML = `
-            Possible morpho-syntactic forms (non-exhaustive list):
-            <ul>
-              <li> Morpheme
-              <ul>
-              <li> Prefix
-              <li> Suffix
-              <li> Root
-              <li> Clitic
-              </ul>
-              <li> Part-of-speech
-              <ul>
-                <li> Noun
-                <li> Verb
-                <li> Adjective
-                <li> Adverb
-                <li> Preposition
-                <li> Particle
-              </ul>
-              <li> Phrase
-              <ul>
-                <li>NP (Noun Phrase)</li>
-                <li>VP (Verb Phrase)</li>
-                <li>AdjP (Adjective Phrase)</li>
-                <li>PP (Prepositional Phrase)</li>
-                <li>AdvP (Adverbial Phrase)</li>
-              </ul>
-              <li> Clause type
-              <ul>
-                <li> main clause
-                <li> subordinate clause
-              </ul>
-              <li> Discourse segments
-            </ul>
-            This field can be used to disambiguate between lexical items provided above (e.g. "talk" as Verb rather than Noun).`;
-          // Create a container for the label and the info icon
-          const morphoLabelContainer = document.createElement('div');
-          morphoLabelContainer.className = 'label-container';
-          morphoLabelContainer.appendChild(morphoLabel);
-          morphoLabelContainer.appendChild(morphInfoIcon);
-          const morphoInput = document.createElement('input');
-          morphoInput.type = 'text';
-          morphoInput.name = `morphosyntactic_form_${i + 1}`;
-          // Create a container for the input and the tooltip
-          const morphoTooltipContainer = document.createElement('div');
-          morphoTooltipContainer.className = 'tooltip-container';
-          morphoTooltipContainer.appendChild(morphoInput);
-          morphoTooltipContainer.appendChild(morphoTooltipText);
-          // Add tooltip functionality to the info icon
-          morphInfoIcon.appendChild(morphoTooltipText);
-          container.appendChild(morphoLabelContainer);
-          container.appendChild(morphoTooltipContainer);
+          // --- Syntactic Form field with autocomplete + multiple values ---
+          const syntacticFormLabel = document.createElement('label');
+          syntacticFormLabel.textContent = `Syntactic form(s) of element ${i + 1} (optional):`;
+
+          // Input + button
+          const syntacticFormInput = document.createElement('input');
+          syntacticFormInput.type = 'text';
+          syntacticFormInput.id = `syntactic_form_${i + 1}`;
+          syntacticFormInput.placeholder = "Type construction name";
+
+          // Autocomplete
+          $(() => {
+            $(`#syntactic_form_${i + 1}`).autocomplete({
+              source: existingConstructions
+            });
+          });
+
+          const addSyntacticFormBtn = document.createElement('button');
+          addSyntacticFormBtn.type = 'button';
+          addSyntacticFormBtn.textContent = 'Add';
+
+          // Container for selected syntactic forms
+          const selectedSyntacticFormDiv = document.createElement('div');
+          selectedSyntacticFormDiv.id = `selected_syntactic_form_${i + 1}`;
+
+          // Hidden input to store JSON list
+          const hiddenSyntacticFormInput = document.createElement('input');
+          hiddenSyntacticFormInput.type = 'hidden';
+          hiddenSyntacticFormInput.id = `morphosyntactic_form_${i + 1}`;
+          hiddenSyntacticFormInput.name = `morphosyntactic_form_${i + 1}`;
+
+          // Logic to add and remove items
+          let selectedSyntacticForms = [];
+
+          addSyntacticFormBtn.onclick = function() {
+            let value = syntacticFormInput.value.trim();
+            if (value && !selectedSyntacticForms.includes(value)) {
+              selectedSyntacticForms.push(value);
+              updateSelectedSyntacticForms();
+            }
+            syntacticFormInput.value = '';
+          };
+
+          function updateSelectedSyntacticForms() {
+            selectedSyntacticFormDiv.innerHTML = '';
+            selectedSyntacticForms.forEach((form, index) => {
+              let btn = document.createElement('button');
+              btn.type = 'button';
+              btn.textContent = form;
+              btn.onclick = function() {
+                selectedSyntacticForms.splice(index, 1);
+                updateSelectedSyntacticForms();
+              };
+              selectedSyntacticFormDiv.appendChild(btn);
+            });
+            hiddenSyntacticFormInput.value = selectedSyntacticForms.length ? JSON.stringify(selectedSyntacticForms) : '[]';
+          }
+
+          // Append all
+          container.appendChild(syntacticFormLabel);
+          container.appendChild(syntacticFormInput);
+          container.appendChild(addSyntacticFormBtn);
+          container.appendChild(selectedSyntacticFormDiv);
+          container.appendChild(hiddenSyntacticFormInput);
           container.appendChild(document.createElement('br'));
+
 
           // Create fields for syntactic function
           const syntacticFunctionLabel = document.createElement('label');

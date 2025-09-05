@@ -10,7 +10,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 cx:Dooperationwithoperand1onoperand2construction a rcxn:Construction ;
-    rcxn:hasTitle "Operation with operand1 on operand2 construction" ;
+    rcxn:hasTitle "Do operation with operand1 on operand2 construction" ;
     rcxn:hasConstructionMeaning cx:Dooperationwithoperand1onoperand2construction_Meaning ;
     cx:hasExample cx:Dooperationwithoperand1onoperand2construction_Ex_A ;
     rcxn:hasMetadata cx:Dooperationwithoperand1onoperand2construction_MD ;
