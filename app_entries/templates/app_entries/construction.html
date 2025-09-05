@@ -103,7 +103,14 @@
         {% for triple in links %}
             <tr>
                 <td>{{ triple.property }}</td>
-                <td>{{ triple.object }}</td>
+                <td>
+                    {% if triple.href %}
+                        <a href="{{ triple.href }}" target="_blank">{{ triple.object }}</a>
+                    {% else %}
+                        {{ triple.object }}
+                    {% endif %}
+                </td>
+                <td>{{ triple.lang }}</td>
             </tr>
         {% endfor %}
     </table>

@@ -180,17 +180,19 @@ def construction_detail(uri):
     links_no_titles = [item for item in triples if item['property'] in links_properties]
     general = [item for item in triples if item['property'] not in links_properties]
 
-    # Collect the title of links
+    # Collect the title and language of links
     links = []
-    title_uri = "hasTitle"
     for link in links_no_titles:
         predicate = link['property']
         object_value = link['object']
         uri = URIRef(f"http://example.org/cx/{object_value}")
-        for obj in g.objects(subject=uri, predicate=URIRef(f"https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#{title_uri}")):
+        for obj in g.objects(subject=uri, predicate=rcxn.hasTitle):
+            lang_uri = g.value(subject=uri, predicate=lg.partOfLanguage)
             links.append({
                 'property': re.sub(prefixes, "", predicate),  # Cleaned property
                 'object': re.sub(prefixes, "", str(obj)),  # Cleaned object
+                'href': object_value,
+                'lang': get_label_or_iri(lang_uri, g, ont),
             })
 
     # Collect triples for elements / slots
