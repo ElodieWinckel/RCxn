@@ -673,8 +673,9 @@ def form_submit():
                    Literal(datetime.now().strftime('%Y-%m-%d'), datatype=XSD.date)))
             g.add((cx[cleaned_inherit_construction], rcxn.hasTitle, Literal(inherit_construction)))
             print("New construction needed!")
-        # In any case, write a triplet defining this construction as inherited from
+        # In any case, write a triplet defining this construction as inherited from (and inverse link)
         g.add((cx[construction_name_cleaned], links.inheritsFrom, cx[cleaned_inherit_construction]))
+        g.add((cx[cleaned_inherit_construction], links.inheritedBy, cx[construction_name_cleaned]))
 
     # Add RDF triples for each construction this one is inherited by
     for inherit_construction in selected_inherited_by:
@@ -699,6 +700,7 @@ def form_submit():
             print("New construction needed!")
         # In any case, write a triplet defining this construction as inherited from
         g.add((cx[construction_name_cleaned], links.inheritedBy, cx[cleaned_inherit_construction]))
+        g.add((cx[cleaned_inherit_construction], links.inheritsFrom, cx[construction_name_cleaned]))
 
     # Add RDF triples for each construction this one is metaphorical extension
     for inherit_construction in selected_metaphorical_extension:
@@ -761,8 +763,9 @@ def form_submit():
                        Literal(datetime.now().strftime('%Y-%m-%d'), datatype=XSD.date)))
                 g.add((cx[cleaned_inherit_construction], rcxn.hasTitle, Literal(similarity_link)))
                 print("New construction needed!")
-            # In any case, write a triplet defining this construction as having similarity link
+            # In any case, write a triplet defining this construction as having similarity link (and inverse link)
             g.add((cx[construction_name_cleaned], property_uri, cx[cleaned_inherit_construction]))
+            g.add((cx[cleaned_inherit_construction], property_uri, cx[construction_name_cleaned]))
 
         similarity_counter += 1
 
