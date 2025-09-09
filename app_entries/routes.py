@@ -144,14 +144,15 @@ def construction_detail(uri):
     # Rebuilt the full URI for metadata
     metadata_uri = URIRef("http://example.org/cx/" + uri + "_MD")
 
-    # List of all properties whose object should be a hyperlink
+    # List of all links
     links_properties = {"inheritsFrom", "inheritedBy",
                         "sameFormSameFunction", "sameFormSimilarFunction", "sameFormDifferentFunction",
                         "similarFormSameFunction", "similarFormSimilarFunction", "similarFormDifferentFunction",
                         "differentFormSameFunction", "differentFormSimilarFunction", "differentFormDifferentFunction",
                         "CL_sameFormSameFunction", "CL_sameFormSimilarFunction", "CL_sameFormDifferentFunction",
                         "CL_similarFormSameFunction", "CL_similarFormSimilarFunction", "CL_similarFormDifferentFunction",
-                        "CL_differentFormSameFunction", "CL_differentFormSimilarFunction", "CL_differentFormDifferentFunction"
+                        "CL_differentFormSameFunction", "CL_differentFormSimilarFunction", "CL_differentFormDifferentFunction",
+                        "elementOf"
                         }
 
     # Collect all triples where entry_uri is the subject

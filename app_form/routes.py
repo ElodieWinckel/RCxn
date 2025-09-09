@@ -118,15 +118,20 @@ def load_existing_constructions(file_path):
     g = Graph()
     for ttl_file in glob.glob(file_path):
         g.parse(ttl_file, format="turtle")
+    g.parse("ontologies/lg.rdf", format="xml")
     constructions = []
 
     # SPARQL query to get the title for each construction
     query = """
         PREFIX rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#>
-        SELECT ?construction ?title
+        PREFIX lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#>
+        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+        SELECT ?construction ?title ?lang
         WHERE {
             ?construction a rcxn:Construction .
             ?construction rcxn:hasTitle ?title .
+            ?construction lg:partOfLanguage ?code .
+            ?code rdfs:label ?lang .
         }
         """
 
@@ -137,11 +142,12 @@ def load_existing_constructions(file_path):
     for row in results:
         construction_uri = str(row.construction).replace("http://example.org/cx/", "")
         title = str(row.title)
+        lang = str(row.lang)
 
         # Append construction details as dictionary
         constructions.append({
             'uri': construction_uri,
-            'title': title
+            'title': title + " [" + lang + "]"
         })
     return constructions
 
@@ -605,8 +611,9 @@ def form_submit():
                            Literal(datetime.now().strftime('%Y-%m-%d'), datatype=XSD.date)))
                     g.add((cx[cleaned_morphosyn_construction], rcxn.hasTitle, Literal(morphosyn)))
                     print("New construction needed!")
-                # In any case, write a triplet defining this construction the object of hasSyntacticForm
+                # In any case, write a triplet defining this construction the object of hasSyntacticForm, and a triplet for the corresponding link
                 g.add((slot_form_uri, rcxn.hasSyntacticForm, cx[cleaned_morphosyn_construction]))
+                g.add((cx[cleaned_morphosyn_construction], rcxn.elementOf, cx[construction_name_cleaned]))
 
         # If defined, attribute its syntactic function and case to the element/slot.
         if syntactic_function.strip():
