@@ -2,6 +2,7 @@ from flask import Flask
 from main_app.routes import main_blueprint
 from app_form import app_form_blueprint
 from app_entries import app_entries_blueprint
+from app_studies import app_studies_blueprint
 import os
 
 def create_app():
@@ -19,5 +20,6 @@ def create_app():
     app.register_blueprint(main_blueprint)
     app.register_blueprint(app_form_blueprint, url_prefix='/app_form')
     app.register_blueprint(app_entries_blueprint, url_prefix='/app_entries')
+    app.register_blueprint(app_studies_blueprint, url_prefix='/app_studies')
 
     return app

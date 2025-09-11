@@ -8,7 +8,7 @@
     <table border="1">
         {% for triple in triples %}
             <tr>
-                <td>{{ triple.property }}</td>
+                <th>{{ triple.property }}</th>
                 <td>{{ triple.object }}</td>
             </tr>
         {% endfor %}
@@ -90,7 +90,7 @@
             <tbody>
                 {% for row in rows %}
                     <tr>
-                        <td>{{ row.property }}</td>
+                        <th>{{ row.property }}</th>
                         <td>{{ row.object }}</td>
                     </tr>
                 {% endfor %}
@@ -120,9 +120,32 @@
     <table border="1">
         {% for triple in research %}
             <tr>
-                <td>{{ triple.property }}</td>
+                <th>{{ triple.property }}</th>
                 <td>{{ triple.object }}</td>
             </tr>
+        {% endfor %}
+    </table>
+
+    <h3>Evidence</h3>
+
+    <table border="1">
+        <tr>
+            <th>Study</th>
+            <th>Study type</th>
+            <th>Study Summary</th>
+        </tr>
+        {% for triple in research_data %}
+        <tr>
+            <td>
+                {% if triple.href %}
+                    <a href="{{ triple.href }}" target="_blank">{{ triple.title }}</a>
+                {% else %}
+                    {{ triple.title }}
+                {% endif %}
+            </td>
+            <td>{{ triple.type }}</td>
+            <td>{{ triple.summary }}</td>
+        </tr>
         {% endfor %}
     </table>
 
@@ -131,7 +154,7 @@
     <table border="1">
         {% for triple in metadata %}
             <tr>
-                <td>{{ triple.property }}</td>
+                <th>{{ triple.property }}</th>
                 <td>{{ triple.object }}</td>
             </tr>
         {% endfor %}

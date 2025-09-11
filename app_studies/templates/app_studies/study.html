@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}Construction Details - {{ title }}{% endblock %}
+
+{% block content %}
+
+    <h1>{{ title }}</h1>
+    <table border="1">
+        {% for triple in triples %}
+            <tr>
+                <th>{{ triple.property }}</th>
+                <td>
+                    {% if triple.href %}
+                        <a href="{{ triple.href }}" target="_blank">{{ triple.object }}</a>
+                    {% else %}
+                        {{ triple.object }}
+                    {% endif %}
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+
+    <div>
+    {% for figure in figures %}
+        {% if figure.path %}
+            <!-- Title as a heading -->
+            <h3>{{ figure.title }}</h3>
+            <!-- Caption -->
+            <p>{{ figure.description }}</p>
+            <!-- Image -->
+            <img src="{{ url_for('static', filename=figure.path) }}" alt="{{ figure.description }}" title="{{ figure.title }}" style="width: 50%; height: auto;">
+        {% endif %}
+    {% endfor %}
+    </div>
+
+    <h2>References</h2>
+    {% for ref in references %}
+    <div class="reference">
+        {{ ref.authors }} ({{ ref.year }}).
+        <i>{{ ref.title }}</i>
+        <a href="{{ ref.doi_href }}" target="_blank">{{ ref.doi }}</a>
+    </div>
+    {% endfor %}
+
+</body>
+{% endblock %}

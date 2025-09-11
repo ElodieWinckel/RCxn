@@ -15,8 +15,8 @@ g = Graph()
 #matching_files = glob.glob("instance/Submissions/*4546_cx.ttl")
 #print("Matching files:", matching_files)
 
-# Load and parse all RDF files ending in "_cx.ttl" from the folder with submissions
-for ttl_file in glob.glob("instance/Submissions/*_cx.ttl"):
+# Load and parse all RDF files from the folder with submissions
+for ttl_file in glob.glob("instance/Submissions/*.ttl"):
     g.parse(ttl_file, format="turtle")
 
 # Load and parse all RDF files in the Abox
@@ -38,6 +38,10 @@ rsrch = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#")
 g.bind("rsrch", rsrch)
 lg = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#")
 g.bind("lg", lg)
+rd = Namespace("http://example.org/rd/") #TODO: is this really the name?
+g.bind("rd", rd)
+rdata = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rdata#") #TODO: is this really the name? create ontology
+g.bind("rdata", rdata)
 
 # Load the ontologies
 ont = Graph()
@@ -111,13 +115,15 @@ def list_view():
 def construction_detail(uri):
     # A list of prefixes that we might want to delete later from the URI
     prefixes = ("http://example.org/cx/|"
+                "http://example.org/rd/|"
                 "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links#|"
                 "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#|"
                 "http://example.org/users#|http://purl.org/olia/olia.owl#|"
                 "http://purl.org/olia/olia-top.owl#|"
                 "http://www.w3.org/2000/01/rdf-schema#|"
                 "http://www.w3.org/1999/02/22-rdf-syntax-ns#|"
-                "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#")
+                "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#|"
+                "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rdata#")
 
     def get_label_or_iri(term, data_graph, ont_graph):
         """Return rdfs:label from ontologies if available, else fallback."""
@@ -175,7 +181,8 @@ def construction_detail(uri):
     triples[:] = [item for item in triples if item['property'] != "hasSlots"]
     triples[:] = [item for item in triples if item['property'] != "hasExample"]
     triples[:] = [item for item in triples if item['property'] != "hasMetadata"]
-    triples[:] = [item for item in triples if item['property'] != "hasTitle"]
+    triples[:] = [item for item in triples if item['property'] != "Title"]
+    triples[:] = [item for item in triples if item['property'] != "basedOnStudy"]
 
     # Separate into General and Links
     links_no_titles = [item for item in triples if item['property'] in links_properties]
@@ -302,6 +309,18 @@ def construction_detail(uri):
     # Sorting the list so that 'Research Question' comes before 'Findings'
     research.sort(key=lambda x: x['property'], reverse=True)
 
+    # Collect triples for research data
+    research_data = []
+    for study in g.objects(entry_uri, rdata.basedOnStudy):
+        title = g.value(study, rdata.hasTitle)
+        type = g.value(study, rdata.studyType)
+        summary = g.value(study, rdata.Summary)
+        href = "../../app_studies/study/" + re.sub(prefixes, "", str(study))
+        research_data.append({'title': str(title),
+                              'type': re.sub(prefixes, "", str(type)),
+                              'summary': str(summary),
+                              'href': href})
+
     # Fetch the title to display
     title = g.value(entry_uri, rcxn.hasTitle)
 
@@ -312,5 +331,6 @@ def construction_detail(uri):
                            grouped_examples=grouped_examples,
                            links=links,
                            metadata=metadata,
-                           research=research)
+                           research=research,
+                           research_data=research_data)
 

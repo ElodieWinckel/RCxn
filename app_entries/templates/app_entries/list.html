@@ -2,7 +2,7 @@
 {% block content %}
 
 <div class="container" style="max-width: 1000px; margin: auto;">
-  <h2>Constructions</h2>
+  <h1>Constructions</h1>
 
   {% for group in constructions|groupby('metalanguage') %}
     <h3 style="margin-top: 25px;">{{ group.grouper }}</h3>

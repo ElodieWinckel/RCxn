@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container" style="max-width: 1000px; margin: auto;">
+  <h1>Studies</h1>
+
+    {% for c in studies %}
+      <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 10px; padding: 4px 0;">
+        <div>{{ c.type }}</div>
+        <div>
+          <a href="{{ url_for('app_studies.study_detail', uri=c.uri|replace('http://example.org/rd/', '')) }}">
+            {{ c.title }}
+          </a>
+        </div>
+      </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

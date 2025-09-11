@@ -266,7 +266,7 @@
         $('#treeDropdown').jstree({
           "core" : {
             "data" : {
-              "url" : "/static/data/language_tree.json",  // Flask will serve this file
+              "url" : "{{ url_for('static', filename='data/language_tree.json') }}",  // Flask will serve this file
               "dataType" : "json"
             }
           }

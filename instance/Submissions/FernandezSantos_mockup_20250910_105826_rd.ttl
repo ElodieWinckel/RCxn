@@ -1,0 +1,38 @@
+@prefix cx: <http://example.org/cx/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix membr: <http://example.org/users#> .
+@prefix rd: <http://example.org/rd/> .
+@prefix rdata: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rdata#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cx:FernandezSantos_20250910_629471 a rdata:Study .
+
+cx:Transitiveobjectrelativeclause rdata:basedOnStudy rd:FernandezSantos_20250910_629471 .
+
+rd:FernandezSantos_20250910_629471_Sources a cx:Collection ;
+    cx:hasLiterature [ dc:creator "Dąbrowska, Ewa",
+                "Fernández Santos, Sara",
+                "Llompart, Miquel" ;
+            dc:date "2025" ;
+            dc:identifier "DOI 10.1017/langcog.2025.10015" ;
+            dc:title "Predictive processing can override perceptual information: evidence from Spanish object relative clauses" ;
+            dc:type "journalArticle" ] .
+
+rd:FernandezSantos_20250910_629471_picture1 a foaf:Image ;
+    dc:creator membr:FernandezSantos ;
+    dc:date "2025-09-11"^^xsd:date ;
+    dc:description "Percentage of correct responses by condition (verb-final and verb-medial) and sentence type (a-variant OR, plain-variant OR and SR)" ;
+    dc:format "image/png" ;
+    dc:title "Accuracy for Study 1" ;
+    rdata:belongsTo rd:FernandezSantos_20250910_629471 .
+
+rd:FernandezSantos_20250910_629471 a rdata:Study ;
+    rdata:Summary "Participants' accuracy on subject relative clauses is at ceiling only when the verb follows the relativizer. Accuracy decreases when the verb is in a clause-final position. Object relative clauses are not at ceiling, but are misinterpreted as subject relative clauses over 90% of the time when there is no object marker and the verb follows the relativizer. The presence of an object marker does not impact accuracy when the verb is clause-final." ;
+    rdata:Visualization rd:FernandezSantos_20250910_629471_picture1 ;
+    rdata:dataRepository "https://osf.io/4x6pz/files/osfstorage" ;
+    rdata:hasTitle "Predictive processing can override perceptual information: evidence from Spanish object relative clauses [Study 1]" ;
+    rdata:publishedIn rd:FernandezSantos_20250910_629471_Sources ;
+    rdata:relevantFor cx:Transitiveobjectrelativeclause ;
+    rdata:studyType rdata:behavioral .
+
