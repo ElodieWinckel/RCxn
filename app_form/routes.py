@@ -547,11 +547,11 @@ def form_submit():
                 g.add((index_uri, cx.hasPerson, cx[person]))
         if add_tense.strip():
             print("Warning: new value for tense!")
-            g.add((index_uri, cx.hasTenseFeature, Literal(add_tense)))
+            g.add((index_uri, olia.hasTense, Literal(add_tense)))
             g.add((index_uri, RDF.type, cx.Event))
         else:
             if tense_uri.strip():
-                g.add((index_uri, cx.hasTenseFeature, URIRef(tense_uri)))  # We need to use URIRef here because the prefix will be sometimes olia and sometimes oliatop
+                g.add((index_uri, olia.hasTense, URIRef(tense_uri)))  # We need to use URIRef here because the prefix will be sometimes olia and sometimes oliatop
                 g.add((index_uri, RDF.type, cx.Event))
         if add_modus.strip():
             print("Warning: new value for mode!")

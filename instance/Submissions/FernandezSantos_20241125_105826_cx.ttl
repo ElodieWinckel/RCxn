@@ -134,7 +134,7 @@ cx:Transitiveobjectrelativeclause_E_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:spa_Verb .
 
 cx:Transitiveobjectrelativeclause_E_Index a cx:Event ;
-    cx:hasTenseFeature olia:Present ;
+    olia:hasTense olia:Present ;
     cx:hasVoice cx:active .
 
 cx:Transitiveobjectrelativeclause_Ex_A a cx:Example ;
