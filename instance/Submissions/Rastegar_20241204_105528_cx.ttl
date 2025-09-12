@@ -84,7 +84,7 @@ cx:Idiomaticconstruction_B_Form a rcxn:SlotForm ;
 
 cx:Idiomaticconstruction_B_Index a cx:Individual ;
     cx:hasGender cx:masculine ;
-    cx:hasNumberFeature olia:Singular .
+    olia:hasNumber olia:Singular .
 
 cx:Idiomaticconstruction_C a rcxn:SlotMandatory ;
     cx:WordOrder "Follows article" ;
@@ -101,7 +101,7 @@ cx:Idiomaticconstruction_C_Form a rcxn:SlotForm ;
 cx:Idiomaticconstruction_C_Index a cx:Individual ;
     cx:hasAnimacy cx:inanimate ;
     cx:hasGender cx:masculine ;
-    cx:hasNumberFeature olia:Singular .
+    olia:hasNumber olia:Singular .
 
 cx:Idiomaticconstruction_D a rcxn:SlotMandatory ;
     cx:WordOrder "Verb-final in dependent clauses / V2 in main clauses" ;

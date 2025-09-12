@@ -70,7 +70,7 @@ cx:Idiomaticconstructions_D_Form a rcxn:SlotForm ;
 
 cx:Idiomaticconstructions_D_Index a cx:Individual ;
     cx:hasAnimacy cx:inanimate ;
-    cx:hasNumberFeature olia:Paucal .
+    olia:hasNumber olia:Paucal .
 
 cx:Idiomaticconstructions_Ex_A a cx:Example ;
     cx:hasText "He had burned his bridges in Hollywood and took off for the seclusion of Taos to hide away..." .

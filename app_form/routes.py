@@ -465,7 +465,6 @@ def form_submit():
             morphosyntactic_form = json.loads(morphosyntactic_form_json)
         except json.JSONDecodeError:
             morphosyntactic_form = []
-        print(morphosyntactic_form)
         word_order = request.form[f'WordOrder_{i}']
         surface = request.form[f'surface_form_{i}']
         transliteration = request.form[f'transliteration_{i}']
@@ -535,11 +534,11 @@ def form_submit():
                 g.add((index_uri, cx.hasGender, cx[gender]))
                 g.add((index_uri, RDF.type, cx.Individual))
         if number.strip():
-            g.add((index_uri, cx.hasNumberFeature, olia[number]))
+            g.add((index_uri, olia.hasNumber, olia[number]))
         else:
             if add_number.strip():
                 print("Warning: new value for number!")
-                g.add((index_uri, cx.hasNumberFeature, Literal(add_number)))
+                g.add((index_uri, olia.hasNumber, Literal(add_number)))
         if other_person.strip():
             print("Warning: new value for person!")
             g.add((index_uri, cx.hasPerson, Literal(other_person)))

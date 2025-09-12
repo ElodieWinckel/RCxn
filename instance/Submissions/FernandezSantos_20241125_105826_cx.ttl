@@ -88,7 +88,7 @@ cx:Transitiveobjectrelativeclause_A_Form a rcxn:SlotForm ;
 
 cx:Transitiveobjectrelativeclause_A_Index a cx:Individual ;
     cx:hasAnimacy cx:animate ;
-    cx:hasNumberFeature olia:Singular ;
+    olia:hasNumber olia:Singular ;
     cx:hasGender "[1]" .
 
 cx:Transitiveobjectrelativeclause_B a rcxn:SlotOptional ;
@@ -121,7 +121,7 @@ cx:Transitiveobjectrelativeclause_D_Form a rcxn:SlotForm ;
 
 cx:Transitiveobjectrelativeclause_D_Index a cx:Individual ;
     cx:hasAnimacy cx:animate ;
-    cx:hasNumberFeature olia:Singular ;
+    olia:hasNumber olia:Singular ;
     cx:hasGender "[1]" .
 
 cx:Transitiveobjectrelativeclause_E a rcxn:SlotMandatory ;

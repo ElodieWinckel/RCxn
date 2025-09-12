@@ -18,7 +18,7 @@
         <http://example.org/cx/vor+bodypartconstructions> ;
     lg:partOfLanguage lg:deuWrSt20 .
 
-<http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_E_Index> cx:hasNumberFeature olia:Plural .
+<http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_E_Index> olia:hasNumber olia:Plural .
 
 cx:Generalprepositionalconstructions a rcxn:Construction ;
     rcxn:hasMetadata cx:Generalprepositionalconstructions_MD ;

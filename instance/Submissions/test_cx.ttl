@@ -29,7 +29,7 @@ cx:Idiomaticconstructions a rcxn:Construction ;
 cx:Transitivedurch-Präfixverbkonstruktion_A_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:gmh_NounPhrase .
 
-<http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_E_Index> cx:hasNumberFeature olia:Plural .
+<http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_E_Index> olia:hasNumber olia:Plural .
 
 <http://example.org/cx/come+[noise/mannerofmovement]V-ing_D_Form> a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_Particle,
@@ -391,7 +391,7 @@ cx:Idiomaticconstruction_B_Form a rcxn:SlotForm ;
 
 cx:Idiomaticconstruction_B_Index a cx:Individual ;
     cx:hasGender cx:masculine ;
-    cx:hasNumberFeature olia:Singular .
+    olia:hasNumber olia:Singular .
 
 cx:Idiomaticconstruction_C a rcxn:SlotMandatory ;
     cx:WordOrder "Follows article" ;
@@ -408,7 +408,7 @@ cx:Idiomaticconstruction_C_Form a rcxn:SlotForm ;
 cx:Idiomaticconstruction_C_Index a cx:Individual ;
     cx:hasAnimacy cx:inanimate ;
     cx:hasGender cx:masculine ;
-    cx:hasNumberFeature olia:Singular .
+    olia:hasNumber olia:Singular .
 
 cx:Idiomaticconstruction_D a rcxn:SlotMandatory ;
     cx:WordOrder "Verb-final in dependent clauses / V2 in main clauses" ;
@@ -503,7 +503,7 @@ cx:Idiomaticconstructions_D_Form a rcxn:SlotForm ;
 
 cx:Idiomaticconstructions_D_Index a cx:Individual ;
     cx:hasAnimacy cx:inanimate ;
-    cx:hasNumberFeature olia:Paucal .
+    olia:hasNumber olia:Paucal .
 
 cx:Idiomaticconstructions_Ex_A a cx:Example ;
     cx:hasText "He had burned his bridges in Hollywood and took off for the seclusion of Taos to hide away..." .
@@ -1224,7 +1224,7 @@ cx:Transitiveobjectrelativeclause_A_Form a rcxn:SlotForm ;
 cx:Transitiveobjectrelativeclause_A_Index a cx:Individual ;
     cx:hasAnimacy cx:animate ;
     cx:hasGender "[1]" ;
-    cx:hasNumberFeature olia:Singular .
+    olia:hasNumber olia:Singular .
 
 cx:Transitiveobjectrelativeclause_B a rcxn:SlotOptional ;
     cx:WordOrder "If present, Element 2 immediately after Element 1" ;
@@ -1257,7 +1257,7 @@ cx:Transitiveobjectrelativeclause_D_Form a rcxn:SlotForm ;
 cx:Transitiveobjectrelativeclause_D_Index a cx:Individual ;
     cx:hasAnimacy cx:animate ;
     cx:hasGender "[1]" ;
-    cx:hasNumberFeature olia:Singular .
+    olia:hasNumber olia:Singular .
 
 cx:Transitiveobjectrelativeclause_E a rcxn:SlotMandatory ;
     cx:WordOrder "immediately after Element 4" ;
