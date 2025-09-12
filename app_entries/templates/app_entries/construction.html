@@ -22,60 +22,84 @@
     const elements = {{ elements | tojson }};
 
     function createCrossTable(data) {
-        const subjects = [...new Set(data.map(item => item.subject))];
-        const properties = [...new Set(data.map(item => item.property))];
+    const subjects = [...new Set(data.map(item => item.subject))];
+    const properties = [...new Set(data.map(item => item.property))];
 
-        // 2D map to store arrays of {object, href}
-        const tableData = {};
-        properties.forEach(property => {
-            tableData[property] = {};
-            subjects.forEach(subject => {
-                tableData[property][subject] = [];
-            });
+    // 2D map to store arrays of {object, href}
+    const tableData = {};
+    properties.forEach(property => {
+        tableData[property] = {};
+        subjects.forEach(subject => {
+            tableData[property][subject] = [];
         });
+    });
 
-        // Populate with object + href
-        data.forEach(({ subject, property, object, href }) => {
-            tableData[property][subject].push({ object, href });
-        });
+    // Populate with object + href
+    data.forEach(({ subject, property, object, href }) => {
+        tableData[property][subject].push({ object, href });
+    });
 
-        const desiredOrder = [
-            'Surface form', 'Root', 'Stem / Lemma', 'hasTransliteration',
-            'hasTranslation', 'Syntactic form', 'Optionality', 'WordOrder',
-            'Syntactic function', 'Semantic role', 'Semantic contribution',
-            'Semantic property', 'hasAnimacy', 'hasGender', 'has number',
-            'hasPerson', 'hasCaseFeature', 'has tense', 'hasMode',
-            'hasVoice', 'type', 'comment'
-        ];
+    const desiredOrder = [
+        'Surface form', 'Root', 'Stem / Lemma', 'hasTransliteration',
+        'hasTranslation', 'Syntactic form', 'Optionality', 'WordOrder',
+        'Syntactic function', 'Semantic role', 'Semantic contribution',
+        'Semantic property', 'hasAnimacy', 'hasGender', 'has number',
+        'hasPerson', 'hasCaseFeature', 'has tense', 'hasMode',
+        'hasVoice', 'type', 'comment'
+    ];
 
-        const table = document.createElement('table');
-        const tbody = document.createElement('tbody');
+    // Define a list of background colors
+    const colors = [
+        '#F94144',
+        '#F8961E',
+        '#F9C74F',
+        '#90BE6D',
+        '#43AA8B',
+        '#577590',
+        '#FFD1DC', // Light pink
+        '#E6E6FA', // Lavender
+        '#98FB98', // Pale green
+        '#F0E68C', // Khaki
+        '#FFB6C1', // Light pink
+        '#FFA07A', // Light salmon
+        '#DDA0DD', // Plum
+        '#90EE90'  // Light green
+    ];
 
-        desiredOrder.forEach(property => {
-            if (tableData[property]) {
-                const row = document.createElement('tr');
+    const table = document.createElement('table');
+    const thead = document.createElement('thead');
+    const tbody = document.createElement('tbody');
 
-                const cells = [
-                    `<td>${property}</td>`,
-                    ...subjects.map(subject => {
-                        const values = tableData[property][subject];
-                        // Render each object as a clickable link
-                        return `<td>${values.map(v =>
-                            v.href
-                              ? `<a href="${v.href}" target="_blank">${v.object}</a>`
-                              : v.object
-                        ).join('<br>')}</td>`;
-                    })
-                ];
+    // Create header row with "Property" and colored subjects
+    const headerRow = document.createElement('tr');
+    headerRow.innerHTML = `<td></td>${subjects.map((subject, index) =>
+        `<td style="color: #3d3d3d; font-weight: bold; text-align: center; background-color: ${colors[index % colors.length]}">${subject}</td>`
+    ).join('')}`;
+    tbody.appendChild(headerRow);
 
-                row.innerHTML = cells.join('');
-                tbody.appendChild(row);
-            }
-        });
+    // Create data rows (no background color)
+    desiredOrder.forEach(property => {
+        if (tableData[property]) {
+            const row = document.createElement('tr');
+            const cells = [
+                `<td>${property}</td>`,
+                ...subjects.map(subject => {
+                    const values = tableData[property][subject];
+                    return `<td>${values.map(v =>
+                        v.href
+                            ? `<a href="${v.href}" target="_blank">${v.object}</a>`
+                            : v.object
+                    ).join('<br>')}</td>`;
+                })
+            ];
+            row.innerHTML = cells.join('');
+            tbody.appendChild(row);
+        }
+    });
 
-        table.appendChild(tbody);
-        return table;
-    }
+    table.appendChild(tbody);
+    return table;
+}
 
     // Render the table
     const container = document.getElementById('table-container');

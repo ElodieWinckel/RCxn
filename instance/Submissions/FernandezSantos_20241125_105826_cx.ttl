@@ -139,7 +139,7 @@ cx:Transitiveobjectrelativeclause_E_Index a cx:Event ;
 
 cx:Transitiveobjectrelativeclause_Ex_A a cx:Example ;
     cx:hasGlosses "The grandpa to:the that the kid hugs" ;
-    cx:hasText "El abuelo al que el niño abraza" ;
+    cx:hasAnnotatedText "[El abuelo]A [al]B [que]C [el niño]D [abraza]D" ;
     cx:hasTranslation "The grandpa that is being hugged by the kid" ;
     RDFS:comment "a-variant verb-final" .
 

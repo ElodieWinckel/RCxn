@@ -213,16 +213,17 @@ def construction_detail(uri):
     # Step 2: Collect triples where each sequence member is the subject
     elements = []
     for slot_uri in unique_slot_uri:
+        element_number = "Element " + slot_uri[-1]
         for predicate, obj in g.predicate_objects(subject=slot_uri):
             if str(predicate) != "http://www.w3.org/1999/02/22-rdf-syntax-ns#type":
                 elements.append({
-                    'subject': get_label_or_iri(slot_uri, g, ont),
+                    'subject': element_number,
                     'property': get_label_or_iri(predicate, g, ont),
                     'object': get_label_or_iri(obj, g, ont),
                 })
             else: # special case for type mandatory/optional slot
                 elements.append({
-                    'subject': get_label_or_iri(slot_uri, g, ont),
+                    'subject': element_number,
                     'property': "Optionality",
                     'object': get_label_or_iri(obj, g, ont),
                 })
@@ -232,14 +233,14 @@ def construction_detail(uri):
             if str(predicate) == "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#hasSyntacticForm":  # special case for syntactic form that should be displayed as a link
                 title = g.value(obj, rcxn.hasTitle)
                 elements.append({
-                    'subject': get_label_or_iri(slot_uri, g, ont),
+                    'subject': element_number,
                     'property': get_label_or_iri(predicate, g, ont),
                     'object': get_label_or_iri(title, g, ont),
                     'href': get_label_or_iri(obj, g, ont),
                 })
             else:
                 elements.append({
-                    'subject': get_label_or_iri(slot_uri, g, ont),
+                    'subject': element_number,
                     'property': get_label_or_iri(predicate, g, ont),
                     'object': get_label_or_iri(obj, g, ont),
                 })
@@ -248,7 +249,7 @@ def construction_detail(uri):
         subject_index = URIRef(str(slot_uri) + "_Index")
         for predicate, obj in g.predicate_objects(subject=subject_index):
             elements.append({
-                'subject': get_label_or_iri(slot_uri, g, ont),
+                'subject': element_number,
                 'property': get_label_or_iri(predicate, g, ont),
                 'object': get_label_or_iri(obj, g, ont),
             })
