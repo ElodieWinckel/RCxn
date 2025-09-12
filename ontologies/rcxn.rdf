@@ -347,6 +347,7 @@
         <rdfs:subClassOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#Slot"/>
         <owl:disjointWith rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#SlotOptional"/>
         <rdfs:comment xml:lang="en">Non-optional construction elements that need to be realized.</rdfs:comment>
+        <rdfs:label xml:lang="en">Non-optional element</rdfs:label>
     </owl:Class>
     
 
@@ -356,6 +357,7 @@
     <owl:Class rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#SlotOptional">
         <rdfs:subClassOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#Slot"/>
         <rdfs:comment xml:lang="en">Optional construction elements; the meaning of the construction is not dependent on its realization.</rdfs:comment>
+        <rdfs:label xml:lang="en">Optional element</rdfs:label>
     </owl:Class>
     
 

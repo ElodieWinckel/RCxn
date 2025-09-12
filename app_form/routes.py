@@ -160,15 +160,15 @@ def load_existing_constructions(file_path):
 uri_list = load_user_names_from_ttl('Abox/users.ttl')
 project_list = load_projects_from_ttl('Abox/users.ttl')
 findings_list = load_findings_from_ttl('Abox/users.ttl')
-semantic_roles = load_SemanticRoles('olia.owl')
+semantic_roles = load_SemanticRoles('ontologies/olia.owl')
 semantic_roles.insert(0, '') # The first element of the drop-down list should be the empty string
-number_features = load_NumberFeatures('olia.owl')
+number_features = load_NumberFeatures('ontologies/olia.owl')
 number_features.insert(0, '') # The first element of the drop-down list should be the empty string
-case_features = load_CaseFeatures('olia.owl')
+case_features = load_CaseFeatures('ontologies/olia.owl')
 case_features.insert(0, '') # The first element of the drop-down list should be the empty string
-tense_features = load_TenseFeatures('olia.owl')
+tense_features = load_TenseFeatures('ontologies/olia.owl')
 tense_features.insert(0,("",""))
-modus = load_Mode('olia.owl')
+modus = load_Mode('ontologies/olia.owl')
 modus.insert(0, '') # The first element of the drop-down list should be the empty string
 list_cx = load_existing_constructions("instance/Submissions/*_cx.ttl")
 list_cx_titles = [entry["title"] for entry in list_cx] # list with only titles of Constructions already in the constructicon
@@ -267,7 +267,7 @@ def form_submit():
     rsrch = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#")
     g.bind("rsrch", rsrch)
 
-    links = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links#")
+    links = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0#")
     g.bind("links", links)
 
     foaf = Namespace("http://xmlns.com/foaf/0.1/")

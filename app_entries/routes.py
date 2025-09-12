@@ -47,6 +47,8 @@ g.bind("rdata", rdata)
 ont = Graph()
 for xlm_file in glob.glob("ontologies/*.rdf"):
     ont.parse(xlm_file, format="xml")
+for xlm_file in glob.glob("ontologies/*.owl"):
+    ont.parse(xlm_file, format="xml")
 
 def get_metalanguage(lang_uri, graph, is_variety_of):
     """
@@ -116,7 +118,7 @@ def construction_detail(uri):
     # A list of prefixes that we might want to delete later from the URI
     prefixes = ("http://example.org/cx/|"
                 "http://example.org/rd/|"
-                "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links#|"
+                "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0#|"
                 "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#|"
                 "http://example.org/users#|http://purl.org/olia/olia.owl#|"
                 "http://purl.org/olia/olia-top.owl#|"
@@ -151,7 +153,7 @@ def construction_detail(uri):
     metadata_uri = URIRef("http://example.org/cx/" + uri + "_MD")
 
     # List of all links
-    links_properties = {"inheritsFrom", "inheritedBy",
+    links_properties = {"inherits from", "inherited by",
                         "sameFormSameFunction", "sameFormSimilarFunction", "sameFormDifferentFunction",
                         "similarFormSameFunction", "similarFormSimilarFunction", "similarFormDifferentFunction",
                         "differentFormSameFunction", "differentFormSimilarFunction", "differentFormDifferentFunction",
@@ -163,19 +165,33 @@ def construction_detail(uri):
 
     # Collect all triples where entry_uri is the subject
     triples = []
+    links = []
     for predicate, obj in g.predicate_objects(subject=entry_uri):
         if str(predicate) != str(RDF.type):
-            triples.append({
-                'property': get_label_or_iri(predicate, g, ont),
-                'object': get_label_or_iri(obj, g, ont),
-            })
+            if str(predicate).startswith("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0#"):
+                name_of_link = get_label_or_iri(predicate, g, ont)
+                object_value = get_label_or_iri(obj, g, ont)
+                uri = URIRef(f"http://example.org/cx/{object_value}")
+                for title in g.objects(subject=uri, predicate=rcxn.hasTitle):
+                    lang_uri = g.value(subject=uri, predicate=lg.partOfLanguage)
+                    links.append({
+                        'property': name_of_link,
+                        'object': get_label_or_iri(title, g, ont),
+                        'href': object_value,
+                        'lang': get_label_or_iri(lang_uri, g, ont),
+                    })
+            else:
+                triples.append({
+                    'property': get_label_or_iri(predicate, g, ont),
+                    'object': get_label_or_iri(obj, g, ont),
+                })
 
     # Add triples for meaning
     for predicate, obj in g.predicate_objects(subject=meaning_uri):
         if str(predicate) != "http://www.w3.org/1999/02/22-rdf-syntax-ns#type":
             triples.append({
-                'property': re.sub(prefixes, "", str(predicate)),
-                'object': re.sub(prefixes, "", str(obj)),
+                'property': get_label_or_iri(predicate, g, ont),
+                'object': get_label_or_iri(obj, g, ont),
             })
     triples[:] = [item for item in triples if item['property'] != "hasConstructionMeaning"]
     triples[:] = [item for item in triples if item['property'] != "hasSlots"]
@@ -187,21 +203,6 @@ def construction_detail(uri):
     # Separate into General and Links
     links_no_titles = [item for item in triples if item['property'] in links_properties]
     general = [item for item in triples if item['property'] not in links_properties]
-
-    # Collect the title and language of links
-    links = []
-    for link in links_no_titles:
-        predicate = link['property']
-        object_value = link['object']
-        uri = URIRef(f"http://example.org/cx/{object_value}")
-        for obj in g.objects(subject=uri, predicate=rcxn.hasTitle):
-            lang_uri = g.value(subject=uri, predicate=lg.partOfLanguage)
-            links.append({
-                'property': re.sub(prefixes, "", predicate),  # Cleaned property
-                'object': re.sub(prefixes, "", str(obj)),  # Cleaned object
-                'href': object_value,
-                'lang': get_label_or_iri(lang_uri, g, ont),
-            })
 
     # Collect triples for elements / slots
     # Step 1: Extract the elements of the sequence
@@ -215,15 +216,15 @@ def construction_detail(uri):
         for predicate, obj in g.predicate_objects(subject=slot_uri):
             if str(predicate) != "http://www.w3.org/1999/02/22-rdf-syntax-ns#type":
                 elements.append({
-                    'subject': re.sub(prefixes, "", str(slot_uri)),
-                    'property': re.sub(prefixes, "", str(predicate)),
-                    'object': re.sub(prefixes, "", str(obj)),
+                    'subject': get_label_or_iri(slot_uri, g, ont),
+                    'property': get_label_or_iri(predicate, g, ont),
+                    'object': get_label_or_iri(obj, g, ont),
                 })
             else: # special case for type mandatory/optional slot
                 elements.append({
-                    'subject': re.sub(prefixes, "", str(slot_uri)),
+                    'subject': get_label_or_iri(slot_uri, g, ont),
                     'property': "Optionality",
-                    'object': re.sub(prefixes, "", str(obj)),
+                    'object': get_label_or_iri(obj, g, ont),
                 })
         # Step 3: Collect triples for form of each sequence member
         subject_slotform = URIRef(str(slot_uri) + "_Form")
@@ -231,25 +232,25 @@ def construction_detail(uri):
             if str(predicate) == "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#hasSyntacticForm":  # special case for syntactic form that should be displayed as a link
                 title = g.value(obj, rcxn.hasTitle)
                 elements.append({
-                    'subject': re.sub(prefixes, "", str(slot_uri)),
-                    'property': re.sub(prefixes, "", str(predicate)),
-                    'object': re.sub(prefixes, "", str(title)),
-                    'href': re.sub(prefixes, "", str(obj)),
+                    'subject': get_label_or_iri(slot_uri, g, ont),
+                    'property': get_label_or_iri(predicate, g, ont),
+                    'object': get_label_or_iri(title, g, ont),
+                    'href': get_label_or_iri(obj, g, ont),
                 })
             else:
                 elements.append({
-                    'subject': re.sub(prefixes, "", str(slot_uri)),
-                    'property': re.sub(prefixes, "", str(predicate)),
-                    'object': re.sub(prefixes, "", str(obj)),
+                    'subject': get_label_or_iri(slot_uri, g, ont),
+                    'property': get_label_or_iri(predicate, g, ont),
+                    'object': get_label_or_iri(obj, g, ont),
                 })
 
         # Step 4: Collect triples for index of each sequence member
         subject_index = URIRef(str(slot_uri) + "_Index")
         for predicate, obj in g.predicate_objects(subject=subject_index):
             elements.append({
-                'subject': re.sub(prefixes, "", str(slot_uri)),
-                'property': re.sub(prefixes, "", str(predicate)),
-                'object': re.sub(prefixes, "", str(obj)),
+                'subject': get_label_or_iri(slot_uri, g, ont),
+                'property': get_label_or_iri(predicate, g, ont),
+                'object': get_label_or_iri(obj, g, ont),
             })
     # Step 5: Delete functional URIs
     elements[:] = [item for item in elements if item['property'] != "hasSlotForm"]

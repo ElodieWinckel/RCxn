@@ -12,7 +12,7 @@ def load_SemanticRoles(file_path):
     role_names = [(str(s).replace("http://purl.org/olia/olia.owl#", "")) for s in g.subjects(RDFS.subClassOf, oliatop.SemanticRole)]
     return role_names
 
-semantic_roles = load_SemanticRoles('olia.owl')
+semantic_roles = load_SemanticRoles('ontologies/olia.owl')
 print(semantic_roles)
 
 def load_NumberFeatures(file_path):
@@ -24,7 +24,7 @@ def load_NumberFeatures(file_path):
     names = [(str(s).replace("http://purl.org/olia/olia.owl#", "")) for s in g.subjects(RDFS.subClassOf, oliatop.NumberFeature)]
     return names
 
-number_features = load_NumberFeatures('olia.owl')
+number_features = load_NumberFeatures('ontologies/olia.owl')
 print(number_features)
 
 
@@ -38,7 +38,7 @@ def load_CaseFeatures(file_path):
     names = [(str(s).replace("Case", "")) for s in names]
     return names
 
-case_features = load_CaseFeatures('olia.owl')
+case_features = load_CaseFeatures('ontologies/olia.owl')
 print(case_features)
 
 
@@ -68,7 +68,7 @@ def load_TenseFeatures(file_path):
 
     return tense_features
 
-tense_features = load_TenseFeatures('olia.owl')
+tense_features = load_TenseFeatures('ontologies/olia.owl')
 print(tense_features)
 
 def load_Mode(file_path):
@@ -80,7 +80,7 @@ def load_Mode(file_path):
     names = [(str(s).replace("Verb", "")) for s in names]
     return names
 
-modus = load_Mode('olia.owl')
+modus = load_Mode('ontologies/olia.owl')
 print(modus)
 
 def load_VoiceFeatures(file_path):
@@ -93,7 +93,7 @@ def load_VoiceFeatures(file_path):
     names = [(str(s).replace("Voice", "")) for s in names]
     return names
 
-voice_features = load_VoiceFeatures('olia.owl')
+voice_features = load_VoiceFeatures('ontologies/olia.owl')
 print(voice_features)
 
 # Load URIs of already existing constructions (cx.ttl)

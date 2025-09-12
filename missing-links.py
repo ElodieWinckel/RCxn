@@ -23,7 +23,7 @@ g.bind("rcxn", RCXN)
 rsrch = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#")
 g.bind("rsrch", rsrch)
 
-links = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links#")
+links = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0#")
 g.bind("links", links)
 
 foaf = Namespace("http://xmlns.com/foaf/0.1/")
