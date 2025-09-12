@@ -181,7 +181,7 @@ cx:Transitiveobjectrelativeclause_slots a rdf:Seq ;
     rdf:_5 cx:Transitiveobjectrelativeclause_E .
 
 <https://onlinelibrary.wiley.com/doi/10.1111/lang.12066> dc:creator "Reali, Florencia" ;
-    dc:date "09/2014" ;
+    dc:date "2014" ;
     dc:identifier "DOI 10.1111/lang.12066",
         "ISSN 00238333" ;
     dc:title "Frequency Affects Object Relative Clause Processing: Some Evidence in Favor of Usage-Based Accounts: Frequency Affects Object Relative Clause Processing" ;

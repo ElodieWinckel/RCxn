@@ -149,9 +149,8 @@ def study_detail(uri):
     triples[:] = [item for item in triples if item['property'] != "Visualization"]
     triples[:] = [item for item in triples if item['property'] != "publishedIn"]
 
-    references = []
-
     # collect references
+    references = []
     for collection in g.objects(subject=study_uri, predicate=rdata.publishedIn):
             # Get all literature entries in this collection
             for lit in g.objects(collection, CX.hasLiterature):

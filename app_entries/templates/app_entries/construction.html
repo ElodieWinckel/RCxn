@@ -182,6 +182,16 @@
                 <td>{{ triple.object }}</td>
             </tr>
         {% endfor %}
+        {% for ref in references %}
+            <tr>
+                <th>References</th>
+                <td class="reference">
+                    {{ ref.authors }} ({{ ref.year }}).
+                    <i>{{ ref.title }}</i>
+                    <a href="{{ ref.doi_href }}" target="_blank">{{ ref.doi }}</a>
+                </td>
+            </tr>
+    {% endfor %}
     </table>
 
 

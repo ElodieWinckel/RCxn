@@ -30,6 +30,8 @@ for ttl_file in glob.glob("Abox/*.ttl"):
 # Define the namespaces
 CX = Namespace("http://example.org/cx/")
 g.bind("cx", CX)
+dc = Namespace("http://purl.org/dc/elements/1.1/")
+g.bind("dc",dc)
 olia = Namespace("http://purl.org/olia/olia.owl#")
 g.bind("olia", olia)
 rcxn = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#")
@@ -293,6 +295,34 @@ def construction_detail(uri):
                 'property': re.sub(prefixes, "", str(predicate)),
                 'object': re.sub(prefixes, "", str(obj)),
             })
+    metadata[:] = [item for item in metadata if item['property'] != "hasSources"] # resources are delt with separately (see below "collect references")
+
+    # collect references
+    references = []
+    for collection in g.objects(subject=metadata_uri, predicate=CX.hasSources):
+            # Get all literature entries in this collection
+            for lit in g.objects(collection, CX.hasLiterature):
+                print(lit)
+                # Extract details for each literature entry
+                creators = [str(c) for c in g.objects(lit, dc.creator)]
+                date = g.value(lit, dc.date)
+                title = g.value(lit, dc.title)
+                identifier = g.value(lit, dc.identifier)
+                # Format authors as "Last1, Last2 & Last3"
+                authors = []
+                for creator in creators:
+                    last_name = creator.split(", ")[0]
+                    authors.append(last_name)
+                authors_str = " & ".join([", ".join(authors[:-1])] + [authors[-1]] if len(authors) > 2 else authors)
+                doi_str=str(identifier).replace("DOI ", "")
+                doi_href="https://www.doi.org/"+doi_str
+                references.append({
+                    "authors": authors_str,
+                    "year": str(date),
+                    "title": str(title),
+                    "doi": doi_str,
+                    "doi_href": doi_href
+                })
 
     # Collect triples for research question and findings
     research = []
@@ -334,5 +364,6 @@ def construction_detail(uri):
                            links=links,
                            metadata=metadata,
                            research=research,
-                           research_data=research_data)
+                           research_data=research_data,
+                           references=references)
 
