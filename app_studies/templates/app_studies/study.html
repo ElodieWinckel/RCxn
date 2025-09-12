@@ -11,7 +11,7 @@
                 <th>{{ triple.property }}</th>
                 <td>
                     {% if triple.href %}
-                        <a href="{{ triple.href }}" target="_blank">{{ triple.object }}</a>
+                        <a href="{{ url_for('app_entries.construction_detail', uri=triple.href) }}" target="_blank"> {{ triple.object }} </a>
                     {% else %}
                         {{ triple.object }}
                     {% endif %}
@@ -42,5 +42,6 @@
     </div>
     {% endfor %}
 
+<a href="{{ url_for('app_studies.studies_view') }}">Back to list of studies</a>
 </body>
 {% endblock %}

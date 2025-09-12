@@ -347,7 +347,7 @@ def construction_detail(uri):
         title = g.value(study, rdata.hasTitle)
         type = g.value(study, rdata.studyType)
         summary = g.value(study, rdata.Summary)
-        href = "../../app_studies/study/" + re.sub(prefixes, "", str(study))
+        href = re.sub(prefixes, "", str(study))
         research_data.append({'title': str(title),
                               'type': re.sub(prefixes, "", str(type)),
                               'summary': str(summary),

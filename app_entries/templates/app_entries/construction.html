@@ -162,7 +162,7 @@
         <tr>
             <td>
                 {% if triple.href %}
-                    <a href="{{ triple.href }}" target="_blank">{{ triple.title }}</a>
+                    <a href="{{ url_for('app_studies.study_detail', uri=triple.href) }}" target="_blank"> {{ triple.title }} </a>
                 {% else %}
                     {{ triple.title }}
                 {% endif %}

@@ -183,7 +183,7 @@ def study_detail(uri):
         })
 
     for obj in g.objects(subject=study_uri, predicate=rdata.relevantFor):
-        href = "../../app_entries/construction/" + re.sub(prefixes, "", get_label_or_iri(obj, g, ont))
+        href = re.sub(prefixes, "", get_label_or_iri(obj, g, ont))
         title = g.value(obj, rcxn.hasTitle)
         triples.append({
             'property': "relevantFor",
