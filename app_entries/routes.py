@@ -183,10 +183,23 @@ def construction_detail(uri):
                         'lang': get_label_or_iri(lang_uri, g, ont),
                     })
             else:
-                triples.append({
-                    'property': get_label_or_iri(predicate, g, ont),
-                    'object': get_label_or_iri(obj, g, ont),
-                })
+                if str(predicate).endswith("elementOf"):
+                    name_of_link = get_label_or_iri(predicate, g, ont)
+                    object_value = get_label_or_iri(obj, g, ont)
+                    uri = URIRef(f"http://example.org/cx/{object_value}")
+                    for title in g.objects(subject=uri, predicate=rcxn.hasTitle):
+                        lang_uri = g.value(subject=uri, predicate=lg.partOfLanguage)
+                        links.append({
+                            'property': name_of_link,
+                            'object': get_label_or_iri(title, g, ont),
+                            'href': object_value,
+                            'lang': get_label_or_iri(lang_uri, g, ont),
+                        })
+                else:
+                    triples.append({
+                        'property': get_label_or_iri(predicate, g, ont),
+                        'object': get_label_or_iri(obj, g, ont),
+                    })
 
     # Add triples for meaning
     for predicate, obj in g.predicate_objects(subject=meaning_uri):
@@ -201,10 +214,6 @@ def construction_detail(uri):
     triples[:] = [item for item in triples if item['property'] != "hasMetadata"]
     triples[:] = [item for item in triples if item['property'] != "Title"]
     triples[:] = [item for item in triples if item['property'] != "basedOnStudy"]
-
-    # Separate into General and Links
-    links_no_titles = [item for item in triples if item['property'] in links_properties]
-    general = [item for item in triples if item['property'] not in links_properties]
 
     # Collect triples for elements / slots
     # Step 1: Extract the elements of the sequence
@@ -358,7 +367,7 @@ def construction_detail(uri):
 
     return render_template("app_entries/construction.html",
                            title=title,
-                           triples=general,
+                           triples=triples,
                            elements=elements,
                            grouped_examples=grouped_examples,
                            links=links,

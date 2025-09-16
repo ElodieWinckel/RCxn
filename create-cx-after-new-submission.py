@@ -2,8 +2,7 @@ from rdflib import Graph, Namespace
 import glob
 
 # File paths
-input_file = "instance/Submissions/FernandezSantos_20241125_105826_cx.ttl"
-output_file = "instance/Submissions/test_cx.ttl"
+output_file = "Abox/cx.ttl"
 
 # Load RDF graph
 g = Graph()
