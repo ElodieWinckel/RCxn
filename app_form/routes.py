@@ -172,6 +172,7 @@ modus = load_Mode('ontologies/olia.owl')
 modus.insert(0, '') # The first element of the drop-down list should be the empty string
 list_cx = load_existing_constructions("instance/Submissions/*_cx.ttl")
 list_cx_titles = [entry["title"] for entry in list_cx] # list with only titles of Constructions already in the constructicon
+list_cx_titles.sort(key=lambda x: x.lower())
 
 @app_form_blueprint.route('/')
 def online_form():
