@@ -31,24 +31,24 @@ This is a similar publicly available dataset: https://github.com/SPOClab-ca/neur
 
 membr:Project_Ramezani rsrch:hasResearchQuestion membr:Project_Ramezani_250214 .
 
-cx:Argumentstructureconstruction_A a rcxn:SlotMandatory ;
-    rcxn:hasSlotForm cx:Argumentstructureconstruction_A_Form ;
+cx:Argumentstructureconstruction_1 a rcxn:SlotMandatory ;
+    rcxn:hasSlotForm cx:Argumentstructureconstruction_1_Form ;
     rcxn:hasSyntacticFunction "Subject" .
 
-cx:Argumentstructureconstruction_A_Form a rcxn:SlotForm ;
+cx:Argumentstructureconstruction_1_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_Phrase .
 
-cx:Argumentstructureconstruction_B a rcxn:SlotMandatory ;
-    rcxn:hasSlotForm cx:Argumentstructureconstruction_B_Form .
+cx:Argumentstructureconstruction_2 a rcxn:SlotMandatory ;
+    rcxn:hasSlotForm cx:Argumentstructureconstruction_2_Form .
 
-cx:Argumentstructureconstruction_B_Form a rcxn:SlotForm ;
+cx:Argumentstructureconstruction_2_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_Verb .
 
-cx:Argumentstructureconstruction_C a rcxn:SlotMandatory ;
-    rcxn:hasSlotForm cx:Argumentstructureconstruction_C_Form ;
+cx:Argumentstructureconstruction_3 a rcxn:SlotMandatory ;
+    rcxn:hasSlotForm cx:Argumentstructureconstruction_3_Form ;
     rcxn:hasSyntacticFunction "Complement(s)" .
 
-cx:Argumentstructureconstruction_C_Form a rcxn:SlotForm ;
+cx:Argumentstructureconstruction_3_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm "one or several Phrases" .
 
 cx:Argumentstructureconstruction_MD a rcxn:Metadata ;
@@ -65,9 +65,9 @@ cx:Argumentstructureconstruction_Sources a cx:Collection ;
     cx:hasLiterature <> .
 
 cx:Argumentstructureconstruction_slots a rdf:Seq ;
-    rdf:_1 cx:Argumentstructureconstruction_A ;
-    rdf:_2 cx:Argumentstructureconstruction_B ;
-    rdf:_3 cx:Argumentstructureconstruction_C .
+    rdf:_1 cx:Argumentstructureconstruction_1 ;
+    rdf:_2 cx:Argumentstructureconstruction_2 ;
+    rdf:_3 cx:Argumentstructureconstruction_3 .
 
 cx:EnglishCause-Motionconstruction a rcxn:Construction ;
     rcxn:hasMetadata cx:EnglishCause-Motionconstruction_MD ;

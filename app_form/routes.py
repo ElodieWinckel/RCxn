@@ -432,7 +432,7 @@ def form_submit():
     g.add((seq_slots, RDF.type, RDF.Seq))
     # Add elements to the sequence
     for i in range(element_nb):
-        element_uri = cx[f"{construction_name_cleaned}_{chr(65 + i)}"]
+        element_uri = cx[f"{construction_name_cleaned}_{i + 1}"]
         seq_position = URIRef(RDF[f"_{i + 1}"])
         g.add((seq_slots, seq_position, element_uri))
     ## Add the sequence as the object of the triple
@@ -441,7 +441,7 @@ def form_submit():
     # FROM NOW ON: A LOOP THAT ADDS THE VALUE OF THE FIELDS RELATED TO THE SLOTS FOR EACH SLOT
     for i in range(1, element_nb + 1):
         y = i -1
-        element_uri = URIRef(cx[f"{construction_name_cleaned}_{chr(65 + y)}"])
+        element_uri = cx[f"{construction_name_cleaned}_{i}"]
 
         # Retrieve information from the form
         semantic_contribution = request.form[f'semantic_contribution_{i}']
@@ -510,7 +510,7 @@ def form_submit():
             g.add((element_uri, rcxn.hasSemanticProperty, Literal(semantic_property)))
 
         # URI for Slot Index
-        index_uri = URIRef(cx[f"{construction_name_cleaned}_{chr(65 + y)}_Index"])
+        index_uri = cx[f"{construction_name_cleaned}_{i}_Index"]
         # Triple to relate index to meaning
         if other_animacy.strip() or animacy.strip() or other_gender.strip() or gender.strip() or person.strip() or tense_uri.strip() or add_tense.strip() or modus.strip() or add_modus.strip() or other_voice.strip() or voice.strip():
             g.add((element_uri, cx.hasIndex, index_uri))
@@ -573,7 +573,7 @@ def form_submit():
                 g.add((index_uri, RDF.type, cx.Event))
 
         # URI for Slot Form
-        slot_form_uri = URIRef(cx[f"{construction_name_cleaned}_{chr(65 + y)}_Form"])
+        slot_form_uri = cx[f"{construction_name_cleaned}_{i}_Form"]
         # Triple to relate slot to it meaning (if needed)
         if morphosyntactic_form or root.strip() or stem.strip() or surface.strip():
             g.add((element_uri, rcxn.hasSlotForm, slot_form_uri))

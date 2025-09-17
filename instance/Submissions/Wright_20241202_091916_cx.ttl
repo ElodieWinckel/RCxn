@@ -16,31 +16,31 @@ cx:Toughmovementconstruction a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
     RDFS:comment "No research data that will be linked" .
 
-cx:Toughmovementconstruction_A a rcxn:SlotMandatory ;
+cx:Toughmovementconstruction_1 a rcxn:SlotMandatory ;
     cx:WordOrder "Element 1 immediately precedes Element 2" ;
-    rcxn:hasSlotForm cx:Toughmovementconstruction_A_Form .
+    rcxn:hasSlotForm cx:Toughmovementconstruction_1_Form .
 
-cx:Toughmovementconstruction_A_Form a rcxn:SlotForm ;
+cx:Toughmovementconstruction_1_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_NounPhrase .
 
-cx:Toughmovementconstruction_B a rcxn:SlotMandatory ;
+cx:Toughmovementconstruction_2 a rcxn:SlotMandatory ;
     cx:WordOrder "Element 2 immediately precedes Element 3" ;
-    rcxn:hasSlotForm cx:Toughmovementconstruction_B_Form .
+    rcxn:hasSlotForm cx:Toughmovementconstruction_2_Form .
 
-cx:Toughmovementconstruction_B_Form a rcxn:SlotForm ;
+cx:Toughmovementconstruction_2_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_VerbPhrase ;
     rcxn:hasStem "BE" .
 
-cx:Toughmovementconstruction_C a rcxn:SlotMandatory ;
+cx:Toughmovementconstruction_3 a rcxn:SlotMandatory ;
     cx:WordOrder "Element 3, which immediately follows Element 2" ;
-    rcxn:hasSlotForm cx:Toughmovementconstruction_C_Form ;
-    cx:hasIndex cx:Toughmovementconstruction_C_Index .
+    rcxn:hasSlotForm cx:Toughmovementconstruction_3_Form ;
+    cx:hasIndex cx:Toughmovementconstruction_3_Index .
 
-cx:Toughmovementconstruction_C_Form a rcxn:SlotForm ;
+cx:Toughmovementconstruction_3_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_AdjectivePhrase ;
     cx:comment "Adjective + to + V-inf" .
 
-cx:Toughmovementconstruction_C_Index a cx:Event ;
+cx:Toughmovementconstruction_3_Index a cx:Event ;
     olia:hasTense "Infinitive" .
 
 cx:Toughmovementconstruction_Ex_A a cx:Example ;
@@ -58,7 +58,7 @@ cx:Toughmovementconstruction_Sources a cx:Collection ;
     RDFS:seeAlso <https://constructicon.de/constructions/45> .
 
 cx:Toughmovementconstruction_slots a rdf:Seq ;
-    rdf:_1 cx:Toughmovementconstruction_A ;
-    rdf:_2 cx:Toughmovementconstruction_B ;
-    rdf:_3 cx:Toughmovementconstruction_C .
+    rdf:_1 cx:Toughmovementconstruction_1 ;
+    rdf:_2 cx:Toughmovementconstruction_2 ;
+    rdf:_3 cx:Toughmovementconstruction_3 .
 

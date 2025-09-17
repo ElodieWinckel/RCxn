@@ -13,37 +13,37 @@ cx:EvaluativeAttributionConstruction a rcxn:Construction ;
     rcxn:hasSlots cx:EvaluativeAttributionConstruction_slots ;
     lg:partOfLanguage lg:engUsUkWr .
 
-cx:EvaluativeAttributionConstruction_A a rcxn:SlotOptional ;
-    rcxn:hasSlotForm cx:EvaluativeAttributionConstruction_A_Form ;
+cx:EvaluativeAttributionConstruction_1 a rcxn:SlotOptional ;
+    rcxn:hasSlotForm cx:EvaluativeAttributionConstruction_1_Form ;
     rcxn:hasOtherSemanticContribution "Attributor" .
 
-cx:EvaluativeAttributionConstruction_A_Form a rcxn:SlotForm ;
+cx:EvaluativeAttributionConstruction_1_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_NounPhrase .
 
-cx:EvaluativeAttributionConstruction_B a rcxn:SlotMandatory ;
-    rcxn:hasSlotForm cx:EvaluativeAttributionConstruction_B_Form .
+cx:EvaluativeAttributionConstruction_2 a rcxn:SlotMandatory ;
+    rcxn:hasSlotForm cx:EvaluativeAttributionConstruction_2_Form .
 
-cx:EvaluativeAttributionConstruction_B_Form a rcxn:SlotForm ;
+cx:EvaluativeAttributionConstruction_2_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_VerbPhrase .
 
-cx:EvaluativeAttributionConstruction_C a rcxn:SlotMandatory ;
-    rcxn:hasSlotForm cx:EvaluativeAttributionConstruction_C_Form ;
+cx:EvaluativeAttributionConstruction_3 a rcxn:SlotMandatory ;
+    rcxn:hasSlotForm cx:EvaluativeAttributionConstruction_3_Form ;
     rcxn:hasOtherSemanticContribution "Attributee" .
 
-cx:EvaluativeAttributionConstruction_C_Form a rcxn:SlotForm ;
+cx:EvaluativeAttributionConstruction_3_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_NounPhrase, cx:eng_PrepositionalPhrase .
 
-cx:EvaluativeAttributionConstruction_D a rcxn:SlotOptional ;
-    rcxn:hasSlotForm cx:EvaluativeAttributionConstruction_D_Form .
+cx:EvaluativeAttributionConstruction_4 a rcxn:SlotOptional ;
+    rcxn:hasSlotForm cx:EvaluativeAttributionConstruction_4_Form .
 
-cx:EvaluativeAttributionConstruction_D_Form a rcxn:SlotForm ;
+cx:EvaluativeAttributionConstruction_4_Form a rcxn:SlotForm ;
     rcxn:hasStem "to be (lemma)" .
 
-cx:EvaluativeAttributionConstruction_E a rcxn:SlotMandatory ;
-    rcxn:hasSlotForm cx:EvaluativeAttributionConstruction_E_Form ;
+cx:EvaluativeAttributionConstruction_5 a rcxn:SlotMandatory ;
+    rcxn:hasSlotForm cx:EvaluativeAttributionConstruction_5_Form ;
     rcxn:hasOtherSemanticContribution "Attribute" .
 
-cx:EvaluativeAttributionConstruction_E_Form a rcxn:SlotForm ;
+cx:EvaluativeAttributionConstruction_5_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_NounPhrase, cx:eng_AdjectivePhrase, cx:eng_PrepositionalPhrase, cx:eng_VerbPhrase, cx:eng_clause .
 
 cx:EvaluativeAttributionConstruction_MD a rcxn:Metadata ;
@@ -54,11 +54,11 @@ cx:EvaluativeAttributionConstruction_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "An ATTRIBUTOR mentally assigns ATTRIBUTE to an ATTRIBUTEE" .
 
 cx:EvaluativeAttributionConstruction_slots a rdf:Seq ;
-    rdf:_1 cx:EvaluativeAttributionConstruction_A ;
-    rdf:_2 cx:EvaluativeAttributionConstruction_B ;
-    rdf:_3 cx:EvaluativeAttributionConstruction_C ;
-    rdf:_4 cx:EvaluativeAttributionConstruction_D ;
-    rdf:_5 cx:EvaluativeAttributionConstruction_E .
+    rdf:_1 cx:EvaluativeAttributionConstruction_1 ;
+    rdf:_2 cx:EvaluativeAttributionConstruction_2 ;
+    rdf:_3 cx:EvaluativeAttributionConstruction_3 ;
+    rdf:_4 cx:EvaluativeAttributionConstruction_4 ;
+    rdf:_5 cx:EvaluativeAttributionConstruction_5 .
 
 cx:eng_AdjectivePhrase a rcxn:Construction ;
     rcxn:hasTitle "Adjective Phrase" ;

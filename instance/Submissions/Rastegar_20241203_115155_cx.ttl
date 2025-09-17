@@ -17,58 +17,58 @@ cx:Idiomaticconstructions a rcxn:Construction ;
     rcxn:hasSlots cx:Idiomaticconstructions_slots ;
     lg:partOfLanguage lg:eng .
 
-cx:Idiomaticconstructions_A a rcxn:SlotMandatory ;
+cx:Idiomaticconstructions_1 a rcxn:SlotMandatory ;
     cx:WordOrder "Initial position" ;
-    rcxn:hasSlotForm cx:Idiomaticconstructions_A_Form ;
+    rcxn:hasSlotForm cx:Idiomaticconstructions_1_Form ;
     rcxn:hasSyntacticFunction "Subject" ;
-    cx:hasIndex cx:Idiomaticconstructions_A_Index ;
+    cx:hasIndex cx:Idiomaticconstructions_1_Index ;
     rcxn:hasSemanticRole oliatop:ActorMacroRole .
 
-cx:Idiomaticconstructions_A_Form a rcxn:SlotForm ;
+cx:Idiomaticconstructions_1_Form a rcxn:SlotForm ;
     cx:hasSyntacticForm cx:eng_Pronoun .
 
-cx:Idiomaticconstructions_A_Index a cx:Individual ;
+cx:Idiomaticconstructions_1_Index a cx:Individual ;
     cx:hasAnimacy cx:animate .
 
-cx:Idiomaticconstructions_B a rcxn:SlotMandatory ;
+cx:Idiomaticconstructions_2 a rcxn:SlotMandatory ;
     cx:WordOrder "Follows subject, precedes object" ;
-    rcxn:hasSlotForm cx:Idiomaticconstructions_B_Form ;
-    cx:hasIndex cx:Idiomaticconstructions_B_Index .
+    rcxn:hasSlotForm cx:Idiomaticconstructions_2_Form ;
+    cx:hasIndex cx:Idiomaticconstructions_2_Index .
 
-cx:Idiomaticconstructions_B_Form a rcxn:SlotForm ;
+cx:Idiomaticconstructions_2_Form a rcxn:SlotForm ;
     cx:hasSyntacticForm cx:eng_VerbPhrase ;
     rcxn:hasStem "burn" .
 
-cx:Idiomaticconstructions_B_Index a cx:Event ;
+cx:Idiomaticconstructions_2_Index a cx:Event ;
     cx:hasMode olia:IndicativeVerb ;
     cx:hasVoice cx:active .
 
-cx:Idiomaticconstructions_C a rcxn:SlotMandatory ;
+cx:Idiomaticconstructions_3 a rcxn:SlotMandatory ;
     cx:WordOrder "Precedes \"bridges\"" ;
-    rcxn:hasSlotForm cx:Idiomaticconstructions_C_Form ;
+    rcxn:hasSlotForm cx:Idiomaticconstructions_3_Form ;
     rcxn:hasSyntacticFunction "Determiner/Possessive modifier" ;
-    cx:hasIndex cx:Idiomaticconstructions_C_Index ;
+    cx:hasIndex cx:Idiomaticconstructions_3_Index ;
     rcxn:hasSemanticRole oliatop:PossessorRole .
 
-cx:Idiomaticconstructions_C_Form a rcxn:SlotForm ;
+cx:Idiomaticconstructions_3_Form a rcxn:SlotForm ;
     cx:hasSyntacticForm cx:eng_PossessivePronoun .
 
-cx:Idiomaticconstructions_C_Index a cx:Individual ;
+cx:Idiomaticconstructions_3_Index a cx:Individual ;
     cx:hasAnimacy cx:animate .
 
-cx:Idiomaticconstructions_D a rcxn:SlotMandatory ;
+cx:Idiomaticconstructions_4 a rcxn:SlotMandatory ;
     cx:WordOrder "Final position" ;
-    rcxn:hasSlotForm cx:Idiomaticconstructions_D_Form ;
-    cx:hasIndex cx:Idiomaticconstructions_D_Index ;
+    rcxn:hasSlotForm cx:Idiomaticconstructions_4_Form ;
+    cx:hasIndex cx:Idiomaticconstructions_4_Index ;
     rcxn:hasSemanticRole oliatop:ThemeRole .
 
-cx:Idiomaticconstructions_D_Form a rcxn:SlotForm ;
+cx:Idiomaticconstructions_4_Form a rcxn:SlotForm ;
     cx:hasSyntacticForm cx:eng_NounPhrase ;
     cx:hasCaseFeature olia:AccusativeCase ;
     rcxn:hasStem "bridge" ;
     rcxn:hasSurfaceForm "bridges" .
 
-cx:Idiomaticconstructions_D_Index a cx:Individual ;
+cx:Idiomaticconstructions_4_Index a cx:Individual ;
     cx:hasAnimacy cx:inanimate ;
     olia:hasNumber olia:Paucal .
 
@@ -87,10 +87,10 @@ cx:Idiomaticconstructions_Meaning a rcxn:ConstructionMeaning ;
      "to commit oneself to a course from which there is no retreat" .
 
 cx:Idiomaticconstructions_slots a rdf:Seq ;
-    rdf:_1 cx:Idiomaticconstructions_A ;
-    rdf:_2 cx:Idiomaticconstructions_B ;
-    rdf:_3 cx:Idiomaticconstructions_C ;
-    rdf:_4 cx:Idiomaticconstructions_D .
+    rdf:_1 cx:Idiomaticconstructions_1 ;
+    rdf:_2 cx:Idiomaticconstructions_2 ;
+    rdf:_3 cx:Idiomaticconstructions_3 ;
+    rdf:_4 cx:Idiomaticconstructions_4 .
 
 cx:eng_Pronoun a rcxn:Construction ;
     rcxn:hasTitle "Pronoun" ;

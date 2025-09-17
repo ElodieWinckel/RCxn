@@ -21,35 +21,35 @@
     lg:partOfLanguage lg:eng ;
     RDFS:comment "tables (of association scores, etc.) and possibly some figures" .
 
-<http://example.org/cx/come+[noise/mannerofmovement]V-ing_A> a rcxn:SlotOptional ;
-    rcxn:hasSlotForm <http://example.org/cx/come+[noise/mannerofmovement]V-ing_A_Form> ;
+<http://example.org/cx/come+[noise/mannerofmovement]V-ing_1> a rcxn:SlotOptional ;
+    rcxn:hasSlotForm <http://example.org/cx/come+[noise/mannerofmovement]V-ing_1_Form> ;
     rcxn:hasSyntacticFunction "subject" ;
     rcxn:hasSemanticRole oliatop:UndergoerMacroRole .
 
-<http://example.org/cx/come+[noise/mannerofmovement]V-ing_A_Form> a rcxn:SlotForm ;
+<http://example.org/cx/come+[noise/mannerofmovement]V-ing_1_Form> a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_NounPhrase .
 
-<http://example.org/cx/come+[noise/mannerofmovement]V-ing_B> a rcxn:SlotMandatory ;
+<http://example.org/cx/come+[noise/mannerofmovement]V-ing_2> a rcxn:SlotMandatory ;
     cx:WordOrder "Element 2 immediately before element 3" ;
-    rcxn:hasSlotForm <http://example.org/cx/come+[noise/mannerofmovement]V-ing_B_Form> ;
+    rcxn:hasSlotForm <http://example.org/cx/come+[noise/mannerofmovement]V-ing_2_Form> ;
     RDFS:comment "perspective may imply subjective perception, enhanced expressivity, or inevitability of the action decribed by element 3" .
 
-<http://example.org/cx/come+[noise/mannerofmovement]V-ing_B_Form> a rcxn:SlotForm ;
+<http://example.org/cx/come+[noise/mannerofmovement]V-ing_2_Form> a rcxn:SlotForm ;
     rcxn:hasStem "come" ;
     rcxn:hasSyntacticForm cx:eng_Verb .
 
-<http://example.org/cx/come+[noise/mannerofmovement]V-ing_C> a rcxn:SlotMandatory ;
-    rcxn:hasSlotForm <http://example.org/cx/come+[noise/mannerofmovement]V-ing_C_Form> ;
+<http://example.org/cx/come+[noise/mannerofmovement]V-ing_3> a rcxn:SlotMandatory ;
+    rcxn:hasSlotForm <http://example.org/cx/come+[noise/mannerofmovement]V-ing_3_Form> ;
     RDFS:comment "colloprofile: tumbling (36); hurrying (22); barging (11); hurtling (22); striding (20); crashing (27); rushing (56); bounding (14); bursting (19); crowding (11); pouring (23); running (109); surging (7); roaring (12); streaming (7); trotting (10); flying (22); shambling (4); riding (21); blundering (5); leaping (7); stumbling (6); clattering (5); floating (5); thundering (5); charging (9); spilling (5); storming (5); lolloping (3); drifting (7); tearing (7); galloping (4); panting (6); racing (11); scurrying (4); loping (3); prancing (3); straggling (3)",
         "present participle" .
 
-<http://example.org/cx/come+[noise/mannerofmovement]V-ing_C_Form> a rcxn:SlotForm ;
+<http://example.org/cx/come+[noise/mannerofmovement]V-ing_3_Form> a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_VerbING .
 
-<http://example.org/cx/come+[noise/mannerofmovement]V-ing_D> a rcxn:SlotOptional ;
+<http://example.org/cx/come+[noise/mannerofmovement]V-ing_4> a rcxn:SlotOptional ;
     rcxn:hasSemanticRole oliatop:GoalRole .
 
-<http://example.org/cx/come+[noise/mannerofmovement]V-ing_D_Form> a rcxn:SlotForm ;
+<http://example.org/cx/come+[noise/mannerofmovement]V-ing_4_Form> a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_PrepositionalPhrase , cx:eng_Particle .
 
 <http://example.org/cx/come+[noise/mannerofmovement]V-ing_Ex_A> a cx:Example ;
@@ -76,10 +76,10 @@
     cx:basedOn <https://journals.openedition.org/anglophonia/5335> .
 
 <http://example.org/cx/come+[noise/mannerofmovement]V-ing_slots> a rdf:Seq ;
-    rdf:_1 <http://example.org/cx/come+[noise/mannerofmovement]V-ing_A> ;
-    rdf:_2 <http://example.org/cx/come+[noise/mannerofmovement]V-ing_B> ;
-    rdf:_3 <http://example.org/cx/come+[noise/mannerofmovement]V-ing_C> ;
-    rdf:_4 <http://example.org/cx/come+[noise/mannerofmovement]V-ing_D> .
+    rdf:_1 <http://example.org/cx/come+[noise/mannerofmovement]V-ing_1> ;
+    rdf:_2 <http://example.org/cx/come+[noise/mannerofmovement]V-ing_2> ;
+    rdf:_3 <http://example.org/cx/come+[noise/mannerofmovement]V-ing_3> ;
+    rdf:_4 <http://example.org/cx/come+[noise/mannerofmovement]V-ing_4> .
 
 <https://journals.openedition.org/anglophonia/5335> dc:creator "Gournay, Lucie" ;
     dc:date "2023/07/13" ;

@@ -42,24 +42,24 @@
     rcxn:annotator membr:Kligge ;
     rcxn:creationDate "2024-12-02"^^xsd:date .
 
-<http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_A> a rcxn:SlotMandatory ;
-    rcxn:hasSlotForm <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_A_Form> ;
+<http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_1> a rcxn:SlotMandatory ;
+    rcxn:hasSlotForm <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_1_Form> ;
     cx:WordOrder "element 1 immediately before element 2" .
 
-<http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_A_Form> a rcxn:SlotForm ;
+<http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_1_Form> a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:deu_DefiniteDeterminer .
 
-<http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_B> a rcxn:SlotMandatory ;
-    rcxn:hasSlotForm <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_B_Form> ;
+<http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_2> a rcxn:SlotMandatory ;
+    rcxn:hasSlotForm <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_2_Form> ;
     cx:WordOrder "element 2 immediately before element 3".
 
-<http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_B_Form> a rcxn:SlotForm ;
+<http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_2_Form> a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:deu_Adjective .
 
-<http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_C> a rcxn:SlotMandatory ;
-    rcxn:hasSlotForm <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_C_Form> .
+<http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_3> a rcxn:SlotMandatory ;
+    rcxn:hasSlotForm <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_3_Form> .
 
-<http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_C_Form> a rcxn:SlotForm ;
+<http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_3_Form> a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:deu_Noun .
 
 <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_MD> a rcxn:Metadata ;
@@ -69,9 +69,9 @@
 <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_Meaning> a rcxn:ConstructionMeaning .
 
 <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_slots> a rdf:Seq ;
-    rdf:_1 <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_A> ;
-    rdf:_2 <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_B> ;
-    rdf:_2 <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_C> .
+    rdf:_1 <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_1> ;
+    rdf:_2 <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_2> ;
+    rdf:_2 <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_3> .
 
 <http://example.org/cx/NP[das+ADJ-e+N]nom.sg.neut> a rcxn:Construction ;
     rcxn:hasMetadata <http://example.org/cx/NP[das+ADJ-e+N]nom.sg.neut_MD> ;

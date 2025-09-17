@@ -51,13 +51,13 @@
     rcxn:hasTitle "NP[den+ ADJ-en N]acc.sg.masc" ;
     lg:partOfLanguage lg:deu .
 
-<http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_A> a rcxn:SlotMandatory ;
+<http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_1> a rcxn:SlotMandatory ;
     cx:WordOrder "Element 1 immediately before Element 2." .
 
-<http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_B> a rcxn:SlotMandatory ;
+<http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_2> a rcxn:SlotMandatory ;
     cx:WordOrder "Element 2 immediately before Element 3." .
 
-<http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_C> a rcxn:SlotMandatory .
+<http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_3> a rcxn:SlotMandatory .
 
 <http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_MD> a rcxn:Metadata ;
     rcxn:annotator membr:Kligge ;
@@ -67,9 +67,9 @@
     rcxn:hasMeaning "NPs in German have obligatory grammatical marking specifying case, number, gender." .
 
 <http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_slots> a rdf:Seq ;
-    rdf:_1 <http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_A> ;
-    rdf:_2 <http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_B> ;
-    rdf:_3 <http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_C> .
+    rdf:_1 <http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_1> ;
+    rdf:_2 <http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_2> ;
+    rdf:_3 <http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_3> .
 
 <http://example.org/cx/NP[die+ADJ-eN]nom.sg.fem> a rcxn:Construction ;
     cx:annotator membr:Kligge ;

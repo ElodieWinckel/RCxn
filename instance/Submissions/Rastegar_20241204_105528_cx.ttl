@@ -59,62 +59,62 @@ cx:Englishrollupyoursleeves_MD a rcxn:Metadata ;
     rcxn:hasTitle "mār āstin-e xod parvarāndan: to nurture a snake in one's bosom" ;
     lg:partOfLanguage lg:pes .
 
-cx:Idiomaticconstruction_A a rcxn:SlotMandatory ;
+cx:Idiomaticconstruction_1 a rcxn:SlotMandatory ;
     cx:WordOrder "Initial position in prepositional phrase" ;
-    rcxn:hasSlotForm cx:Idiomaticconstruction_A_Form ;
+    rcxn:hasSlotForm cx:Idiomaticconstruction_1_Form ;
     cx:hasTranslation "out of" ;
     rcxn:hasSyntacticFunction "Head of PP" ;
     rcxn:hasOtherSemanticContribution "source" .
 
-cx:Idiomaticconstruction_A_Form a rcxn:SlotForm ;
+cx:Idiomaticconstruction_1_Form a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "aus" ;
     rcxn:hasSyntacticForm cx:deu_Preposition .
 
-cx:Idiomaticconstruction_B a rcxn:SlotMandatory ;
+cx:Idiomaticconstruction_2 a rcxn:SlotMandatory ;
     cx:WordOrder "follows preposition, precedes noun" ;
-    rcxn:hasSlotForm cx:Idiomaticconstruction_B_Form ;
+    rcxn:hasSlotForm cx:Idiomaticconstruction_2_Form ;
     cx:hasTranslation "the" ;
     rcxn:hasSyntacticFunction "Determiner" ;
-    cx:hasIndex cx:Idiomaticconstruction_B_Index .
+    cx:hasIndex cx:Idiomaticconstruction_2_Index .
 
-cx:Idiomaticconstruction_B_Form a rcxn:SlotForm ;
+cx:Idiomaticconstruction_2_Form a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "dem" ;
     rcxn:hasSyntacticForm cx:deu_DefiniteArticle ;
     cx:hasCaseFeature olia:DativeCase .
 
-cx:Idiomaticconstruction_B_Index a cx:Individual ;
+cx:Idiomaticconstruction_2_Index a cx:Individual ;
     cx:hasGender cx:masculine ;
     olia:hasNumber olia:Singular .
 
-cx:Idiomaticconstruction_C a rcxn:SlotMandatory ;
+cx:Idiomaticconstruction_3 a rcxn:SlotMandatory ;
     cx:WordOrder "Follows article" ;
-    rcxn:hasSlotForm cx:Idiomaticconstruction_C_Form ;
+    rcxn:hasSlotForm cx:Idiomaticconstruction_3_Form ;
     cx:hasTranslation "sleeve" ;
-    cx:hasIndex cx:Idiomaticconstruction_C_Index ;
+    cx:hasIndex cx:Idiomaticconstruction_3_Index ;
     rcxn:hasSemanticRole oliatop:LocationRole .
 
-cx:Idiomaticconstruction_C_Form a rcxn:SlotForm ;
+cx:Idiomaticconstruction_3_Form a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "Ärmel" ;
     rcxn:hasSyntacticForm cx:deu_Noun ;
     cx:hasCaseFeature olia:DativeCase .
 
-cx:Idiomaticconstruction_C_Index a cx:Individual ;
+cx:Idiomaticconstruction_3_Index a cx:Individual ;
     cx:hasAnimacy cx:inanimate ;
     cx:hasGender cx:masculine ;
     olia:hasNumber olia:Singular .
 
-cx:Idiomaticconstruction_D a rcxn:SlotMandatory ;
+cx:Idiomaticconstruction_4 a rcxn:SlotMandatory ;
     cx:WordOrder "Verb-final in dependent clauses / V2 in main clauses" ;
-    rcxn:hasSlotForm cx:Idiomaticconstruction_D_Form ;
+    rcxn:hasSlotForm cx:Idiomaticconstruction_4_Form ;
     cx:hasTranslation "shake" ;
-    cx:hasIndex cx:Idiomaticconstruction_D_Index ;
+    cx:hasIndex cx:Idiomaticconstruction_4_Index ;
     rcxn:hasOtherSemanticContribution "Action" .
 
-cx:Idiomaticconstruction_D_Form a rcxn:SlotForm ;
+cx:Idiomaticconstruction_4_Form a rcxn:SlotForm ;
     rcxn:hasStem "schütteln" ;
     rcxn:hasSyntacticForm cx:deu_Verb .
 
-cx:Idiomaticconstruction_D_Index a cx:Event ;
+cx:Idiomaticconstruction_4_Index a cx:Event ;
     cx:hasMode olia:IndicativeVerb ;
     cx:hasVoice cx:active .
 
@@ -138,10 +138,10 @@ cx:Idiomaticconstruction_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "done with ease" .
 
 cx:Idiomaticconstruction_slots a rdf:Seq ;
-    rdf:_1 cx:Idiomaticconstruction_A ;
-    rdf:_2 cx:Idiomaticconstruction_B ;
-    rdf:_3 cx:Idiomaticconstruction_C ;
-    rdf:_4 cx:Idiomaticconstruction_D .
+    rdf:_1 cx:Idiomaticconstruction_1 ;
+    rdf:_2 cx:Idiomaticconstruction_2 ;
+    rdf:_3 cx:Idiomaticconstruction_3 ;
+    rdf:_4 cx:Idiomaticconstruction_4 .
 
 cx:deu_DefiniteArticle a rcxn:Construction ;
     rcxn:hasTitle "Definite Article" ;

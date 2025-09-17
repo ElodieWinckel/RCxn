@@ -20,28 +20,28 @@ cx:POU-beneficiaryconstruction a rcxn:Construction ;
 
 membr: membr:SubProject membr:Project_Legoute_241128 .
 
-cx:POU-beneficiaryconstruction_A a rcxn:SlotMandatory ;
-    rcxn:hasSlotForm cx:POU-beneficiaryconstruction_A_Form ;
+cx:POU-beneficiaryconstruction_1 a rcxn:SlotMandatory ;
+    rcxn:hasSlotForm cx:POU-beneficiaryconstruction_1_Form ;
     RDFS:comment "not always concrete" ;
     rcxn:hasSemanticRole oliatop:ThemeRole .
 
-cx:POU-beneficiaryconstruction_A_Form a rcxn:SlotForm ;
+cx:POU-beneficiaryconstruction_1_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:hat_Phrase .
 
-cx:POU-beneficiaryconstruction_B a rcxn:SlotMandatory ;
+cx:POU-beneficiaryconstruction_2 a rcxn:SlotMandatory ;
     cx:WordOrder "element POU is always before the NP" ;
-    rcxn:hasSlotForm cx:POU-beneficiaryconstruction_B_Form ;
+    rcxn:hasSlotForm cx:POU-beneficiaryconstruction_2_Form ;
     cx:hasTranslation "For" .
 
-cx:POU-beneficiaryconstruction_B_Form a rcxn:SlotForm ;
+cx:POU-beneficiaryconstruction_2_Form a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "POU" ;
     rcxn:hasSyntacticForm cx:hat_InvariableSyntacticMorpheme .
 
-cx:POU-beneficiaryconstruction_C a rcxn:SlotMandatory ;
-    rcxn:hasSlotForm cx:POU-beneficiaryconstruction_C_Form ;
+cx:POU-beneficiaryconstruction_3 a rcxn:SlotMandatory ;
+    rcxn:hasSlotForm cx:POU-beneficiaryconstruction_3_Form ;
     cx:hasOtherSemanticContribution "Beneficiary" .
 
-cx:POU-beneficiaryconstruction_C_Form a rcxn:SlotForm ;
+cx:POU-beneficiaryconstruction_3_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:hat_NounPhrase .
 
 cx:POU-beneficiaryconstruction_Ex_A a cx:Example ;
@@ -58,9 +58,9 @@ cx:POU-beneficiaryconstruction_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "Refer to a beneficiary" .
 
 cx:POU-beneficiaryconstruction_slots a rdf:Seq ;
-    rdf:_1 cx:POU-beneficiaryconstruction_A ;
-    rdf:_2 cx:POU-beneficiaryconstruction_B ;
-    rdf:_3 cx:POU-beneficiaryconstruction_C .
+    rdf:_1 cx:POU-beneficiaryconstruction_1 ;
+    rdf:_2 cx:POU-beneficiaryconstruction_2 ;
+    rdf:_3 cx:POU-beneficiaryconstruction_3 .
 
 cx:POU-purposeconstruction a rcxn:Construction ;
     rcxn:hasMetadata cx:POU-purposeconstruction_MD ;

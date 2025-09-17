@@ -14,31 +14,31 @@
     rcxn:hasSlots cx:TheEnglishGIVE-OUTVerbParticleConstruction._slots ;
     lg:partOfLanguage lg:eng .
 
-cx:TheEnglishGIVE-OUTVerbParticleConstruction._A a rcxn:SlotOptional ;
-    rcxn:hasSlotForm cx:TheEnglishGIVE-OUTVerbParticleConstruction._A_Form ;
+cx:TheEnglishGIVE-OUTVerbParticleConstruction._1 a rcxn:SlotOptional ;
+    rcxn:hasSlotForm cx:TheEnglishGIVE-OUTVerbParticleConstruction._1_Form ;
     rcxn:hasSyntacticFunction "SUBJ" ;
     rcxn:hasOtherSemanticContribution "ÆFFECTOR" .
 
-cx:TheEnglishGIVE-OUTVerbParticleConstruction._A_Form a rcxn:SlotForm ;
+cx:TheEnglishGIVE-OUTVerbParticleConstruction._1_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_NounPhrase .
 
-cx:TheEnglishGIVE-OUTVerbParticleConstruction._B a rcxn:SlotMandatory ;
+cx:TheEnglishGIVE-OUTVerbParticleConstruction._2 a rcxn:SlotMandatory ;
     cx:WordOrder "Element 2 follows the element 1" ;
-    rcxn:hasSlotForm cx:TheEnglishGIVE-OUTVerbParticleConstruction._B_Form .
+    rcxn:hasSlotForm cx:TheEnglishGIVE-OUTVerbParticleConstruction._2_Form .
 
-cx:TheEnglishGIVE-OUTVerbParticleConstruction._B_Form a rcxn:SlotForm ;
+cx:TheEnglishGIVE-OUTVerbParticleConstruction._2_Form a rcxn:SlotForm ;
     rcxn:hasStem "give" ;
     rcxn:hasSyntacticForm cx:eng_Verb .
 
-cx:TheEnglishGIVE-OUTVerbParticleConstruction._C a rcxn:SlotMandatory ;
+cx:TheEnglishGIVE-OUTVerbParticleConstruction._3 a rcxn:SlotMandatory ;
     cx:WordOrder "The element 3 follows the element 2 but not necessarily directly" ;
-    rcxn:hasSlotForm cx:TheEnglishGIVE-OUTVerbParticleConstruction._C_Form .
+    rcxn:hasSlotForm cx:TheEnglishGIVE-OUTVerbParticleConstruction._3_Form .
 
-cx:TheEnglishGIVE-OUTVerbParticleConstruction._C_Form a rcxn:SlotForm ;
+cx:TheEnglishGIVE-OUTVerbParticleConstruction._3_Form a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "out" ;
     rcxn:hasSyntacticForm cx:eng_Particle .
 
-cx:TheEnglishGIVE-OUTVerbParticleConstruction._D a rcxn:SlotMandatory ;
+cx:TheEnglishGIVE-OUTVerbParticleConstruction._4 a rcxn:SlotMandatory ;
     cx:hasOtherSemanticContribution "AFFECTED ACTION" .
 
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._Ex_A a cx:Example ;
@@ -52,10 +52,10 @@ cx:TheEnglishGIVE-OUTVerbParticleConstruction._Meaning a rcxn:ConstructionMeanin
     rcxn:hasMeaning "An ÆFFECTOR distributes items to multiple recipients or reaches a point of depletion or cessation of function." .
 
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._slots a rdf:Seq ;
-    rdf:_1 cx:TheEnglishGIVE-OUTVerbParticleConstruction._A ;
-    rdf:_2 cx:TheEnglishGIVE-OUTVerbParticleConstruction._B ;
-    rdf:_3 cx:TheEnglishGIVE-OUTVerbParticleConstruction._C ;
-    rdf:_3 cx:TheEnglishGIVE-OUTVerbParticleConstruction._D .
+    rdf:_1 cx:TheEnglishGIVE-OUTVerbParticleConstruction._1 ;
+    rdf:_2 cx:TheEnglishGIVE-OUTVerbParticleConstruction._2 ;
+    rdf:_3 cx:TheEnglishGIVE-OUTVerbParticleConstruction._3 ;
+    rdf:_3 cx:TheEnglishGIVE-OUTVerbParticleConstruction._4 .
 
 cx:eng_NounPhrase a rcxn:Construction ;
     rcxn:hasTitle "Noun Phrase" ;

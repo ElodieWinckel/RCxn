@@ -78,62 +78,62 @@ cx:Spanishtransitiveconstruction_MD a rcxn:Metadata ;
     rcxn:annotator membr:FernandezSantos ;
     rcxn:creationDate "2024-11-25"^^xsd:date .
 
-cx:Transitiveobjectrelativeclause_A a rcxn:SlotMandatory ;
-    rcxn:hasSlotForm cx:Transitiveobjectrelativeclause_A_Form ;
+cx:Transitiveobjectrelativeclause_1 a rcxn:SlotMandatory ;
+    rcxn:hasSlotForm cx:Transitiveobjectrelativeclause_1_Form ;
     rcxn:hasSyntacticFunction "Object (within the clause)" ;
-    cx:hasIndex cx:Transitiveobjectrelativeclause_A_Index .
+    cx:hasIndex cx:Transitiveobjectrelativeclause_1_Index .
 
-cx:Transitiveobjectrelativeclause_A_Form a rcxn:SlotForm ;
+cx:Transitiveobjectrelativeclause_1_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:spa_NounPhrase .
 
-cx:Transitiveobjectrelativeclause_A_Index a cx:Individual ;
+cx:Transitiveobjectrelativeclause_1_Index a cx:Individual ;
     cx:hasAnimacy cx:animate ;
     olia:hasNumber olia:Singular ;
     cx:hasGender "[1]" .
 
-cx:Transitiveobjectrelativeclause_B a rcxn:SlotOptional ;
+cx:Transitiveobjectrelativeclause_2 a rcxn:SlotOptional ;
     cx:WordOrder "If present, Element 2 immediately after Element 1" ;
-    rcxn:hasSlotForm cx:Transitiveobjectrelativeclause_B_Form ;
+    rcxn:hasSlotForm cx:Transitiveobjectrelativeclause_2_Form ;
     cx:hasTranslation "to:the" ;
     rcxn:hasSyntacticFunction "direct object marker" .
 
-cx:Transitiveobjectrelativeclause_B_Form a rcxn:SlotForm ;
+cx:Transitiveobjectrelativeclause_2_Form a rcxn:SlotForm ;
     rcxn:hasStem "a + article" ;
     rcxn:hasSyntacticForm cx:spa_PrepositionalPhrase .
 
-cx:Transitiveobjectrelativeclause_C a rcxn:SlotMandatory ;
+cx:Transitiveobjectrelativeclause_3 a rcxn:SlotMandatory ;
     cx:WordOrder "immediately after Element 1 (if Element 2 not present), or immediately after Element 2 if present" ;
-    rcxn:hasSlotForm cx:Transitiveobjectrelativeclause_C_Form ;
+    rcxn:hasSlotForm cx:Transitiveobjectrelativeclause_3_Form ;
     cx:hasTranslation "that" .
 
-cx:Transitiveobjectrelativeclause_C_Form a rcxn:SlotForm ;
+cx:Transitiveobjectrelativeclause_3_Form a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "que" ;
     rcxn:hasSyntacticForm cx:spa_Relativizer .
 
-cx:Transitiveobjectrelativeclause_D a rcxn:SlotMandatory ;
+cx:Transitiveobjectrelativeclause_4 a rcxn:SlotMandatory ;
     cx:WordOrder "Immediately after Element 3" ;
-    rcxn:hasSlotForm cx:Transitiveobjectrelativeclause_D_Form ;
+    rcxn:hasSlotForm cx:Transitiveobjectrelativeclause_4_Form ;
     rcxn:hasSyntacticFunction "subject (within the clause)" ;
-    cx:hasIndex cx:Transitiveobjectrelativeclause_D_Index .
+    cx:hasIndex cx:Transitiveobjectrelativeclause_4_Index .
 
-cx:Transitiveobjectrelativeclause_D_Form a rcxn:SlotForm ;
+cx:Transitiveobjectrelativeclause_4_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:spa_NounPhrase .
 
-cx:Transitiveobjectrelativeclause_D_Index a cx:Individual ;
+cx:Transitiveobjectrelativeclause_4_Index a cx:Individual ;
     cx:hasAnimacy cx:animate ;
     olia:hasNumber olia:Singular ;
     cx:hasGender "[1]" .
 
-cx:Transitiveobjectrelativeclause_E a rcxn:SlotMandatory ;
+cx:Transitiveobjectrelativeclause_5 a rcxn:SlotMandatory ;
     cx:WordOrder "immediately after Element 4" ;
-    rcxn:hasSlotForm cx:Transitiveobjectrelativeclause_E_Form ;
-    cx:hasIndex cx:Transitiveobjectrelativeclause_E_Index ;
+    rcxn:hasSlotForm cx:Transitiveobjectrelativeclause_5_Form ;
+    cx:hasIndex cx:Transitiveobjectrelativeclause_5_Index ;
     RDFS:comment "1st conjugation verb" .
 
-cx:Transitiveobjectrelativeclause_E_Form a rcxn:SlotForm ;
+cx:Transitiveobjectrelativeclause_5_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:spa_Verb .
 
-cx:Transitiveobjectrelativeclause_E_Index a cx:Event ;
+cx:Transitiveobjectrelativeclause_5_Index a cx:Event ;
     olia:hasTense olia:Present ;
     cx:hasVoice cx:active .
 
@@ -174,11 +174,11 @@ cx:Transitiveobjectrelativeclause_Sources a cx:Collection ;
     cx:hasLiterature <https://onlinelibrary.wiley.com/doi/10.1111/lang.12066> .
 
 cx:Transitiveobjectrelativeclause_slots a rdf:Seq ;
-    rdf:_1 cx:Transitiveobjectrelativeclause_A ;
-    rdf:_2 cx:Transitiveobjectrelativeclause_B ;
-    rdf:_3 cx:Transitiveobjectrelativeclause_C ;
-    rdf:_4 cx:Transitiveobjectrelativeclause_D ;
-    rdf:_5 cx:Transitiveobjectrelativeclause_E .
+    rdf:_1 cx:Transitiveobjectrelativeclause_1 ;
+    rdf:_2 cx:Transitiveobjectrelativeclause_2 ;
+    rdf:_3 cx:Transitiveobjectrelativeclause_3 ;
+    rdf:_4 cx:Transitiveobjectrelativeclause_4 ;
+    rdf:_5 cx:Transitiveobjectrelativeclause_5 .
 
 <https://onlinelibrary.wiley.com/doi/10.1111/lang.12066> dc:creator "Reali, Florencia" ;
     dc:date "2014" ;

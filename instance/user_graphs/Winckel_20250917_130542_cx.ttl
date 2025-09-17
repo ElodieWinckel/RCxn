@@ -1,0 +1,49 @@
+@prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cx: <http://example.org/cx/> .
+@prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
+@prefix membr: <http://example.org/users#> .
+@prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cx:ita_Non-restrictiverelativeclause_A a rcxn:SlotMandatory ;
+    rcxn:hasSlotForm cx:ita_Non-restrictiverelativeclause_A_Form .
+
+cx:ita_Non-restrictiverelativeclause_B a rcxn:SlotMandatory ;
+    rcxn:hasSlotForm cx:ita_Non-restrictiverelativeclause_B_Form .
+
+cx:ita_Non-restrictiverelativeclause_C a rcxn:SlotMandatory .
+
+membr:Project_Winckel rsrch:hasFindings membr:Project_Winckel_F2509171305 .
+
+cx:eng_Pronoun rcxn:elementOf cx:ita_Non-restrictiverelativeclause .
+
+cx:ita_Non-restrictiverelativeclause_A_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:eng_Pronoun .
+
+cx:ita_Non-restrictiverelativeclause_B_Form a rcxn:SlotForm ;
+    rcxn:hasStem "wem" .
+
+cx:ita_Non-restrictiverelativeclause_MD a rcxn:Metadata ;
+    cx:annotator membr:Winckel ;
+    rcxn:creationDate "2025-09-17"^^xsd:date .
+
+cx:ita_Non-restrictiverelativeclause_Meaning a rcxn:ConstructionMeaning .
+
+cx:ita_Non-restrictiverelativeclause_slots a rdf:Seq ;
+    rdf:_1 cx:ita_Non-restrictiverelativeclause_1 ;
+    rdf:_2 cx:ita_Non-restrictiverelativeclause_2 ;
+    rdf:_3 cx:ita_Non-restrictiverelativeclause_3 .
+
+membr:Project_Winckel_F2509171305 a rsrch:Finding ;
+    RDFS:label "RC exist" ;
+    rsrch:basedOn cx:ita_Non-restrictiverelativeclause .
+
+cx:ita_Non-restrictiverelativeclause a rcxn:Construction ;
+    lg:partOfLanguage lg:ita ;
+    rcxn:hasConstructionMeaning cx:ita_Non-restrictiverelativeclause_Meaning ;
+    rcxn:hasMetadata cx:ita_Non-restrictiverelativeclause_MD ;
+    rcxn:hasSlots cx:ita_Non-restrictiverelativeclause_slots ;
+    rcxn:hasTitle "Non-restrictive relative clause" .
+

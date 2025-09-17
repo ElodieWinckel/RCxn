@@ -311,7 +311,6 @@ def construction_detail(uri):
     for collection in g.objects(subject=metadata_uri, predicate=CX.hasSources):
             # Get all literature entries in this collection
             for lit in g.objects(collection, CX.hasLiterature):
-                print(lit)
                 # Extract details for each literature entry
                 creators = [str(c) for c in g.objects(lit, dc.creator)]
                 date = g.value(lit, dc.date)
