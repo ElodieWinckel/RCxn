@@ -139,25 +139,29 @@ cx:Transitiveobjectrelativeclause_5_Index a cx:Event ;
 
 cx:Transitiveobjectrelativeclause_Ex_A a cx:Example ;
     cx:hasGlosses "The grandpa to:the that the kid hugs" ;
-    cx:hasAnnotatedText "[El abuelo]A [al]B [que]C [el niño]D [abraza]E" ;
+    cx:hasAnnotatedText "[El abuelo]1 [al]2 [que]3 [el niño]4 [abraza]5" ;
+    cx:hasText "El abuelo al que el niño abraza" ;
     cx:hasTranslation "The grandpa that is being hugged by the kid" ;
     RDFS:comment "a-variant verb-final" .
 
 cx:Transitiveobjectrelativeclause_Ex_B a cx:Example ;
     cx:hasGlosses "The grandpa that the kid hugs" ;
     cx:hasText "El abuelo que el niño abraza" ;
+    cx:hasAnnotatedText "[El abuelo]1 [que]3 [el niño]4 [abraza]5" ;
     cx:hasTranslation "The grandpa that is being hugged by the kid" ;
     RDFS:comment "plain-variant verb-final" .
 
 cx:Transitiveobjectrelativeclause_Ex_C a cx:Example ;
     cx:hasGlosses "The grandpa to:the that hugs the kid" ;
     cx:hasText "El abuelo al que abraza el niño" ;
+    cx:hasAnnotatedText "[El abuelo]1 [al]2 [que]3 [abraza]5 [el niño]4" ;
     cx:hasTranslation "The grandpa that is being hugged by the kid" ;
     RDFS:comment "a-variant verb-medial" .
 
 cx:Transitiveobjectrelativeclause_Ex_D a cx:Example ;
     cx:hasGlosses "The grandpa that hugs the kid" ;
     cx:hasText "El abuelo que abraza el niño" ;
+    cx:hasAnnotatedText "[El abuelo]1 [que]3 [abraza]5 [el niño]4" ;
     cx:hasTranslation "The grandpa that is being hugged by the kid" ;
     RDFS:comment "plain-variant verb-medial" .
 

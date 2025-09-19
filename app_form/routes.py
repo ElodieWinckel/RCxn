@@ -2,6 +2,7 @@ from . import app_form_blueprint
 from flask import current_app, request, render_template, send_file
 from rdflib import Graph, URIRef, Literal, Namespace, RDF, XSD
 from datetime import datetime
+import re
 import glob
 import json
 import os
@@ -788,9 +789,11 @@ def form_submit():
 
         # Add RDF triples for the example if needed
         if example_text.strip(): #TODO actually, there should not be any example without a text; but if users create an example by mistake, this needs to be handled
+            example_text_no_annotation = re.sub(r'\[([^\]]*)\](\d+)', r'\1', example_text)
             g.add((cx[construction_name_cleaned], cx.hasExample, example_uri))
             g.add((example_uri, RDF.type, cx.Example))
-            g.add((example_uri, cx.hasText, Literal(example_text)))
+            g.add((example_uri, cx.hasAnnotatedText, Literal(example_text)))
+            g.add((example_uri, cx.hasText, Literal(example_text_no_annotation)))
         if ex_translation.strip():
             g.add((example_uri, cx.hasTranslation, Literal(ex_translation)))
         if ex_transliteration.strip():

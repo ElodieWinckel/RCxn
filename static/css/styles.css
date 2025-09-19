@@ -275,3 +275,65 @@ td {
 tr:hover {
     background-color: #f5f5f5;
 }
+
+/* Colors for construction elements */
+ce1 {
+    background-color: #F94144;
+    padding: 2px 4px;
+    border-radius: 3px; /* Optional: rounded corners */
+  }
+ce2 {
+    background-color: #F8961E;
+    padding: 2px 4px;
+    border-radius: 3px; /* Optional: rounded corners */
+  }
+ce3 {
+    background-color: #F9C74F;
+    padding: 2px 4px;
+    border-radius: 3px; /* Optional: rounded corners */
+  }
+ce4 {
+    background-color: #90BE6D;
+    padding: 2px 4px;
+    border-radius: 3px; /* Optional: rounded corners */
+  }
+ce5 {
+    background-color: #43AA8B;
+    padding: 2px 4px;
+    border-radius: 3px; /* Optional: rounded corners */
+  }
+ce6 {
+    background-color: #577590;
+    padding: 2px 4px;
+    border-radius: 3px; /* Optional: rounded corners */
+  }
+ce7 {
+    background-color: #FFD1DC;
+    padding: 2px 4px;
+    border-radius: 3px; /* Optional: rounded corners */
+  }
+ce8 {
+    background-color: #E6E6FA;
+    padding: 2px 4px;
+    border-radius: 3px; /* Optional: rounded corners */
+  }
+ce9 {
+    background-color: #98FB98;
+    padding: 2px 4px;
+    border-radius: 3px; /* Optional: rounded corners */
+  }
+ce10 {
+    background-color: #F0E68C;
+    padding: 2px 4px;
+    border-radius: 3px; /* Optional: rounded corners */
+  }
+ce11 {
+    background-color: #FFB6C1;
+    padding: 2px 4px;
+    border-radius: 3px; /* Optional: rounded corners */
+  }
+ce12 {
+    background-color: #FFA07A;
+    padding: 2px 4px;
+    border-radius: 3px; /* Optional: rounded corners */
+  }

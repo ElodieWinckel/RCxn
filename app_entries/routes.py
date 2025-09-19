@@ -280,14 +280,24 @@ def construction_detail(uri):
     examples = []
     for example in examples_uri:
         for predicate, obj in g.predicate_objects(subject=example):
-            if str(predicate) != "http://www.w3.org/1999/02/22-rdf-syntax-ns#type":
+            if str(predicate) == "http://example.org/cx/hasAnnotatedText":
+                example_text = re.sub(prefixes, "", str(obj))
+                html_code = re.sub(r'\[([^\]]*)\](\d+)', r'<ce\2>\1</ce\2>', example_text)
+                examples.append({
+                    'subject': re.sub(prefixes, "", str(example)),
+                    'property': "Text",
+                    'object': html_code,
+                })
+            else:
                 examples.append({
                     'subject': re.sub(prefixes, "", str(example)),
                     'property': re.sub(prefixes, "", str(predicate)),
                     'object': re.sub(prefixes, "", str(obj)),
                 })
+    examples[:] = [item for item in examples if item['property'] != "type"]
+    examples[:] = [item for item in examples if item['property'] != "hasText"]
     # Step 3: Sort the properties to have the text first
-    examples = sorted(examples, key=lambda x: {key: index for index, key in enumerate(['hasText', 'hasTransliteration', 'hasGlosses', 'hasTranslation', 'comment'])}.get(x['property'], 5))
+    examples = sorted(examples, key=lambda x: {key: index for index, key in enumerate(['Text', 'hasTransliteration', 'hasGlosses', 'hasTranslation', 'comment'])}.get(x['property'], 5))
     # Step 3: Group by example
     grouped_examples = {}
     for item in examples:
