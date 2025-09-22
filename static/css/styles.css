@@ -277,63 +277,135 @@ tr:hover {
 }
 
 /* Colors for construction elements */
+:root {
+    --highlight-padding: 2px 4px;
+    --highlight-border-radius: 3px;
+    --tooltip-bg: #333;
+    --tooltip-color: #fff;
+    --tooltip-padding: 4px 8px;
+    --tooltip-border-radius: 4px;
+    --tooltip-font-size: 14px;
+}
+ce1, ce2, ce3, ce4, ce5, ce6, ce7, ce8, ce9, ce10, ce11, ce12 {
+    padding: var(--highlight-padding);
+    border-radius: var(--highlight-border-radius);
+    position: relative;
+    display: inline-block;
+}
+
 ce1 {
     background-color: #F94144;
-    padding: 2px 4px;
-    border-radius: 3px; /* Optional: rounded corners */
-  }
+    }
 ce2 {
-    background-color: #F8961E;
-    padding: 2px 4px;
-    border-radius: 3px; /* Optional: rounded corners */
+    background-color: #F8961E
   }
 ce3 {
-    background-color: #F9C74F;
-    padding: 2px 4px;
-    border-radius: 3px; /* Optional: rounded corners */
+    background-color: #F9C74F
   }
 ce4 {
-    background-color: #90BE6D;
-    padding: 2px 4px;
-    border-radius: 3px; /* Optional: rounded corners */
+    background-color: #90BE6D
   }
 ce5 {
     background-color: #43AA8B;
-    padding: 2px 4px;
-    border-radius: 3px; /* Optional: rounded corners */
   }
 ce6 {
     background-color: #577590;
-    padding: 2px 4px;
-    border-radius: 3px; /* Optional: rounded corners */
   }
 ce7 {
     background-color: #FFD1DC;
-    padding: 2px 4px;
-    border-radius: 3px; /* Optional: rounded corners */
   }
 ce8 {
     background-color: #E6E6FA;
-    padding: 2px 4px;
-    border-radius: 3px; /* Optional: rounded corners */
   }
 ce9 {
     background-color: #98FB98;
-    padding: 2px 4px;
-    border-radius: 3px; /* Optional: rounded corners */
   }
 ce10 {
     background-color: #F0E68C;
-    padding: 2px 4px;
-    border-radius: 3px; /* Optional: rounded corners */
   }
 ce11 {
     background-color: #FFB6C1;
-    padding: 2px 4px;
-    border-radius: 3px; /* Optional: rounded corners */
   }
 ce12 {
     background-color: #FFA07A;
-    padding: 2px 4px;
-    border-radius: 3px; /* Optional: rounded corners */
   }
+
+ce1::after {
+    content: "Element 1";
+    }
+ce2::after {
+    content: "Element 2";
+    }
+ce3::after {
+    content: "Element 3";
+    }
+ce4::after {
+    content: "Element 4";
+    }
+ce5::after {
+    content: "Element 5";
+    }
+ce6::after {
+    content: "Element 6";
+    }
+ce7::after {
+    content: "Element 7";
+    }
+ce8::after {
+    content: "Element 8";
+    }
+ce9::after {
+    content: "Element 9";
+    }
+ce10::after {
+    content: "Element 10";
+    }
+ce11::after {
+    content: "Element 11";
+    }
+ce12::after {
+    content: "Element 12";
+    }
+
+/* Tooltip styling for all ceX elements */
+ce1::after,
+ce2::after,
+ce3::after,
+ce4::after,
+ce5::after,
+ce6::after,
+ce7::after,
+ce8::after,
+ce9::after,
+ce10::after,
+ce11::after,
+ce12::after {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--tooltip-bg);
+    color: var(--tooltip-color);
+    padding: var(--tooltip-padding);
+    border-radius: var(--tooltip-border-radius);
+    font-size: var(--tooltip-font-size);
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+
+ce1:hover::after,
+ce2:hover::after,
+ce3:hover::after,
+ce4:hover::after,
+ce5:hover::after,
+ce6:hover::after,
+ce7:hover::after,
+ce8:hover::after,
+ce9:hover::after,
+ce10:hover::after,
+ce11:hover::after,
+ce12:hover::after {
+    opacity: 1;
+}
