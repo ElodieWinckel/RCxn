@@ -1,0 +1,33 @@
+@prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cx: <http://example.org/cx/> .
+@prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
+@prefix membr: <http://example.org/users#> .
+@prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+membr:Project_Winckel rsrch:hasFindings membr:Project_Winckel_F2509231422 .
+
+cx:zho_Non-restrictiverelativeclause a rcxn:Construction ;
+    lg:partOfLanguage lg:zho ;
+    rcxn:hasConstructionMeaning cx:zho_Non-restrictiverelativeclause_Meaning ;
+    rcxn:hasMetadata cx:zho_Non-restrictiverelativeclause_MD ;
+    rcxn:hasSlots cx:zho_Non-restrictiverelativeclause_slots ;
+    rcxn:hasTitle "Non-restrictive relative clause" .
+
+cx:zho_Non-restrictiverelativeclause_1 a rcxn:SlotMandatory .
+
+cx:zho_Non-restrictiverelativeclause_MD a rcxn:Metadata ;
+    cx:annotator membr:Winckel ;
+    rcxn:creationDate "2025-09-23"^^xsd:date .
+
+cx:zho_Non-restrictiverelativeclause_Meaning a rcxn:ConstructionMeaning .
+
+cx:zho_Non-restrictiverelativeclause_slots a rdf:Seq ;
+    rdf:_1 cx:zho_Non-restrictiverelativeclause_1 .
+
+membr:Project_Winckel_F2509231422 a rsrch:Finding ;
+    RDFS:label "Rc exist" ;
+    rsrch:basedOn cx:zho_Non-restrictiverelativeclause .
+
