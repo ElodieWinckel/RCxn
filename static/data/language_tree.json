@@ -11,7 +11,8 @@
     "text": "English",
     "children": [
       {"id": "engUsSpo", "text": "Spoken American English"},
-      {"id": "engUsUkWr", "text": "Written British & American English"}
+      {"id": "engUsUkWr", "text": "Written British & American English"},
+      {"id": "engInf", "text": "Informal English"}
     ]
   },
   {

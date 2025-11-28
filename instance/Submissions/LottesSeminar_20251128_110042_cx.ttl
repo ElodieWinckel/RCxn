@@ -1,0 +1,334 @@
+@prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cx: <http://example.org/cx/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
+@prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0#> .
+@prefix membr: <http://example.org/users#> .
+@prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cx:eng_Adjective a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    rcxn:hasMetadata cx:eng_Adjective_MD ;
+    rcxn:hasTitle "Adjective" ;
+    rcxn:elementOf cx:eng_coolconstruction .
+
+cx:eng_Adjective_MD a rcxn:Metadata ;
+    cx:annotator membr:Winckel ;
+    rcxn:creationDate "2025-11-28"^^xsd:date .
+
+
+
+
+
+
+
+
+
+
+cx:coolascolourconstruction a rcxn:Construction ;
+    cx:hasExample cx:coolascolourconstruction_Ex_A ,
+                  cx:coolascolourconstruction_Ex_B ;
+    RDFS:comment "first attested: 1758, cf. OED" ;
+    lg:partOfLanguage lg:eng ;
+    links:isMetaphoricalExtensionOf cx:eng_coolconstruction ;
+    rcxn:hasConstructionMeaning cx:coolascolourconstruction_Meaning ;
+    rcxn:hasMetadata cx:coolascolourconstruction_MD ;
+    rcxn:hasSlots cx:coolascolourconstruction_slots ;
+    rcxn:hasTitle "cool as colour construction" .
+
+cx:coolascolourconstruction_MD a rcxn:Metadata ;
+    cx:annotator membr:Winckel ;
+    cx:hasSources cx:eng_coolconstruction_Sources ;
+    rcxn:creationDate "2025-11-28"^^xsd:date .
+
+cx:coolascolourconstruction_slots a rdf:Seq ;
+    rdf:_1 cx:coolascolourconstruction_1 .
+
+cx:coolascolourconstruction_1 a rcxn:SlotMandatory ;
+    cx:hasTransliteration "/kuːl/" ;
+    rcxn:hasSlotForm cx:coolascolourconstruction_1_Form .
+
+cx:coolascolourconstruction_1_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:eng_Adjective ;
+    rcxn:hasStem "cool" .
+
+cx:coolascolourconstruction_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "The [cool]1 palette consists of French ultramarine, Prussian green, lamp black and titanium white." ;
+    cx:hasText "The cool palette consists of French ultramarine, Prussian green, lamp black and titanium white." ;
+    RDFS:comment "OED, 1991" .
+
+cx:coolascolourconstruction_Ex_B a cx:Example ;
+    cx:hasAnnotatedText "a [cool]1 shade of grey" ;
+    cx:hasText "a cool shade of grey" .
+
+cx:coolascolourconstruction_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "(for a colour) containing green, blue, indigo, violet, purple" .
+
+
+
+
+
+
+
+
+
+
+cx:coolasemotionconstruction a rcxn:Construction ;
+    cx:hasExample cx:coolasemotionconstruction_Ex_A ,
+                  cx:coolasemotionconstruction_Ex_B ;
+    RDFS:comment "first attested: Old English, Beowulf" ;
+    lg:partOfLanguage lg:eng ;
+    links:metaphoricalExtension cx:keepacoolheadconstruction,
+        cx:coolasadmirableconstruction ;
+    links:isMetaphoricalExtensionOf cx:eng_coolconstruction ;
+    rcxn:elementOf cx:eng_Keepacoolheadconstruction ;
+    rcxn:hasConstructionMeaning cx:coolasemotionconstruction_Meaning ;
+    rcxn:hasMetadata cx:coolasemotionconstruction_MD ;
+    rcxn:hasSlots cx:coolasemotionconstruction_slots ;
+    rcxn:hasTitle "cool as emotion construction" .
+
+cx:coolasemotionconstruction_MD a rcxn:Metadata ;
+    cx:annotator membr:Winckel ;
+    cx:hasSources cx:eng_coolconstruction_Sources ;
+    rcxn:creationDate "2025-11-28"^^xsd:date .
+
+cx:coolasemotionconstruction_slots a rdf:Seq ;
+    rdf:_1 cx:coolasemotionconstruction_1 .
+
+cx:coolasemotionconstruction_1 a rcxn:SlotMandatory ;
+    cx:hasTransliteration "/kuːl/" ;
+    rcxn:hasSlotForm cx:coolasemotionconstruction_1_Form .
+
+cx:coolasemotionconstruction_1_Form a rcxn:SlotForm ;
+    rcxn:hasStem "cool" ;
+    rcxn:hasSyntacticForm cx:eng_Adjective .
+
+cx:coolasemotionconstruction_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "However, the West's [cool]1 attitude ..." ;
+    cx:hasText "However, the West's cool attitude ..." ;
+    RDFS:comment "BNC Newspaper, 19??" .
+
+cx:coolasemotionconstruction_Ex_B a cx:Example ;
+    cx:hasAnnotatedText "He is staying [cool]1 under pressure." ;
+    cx:hasText "He is staying cool under pressure." .
+
+cx:coolasemotionconstruction_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "emotionless, without passion" .
+
+
+
+
+
+
+
+
+
+cx:coolasadmirableconstruction a rcxn:Construction ;
+    cx:hasExample cx:coolasadmirableconstruction_Ex_A ,
+                  cx:coolasadmirableconstruction_Ex_B ,
+                  cx:coolasadmirableconstruction_Ex_C ;
+    RDFS:comment "first attested: 1884, cf. OED" ;
+    lg:partOfLanguage lg:engInf ;
+    links:isMetaphoricalExtensionOf cx:coolasemotionconstruction ;
+    rcxn:hasConstructionMeaning cx:coolasadmirableconstruction_Meaning ;
+    rcxn:hasMetadata cx:coolasadmirableconstruction_MD ;
+    rcxn:hasSlots cx:coolasadmirableconstruction_slots ;
+    rcxn:hasTitle "cool as admirable construction" .
+
+cx:coolasadmirableconstruction_MD a rcxn:Metadata ;
+    cx:annotator membr:Winckel ;
+    cx:hasSources cx:eng_coolconstruction_Sources ;
+    rcxn:creationDate "2025-11-28"^^xsd:date .
+
+cx:coolasadmirableconstruction_slots a rdf:Seq ;
+    rdf:_1 cx:coolasadmirableconstruction_1 .
+
+cx:coolasadmirableconstruction_1 a rcxn:SlotMandatory ;
+    cx:hasTransliteration "/kuːl/" ;
+    rcxn:hasSlotForm cx:coolasadmirableconstruction_1_Form .
+
+cx:coolasadmirableconstruction_1_Form a rcxn:SlotForm ;
+    rcxn:hasStem "cool" ;
+    rcxn:hasSyntacticForm cx:eng_Adjective .
+
+cx:coolasadmirableconstruction_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "For years, anything more than a slick of Vaseline or a brush of mascara was considered too try-hard to be [cool]1." ;
+    cx:hasText "For years, anything more than a slick of Vaseline or a brush of mascara was considered too try-hard to be cool." ;
+    RDFS:comment "BNC Newspaper, 1992" .
+
+cx:coolasadmirableconstruction_Ex_B a cx:Example ;
+    cx:hasAnnotatedText "a [cool]1 outfit" ;
+    cx:hasText "a cool outfit" .
+
+cx:coolasadmirableconstruction_Ex_C a cx:Example ;
+    cx:hasAnnotatedText "The movie is [cool]1." ;
+    cx:hasText "The movie is cool." .
+
+cx:coolasadmirableconstruction_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "positive evaluation: admirable, relaxed, stylish, sophisticated, fashionable" .
+
+
+
+
+
+
+
+
+
+
+
+cx:eng_Keepacoolheadconstruction_1 a rcxn:SlotMandatory ;
+    rcxn:hasSlotForm cx:eng_Keepacoolheadconstruction_1_Form .
+
+cx:eng_Keepacoolheadconstruction_1_Form a rcxn:SlotForm ;
+    rcxn:hasStem "keep" .
+
+cx:eng_Keepacoolheadconstruction_2 a rcxn:SlotMandatory ;
+    rcxn:hasSlotForm cx:eng_Keepacoolheadconstruction_2_Form .
+
+cx:eng_Keepacoolheadconstruction_2_Form a rcxn:SlotForm ;
+    rcxn:hasSurfaceForm "a" .
+
+cx:eng_Keepacoolheadconstruction_3 a rcxn:SlotMandatory ;
+    rcxn:hasSlotForm cx:eng_Keepacoolheadconstruction_3_Form .
+
+cx:eng_Keepacoolheadconstruction_3_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:coolasemotionconstruction ;
+    rcxn:hasSurfaceForm "cool" .
+
+cx:eng_Keepacoolheadconstruction_4 a rcxn:SlotMandatory ;
+    rcxn:hasSlotForm cx:eng_Keepacoolheadconstruction_4_Form .
+
+cx:eng_Keepacoolheadconstruction_4_Form a rcxn:SlotForm ;
+    rcxn:hasSurfaceForm "head" .
+
+cx:eng_Keepacoolheadconstruction_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "Luke wants to [keep]1 [a]2 [cool]3 [head]4 ... even if Madonna calls." ;
+    cx:hasText "Luke wants to keep a cool head ... even if Madonna calls." ;
+    RDFS:comment "BNC, Newspaper, 1992" .
+
+cx:eng_Keepacoolheadconstruction_MD a rcxn:Metadata ;
+    cx:annotator membr:Winckel ;
+    cx:hasSources cx:eng_coolconstruction_Sources ;
+    rcxn:creationDate "2025-11-28"^^xsd:date .
+
+cx:eng_Keepacoolheadconstruction_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "remain composed" .
+
+cx:eng_Keepacoolheadconstruction_slots a rdf:Seq ;
+    rdf:_1 cx:eng_Keepacoolheadconstruction_1 ;
+    rdf:_2 cx:eng_Keepacoolheadconstruction_2 ;
+    rdf:_3 cx:eng_Keepacoolheadconstruction_3 ;
+    rdf:_4 cx:eng_Keepacoolheadconstruction_4 .
+
+cx:eng_Keepacoolheadconstruction a rcxn:Construction ;
+    cx:hasExample cx:eng_Keepacoolheadconstruction_Ex_A ;
+    RDFS:comment "first attested 1718, cf. OED" ;
+    lg:partOfLanguage lg:eng ;
+    rcxn:hasConstructionMeaning cx:eng_Keepacoolheadconstruction_Meaning ;
+    rcxn:hasMetadata cx:eng_Keepacoolheadconstruction_MD ;
+    rcxn:hasSlots cx:eng_Keepacoolheadconstruction_slots ;
+    rcxn:hasTitle "Keep a cool head construction" .
+
+
+
+
+
+
+
+
+
+
+
+
+cx:eng_coolconstruction a rcxn:Construction ;
+    cx:hasExample cx:eng_coolconstruction_Ex_A ,
+                  cx:eng_coolconstruction_Ex_B ,
+                  cx:eng_coolconstruction_Ex_C ,
+                  cx:eng_coolconstruction_Ex_D ;
+    RDFS:comment "from Indo-european *gel(ə)" ;
+    lg:partOfLanguage lg:eng ;
+    links:metaphoricalExtension cx:coolascolourconstruction,
+        cx:coolasemotionconstruction ;
+    rcxn:hasConstructionMeaning cx:eng_coolconstruction_Meaning ;
+    rcxn:hasMetadata cx:eng_coolconstruction_MD ;
+    rcxn:hasSlots cx:eng_coolconstruction_slots ;
+    rcxn:hasTitle "cool construction" .
+
+cx:eng_coolconstruction_1 a rcxn:SlotMandatory ;
+    cx:hasTransliteration "/kuːl/" ;
+    rcxn:hasSlotForm cx:eng_coolconstruction_1_Form .
+
+cx:eng_coolconstruction_1_Form a rcxn:SlotForm ;
+    rcxn:hasStem "cool" ;
+    rcxn:hasSyntacticForm cx:eng_Adjective .
+
+cx:eng_coolconstruction_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "The guests enjoyed [cool]1 drinks on the arched terrace beside the gently-lapping poll." ;
+    cx:hasText "The guests enjoyed cool drinks on the arched terrace beside the gently-lapping poll." ;
+    RDFS:comment "BNC Newspaper, 1932" .
+
+cx:eng_coolconstruction_Ex_B a cx:Example ;
+    cx:hasAnnotatedText "[cool]1 breeze" ;
+    cx:hasText "cool breeze" .
+
+cx:eng_coolconstruction_Ex_C a cx:Example ;
+    cx:hasAnnotatedText "[cool]1 to the touch" ;
+    cx:hasText "cool to the touch" .
+
+cx:eng_coolconstruction_Ex_D a cx:Example ;
+    cx:hasAnnotatedText "[cool]1 climate" ;
+    cx:hasText "cool climate" .
+
+cx:eng_coolconstruction_MD a rcxn:Metadata ;
+    cx:annotator membr:Winckel ;
+    cx:hasSources cx:eng_coolconstruction_Sources ;
+    rcxn:creationDate "2025-11-28"^^xsd:date .
+
+cx:eng_coolconstruction_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "low temperature" .
+
+cx:eng_coolconstruction_slots a rdf:Seq ;
+    rdf:_1 cx:eng_coolconstruction_1 .
+
+
+
+
+
+
+
+
+cx:eng_coolconstruction_Sources a cx:Collection ;
+    cx:hasLiterature <https://www.dwds.de/wb/cool>,
+        <https://www.oed.com/dictionary/cool_adj?tl=true>,
+        <www.english-corpora.org/bnc/>,
+        <www.english-corpora.org/coca/> .
+
+cx:_coolconstruction_slots a rdf:Seq ;
+    rdf:_1 cx:_coolconstruction_1 .
+
+membr:Project_Winckel_F2511281339 a rsrch:Finding ;
+    RDFS:label "rf" ;
+    rsrch:basedOn cx:_coolconstruction .
+
+<https://www.dwds.de/wb/cool> dc:date "2025" ;
+    dc:publisher "Berlin-Brandenburgische Akademie der Wissenschaften" ;
+    dc:title "cool" ;
+    dc:type "encyclopediaArticle" .
+
+<https://www.oed.com/dictionary/cool_adj?tl=true> dc:date "2025" ;
+    dc:publisher "Oxford University Press" ;
+    dc:title "cool (adjective, Adverb, Interjection)" ;
+    dc:type "encyclopediaArticle" .
+
+<www.english-corpora.org/bnc/> dc:contributor "Davies, Mark" ;
+    dc:date "2024" ;
+    dc:title "British National Corpus" ;
+    dc:type "book" .
+
+<www.english-corpora.org/coca/> dc:creator "Davies, Mark" ;
+    dc:title "The Corpus of Contemporary American English (COCA)" ;
+    dc:type "book" .

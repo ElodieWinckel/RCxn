@@ -1,0 +1,60 @@
+@prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cx: <http://example.org/cx/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
+@prefix membr: <http://example.org/users#> .
+@prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+membr:Project_Winckel rsrch:hasFindings membr:Project_Winckel_F2511281339 .
+
+cx:_coolconstruction a rcxn:Construction ;
+    lg:partOfLanguage lg: ;
+    rcxn:hasConstructionMeaning cx:_coolconstruction_Meaning ;
+    rcxn:hasMetadata cx:_coolconstruction_MD ;
+    rcxn:hasSlots cx:_coolconstruction_slots ;
+    rcxn:hasTitle "cool construction" .
+
+cx:_coolconstruction_1 a rcxn:SlotMandatory .
+
+cx:_coolconstruction_MD a rcxn:Metadata ;
+    cx:annotator membr:Winckel ;
+    cx:hasSources cx:_coolconstruction_Sources ;
+    rcxn:creationDate "2025-11-28"^^xsd:date .
+
+cx:_coolconstruction_Meaning a rcxn:ConstructionMeaning .
+
+cx:_coolconstruction_Sources a cx:Collection ;
+    cx:hasLiterature <https://www.dwds.de/wb/cool>,
+        <https://www.oed.com/dictionary/cool_adj?tl=true>,
+        <www.english-corpora.org/bnc/>,
+        <www.english-corpora.org/coca/> .
+
+cx:_coolconstruction_slots a rdf:Seq ;
+    rdf:_1 cx:_coolconstruction_1 .
+
+membr:Project_Winckel_F2511281339 a rsrch:Finding ;
+    RDFS:label "rf" ;
+    rsrch:basedOn cx:_coolconstruction .
+
+<https://www.dwds.de/wb/cool> dc:date "2025" ;
+    dc:publisher "Berlin-Brandenburgische Akademie der Wissenschaften" ;
+    dc:title "cool" ;
+    dc:type "encyclopediaArticle" .
+
+<https://www.oed.com/dictionary/cool_adj?tl=true> dc:date "2025" ;
+    dc:publisher "Oxford University Press" ;
+    dc:title "cool (adjective, Adverb, Interjection)" ;
+    dc:type "encyclopediaArticle" .
+
+<www.english-corpora.org/bnc/> dc:contributor "Davies, Mark" ;
+    dc:date "2024" ;
+    dc:title "British National Corpus" ;
+    dc:type "book" .
+
+<www.english-corpora.org/coca/> dc:creator "Davies, Mark" ;
+    dc:title "The Corpus of Contemporary American English (COCA)" ;
+    dc:type "book" .
+

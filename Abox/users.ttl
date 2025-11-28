@@ -258,6 +258,15 @@ membr:Project_Trombetta_F250218 a rsrch:Finding ;
 membr:Project_Winckel a rsrch:Project ;
     rsrch:projectName "Building a Research Constructicon"@en .
 
+membr:Project_Winckel rsrch:hasFindings membr:Project_Winckel_F2511281100 .
+
+membr:Project_Winckel_F2511281100 a rsrch:Finding ;
+    rdfs:label "Implement a lexical item in the research constructicon" ;
+    rsrch:basedOn cx:eng_coolconstruction ,
+                  cx:eng_Keepacoolheadconstruction .
+
+
+
 membr:Project_Wright a rsrch:Project ;
     rsrch:projectName "Project Wright"@en .
 

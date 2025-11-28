@@ -1,0 +1,28 @@
+@prefix cx: <http://example.org/cx/> .
+@prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
+@prefix membr: <http://example.org/users#> .
+@prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+membr:Project_Winckel_F2511281100 rsrch:basedOn cx:engInf_coolconstruction .
+
+cx:engInf_coolconstruction a rcxn:Construction ;
+    lg:partOfLanguage lg:engInf ;
+    rcxn:hasConstructionMeaning cx:engInf_coolconstruction_Meaning ;
+    rcxn:hasMetadata cx:engInf_coolconstruction_MD ;
+    rcxn:hasSlots cx:engInf_coolconstruction_slots ;
+    rcxn:hasTitle "cool construction" .
+
+cx:engInf_coolconstruction_1 a rcxn:SlotMandatory .
+
+cx:engInf_coolconstruction_MD a rcxn:Metadata ;
+    cx:annotator membr:Winckel ;
+    rcxn:creationDate "2025-11-28"^^xsd:date .
+
+cx:engInf_coolconstruction_Meaning a rcxn:ConstructionMeaning .
+
+cx:engInf_coolconstruction_slots a rdf:Seq ;
+    rdf:_1 cx:engInf_coolconstruction_1 .
+
