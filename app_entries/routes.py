@@ -332,24 +332,44 @@ def construction_detail(uri):
             for lit in g.objects(collection, CX.hasLiterature):
                 # Extract details for each literature entry
                 creators = [str(c) for c in g.objects(lit, dc.creator)]
+                contributors = [str(c) for c in g.objects(lit, dc.contributor)]
                 date = g.value(lit, dc.date)
                 title = g.value(lit, dc.title)
                 identifier = g.value(lit, dc.identifier)
+                source = g.value(lit, dc.source)
                 # Format authors as "Last1, Last2 & Last3"
                 authors = []
                 for creator in creators:
                     last_name = creator.split(", ")[0]
                     authors.append(last_name)
                 authors_str = " & ".join([", ".join(authors[:-1])] + [authors[-1]] if len(authors) > 2 else authors)
+                # Format editors as "Last1, Last2 & Last3"
+                editors = []
+                for contributor in contributors:
+                    last_name = contributor.split(", ")[0]
+                    editors.append(last_name)
+                editors_str = " & ".join([", ".join(editors[:-1])] + [editors[-1]] if len(editors) > 2 else editors)
+                # Add DOI if it exists
                 doi_str=str(identifier).replace("DOI ", "")
-                doi_href="https://www.doi.org/"+doi_str
-                references.append({
-                    "authors": authors_str,
-                    "year": str(date),
-                    "title": str(title),
-                    "doi": doi_str,
-                    "doi_href": doi_href
-                })
+                if doi_str.strip() != "None":
+                    doi_href="https://www.doi.org/"+doi_str
+                # Create the entry for the resource in the dictionary and append
+                reference = {}
+                if authors_str and authors_str.strip():
+                    reference["authors"] = authors_str
+                if editors_str and editors_str.strip():
+                    reference["editors"] = editors_str + " (ed.)"
+                if str(date).strip() != "None":
+                    reference["year"] = str(date)
+                if str(title).strip():
+                    reference["title"] = str(title)
+                if doi_str.strip() != "None":
+                    reference["doi"] = doi_str
+                    reference["doi_href"] = doi_href
+                if str(source).strip() != "None":
+                    reference["source"] = str(source)
+                references.append(reference)
+    print(references)
 
     # Collect triples for research question and findings
     research = []

@@ -194,9 +194,11 @@
             <tr>
                 <th>References</th>
                 <td class="reference">
-                    {{ ref.authors }} ({{ ref.year }}).
-                    <i>{{ ref.title }}</i>
-                    <a href="{{ ref.doi_href }}" target="_blank">{{ ref.doi }}</a>
+                    {{ ref.authors }}
+                    {% if not ref.authors %} {{ ref.editors }} {% if not ref.editors %} {{ ref.source }} {% endif %} {% endif %}
+                    {% if ref.year %} ({{ ref.year }}). {% endif %}
+                    <i>{{ ref.title }}</i>.
+                    {% if ref.doi %}<a href="{{ ref.doi_href }}" target="_blank">{{ ref.doi }}</a> {% endif %}
                 </td>
             </tr>
     {% endfor %}

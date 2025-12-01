@@ -479,18 +479,20 @@ membr:Project_Winckel_F2511281339 a rsrch:Finding ;
 <https://www.dwds.de/wb/cool> dc:date "2025" ;
     dc:publisher "Berlin-Brandenburgische Akademie der Wissenschaften" ;
     dc:title "cool" ;
-    dc:type "encyclopediaArticle" .
+    dc:type "encyclopediaArticle" ;
+    dc:source "DWDS - Digitale Wörterbuch der deutschen Sprache".
 
 <https://www.oed.com/dictionary/cool_adj?tl=true> dc:date "2025" ;
     dc:publisher "Oxford University Press" ;
     dc:title "cool (adjective, Adverb, Interjection)" ;
-    dc:type "encyclopediaArticle" .
+    dc:type "encyclopediaArticle" ;
+    dc:source "Oxford English Dictionary" .
 
 <www.english-corpora.org/bnc/> dc:contributor "Davies, Mark" ;
     dc:date "2024" ;
     dc:title "British National Corpus" ;
     dc:type "book" .
 
-<www.english-corpora.org/coca/> dc:creator "Davies, Mark" ;
+<www.english-corpora.org/coca/> dc:contributor "Davies, Mark" ;
     dc:title "The Corpus of Contemporary American English (COCA)" ;
     dc:type "book" .

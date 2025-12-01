@@ -82,7 +82,7 @@ membr:Project_Winckel_F2511281339 a rsrch:Finding ;
     dc:title "British National Corpus" ;
     dc:type "book" .
 
-<file:///home/meuhlodi/Travail/RCxn/instance/Submissions/www.english-corpora.org/coca/> dc:creator "Davies, Mark" ;
+<file:///home/meuhlodi/Travail/RCxn/instance/Submissions/www.english-corpora.org/coca/> dc:contributor "Davies, Mark" ;
     dc:title "The Corpus of Contemporary American English (COCA)" ;
     dc:type "book" .
 
@@ -1877,6 +1877,7 @@ cx:zho_VerbPhrase a rcxn:Construction ;
 
 <https://www.dwds.de/wb/cool> dc:date "2025" ;
     dc:publisher "Berlin-Brandenburgische Akademie der Wissenschaften" ;
+    dc:source "DWDS - Digitale Wörterbuch der deutschen Sprache" ;
     dc:title "cool" ;
     dc:type "encyclopediaArticle" .
 
@@ -1891,6 +1892,7 @@ cx:zho_VerbPhrase a rcxn:Construction ;
 
 <https://www.oed.com/dictionary/cool_adj?tl=true> dc:date "2025" ;
     dc:publisher "Oxford University Press" ;
+    dc:source "Oxford English Dictionary" ;
     dc:title "cool (adjective, Adverb, Interjection)" ;
     dc:type "encyclopediaArticle" .
 
