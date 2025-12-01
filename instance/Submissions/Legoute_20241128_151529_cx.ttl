@@ -47,6 +47,7 @@ cx:POU-beneficiaryconstruction_3_Form a rcxn:SlotForm ;
 cx:POU-beneficiaryconstruction_Ex_A a cx:Example ;
     cx:hasGlosses "3SG   ANT  make/do   mass  pou   2PL" ;
     cx:hasText "Yo      te           fè          mès    pou   nou." ;
+    cx:hasAnnotatedText "Yo      te           fè          [mès]1    [pou]2   [nou]3." ;
     cx:hasTranslation "They made a mass in our name" ;
     RDFS:comment "Text 1, #27" .
 
@@ -55,7 +56,8 @@ cx:POU-beneficiaryconstruction_MD a rcxn:Metadata ;
     rcxn:creationDate "2024-11-28"^^xsd:date .
 
 cx:POU-beneficiaryconstruction_Meaning a rcxn:ConstructionMeaning ;
-    rcxn:hasMeaning "Refer to a beneficiary" .
+    rcxn:hasMeaning "Refer to [a beneficiary]3" ;
+    rcxn:hasMeaning "[A beneficiary]3 benefits from [a theme]1" .
 
 cx:POU-beneficiaryconstruction_slots a rdf:Seq ;
     rdf:_1 cx:POU-beneficiaryconstruction_1 ;

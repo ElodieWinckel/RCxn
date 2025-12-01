@@ -171,7 +171,7 @@ cx:Transitiveobjectrelativeclause_MD a rcxn:Metadata ;
     cx:hasSources cx:Transitiveobjectrelativeclause_Sources .
 
 cx:Transitiveobjectrelativeclause_Meaning a rcxn:ConstructionMeaning ;
-    rcxn:hasMeaning "Identificatory NP; someone carries out a transitive action that affects someone else, the function of the object relative clause is to identify the affected." .
+    rcxn:hasMeaning "Identificatory NP: [Someone]4 carries out a [transitive action]5 that affects [someone else]1. The function of the object relative clause is to identify the [affected]1." .
 
 cx:Transitiveobjectrelativeclause_Sources a cx:Collection ;
     cx:basedOn <https://www.degruyter.com/document/doi/10.1515/cog-2024-0016/html> ;

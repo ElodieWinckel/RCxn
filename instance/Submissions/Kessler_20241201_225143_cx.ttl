@@ -57,6 +57,7 @@ cx:Dooperationwithoperand1onoperand2construction_4_Form a rcxn:SlotForm ;
 cx:Dooperationwithoperand1onoperand2construction_Ex_A a cx:Example ;
     cx:hasGlosses "with height multiply it " ;
     cx:hasText "以高乘之" ;
+    cx:hasAnnotatedText "[以]1[高]2[乘]3[之]4" ;
     cx:hasTranslation "Multiply it by the height" ;
     cx:hasTransliteration "yi gao cheng zhi" .
 
@@ -66,7 +67,7 @@ cx:Dooperationwithoperand1onoperand2construction_MD a rcxn:Metadata ;
     cx:hasSources cx:Dooperationwithoperand1onoperand2construction_Sources .
 
 cx:Dooperationwithoperand1onoperand2construction_Meaning a rcxn:ConstructionMeaning ;
-    rcxn:hasMeaning "Do [operation] with [operand1] and [operand2]" .
+    rcxn:hasMeaning "Do [operation]3 with [operand 1]2 and [operand 2]4" .
 
 cx:Dooperationwithoperand1onoperand2construction_Sources a cx:Collection ;
     cx:basedOn [ dc:creator "Chemla, Karine",

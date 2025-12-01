@@ -120,12 +120,14 @@ cx:Idiomaticconstruction_4_Index a cx:Event ;
 
 cx:Idiomaticconstruction_Ex_A a cx:Example ;
     cx:hasGlosses "a daycare-spot(ACC) can one not just.like.that out the sleeve shake" ;
+    cx:hasAnnotatedText "Ein KitaPlatz kann man nicht einfach [aus]1 [dem]2 [Ärmel]3 [schütteln]4. [Saarbrücker Zeitung, 09.02.2022]" ;
     cx:hasText "Ein KitaPlatz kann man nicht einfach aus dem Ärmel schütteln. [Saarbrücker Zeitung, 09.02.2022]" ;
     cx:hasTranslation "One cannot simply pull a daycare spot out of thin air. / One cannot simply conjure a daycare spot." ;
     RDFS:comment "Used in negative context with modal verb (kann) and generalized subject (man) ; includes \"einfac so\" emphasizing imposition" .
 
 cx:Idiomaticconstruction_Ex_B a cx:Example ;
     cx:hasGlosses "since this sum(NOM) not simply out the sleeve to shake is needed it an investor(ACC)" ;
+    cx:hasAnnotatedText "Da diese Summe nicht einfach [aus]1 [dem]2 [Ärmel]3 [zu schütteln]4 ist, brauche es einen Investor. [Dresdner Neueste Nachrichter]" ;
     cx:hasText "Da diese Summe nicht einfach aus dem Ärmel zu schütteln ist, brauche es einen Investor. [Dresdner Neueste Nachrichter]" ;
     cx:hasTranslation "Since the sum cannot be simply pulled out of thin air, an investor was needed." ;
     RDFS:comment "Shows the construction in zu-infinitive form with sein ; again in negative context." .

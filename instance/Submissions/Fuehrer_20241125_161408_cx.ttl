@@ -112,6 +112,7 @@ cx:Transitivedurch-Präfixverbkonstruktion_5_Form a rcxn:SlotForm ;
 
 cx:Transitivedurch-Präfixverbkonstruktion_Ex_A a cx:Example ;
     cx:hasGlosses "NG_nom - Prä - Verb - NG_akk" ;
+    cx:hasAnnotatedText "[Thie criſtenen]1 [thurh]2[thrungen]3 [ſie]4" ;
     cx:hasText "Thie criſtenen thurhthrungen ſie" ;
     cx:hasTranslation "Die Christen durchdrungen sie" ;
     RDFS:comment "Intermediär" .
@@ -119,12 +120,14 @@ cx:Transitivedurch-Präfixverbkonstruktion_Ex_A a cx:Example ;
 cx:Transitivedurch-Präfixverbkonstruktion_Ex_B a cx:Example ;
     cx:hasGlosses "pN_nom - Prä - Verb - NG_akk " ;
     cx:hasText "der durch reit div lant" ;
+    cx:hasAnnotatedText "[der]1 [durch]2 [reit]3 [div lant]4" ;
     cx:hasTranslation "der durchreitet die Lande" ;
     RDFS:comment "Intermediär/Multidirektional" .
 
 cx:Transitivedurch-Präfixverbkonstruktion_Ex_C a cx:Example ;
     cx:hasGlosses "pN_nom - Prä - Verb - NG_akk" ;
     cx:hasText "ſi durh hiwen daz wal" ;
+    cx:hasAnnotatedText "[ſi]1 [durh]2 [hiwen]3 [daz wal]4" ;
     cx:hasTranslation "sie durchbrechen das Schlachtfeld" ;
     RDFS:comment "teil-intermediär" .
 
@@ -153,7 +156,7 @@ cx:Transitivedurch-Präfixverbkonstruktion_Meaning a rcxn:ConstructionMeaning ;
     cx:hasImageSchema "teil-intermediäres durch" ;
     cx:hasImageSchema "intermediäres durch" ;
     cx:hasImageSchema "multidirektionales durch" ;
-    rcxn:hasMeaning "'jemand bewegt sich durch etwas/einen Ort'" .
+    rcxn:hasMeaning "[Jemand]1 bewegt sich durch [etwas/einen Ort]4." .
 
 cx:Transitivedurch-Präfixverbkonstruktion_Sources a cx:Collection ;
     cx:basedOn <https://www.linguistics.ruhr-uni-bochum.de/rem/> .

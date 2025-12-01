@@ -54,6 +54,7 @@ cx:ThisCloseToV-ing_4_Form a rcxn:SlotForm ;
 
 cx:ThisCloseToV-ing_Ex_A a cx:Example ;
     cx:hasText "It was this close to happening, right? This close to happening! " ;
+    cx:hasAnnotatedText "It [was]1 [this close to]2 [happen]3[ing]4, right? [This close to]2 [happen]3[ing]4! " ;
     RDFS:comment "https://pisa.vrnewsscape.ucla.edu/newsscape_mp4_snippet.cgi?file=fa5d0dfc-cb7b-11e6-97cd-089e01ba0338&start=2396&end=2401" .
 
 cx:ThisCloseToV-ing_MD a rcxn:Metadata ;
@@ -61,7 +62,7 @@ cx:ThisCloseToV-ing_MD a rcxn:Metadata ;
     rcxn:creationDate "2024-11-28"^^xsd:date .
 
 cx:ThisCloseToV-ing_Meaning a rcxn:ConstructionMeaning ;
-    rcxn:hasMeaning "Something or someone is metaphorically very close to an outcome/goal." .
+    rcxn:hasMeaning "Something or someone is metaphorically very close to an [outcome/goal]3." .
 
 cx:ThisCloseToV-ing_slots a rdf:Seq ;
     rdf:_1 cx:ThisCloseToV-ing_1 ;

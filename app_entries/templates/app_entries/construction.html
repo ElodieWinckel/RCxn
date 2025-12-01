@@ -9,7 +9,7 @@
         {% for triple in triples %}
             <tr>
                 <th>{{ triple.property }}</th>
-                <td>{{ triple.object }}</td>
+                <td>{% if triple.property == 'Meaning of the construction' %}{{ triple.object|safe }}{% else %}{{ triple.object }}{% endif %}</td>
             </tr>
         {% endfor %}
     </table>

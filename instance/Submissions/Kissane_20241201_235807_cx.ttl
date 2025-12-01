@@ -42,14 +42,15 @@ cx:TheEnglishGIVE-OUTVerbParticleConstruction._4 a rcxn:SlotMandatory ;
     cx:hasOtherSemanticContribution "AFFECTED ACTION" .
 
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._Ex_A a cx:Example ;
-    cx:hasText "The event organizer gave out gift bags to all attendees at the end of the ceremony." .
+    cx:hasText "The event organizer gave out gift bags to all attendees at the end of the ceremony." ;
+    cx:hasText "[The event organizer]1 [gave]2 [out]3 [gift bags]4 to all attendees at the end of the ceremony." .
 
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._MD a rcxn:Metadata ;
     rcxn:annotator membr:Kissane ;
     rcxn:creationDate "2024-12-01"^^xsd:date .
 
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._Meaning a rcxn:ConstructionMeaning ;
-    rcxn:hasMeaning "An ÆFFECTOR distributes items to multiple recipients or reaches a point of depletion or cessation of function." .
+    rcxn:hasMeaning "[An ÆFFECTOR]1 distributes [items]4 to multiple recipients or reaches a point of depletion or cessation of function." .
 
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._slots a rdf:Seq ;
     rdf:_1 cx:TheEnglishGIVE-OUTVerbParticleConstruction._1 ;

@@ -203,11 +203,20 @@ def construction_detail(uri):
 
     # Add triples for meaning
     for predicate, obj in g.predicate_objects(subject=meaning_uri):
-        if str(predicate) != "http://www.w3.org/1999/02/22-rdf-syntax-ns#type":
+        if str(predicate) == "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#hasMeaning":
+            meaning_text = re.sub(prefixes, "", str(obj))
+            html_code = re.sub(r'\[([^\]]*)\](\d+)', r'<ce\2>\1</ce\2>', meaning_text)
             triples.append({
-                'property': get_label_or_iri(predicate, g, ont),
-                'object': get_label_or_iri(obj, g, ont),
+                'property': "Meaning of the construction",
+                'object': html_code,
             })
+        else:
+            if str(predicate) != "http://www.w3.org/1999/02/22-rdf-syntax-ns#type":
+                triples.append({
+                    'property': get_label_or_iri(predicate, g, ont),
+                    'object': get_label_or_iri(obj, g, ont),
+                })
+
     triples[:] = [item for item in triples if item['property'] != "hasConstructionMeaning"]
     triples[:] = [item for item in triples if item['property'] != "hasSlots"]
     triples[:] = [item for item in triples if item['property'] != "hasExample"]

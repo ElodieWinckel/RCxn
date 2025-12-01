@@ -12,9 +12,9 @@
 <http://example.org/cx/come+[noise/mannerofmovement]V-ing> a rcxn:Construction ;
     rcxn:hasTitle "come + [noise/manner of movement] V-ing" ;
     rcxn:hasConstructionMeaning <http://example.org/cx/come+[noise/mannerofmovement]V-ing_Meaning> ;
-    cx:hasExample <http://example.org/cx/come+[noise/mannerofmovement]V-ing_Ex_A>,
-        <http://example.org/cx/come+[noise/mannerofmovement]V-ing_Ex_B>,
-        <http://example.org/cx/come+[noise/mannerofmovement]V-ing_Ex_C>,
+    cx:hasExample <http://example.org/cx/come+[noise/mannerofmovement]V-ing_Ex_A> ,
+        <http://example.org/cx/come+[noise/mannerofmovement]V-ing_Ex_B> ,
+        <http://example.org/cx/come+[noise/mannerofmovement]V-ing_Ex_C> ,
         <http://example.org/cx/come+[noise/mannerofmovement]V-ing_Ex_D> ;
     rcxn:hasMetadata <http://example.org/cx/come+[noise/mannerofmovement]V-ing_MD> ;
     rcxn:hasSlots <http://example.org/cx/come+[noise/mannerofmovement]V-ing_slots> ;
@@ -53,16 +53,20 @@
     rcxn:hasSyntacticForm cx:eng_PrepositionalPhrase , cx:eng_Particle .
 
 <http://example.org/cx/come+[noise/mannerofmovement]V-ing_Ex_A> a cx:Example ;
-    cx:hasText "The back door burst open and [six-year-old Sally] [came] [running] excitedly [into the room] ." .
+    cx:hasText "The back door burst open and six-year-old Sally came running excitedly into the room ." ;
+    cx:hasAnnotatedText "The back door burst open and [six-year-old Sally]1 [came]2 [running]3 excitedly [into the room]4 ." .
 
 <http://example.org/cx/come+[noise/mannerofmovement]V-ing_Ex_B> a cx:Example ;
-    cx:hasText "Then came thunder out of the east as [rank after rank of tanks] [came] [roaring] past , plunged through the infantry and turned north for the kill ." .
+    cx:hasText "Then came thunder out of the east as rank after rank of tanks came roaring past, plunged through the infantry and turned north for the kill ." ;
+    cx:hasAnnotatedText "Then came thunder out of the east as [rank after rank of tanks]1 [came]2 [roaring]3 past, plunged through the infantry and turned north for the kill ." .
 
 <http://example.org/cx/come+[noise/mannerofmovement]V-ing_Ex_C> a cx:Example ;
-    cx:hasText "[People] [came] [running] with lanterns and torches , and soon hundreds of people were hurrying to the house ." .
+    cx:hasText "People came running with lanterns and torches, and soon hundreds of people were hurrying to the house ." ;
+    cx:hasText "[People]1 [came]2 [running]3 with lanterns and torches, and soon hundreds of people were hurrying to the house ." .
 
 <http://example.org/cx/come+[noise/mannerofmovement]V-ing_Ex_D> a cx:Example ;
-    cx:hasText "A second or two later , [everything] [came] [crashing] [down] in a big heap on the railway line below ." .
+    cx:hasText "A second or two later , everything came crashing down in a big heap on the railway line below ." ;
+    cx:hasText "A second or two later , [everything]1 [came]2 [crashing]3 [down]4 in a big heap on the railway line below ." .
 
 <http://example.org/cx/come+[noise/mannerofmovement]V-ing_MD> a rcxn:Metadata ;
     rcxn:annotator membr:Patel ;
@@ -70,7 +74,7 @@
     cx:hasSources <http://example.org/cx/come+[noise/mannerofmovement]V-ing_Sources> .
 
 <http://example.org/cx/come+[noise/mannerofmovement]V-ing_Meaning> a rcxn:ConstructionMeaning ;
-    rcxn:hasMeaning "Someone or something moves towards a reference point in a specified manner, often in a manner that is fast, sudden, uncontrolled, noisy, or otherwise overwhelming." .
+    rcxn:hasMeaning "[Someone or something]1 moves towards [a reference point]4 in [a specified manner]3, often in a manner that is fast, sudden, uncontrolled, noisy, or otherwise overwhelming." .
 
 <http://example.org/cx/come+[noise/mannerofmovement]V-ing_Sources> a cx:Collection ;
     cx:basedOn <https://journals.openedition.org/anglophonia/5335> .

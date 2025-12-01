@@ -21,7 +21,8 @@
     <div>
       <label for="construction">
         Give a name to the construction:
-        <span title="The name of the language should not be part of the title" style="cursor: help;">ℹ️</span>
+        <span title="1. The name of the language should not be part of the title.
+2. Construction titles should preferably contain the word 'construction'." style="cursor: help;">ℹ️</span>
       </label>
       <input type="text" id="construction" name="construction" required>
     </div>
@@ -71,7 +72,15 @@
   <h1>Meaning of the construction</h1>
   <h3>Meaning</h3>
   <div>
-    <label for="meaning">The meaning/function of the whole construction:</label>
+    <label for="meaning">
+        The meaning/function of the whole construction:
+        <span title="You can identify compositional meaning based on the construction elements that denote it, with squared brackets and the corresponding number right after the closing bracket (no space).
+
+     For example:
+     [An Attributor]1 mentally assigns [Attribute]5 to an [Attributee]3.
+
+This means that the referents for the attributor, attribute and attributee are the referents denoted by the filler of construction element 1, 5 and 3 respectively." style="cursor: help;">ℹ️</span>
+    </label>
     <textarea id="meaning" name="meaning" rows="3" style="resize: none;"></textarea>
     <label for="meaning">(recommended field)</label>
   </div>

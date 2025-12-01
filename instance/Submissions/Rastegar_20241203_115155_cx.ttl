@@ -73,9 +73,11 @@ cx:Idiomaticconstructions_4_Index a cx:Individual ;
     olia:hasNumber olia:Paucal .
 
 cx:Idiomaticconstructions_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "[He]1 [had burned]2 [his]3 [bridges]4 in Hollywood and took off for the seclusion of Taos to hide away..." ;
     cx:hasText "He had burned his bridges in Hollywood and took off for the seclusion of Taos to hide away..." .
 
 cx:Idiomaticconstructions_Ex_B a cx:Example ;
+    cx:hasAnnotatedText "[I]1 [had]2, quite deliberately, [burned]2 [my]3 [bridges]4 -- there was no returning to the closet for me." ;
     cx:hasText "I had, quite deliberately, burned my bridges -- there was no returning to the closet for me." .
 
 cx:Idiomaticconstructions_MD a rcxn:Metadata ;
@@ -83,8 +85,8 @@ cx:Idiomaticconstructions_MD a rcxn:Metadata ;
     rcxn:creationDate "2024-12-03"^^xsd:date .
 
 cx:Idiomaticconstructions_Meaning a rcxn:ConstructionMeaning ;
-    rcxn:hasMeaning "to end relationships" ,
-     "to commit oneself to a course from which there is no retreat" .
+    rcxn:hasMeaning "[A person]1 ends relationships." ,
+     "[Someone]1 commits oneself to a course from which there is no retreat." .
 
 cx:Idiomaticconstructions_slots a rdf:Seq ;
     rdf:_1 cx:Idiomaticconstructions_1 ;
