@@ -6,6 +6,7 @@
 @prefix membr: <http://example.org/users#> .
 @prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -469,12 +470,16 @@ cx:eng_coolconstruction_Sources a cx:Collection ;
         <www.english-corpora.org/bnc/>,
         <www.english-corpora.org/coca/> .
 
-cx:_coolconstruction_slots a rdf:Seq ;
-    rdf:_1 cx:_coolconstruction_1 .
-
 membr:Project_Winckel_F2511281339 a rsrch:Finding ;
     RDFS:label "rf" ;
     rsrch:basedOn cx:_coolconstruction .
+
+membr:Project_Winckel rsrch:hasFindings membr:Project_Winckel_F2511281100 .
+
+membr:Project_Winckel_F2511281100 a rsrch:Finding ;
+    rdfs:label "Implement a lexical item in the research constructicon" ;
+    rsrch:basedOn cx:eng_coolconstruction ,
+                  cx:eng_Keepacoolheadconstruction .
 
 <https://www.dwds.de/wb/cool> dc:date "2025" ;
     dc:publisher "Berlin-Brandenburgische Akademie der Wissenschaften" ;

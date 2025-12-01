@@ -5,7 +5,9 @@
 @prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0#> .
 @prefix membr: <http://example.org/users#> .
 @prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
+@prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 cx:Relative-Topic-ShiftConstruction a rcxn:Construction ;
@@ -157,3 +159,10 @@ cx:ita_NounPhrase a rcxn:Construction ;
 cx:ita_VerbPhrase a rcxn:Construction ;
     rcxn:hasTitle "Verb Phrase" ;
     lg:partOfLanguage lg:ita .
+
+membr:Project_Trombetta rsrch:hasFindings membr:Project_Trombetta_F250218 .
+
+membr:Project_Trombetta_F250218 a rsrch:Finding ;
+    rdfs:label "The text reveals various types of text-level constructions, i.e., constructions capable of structuring and organizing the text. These structures, while formally appearing as sentences or phrases, operate at the textual level." ;
+    rsrch:basedOn cx:Relative-Topic-ShiftConstruction .
+

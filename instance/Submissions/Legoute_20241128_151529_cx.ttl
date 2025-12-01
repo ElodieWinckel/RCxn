@@ -5,8 +5,10 @@
 @prefix membr: <http://example.org/users#> .
 @prefix olia: <http://purl.org/olia/olia.owl#> .
 @prefix oliatop: <http://purl.org/olia/olia-top.owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 cx:POU-beneficiaryconstruction a rcxn:Construction ;
@@ -17,8 +19,6 @@ cx:POU-beneficiaryconstruction a rcxn:Construction ;
     rcxn:hasSlots cx:POU-beneficiaryconstruction_slots ;
     lg:partOfLanguage lg:hat ;
     links:similarFormDifferentFunction cx:POU-purposeconstruction .
-
-membr: membr:SubProject membr:Project_Legoute_241128 .
 
 cx:POU-beneficiaryconstruction_1 a rcxn:SlotMandatory ;
     rcxn:hasSlotForm cx:POU-beneficiaryconstruction_1_Form ;
@@ -84,3 +84,14 @@ cx:hat_InvariableSyntacticMorpheme a rcxn:Construction ;
 cx:hat_NounPhrase a rcxn:Construction ;
     rcxn:hasTitle "Noun Phrase" ;
     lg:partOfLanguage lg:hat.
+
+membr:Project_Legoute membr:SubProject membr:Project_Legoute_241128 .
+
+membr:Project_Legoute_241128 a rsrch:Project ;
+    rsrch:projectName "POU in Haitian Creole" ;
+    rsrch:hasFindings membr:Project_Legoute_241128_F250218 .
+
+membr:Project_Legoute_241128_F250218 a rsrch:Finding ;
+    rdfs:label "POU provokes a NP to become a beneficiary" ;
+    rsrch:basedOn cx:POU-beneficiaryconstruction .
+

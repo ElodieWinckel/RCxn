@@ -5,19 +5,16 @@ from flask import Flask, render_template, redirect, url_for
 from rdflib import Graph, URIRef, Literal, Namespace, RDF, RDFS
 import os
 
+g = Graph()
+
 # Check if the production directory exists (otherwise, defaults to development directory)
 if os.path.exists("/data/www/RCxn"):
     os.chdir("/data/www/RCxn")  # # Set the working directory to the application's production path
 
-g = Graph()
-
-# The following is for debug purposes: Check for matching files
-#matching_files = glob.glob("instance/Submissions/*4546_cx.ttl")
-#print("Matching files:", matching_files)
-
-# Load and parse all RDF files from the folder with submissions
-for ttl_file in glob.glob("instance/Submissions/*.ttl"):
-    g.parse(ttl_file, format="turtle")
+else:
+    # Load and parse all RDF files from the folder with submissions (only during development process)
+    for ttl_file in glob.glob("instance/Submissions/*.ttl"):
+        g.parse(ttl_file, format="turtle")
 
 # Load and parse all RDF files in the Abox
 for ttl_file in glob.glob("Abox/*.ttl"):

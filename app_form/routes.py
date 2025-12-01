@@ -20,7 +20,7 @@ def load_user_names_from_ttl(file_path):
     g = Graph()
     g.parse(file_path, format='turtle')
     foaf = Namespace('http://xmlns.com/foaf/0.1/')
-    uris_and_names = [(str(s).replace("http://example.com/users#", ""),
+    uris_and_names = [(str(s).replace("http://example.org/users#", ""),
                        str(g.value(s, foaf.familyName))) for s in g.subjects(RDF.type, foaf.Person)]
     return uris_and_names
 
@@ -29,9 +29,13 @@ def load_projects_from_ttl(file_path):
     g = Graph()
     g.parse(file_path, format='turtle')
     rsrch = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#")
-    uris_and_names = [(str(s).replace("http://example.com/users#", ""),
-                       str(g.value(s, rsrch.projectName))) for s in g.subjects(RDF.type, rsrch.Project)]
-    return uris_and_names
+    foaf = Namespace("http://xmlns.com/foaf/0.1/")
+    project_list = []
+    for project in g.subjects(RDF.type, rsrch.Project):
+        uri = str(project).replace("http://example.org/users#", "")
+        title = str(g.value(project, rsrch.projectName))
+        project_list.append((uri, title))
+    return project_list
 
 # Load URIs and finding labels from existing database of research projects (users.ttl)
 def load_findings_from_ttl(file_path):
@@ -39,7 +43,7 @@ def load_findings_from_ttl(file_path):
     g.parse(file_path, format='turtle')
     rsrch = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#")
     RDFS = Namespace("http://www.w3.org/2000/01/rdf-schema#")
-    uris_and_names = [(str(s).replace("http://example.com/users#", ""),
+    uris_and_names = [(str(s).replace("http://example.org/users#", ""),
                        str(g.value(s, RDFS.label))) for s in g.subjects(RDF.type, rsrch.Finding)]
     return uris_and_names
 

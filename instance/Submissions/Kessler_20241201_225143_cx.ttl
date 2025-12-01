@@ -5,8 +5,10 @@
 @prefix membr: <http://example.org/users#> .
 @prefix olia: <http://purl.org/olia/olia.owl#> .
 @prefix oliatop: <http://purl.org/olia/olia-top.owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 cx:Dooperationwithoperand1onoperand2construction a rcxn:Construction ;
@@ -94,3 +96,10 @@ cx:zho_NounPhrase a rcxn:Construction ;
 cx:zho_VerbPhrase a rcxn:Construction ;
     rcxn:hasTitle "Verb Phrase" ;
     lg:partOfLanguage lg:zho.
+
+membr:Project_Kessler rsrch:hasFindings membr:Project_Kessler_F250218 .
+
+membr:Project_Kessler_F250218 a rsrch:Finding ;
+    rdfs:label "There is remarkable stability in the use of the construction over a very long period of time" ;
+    rsrch:basedOn cx:Dooperationwithoperand1onoperand2construction .
+

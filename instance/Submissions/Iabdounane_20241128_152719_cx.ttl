@@ -2,8 +2,10 @@
 @prefix cx: <http://example.org/cx/> .
 @prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
 @prefix membr: <http://example.org/users#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
+@prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 cx:ThisCloseToV-ing a rcxn:Construction ;
@@ -77,3 +79,13 @@ cx:eng_VerbRoot a rcxn:Construction ;
 cx:eng_Suffix a rcxn:Construction ;
     rcxn:hasTitle "Suffix" ;
     lg:partOfLanguage lg:eng.
+
+membr:Project_Iabdounane rsrch:hasFindings membr:Project_Iabdounane_F250218 .
+
+membr:Project_Iabdounane_F250218 a rsrch:Finding ;
+    rdfs:label """The verbal form “this close to V-ing” and the close index finger - thumb gesture co-occur 93% of the time.\r
+The two forms are likely entrenched together as a single unit, thus making it one formal multimodal unit.\r
+The construction is multimodal.\r
+""" ;
+    rsrch:basedOn cx:ThisCloseToV-ing .
+

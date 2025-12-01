@@ -6,6 +6,8 @@
 @prefix oliatop: <http://purl.org/olia/olia-top.owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
+@prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions> a rcxn:Construction ;
@@ -61,3 +63,16 @@
 cx:deu_NounPhrase  a rcxn:Construction ;
     rcxn:hasTitle "Noun Phrase" ;
     lg:partOfLanguage lg:deu.
+
+membr:Project_Fokashchuk rsrch:hasResearchQuestion membr:Project_Fokashchuk_241210 .
+
+membr:Project_Fokashchuk_241210 a rsrch:Project ;
+    rsrch:projectName "How are German NP1 + auf/an + NP2 constructions expressed in English, Polish, and Ukrainian, and to what extent do these languages employ spatial prepositions to convey similar functions and meanings? What are the cross-linguistic similarities and differences in form and meaning of these constructions?" ;
+    rsrch:hasFindings membr:Project_Fokashchuk_241210_F250218 .
+
+membr:Project_Fokashchuk_241210_F250218 a rsrch:Finding ;
+    rdfs:label  """(1) Most constructions across languages do not employ the same prepositions in terms of their spatial meaning, which challenges the assumption of uniform metaphorical and/or metonymic extensions. This indicates that when expressing similar scenes or relations between entities, different languages focus on distinct aspects of the relationship, or activate different "active zones" (Langacker 1991).\r
+(2) There are some cross-linguistic correspondences when auf and an are used spatially, as auf/an are often translated as "on" in the other 3 languages. However, in abstract meanings, the semantic network diverges significantly: auf sometimes retains a connection to spatial "on", while an does not.\r
+(3) Another parallelism: (a) an often corresponds to "of" in English and to the absence of a preposition but the object in genitive case in Polish and Ukrainian in NP1 + an + NP2 constructions. (b) Synonyms in English, Polish, and Ukrainian tend to govern the same prepositions, whereas this pattern is much less consistent in German.""" ;
+    rsrch:basedOn <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions>.
+

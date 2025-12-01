@@ -5,8 +5,10 @@
 @prefix membr: <http://example.org/users#> .
 @prefix olia: <http://purl.org/olia/olia.owl#> .
 @prefix oliatop: <http://purl.org/olia/olia-top.owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]> a rcxn:Construction ;
@@ -131,3 +133,14 @@ cx:deu_Preposition a rcxn:Construction ;
 cx:deu_Verb a rcxn:Construction ;
     rcxn:hasTitle "Verb" ;
     lg:partOfLanguage lg:deu .
+
+membr:Project_Lee rsrch:hasResearchQuestion membr:Project_Lee_241202 .
+
+membr:Project_Lee_241202 a rsrch:Project ;
+    rsrch:projectName "Prepositional constructions - a corpuslinguistic study on collocation patterns and construction networks" ;
+    rsrch:hasFindings membr:Project_Lee_241202_F250218 .
+
+membr:Project_Lee_241202_F250218 a rsrch:Finding ;
+    rdfs:label "Grammatically fixed with zero-realization, the \"vor-Augen construction\" displays a distinct collocational pattern closely tied to its meaning and contextual usage." ;
+    rsrch:basedOn <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_MD> .
+

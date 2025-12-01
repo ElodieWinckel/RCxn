@@ -7,6 +7,8 @@
 @prefix olia: <http://purl.org/olia/olia.owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
+@prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 cx:Transitiveobjectrelativeclause a rcxn:Construction ;
@@ -22,7 +24,7 @@ cx:Transitiveobjectrelativeclause a rcxn:Construction ;
         cx:Spanishrelativeclause,
         cx:Spanishtransitiveconstruction ;
     lg:partOfLanguage lg:spaSpoPen ;
-    RDFS:comment "2 graphs (PDF- accuracy and reaction time). Tables with model output - if relevant (CSV or docx)" .
+    rdfs:comment "2 graphs (PDF- accuracy and reaction time). Tables with model output - if relevant (CSV or docx)" .
 
 <http://journals.sagepub.com/doi/10.1080/17470218.2012.674951> dc:creator "López-Higes, Ramón",
         "Martín-Aragoneses, MaríaTeresa",
@@ -128,7 +130,7 @@ cx:Transitiveobjectrelativeclause_5 a rcxn:SlotMandatory ;
     cx:WordOrder "immediately after Element 4" ;
     rcxn:hasSlotForm cx:Transitiveobjectrelativeclause_5_Form ;
     cx:hasIndex cx:Transitiveobjectrelativeclause_5_Index ;
-    RDFS:comment "1st conjugation verb" .
+    rdfs:comment "1st conjugation verb" .
 
 cx:Transitiveobjectrelativeclause_5_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:spa_Verb .
@@ -142,28 +144,28 @@ cx:Transitiveobjectrelativeclause_Ex_A a cx:Example ;
     cx:hasAnnotatedText "[El abuelo]1 [al]2 [que]3 [el niño]4 [abraza]5" ;
     cx:hasText "El abuelo al que el niño abraza" ;
     cx:hasTranslation "The grandpa that is being hugged by the kid" ;
-    RDFS:comment "a-variant verb-final" .
+    rdfs:comment "a-variant verb-final" .
 
 cx:Transitiveobjectrelativeclause_Ex_B a cx:Example ;
     cx:hasGlosses "The grandpa that the kid hugs" ;
     cx:hasText "El abuelo que el niño abraza" ;
     cx:hasAnnotatedText "[El abuelo]1 [que]3 [el niño]4 [abraza]5" ;
     cx:hasTranslation "The grandpa that is being hugged by the kid" ;
-    RDFS:comment "plain-variant verb-final" .
+    rdfs:comment "plain-variant verb-final" .
 
 cx:Transitiveobjectrelativeclause_Ex_C a cx:Example ;
     cx:hasGlosses "The grandpa to:the that hugs the kid" ;
     cx:hasText "El abuelo al que abraza el niño" ;
     cx:hasAnnotatedText "[El abuelo]1 [al]2 [que]3 [abraza]5 [el niño]4" ;
     cx:hasTranslation "The grandpa that is being hugged by the kid" ;
-    RDFS:comment "a-variant verb-medial" .
+    rdfs:comment "a-variant verb-medial" .
 
 cx:Transitiveobjectrelativeclause_Ex_D a cx:Example ;
     cx:hasGlosses "The grandpa that hugs the kid" ;
     cx:hasText "El abuelo que abraza el niño" ;
     cx:hasAnnotatedText "[El abuelo]1 [que]3 [abraza]5 [el niño]4" ;
     cx:hasTranslation "The grandpa that is being hugged by the kid" ;
-    RDFS:comment "plain-variant verb-medial" .
+    rdfs:comment "plain-variant verb-medial" .
 
 cx:Transitiveobjectrelativeclause_MD a rcxn:Metadata ;
     rcxn:annotator membr:FernandezSantos ;
@@ -216,3 +218,14 @@ cx:spa_Relativizer a rcxn:Construction ;
 cx:spa_Verb a rcxn:Construction ;
     rcxn:hasTitle "Verb" ;
     lg:partOfLanguage lg:spa.
+
+membr:Project_FernandezSantos_241125 a rsrch:Project ;
+    rsrch:projectName "The relative role of verb position and additional morphological markers in comprehension" ;
+    rsrch:hasFindings membr:Project_FernandezSantos_241125_F250218 .
+
+membr:Project_FernandezSantos_241125_F250218 a rsrch:Finding ;
+    rdfs:label "The late disambiguation of verb-medial plain-variant (no a + article) object relative can lead to shallow processing. This in combination with high phonetic similarity with a canonical SR could lead to predictive processing overriding perceptual information (at the point of the last NP an object is expected so it’s more likely to hear \"al\" rather than \"el\"). In more general terms, expectations of canonical linguistic input in locally ambiguous structures can override acoustic perception." ;
+    rsrch:basedOn cx:Transitiveobjectrelativeclause .
+
+membr:Project_FernandezSantos rsrch:hasResearchQuestion membr:Project_FernandezSantos_241125 .
+

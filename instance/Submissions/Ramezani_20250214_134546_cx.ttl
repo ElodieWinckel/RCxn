@@ -7,6 +7,7 @@
 @prefix membr: <http://example.org/users#> .
 @prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix rsrch: <http://example.org/rsrch> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -119,3 +120,10 @@ cx:EnglishTransitiveconstruction_MD a cx:Metadata ;
 cx:eng_Phrase a rcxn:Construction ;
     rcxn:hasTitle "Phrase" ;
     lg:partOfLanguage lg:eng .
+
+membr:Project_Ramezani_250214 rsrch:hasFindings membr:Project_Ramezani_250214_F250218 .
+
+membr:Project_Ramezani_250214_F250218 a rsrch:Finding ;
+    rdfs:label "So far we have results from LLM analysis that can significantly recognize and differentiate between argument structure constructions." ;
+    rsrch:basedOn cx:Argumentstructureconstruction .
+

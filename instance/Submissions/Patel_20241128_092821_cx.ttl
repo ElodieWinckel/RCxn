@@ -7,6 +7,7 @@
 @prefix oliatop: <http://purl.org/olia/olia-top.owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
+@prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://example.org/cx/come+[noise/mannerofmovement]V-ing> a rcxn:Construction ;
@@ -100,3 +101,9 @@ cx:eng_VerbING a rcxn:Construction ;
 cx:eng_PrepositionalPhrase a rcxn:Construction ;
     rcxn:hasTitle "Prepositional Phrase" ;
     lg:partOfLanguage lg:eng .
+
+membr:Project_Patel rsrch:hasResearchQuestion membr:Project_Patel_241128 .
+
+membr:Project_Patel_241128 a rsrch:Project ;
+    rsrch:projectName "Identifying semantic sub-constructions of the V-ing pattern" .
+
