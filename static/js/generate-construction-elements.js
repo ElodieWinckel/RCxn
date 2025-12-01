@@ -78,6 +78,37 @@ function generateFields() {
         elementDetails.appendChild(orderTooltipContainer);
         elementDetails.appendChild(document.createElement('br'));
 
+        // Create fields for phonology
+        const phonLabel = document.createElement('label');
+        phonLabel.textContent = `Phonological form (optional):`;
+        // Create an info icon
+        const phonInfoIcon = document.createElement('span');
+        phonInfoIcon.className = 'info-icon';
+        phonInfoIcon.textContent = 'ℹ️'; // Unicode info symbol
+        // Create the tooltip text container with HTML content
+        const phonTooltipText = document.createElement('span');
+        phonTooltipText.className = 'tooltiptext';
+        phonTooltipText.innerHTML = `
+            Use IPA alphabet (for example, copy-paste from the website ipa.typeit.org).`;
+        // Create a container for the label and the info icon
+        const phonLabelContainer = document.createElement('div');
+        phonLabelContainer.className = 'label-container';
+        phonLabelContainer.appendChild(phonLabel);
+        phonLabelContainer.appendChild(phonInfoIcon);
+        const phonInput = document.createElement('input');
+        phonInput.type = 'text';
+        phonInput.name = `phonology_${i + 1}`;
+        // Create a container for the input and the tooltip
+        const phonTooltipContainer = document.createElement('div');
+        phonTooltipContainer.className = 'tooltip-container';
+        phonTooltipContainer.appendChild(phonInput);
+        phonTooltipContainer.appendChild(phonTooltipText);
+        // Add tooltip functionality to the info icon
+        phonInfoIcon.appendChild(phonTooltipText);
+        elementDetails.appendChild(phonLabelContainer);
+        elementDetails.appendChild(phonTooltipContainer);
+        elementDetails.appendChild(document.createElement('br'));
+
         // Create fields for surface form
         const surfaceLabel = document.createElement('label');
         surfaceLabel.textContent = `Surface form (optional):`;

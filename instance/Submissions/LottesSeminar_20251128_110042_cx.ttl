@@ -48,7 +48,7 @@ cx:coolascolourconstruction_slots a rdf:Seq ;
     rdf:_1 cx:coolascolourconstruction_1 .
 
 cx:coolascolourconstruction_1 a rcxn:SlotMandatory ;
-    cx:hasTransliteration "/kuːl/" ;
+    rcxn:hasPhonology "/kuːl/" ;
     rcxn:hasSlotForm cx:coolascolourconstruction_1_Form .
 
 cx:coolascolourconstruction_1_Form a rcxn:SlotForm ;
@@ -99,7 +99,7 @@ cx:coolasemotionconstruction_slots a rdf:Seq ;
     rdf:_1 cx:coolasemotionconstruction_1 .
 
 cx:coolasemotionconstruction_1 a rcxn:SlotMandatory ;
-    cx:hasTransliteration "/kuːl/" ;
+    rcxn:hasPhonologycx:hasPhonology "/kuːl/" ;
     rcxn:hasSlotForm cx:coolasemotionconstruction_1_Form .
 
 cx:coolasemotionconstruction_1_Form a rcxn:SlotForm ;
@@ -147,7 +147,7 @@ cx:coolasadmirableconstruction_slots a rdf:Seq ;
     rdf:_1 cx:coolasadmirableconstruction_1 .
 
 cx:coolasadmirableconstruction_1 a rcxn:SlotMandatory ;
-    cx:hasTransliteration "/kuːl/" ;
+    rcxn:hasPhonology "/kuːl/" ;
     rcxn:hasSlotForm cx:coolasadmirableconstruction_1_Form .
 
 cx:coolasadmirableconstruction_1_Form a rcxn:SlotForm ;
@@ -259,7 +259,7 @@ cx:eng_coolconstruction a rcxn:Construction ;
     rcxn:hasTitle "cool construction" .
 
 cx:eng_coolconstruction_1 a rcxn:SlotMandatory ;
-    cx:hasTransliteration "/kuːl/" ;
+    rcxn:hasPhonology "/kuːl/" ;
     rcxn:hasSlotForm cx:eng_coolconstruction_1_Form .
 
 cx:eng_coolconstruction_1_Form a rcxn:SlotForm ;

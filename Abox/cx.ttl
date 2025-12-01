@@ -5,6 +5,7 @@
 @prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
 @prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0#> .
 @prefix membr: <http://example.org/users#> .
+@prefix ns1: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#hasPhonologycx:> .
 @prefix olia: <http://purl.org/olia/olia.owl#> .
 @prefix oliatop: <http://purl.org/olia/olia-top.owl#> .
 @prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
@@ -42,6 +43,9 @@ cx:_coolconstruction_slots a rdf:Seq ;
 membr: membr:SubProject membr:Project_Legoute_241128 .
 
 membr:Project_Ramezani rsrch1:hasResearchQuestion membr:Project_Ramezani_250214 .
+
+membr:Project_Winckel_F2511281100 rsrch:basedOn cx:eng_AdjectiveAttributiveconstruction,
+        cx:eng_AdjectivePredicativeconstruction .
 
 membr:Project_Winckel_F2511281339 a rsrch:Finding ;
     RDFS:label "rf" ;
@@ -166,6 +170,15 @@ cx:Argumentstructureconstruction_slots a rdf:Seq ;
     rdf:_2 cx:Argumentstructureconstruction_2 ;
     rdf:_3 cx:Argumentstructureconstruction_3 .
 
+cx:Copula a rcxn:Construction ;
+    rcxn:elementOf cx:eng_AdjectivePredicativeconstruction ;
+    rcxn:hasMetadata cx:Copula_MD ;
+    rcxn:hasTitle "Copula" .
+
+cx:Copula_MD a rcxn:Metadata ;
+    cx:annotator membr:Winckel ;
+    rcxn:creationDate "2025-12-01"^^xsd:date .
+
 cx:Demonstrative-Topic-ShiftConstruction a rcxn:Construction ;
     lg:partOfLanguage lg:ita ;
     links:similarFormSameFunction cx:Relative-Topic-ShiftConstruction ;
@@ -175,6 +188,15 @@ cx:Demonstrative-Topic-ShiftConstruction a rcxn:Construction ;
 cx:Demonstrative-Topic-ShiftConstruction_MD a rcxn:Metadata ;
     rcxn:annotator membr:Trombetta ;
     rcxn:creationDate "2024-11-21"^^xsd:date .
+
+cx:Determiner a rcxn:Construction ;
+    rcxn:elementOf cx:eng_AdjectiveAttributiveconstruction ;
+    rcxn:hasMetadata cx:Determiner_MD ;
+    rcxn:hasTitle "Determiner" .
+
+cx:Determiner_MD a rcxn:Metadata ;
+    cx:annotator membr:Winckel ;
+    rcxn:creationDate "2025-12-01"^^xsd:date .
 
 cx:Dooperationwithoperand1onoperand2construction_1 a rcxn:SlotOptional ;
     cx:WordOrder "Immediately before element 2" ;
@@ -805,6 +827,15 @@ cx:NPnom.sg.masc a rcxn:Construction ;
     links:inheritedBy <http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc> ;
     rcxn:creationDate "2024-12-02"^^xsd:date ;
     rcxn:hasTitle "NP nom.sg.masc" .
+
+cx:Noun a rcxn:Construction ;
+    rcxn:elementOf cx:eng_AdjectiveAttributiveconstruction ;
+    rcxn:hasMetadata cx:Noun_MD ;
+    rcxn:hasTitle "Noun" .
+
+cx:Noun_MD a rcxn:Metadata ;
+    cx:annotator membr:Winckel ;
+    rcxn:creationDate "2025-12-01"^^xsd:date .
 
 cx:POU-beneficiaryconstruction_1 a rcxn:SlotMandatory ;
     RDFS:comment "not always concrete" ;
@@ -1447,7 +1478,7 @@ cx:Transitiveobjectrelativeclause_slots a rdf:Seq ;
     rdf:_4 <http://example.org/cx/come+[noise/mannerofmovement]V-ing_4> .
 
 cx:coolasadmirableconstruction_1 a rcxn:SlotMandatory ;
-    cx:hasTransliteration "/kuːl/" ;
+    rcxn:hasPhonology "/kuːl/" ;
     rcxn:hasSlotForm cx:coolasadmirableconstruction_1_Form .
 
 cx:coolasadmirableconstruction_1_Form a rcxn:SlotForm ;
@@ -1479,7 +1510,7 @@ cx:coolasadmirableconstruction_slots a rdf:Seq ;
     rdf:_1 cx:coolasadmirableconstruction_1 .
 
 cx:coolascolourconstruction_1 a rcxn:SlotMandatory ;
-    cx:hasTransliteration "/kuːl/" ;
+    rcxn:hasPhonology "/kuːl/" ;
     rcxn:hasSlotForm cx:coolascolourconstruction_1_Form .
 
 cx:coolascolourconstruction_1_Form a rcxn:SlotForm ;
@@ -1507,7 +1538,7 @@ cx:coolascolourconstruction_slots a rdf:Seq ;
     rdf:_1 cx:coolascolourconstruction_1 .
 
 cx:coolasemotionconstruction_1 a rcxn:SlotMandatory ;
-    cx:hasTransliteration "/kuːl/" ;
+    ns1:hasPhonology "/kuːl/" ;
     rcxn:hasSlotForm cx:coolasemotionconstruction_1_Form .
 
 cx:coolasemotionconstruction_1_Form a rcxn:SlotForm ;
@@ -1549,10 +1580,65 @@ cx:deu_DefiniteDeterminer a rcxn:Construction ;
     rcxn:elementOf <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]> ;
     rcxn:hasTitle "Definite Determiner" .
 
-cx:eng_AdjectivePhrase a rcxn:Construction ;
-    lg:partOfLanguage lg:eng ;
-    rcxn:elementOf cx:EvaluativeAttributionConstruction ;
-    rcxn:hasTitle "Adjective Phrase" .
+cx:eng_AdjectiveAttributiveconstruction_1 a rcxn:SlotOptional ;
+    rcxn:hasSlotForm cx:eng_AdjectiveAttributiveconstruction_1_Form .
+
+cx:eng_AdjectiveAttributiveconstruction_1_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:Determiner .
+
+cx:eng_AdjectiveAttributiveconstruction_2 a rcxn:SlotMandatory ;
+    rcxn:hasSlotForm cx:eng_AdjectiveAttributiveconstruction_2_Form .
+
+cx:eng_AdjectiveAttributiveconstruction_2_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:eng_AdjectivePhrase .
+
+cx:eng_AdjectiveAttributiveconstruction_3 a rcxn:SlotMandatory ;
+    rcxn:hasSlotForm cx:eng_AdjectiveAttributiveconstruction_3_Form .
+
+cx:eng_AdjectiveAttributiveconstruction_3_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:Noun .
+
+cx:eng_AdjectiveAttributiveconstruction_MD a rcxn:Metadata ;
+    cx:annotator membr:Winckel ;
+    rcxn:creationDate "2025-12-01"^^xsd:date .
+
+cx:eng_AdjectiveAttributiveconstruction_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "Describes [a quality]2 of [an entity]3." .
+
+cx:eng_AdjectiveAttributiveconstruction_slots a rdf:Seq ;
+    rdf:_1 cx:eng_AdjectiveAttributiveconstruction_1 ;
+    rdf:_2 cx:eng_AdjectiveAttributiveconstruction_2 ;
+    rdf:_3 cx:eng_AdjectiveAttributiveconstruction_3 .
+
+cx:eng_AdjectivePredicativeconstruction_1 a rcxn:SlotMandatory ;
+    rcxn:hasSlotForm cx:eng_AdjectivePredicativeconstruction_1_Form .
+
+cx:eng_AdjectivePredicativeconstruction_1_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:eng_Phrase .
+
+cx:eng_AdjectivePredicativeconstruction_2 a rcxn:SlotMandatory ;
+    rcxn:hasSlotForm cx:eng_AdjectivePredicativeconstruction_2_Form .
+
+cx:eng_AdjectivePredicativeconstruction_2_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:Copula .
+
+cx:eng_AdjectivePredicativeconstruction_3 a rcxn:SlotMandatory ;
+    rcxn:hasSlotForm cx:eng_AdjectivePredicativeconstruction_3_Form .
+
+cx:eng_AdjectivePredicativeconstruction_3_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:eng_AdjectivePhrase .
+
+cx:eng_AdjectivePredicativeconstruction_MD a rcxn:Metadata ;
+    cx:annotator membr:Winckel ;
+    rcxn:creationDate "2025-12-01"^^xsd:date .
+
+cx:eng_AdjectivePredicativeconstruction_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "[Something]1 has [a quality]3." .
+
+cx:eng_AdjectivePredicativeconstruction_slots a rdf:Seq ;
+    rdf:_1 cx:eng_AdjectivePredicativeconstruction_1 ;
+    rdf:_2 cx:eng_AdjectivePredicativeconstruction_2 ;
+    rdf:_3 cx:eng_AdjectivePredicativeconstruction_3 .
 
 cx:eng_Adjective_MD a rcxn:Metadata ;
     cx:annotator membr:Winckel ;
@@ -1611,11 +1697,6 @@ cx:eng_Keepacoolheadconstruction_slots a rdf:Seq ;
     rdf:_3 cx:eng_Keepacoolheadconstruction_3 ;
     rdf:_4 cx:eng_Keepacoolheadconstruction_4 .
 
-cx:eng_Phrase a rcxn:Construction ;
-    lg:partOfLanguage lg:eng ;
-    rcxn:elementOf cx:Argumentstructureconstruction ;
-    rcxn:hasTitle "Phrase" .
-
 cx:eng_PossessivePronoun a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
     rcxn:hasTitle "Possessive Pronoun" .
@@ -1645,7 +1726,7 @@ cx:eng_clause a rcxn:Construction ;
     rcxn:hasTitle "Clause" .
 
 cx:eng_coolconstruction_1 a rcxn:SlotMandatory ;
-    cx:hasTransliteration "/kuːl/" ;
+    rcxn:hasPhonology "/kuːl/" ;
     rcxn:hasSlotForm cx:eng_coolconstruction_1_Form .
 
 cx:eng_coolconstruction_1_Form a rcxn:SlotForm ;
@@ -1885,6 +1966,12 @@ cx:eng_Particle a rcxn:Construction ;
     rcxn:elementOf <http://example.org/cx/TheEnglishGIVE-OUTVerbParticleConstruction.> ;
     rcxn:hasTitle "Particle" .
 
+cx:eng_Phrase a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    rcxn:elementOf cx:Argumentstructureconstruction,
+        cx:eng_AdjectivePredicativeconstruction ;
+    rcxn:hasTitle "Phrase" .
+
 cx:gmh_NounPhrase a rcxn:Construction ;
     lg:partOfLanguage lg:gmh ;
     rcxn:elementOf cx:Transitivedurch-Präfixverbkonstruktion ;
@@ -1940,6 +2027,13 @@ cx:deu_NounPhrase a rcxn:Construction ;
     rcxn:elementOf <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions>,
         <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]> ;
     rcxn:hasTitle "Noun Phrase" .
+
+cx:eng_AdjectivePhrase a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    rcxn:elementOf cx:EvaluativeAttributionConstruction,
+        cx:eng_AdjectiveAttributiveconstruction,
+        cx:eng_AdjectivePredicativeconstruction ;
+    rcxn:hasTitle "Adjective Phrase" .
 
 cx:eng_PrepositionalPhrase a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
@@ -2003,6 +2097,20 @@ cx:eng_Adjective a rcxn:Construction ;
         cx:eng_coolconstruction ;
     rcxn:hasMetadata cx:eng_Adjective_MD ;
     rcxn:hasTitle "Adjective" .
+
+cx:eng_AdjectiveAttributiveconstruction a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    rcxn:hasConstructionMeaning cx:eng_AdjectiveAttributiveconstruction_Meaning ;
+    rcxn:hasMetadata cx:eng_AdjectiveAttributiveconstruction_MD ;
+    rcxn:hasSlots cx:eng_AdjectiveAttributiveconstruction_slots ;
+    rcxn:hasTitle "Adjective Attributive construction" .
+
+cx:eng_AdjectivePredicativeconstruction a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    rcxn:hasConstructionMeaning cx:eng_AdjectivePredicativeconstruction_Meaning ;
+    rcxn:hasMetadata cx:eng_AdjectivePredicativeconstruction_MD ;
+    rcxn:hasSlots cx:eng_AdjectivePredicativeconstruction_slots ;
+    rcxn:hasTitle "Adjective Predicative construction" .
 
 cx:EvaluativeAttributionConstruction a rcxn:Construction ;
     lg:partOfLanguage lg:engUsUkWr ;

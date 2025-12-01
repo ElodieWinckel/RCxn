@@ -445,6 +445,7 @@ def form_submit():
         element_uri = cx[f"{construction_name_cleaned}_{i}"]
 
         # Retrieve information from the form
+        phonology = request.form[f'phonology_{i}']
         semantic_contribution = request.form[f'semantic_contribution_{i}']
         semantic_property = request.form[f'semprop_{i}']
         colloprofile = request.form[f'colloprofile_{i}']
@@ -576,11 +577,13 @@ def form_submit():
         # URI for Slot Form
         slot_form_uri = cx[f"{construction_name_cleaned}_{i}_Form"]
         # Triple to relate slot to it meaning (if needed)
-        if morphosyntactic_form or root.strip() or stem.strip() or surface.strip():
+        if morphosyntactic_form or phonology.strip() or root.strip() or stem.strip() or surface.strip():
             g.add((element_uri, rcxn.hasSlotForm, slot_form_uri))
             g.add((slot_form_uri, RDF.type, rcxn.SlotForm))
 
         # Formal aspects attributed to the URI for element/slot form
+        if phonology.strip():
+            g.add((slot_form_uri, rcxn.hasPhonology, Literal(phonology)))
         if root.strip():
             g.add((slot_form_uri, rcxn.hasRoot, Literal(root)))
         if stem.strip():
