@@ -301,6 +301,168 @@ cx:eng_coolconstruction_slots a rdf:Seq ;
 
 
 
+
+
+
+
+membr:Project_Winckel_F2511281100 rsrch:basedOn cx:eng_AdjectiveAttributiveconstruction .
+
+cx:Determiner a rcxn:Construction ;
+    rcxn:elementOf cx:eng_AdjectiveAttributiveconstruction ;
+    rcxn:hasMetadata cx:Determiner_MD ;
+    rcxn:hasTitle "Determiner" .
+
+cx:Determiner_MD a rcxn:Metadata ;
+    cx:annotator membr:Winckel ;
+    rcxn:creationDate "2025-12-01"^^xsd:date .
+
+cx:Noun a rcxn:Construction ;
+    rcxn:elementOf cx:eng_AdjectiveAttributiveconstruction ;
+    rcxn:hasMetadata cx:Noun_MD ;
+    rcxn:hasTitle "Noun" .
+
+cx:Noun_MD a rcxn:Metadata ;
+    cx:annotator membr:Winckel ;
+    rcxn:creationDate "2025-12-01"^^xsd:date .
+
+cx:eng_AdjectiveAttributiveconstruction_1 a rcxn:SlotOptional ;
+    rcxn:hasSlotForm cx:eng_AdjectiveAttributiveconstruction_1_Form .
+
+cx:eng_AdjectiveAttributiveconstruction_1_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:Determiner .
+
+cx:eng_AdjectiveAttributiveconstruction_2 a rcxn:SlotMandatory ;
+    rcxn:hasSlotForm cx:eng_AdjectiveAttributiveconstruction_2_Form .
+
+cx:eng_AdjectiveAttributiveconstruction_2_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:eng_AdjectivePhrase .
+
+cx:eng_AdjectiveAttributiveconstruction_3 a rcxn:SlotMandatory ;
+    rcxn:hasSlotForm cx:eng_AdjectiveAttributiveconstruction_3_Form .
+
+cx:eng_AdjectiveAttributiveconstruction_3_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:Noun .
+
+cx:eng_AdjectiveAttributiveconstruction_MD a rcxn:Metadata ;
+    cx:annotator membr:Winckel ;
+    rcxn:creationDate "2025-12-01"^^xsd:date .
+
+cx:eng_AdjectiveAttributiveconstruction_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "Describes [a quality]2 of [an entity]3." .
+
+cx:eng_AdjectiveAttributiveconstruction_slots a rdf:Seq ;
+    rdf:_1 cx:eng_AdjectiveAttributiveconstruction_1 ;
+    rdf:_2 cx:eng_AdjectiveAttributiveconstruction_2 ;
+    rdf:_3 cx:eng_AdjectiveAttributiveconstruction_3 .
+
+cx:eng_AdjectivePhrase rcxn:elementOf cx:eng_AdjectiveAttributiveconstruction .
+
+cx:eng_AdjectiveAttributiveconstruction a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    rcxn:hasConstructionMeaning cx:eng_AdjectiveAttributiveconstruction_Meaning ;
+    rcxn:hasMetadata cx:eng_AdjectiveAttributiveconstruction_MD ;
+    rcxn:hasSlots cx:eng_AdjectiveAttributiveconstruction_slots ;
+    rcxn:hasTitle "Adjective Attributive construction" .
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+membr:Project_Winckel_F2511281100 rsrch:basedOn cx:eng_AdjectivePredicativeconstruction .
+
+cx:Copula a rcxn:Construction ;
+    rcxn:elementOf cx:eng_AdjectivePredicativeconstruction ;
+    rcxn:hasMetadata cx:Copula_MD ;
+    rcxn:hasTitle "Copula" .
+
+cx:Copula_MD a rcxn:Metadata ;
+    cx:annotator membr:Winckel ;
+    rcxn:creationDate "2025-12-01"^^xsd:date .
+
+cx:eng_AdjectivePhrase rcxn:elementOf cx:eng_AdjectivePredicativeconstruction .
+
+cx:eng_AdjectivePredicativeconstruction_1 a rcxn:SlotMandatory ;
+    rcxn:hasSlotForm cx:eng_AdjectivePredicativeconstruction_1_Form .
+
+cx:eng_AdjectivePredicativeconstruction_1_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:eng_Phrase .
+
+cx:eng_AdjectivePredicativeconstruction_2 a rcxn:SlotMandatory ;
+    rcxn:hasSlotForm cx:eng_AdjectivePredicativeconstruction_2_Form .
+
+cx:eng_AdjectivePredicativeconstruction_2_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:Copula .
+
+cx:eng_AdjectivePredicativeconstruction_3 a rcxn:SlotMandatory ;
+    rcxn:hasSlotForm cx:eng_AdjectivePredicativeconstruction_3_Form .
+
+cx:eng_AdjectivePredicativeconstruction_3_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:eng_AdjectivePhrase .
+
+cx:eng_AdjectivePredicativeconstruction_MD a rcxn:Metadata ;
+    cx:annotator membr:Winckel ;
+    rcxn:creationDate "2025-12-01"^^xsd:date .
+
+cx:eng_AdjectivePredicativeconstruction_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "[Something]1 has [a quality]3." .
+
+cx:eng_AdjectivePredicativeconstruction_slots a rdf:Seq ;
+    rdf:_1 cx:eng_AdjectivePredicativeconstruction_1 ;
+    rdf:_2 cx:eng_AdjectivePredicativeconstruction_2 ;
+    rdf:_3 cx:eng_AdjectivePredicativeconstruction_3 .
+
+cx:eng_Phrase rcxn:elementOf cx:eng_AdjectivePredicativeconstruction .
+
+cx:eng_AdjectivePredicativeconstruction a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    rcxn:hasConstructionMeaning cx:eng_AdjectivePredicativeconstruction_Meaning ;
+    rcxn:hasMetadata cx:eng_AdjectivePredicativeconstruction_MD ;
+    rcxn:hasSlots cx:eng_AdjectivePredicativeconstruction_slots ;
+    rcxn:hasTitle "Adjective Predicative construction" .
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 cx:eng_coolconstruction_Sources a cx:Collection ;
     cx:hasLiterature <https://www.dwds.de/wb/cool>,
         <https://www.oed.com/dictionary/cool_adj?tl=true>,

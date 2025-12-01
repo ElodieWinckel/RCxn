@@ -1,0 +1,67 @@
+@prefix cx: <http://example.org/cx/> .
+@prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
+@prefix membr: <http://example.org/users#> .
+@prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+membr:Project_Winckel_F2511281100 rsrch:basedOn cx:eng_AdjectiveAttributiveconstruction .
+
+cx:Determiner a rcxn:Construction ;
+    rcxn:elementOf cx:eng_AdjectiveAttributiveconstruction ;
+    rcxn:hasMetadata cx:Determiner_MD ;
+    rcxn:hasTitle "Determiner" .
+
+cx:Determiner_MD a rcxn:Metadata ;
+    cx:annotator membr:Winckel ;
+    rcxn:creationDate "2025-12-01"^^xsd:date .
+
+cx:Noun a rcxn:Construction ;
+    rcxn:elementOf cx:eng_AdjectiveAttributiveconstruction ;
+    rcxn:hasMetadata cx:Noun_MD ;
+    rcxn:hasTitle "Noun" .
+
+cx:Noun_MD a rcxn:Metadata ;
+    cx:annotator membr:Winckel ;
+    rcxn:creationDate "2025-12-01"^^xsd:date .
+
+cx:eng_AdjectiveAttributiveconstruction_1 a rcxn:SlotOptional ;
+    rcxn:hasSlotForm cx:eng_AdjectiveAttributiveconstruction_1_Form .
+
+cx:eng_AdjectiveAttributiveconstruction_1_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:Determiner .
+
+cx:eng_AdjectiveAttributiveconstruction_2 a rcxn:SlotMandatory ;
+    rcxn:hasSlotForm cx:eng_AdjectiveAttributiveconstruction_2_Form .
+
+cx:eng_AdjectiveAttributiveconstruction_2_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:eng_AdjectivePhrase .
+
+cx:eng_AdjectiveAttributiveconstruction_3 a rcxn:SlotMandatory ;
+    rcxn:hasSlotForm cx:eng_AdjectiveAttributiveconstruction_3_Form .
+
+cx:eng_AdjectiveAttributiveconstruction_3_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:Noun .
+
+cx:eng_AdjectiveAttributiveconstruction_MD a rcxn:Metadata ;
+    cx:annotator membr:Winckel ;
+    rcxn:creationDate "2025-12-01"^^xsd:date .
+
+cx:eng_AdjectiveAttributiveconstruction_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "Describes [a quality]2 of [an entity]3." .
+
+cx:eng_AdjectiveAttributiveconstruction_slots a rdf:Seq ;
+    rdf:_1 cx:eng_AdjectiveAttributiveconstruction_1 ;
+    rdf:_2 cx:eng_AdjectiveAttributiveconstruction_2 ;
+    rdf:_3 cx:eng_AdjectiveAttributiveconstruction_3 .
+
+cx:eng_AdjectivePhrase rcxn:elementOf cx:eng_AdjectiveAttributiveconstruction .
+
+cx:eng_AdjectiveAttributiveconstruction a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    rcxn:hasConstructionMeaning cx:eng_AdjectiveAttributiveconstruction_Meaning ;
+    rcxn:hasMetadata cx:eng_AdjectiveAttributiveconstruction_MD ;
+    rcxn:hasSlots cx:eng_AdjectiveAttributiveconstruction_slots ;
+    rcxn:hasTitle "Adjective Attributive construction" .
+
