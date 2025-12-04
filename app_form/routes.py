@@ -156,6 +156,29 @@ def load_existing_constructions(file_path):
         })
     return constructions
 
+def get_metalanguage(lang_uri):
+    """
+    Walks up the isVarietyOf chain until it finds
+    the top-level 'metalanguage' (no parent).
+    """
+    ontology_lg = Graph() # Create graph
+    ontology_lg.parse("ontologies/lg.rdf", format="xml") # Load the ontology for languages into the graph
+    lg = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#")
+    ontology_lg.bind("lg", lg)
+    current = lang_uri
+    visited = set()  # to avoid infinite loops if bad data
+    while True:
+        parents = list(ontology_lg.objects(subject=current, predicate=lg.isVarietyOf))
+        if not parents:
+            # no further parent, return current as the metalanguage
+            return current
+        parent = parents[0]
+        if parent in visited:
+            # cycle detected
+            return current
+        visited.add(parent)
+        current = parent
+
 ###################################################
 ### RUN HTML FORM
 ###################################################
@@ -404,8 +427,10 @@ def form_submit():
 ###################################################
 
     g.add((cx[construction_name_cleaned], lg.partOfLanguage, lg[construction_language_uri]))
+    metalanguage_uri = get_metalanguage(lg[construction_language_uri]) # full URI of metalanguage associated with this language
+    metalanguage_code = str(metalanguage_uri).replace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#", "")
 
-###################################################
+    ###################################################
 ### IMPLEMENT CONSTRUCTION MEANING
 ###################################################
 
@@ -710,7 +735,7 @@ def form_submit():
         g.add((cx[construction_name_cleaned], links.inheritedBy, cx[cleaned_inherit_construction]))
         g.add((cx[cleaned_inherit_construction], links.inheritsFrom, cx[construction_name_cleaned]))
 
-    # Add RDF triples for each construction this one is metaphorical extension
+    # Add RDF triples for each construction this one is metaphorical extension of
     for inherit_construction in selected_metaphorical_extension:
         # Users can select a construction already in the constructicon
         # When this happens, the uri has to be identified
@@ -721,10 +746,11 @@ def form_submit():
             )
         else:  # Users can also enter the name of a construction that has not been implemented yet
             # When this happens, create a new construction entry, with title, annotator and creation date
-            cleaned_inherit_construction = inherit_construction.replace(" ", "")
+            cleaned_inherit_construction = str(metalanguage_code) + "_" + inherit_construction.replace(" ", "")
             metadata_inherit_construction = f"{cleaned_inherit_construction}_MD"
             g.add((cx[cleaned_inherit_construction], RDF.type, rcxn.Construction))
             g.add((cx[cleaned_inherit_construction], rcxn.hasMetadata, cx[metadata_inherit_construction]))
+            g.add((cx[cleaned_inherit_construction], lg.partOfLanguage, metalanguage_uri)) # A metaphorical extension belong automatically to the same (meta-)language
             g.add((cx[metadata_inherit_construction], RDF.type, rcxn.Metadata))
             g.add((cx[metadata_inherit_construction], cx.annotator, membr[user_name]))
             g.add((cx[metadata_inherit_construction], rcxn.creationDate,

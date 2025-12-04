@@ -1,0 +1,39 @@
+@prefix cx: <http://example.org/cx/> .
+@prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
+@prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0#> .
+@prefix membr: <http://example.org/users#> .
+@prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+membr:Project_Winckel_F2511281100 rsrch:basedOn cx:deuWrSt20_AdjectiveAttributiveconstruction .
+
+cx:Weirdidiome a rcxn:Construction ;
+    lg:partOfLanguage lg:deuWrSt20 ;
+    rcxn:hasMetadata cx:Weirdidiome_MD ;
+    rcxn:hasTitle "Weird idiome" .
+
+cx:Weirdidiome_MD a rcxn:Metadata ;
+    cx:annotator membr:Winckel ;
+    rcxn:creationDate "2025-12-04"^^xsd:date .
+
+cx:deuWrSt20_AdjectiveAttributiveconstruction a rcxn:Construction ;
+    lg:partOfLanguage lg:deuWrSt20 ;
+    links:metaphoricalExtension cx:Weirdidiome ;
+    rcxn:hasConstructionMeaning cx:deuWrSt20_AdjectiveAttributiveconstruction_Meaning ;
+    rcxn:hasMetadata cx:deuWrSt20_AdjectiveAttributiveconstruction_MD ;
+    rcxn:hasSlots cx:deuWrSt20_AdjectiveAttributiveconstruction_slots ;
+    rcxn:hasTitle "Adjective Attributive construction" .
+
+cx:deuWrSt20_AdjectiveAttributiveconstruction_1 a rcxn:SlotMandatory .
+
+cx:deuWrSt20_AdjectiveAttributiveconstruction_MD a rcxn:Metadata ;
+    cx:annotator membr:Winckel ;
+    rcxn:creationDate "2025-12-04"^^xsd:date .
+
+cx:deuWrSt20_AdjectiveAttributiveconstruction_Meaning a rcxn:ConstructionMeaning .
+
+cx:deuWrSt20_AdjectiveAttributiveconstruction_slots a rdf:Seq ;
+    rdf:_1 cx:deuWrSt20_AdjectiveAttributiveconstruction_1 .
+

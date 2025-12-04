@@ -470,16 +470,13 @@ cx:eng_coolconstruction_Sources a cx:Collection ;
         <www.english-corpora.org/bnc/>,
         <www.english-corpora.org/coca/> .
 
-membr:Project_Winckel_F2511281339 a rsrch:Finding ;
-    RDFS:label "rf" ;
-    rsrch:basedOn cx:_coolconstruction .
-
 membr:Project_Winckel rsrch:hasFindings membr:Project_Winckel_F2511281100 .
 
 membr:Project_Winckel_F2511281100 a rsrch:Finding ;
     rdfs:label "Implement a lexical item in the research constructicon" ;
     rsrch:basedOn cx:eng_coolconstruction ,
-                  cx:eng_Keepacoolheadconstruction .
+                  cx:eng_Keepacoolheadconstruction ,
+                  cx:_coolconstruction .
 
 <https://www.dwds.de/wb/cool> dc:date "2025" ;
     dc:publisher "Berlin-Brandenburgische Akademie der Wissenschaften" ;

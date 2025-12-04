@@ -1,0 +1,39 @@
+@prefix cx: <http://example.org/cx/> .
+@prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
+@prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0#> .
+@prefix membr: <http://example.org/users#> .
+@prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+membr:Project_Iabdounane_F250218 rsrch:basedOn cx:deuWrSt20_AdjectivePredicativeconstruction .
+
+cx:Weirdidiomaticconstruction a rcxn:Construction ;
+    lg:partOfLanguage lg:deuWrSt20 ;
+    rcxn:hasMetadata cx:Weirdidiomaticconstruction_MD ;
+    rcxn:hasTitle "Weird idiomatic construction" .
+
+cx:Weirdidiomaticconstruction_MD a rcxn:Metadata ;
+    cx:annotator membr:Iabdounane ;
+    rcxn:creationDate "2025-12-04"^^xsd:date .
+
+cx:deuWrSt20_AdjectivePredicativeconstruction a rcxn:Construction ;
+    lg:partOfLanguage lg:deuWrSt20 ;
+    links:metaphoricalExtension cx:Weirdidiomaticconstruction ;
+    rcxn:hasConstructionMeaning cx:deuWrSt20_AdjectivePredicativeconstruction_Meaning ;
+    rcxn:hasMetadata cx:deuWrSt20_AdjectivePredicativeconstruction_MD ;
+    rcxn:hasSlots cx:deuWrSt20_AdjectivePredicativeconstruction_slots ;
+    rcxn:hasTitle "Adjective Predicative construction" .
+
+cx:deuWrSt20_AdjectivePredicativeconstruction_1 a rcxn:SlotMandatory .
+
+cx:deuWrSt20_AdjectivePredicativeconstruction_MD a rcxn:Metadata ;
+    cx:annotator membr:Iabdounane ;
+    rcxn:creationDate "2025-12-04"^^xsd:date .
+
+cx:deuWrSt20_AdjectivePredicativeconstruction_Meaning a rcxn:ConstructionMeaning .
+
+cx:deuWrSt20_AdjectivePredicativeconstruction_slots a rdf:Seq ;
+    rdf:_1 cx:deuWrSt20_AdjectivePredicativeconstruction_1 .
+

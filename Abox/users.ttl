@@ -150,10 +150,6 @@ membr:Prela a foaf:Person ;
     foaf:familyName "Prela" ;
     foaf:givenName "Leonarda" .
 
-membr:Project_Winckel_F2511281339 a rsrch:Finding ;
-    rdfs:label "rf" ;
-    rsrch:basedOn cx:_coolconstruction .
-
 membr:Ramezani a foaf:Person ;
     foaf:currentProject membr:Project_Ramezani ;
     foaf:familyName "Ramezani" ;
@@ -402,7 +398,8 @@ membr:Project_Winckel a rsrch:Project ;
 
 membr:Project_Winckel_F2511281100 a rsrch:Finding ;
     rdfs:label "Implement a lexical item in the research constructicon" ;
-    rsrch:basedOn cx:eng_AdjectiveAttributiveconstruction,
+    rsrch:basedOn cx:_coolconstruction,
+        cx:eng_AdjectiveAttributiveconstruction,
         cx:eng_AdjectivePredicativeconstruction,
         cx:eng_Keepacoolheadconstruction,
         cx:eng_coolconstruction .
