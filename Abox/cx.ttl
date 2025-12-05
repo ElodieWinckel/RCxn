@@ -1,5 +1,6 @@
 @prefix cx: <http://example.org/cx/> .
 @prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
+@prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
 @prefix ns1: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#> .
 @prefix ns2: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#hasPhonologycx:> .
 @prefix olia: <http://purl.org/olia/olia.owl#> .
@@ -82,7 +83,7 @@ cx:Transitivedurch-Präfixverbkonstruktion_1_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticFunction "complement of preposition (element 2)" .
 
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_MD> a rcxn:Metadata ;
-    rcxn:annotator <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#Fokashchuk> ;
+    rcxn:annotator membr:Fokashchuk ;
     rcxn:creationDate "2024-12-10"^^xsd:date .
 
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_Meaning> a rcxn:ConstructionMeaning ;
@@ -116,7 +117,7 @@ cx:Argumentstructureconstruction_3_Form a rcxn:SlotForm ;
 
 cx:Argumentstructureconstruction_MD a rcxn:Metadata ;
     cx:hasSources cx:Argumentstructureconstruction_Sources ;
-    rcxn:annotator <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#Ramezani> ;
+    rcxn:annotator membr:Ramezani ;
     rcxn:creationDate "2025-02-14"^^xsd:date .
 
 cx:Argumentstructureconstruction_Meaning a rcxn:ConstructionMeaning ;
@@ -137,7 +138,7 @@ cx:Copula a rcxn:Construction ;
     rcxn:hasTitle "Copula" .
 
 cx:Copula_MD a rcxn:Metadata ;
-    cx:annotator <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#Winckel> ;
+    cx:annotator membr:Winckel ;
     rcxn:creationDate "2025-12-01"^^xsd:date .
 
 cx:Demonstrative-Topic-ShiftConstruction a rcxn:Construction ;
@@ -146,7 +147,7 @@ cx:Demonstrative-Topic-ShiftConstruction a rcxn:Construction ;
     rcxn:hasTitle "Demonstrative-Topic-Shift Construction" .
 
 cx:Demonstrative-Topic-ShiftConstruction_MD a rcxn:Metadata ;
-    rcxn:annotator <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#Trombetta> ;
+    rcxn:annotator membr:Trombetta ;
     rcxn:creationDate "2024-11-21"^^xsd:date .
 
 cx:Determiner a rcxn:Construction ;
@@ -155,7 +156,7 @@ cx:Determiner a rcxn:Construction ;
     rcxn:hasTitle "Determiner" .
 
 cx:Determiner_MD a rcxn:Metadata ;
-    cx:annotator <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#Winckel> ;
+    cx:annotator membr:Winckel ;
     rcxn:creationDate "2025-12-01"^^xsd:date .
 
 cx:Dooperationwithoperand1onoperand2construction_1 a rcxn:SlotOptional ;
@@ -204,7 +205,7 @@ cx:Dooperationwithoperand1onoperand2construction_Ex_A a cx:Example ;
 
 cx:Dooperationwithoperand1onoperand2construction_MD a rcxn:Metadata ;
     cx:hasSources cx:Dooperationwithoperand1onoperand2construction_Sources ;
-    rcxn:annotator <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#Kessler> ;
+    rcxn:annotator membr:Kessler ;
     rcxn:creationDate "2024-12-01"^^xsd:date .
 
 cx:Dooperationwithoperand1onoperand2construction_Meaning a rcxn:ConstructionMeaning ;
@@ -225,7 +226,7 @@ cx:EnglishCause-Motionconstruction a rcxn:Construction ;
     rcxn:hasTitle "Cause-Motion construction" .
 
 cx:EnglishCause-Motionconstruction_MD a cx:Metadata ;
-    rcxn:annotator <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#Ramezani> ;
+    rcxn:annotator membr:Ramezani ;
     rcxn:creationDate "2025-02-14"^^xsd:date .
 
 cx:EnglishDitransitiveconstruction a rcxn:Construction ;
@@ -234,12 +235,12 @@ cx:EnglishDitransitiveconstruction a rcxn:Construction ;
     rcxn:hasTitle "Ditransitive construction" .
 
 cx:EnglishDitransitiveconstruction_MD a cx:Metadata ;
-    rcxn:annotator <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#Ramezani> ;
+    rcxn:annotator membr:Ramezani ;
     rcxn:creationDate "2025-02-14"^^xsd:date .
 
 cx:EnglishPullsomethingoutofahat a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
-    rcxn:annotator <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#Rastegar> ;
+    rcxn:annotator membr:Rastegar ;
     rcxn:creationDate "2024-12-04"^^xsd:date ;
     rcxn:hasTitle "Pull something out of a hat" .
 
@@ -249,7 +250,7 @@ cx:EnglishResultativeconstruction a rcxn:Construction ;
     rcxn:hasTitle "Resultative construction" .
 
 cx:EnglishResultativeconstruction_MD a cx:Metadata ;
-    rcxn:annotator <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#Ramezani> ;
+    rcxn:annotator membr:Ramezani ;
     rcxn:creationDate "2025-02-14"^^xsd:date .
 
 cx:EnglishTransitiveconstruction a rcxn:Construction ;
@@ -258,7 +259,7 @@ cx:EnglishTransitiveconstruction a rcxn:Construction ;
     rcxn:hasTitle "Transitive construction" .
 
 cx:EnglishTransitiveconstruction_MD a cx:Metadata ;
-    rcxn:annotator <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#Ramezani> ;
+    rcxn:annotator membr:Ramezani ;
     rcxn:creationDate "2025-02-14"^^xsd:date .
 
 cx:Englishrollupyoursleeves a rcxn:Construction ;
@@ -267,7 +268,7 @@ cx:Englishrollupyoursleeves a rcxn:Construction ;
     rcxn:hasTitle "Roll up your sleeves" .
 
 cx:Englishrollupyoursleeves_MD a rcxn:Metadata ;
-    rcxn:annotator <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#Rastegar> ;
+    rcxn:annotator membr:Rastegar ;
     rcxn:creationDate "2024-12-04"^^xsd:date .
 
 cx:EvaluativeAttributionConstruction_1 a rcxn:SlotOptional ;
@@ -309,7 +310,7 @@ cx:EvaluativeAttributionConstruction_5_Form a rcxn:SlotForm ;
         cx:eng_clause .
 
 cx:EvaluativeAttributionConstruction_MD a rcxn:Metadata ;
-    rcxn:annotator <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#Stampfer> ;
+    rcxn:annotator membr:Stampfer ;
     rcxn:creationDate "2024-12-02"^^xsd:date .
 
 cx:EvaluativeAttributionConstruction_Meaning a rcxn:ConstructionMeaning ;
@@ -328,7 +329,7 @@ cx:EvaluativeAttributionConstruction_slots a rdf_ns:Seq ;
     rcxn:hasTitle "barāye kasi āstin bālā zadan: to roll up sleeves for something" .
 
 <http://example.org/cx/Farsibarāyekasiāstinbālāzadan:torollupsleevesforsomething_MD> a rcxn:Metadata ;
-    rcxn:annotator <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#Rastegar> ;
+    rcxn:annotator membr:Rastegar ;
     rcxn:creationDate "2024-12-04"^^xsd:date .
 
 <http://example.org/cx/Farsimārāstin-exodparvarāndan:tonurtureasnakeinone'sbosom> a rcxn:Construction ;
@@ -338,7 +339,7 @@ cx:EvaluativeAttributionConstruction_slots a rdf_ns:Seq ;
 
 <http://example.org/cx/Farsimārāstin-exodparvarāndan:tonurtureasnakeinone'sbosom_MD> a rcxn:Metadata ;
     lg:partOfLanguage lg:pes ;
-    rcxn:annotator <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#Rastegar> ;
+    rcxn:annotator membr:Rastegar ;
     rcxn:creationDate "2024-12-04"^^xsd:date ;
     rcxn:hasTitle "mār āstin-e xod parvarāndan: to nurture a snake in one's bosom" .
 
@@ -348,7 +349,7 @@ cx:Generalprepositionalconstructions a rcxn:Construction ;
     rcxn:hasTitle "General prepositional constructions" .
 
 cx:Generalprepositionalconstructions_MD a rcxn:Metadata ;
-    rcxn:annotator <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#Lee> ;
+    rcxn:annotator membr:Lee ;
     rcxn:creationDate "2024-12-02"^^xsd:date .
 
 cx:Idiomaticconstruction_1 a rcxn:SlotMandatory ;
@@ -425,7 +426,7 @@ cx:Idiomaticconstruction_Ex_B a cx:Example ;
     rdfs:comment "Shows the construction in zu-infinitive form with sein ; again in negative context." .
 
 cx:Idiomaticconstruction_MD a rcxn:Metadata ;
-    rcxn:annotator <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#Rastegar> ;
+    rcxn:annotator membr:Rastegar ;
     rcxn:creationDate "2024-12-04"^^xsd:date .
 
 cx:Idiomaticconstruction_Meaning a rcxn:ConstructionMeaning ;
@@ -501,7 +502,7 @@ cx:Idiomaticconstructions_Ex_B a cx:Example ;
     cx:hasText "I had, quite deliberately, burned my bridges -- there was no returning to the closet for me." .
 
 cx:Idiomaticconstructions_MD a rcxn:Metadata ;
-    rcxn:annotator <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#Rastegar> ;
+    rcxn:annotator membr:Rastegar ;
     rcxn:creationDate "2024-12-03"^^xsd:date .
 
 cx:Idiomaticconstructions_Meaning a rcxn:ConstructionMeaning ;
@@ -520,7 +521,7 @@ cx:ItalianConiunctioRelativa a rcxn:Construction ;
     rcxn:hasTitle "Coniunctio Relativa" .
 
 cx:ItalianConiunctioRelativa_MD a rcxn:Metadata ;
-    rcxn:annotator <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#Trombetta> ;
+    rcxn:annotator membr:Trombetta ;
     rcxn:creationDate "2024-11-21"^^xsd:date .
 
 cx:ItalianRelativeClause a rcxn:Construction ;
@@ -529,7 +530,7 @@ cx:ItalianRelativeClause a rcxn:Construction ;
     rcxn:hasTitle "Relative Clause" .
 
 cx:ItalianRelativeClause_MD a rcxn:Metadata ;
-    rcxn:annotator <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#Trombetta> ;
+    rcxn:annotator membr:Trombetta ;
     rcxn:creationDate "2024-11-21"^^xsd:date .
 
 cx:ItalianSiPassivante a rcxn:Construction ;
@@ -538,7 +539,7 @@ cx:ItalianSiPassivante a rcxn:Construction ;
     rcxn:hasTitle "Si Passivante" .
 
 cx:ItalianSiPassivante_MD a rcxn:Metadata ;
-    rcxn:annotator <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#Trombetta> ;
+    rcxn:annotator membr:Trombetta ;
     rcxn:creationDate "2024-11-21"^^xsd:date .
 
 cx:ItalianTemporalSubordinateClause a rcxn:Construction ;
@@ -547,7 +548,7 @@ cx:ItalianTemporalSubordinateClause a rcxn:Construction ;
     rcxn:hasTitle "Temporal Subordinate Clause" .
 
 cx:ItalianTemporalSubordinateClause_MD a rcxn:Metadata ;
-    rcxn:annotator <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#Trombetta> ;
+    rcxn:annotator membr:Trombetta ;
     rcxn:creationDate "2024-11-21"^^xsd:date .
 
 <http://example.org/cx/Latinlinkingcliché(i.e.,inCaesar'sandTacitus'works)> a rcxn:Construction ;
@@ -556,7 +557,7 @@ cx:ItalianTemporalSubordinateClause_MD a rcxn:Metadata ;
     rcxn:hasTitle "linking cliché (i.e., in Caesar's and Tacitus' works)" .
 
 <http://example.org/cx/Latinlinkingcliché(i.e.,inCaesar'sandTacitus'works)_MD> a rcxn:Metadata ;
-    rcxn:annotator <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#Trombetta> ;
+    rcxn:annotator membr:Trombetta ;
     rcxn:creationDate "2024-11-21"^^xsd:date .
 
 cx:Monotransitivkonstruktion a rcxn:Construction ;
@@ -565,7 +566,7 @@ cx:Monotransitivkonstruktion a rcxn:Construction ;
     rcxn:hasTitle "Monotransitivkonstruktion" .
 
 cx:Monotransitivkonstruktion_MD a rcxn:Metadata ;
-    rcxn:annotator <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#Fuehrer> ;
+    rcxn:annotator membr:Fuehrer ;
     rcxn:creationDate "2024-11-25"^^xsd:date .
 
 <http://example.org/cx/NP[ADJ-strong+ADJ-strong+N]> a rcxn:Construction ;
@@ -574,7 +575,7 @@ cx:Monotransitivkonstruktion_MD a rcxn:Metadata ;
     rcxn:hasTitle "NP [ADJ-strong + ADJ-strong + N]" .
 
 <http://example.org/cx/NP[ADJ-strong+ADJ-strong+N]_MD> a rcxn:Metadata ;
-    rcxn:annotator <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#Kligge> ;
+    rcxn:annotator membr:Kligge ;
     rcxn:creationDate "2024-12-02"^^xsd:date .
 
 <http://example.org/cx/NP[ADJ-strong+ADJ-weak+N]> a rcxn:Construction ;
@@ -583,7 +584,7 @@ cx:Monotransitivkonstruktion_MD a rcxn:Metadata ;
     rcxn:hasTitle "NP [ADJ-strong + ADJ-weak+ N]" .
 
 <http://example.org/cx/NP[ADJ-strong+ADJ-weak+N]_MD> a rcxn:Metadata ;
-    rcxn:annotator <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#Kligge> ;
+    rcxn:annotator membr:Kligge ;
     rcxn:creationDate "2024-12-02"^^xsd:date .
 
 <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_1> a rcxn:SlotMandatory ;
@@ -607,7 +608,7 @@ cx:Monotransitivkonstruktion_MD a rcxn:Metadata ;
     rcxn:hasSyntacticForm cx:deu_Noun .
 
 <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_MD> a rcxn:Metadata ;
-    rcxn:annotator <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#Kligge> ;
+    rcxn:annotator membr:Kligge ;
     rcxn:creationDate "2024-12-02"^^xsd:date .
 
 <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_Meaning> a rcxn:ConstructionMeaning .
@@ -623,17 +624,17 @@ cx:Monotransitivkonstruktion_MD a rcxn:Metadata ;
     rcxn:hasTitle "NP [das+ ADJ-e+ N]nom.sg.neut" .
 
 <http://example.org/cx/NP[das+ADJ-e+N]nom.sg.neut_MD> a rcxn:Metadata ;
-    rcxn:annotator <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#Kligge> ;
+    rcxn:annotator membr:Kligge ;
     rcxn:creationDate "2024-12-02"^^xsd:date .
 
 <http://example.org/cx/NP[das+ADJ-eN]acc.sg.neut> a rcxn:Construction ;
-    cx:annotator <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#Kligge> ;
+    cx:annotator membr:Kligge ;
     lg:partOfLanguage lg:deu ;
     rcxn:creationDate "2024-12-02"^^xsd:date ;
     rcxn:hasTitle "NP[das + ADJ-e N]acc.sg.neut" .
 
 <http://example.org/cx/NP[das+ADJ-eN]nom.sg.neut> a rcxn:Construction ;
-    cx:annotator <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#Kligge> ;
+    cx:annotator membr:Kligge ;
     lg:partOfLanguage lg:deu ;
     rcxn:creationDate "2024-12-02"^^xsd:date ;
     rcxn:hasTitle "NP[das + ADJ-e N]nom.sg.neut" .
@@ -644,7 +645,7 @@ cx:Monotransitivkonstruktion_MD a rcxn:Metadata ;
     rcxn:hasTitle "NP [def.DET-strong + N]" .
 
 <http://example.org/cx/NP[def.DET-strong+N]_MD> a rcxn:Metadata ;
-    rcxn:annotator <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#Kligge> ;
+    rcxn:annotator membr:Kligge ;
     rcxn:creationDate "2024-12-02"^^xsd:date .
 
 <http://example.org/cx/NP[dem+ADJ-en+N]dat.sg.masc/neut> a rcxn:Construction ;
@@ -653,23 +654,23 @@ cx:Monotransitivkonstruktion_MD a rcxn:Metadata ;
     rcxn:hasTitle "NP [dem + ADJ-en+ N]dat.sg.masc/neut" .
 
 <http://example.org/cx/NP[dem+ADJ-en+N]dat.sg.masc/neut_MD> a rcxn:Metadata ;
-    rcxn:annotator <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#Kligge> ;
+    rcxn:annotator membr:Kligge ;
     rcxn:creationDate "2024-12-02"^^xsd:date .
 
 <http://example.org/cx/NP[dem+ADJ-enN]dat.sg.masc> a rcxn:Construction ;
-    cx:annotator <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#Kligge> ;
+    cx:annotator membr:Kligge ;
     lg:partOfLanguage lg:deu ;
     rcxn:creationDate "2024-12-02"^^xsd:date ;
     rcxn:hasTitle "NP[dem + ADJ-en N]dat.sg.masc" .
 
 <http://example.org/cx/NP[dem+ADJ-enN]dat.sg.neut> a rcxn:Construction ;
-    cx:annotator <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#Kligge> ;
+    cx:annotator membr:Kligge ;
     lg:partOfLanguage lg:deu ;
     rcxn:creationDate "2024-12-02"^^xsd:date ;
     rcxn:hasTitle "NP[dem + ADJ-en N]dat.sg.neut" .
 
 <http://example.org/cx/NP[den+ADJ-enN]acc.sg.masc> a rcxn:Construction ;
-    cx:annotator <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#Kligge> ;
+    cx:annotator membr:Kligge ;
     lg:partOfLanguage lg:deu ;
     rcxn:creationDate "2024-12-02"^^xsd:date ;
     rcxn:hasTitle "NP[den+ ADJ-en N]acc.sg.masc" .
@@ -680,7 +681,7 @@ cx:Monotransitivkonstruktion_MD a rcxn:Metadata ;
     rcxn:hasTitle "NP [der+ ADJ-e+ N]nom.sg.masc" .
 
 <http://example.org/cx/NP[der+ADJ-e+N]nom.sg.masc_MD> a rcxn:Metadata ;
-    rcxn:annotator <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#Kligge> ;
+    rcxn:annotator membr:Kligge ;
     rcxn:creationDate "2024-12-02"^^xsd:date .
 
 <http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_1> a rcxn:SlotMandatory ;
@@ -692,7 +693,7 @@ cx:Monotransitivkonstruktion_MD a rcxn:Metadata ;
 <http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_3> a rcxn:SlotMandatory .
 
 <http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_MD> a rcxn:Metadata ;
-    rcxn:annotator <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#Kligge> ;
+    rcxn:annotator membr:Kligge ;
     rcxn:creationDate "2024-12-02"^^xsd:date .
 
 <http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_Meaning> a rcxn:ConstructionMeaning ;
@@ -709,11 +710,11 @@ cx:Monotransitivkonstruktion_MD a rcxn:Metadata ;
     rcxn:hasTitle "NP [die + ADJ-e+ N]nom.sg.fem" .
 
 <http://example.org/cx/NP[die+ADJ-e+N]nom.sg.fem_MD> a rcxn:Metadata ;
-    rcxn:annotator <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#Kligge> ;
+    rcxn:annotator membr:Kligge ;
     rcxn:creationDate "2024-12-02"^^xsd:date .
 
 <http://example.org/cx/NP[die+ADJ-eN]nom.sg.fem> a rcxn:Construction ;
-    cx:annotator <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#Kligge> ;
+    cx:annotator membr:Kligge ;
     lg:partOfLanguage lg:deu ;
     rcxn:creationDate "2024-12-02"^^xsd:date ;
     rcxn:hasTitle "NP[die + ADJ-e N]nom.sg.fem" .
@@ -724,7 +725,7 @@ cx:Monotransitivkonstruktion_MD a rcxn:Metadata ;
     rcxn:hasTitle "NP [indef.DET-strong + ADJ-weak + N]" .
 
 <http://example.org/cx/NP[indef.DET-strong+ADJ-weak+N]_MD> a rcxn:Metadata ;
-    rcxn:annotator <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#Kligge> ;
+    rcxn:annotator membr:Kligge ;
     rcxn:creationDate "2024-12-02"^^xsd:date .
 
 <http://example.org/cx/NP[indef.DET-strong+N]> a rcxn:Construction ;
@@ -733,7 +734,7 @@ cx:Monotransitivkonstruktion_MD a rcxn:Metadata ;
     rcxn:hasTitle "NP [indef.DET-strong + N]" .
 
 <http://example.org/cx/NP[indef.DET-strong+N]_MD> a rcxn:Metadata ;
-    rcxn:annotator <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#Kligge> ;
+    rcxn:annotator membr:Kligge ;
     rcxn:creationDate "2024-12-02"^^xsd:date .
 
 <http://example.org/cx/NP[indef.DET-zero+N]> a rcxn:Construction ;
@@ -742,11 +743,11 @@ cx:Monotransitivkonstruktion_MD a rcxn:Metadata ;
     rcxn:hasTitle "NP [indef.DET-zero + N]" .
 
 <http://example.org/cx/NP[indef.DET-zero+N]_MD> a rcxn:Metadata ;
-    rcxn:annotator <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#Kligge> ;
+    rcxn:annotator membr:Kligge ;
     rcxn:creationDate "2024-12-02"^^xsd:date .
 
 cx:NPnom.sg.masc a rcxn:Construction ;
-    cx:annotator <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#Kligge> ;
+    cx:annotator membr:Kligge ;
     lg:partOfLanguage lg:deu ;
     rcxn:creationDate "2024-12-02"^^xsd:date ;
     rcxn:hasTitle "NP nom.sg.masc" .
@@ -757,7 +758,7 @@ cx:Noun a rcxn:Construction ;
     rcxn:hasTitle "Noun" .
 
 cx:Noun_MD a rcxn:Metadata ;
-    cx:annotator <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#Winckel> ;
+    cx:annotator membr:Winckel ;
     rcxn:creationDate "2025-12-01"^^xsd:date .
 
 cx:POU-beneficiaryconstruction_1 a rcxn:SlotMandatory ;
@@ -792,7 +793,7 @@ cx:POU-beneficiaryconstruction_Ex_A a cx:Example ;
     rdfs:comment "Text 1, #27" .
 
 cx:POU-beneficiaryconstruction_MD a rcxn:Metadata ;
-    rcxn:annotator <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#Legoute> ;
+    rcxn:annotator membr:Legoute ;
     rcxn:creationDate "2024-11-28"^^xsd:date .
 
 cx:POU-beneficiaryconstruction_Meaning a rcxn:ConstructionMeaning ;
@@ -810,7 +811,7 @@ cx:POU-purposeconstruction a rcxn:Construction ;
     rcxn:hasTitle "POU-purpose construction" .
 
 cx:POU-purposeconstruction_MD a rcxn:Metadata ;
-    rcxn:annotator <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#Legoute> ;
+    rcxn:annotator membr:Legoute ;
     rcxn:creationDate "2024-11-28"^^xsd:date .
 
 cx:Präfixverbkonstruktion a rcxn:Construction ;
@@ -819,7 +820,7 @@ cx:Präfixverbkonstruktion a rcxn:Construction ;
     rcxn:hasTitle "Präfixverbkonstruktion" .
 
 cx:Präfixverbkonstruktion_MD a rcxn:Metadata ;
-    rcxn:annotator <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#Fuehrer> ;
+    rcxn:annotator membr:Fuehrer ;
     rcxn:creationDate "2024-11-25"^^xsd:date .
 
 cx:Relative-Topic-ShiftConstruction_1 a rcxn:SlotMandatory ;
@@ -861,7 +862,7 @@ cx:Relative-Topic-ShiftConstruction_Ex_B a cx:Example ;
 
 cx:Relative-Topic-ShiftConstruction_MD a rcxn:Metadata ;
     cx:hasSources cx:Relative-Topic-ShiftConstruction_Sources ;
-    rcxn:annotator <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#Trombetta> ;
+    rcxn:annotator membr:Trombetta ;
     rcxn:creationDate "2024-11-21"^^xsd:date .
 
 cx:Relative-Topic-ShiftConstruction_Meaning a rcxn:ConstructionMeaning ;
@@ -884,7 +885,7 @@ cx:Spanishobjectrelativeclause a rcxn:Construction ;
 
 cx:Spanishobjectrelativeclause_MD a rcxn:Metadata ;
     lg:partOfLanguage lg:spa ;
-    rcxn:annotator <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#FernandezSantos> ;
+    rcxn:annotator membr:FernandezSantos ;
     rcxn:creationDate "2024-11-25"^^xsd:date .
 
 cx:Spanishrelativeclause a rcxn:Construction ;
@@ -893,7 +894,7 @@ cx:Spanishrelativeclause a rcxn:Construction ;
     rcxn:hasTitle "Spanish relative clause" .
 
 cx:Spanishrelativeclause_MD a rcxn:Metadata ;
-    rcxn:annotator <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#FernandezSantos> ;
+    rcxn:annotator membr:FernandezSantos ;
     rcxn:creationDate "2024-11-25"^^xsd:date .
 
 cx:Spanishtransitiveconstruction a rcxn:Construction ;
@@ -902,7 +903,7 @@ cx:Spanishtransitiveconstruction a rcxn:Construction ;
     rcxn:hasTitle "Spanish transitive construction" .
 
 cx:Spanishtransitiveconstruction_MD a rcxn:Metadata ;
-    rcxn:annotator <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#FernandezSantos> ;
+    rcxn:annotator membr:FernandezSantos ;
     rcxn:creationDate "2024-11-25"^^xsd:date .
 
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._1 a rcxn:SlotOptional ;
@@ -937,7 +938,7 @@ cx:TheEnglishGIVE-OUTVerbParticleConstruction._Ex_A a cx:Example ;
         "[The event organizer]1 [gave]2 [out]3 [gift bags]4 to all attendees at the end of the ceremony." .
 
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._MD a rcxn:Metadata ;
-    rcxn:annotator <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#Kissane> ;
+    rcxn:annotator membr:Kissane ;
     rcxn:creationDate "2024-12-01"^^xsd:date .
 
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._Meaning a rcxn:ConstructionMeaning ;
@@ -989,7 +990,7 @@ cx:ThisCloseToV-ing_Ex_A a cx:Example ;
     rdfs:comment "https://pisa.vrnewsscape.ucla.edu/newsscape_mp4_snippet.cgi?file=fa5d0dfc-cb7b-11e6-97cd-089e01ba0338&start=2396&end=2401" .
 
 cx:ThisCloseToV-ing_MD a rcxn:Metadata ;
-    rcxn:annotator <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#Iabdounane> ;
+    rcxn:annotator membr:Iabdounane ;
     rcxn:creationDate "2024-11-28"^^xsd:date .
 
 cx:ThisCloseToV-ing_Meaning a rcxn:ConstructionMeaning ;
@@ -1108,7 +1109,7 @@ cx:Transitivedurch-Präfixverbkonstruktion_Ex_C a cx:Example ;
 
 cx:Transitivedurch-Präfixverbkonstruktion_MD a rcxn:Metadata ;
     cx:hasSources cx:Transitivedurch-Präfixverbkonstruktion_Sources ;
-    rcxn:annotator <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#Fuehrer> ;
+    rcxn:annotator membr:Fuehrer ;
     rcxn:creationDate "2024-11-25"^^xsd:date .
 
 cx:Transitivedurch-Präfixverbkonstruktion_Meaning a rcxn:ConstructionMeaning ;
@@ -1134,7 +1135,7 @@ cx:Transitivedurch-Verbkonstruktion a rcxn:Construction ;
     rcxn:hasMetadata cx:Transitivedurch-Verbkonstruktion_MD .
 
 cx:Transitivedurch-Verbkonstruktion_MD a rcxn:Metadata ;
-    rcxn:annotator <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#Fuehrer> ;
+    rcxn:annotator membr:Fuehrer ;
     rcxn:creationDate "2024-11-25"^^xsd:date .
 
 cx:Transitiveobjectrelativeclause_1 a rcxn:SlotMandatory ;
@@ -1227,7 +1228,7 @@ cx:Transitiveobjectrelativeclause_Ex_D a cx:Example ;
 cx:Transitiveobjectrelativeclause_MD a rcxn:Metadata ;
     cx:creationDate "2024-11-25"^^xsd:date ;
     cx:hasSources cx:Transitiveobjectrelativeclause_Sources ;
-    rcxn:annotator <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#FernandezSantos> .
+    rcxn:annotator membr:FernandezSantos .
 
 cx:Transitiveobjectrelativeclause_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "Identificatory NP: [Someone]4 carries out a [transitive action]5 that affects [someone else]1. The function of the object relative clause is to identify the [affected]1." .
@@ -1311,7 +1312,7 @@ cx:Transitiveobjectrelativeclause_slots a rdf_ns:Seq ;
     rcxn:hasSyntacticForm cx:deu_Verb .
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_MD> a rcxn:Metadata ;
-    rcxn:annotator <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#Lee> ;
+    rcxn:annotator membr:Lee ;
     rcxn:creationDate "2024-12-02"^^xsd:date .
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_Meaning> a rcxn:ConstructionMeaning ;
@@ -1371,7 +1372,7 @@ cx:Transitiveobjectrelativeclause_slots a rdf_ns:Seq ;
 
 <http://example.org/cx/come+[noise/mannerofmovement]V-ing_MD> a rcxn:Metadata ;
     cx:hasSources <http://example.org/cx/come+[noise/mannerofmovement]V-ing_Sources> ;
-    rcxn:annotator <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#Patel> ;
+    rcxn:annotator membr:Patel ;
     rcxn:creationDate "2024-11-28"^^xsd:date .
 
 <http://example.org/cx/come+[noise/mannerofmovement]V-ing_Meaning> a rcxn:ConstructionMeaning ;
@@ -1408,7 +1409,7 @@ cx:coolasadmirableconstruction_Ex_C a cx:Example ;
     cx:hasText "The movie is cool." .
 
 cx:coolasadmirableconstruction_MD a rcxn:Metadata ;
-    cx:annotator <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#Winckel> ;
+    cx:annotator membr:Winckel ;
     cx:hasSources cx:eng_coolconstruction_Sources ;
     rcxn:creationDate "2025-11-28"^^xsd:date .
 
@@ -1436,7 +1437,7 @@ cx:coolascolourconstruction_Ex_B a cx:Example ;
     cx:hasText "a cool shade of grey" .
 
 cx:coolascolourconstruction_MD a rcxn:Metadata ;
-    cx:annotator <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#Winckel> ;
+    cx:annotator membr:Winckel ;
     cx:hasSources cx:eng_coolconstruction_Sources ;
     rcxn:creationDate "2025-11-28"^^xsd:date .
 
@@ -1464,7 +1465,7 @@ cx:coolasemotionconstruction_Ex_B a cx:Example ;
     cx:hasText "He is staying cool under pressure." .
 
 cx:coolasemotionconstruction_MD a rcxn:Metadata ;
-    cx:annotator <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#Winckel> ;
+    cx:annotator membr:Winckel ;
     cx:hasSources cx:eng_coolconstruction_Sources ;
     rcxn:creationDate "2025-11-28"^^xsd:date .
 
@@ -1508,7 +1509,7 @@ cx:eng_AdjectiveAttributiveconstruction_3_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:Noun .
 
 cx:eng_AdjectiveAttributiveconstruction_MD a rcxn:Metadata ;
-    cx:annotator <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#Winckel> ;
+    cx:annotator membr:Winckel ;
     rcxn:creationDate "2025-12-01"^^xsd:date .
 
 cx:eng_AdjectiveAttributiveconstruction_Meaning a rcxn:ConstructionMeaning ;
@@ -1538,7 +1539,7 @@ cx:eng_AdjectivePredicativeconstruction_3_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_AdjectivePhrase .
 
 cx:eng_AdjectivePredicativeconstruction_MD a rcxn:Metadata ;
-    cx:annotator <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#Winckel> ;
+    cx:annotator membr:Winckel ;
     rcxn:creationDate "2025-12-01"^^xsd:date .
 
 cx:eng_AdjectivePredicativeconstruction_Meaning a rcxn:ConstructionMeaning ;
@@ -1550,7 +1551,7 @@ cx:eng_AdjectivePredicativeconstruction_slots a rdf_ns:Seq ;
     rdf_ns:_3 cx:eng_AdjectivePredicativeconstruction_3 .
 
 cx:eng_Adjective_MD a rcxn:Metadata ;
-    cx:annotator <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#Winckel> ;
+    cx:annotator membr:Winckel ;
     rcxn:creationDate "2025-11-28"^^xsd:date .
 
 cx:eng_Keepacoolheadconstruction a rcxn:Construction ;
@@ -1593,7 +1594,7 @@ cx:eng_Keepacoolheadconstruction_Ex_A a cx:Example ;
     rdfs:comment "BNC, Newspaper, 1992" .
 
 cx:eng_Keepacoolheadconstruction_MD a rcxn:Metadata ;
-    cx:annotator <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#Winckel> ;
+    cx:annotator membr:Winckel ;
     cx:hasSources cx:eng_coolconstruction_Sources ;
     rcxn:creationDate "2025-11-28"^^xsd:date .
 
@@ -1660,7 +1661,7 @@ cx:eng_coolconstruction_Ex_D a cx:Example ;
     cx:hasText "cool climate" .
 
 cx:eng_coolconstruction_MD a rcxn:Metadata ;
-    cx:annotator <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#Winckel> ;
+    cx:annotator membr:Winckel ;
     cx:hasSources cx:eng_coolconstruction_Sources ;
     rcxn:creationDate "2025-11-28"^^xsd:date .
 
@@ -1733,7 +1734,7 @@ cx:spa_Verb a rcxn:Construction ;
 <http://example.org/cx/vor+bodypartconstructions> a rcxn:Construction,
         rcxn:Metadata ;
     lg:partOfLanguage lg:deu ;
-    rcxn:annotator <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#Lee> ;
+    rcxn:annotator membr:Lee ;
     rcxn:creationDate "2024-12-02"^^xsd:date ;
     rcxn:hasMetadata <http://example.org/cx/vor+bodypartconstructions_MD> ;
     rcxn:hasTitle "vor + body part constructions" .
@@ -1977,7 +1978,7 @@ cx:Idiomaticconstruction a rcxn:Construction ;
     rcxn:hasTitle "Aus dem Ärmel schütteln construction" .
 
 <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]> a rcxn:Construction ;
-    cx:annotator <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#Kligge> ;
+    cx:annotator membr:Kligge ;
     lg:partOfLanguage lg:deu ;
     ns1:inheritedBy <http://example.org/cx/NP[das+ADJ-e+N]nom.sg.neut>,
         <http://example.org/cx/NP[dem+ADJ-en+N]dat.sg.masc/neut>,

@@ -5,11 +5,13 @@ import glob
 # File paths
 output_cx = "Abox/cx.ttl"
 output_membr = "Abox/membr.ttl"
+output_references = "Abox/references.ttl"
 
-# Create general graph, and subgraphs holders for cx and membr
+# Create general graph, and subgraphs holders for cx, membr and references
 g = Graph()
 graph_cx = Graph()
 graph_membr = Graph()
+graph_references = Graph()
 
 # Load everything from the submissions (assuming that everything in the submission folder has now a green light)
 for ttl_file in glob.glob("instance/Submissions/*_cx.ttl"):
@@ -199,3 +201,13 @@ for s, p, o in g:
 graph_membr.serialize(destination=output_membr, format="turtle")
 print(f"RDF saved to {output_membr}")
 
+# Identify references and save them in a dedicated A-box
+for subject, reference in g.subject_objects(cx.hasLiterature):
+    for p, o in g.predicate_objects(reference):
+        print(reference)
+        print(p)
+        print(o)
+        graph_references.add((reference, p, o))
+# Serialize the filtered graph
+graph_references.serialize(destination=output_references, format="turtle")
+print(f"RDF saved to {output_references}")

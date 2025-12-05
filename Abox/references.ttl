@@ -1,0 +1,64 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<file:///home/meuhlodi/Travail/RCxn/instance/Submissions/Ramezani_20250214_134546_cx.ttl> dcterms:creator "A. E. Goldberg",
+        "Pegah Ramezani, Achim Schilling, Patrick Krauss" ;
+    dcterms:date "1995",
+        "2025" ;
+    dcterms:identifier "https://doi.org/10.3389/frai.2025.1477246" ;
+    dcterms:publisher "Frontiers in Artificial Intelligence",
+        "University of Chicago Press" ;
+    dcterms:title "Analysis of Argument Structure Constructions in the Large Language Model BERT",
+        "Constructions: A Construction Grammar Approach to Argument Structure" ;
+    dcterms:type "Article",
+        "Book" .
+
+<file:///home/meuhlodi/Travail/RCxn/instance/Submissions/www.english-corpora.org/bnc/> dc:contributor "Davies, Mark" ;
+    dc:date "2024" ;
+    dc:title "British National Corpus" ;
+    dc:type "book" .
+
+<file:///home/meuhlodi/Travail/RCxn/instance/Submissions/www.english-corpora.org/coca/> dc:contributor "Davies, Mark" ;
+    dc:title "The Corpus of Contemporary American English (COCA)" ;
+    dc:type "book" .
+
+<https://doi.org/10.1093/llc/fqw021> dc:creator "Longrée, Dominique",
+        "Mellet, Sylvie" ;
+    dc:date "2017-09-01" ;
+    dc:identifier "DOI 10.1093/llc/fqw021",
+        "ISSN 2055-7671" ;
+    dc:title "A text structure indicator and two topological methods: New ways for studying Latin historic narratives" ;
+    dc:type "journalArticle" .
+
+<https://onlinelibrary.wiley.com/doi/10.1111/lang.12066> dc:creator "Reali, Florencia" ;
+    dc:date "2014" ;
+    dc:identifier "DOI 10.1111/lang.12066",
+        "ISSN 00238333" ;
+    dc:title "Frequency Affects Object Relative Clause Processing: Some Evidence in Favor of Usage-Based Accounts: Frequency Affects Object Relative Clause Processing" ;
+    dc:type "journalArticle" .
+
+<https://www.dwds.de/wb/cool> dc:date "2025" ;
+    dc:publisher "Berlin-Brandenburgische Akademie der Wissenschaften" ;
+    dc:source "DWDS - Digitale Wörterbuch der deutschen Sprache" ;
+    dc:title "cool" ;
+    dc:type "encyclopediaArticle" .
+
+<https://www.oed.com/dictionary/cool_adj?tl=true> dc:date "2025" ;
+    dc:publisher "Oxford University Press" ;
+    dc:source "Oxford English Dictionary" ;
+    dc:title "cool (adjective, Adverb, Interjection)" ;
+    dc:type "encyclopediaArticle" .
+
+[] dc:creator "Mengaldo, Pier Vincenzo" ;
+    dc:date "2015" ;
+    dc:identifier "DOI 10.1417/81352",
+        "ISSN 0024-385X" ;
+    dc:title "Sintassi e narrazione nella «Storia d'Italia» di Guicciardini: effetti di legato e di staccato" ;
+    dc:type "journalArticle" .
+
+[] dc:creator "Nencioni, Giovanni" ;
+    dc:date "1984" ;
+    dc:publisher "Leo S. Olschki" ;
+    dc:title "La lingua del Guicciardini" ;
+    dc:type "bookSection" .
+

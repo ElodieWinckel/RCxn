@@ -367,7 +367,6 @@ def construction_detail(uri):
                 if str(source).strip() != "None":
                     reference["source"] = str(source)
                 references.append(reference)
-    print(references)
 
     # Collect triples for research question and findings
     research = []
