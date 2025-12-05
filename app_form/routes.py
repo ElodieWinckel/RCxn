@@ -15,16 +15,16 @@ if os.path.exists("/data/www/RCxn"):
 ### FUNCTIONS REQUIRED TO EXTRACT FROM DATABASES AND ONTOLOGIES
 ###################################################
 
-# Load URIs and family names from existing database of researchers (users.ttl)
+# Load URIs and family names from existing database of researchers (membr.ttl)
 def load_user_names_from_ttl(file_path):
     g = Graph()
     g.parse(file_path, format='turtle')
     foaf = Namespace('http://xmlns.com/foaf/0.1/')
-    uris_and_names = [(str(s).replace("http://example.org/users#", ""),
+    uris_and_names = [(str(s).replace("https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#", ""),
                        str(g.value(s, foaf.familyName))) for s in g.subjects(RDF.type, foaf.Person)]
     return uris_and_names
 
-# Load URIs and project names from existing database of research projects (users.ttl)
+# Load URIs and project names from existing database of research projects (membr.ttl)
 def load_projects_from_ttl(file_path):
     g = Graph()
     g.parse(file_path, format='turtle')
@@ -32,18 +32,18 @@ def load_projects_from_ttl(file_path):
     foaf = Namespace("http://xmlns.com/foaf/0.1/")
     project_list = []
     for project in g.subjects(RDF.type, rsrch.Project):
-        uri = str(project).replace("http://example.org/users#", "")
+        uri = str(project).replace("https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#", "")
         title = str(g.value(project, rsrch.projectName))
         project_list.append((uri, title))
     return project_list
 
-# Load URIs and finding labels from existing database of research projects (users.ttl)
+# Load URIs and finding labels from existing database of research projects (membr.ttl)
 def load_findings_from_ttl(file_path):
     g = Graph()
     g.parse(file_path, format='turtle')
     rsrch = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#")
     RDFS = Namespace("http://www.w3.org/2000/01/rdf-schema#")
-    uris_and_names = [(str(s).replace("http://example.org/users#", ""),
+    uris_and_names = [(str(s).replace("https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#", ""),
                        str(g.value(s, RDFS.label))) for s in g.subjects(RDF.type, rsrch.Finding)]
     return uris_and_names
 
@@ -185,9 +185,9 @@ def get_metalanguage(lang_uri):
 
 # Prepare all lists that are passed to the HTML form
 # /data/www/RCxn/
-uri_list = load_user_names_from_ttl('Abox/users.ttl')
-project_list = load_projects_from_ttl('Abox/users.ttl')
-findings_list = load_findings_from_ttl('Abox/users.ttl')
+uri_list = load_user_names_from_ttl('Abox/membr.ttl')
+project_list = load_projects_from_ttl('Abox/membr.ttl')
+findings_list = load_findings_from_ttl('Abox/membr.ttl')
 semantic_roles = load_SemanticRoles('ontologies/olia.owl')
 semantic_roles.insert(0, '') # The first element of the drop-down list should be the empty string
 number_features = load_NumberFeatures('ontologies/olia.owl')
@@ -287,7 +287,7 @@ def form_submit():
     cx = Namespace("http://example.org/cx/")
     g.bind("cx", cx)
 
-    membr = Namespace("http://example.org/users#")
+    membr = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/membr#")
     g.bind("membr", membr)
 
     rcxn = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#")

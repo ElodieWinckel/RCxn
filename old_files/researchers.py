@@ -81,7 +81,7 @@ add_user("Weigelt", "Lina", "Project Weigelt")
 add_user("Winckel", "Elodie", "Building a Research Constructicon")
 
 # Serialize the graph in Turtle format and write to a file
-output_file = "../Abox/users.ttl"
+output_file = "../Abox/membr.ttl"
 with open(output_file, "w") as f:
     f.write(g.serialize(format="turtle"))
 

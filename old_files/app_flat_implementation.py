@@ -119,8 +119,8 @@ def load_existing_constructions_title(file_path):
 ###################################################
 
 # Prepare all lists that are passed to the HTML form
-uri_list = load_uris_from_ttl('../Abox/users.ttl')
-project_list = load_projects_from_ttl('../Abox/users.ttl')
+uri_list = load_uris_from_ttl('../Abox/membr.ttl')
+project_list = load_projects_from_ttl('../Abox/membr.ttl')
 semantic_roles = load_SemanticRoles('../ontologies/olia.owl')
 semantic_roles.insert(0, '') # The first element of the drop-down list should be the empty string
 number_features = load_NumberFeatures('../ontologies/olia.owl')

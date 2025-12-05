@@ -4,7 +4,7 @@ import glob
 
 # File paths
 output_cx = "Abox/cx.ttl"
-output_membr = "Abox/users.ttl"
+output_membr = "Abox/membr.ttl"
 
 # Create general graph, and subgraphs holders for cx and membr
 g = Graph()
@@ -21,7 +21,7 @@ g.bind("cx", cx)
 graph_cx.bind("cx", cx)
 graph_membr.bind("cx", cx)
 
-membr = Namespace("http://example.org/users#")
+membr = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#")
 g.bind("membr", membr)
 graph_cx.bind("membr", membr)
 graph_membr.bind("membr", membr)
@@ -82,7 +82,7 @@ def add_user(last_name, first_name, project_name):
     project_uri = membr[f'Project_{last_name_cleaned}']
 
     # Add RDF triples to the graph
-    # related to users
+    # related to researcher
     g.add((user_uri, RDF.type, FOAF.Person))
     g.add((user_uri, FOAF.familyName, Literal(last_name)))
     g.add((user_uri, FOAF.givenName, Literal(first_name)))
@@ -91,7 +91,7 @@ def add_user(last_name, first_name, project_name):
     g.add((project_uri, RDF.type, rsrch.Project))
     g.add((project_uri, rsrch.projectName, Literal(project_name, lang = "en")))
 
-# Add users to the graph
+# Add RTG members to the graph
 add_user("Alhabyan", "Raghad", "Valency, preposition governing, and phrasal verbs in Arabic and Semitic")
 add_user("Badawi", "Soran", "Corpus-based measures of constructionhood")
 add_user("Bayer", "Nadine", "Project Bayer")
@@ -176,7 +176,7 @@ for prop in properties_to_mirror:
 for subj, obj in g.subject_objects(links.metaphoricalLink):
         g.add((obj, links.isMetaphoricalExtensionOf, subj))
 ###############################################################################
-# We now distinguish between the info that should go into cx.ttl and users.ttl
+# We now distinguish between the info that should go into cx.ttl and membr.ttl
 ###############################################################################
 
 # Iterate over all triples in the original graph (for cx.ttl)
@@ -189,7 +189,7 @@ for s, p, o in g:
 graph_cx.serialize(destination=output_cx, format="turtle")
 print(f"RDF saved to {output_cx}")
 
-# Iterate over all triples in the original graph (for users.ttl)
+# Iterate over all triples in the original graph (for membr.ttl)
 for s, p, o in g:
     # Check if the subject starts with the desired prefix
     if isinstance(s, URIRef) and str(s).startswith(membr):
