@@ -205,6 +205,25 @@
     </table>
 
 
+    <form id="downloadForm" method="POST">
+    <button type="submit">Download the construction (RDF Turtle)</button>
+    </form>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Get the current page's path
+        const path = window.location.pathname;
+        // Extract the "uri" part
+        const uri = path.split('/').pop();
+        // Set the form's action attribute using the correct URL
+        document.getElementById('downloadForm').action =
+            "{{ url_for('app_entries.download_subgraph', uri='') }}" + uri + "/submit";
+    });
+</script>
+
+    <p>
     <a href="{{ url_for('app_entries.list_view') }}">Back to Constructions List</a>
+    </p>
+
 </body>
 {% endblock %}

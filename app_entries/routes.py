@@ -1,9 +1,10 @@
 from . import app_entries_blueprint
 import glob
 import re
-from flask import Flask, render_template, redirect, url_for
+from flask import Flask, render_template, Response
 from rdflib import Graph, URIRef, Literal, Namespace, RDF, RDFS
 import os
+from io import BytesIO
 
 g = Graph()
 
@@ -411,3 +412,46 @@ def construction_detail(uri):
                            research_data=research_data,
                            references=references)
 
+@app_entries_blueprint.route('/construction/<path:uri>/submit', methods=['POST'])
+def download_subgraph(uri):
+    # Rebuild the full URI for the construction
+    construction = uri.replace("submit", "")
+    entry_uri = URIRef("http://example.org/cx/" + construction)
+
+    # Define the namespaces for a subgraph
+    subgraph = Graph()
+    CX = Namespace("http://example.org/cx/")
+    subgraph.bind("cx", CX)
+    dc = Namespace("http://purl.org/dc/elements/1.1/")
+    subgraph.bind("dc", dc)
+    olia = Namespace("http://purl.org/olia/olia.owl#")
+    subgraph.bind("olia", olia)
+    rcxn = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#")
+    subgraph.bind("rcxn", rcxn)
+    rsrch = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#")
+    subgraph.bind("rsrch", rsrch)
+    lg = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#")
+    subgraph.bind("lg", lg)
+    rd = Namespace("http://example.org/rd/")  # TODO: is this really the name?
+    subgraph.bind("rd", rd)
+    rdata = Namespace(
+        "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rdata#")  # TODO: is this really the name? create ontology
+    subgraph.bind("rdata", rdata)
+
+    # Extract the subgraph
+    for s, p, o in g:
+        # Check if the subject starts with the uri of the construction (for all slots, etc.)
+        if isinstance(s, URIRef) and str(s).startswith(entry_uri):
+            subgraph.add((s, p, o))
+
+    # Serialize the subgraph to a string
+    ttl_data = subgraph.serialize(format='turtle')
+
+    # Send the file as a response
+    return Response(
+        ttl_data,
+        mimetype='text/turtle',
+        headers={
+            'Content-Disposition': f'attachment; filename=construction_{uri}.ttl'
+        }
+    )
