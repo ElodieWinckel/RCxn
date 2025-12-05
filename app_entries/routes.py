@@ -417,11 +417,12 @@ def download_subgraph(uri):
     # Rebuild the full URI for the construction
     construction = uri.replace("submit", "")
     entry_uri = URIRef("http://example.org/cx/" + construction)
+    entry_metadata = URIRef("http://example.org/cx/" + construction + "_MD")
 
     # Define the namespaces for a subgraph
     subgraph = Graph()
-    CX = Namespace("http://example.org/cx/")
-    subgraph.bind("cx", CX)
+    cx = Namespace("http://example.org/cx/")
+    subgraph.bind("cx", cx)
     dc = Namespace("http://purl.org/dc/elements/1.1/")
     subgraph.bind("dc", dc)
     olia = Namespace("http://purl.org/olia/olia.owl#")
@@ -443,6 +444,12 @@ def download_subgraph(uri):
         # Check if the subject starts with the uri of the construction (for all slots, etc.)
         if isinstance(s, URIRef) and str(s).startswith(entry_uri):
             subgraph.add((s, p, o))
+
+    # Identify references and ad them to the graph
+    for collection in g.objects(entry_metadata, cx.hasSources):
+        for reference in g.objects(collection, cx.hasLiterature):
+            for p, o in g.predicate_objects(reference):
+                subgraph.add((reference, p, o))
 
     # Serialize the subgraph to a string
     ttl_data = subgraph.serialize(format='turtle')

@@ -204,9 +204,6 @@ print(f"RDF saved to {output_membr}")
 # Identify references and save them in a dedicated A-box
 for subject, reference in g.subject_objects(cx.hasLiterature):
     for p, o in g.predicate_objects(reference):
-        print(reference)
-        print(p)
-        print(o)
         graph_references.add((reference, p, o))
 # Serialize the filtered graph
 graph_references.serialize(destination=output_references, format="turtle")
