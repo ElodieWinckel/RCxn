@@ -117,7 +117,7 @@ def construction_detail(uri):
     # A list of prefixes that we might want to delete later from the URI
     prefixes = ("http://example.org/cx/|"
                 "http://example.org/rd/|"
-                "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0#|"
+                "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#|"
                 "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#|"
                 "http://example.org/users#|http://purl.org/olia/olia.owl#|"
                 "http://purl.org/olia/olia-top.owl#|"
@@ -167,7 +167,7 @@ def construction_detail(uri):
     links = []
     for predicate, obj in g.predicate_objects(subject=entry_uri):
         if str(predicate) != str(RDF.type):
-            if str(predicate).startswith("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0#"):
+            if str(predicate).startswith("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#"):
                 name_of_link = get_label_or_iri(predicate, g, ont)
                 object_value = get_label_or_iri(obj, g, ont)
                 uri = URIRef(f"http://example.org/cx/{object_value}")

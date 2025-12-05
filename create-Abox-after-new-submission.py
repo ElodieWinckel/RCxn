@@ -172,8 +172,9 @@ for prop in properties_to_mirror:
         # Add the mirrored triple
         g.add((obj, links[prop], subj))
 
-
-
+# If construction A has a metaphorical extension B, then B is a metaphorical extension of A
+for subj, obj in g.subject_objects(links.metaphoricalLink):
+        g.add((obj, links.isMetaphoricalExtensionOf, subj))
 ###############################################################################
 # We now distinguish between the info that should go into cx.ttl and users.ttl
 ###############################################################################

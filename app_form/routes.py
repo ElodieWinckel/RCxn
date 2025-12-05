@@ -758,7 +758,7 @@ def form_submit():
             g.add((cx[cleaned_inherit_construction], rcxn.hasTitle, Literal(inherit_construction)))
             print("New construction needed!")
         # In any case, write a triplet defining this construction as inherited from
-        g.add((cx[construction_name_cleaned], links.metaphoricalExtension, cx[cleaned_inherit_construction]))
+        g.add((cx[construction_name_cleaned], links.metaphoricalLink, cx[cleaned_inherit_construction]))
 
     # Handle the dynamically added similarity links
     similarity_counter = 1

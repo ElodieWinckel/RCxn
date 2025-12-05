@@ -2,7 +2,7 @@
 @prefix cx: <http://example.org/cx/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
-@prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0#> .
+@prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#> .
 @prefix membr: <http://example.org/users#> .
 @prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -82,7 +82,7 @@ cx:coolasemotionconstruction a rcxn:Construction ;
                   cx:coolasemotionconstruction_Ex_B ;
     RDFS:comment "first attested: Old English, Beowulf" ;
     lg:partOfLanguage lg:eng ;
-    links:metaphoricalExtension cx:keepacoolheadconstruction,
+    links:metaphoricalLink cx:keepacoolheadconstruction,
         cx:coolasadmirableconstruction ;
     links:isMetaphoricalExtensionOf cx:eng_coolconstruction ;
     rcxn:elementOf cx:eng_Keepacoolheadconstruction ;
@@ -252,7 +252,7 @@ cx:eng_coolconstruction a rcxn:Construction ;
                   cx:eng_coolconstruction_Ex_D ;
     RDFS:comment "from Indo-european *gel(ə)" ;
     lg:partOfLanguage lg:eng ;
-    links:metaphoricalExtension cx:coolascolourconstruction,
+    links:metaphoricalLink cx:coolascolourconstruction,
         cx:coolasemotionconstruction ;
     rcxn:hasConstructionMeaning cx:eng_coolconstruction_Meaning ;
     rcxn:hasMetadata cx:eng_coolconstruction_MD ;
