@@ -1,6 +1,6 @@
 # Research Constructicon Web App
 
-A Flask-based web application for submitting, reviewing, and managing linguistic constructions in a constructicon.
+A Flask-based web application for submitting, managing and displaying linguistic constructions in a research constructicon.
 
 ## Table of Contents
 1. [Definitions](#definitions)
@@ -78,3 +78,8 @@ The app will start locally, typically at `http://127.0.0.1:5000/`.
 
 ## Support
 For questions or support, contact the editor via email.
+
+## Citation
+Please cite as:
+
+Winckel, Elodie. 2025. Defining relationships in the constructional network: A Semantic Web ontology for Construction Grammar. Lexicographica 41(1). 299–317. https://doi.org/10.1515/lex-2025-0012.
