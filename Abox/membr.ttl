@@ -400,6 +400,7 @@ membr:Project_Winckel_F2511281100 a rsrch:Finding ;
     rdfs:label "Implement a lexical item in the research constructicon" ;
     rsrch:basedOn cx:_coolconstruction,
         cx:eng_AdjectiveAttributiveconstruction,
+        cx:eng_AdjectivePhrase,
         cx:eng_AdjectivePredicativeconstruction,
         cx:eng_Keepacoolheadconstruction,
         cx:eng_coolconstruction .

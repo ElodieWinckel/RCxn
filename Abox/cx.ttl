@@ -48,6 +48,18 @@ cx:Transitivedurch-Präfixverbkonstruktion_1_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_Particle,
         cx:eng_PrepositionalPhrase .
 
+cx:Adverb a rcxn:Construction ;
+    rcxn:elementOf cx:eng_AdjectivePhrase ;
+    rcxn:hasMetadata cx:Adverb_MD ;
+    rcxn:hasTitle "Adverb" .
+
+cx:Adverb_MD a rcxn:Metadata ;
+    cx:annotator membr:Boos,
+        membr:Petrenko,
+        membr:Weigelt,
+        membr:Winckel ;
+    rcxn:creationDate "2025-12-08"^^xsd:date .
+
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions> a rcxn:Construction ;
     lg:partOfLanguage lg:deuStdHigh ;
     rcxn:hasConstructionMeaning <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_Meaning> ;
@@ -138,7 +150,10 @@ cx:Copula a rcxn:Construction ;
     rcxn:hasTitle "Copula" .
 
 cx:Copula_MD a rcxn:Metadata ;
-    cx:annotator membr:Winckel ;
+    cx:annotator membr:Boos,
+        membr:Petrenko,
+        membr:Weigelt,
+        membr:Winckel ;
     rcxn:creationDate "2025-12-01"^^xsd:date .
 
 cx:Demonstrative-Topic-ShiftConstruction a rcxn:Construction ;
@@ -156,7 +171,10 @@ cx:Determiner a rcxn:Construction ;
     rcxn:hasTitle "Determiner" .
 
 cx:Determiner_MD a rcxn:Metadata ;
-    cx:annotator membr:Winckel ;
+    cx:annotator membr:Boos,
+        membr:Petrenko,
+        membr:Weigelt,
+        membr:Winckel ;
     rcxn:creationDate "2025-12-01"^^xsd:date .
 
 cx:Dooperationwithoperand1onoperand2construction_1 a rcxn:SlotOptional ;
@@ -758,7 +776,10 @@ cx:Noun a rcxn:Construction ;
     rcxn:hasTitle "Noun" .
 
 cx:Noun_MD a rcxn:Metadata ;
-    cx:annotator membr:Winckel ;
+    cx:annotator membr:Boos,
+        membr:Petrenko,
+        membr:Weigelt,
+        membr:Winckel ;
     rcxn:creationDate "2025-12-01"^^xsd:date .
 
 cx:POU-beneficiaryconstruction_1 a rcxn:SlotMandatory ;
@@ -1409,7 +1430,10 @@ cx:coolasadmirableconstruction_Ex_C a cx:Example ;
     cx:hasText "The movie is cool." .
 
 cx:coolasadmirableconstruction_MD a rcxn:Metadata ;
-    cx:annotator membr:Winckel ;
+    cx:annotator membr:Boos,
+        membr:Petrenko,
+        membr:Weigelt,
+        membr:Winckel ;
     cx:hasSources cx:eng_coolconstruction_Sources ;
     rcxn:creationDate "2025-11-28"^^xsd:date .
 
@@ -1437,7 +1461,10 @@ cx:coolascolourconstruction_Ex_B a cx:Example ;
     cx:hasText "a cool shade of grey" .
 
 cx:coolascolourconstruction_MD a rcxn:Metadata ;
-    cx:annotator membr:Winckel ;
+    cx:annotator membr:Boos,
+        membr:Petrenko,
+        membr:Weigelt,
+        membr:Winckel ;
     cx:hasSources cx:eng_coolconstruction_Sources ;
     rcxn:creationDate "2025-11-28"^^xsd:date .
 
@@ -1465,7 +1492,10 @@ cx:coolasemotionconstruction_Ex_B a cx:Example ;
     cx:hasText "He is staying cool under pressure." .
 
 cx:coolasemotionconstruction_MD a rcxn:Metadata ;
-    cx:annotator membr:Winckel ;
+    cx:annotator membr:Boos,
+        membr:Petrenko,
+        membr:Weigelt,
+        membr:Winckel ;
     cx:hasSources cx:eng_coolconstruction_Sources ;
     rcxn:creationDate "2025-11-28"^^xsd:date .
 
@@ -1509,7 +1539,10 @@ cx:eng_AdjectiveAttributiveconstruction_3_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:Noun .
 
 cx:eng_AdjectiveAttributiveconstruction_MD a rcxn:Metadata ;
-    cx:annotator membr:Winckel ;
+    cx:annotator membr:Boos,
+        membr:Petrenko,
+        membr:Weigelt,
+        membr:Winckel ;
     rcxn:creationDate "2025-12-01"^^xsd:date .
 
 cx:eng_AdjectiveAttributiveconstruction_Meaning a rcxn:ConstructionMeaning ;
@@ -1519,6 +1552,42 @@ cx:eng_AdjectiveAttributiveconstruction_slots a rdf_ns:Seq ;
     rdf_ns:_1 cx:eng_AdjectiveAttributiveconstruction_1 ;
     rdf_ns:_2 cx:eng_AdjectiveAttributiveconstruction_2 ;
     rdf_ns:_3 cx:eng_AdjectiveAttributiveconstruction_3 .
+
+cx:eng_AdjectivePhrase_1 a rcxn:SlotOptional ;
+    rcxn:hasOtherSemanticContribution "Premodifier" ;
+    rcxn:hasSlotForm cx:eng_AdjectivePhrase_1_Form .
+
+cx:eng_AdjectivePhrase_1_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:Adverb .
+
+cx:eng_AdjectivePhrase_2 a rcxn:SlotMandatory ;
+    rcxn:hasOtherSemanticContribution "Attribute" ;
+    rcxn:hasSlotForm cx:eng_AdjectivePhrase_2_Form .
+
+cx:eng_AdjectivePhrase_2_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:eng_Adjective .
+
+cx:eng_AdjectivePhrase_3 a rcxn:SlotOptional ;
+    rcxn:hasOtherSemanticContribution "Postmodifier" ;
+    rcxn:hasSlotForm cx:eng_AdjectivePhrase_3_Form .
+
+cx:eng_AdjectivePhrase_3_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:eng_PrepositionalPhrase .
+
+cx:eng_AdjectivePhrase_MD a rcxn:Metadata ;
+    cx:annotator membr:Boos,
+        membr:Petrenko,
+        membr:Weigelt,
+        membr:Winckel ;
+    rcxn:creationDate "2025-12-08"^^xsd:date .
+
+cx:eng_AdjectivePhrase_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "Ascribing an [attribute]1." .
+
+cx:eng_AdjectivePhrase_slots a rdf_ns:Seq ;
+    rdf_ns:_1 cx:eng_AdjectivePhrase_1 ;
+    rdf_ns:_2 cx:eng_AdjectivePhrase_2 ;
+    rdf_ns:_3 cx:eng_AdjectivePhrase_3 .
 
 cx:eng_AdjectivePredicativeconstruction_1 a rcxn:SlotMandatory ;
     rcxn:hasSlotForm cx:eng_AdjectivePredicativeconstruction_1_Form .
@@ -1539,7 +1608,10 @@ cx:eng_AdjectivePredicativeconstruction_3_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_AdjectivePhrase .
 
 cx:eng_AdjectivePredicativeconstruction_MD a rcxn:Metadata ;
-    cx:annotator membr:Winckel ;
+    cx:annotator membr:Boos,
+        membr:Petrenko,
+        membr:Weigelt,
+        membr:Winckel ;
     rcxn:creationDate "2025-12-01"^^xsd:date .
 
 cx:eng_AdjectivePredicativeconstruction_Meaning a rcxn:ConstructionMeaning ;
@@ -1551,7 +1623,10 @@ cx:eng_AdjectivePredicativeconstruction_slots a rdf_ns:Seq ;
     rdf_ns:_3 cx:eng_AdjectivePredicativeconstruction_3 .
 
 cx:eng_Adjective_MD a rcxn:Metadata ;
-    cx:annotator membr:Winckel ;
+    cx:annotator membr:Boos,
+        membr:Petrenko,
+        membr:Weigelt,
+        membr:Winckel ;
     rcxn:creationDate "2025-11-28"^^xsd:date .
 
 cx:eng_Keepacoolheadconstruction a rcxn:Construction ;
@@ -1594,7 +1669,10 @@ cx:eng_Keepacoolheadconstruction_Ex_A a cx:Example ;
     rdfs:comment "BNC, Newspaper, 1992" .
 
 cx:eng_Keepacoolheadconstruction_MD a rcxn:Metadata ;
-    cx:annotator membr:Winckel ;
+    cx:annotator membr:Boos,
+        membr:Petrenko,
+        membr:Weigelt,
+        membr:Winckel ;
     cx:hasSources cx:eng_coolconstruction_Sources ;
     rcxn:creationDate "2025-11-28"^^xsd:date .
 
@@ -1661,7 +1739,10 @@ cx:eng_coolconstruction_Ex_D a cx:Example ;
     cx:hasText "cool climate" .
 
 cx:eng_coolconstruction_MD a rcxn:Metadata ;
-    cx:annotator membr:Winckel ;
+    cx:annotator membr:Boos,
+        membr:Petrenko,
+        membr:Weigelt,
+        membr:Winckel ;
     cx:hasSources cx:eng_coolconstruction_Sources ;
     rcxn:creationDate "2025-11-28"^^xsd:date .
 
@@ -1919,24 +2000,12 @@ cx:eng_AdjectiveAttributiveconstruction a rcxn:Construction ;
     rcxn:hasSlots cx:eng_AdjectiveAttributiveconstruction_slots ;
     rcxn:hasTitle "Adjective Attributive construction" .
 
-cx:eng_AdjectivePhrase a rcxn:Construction ;
-    lg:partOfLanguage lg:eng ;
-    rcxn:elementOf cx:EvaluativeAttributionConstruction,
-        cx:eng_AdjectiveAttributiveconstruction,
-        cx:eng_AdjectivePredicativeconstruction ;
-    rcxn:hasTitle "Adjective Phrase" .
-
 cx:eng_AdjectivePredicativeconstruction a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
     rcxn:hasConstructionMeaning cx:eng_AdjectivePredicativeconstruction_Meaning ;
     rcxn:hasMetadata cx:eng_AdjectivePredicativeconstruction_MD ;
     rcxn:hasSlots cx:eng_AdjectivePredicativeconstruction_slots ;
     rcxn:hasTitle "Adjective Predicative construction" .
-
-cx:eng_PrepositionalPhrase a rcxn:Construction ;
-    lg:partOfLanguage lg:eng ;
-    rcxn:elementOf cx:EvaluativeAttributionConstruction ;
-    rcxn:hasTitle "Prepositional Phrase" .
 
 cx:eng_Verb a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
@@ -2027,14 +2096,11 @@ cx:coolasemotionconstruction a rcxn:Construction ;
     rcxn:hasSlots cx:coolasemotionconstruction_slots ;
     rcxn:hasTitle "cool as emotion construction" .
 
-cx:eng_Adjective a rcxn:Construction ;
+cx:eng_PrepositionalPhrase a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
-    rcxn:elementOf cx:coolasadmirableconstruction,
-        cx:coolascolourconstruction,
-        cx:coolasemotionconstruction,
-        cx:eng_coolconstruction ;
-    rcxn:hasMetadata cx:eng_Adjective_MD ;
-    rcxn:hasTitle "Adjective" .
+    rcxn:elementOf cx:EvaluativeAttributionConstruction,
+        cx:eng_AdjectivePhrase ;
+    rcxn:hasTitle "Prepositional Phrase" .
 
 cx:EvaluativeAttributionConstruction a rcxn:Construction ;
     lg:partOfLanguage lg:engUsUkWr ;
@@ -2058,6 +2124,16 @@ cx:Transitivedurch-Präfixverbkonstruktion a rcxn:Construction ;
     rcxn:hasSlots cx:Transitivedurch-Präfixverbkonstruktion_slots ;
     rcxn:hasTitle "Transitive durch-Präfixverbkonstruktion" .
 
+cx:eng_Adjective a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    rcxn:elementOf cx:coolasadmirableconstruction,
+        cx:coolascolourconstruction,
+        cx:coolasemotionconstruction,
+        cx:eng_AdjectivePhrase,
+        cx:eng_coolconstruction ;
+    rcxn:hasMetadata cx:eng_Adjective_MD ;
+    rcxn:hasTitle "Adjective" .
+
 cx:eng_coolconstruction_Sources a cx:Collection ;
     cx:hasLiterature <file:///home/meuhlodi/Travail/RCxn/instance/Submissions/www.english-corpora.org/bnc/>,
         <file:///home/meuhlodi/Travail/RCxn/instance/Submissions/www.english-corpora.org/coca/>,
@@ -2072,6 +2148,16 @@ cx:eng_coolconstruction_Sources a cx:Collection ;
     rcxn:hasMetadata <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_MD> ;
     rcxn:hasSlots <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_slots> ;
     rcxn:hasTitle "(sich) (NP) (ADJ) (ADV) [vor Augen] (VP)" .
+
+cx:eng_AdjectivePhrase a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    rcxn:elementOf cx:EvaluativeAttributionConstruction,
+        cx:eng_AdjectiveAttributiveconstruction,
+        cx:eng_AdjectivePredicativeconstruction ;
+    rcxn:hasConstructionMeaning cx:eng_AdjectivePhrase_Meaning ;
+    rcxn:hasMetadata cx:eng_AdjectivePhrase_MD ;
+    rcxn:hasSlots cx:eng_AdjectivePhrase_slots ;
+    rcxn:hasTitle "Adjective Phrase" .
 
 cx:eng_NounPhrase a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
