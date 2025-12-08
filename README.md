@@ -10,6 +10,7 @@ A Flask-based web application for submitting, managing and displaying linguistic
 5. [Submission Process](#submission-process)
 6. [Adding a New Language](#adding-a-new-language)
 7. [Support](#support)
+8. [Citation](#citation)
 
 ## Definitions
 - **Users**: Visitors who browse the webpage and view construction entries.
