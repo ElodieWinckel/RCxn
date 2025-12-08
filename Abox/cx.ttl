@@ -1456,9 +1456,9 @@ cx:coolasemotionconstruction_1_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_Adjective .
 
 cx:coolasemotionconstruction_Ex_A a cx:Example ;
-    cx:hasAnnotatedText "However, the West's [cool]1 attitude ..." ;
-    cx:hasText "However, the West's cool attitude ..." ;
-    rdfs:comment "BNC Newspaper, 19??" .
+    cx:hasAnnotatedText "However, the West's [cool]1 attitude towards the King over his pro-Iraqi stance was partly offset by Jordan's willingness to take in vast numbers of refugees from Iraq and Kuwait during August." ;
+    cx:hasText "However, the West's cool attitude towards the King over his pro-Iraqi stance was partly offset by Jordan's willingness to take in vast numbers of refugees from Iraq and Kuwait during August." ;
+    rdfs:comment "BNC: Keesings Contemporary Archives (1985-1994). 3238 s-units." .
 
 cx:coolasemotionconstruction_Ex_B a cx:Example ;
     cx:hasAnnotatedText "He is staying [cool]1 under pressure." ;
@@ -1646,7 +1646,7 @@ cx:eng_coolconstruction_1_Form a rcxn:SlotForm ;
 cx:eng_coolconstruction_Ex_A a cx:Example ;
     cx:hasAnnotatedText "The guests enjoyed [cool]1 drinks on the arched terrace beside the gently-lapping poll." ;
     cx:hasText "The guests enjoyed cool drinks on the arched terrace beside the gently-lapping poll." ;
-    rdfs:comment "BNC Newspaper, 1932" .
+    rdfs:comment "BNC: The Daily Mirror. London:Mirror Group Newspaper, 1992, pp.??. 9942 s-units." .
 
 cx:eng_coolconstruction_Ex_B a cx:Example ;
     cx:hasAnnotatedText "[cool]1 breeze" ;
@@ -1955,7 +1955,7 @@ cx:eng_coolconstruction a rcxn:Construction ;
         cx:eng_coolconstruction_Ex_B,
         cx:eng_coolconstruction_Ex_C,
         cx:eng_coolconstruction_Ex_D ;
-    rdfs:comment "from Indo-european *gel(ə)" ;
+    rdfs:comment "from Indo-european *gel(ə) (DWDS)" ;
     lg:partOfLanguage lg:eng ;
     ns1:metaphoricalLink cx:coolascolourconstruction,
         cx:coolasemotionconstruction ;
@@ -2016,7 +2016,7 @@ cx:Transitiveobjectrelativeclause a rcxn:Construction ;
 cx:coolasemotionconstruction a rcxn:Construction ;
     cx:hasExample cx:coolasemotionconstruction_Ex_A,
         cx:coolasemotionconstruction_Ex_B ;
-    rdfs:comment "first attested: Old English, Beowulf" ;
+    rdfs:comment "first attested: Old English, Beowulf (Oxford English Dictionary)" ;
     lg:partOfLanguage lg:eng ;
     ns1:isMetaphoricalExtensionOf cx:eng_coolconstruction ;
     ns1:metaphoricalLink cx:coolasadmirableconstruction,

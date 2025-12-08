@@ -18,6 +18,9 @@ cx:eng_Adjective a rcxn:Construction ;
 
 cx:eng_Adjective_MD a rcxn:Metadata ;
     cx:annotator membr:Winckel ;
+    cx:annotator membr:Boos ;
+    cx:annotator membr:Weigelt ;
+    cx:annotator membr:Petrenko ;
     rcxn:creationDate "2025-11-28"^^xsd:date .
 
 
@@ -42,6 +45,9 @@ cx:coolascolourconstruction a rcxn:Construction ;
 
 cx:coolascolourconstruction_MD a rcxn:Metadata ;
     cx:annotator membr:Winckel ;
+    cx:annotator membr:Boos ;
+    cx:annotator membr:Weigelt ;
+    cx:annotator membr:Petrenko ;
     cx:hasSources cx:eng_coolconstruction_Sources ;
     rcxn:creationDate "2025-11-28"^^xsd:date .
 
@@ -80,7 +86,7 @@ cx:coolascolourconstruction_Meaning a rcxn:ConstructionMeaning ;
 cx:coolasemotionconstruction a rcxn:Construction ;
     cx:hasExample cx:coolasemotionconstruction_Ex_A ,
                   cx:coolasemotionconstruction_Ex_B ;
-    RDFS:comment "first attested: Old English, Beowulf" ;
+    RDFS:comment "first attested: Old English, Beowulf (Oxford English Dictionary)" ;
     lg:partOfLanguage lg:eng ;
     links:metaphoricalLink cx:keepacoolheadconstruction,
         cx:coolasadmirableconstruction ;
@@ -93,6 +99,9 @@ cx:coolasemotionconstruction a rcxn:Construction ;
 
 cx:coolasemotionconstruction_MD a rcxn:Metadata ;
     cx:annotator membr:Winckel ;
+    cx:annotator membr:Boos ;
+    cx:annotator membr:Weigelt ;
+    cx:annotator membr:Petrenko ;
     cx:hasSources cx:eng_coolconstruction_Sources ;
     rcxn:creationDate "2025-11-28"^^xsd:date .
 
@@ -108,9 +117,9 @@ cx:coolasemotionconstruction_1_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_Adjective .
 
 cx:coolasemotionconstruction_Ex_A a cx:Example ;
-    cx:hasAnnotatedText "However, the West's [cool]1 attitude ..." ;
-    cx:hasText "However, the West's cool attitude ..." ;
-    RDFS:comment "BNC Newspaper, 19??" .
+    cx:hasAnnotatedText "However, the West's [cool]1 attitude towards the King over his pro-Iraqi stance was partly offset by Jordan's willingness to take in vast numbers of refugees from Iraq and Kuwait during August." ;
+    cx:hasText "However, the West's cool attitude towards the King over his pro-Iraqi stance was partly offset by Jordan's willingness to take in vast numbers of refugees from Iraq and Kuwait during August." ;
+    RDFS:comment "BNC: Keesings Contemporary Archives (1985-1994). 3238 s-units." .
 
 cx:coolasemotionconstruction_Ex_B a cx:Example ;
     cx:hasAnnotatedText "He is staying [cool]1 under pressure." ;
@@ -141,6 +150,9 @@ cx:coolasadmirableconstruction a rcxn:Construction ;
 
 cx:coolasadmirableconstruction_MD a rcxn:Metadata ;
     cx:annotator membr:Winckel ;
+    cx:annotator membr:Boos ;
+    cx:annotator membr:Weigelt ;
+    cx:annotator membr:Petrenko ;
     cx:hasSources cx:eng_coolconstruction_Sources ;
     rcxn:creationDate "2025-11-28"^^xsd:date .
 
@@ -170,6 +182,79 @@ cx:coolasadmirableconstruction_Ex_C a cx:Example ;
 
 cx:coolasadmirableconstruction_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "positive evaluation: admirable, relaxed, stylish, sophisticated, fashionable" .
+
+
+
+
+
+
+
+
+
+
+
+membr:Project_Winckel_F2511281100 rsrch:basedOn cx:eng_AdjectivePhrase .
+
+cx:Adverb a rcxn:Construction ;
+    rcxn:elementOf cx:eng_AdjectivePhrase ;
+    rcxn:hasMetadata cx:Adverb_MD ;
+    rcxn:hasTitle "Adverb" .
+
+cx:Adverb_MD a rcxn:Metadata ;
+    cx:annotator membr:Winckel ;
+    cx:annotator membr:Boos ;
+    cx:annotator membr:Weigelt ;
+    cx:annotator membr:Petrenko ;
+    rcxn:creationDate "2025-12-08"^^xsd:date .
+
+cx:eng_Adjective rcxn:elementOf cx:eng_AdjectivePhrase .
+
+cx:eng_AdjectivePhrase_1 a rcxn:SlotOptional ;
+    rcxn:hasOtherSemanticContribution "Premodifier" ;
+    rcxn:hasSlotForm cx:eng_AdjectivePhrase_1_Form .
+
+cx:eng_AdjectivePhrase_1_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:Adverb .
+
+cx:eng_AdjectivePhrase_2 a rcxn:SlotMandatory ;
+    rcxn:hasOtherSemanticContribution "Attribute" ;
+    rcxn:hasSlotForm cx:eng_AdjectivePhrase_2_Form .
+
+cx:eng_AdjectivePhrase_2_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:eng_Adjective .
+
+cx:eng_AdjectivePhrase_3 a rcxn:SlotOptional ;
+    rcxn:hasOtherSemanticContribution "Postmodifier" ;
+    rcxn:hasSlotForm cx:eng_AdjectivePhrase_3_Form .
+
+cx:eng_AdjectivePhrase_3_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:eng_PrepositionalPhrase .
+
+cx:eng_AdjectivePhrase_MD a rcxn:Metadata ;
+    cx:annotator membr:Winckel ;
+    cx:annotator membr:Boos ;
+    cx:annotator membr:Weigelt ;
+    cx:annotator membr:Petrenko ;
+    rcxn:creationDate "2025-12-08"^^xsd:date .
+
+cx:eng_AdjectivePhrase_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "Ascribing an [attribute]1." .
+
+cx:eng_AdjectivePhrase_slots a rdf:Seq ;
+    rdf:_1 cx:eng_AdjectivePhrase_1 ;
+    rdf:_2 cx:eng_AdjectivePhrase_2 ;
+    rdf:_3 cx:eng_AdjectivePhrase_3 .
+
+cx:eng_PrepositionalPhrase rcxn:elementOf cx:eng_AdjectivePhrase .
+
+cx:eng_AdjectivePhrase a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    rcxn:hasConstructionMeaning cx:eng_AdjectivePhrase_Meaning ;
+    rcxn:hasMetadata cx:eng_AdjectivePhrase_MD ;
+    rcxn:hasSlots cx:eng_AdjectivePhrase_slots ;
+    rcxn:hasTitle "Adjective Phrase" .
+
+
 
 
 
@@ -213,6 +298,9 @@ cx:eng_Keepacoolheadconstruction_Ex_A a cx:Example ;
 
 cx:eng_Keepacoolheadconstruction_MD a rcxn:Metadata ;
     cx:annotator membr:Winckel ;
+    cx:annotator membr:Boos ;
+    cx:annotator membr:Weigelt ;
+    cx:annotator membr:Petrenko ;
     cx:hasSources cx:eng_coolconstruction_Sources ;
     rcxn:creationDate "2025-11-28"^^xsd:date .
 
@@ -250,7 +338,7 @@ cx:eng_coolconstruction a rcxn:Construction ;
                   cx:eng_coolconstruction_Ex_B ,
                   cx:eng_coolconstruction_Ex_C ,
                   cx:eng_coolconstruction_Ex_D ;
-    RDFS:comment "from Indo-european *gel(ə)" ;
+    RDFS:comment "from Indo-european *gel(ə) (DWDS)" ;
     lg:partOfLanguage lg:eng ;
     links:metaphoricalLink cx:coolascolourconstruction,
         cx:coolasemotionconstruction ;
@@ -270,7 +358,7 @@ cx:eng_coolconstruction_1_Form a rcxn:SlotForm ;
 cx:eng_coolconstruction_Ex_A a cx:Example ;
     cx:hasAnnotatedText "The guests enjoyed [cool]1 drinks on the arched terrace beside the gently-lapping poll." ;
     cx:hasText "The guests enjoyed cool drinks on the arched terrace beside the gently-lapping poll." ;
-    RDFS:comment "BNC Newspaper, 1932" .
+    RDFS:comment "BNC: The Daily Mirror. London:Mirror Group Newspaper, 1992, pp.??. 9942 s-units." .
 
 cx:eng_coolconstruction_Ex_B a cx:Example ;
     cx:hasAnnotatedText "[cool]1 breeze" ;
@@ -286,6 +374,9 @@ cx:eng_coolconstruction_Ex_D a cx:Example ;
 
 cx:eng_coolconstruction_MD a rcxn:Metadata ;
     cx:annotator membr:Winckel ;
+    cx:annotator membr:Boos ;
+    cx:annotator membr:Weigelt ;
+    cx:annotator membr:Petrenko ;
     cx:hasSources cx:eng_coolconstruction_Sources ;
     rcxn:creationDate "2025-11-28"^^xsd:date .
 
@@ -315,6 +406,9 @@ cx:Determiner a rcxn:Construction ;
 
 cx:Determiner_MD a rcxn:Metadata ;
     cx:annotator membr:Winckel ;
+    cx:annotator membr:Boos ;
+    cx:annotator membr:Weigelt ;
+    cx:annotator membr:Petrenko ;
     rcxn:creationDate "2025-12-01"^^xsd:date .
 
 cx:Noun a rcxn:Construction ;
@@ -324,6 +418,9 @@ cx:Noun a rcxn:Construction ;
 
 cx:Noun_MD a rcxn:Metadata ;
     cx:annotator membr:Winckel ;
+    cx:annotator membr:Boos ;
+    cx:annotator membr:Weigelt ;
+    cx:annotator membr:Petrenko ;
     rcxn:creationDate "2025-12-01"^^xsd:date .
 
 cx:eng_AdjectiveAttributiveconstruction_1 a rcxn:SlotOptional ;
@@ -346,6 +443,9 @@ cx:eng_AdjectiveAttributiveconstruction_3_Form a rcxn:SlotForm ;
 
 cx:eng_AdjectiveAttributiveconstruction_MD a rcxn:Metadata ;
     cx:annotator membr:Winckel ;
+    cx:annotator membr:Boos ;
+    cx:annotator membr:Weigelt ;
+    cx:annotator membr:Petrenko ;
     rcxn:creationDate "2025-12-01"^^xsd:date .
 
 cx:eng_AdjectiveAttributiveconstruction_Meaning a rcxn:ConstructionMeaning ;
@@ -387,6 +487,9 @@ cx:Copula a rcxn:Construction ;
 
 cx:Copula_MD a rcxn:Metadata ;
     cx:annotator membr:Winckel ;
+    cx:annotator membr:Boos ;
+    cx:annotator membr:Weigelt ;
+    cx:annotator membr:Petrenko ;
     rcxn:creationDate "2025-12-01"^^xsd:date .
 
 cx:eng_AdjectivePhrase rcxn:elementOf cx:eng_AdjectivePredicativeconstruction .
@@ -411,6 +514,9 @@ cx:eng_AdjectivePredicativeconstruction_3_Form a rcxn:SlotForm ;
 
 cx:eng_AdjectivePredicativeconstruction_MD a rcxn:Metadata ;
     cx:annotator membr:Winckel ;
+    cx:annotator membr:Boos ;
+    cx:annotator membr:Weigelt ;
+    cx:annotator membr:Petrenko ;
     rcxn:creationDate "2025-12-01"^^xsd:date .
 
 cx:eng_AdjectivePredicativeconstruction_Meaning a rcxn:ConstructionMeaning ;
