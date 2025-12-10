@@ -287,7 +287,7 @@ def form_submit():
     cx = Namespace("http://example.org/cx/")
     g.bind("cx", cx)
 
-    membr = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/membr#")
+    membr = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#")
     g.bind("membr", membr)
 
     rcxn = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#")
@@ -296,7 +296,7 @@ def form_submit():
     rsrch = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#")
     g.bind("rsrch", rsrch)
 
-    links = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0#")
+    links = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#")
     g.bind("links", links)
 
     foaf = Namespace("http://xmlns.com/foaf/0.1/")

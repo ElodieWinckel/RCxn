@@ -1,0 +1,57 @@
+@prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cx: <http://example.org/cx/> .
+@prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
+@prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#> .
+@prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
+@prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+membr:Project_Winckel_F2511281100 rsrch:basedOn cx:engInf_Coolexclamativeconstruction .
+
+cx:Adjectiveexclamativeconstruction a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    links:inheritedBy cx:engInf_Coolexclamativeconstruction ;
+    rcxn:hasMetadata cx:Adjectiveexclamativeconstruction_MD ;
+    rcxn:hasTitle "Adjective! exclamative construction" .
+
+cx:Adjectiveexclamativeconstruction_MD a rcxn:Metadata ;
+    cx:annotator membr:Winckel ;
+    rcxn:creationDate "2025-12-10"^^xsd:date .
+
+cx:coolasadmirableconstruction rcxn:elementOf cx:engInf_Coolexclamativeconstruction .
+
+cx:engInf_Coolexclamativeconstruction_1 a rcxn:SlotMandatory ;
+    rcxn:hasSlotForm cx:engInf_Coolexclamativeconstruction_1_Form .
+
+cx:engInf_Coolexclamativeconstruction_1_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:coolasadmirableconstruction .
+
+cx:engInf_Coolexclamativeconstruction_2 a rcxn:SlotOptional ;
+    RDFS:comment "Typically added in the written modality." ;
+    rcxn:hasSlotForm cx:engInf_Coolexclamativeconstruction_2_Form .
+
+cx:engInf_Coolexclamativeconstruction_2_Form a rcxn:SlotForm ;
+    rcxn:hasSurfaceForm "!" .
+
+cx:engInf_Coolexclamativeconstruction_MD a rcxn:Metadata ;
+    cx:annotator membr:Winckel ;
+    cx:hasSources cx:eng_coolconstruction_Sources ;
+    rcxn:creationDate "2025-12-10"^^xsd:date .
+
+cx:engInf_Coolexclamativeconstruction_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "Expressing approval or enthusiasm." .
+
+cx:engInf_Coolexclamativeconstruction_slots a rdf:Seq ;
+    rdf:_1 cx:engInf_Coolexclamativeconstruction_1 ;
+    rdf:_2 cx:engInf_Coolexclamativeconstruction_2 .
+
+cx:engInf_Coolexclamativeconstruction a rcxn:Construction ;
+    lg:partOfLanguage lg:engInf ;
+    links:inheritsFrom cx:Adjectiveexclamativeconstruction ;
+    rcxn:hasConstructionMeaning cx:engInf_Coolexclamativeconstruction_Meaning ;
+    rcxn:hasMetadata cx:engInf_Coolexclamativeconstruction_MD ;
+    rcxn:hasSlots cx:engInf_Coolexclamativeconstruction_slots ;
+    rcxn:hasTitle "Cool! exclamative construction" .
+

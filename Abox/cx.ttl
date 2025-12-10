@@ -48,6 +48,16 @@ cx:Transitivedurch-Präfixverbkonstruktion_1_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_Particle,
         cx:eng_PrepositionalPhrase .
 
+cx:Adjectiveexclamativeconstruction a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    ns1:inheritedBy cx:engInf_Coolexclamativeconstruction ;
+    rcxn:hasMetadata cx:Adjectiveexclamativeconstruction_MD ;
+    rcxn:hasTitle "Adjective! exclamative construction" .
+
+cx:Adjectiveexclamativeconstruction_MD a rcxn:Metadata ;
+    cx:annotator <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/membr#Winckel> ;
+    rcxn:creationDate "2025-12-10"^^xsd:date .
+
 cx:Adverb a rcxn:Construction ;
     rcxn:elementOf cx:eng_AdjectivePhrase ;
     rcxn:hasMetadata cx:Adverb_MD ;
@@ -1520,6 +1530,31 @@ cx:deu_DefiniteDeterminer a rcxn:Construction ;
     rcxn:elementOf <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]> ;
     rcxn:hasTitle "Definite Determiner" .
 
+cx:engInf_Coolexclamativeconstruction_1 a rcxn:SlotMandatory ;
+    rcxn:hasSlotForm cx:engInf_Coolexclamativeconstruction_1_Form .
+
+cx:engInf_Coolexclamativeconstruction_1_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:coolasadmirableconstruction .
+
+cx:engInf_Coolexclamativeconstruction_2 a rcxn:SlotOptional ;
+    rdfs:comment "Typically added in the written modality." ;
+    rcxn:hasSlotForm cx:engInf_Coolexclamativeconstruction_2_Form .
+
+cx:engInf_Coolexclamativeconstruction_2_Form a rcxn:SlotForm ;
+    rcxn:hasSurfaceForm "!" .
+
+cx:engInf_Coolexclamativeconstruction_MD a rcxn:Metadata ;
+    cx:annotator <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/membr#Winckel> ;
+    cx:hasSources cx:eng_coolconstruction_Sources ;
+    rcxn:creationDate "2025-12-10"^^xsd:date .
+
+cx:engInf_Coolexclamativeconstruction_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "Expressing approval or enthusiasm." .
+
+cx:engInf_Coolexclamativeconstruction_slots a rdf_ns:Seq ;
+    rdf_ns:_1 cx:engInf_Coolexclamativeconstruction_1 ;
+    rdf_ns:_2 cx:engInf_Coolexclamativeconstruction_2 .
+
 cx:eng_AdjectiveAttributiveconstruction_1 a rcxn:SlotOptional ;
     rcxn:hasSlotForm cx:eng_AdjectiveAttributiveconstruction_1_Form .
 
@@ -1876,18 +1911,6 @@ The gesture is sometimes used a few milliseconds before uttering "this" and is m
     rcxn:hasSlots cx:ThisCloseToV-ing_slots ;
     rcxn:hasTitle "This Close To V-ing" .
 
-cx:coolasadmirableconstruction a rcxn:Construction ;
-    cx:hasExample cx:coolasadmirableconstruction_Ex_A,
-        cx:coolasadmirableconstruction_Ex_B,
-        cx:coolasadmirableconstruction_Ex_C ;
-    rdfs:comment "first attested: 1884, cf. OED" ;
-    lg:partOfLanguage lg:engInf ;
-    ns1:isMetaphoricalExtensionOf cx:coolasemotionconstruction ;
-    rcxn:hasConstructionMeaning cx:coolasadmirableconstruction_Meaning ;
-    rcxn:hasMetadata cx:coolasadmirableconstruction_MD ;
-    rcxn:hasSlots cx:coolasadmirableconstruction_slots ;
-    rcxn:hasTitle "cool as admirable construction" .
-
 cx:coolascolourconstruction a rcxn:Construction ;
     cx:hasExample cx:coolascolourconstruction_Ex_A,
         cx:coolascolourconstruction_Ex_B ;
@@ -1916,6 +1939,14 @@ cx:deu_Verb a rcxn:Construction ;
     rcxn:elementOf cx:Idiomaticconstruction,
         <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]> ;
     rcxn:hasTitle "Verb" .
+
+cx:engInf_Coolexclamativeconstruction a rcxn:Construction ;
+    lg:partOfLanguage lg:engInf ;
+    ns1:inheritsFrom cx:Adjectiveexclamativeconstruction ;
+    rcxn:hasConstructionMeaning cx:engInf_Coolexclamativeconstruction_Meaning ;
+    rcxn:hasMetadata cx:engInf_Coolexclamativeconstruction_MD ;
+    rcxn:hasSlots cx:engInf_Coolexclamativeconstruction_slots ;
+    rcxn:hasTitle "Cool! exclamative construction" .
 
 cx:eng_Particle a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
@@ -1979,6 +2010,19 @@ cx:POU-beneficiaryconstruction a rcxn:Construction ;
     rcxn:hasMetadata <http://example.org/cx/come+[noise/mannerofmovement]V-ing_MD> ;
     rcxn:hasSlots <http://example.org/cx/come+[noise/mannerofmovement]V-ing_slots> ;
     rcxn:hasTitle "come + [noise/manner of movement] V-ing" .
+
+cx:coolasadmirableconstruction a rcxn:Construction ;
+    cx:hasExample cx:coolasadmirableconstruction_Ex_A,
+        cx:coolasadmirableconstruction_Ex_B,
+        cx:coolasadmirableconstruction_Ex_C ;
+    rdfs:comment "first attested: 1884, cf. OED" ;
+    lg:partOfLanguage lg:engInf ;
+    ns1:isMetaphoricalExtensionOf cx:coolasemotionconstruction ;
+    rcxn:elementOf cx:engInf_Coolexclamativeconstruction ;
+    rcxn:hasConstructionMeaning cx:coolasadmirableconstruction_Meaning ;
+    rcxn:hasMetadata cx:coolasadmirableconstruction_MD ;
+    rcxn:hasSlots cx:coolasadmirableconstruction_slots ;
+    rcxn:hasTitle "cool as admirable construction" .
 
 cx:deu_Noun a rcxn:Construction ;
     lg:partOfLanguage lg:deu ;
@@ -2134,12 +2178,6 @@ cx:eng_Adjective a rcxn:Construction ;
     rcxn:hasMetadata cx:eng_Adjective_MD ;
     rcxn:hasTitle "Adjective" .
 
-cx:eng_coolconstruction_Sources a cx:Collection ;
-    cx:hasLiterature <file:///home/meuhlodi/Travail/RCxn/instance/Submissions/www.english-corpora.org/bnc/>,
-        <file:///home/meuhlodi/Travail/RCxn/instance/Submissions/www.english-corpora.org/coca/>,
-        <https://www.dwds.de/wb/cool>,
-        <https://www.oed.com/dictionary/cool_adj?tl=true> .
-
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]> a rcxn:Construction ;
     lg:partOfLanguage lg:deuWrSt20 ;
     ns1:inheritsFrom cx:Generalprepositionalconstructions,
@@ -2165,4 +2203,10 @@ cx:eng_NounPhrase a rcxn:Construction ;
         <http://example.org/cx/TheEnglishGIVE-OUTVerbParticleConstruction.>,
         <http://example.org/cx/come+[noise/mannerofmovement]V-ing> ;
     rcxn:hasTitle "Noun Phrase" .
+
+cx:eng_coolconstruction_Sources a cx:Collection ;
+    cx:hasLiterature <file:///home/meuhlodi/Travail/RCxn/instance/Submissions/www.english-corpora.org/bnc/>,
+        <file:///home/meuhlodi/Travail/RCxn/instance/Submissions/www.english-corpora.org/coca/>,
+        <https://www.dwds.de/wb/cool>,
+        <https://www.oed.com/dictionary/cool_adj?tl=true> .
 
