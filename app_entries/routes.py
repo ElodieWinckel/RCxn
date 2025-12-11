@@ -26,8 +26,8 @@ for ttl_file in glob.glob("Abox/*.ttl"):
     #print(s, p, o)
 
 # Define the namespaces
-CX = Namespace("http://example.org/cx/")
-g.bind("cx", CX)
+cx = Namespace("http://example.org/cx/")
+g.bind("cx", cx)
 dc = Namespace("http://purl.org/dc/elements/1.1/")
 g.bind("dc",dc)
 olia = Namespace("http://purl.org/olia/olia.owl#")
@@ -231,22 +231,46 @@ def construction_detail(uri):
             unique_slot_uri.append(obj)
     # Step 2: Collect triples where each sequence member is the subject
     elements = []
+    colloprofiles = []
     for slot_uri in unique_slot_uri:
+        # Define the name of the slot
         element_number = "Element " + slot_uri[-1]
+        # Extract colloprofiles for this slot
+        collocations = []
+        for collocation_list in g.objects(subject=slot_uri, predicate=cx.collocations):
+            for item in g.items(collocation_list):
+                word = g.value(item, cx.word)
+                freq = g.value(item, cx.frequency)
+                collocations.append({"word": str(word), "frequency": int(freq)})
+        if collocations: # append only if there is a colloprofile
+            colloprofiles.append({
+                "subject_name": element_number,
+                "collocations": collocations
+            })
+        collocations.sort(key=lambda x: x["frequency"], reverse=True) # Sort by frequency (descending)
+        # Gather triplets
         for predicate, obj in g.predicate_objects(subject=slot_uri):
-            if str(predicate) != "http://www.w3.org/1999/02/22-rdf-syntax-ns#type":
-                elements.append({
-                    'subject': element_number,
-                    'property': get_label_or_iri(predicate, g, ont),
-                    'object': get_label_or_iri(obj, g, ont),
-                })
-            else: # special case for type mandatory/optional slot
+            if str(predicate) == "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": # special case for type mandatory/optional slot
                 elements.append({
                     'subject': element_number,
                     'property': "Optionality",
                     'object': get_label_or_iri(obj, g, ont),
                 })
-        # Step 3: Collect triples for form of each sequence member
+            else:
+                if str(predicate) == "http://example.org/cx/collocations": # special case for colloprofile
+                    elements.append({
+                        'subject': element_number,
+                        'property': "Colloprofile",
+                        'object': "See colloprofile for "+ element_number + " below",
+                    })
+                else: # all other cases
+                    elements.append({
+                        'subject': element_number,
+                        'property': get_label_or_iri(predicate, g, ont),
+                        'object': get_label_or_iri(obj, g, ont),
+                    })
+
+    # Step 3: Collect triples for form of each sequence member
         subject_slotform = URIRef(str(slot_uri) + "_Form")
         for predicate, obj in g.predicate_objects(subject=subject_slotform):
             if str(predicate) == "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#hasSyntacticForm":  # special case for syntactic form that should be displayed as a link
@@ -326,9 +350,9 @@ def construction_detail(uri):
 
     # collect references
     references = []
-    for collection in g.objects(subject=metadata_uri, predicate=CX.hasSources):
+    for collection in g.objects(subject=metadata_uri, predicate=cx.hasSources):
             # Get all literature entries in this collection
-            for lit in g.objects(collection, CX.hasLiterature):
+            for lit in g.objects(collection, cx.hasLiterature):
                 # Extract details for each literature entry
                 creators = [str(c) for c in g.objects(lit, dc.creator)]
                 contributors = [str(c) for c in g.objects(lit, dc.contributor)]
@@ -410,7 +434,8 @@ def construction_detail(uri):
                            metadata=metadata,
                            research=research,
                            research_data=research_data,
-                           references=references)
+                           references=references,
+                           colloprofiles=colloprofiles)
 
 @app_entries_blueprint.route('/construction/<path:uri>/submit', methods=['POST'])
 def download_subgraph(uri):

@@ -409,3 +409,18 @@ ce11:hover::after,
 ce12:hover::after {
     opacity: 1;
 }
+
+
+.chart-container {
+      background-color: #e8e8e8;
+      padding: 20px;
+      border-radius: 8px;
+      margin: 20px auto;
+      max-width: 800px;
+    }
+    .chart-title {
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }

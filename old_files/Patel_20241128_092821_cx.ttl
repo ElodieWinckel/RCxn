@@ -41,45 +41,8 @@
 
 <http://example.org/cx/come+[noise/mannerofmovement]V-ing_3> a rcxn:SlotMandatory ;
     rcxn:hasSlotForm <http://example.org/cx/come+[noise/mannerofmovement]V-ing_3_Form> ;
-    cx:collocations (
-        [ cx:word "tumbling"; cx:frequency 36 ]
-        [ cx:word "hurrying"; cx:frequency 22 ]
-        [ cx:word "barging"; cx:frequency 11 ]
-        [ cx:word "hurtling"; cx:frequency 22 ]
-        [ cx:word "striding"; cx:frequency 20 ]
-        [ cx:word "crashing"; cx:frequency 27 ]
-        [ cx:word "rushing"; cx:frequency 56 ]
-        [ cx:word "bounding"; cx:frequency 14 ]
-        [ cx:word "bursting"; cx:frequency 19 ]
-        [ cx:word "crowding"; cx:frequency 11 ]
-        [ cx:word "pouring"; cx:frequency 23 ]
-        [ cx:word "running"; cx:frequency 109 ]
-        [ cx:word "surging"; cx:frequency 7 ]
-        [ cx:word "roaring"; cx:frequency 12 ]
-        [ cx:word "streaming"; cx:frequency 7 ]
-        [ cx:word "trotting"; cx:frequency 10 ]
-        [ cx:word "flying"; cx:frequency 22 ]
-        [ cx:word "shambling"; cx:frequency 4 ]
-        [ cx:word "riding"; cx:frequency 21 ]
-        [ cx:word "blundering"; cx:frequency 5 ]
-        [ cx:word "leaping"; cx:frequency 7 ]
-        [ cx:word "stumbling"; cx:frequency 6 ]
-        [ cx:word "clattering"; cx:frequency 5 ]
-        [ cx:word "floating"; cx:frequency 5 ]
-        [ cx:word "thundering"; cx:frequency 5 ]
-        [ cx:word "charging"; cx:frequency 9 ]
-        [ cx:word "spilling"; cx:frequency 5 ]
-        [ cx:word "storming"; cx:frequency 5 ]
-        [ cx:word "lolloping"; cx:frequency 3 ]
-        [ cx:word "drifting"; cx:frequency 7 ]
-        [ cx:word "tearing"; cx:frequency 7 ]
-        [ cx:word "galloping"; cx:frequency 4 ]
-        [ cx:word "panting"; cx:frequency 6 ]
-        [ cx:word "racing"; cx:frequency 11 ]
-        [ cx:word "scurrying"; cx:frequency 4 ]
-        [ cx:word "loping"; cx:frequency 3 ]
-        [ cx:word "prancing"; cx:frequency 3 ]
-        [ cx:word "straggling"; cx:frequency 3 ] ) .
+    RDFS:comment "colloprofile: tumbling (36); hurrying (22); barging (11); hurtling (22); striding (20); crashing (27); rushing (56); bounding (14); bursting (19); crowding (11); pouring (23); running (109); surging (7); roaring (12); streaming (7); trotting (10); flying (22); shambling (4); riding (21); blundering (5); leaping (7); stumbling (6); clattering (5); floating (5); thundering (5); charging (9); spilling (5); storming (5); lolloping (3); drifting (7); tearing (7); galloping (4); panting (6); racing (11); scurrying (4); loping (3); prancing (3); straggling (3)",
+        "present participle" .
 
 <http://example.org/cx/come+[noise/mannerofmovement]V-ing_3_Form> a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_VerbING .

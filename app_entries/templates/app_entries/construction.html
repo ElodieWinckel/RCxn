@@ -46,7 +46,7 @@
         'Syntactic function', 'Semantic role', 'Semantic contribution',
         'Semantic property', 'hasAnimacy', 'hasGender', 'has number',
         'hasPerson', 'hasCaseFeature', 'has tense', 'hasMode',
-        'hasVoice', 'type', 'comment'
+        'hasVoice', 'type', 'comment', 'Colloprofile'
     ];
 
     // Define a list of background colors -- they are also defined in CSS
@@ -107,6 +107,62 @@
     const table = createCrossTable(elements);
     container.appendChild(table);
 </script>
+{% endif %}
+
+{% if colloprofiles %}
+<h3>Colloprofile</h3>
+ {% for profile in colloprofiles %}
+    <div class="chart-container">
+      <div class="chart-title">Colloprofile for {{ profile.subject_name }}</div>
+      <canvas id="chart-{{ loop.index }}"></canvas>
+    </div>
+  {% endfor %}
+
+  <script>
+    {% for profile in colloprofiles %}
+      const ctx{{ loop.index }} = document.getElementById('chart-{{ loop.index }}').getContext('2d');
+      new Chart(ctx{{ loop.index }}, {
+        type: 'bar',
+        data: {
+          labels: {{ profile.collocations|map(attribute='word')|list|tojson|safe }},
+          datasets: [{
+            label: 'Frequency',
+            data: {{ profile.collocations|map(attribute='frequency')|list|tojson|safe }},
+            backgroundColor: '#b3c5ff',
+            borderColor: '#0056b3',
+            borderWidth: 1
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            title: {
+              display: false,  // Title is already rendered in HTML
+            },
+            legend: {
+              display: true,
+              position: 'top'
+            }
+          },
+          scales: {
+            y: {
+              beginAtZero: true,
+              title: {
+                display: true,
+                text: 'Frequency'
+              }
+            },
+            x: {
+              title: {
+                display: true,
+                text: 'Collocations'
+              }
+            }
+          }
+        }
+      });
+    {% endfor %}
+  </script>
 {% endif %}
 
 {% if grouped_examples %}
