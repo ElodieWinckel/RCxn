@@ -194,6 +194,7 @@ def clean_name(name):
     clean = clean.replace("]", "")
     clean = clean.replace("(", "")
     clean = clean.replace(")", "")
+    clean = clean.replace("/", "")
     clean = clean.replace("ß", "ss")
     clean = clean.replace("á", "a")
     clean = clean.replace("é", "e")

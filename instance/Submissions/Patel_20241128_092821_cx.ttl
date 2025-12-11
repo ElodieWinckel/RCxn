@@ -10,37 +10,37 @@
 @prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://example.org/cx/come+[noise/mannerofmovement]V-ing> a rcxn:Construction ;
+cx:comePLUSnoisemannerofmovementVing a rcxn:Construction ;
     rcxn:hasTitle "come + [noise/manner of movement] V-ing" ;
-    rcxn:hasConstructionMeaning <http://example.org/cx/come+[noise/mannerofmovement]V-ing_Meaning> ;
-    cx:hasExample <http://example.org/cx/come+[noise/mannerofmovement]V-ing_Ex_A> ,
-        <http://example.org/cx/come+[noise/mannerofmovement]V-ing_Ex_B> ,
-        <http://example.org/cx/come+[noise/mannerofmovement]V-ing_Ex_C> ,
-        <http://example.org/cx/come+[noise/mannerofmovement]V-ing_Ex_D> ;
-    rcxn:hasMetadata <http://example.org/cx/come+[noise/mannerofmovement]V-ing_MD> ;
-    rcxn:hasSlots <http://example.org/cx/come+[noise/mannerofmovement]V-ing_slots> ;
+    rcxn:hasConstructionMeaning cx:comePLUSnoisemannerofmovementVing_Meaning ;
+    cx:hasExample cx:comePLUSnoisemannerofmovementVing_Ex_A ,
+        cx:comePLUSnoisemannerofmovementVing_Ex_B ,
+        cx:comePLUSnoisemannerofmovementVing_Ex_C ,
+        cx:comePLUSnoisemannerofmovementVing_Ex_D ;
+    rcxn:hasMetadata cx:comePLUSnoisemannerofmovementVing_MD ;
+    rcxn:hasSlots cx:comePLUSnoisemannerofmovementVing_slots ;
     lg:partOfLanguage lg:eng ;
     RDFS:comment "tables (of association scores, etc.) and possibly some figures" .
 
-<http://example.org/cx/come+[noise/mannerofmovement]V-ing_1> a rcxn:SlotOptional ;
-    rcxn:hasSlotForm <http://example.org/cx/come+[noise/mannerofmovement]V-ing_1_Form> ;
+cx:comePLUSnoisemannerofmovementVing_1 a rcxn:SlotOptional ;
+    rcxn:hasSlotForm cx:comePLUSnoisemannerofmovementVing_1_Form ;
     rcxn:hasSyntacticFunction "subject" ;
     rcxn:hasSemanticRole oliatop:UndergoerMacroRole .
 
-<http://example.org/cx/come+[noise/mannerofmovement]V-ing_1_Form> a rcxn:SlotForm ;
+cx:comePLUSnoisemannerofmovementVing_1_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_NounPhrase .
 
-<http://example.org/cx/come+[noise/mannerofmovement]V-ing_2> a rcxn:SlotMandatory ;
+cx:comePLUSnoisemannerofmovementVing_2 a rcxn:SlotMandatory ;
     cx:WordOrder "Element 2 immediately before element 3" ;
-    rcxn:hasSlotForm <http://example.org/cx/come+[noise/mannerofmovement]V-ing_2_Form> ;
+    rcxn:hasSlotForm cx:comePLUSnoisemannerofmovementVing_2_Form ;
     RDFS:comment "perspective may imply subjective perception, enhanced expressivity, or inevitability of the action decribed by element 3" .
 
-<http://example.org/cx/come+[noise/mannerofmovement]V-ing_2_Form> a rcxn:SlotForm ;
+cx:comePLUSnoisemannerofmovementVing_2_Form a rcxn:SlotForm ;
     rcxn:hasStem "come" ;
     rcxn:hasSyntacticForm cx:eng_Verb .
 
-<http://example.org/cx/come+[noise/mannerofmovement]V-ing_3> a rcxn:SlotMandatory ;
-    rcxn:hasSlotForm <http://example.org/cx/come+[noise/mannerofmovement]V-ing_3_Form> ;
+cx:comePLUSnoisemannerofmovementVing_3 a rcxn:SlotMandatory ;
+    rcxn:hasSlotForm cx:comePLUSnoisemannerofmovementVing_3_Form ;
     cx:collocations (
         [ cx:word "tumbling"; cx:frequency 36 ]
         [ cx:word "hurrying"; cx:frequency 22 ]
@@ -79,49 +79,50 @@
         [ cx:word "scurrying"; cx:frequency 4 ]
         [ cx:word "loping"; cx:frequency 3 ]
         [ cx:word "prancing"; cx:frequency 3 ]
-        [ cx:word "straggling"; cx:frequency 3 ] ) .
+        [ cx:word "straggling"; cx:frequency 3 ] ) ;
+    RDFS:comment "present participle" .
 
-<http://example.org/cx/come+[noise/mannerofmovement]V-ing_3_Form> a rcxn:SlotForm ;
+cx:comePLUSnoisemannerofmovementVing_3_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_VerbING .
 
-<http://example.org/cx/come+[noise/mannerofmovement]V-ing_4> a rcxn:SlotOptional ;
+cx:comePLUSnoisemannerofmovementVing_4 a rcxn:SlotOptional ;
     rcxn:hasSemanticRole oliatop:GoalRole .
 
-<http://example.org/cx/come+[noise/mannerofmovement]V-ing_4_Form> a rcxn:SlotForm ;
+cx:comePLUSnoisemannerofmovementVing_4_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_PrepositionalPhrase , cx:eng_Particle .
 
-<http://example.org/cx/come+[noise/mannerofmovement]V-ing_Ex_A> a cx:Example ;
+cx:comePLUSnoisemannerofmovementVing_Ex_A a cx:Example ;
     cx:hasText "The back door burst open and six-year-old Sally came running excitedly into the room ." ;
     cx:hasAnnotatedText "The back door burst open and [six-year-old Sally]1 [came]2 [running]3 excitedly [into the room]4 ." .
 
-<http://example.org/cx/come+[noise/mannerofmovement]V-ing_Ex_B> a cx:Example ;
+cx:comePLUSnoisemannerofmovementVing_Ex_B a cx:Example ;
     cx:hasText "Then came thunder out of the east as rank after rank of tanks came roaring past, plunged through the infantry and turned north for the kill ." ;
     cx:hasAnnotatedText "Then came thunder out of the east as [rank after rank of tanks]1 [came]2 [roaring]3 past, plunged through the infantry and turned north for the kill ." .
 
-<http://example.org/cx/come+[noise/mannerofmovement]V-ing_Ex_C> a cx:Example ;
+cx:comePLUSnoisemannerofmovementVing_Ex_C a cx:Example ;
     cx:hasText "People came running with lanterns and torches, and soon hundreds of people were hurrying to the house ." ;
     cx:hasText "[People]1 [came]2 [running]3 with lanterns and torches, and soon hundreds of people were hurrying to the house ." .
 
-<http://example.org/cx/come+[noise/mannerofmovement]V-ing_Ex_D> a cx:Example ;
+cx:comePLUSnoisemannerofmovementVing_Ex_D a cx:Example ;
     cx:hasText "A second or two later , everything came crashing down in a big heap on the railway line below ." ;
     cx:hasText "A second or two later , [everything]1 [came]2 [crashing]3 [down]4 in a big heap on the railway line below ." .
 
-<http://example.org/cx/come+[noise/mannerofmovement]V-ing_MD> a rcxn:Metadata ;
+cx:comePLUSnoisemannerofmovementVing_MD a rcxn:Metadata ;
     rcxn:annotator membr:Patel ;
     rcxn:creationDate "2024-11-28"^^xsd:date ;
-    cx:hasSources <http://example.org/cx/come+[noise/mannerofmovement]V-ing_Sources> .
+    cx:hasSources cx:comePLUSnoisemannerofmovementVing_Sources .
 
-<http://example.org/cx/come+[noise/mannerofmovement]V-ing_Meaning> a rcxn:ConstructionMeaning ;
+cx:comePLUSnoisemannerofmovementVing_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "[Someone or something]1 moves towards [a reference point]4 in [a specified manner]3, often in a manner that is fast, sudden, uncontrolled, noisy, or otherwise overwhelming." .
 
-<http://example.org/cx/come+[noise/mannerofmovement]V-ing_Sources> a cx:Collection ;
+cx:comePLUSnoisemannerofmovementVing_Sources a cx:Collection ;
     cx:basedOn <https://journals.openedition.org/anglophonia/5335> .
 
-<http://example.org/cx/come+[noise/mannerofmovement]V-ing_slots> a rdf:Seq ;
-    rdf:_1 <http://example.org/cx/come+[noise/mannerofmovement]V-ing_1> ;
-    rdf:_2 <http://example.org/cx/come+[noise/mannerofmovement]V-ing_2> ;
-    rdf:_3 <http://example.org/cx/come+[noise/mannerofmovement]V-ing_3> ;
-    rdf:_4 <http://example.org/cx/come+[noise/mannerofmovement]V-ing_4> .
+cx:comePLUSnoisemannerofmovementVing_slots a rdf:Seq ;
+    rdf:_1 cx:comePLUSnoisemannerofmovementVing_1 ;
+    rdf:_2 cx:comePLUSnoisemannerofmovementVing_2 ;
+    rdf:_3 cx:comePLUSnoisemannerofmovementVing_3 ;
+    rdf:_4 cx:comePLUSnoisemannerofmovementVing_4 .
 
 <https://journals.openedition.org/anglophonia/5335> dc:creator "Gournay, Lucie" ;
     dc:date "2023/07/13" ;
