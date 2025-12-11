@@ -25,7 +25,7 @@ cx:comePLUSnoisemannerofmovementVing a rcxn:Construction ;
 cx:comePLUSnoisemannerofmovementVing_1 a rcxn:SlotOptional ;
     rcxn:hasSlotForm cx:comePLUSnoisemannerofmovementVing_1_Form ;
     rcxn:hasSyntacticFunction "subject" ;
-    rcxn:hasSemanticRole oliatop:UndergoerMacroRole .
+    rcxn:hasSemanticRole olia:UndergoerMacroRole .
 
 cx:comePLUSnoisemannerofmovementVing_1_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_NounPhrase .
@@ -86,7 +86,7 @@ cx:comePLUSnoisemannerofmovementVing_3_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_VerbING .
 
 cx:comePLUSnoisemannerofmovementVing_4 a rcxn:SlotOptional ;
-    rcxn:hasSemanticRole oliatop:GoalRole .
+    rcxn:hasSemanticRole olia:GoalRole .
 
 cx:comePLUSnoisemannerofmovementVing_4_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_PrepositionalPhrase , cx:eng_Particle .

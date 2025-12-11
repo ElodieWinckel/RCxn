@@ -1,8 +1,8 @@
 @prefix cx: <http://example.org/cx/> .
 @prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
 @prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
-@prefix ns1: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#hasPhonologycx:> .
-@prefix ns2: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#> .
+@prefix ns1: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#> .
+@prefix ns2: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#hasPhonologycx:> .
 @prefix olia: <http://purl.org/olia/olia.owl#> .
 @prefix oliatop: <http://purl.org/olia/olia-top.owl#> .
 @prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
@@ -26,13 +26,13 @@ cx:Idiomaticconstructions a rcxn:Construction ;
 
 <http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc> a rcxn:Construction ;
     lg:partOfLanguage lg:deu ;
-    ns2:differentFormDifferentFunction <http://example.org/cx/NP[das+ADJ-eN]acc.sg.neut>,
+    ns1:differentFormDifferentFunction <http://example.org/cx/NP[das+ADJ-eN]acc.sg.neut>,
         <http://example.org/cx/NP[das+ADJ-eN]nom.sg.neut>,
         <http://example.org/cx/NP[dem+ADJ-enN]dat.sg.masc>,
         <http://example.org/cx/NP[dem+ADJ-enN]dat.sg.neut>,
         <http://example.org/cx/NP[den+ADJ-enN]acc.sg.masc>,
         <http://example.org/cx/NP[die+ADJ-eN]nom.sg.fem> ;
-    ns2:inheritsFrom <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]>,
+    ns1:inheritsFrom <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]>,
         cx:NPnom.sg.masc ;
     rcxn:hasConstructionMeaning <http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_Meaning> ;
     rcxn:hasMetadata <http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_MD> ;
@@ -44,13 +44,13 @@ cx:Transitivedurch-Präfixverbkonstruktion_1_Form a rcxn:SlotForm ;
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_5_Index> olia:hasNumber olia:Plural .
 
-<http://example.org/cx/come+[noise/mannerofmovement]V-ing_4_Form> a rcxn:SlotForm ;
+cx:comePLUSnoisemannerofmovementVing_4_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_Particle,
         cx:eng_PrepositionalPhrase .
 
 cx:Adjectiveexclamativeconstruction a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
-    ns2:inheritedBy cx:engInf_Coolexclamativeconstruction ;
+    ns1:inheritedBy cx:engInf_Coolexclamativeconstruction ;
     rcxn:hasMetadata cx:Adjectiveexclamativeconstruction_MD ;
     rcxn:hasTitle "Adjective! exclamative construction" .
 
@@ -1360,66 +1360,66 @@ cx:Transitiveobjectrelativeclause_slots a rdf_ns:Seq ;
     rdf_ns:_5 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_5> ;
     rdf_ns:_6 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_6> .
 
-<http://example.org/cx/come+[noise/mannerofmovement]V-ing_1> a rcxn:SlotOptional ;
-    rcxn:hasSemanticRole oliatop:UndergoerMacroRole ;
-    rcxn:hasSlotForm <http://example.org/cx/come+[noise/mannerofmovement]V-ing_1_Form> ;
+cx:comePLUSnoisemannerofmovementVing_1 a rcxn:SlotOptional ;
+    rcxn:hasSemanticRole olia:UndergoerMacroRole ;
+    rcxn:hasSlotForm cx:comePLUSnoisemannerofmovementVing_1_Form ;
     rcxn:hasSyntacticFunction "subject" .
 
-<http://example.org/cx/come+[noise/mannerofmovement]V-ing_1_Form> a rcxn:SlotForm ;
+cx:comePLUSnoisemannerofmovementVing_1_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_NounPhrase .
 
-<http://example.org/cx/come+[noise/mannerofmovement]V-ing_2> a rcxn:SlotMandatory ;
+cx:comePLUSnoisemannerofmovementVing_2 a rcxn:SlotMandatory ;
     cx:WordOrder "Element 2 immediately before element 3" ;
     rdfs:comment "perspective may imply subjective perception, enhanced expressivity, or inevitability of the action decribed by element 3" ;
-    rcxn:hasSlotForm <http://example.org/cx/come+[noise/mannerofmovement]V-ing_2_Form> .
+    rcxn:hasSlotForm cx:comePLUSnoisemannerofmovementVing_2_Form .
 
-<http://example.org/cx/come+[noise/mannerofmovement]V-ing_2_Form> a rcxn:SlotForm ;
+cx:comePLUSnoisemannerofmovementVing_2_Form a rcxn:SlotForm ;
     rcxn:hasStem "come" ;
     rcxn:hasSyntacticForm cx:eng_Verb .
 
-<http://example.org/cx/come+[noise/mannerofmovement]V-ing_3> a rcxn:SlotMandatory ;
+cx:comePLUSnoisemannerofmovementVing_3 a rcxn:SlotMandatory ;
     cx:collocations [ ] ;
     rdfs:comment "present participle" ;
-    rcxn:hasSlotForm <http://example.org/cx/come+[noise/mannerofmovement]V-ing_3_Form> .
+    rcxn:hasSlotForm cx:comePLUSnoisemannerofmovementVing_3_Form .
 
-<http://example.org/cx/come+[noise/mannerofmovement]V-ing_3_Form> a rcxn:SlotForm ;
+cx:comePLUSnoisemannerofmovementVing_3_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_VerbING .
 
-<http://example.org/cx/come+[noise/mannerofmovement]V-ing_4> a rcxn:SlotOptional ;
-    rcxn:hasSemanticRole oliatop:GoalRole .
+cx:comePLUSnoisemannerofmovementVing_4 a rcxn:SlotOptional ;
+    rcxn:hasSemanticRole olia:GoalRole .
 
-<http://example.org/cx/come+[noise/mannerofmovement]V-ing_Ex_A> a cx:Example ;
+cx:comePLUSnoisemannerofmovementVing_Ex_A a cx:Example ;
     cx:hasAnnotatedText "The back door burst open and [six-year-old Sally]1 [came]2 [running]3 excitedly [into the room]4 ." ;
     cx:hasText "The back door burst open and six-year-old Sally came running excitedly into the room ." .
 
-<http://example.org/cx/come+[noise/mannerofmovement]V-ing_Ex_B> a cx:Example ;
+cx:comePLUSnoisemannerofmovementVing_Ex_B a cx:Example ;
     cx:hasAnnotatedText "Then came thunder out of the east as [rank after rank of tanks]1 [came]2 [roaring]3 past, plunged through the infantry and turned north for the kill ." ;
     cx:hasText "Then came thunder out of the east as rank after rank of tanks came roaring past, plunged through the infantry and turned north for the kill ." .
 
-<http://example.org/cx/come+[noise/mannerofmovement]V-ing_Ex_C> a cx:Example ;
+cx:comePLUSnoisemannerofmovementVing_Ex_C a cx:Example ;
     cx:hasText "People came running with lanterns and torches, and soon hundreds of people were hurrying to the house .",
         "[People]1 [came]2 [running]3 with lanterns and torches, and soon hundreds of people were hurrying to the house ." .
 
-<http://example.org/cx/come+[noise/mannerofmovement]V-ing_Ex_D> a cx:Example ;
+cx:comePLUSnoisemannerofmovementVing_Ex_D a cx:Example ;
     cx:hasText "A second or two later , [everything]1 [came]2 [crashing]3 [down]4 in a big heap on the railway line below .",
         "A second or two later , everything came crashing down in a big heap on the railway line below ." .
 
-<http://example.org/cx/come+[noise/mannerofmovement]V-ing_MD> a rcxn:Metadata ;
-    cx:hasSources <http://example.org/cx/come+[noise/mannerofmovement]V-ing_Sources> ;
+cx:comePLUSnoisemannerofmovementVing_MD a rcxn:Metadata ;
+    cx:hasSources cx:comePLUSnoisemannerofmovementVing_Sources ;
     rcxn:annotator membr:Patel ;
     rcxn:creationDate "2024-11-28"^^xsd:date .
 
-<http://example.org/cx/come+[noise/mannerofmovement]V-ing_Meaning> a rcxn:ConstructionMeaning ;
+cx:comePLUSnoisemannerofmovementVing_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "[Someone or something]1 moves towards [a reference point]4 in [a specified manner]3, often in a manner that is fast, sudden, uncontrolled, noisy, or otherwise overwhelming." .
 
-<http://example.org/cx/come+[noise/mannerofmovement]V-ing_Sources> a cx:Collection ;
+cx:comePLUSnoisemannerofmovementVing_Sources a cx:Collection ;
     cx:basedOn <https://journals.openedition.org/anglophonia/5335> .
 
-<http://example.org/cx/come+[noise/mannerofmovement]V-ing_slots> a rdf_ns:Seq ;
-    rdf_ns:_1 <http://example.org/cx/come+[noise/mannerofmovement]V-ing_1> ;
-    rdf_ns:_2 <http://example.org/cx/come+[noise/mannerofmovement]V-ing_2> ;
-    rdf_ns:_3 <http://example.org/cx/come+[noise/mannerofmovement]V-ing_3> ;
-    rdf_ns:_4 <http://example.org/cx/come+[noise/mannerofmovement]V-ing_4> .
+cx:comePLUSnoisemannerofmovementVing_slots a rdf_ns:Seq ;
+    rdf_ns:_1 cx:comePLUSnoisemannerofmovementVing_1 ;
+    rdf_ns:_2 cx:comePLUSnoisemannerofmovementVing_2 ;
+    rdf_ns:_3 cx:comePLUSnoisemannerofmovementVing_3 ;
+    rdf_ns:_4 cx:comePLUSnoisemannerofmovementVing_4 .
 
 cx:coolasadmirableconstruction_1 a rcxn:SlotMandatory ;
     rcxn:hasPhonology "/kuːl/" ;
@@ -1488,7 +1488,7 @@ cx:coolascolourconstruction_slots a rdf_ns:Seq ;
     rdf_ns:_1 cx:coolascolourconstruction_1 .
 
 cx:coolasemotionconstruction_1 a rcxn:SlotMandatory ;
-    ns1:hasPhonology "/kuːl/" ;
+    ns2:hasPhonology "/kuːl/" ;
     rcxn:hasSlotForm cx:coolasemotionconstruction_1_Form .
 
 cx:coolasemotionconstruction_1_Form a rcxn:SlotForm ;
@@ -1741,7 +1741,7 @@ cx:eng_Suffix a rcxn:Construction ;
 
 cx:eng_VerbING a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
-    rcxn:elementOf <http://example.org/cx/come+[noise/mannerofmovement]V-ing> ;
+    rcxn:elementOf cx:comePLUSnoisemannerofmovementVing ;
     rcxn:hasTitle "Verb + -ing" .
 
 cx:eng_VerbRoot a rcxn:Construction ;
@@ -1881,7 +1881,7 @@ Both are matrixes in the format of NumPy arrays but can be converted to any supp
 This is a similar publicly available dataset: https://github.com/SPOClab-ca/neural-reality-constructions\r
 """ ;
     lg:partOfLanguage lg:eng ;
-    ns2:inheritedBy cx:EnglishCause-Motionconstruction,
+    ns1:inheritedBy cx:EnglishCause-Motionconstruction,
         cx:EnglishDitransitiveconstruction,
         cx:EnglishResultativeconstruction,
         cx:EnglishTransitiveconstruction ;
@@ -1894,12 +1894,12 @@ cx:Relative-Topic-ShiftConstruction a rcxn:Construction ;
     cx:hasExample cx:Relative-Topic-ShiftConstruction_Ex_A,
         cx:Relative-Topic-ShiftConstruction_Ex_B ;
     lg:partOfLanguage lg:itaStoria ;
-    ns2:CL_sameFormSameFunction <http://example.org/cx/Latinlinkingcliché(i.e.,inCaesar'sandTacitus'works)> ;
-    ns2:inheritsFrom cx:ItalianConiunctioRelativa,
+    ns1:CL_sameFormSameFunction <http://example.org/cx/Latinlinkingcliché(i.e.,inCaesar'sandTacitus'works)> ;
+    ns1:inheritsFrom cx:ItalianConiunctioRelativa,
         cx:ItalianSiPassivante,
         cx:ItalianTemporalSubordinateClause ;
-    ns2:similarFormDifferentFunction cx:ItalianRelativeClause ;
-    ns2:similarFormSameFunction cx:Demonstrative-Topic-ShiftConstruction ;
+    ns1:similarFormDifferentFunction cx:ItalianRelativeClause ;
+    ns1:similarFormSameFunction cx:Demonstrative-Topic-ShiftConstruction ;
     rcxn:hasConstructionMeaning cx:Relative-Topic-ShiftConstruction_Meaning ;
     rcxn:hasMetadata cx:Relative-Topic-ShiftConstruction_MD ;
     rcxn:hasSlots cx:Relative-Topic-ShiftConstruction_slots ;
@@ -1922,7 +1922,7 @@ cx:coolascolourconstruction a rcxn:Construction ;
         cx:coolascolourconstruction_Ex_B ;
     rdfs:comment "first attested: 1758, cf. OED" ;
     lg:partOfLanguage lg:eng ;
-    ns2:isMetaphoricalExtensionOf cx:eng_coolconstruction ;
+    ns1:isMetaphoricalExtensionOf cx:eng_coolconstruction ;
     rcxn:hasConstructionMeaning cx:coolascolourconstruction_Meaning ;
     rcxn:hasMetadata cx:coolascolourconstruction_MD ;
     rcxn:hasSlots cx:coolascolourconstruction_slots ;
@@ -1948,7 +1948,7 @@ cx:deu_Verb a rcxn:Construction ;
 
 cx:engInf_Coolexclamativeconstruction a rcxn:Construction ;
     lg:partOfLanguage lg:engInf ;
-    ns2:inheritsFrom cx:Adjectiveexclamativeconstruction ;
+    ns1:inheritsFrom cx:Adjectiveexclamativeconstruction ;
     rcxn:hasConstructionMeaning cx:engInf_Coolexclamativeconstruction_Meaning ;
     rcxn:hasMetadata cx:engInf_Coolexclamativeconstruction_MD ;
     rcxn:hasSlots cx:engInf_Coolexclamativeconstruction_slots ;
@@ -1991,7 +1991,7 @@ cx:Dooperationwithoperand1onoperand2construction a rcxn:Construction ;
 cx:POU-beneficiaryconstruction a rcxn:Construction ;
     cx:hasExample cx:POU-beneficiaryconstruction_Ex_A ;
     lg:partOfLanguage lg:hat ;
-    ns2:similarFormDifferentFunction cx:POU-purposeconstruction ;
+    ns1:similarFormDifferentFunction cx:POU-purposeconstruction ;
     rcxn:hasConstructionMeaning cx:POU-beneficiaryconstruction_Meaning ;
     rcxn:hasMetadata cx:POU-beneficiaryconstruction_MD ;
     rcxn:hasSlots cx:POU-beneficiaryconstruction_slots ;
@@ -2005,16 +2005,16 @@ cx:POU-beneficiaryconstruction a rcxn:Construction ;
     rcxn:hasSlots cx:TheEnglishGIVE-OUTVerbParticleConstruction._slots ;
     rcxn:hasTitle "GIVE-OUT Verb Particle Construction." .
 
-<http://example.org/cx/come+[noise/mannerofmovement]V-ing> a rcxn:Construction ;
-    cx:hasExample <http://example.org/cx/come+[noise/mannerofmovement]V-ing_Ex_A>,
-        <http://example.org/cx/come+[noise/mannerofmovement]V-ing_Ex_B>,
-        <http://example.org/cx/come+[noise/mannerofmovement]V-ing_Ex_C>,
-        <http://example.org/cx/come+[noise/mannerofmovement]V-ing_Ex_D> ;
+cx:comePLUSnoisemannerofmovementVing a rcxn:Construction ;
+    cx:hasExample cx:comePLUSnoisemannerofmovementVing_Ex_A,
+        cx:comePLUSnoisemannerofmovementVing_Ex_B,
+        cx:comePLUSnoisemannerofmovementVing_Ex_C,
+        cx:comePLUSnoisemannerofmovementVing_Ex_D ;
     rdfs:comment "tables (of association scores, etc.) and possibly some figures" ;
     lg:partOfLanguage lg:eng ;
-    rcxn:hasConstructionMeaning <http://example.org/cx/come+[noise/mannerofmovement]V-ing_Meaning> ;
-    rcxn:hasMetadata <http://example.org/cx/come+[noise/mannerofmovement]V-ing_MD> ;
-    rcxn:hasSlots <http://example.org/cx/come+[noise/mannerofmovement]V-ing_slots> ;
+    rcxn:hasConstructionMeaning cx:comePLUSnoisemannerofmovementVing_Meaning ;
+    rcxn:hasMetadata cx:comePLUSnoisemannerofmovementVing_MD ;
+    rcxn:hasSlots cx:comePLUSnoisemannerofmovementVing_slots ;
     rcxn:hasTitle "come + [noise/manner of movement] V-ing" .
 
 cx:coolasadmirableconstruction a rcxn:Construction ;
@@ -2023,7 +2023,7 @@ cx:coolasadmirableconstruction a rcxn:Construction ;
         cx:coolasadmirableconstruction_Ex_C ;
     rdfs:comment "first attested: 1884, cf. OED" ;
     lg:partOfLanguage lg:engInf ;
-    ns2:isMetaphoricalExtensionOf cx:coolasemotionconstruction ;
+    ns1:isMetaphoricalExtensionOf cx:coolasemotionconstruction ;
     rcxn:elementOf cx:engInf_Coolexclamativeconstruction ;
     rcxn:hasConstructionMeaning cx:coolasadmirableconstruction_Meaning ;
     rcxn:hasMetadata cx:coolasadmirableconstruction_MD ;
@@ -2061,7 +2061,7 @@ cx:eng_Verb a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
     rcxn:elementOf cx:Argumentstructureconstruction,
         <http://example.org/cx/TheEnglishGIVE-OUTVerbParticleConstruction.>,
-        <http://example.org/cx/come+[noise/mannerofmovement]V-ing> ;
+        cx:comePLUSnoisemannerofmovementVing ;
     rcxn:hasTitle "Verb" .
 
 cx:eng_VerbPhrase a rcxn:Construction ;
@@ -2076,7 +2076,7 @@ cx:eng_coolconstruction a rcxn:Construction ;
         cx:eng_coolconstruction_Ex_D ;
     rdfs:comment "from Indo-european *gel(ə) (DWDS)" ;
     lg:partOfLanguage lg:eng ;
-    ns2:metaphoricalLink cx:coolascolourconstruction,
+    ns1:metaphoricalLink cx:coolascolourconstruction,
         cx:coolasemotionconstruction ;
     rcxn:hasConstructionMeaning cx:eng_coolconstruction_Meaning ;
     rcxn:hasMetadata cx:eng_coolconstruction_MD ;
@@ -2087,8 +2087,8 @@ cx:Idiomaticconstruction a rcxn:Construction ;
     cx:hasExample cx:Idiomaticconstruction_Ex_A,
         cx:Idiomaticconstruction_Ex_B ;
     lg:partOfLanguage lg:deu ;
-    ns2:CL_differentFormSameFunction cx:EnglishPullsomethingoutofahat ;
-    ns2:CL_similarFormDifferentFunction cx:Englishrollupyoursleeves,
+    ns1:CL_differentFormSameFunction cx:EnglishPullsomethingoutofahat ;
+    ns1:CL_similarFormDifferentFunction cx:Englishrollupyoursleeves,
         <http://example.org/cx/Farsibarāyekasiāstinbālāzadan:torollupsleevesforsomething>,
         <http://example.org/cx/Farsimārāstin-exodparvarāndan:tonurtureasnakeinone'sbosom> ;
     rcxn:hasConstructionMeaning cx:Idiomaticconstruction_Meaning ;
@@ -2099,12 +2099,12 @@ cx:Idiomaticconstruction a rcxn:Construction ;
 <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]> a rcxn:Construction ;
     cx:annotator membr:Kligge ;
     lg:partOfLanguage lg:deu ;
-    ns2:inheritedBy <http://example.org/cx/NP[das+ADJ-e+N]nom.sg.neut>,
+    ns1:inheritedBy <http://example.org/cx/NP[das+ADJ-e+N]nom.sg.neut>,
         <http://example.org/cx/NP[dem+ADJ-en+N]dat.sg.masc/neut>,
         <http://example.org/cx/NP[der+ADJ-e+N]nom.sg.masc>,
         <http://example.org/cx/NP[die+ADJ-e+N]nom.sg.fem>,
         <http://example.org/cx/etc.> ;
-    ns2:similarFormSameFunction <http://example.org/cx/NP[ADJ-strong+ADJ-strong+N]>,
+    ns1:similarFormSameFunction <http://example.org/cx/NP[ADJ-strong+ADJ-strong+N]>,
         <http://example.org/cx/NP[ADJ-strong+ADJ-weak+N]>,
         <http://example.org/cx/NP[def.DET-strong+N]>,
         <http://example.org/cx/NP[indef.DET-strong+ADJ-weak+N]>,
@@ -2124,7 +2124,7 @@ cx:Transitiveobjectrelativeclause a rcxn:Construction ;
         cx:Transitiveobjectrelativeclause_Ex_D ;
     rdfs:comment "2 graphs (PDF- accuracy and reaction time). Tables with model output - if relevant (CSV or docx)" ;
     lg:partOfLanguage lg:spaSpoPen ;
-    ns2:inheritsFrom cx:Spanishobjectrelativeclause,
+    ns1:inheritsFrom cx:Spanishobjectrelativeclause,
         cx:Spanishrelativeclause,
         cx:Spanishtransitiveconstruction ;
     rcxn:hasConstructionMeaning cx:Transitiveobjectrelativeclause_Meaning ;
@@ -2137,8 +2137,8 @@ cx:coolasemotionconstruction a rcxn:Construction ;
         cx:coolasemotionconstruction_Ex_B ;
     rdfs:comment "first attested: Old English, Beowulf (Oxford English Dictionary)" ;
     lg:partOfLanguage lg:eng ;
-    ns2:isMetaphoricalExtensionOf cx:eng_coolconstruction ;
-    ns2:metaphoricalLink cx:coolasadmirableconstruction,
+    ns1:isMetaphoricalExtensionOf cx:eng_coolconstruction ;
+    ns1:metaphoricalLink cx:coolasadmirableconstruction,
         cx:keepacoolheadconstruction ;
     rcxn:elementOf cx:eng_Keepacoolheadconstruction ;
     rcxn:hasConstructionMeaning cx:coolasemotionconstruction_Meaning ;
@@ -2167,7 +2167,7 @@ cx:Transitivedurch-Präfixverbkonstruktion a rcxn:Construction ;
         cx:Transitivedurch-Verbkonstruktion ;
     rdfs:comment "Depends on what is doable, all MHG data is available in form of one big csv-file. Can be split into multiple files,  however." ;
     lg:partOfLanguage lg:gmhWr12 ;
-    ns2:inheritsFrom cx:Monotransitivkonstruktion,
+    ns1:inheritsFrom cx:Monotransitivkonstruktion,
         cx:Präfixverbkonstruktion ;
     rcxn:hasConstructionMeaning cx:Transitivedurch-Präfixverbkonstruktion_Meaning ;
     rcxn:hasMetadata cx:Transitivedurch-Präfixverbkonstruktion_MD ;
@@ -2186,7 +2186,7 @@ cx:eng_Adjective a rcxn:Construction ;
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]> a rcxn:Construction ;
     lg:partOfLanguage lg:deuWrSt20 ;
-    ns2:inheritsFrom cx:Generalprepositionalconstructions,
+    ns1:inheritsFrom cx:Generalprepositionalconstructions,
         <http://example.org/cx/vor+bodypartconstructions> ;
     rcxn:hasConstructionMeaning <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_Meaning> ;
     rcxn:hasMetadata <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_MD> ;
@@ -2207,7 +2207,7 @@ cx:eng_NounPhrase a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
     rcxn:elementOf cx:EvaluativeAttributionConstruction,
         <http://example.org/cx/TheEnglishGIVE-OUTVerbParticleConstruction.>,
-        <http://example.org/cx/come+[noise/mannerofmovement]V-ing> ;
+        cx:comePLUSnoisemannerofmovementVing ;
     rcxn:hasTitle "Noun Phrase" .
 
 cx:eng_coolconstruction_Sources a cx:Collection ;
