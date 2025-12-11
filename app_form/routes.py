@@ -180,6 +180,28 @@ def get_metalanguage(lang_uri):
         current = parent
 
 ###################################################
+### FUNCTION TO PREPARE CLEAN URIS BASED ON NAME
+###################################################
+
+def clean_name(name):
+    original = str(name)
+    clean = original.replace(" ", "")
+    clean = clean.replace("?", "")
+    clean = clean.replace("!", "")
+    clean = clean.replace(".", "")
+    clean = clean.replace("-", "")
+    clean = clean.replace("[", "")
+    clean = clean.replace("]", "")
+    clean = clean.replace("(", "")
+    clean = clean.replace(")", "")
+    clean = clean.replace("ß", "ss")
+    clean = clean.replace("á", "a")
+    clean = clean.replace("é", "e")
+    clean = clean.replace("ü", "ue")
+    clean = clean.replace("+", "PLUS")
+    return clean
+
+###################################################
 ### RUN HTML FORM
 ###################################################
 
@@ -227,7 +249,7 @@ def form_submit():
     construction_language_uri = request.form['language']  # the URI
     # construction_language = request.form['language_label']  # the label, no use for the moment
     construction_name = request.form['construction']
-    construction_name_cleaned = construction_language_uri + "_" + construction_name.replace(" ", "")
+    construction_name_cleaned = construction_language_uri + "_" + clean_name(construction_name)
     default_research_question_uri = request.form['projectId']
     new_research_question = request.form['Rquestion']
     findingsId = request.form['findingsId'] # Flask receives either: (a) The selected findingsId if an existing finding is chosen,
@@ -634,7 +656,7 @@ def form_submit():
                     )
                 else:  # Users can also enter the name of a construction that has not been implemented yet
                     # When this happens, create a new construction entry, with title, annotator and creation date
-                    cleaned_morphosyn_construction = morphosyn.replace(" ", "")
+                    cleaned_morphosyn_construction = clean_name(morphosyn)
                     metadata_morphosyn_construction = f"{cleaned_morphosyn_construction}_MD"
                     g.add((cx[cleaned_morphosyn_construction], RDF.type, rcxn.Construction))
                     g.add((cx[cleaned_morphosyn_construction], rcxn.hasMetadata, cx[metadata_morphosyn_construction]))
@@ -696,7 +718,7 @@ def form_submit():
             )
         else: # Users can also enter the name of a construction that has not been implemented yet
             # When this happens, create a new construction entry, with title, annotator and creation date
-            cleaned_inherit_construction = inherit_construction.replace(" ", "")
+            cleaned_inherit_construction = clean_name(inherit_construction)
             metadata_inherit_construction = f"{cleaned_inherit_construction}_MD"
             g.add((cx[cleaned_inherit_construction], RDF.type, rcxn.Construction))
             g.add((cx[cleaned_inherit_construction], rcxn.hasMetadata, cx[metadata_inherit_construction]))
@@ -721,7 +743,7 @@ def form_submit():
             )
         else:  # Users can also enter the name of a construction that has not been implemented yet
             # When this happens, create a new construction entry, with title, annotator and creation date
-            cleaned_inherit_construction = inherit_construction.replace(" ", "")
+            cleaned_inherit_construction = clean_name(inherit_construction)
             metadata_inherit_construction = f"{cleaned_inherit_construction}_MD"
             g.add((cx[cleaned_inherit_construction], RDF.type, rcxn.Construction))
             g.add((cx[cleaned_inherit_construction], rcxn.hasMetadata, cx[metadata_inherit_construction]))
@@ -746,7 +768,7 @@ def form_submit():
             )
         else:  # Users can also enter the name of a construction that has not been implemented yet
             # When this happens, create a new construction entry, with title, annotator and creation date
-            cleaned_inherit_construction = str(metalanguage_code) + "_" + inherit_construction.replace(" ", "")
+            cleaned_inherit_construction = str(metalanguage_code) + "_" + clean_name(inherit_construction)
             metadata_inherit_construction = f"{cleaned_inherit_construction}_MD"
             g.add((cx[cleaned_inherit_construction], RDF.type, rcxn.Construction))
             g.add((cx[cleaned_inherit_construction], rcxn.hasMetadata, cx[metadata_inherit_construction]))
@@ -787,7 +809,7 @@ def form_submit():
                 )
             else:  # Users can also enter the name of a construction that has not been implemented yet
                 # When this happens, create a new construction entry, with title, annotator and creation date
-                cleaned_inherit_construction = similarity_link.replace(" ", "")
+                cleaned_inherit_construction = clean_name(similarity_link)
                 metadata_inherit_construction = f"{cleaned_inherit_construction}_MD"
                 g.add((cx[cleaned_inherit_construction], RDF.type, rcxn.Construction))
                 g.add((cx[cleaned_inherit_construction], rcxn.hasMetadata, cx[metadata_inherit_construction]))

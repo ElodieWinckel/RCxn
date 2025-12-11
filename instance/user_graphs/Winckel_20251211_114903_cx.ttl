@@ -1,0 +1,42 @@
+@prefix cx: <http://example.org/cx/> .
+@prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
+@prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#> .
+@prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
+@prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+membr:Project_Winckel_F2511281100 rsrch:basedOn cx:eng_Coolexclamativeconstruction .
+
+cx:detsgPLUSmascconstruction a rcxn:Construction ;
+    links:inheritedBy cx:eng_Coolexclamativeconstruction ;
+    rcxn:hasMetadata cx:detsgPLUSmascconstruction_MD ;
+    rcxn:hasTitle "det[sg+masc] construction?" .
+
+cx:detsgPLUSmascconstruction_MD a rcxn:Metadata ;
+    cx:annotator membr:Winckel ;
+    rcxn:creationDate "2025-12-11"^^xsd:date .
+
+cx:eng_Coolexclamativeconstruction_1 a rcxn:SlotMandatory .
+
+cx:eng_Coolexclamativeconstruction_2 a rcxn:SlotMandatory .
+
+cx:eng_Coolexclamativeconstruction_MD a rcxn:Metadata ;
+    cx:annotator membr:Winckel ;
+    rcxn:creationDate "2025-12-11"^^xsd:date .
+
+cx:eng_Coolexclamativeconstruction_Meaning a rcxn:ConstructionMeaning .
+
+cx:eng_Coolexclamativeconstruction_slots a rdf:Seq ;
+    rdf:_1 cx:eng_Coolexclamativeconstruction_1 ;
+    rdf:_2 cx:eng_Coolexclamativeconstruction_2 .
+
+cx:eng_Coolexclamativeconstruction a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    links:inheritsFrom cx:detsgPLUSmascconstruction ;
+    rcxn:hasConstructionMeaning cx:eng_Coolexclamativeconstruction_Meaning ;
+    rcxn:hasMetadata cx:eng_Coolexclamativeconstruction_MD ;
+    rcxn:hasSlots cx:eng_Coolexclamativeconstruction_slots ;
+    rcxn:hasTitle "Cool! exclamative construction" .
+
