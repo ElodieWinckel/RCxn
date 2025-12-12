@@ -8,7 +8,7 @@
 
 <http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc> a rcxn:Construction ;
     rcxn:hasTitle "NP[der+ ADJ-e N]nom.sg.masc" ;
-    links:differentFormDifferentFunction <http://example.org/cx/NP[das+ADJ-eN]acc.sg.neut>,
+    links:similarFormSimilarFunction <http://example.org/cx/NP[das+ADJ-eN]acc.sg.neut>,
         <http://example.org/cx/NP[das+ADJ-eN]nom.sg.neut>,
         <http://example.org/cx/NP[dem+ADJ-enN]dat.sg.masc>,
         <http://example.org/cx/NP[dem+ADJ-enN]dat.sg.neut>,
@@ -75,12 +75,6 @@
     cx:annotator membr:Kligge ;
     rcxn:creationDate "2024-12-02"^^xsd:date ;
     rcxn:hasTitle "NP[die + ADJ-e N]nom.sg.fem" ;
-    lg:partOfLanguage lg:deu .
-
-<http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]> a rcxn:Construction ;
-    cx:annotator membr:Kligge ;
-    rcxn:creationDate "2024-12-02"^^xsd:date ;
-    rcxn:hasTitle "NP[Def.Det-strong+ADJ-weak+N]" ;
     lg:partOfLanguage lg:deu .
 
 <http://example.org/cx/NPnom.sg.masc> a rcxn:Construction ;

@@ -26,14 +26,14 @@ cx:Idiomaticconstructions a rcxn:Construction ;
 
 <http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc> a rcxn:Construction ;
     lg:partOfLanguage lg:deu ;
-    ns1:differentFormDifferentFunction <http://example.org/cx/NP[das+ADJ-eN]acc.sg.neut>,
+    ns1:inheritsFrom <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]>,
+        cx:NPnom.sg.masc ;
+    ns1:similarFormSimilarFunction <http://example.org/cx/NP[das+ADJ-eN]acc.sg.neut>,
         <http://example.org/cx/NP[das+ADJ-eN]nom.sg.neut>,
         <http://example.org/cx/NP[dem+ADJ-enN]dat.sg.masc>,
         <http://example.org/cx/NP[dem+ADJ-enN]dat.sg.neut>,
         <http://example.org/cx/NP[den+ADJ-enN]acc.sg.masc>,
         <http://example.org/cx/NP[die+ADJ-eN]nom.sg.fem> ;
-    ns1:inheritsFrom <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]>,
-        cx:NPnom.sg.masc ;
     rcxn:hasConstructionMeaning <http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_Meaning> ;
     rcxn:hasMetadata <http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_MD> ;
     rcxn:hasSlots <http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_slots> ;
@@ -2097,7 +2097,6 @@ cx:Idiomaticconstruction a rcxn:Construction ;
     rcxn:hasTitle "Aus dem Ärmel schütteln construction" .
 
 <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]> a rcxn:Construction ;
-    cx:annotator membr:Kligge ;
     lg:partOfLanguage lg:deu ;
     ns1:inheritedBy <http://example.org/cx/NP[das+ADJ-e+N]nom.sg.neut>,
         <http://example.org/cx/NP[dem+ADJ-en+N]dat.sg.masc/neut>,
@@ -2110,12 +2109,10 @@ cx:Idiomaticconstruction a rcxn:Construction ;
         <http://example.org/cx/NP[indef.DET-strong+ADJ-weak+N]>,
         <http://example.org/cx/NP[indef.DET-strong+N]>,
         <http://example.org/cx/NP[indef.DET-zero+N]> ;
-    rcxn:creationDate "2024-12-02"^^xsd:date ;
     rcxn:hasConstructionMeaning <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_Meaning> ;
     rcxn:hasMetadata <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_MD> ;
     rcxn:hasSlots <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_slots> ;
-    rcxn:hasTitle "NP [Def.Det-strong + ADJ-weak + N]",
-        "NP[Def.Det-strong+ADJ-weak+N]" .
+    rcxn:hasTitle "NP [Def.Det-strong + ADJ-weak + N]" .
 
 cx:Transitiveobjectrelativeclause a rcxn:Construction ;
     cx:hasExample cx:Transitiveobjectrelativeclause_Ex_A,

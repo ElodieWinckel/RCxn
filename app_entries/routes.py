@@ -153,17 +153,6 @@ def construction_detail(uri):
     # Rebuilt the full URI for metadata
     metadata_uri = URIRef("http://example.org/cx/" + uri + "_MD")
 
-    # List of all links
-    links_properties = {"inherits from", "inherited by",
-                        "sameFormSameFunction", "sameFormSimilarFunction", "sameFormDifferentFunction",
-                        "similarFormSameFunction", "similarFormSimilarFunction", "similarFormDifferentFunction",
-                        "differentFormSameFunction", "differentFormSimilarFunction", "differentFormDifferentFunction",
-                        "CL_sameFormSameFunction", "CL_sameFormSimilarFunction", "CL_sameFormDifferentFunction",
-                        "CL_similarFormSameFunction", "CL_similarFormSimilarFunction", "CL_similarFormDifferentFunction",
-                        "CL_differentFormSameFunction", "CL_differentFormSimilarFunction", "CL_differentFormDifferentFunction",
-                        "elementOf"
-                        }
-
     # Collect all triples where entry_uri is the subject
     triples = []
     links = []
@@ -182,7 +171,7 @@ def construction_detail(uri):
                         'lang': get_label_or_iri(lang_uri, g, ont),
                     })
             else:
-                if str(predicate).endswith("elementOf"):
+                if str(predicate).endswith("elementOf"): # Special case for "eelement of", which is not part of the ontology of links
                     name_of_link = get_label_or_iri(predicate, g, ont)
                     object_value = get_label_or_iri(obj, g, ont)
                     uri = URIRef(f"http://example.org/cx/{object_value}")
