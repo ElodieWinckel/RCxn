@@ -332,8 +332,8 @@ def construction_detail(uri):
     for predicate, obj in g.predicate_objects(subject=metadata_uri):
         if str(predicate) != "http://www.w3.org/1999/02/22-rdf-syntax-ns#type":
             metadata.append({
-                'property': re.sub(prefixes, "", str(predicate)),
-                'object': re.sub(prefixes, "", str(obj)),
+                'property': get_label_or_iri(predicate, g, ont),
+                'object': get_label_or_iri(obj, g, ont),
             })
     metadata[:] = [item for item in metadata if item['property'] != "hasSources"] # resources are delt with separately (see below "collect references")
 
