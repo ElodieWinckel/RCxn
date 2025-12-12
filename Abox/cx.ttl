@@ -95,7 +95,7 @@ cx:Adverb_MD a rcxn:Metadata ;
     cx:hasAnimacy cx:inanimate .
 
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_2> a rcxn:SlotMandatory ;
-    rcxn:hasSemanticRole oliatop:DirectionRole ;
+    rcxn:hasSemanticRole olia:DirectionRole ;
     rcxn:hasSlotForm <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_2_Form> .
 
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_2_Form> a cx:SlotForm ;
@@ -104,7 +104,7 @@ cx:Adverb_MD a rcxn:Metadata ;
 
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_3> a rcxn:SlotMandatory ;
     cx:hasIS cx:Background ;
-    rcxn:hasSemanticRole oliatop:ThemeRole ;
+    rcxn:hasSemanticRole olia:ThemeRole ;
     rcxn:hasSyntacticFunction "complement of preposition (element 2)" .
 
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_MD> a rcxn:Metadata ;
