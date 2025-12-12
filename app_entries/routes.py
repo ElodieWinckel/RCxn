@@ -2,7 +2,7 @@ from . import app_entries_blueprint
 import glob
 import re
 from flask import Flask, render_template, Response
-from rdflib import Graph, URIRef, Literal, Namespace, RDF, RDFS
+from rdflib import Graph, URIRef, Literal, Namespace, RDF, RDFS, FOAF
 import os
 from io import BytesIO
 
@@ -330,7 +330,17 @@ def construction_detail(uri):
     # Collect triples for metadata
     metadata = []
     for predicate, obj in g.predicate_objects(subject=metadata_uri):
-        if str(predicate) != "http://www.w3.org/1999/02/22-rdf-syntax-ns#type":
+        if str(predicate) == "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#annotator":
+            given = g.value(subject=obj, predicate=FOAF.givenName)
+            family = g.value(subject=obj, predicate=FOAF.familyName)
+            homepage = g.value(subject=obj, predicate=FOAF.homepage)
+            metadata.append({
+                'property': get_label_or_iri(predicate, g, ont),
+                'given': get_label_or_iri(given, g, ont),
+                'family': get_label_or_iri(family, g, ont),
+                'homepage': get_label_or_iri(homepage, g, ont),
+            })
+        elif str(predicate) != "http://www.w3.org/1999/02/22-rdf-syntax-ns#type":
             metadata.append({
                 'property': get_label_or_iri(predicate, g, ont),
                 'object': get_label_or_iri(obj, g, ont),

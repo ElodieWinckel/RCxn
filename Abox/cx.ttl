@@ -55,7 +55,7 @@ cx:Adjectiveexclamativeconstruction a rcxn:Construction ;
     rcxn:hasTitle "Adjective! exclamative construction" .
 
 cx:Adjectiveexclamativeconstruction_MD a rcxn:Metadata ;
-    cx:annotator membr:Boos,
+    rcxn:annotator membr:Boos,
         membr:Petrenko,
         membr:Weigelt,
         membr:Winckel ;
@@ -67,7 +67,7 @@ cx:Adverb a rcxn:Construction ;
     rcxn:hasTitle "Adverb" .
 
 cx:Adverb_MD a rcxn:Metadata ;
-    cx:annotator membr:Boos,
+    rcxn:annotator membr:Boos,
         membr:Petrenko,
         membr:Weigelt,
         membr:Winckel ;
@@ -163,7 +163,7 @@ cx:Copula a rcxn:Construction ;
     rcxn:hasTitle "Copula" .
 
 cx:Copula_MD a rcxn:Metadata ;
-    cx:annotator membr:Boos,
+    rcxn:annotator membr:Boos,
         membr:Petrenko,
         membr:Weigelt,
         membr:Winckel ;
@@ -184,7 +184,7 @@ cx:Determiner a rcxn:Construction ;
     rcxn:hasTitle "Determiner" .
 
 cx:Determiner_MD a rcxn:Metadata ;
-    cx:annotator membr:Boos,
+    rcxn:annotator membr:Boos,
         membr:Petrenko,
         membr:Weigelt,
         membr:Winckel ;
@@ -789,7 +789,7 @@ cx:Noun a rcxn:Construction ;
     rcxn:hasTitle "Noun" .
 
 cx:Noun_MD a rcxn:Metadata ;
-    cx:annotator membr:Boos,
+    rcxn:annotator membr:Boos,
         membr:Petrenko,
         membr:Weigelt,
         membr:Winckel ;
@@ -1443,11 +1443,11 @@ cx:coolasadmirableconstruction_Ex_C a cx:Example ;
     cx:hasText "The movie is cool." .
 
 cx:coolasadmirableconstruction_MD a rcxn:Metadata ;
-    cx:annotator membr:Boos,
+    cx:hasSources cx:eng_coolconstruction_Sources ;
+    rcxn:annotator membr:Boos,
         membr:Petrenko,
         membr:Weigelt,
         membr:Winckel ;
-    cx:hasSources cx:eng_coolconstruction_Sources ;
     rcxn:creationDate "2025-11-28"^^xsd:date .
 
 cx:coolasadmirableconstruction_Meaning a rcxn:ConstructionMeaning ;
@@ -1474,11 +1474,11 @@ cx:coolascolourconstruction_Ex_B a cx:Example ;
     cx:hasText "a cool shade of grey" .
 
 cx:coolascolourconstruction_MD a rcxn:Metadata ;
-    cx:annotator membr:Boos,
+    cx:hasSources cx:eng_coolconstruction_Sources ;
+    rcxn:annotator membr:Boos,
         membr:Petrenko,
         membr:Weigelt,
         membr:Winckel ;
-    cx:hasSources cx:eng_coolconstruction_Sources ;
     rcxn:creationDate "2025-11-28"^^xsd:date .
 
 cx:coolascolourconstruction_Meaning a rcxn:ConstructionMeaning ;
@@ -1505,11 +1505,11 @@ cx:coolasemotionconstruction_Ex_B a cx:Example ;
     cx:hasText "He is staying cool under pressure." .
 
 cx:coolasemotionconstruction_MD a rcxn:Metadata ;
-    cx:annotator membr:Boos,
+    cx:hasSources cx:eng_coolconstruction_Sources ;
+    rcxn:annotator membr:Boos,
         membr:Petrenko,
         membr:Weigelt,
         membr:Winckel ;
-    cx:hasSources cx:eng_coolconstruction_Sources ;
     rcxn:creationDate "2025-11-28"^^xsd:date .
 
 cx:coolasemotionconstruction_Meaning a rcxn:ConstructionMeaning ;
@@ -1547,11 +1547,11 @@ cx:engInf_Coolexclamativeconstruction_2_Form a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "!" .
 
 cx:engInf_Coolexclamativeconstruction_MD a rcxn:Metadata ;
-    cx:annotator membr:Boos,
+    cx:hasSources cx:eng_coolconstruction_Sources ;
+    rcxn:annotator membr:Boos,
         membr:Petrenko,
         membr:Weigelt,
         membr:Winckel ;
-    cx:hasSources cx:eng_coolconstruction_Sources ;
     rcxn:creationDate "2025-12-10"^^xsd:date .
 
 cx:engInf_Coolexclamativeconstruction_Meaning a rcxn:ConstructionMeaning ;
@@ -1580,7 +1580,7 @@ cx:eng_AdjectiveAttributiveconstruction_3_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:Noun .
 
 cx:eng_AdjectiveAttributiveconstruction_MD a rcxn:Metadata ;
-    cx:annotator membr:Boos,
+    rcxn:annotator membr:Boos,
         membr:Petrenko,
         membr:Weigelt,
         membr:Winckel ;
@@ -1616,7 +1616,7 @@ cx:eng_AdjectivePhrase_3_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_PrepositionalPhrase .
 
 cx:eng_AdjectivePhrase_MD a rcxn:Metadata ;
-    cx:annotator membr:Boos,
+    rcxn:annotator membr:Boos,
         membr:Petrenko,
         membr:Weigelt,
         membr:Winckel ;
@@ -1649,7 +1649,7 @@ cx:eng_AdjectivePredicativeconstruction_3_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_AdjectivePhrase .
 
 cx:eng_AdjectivePredicativeconstruction_MD a rcxn:Metadata ;
-    cx:annotator membr:Boos,
+    rcxn:annotator membr:Boos,
         membr:Petrenko,
         membr:Weigelt,
         membr:Winckel ;
@@ -1664,7 +1664,7 @@ cx:eng_AdjectivePredicativeconstruction_slots a rdf_ns:Seq ;
     rdf_ns:_3 cx:eng_AdjectivePredicativeconstruction_3 .
 
 cx:eng_Adjective_MD a rcxn:Metadata ;
-    cx:annotator membr:Boos,
+    rcxn:annotator membr:Boos,
         membr:Petrenko,
         membr:Weigelt,
         membr:Winckel ;
@@ -1710,11 +1710,11 @@ cx:eng_Keepacoolheadconstruction_Ex_A a cx:Example ;
     rdfs:comment "BNC, Newspaper, 1992" .
 
 cx:eng_Keepacoolheadconstruction_MD a rcxn:Metadata ;
-    cx:annotator membr:Boos,
+    cx:hasSources cx:eng_coolconstruction_Sources ;
+    rcxn:annotator membr:Boos,
         membr:Petrenko,
         membr:Weigelt,
         membr:Winckel ;
-    cx:hasSources cx:eng_coolconstruction_Sources ;
     rcxn:creationDate "2025-11-28"^^xsd:date .
 
 cx:eng_Keepacoolheadconstruction_Meaning a rcxn:ConstructionMeaning ;
@@ -1780,11 +1780,11 @@ cx:eng_coolconstruction_Ex_D a cx:Example ;
     cx:hasText "cool climate" .
 
 cx:eng_coolconstruction_MD a rcxn:Metadata ;
-    cx:annotator membr:Boos,
+    cx:hasSources cx:eng_coolconstruction_Sources ;
+    rcxn:annotator membr:Boos,
         membr:Petrenko,
         membr:Weigelt,
         membr:Winckel ;
-    cx:hasSources cx:eng_coolconstruction_Sources ;
     rcxn:creationDate "2025-11-28"^^xsd:date .
 
 cx:eng_coolconstruction_Meaning a rcxn:ConstructionMeaning ;

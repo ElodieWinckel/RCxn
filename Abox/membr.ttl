@@ -8,202 +8,242 @@
 membr:Alhabyan a foaf:Person ;
     foaf:currentProject membr:Project_Alhabyan ;
     foaf:familyName "Alhabyan" ;
-    foaf:givenName "Raghad" .
+    foaf:givenName "Raghad" ;
+    foaf:homepage <https://www.cxg.phil.fau.eu/person/raghad-alhabyan/> .
 
 membr:Badawi a foaf:Person ;
     foaf:currentProject membr:Project_Badawi ;
     foaf:familyName "Badawi" ;
-    foaf:givenName "Soran" .
+    foaf:givenName "Soran" ;
+    foaf:homepage <https://www.cxg.phil.fau.eu/person/soran-badawi/> .
 
 membr:Bayer a foaf:Person ;
     foaf:currentProject membr:Project_Bayer ;
     foaf:familyName "Bayer" ;
-    foaf:givenName "Nadine" .
+    foaf:givenName "Nadine" ;
+    foaf:homepage <https://www.cxg.phil.fau.eu/person/nadine-bayer/> .
 
 membr:BenitoFernandez a foaf:Person ;
     foaf:currentProject membr:Project_BenitoFernandez ;
     foaf:familyName "Benito Fernandez" ;
-    foaf:givenName "Elba" .
+    foaf:givenName "Elba" ;
+    foaf:homepage <https://www.cxg.phil.fau.eu/person/elba-benito-fernandez/> .
 
 membr:Blake a foaf:Person ;
     foaf:currentProject membr:Project_Blake ;
     foaf:familyName "Blake" ;
-    foaf:givenName "Ashley" .
+    foaf:givenName "Ashley" ;
+    foaf:homepage <https://www.cxg.phil.fau.eu/person/ashley-blake/> .
 
 membr:Boos a foaf:Person ;
     foaf:currentProject membr:Project_Boos ;
     foaf:familyName "Boos" ;
-    foaf:givenName "Julia" .
+    foaf:givenName "Julia" ;
+    foaf:homepage <https://www.cxg.phil.fau.eu/person/julia-boos/> .
 
 membr:DelaGarza a foaf:Person ;
     foaf:currentProject membr:Project_DelaGarza ;
     foaf:familyName "De la Garza" ;
-    foaf:givenName "Vania" .
+    foaf:givenName "Vania" ;
+    foaf:homepage <https://www.cxg.phil.fau.eu/person/vania-de-la-garza/> .
 
 membr:FernandezSantos a foaf:Person ;
     foaf:currentProject membr:Project_FernandezSantos ;
     foaf:familyName "Fernández Santos" ;
-    foaf:givenName "Sara" .
+    foaf:givenName "Sara" ;
+    foaf:homepage <https://www.cxg.phil.fau.eu/person/vania-de-la-garza/> .
 
 membr:Fokashchuk a foaf:Person ;
     foaf:currentProject membr:Project_Fokashchuk ;
     foaf:familyName "Fokashchuk" ;
-    foaf:givenName "Iryna" .
+    foaf:givenName "Iryna" ;
+    foaf:homepage <https://www.cxg.phil.fau.eu/person/iryna-fokashchuk/> .
 
 membr:Fuehrer a foaf:Person ;
     foaf:currentProject membr:Project_Fuehrer ;
     foaf:familyName "Führer" ;
-    foaf:givenName "Bastian" .
+    foaf:givenName "Bastian" ;
+    foaf:homepage <https://www.cxg.phil.fau.eu/person/bastian-fuhrer/> .
 
 membr:Gedik a foaf:Person ;
     foaf:currentProject membr:Project_Gedik ;
     foaf:familyName "Gedik" ;
-    foaf:givenName "Tan Arda" .
+    foaf:givenName "Tan Arda" ;
+    foaf:homepage <https://www.cxg.phil.fau.eu/person/tan-arda-gedik/> .
 
 membr:Gromadsky a foaf:Person ;
     foaf:currentProject membr:Project_Gromadsky ;
     foaf:familyName "Gromadsky" ;
-    foaf:givenName "Dmitry" .
+    foaf:givenName "Dmitry" ;
+    foaf:homepage <https://www.cxg.phil.fau.eu/person/dmitry-gromadsky/> .
 
 membr:GroseHodge a foaf:Person ;
     foaf:currentProject membr:Project_GroseHodge ;
     foaf:familyName "Grose-Hodge" ;
-    foaf:givenName "Magdalena" .
+    foaf:givenName "Magdalena" ;
+    foaf:homepage <https://www.cxg.phil.fau.eu/person/magdalena-grose-hodge/> .
 
 membr:Hutta a foaf:Person ;
     foaf:currentProject membr:Project_Hutta ;
     foaf:familyName "Hutta" ;
-    foaf:givenName "Sophie" .
+    foaf:givenName "Sophie" ;
+    foaf:homepage <https://www.cxg.phil.fau.eu/person/sophie-hutta/> .
 
 membr:Iabdounane a foaf:Person ;
     foaf:currentProject membr:Project_Iabdounane ;
     foaf:familyName "Iabdounane" ;
-    foaf:givenName "Yassine" .
+    foaf:givenName "Yassine" ;
+    foaf:homepage <https://www.cxg.phil.fau.eu/person/yassine-iabdounane/> .
 
 membr:Immertreu a foaf:Person ;
     foaf:currentProject membr:Project_Immertreu ;
     foaf:familyName "Immertreu" ;
-    foaf:givenName "Mathis" .
+    foaf:givenName "Mathis" ;
+    foaf:homepage <https://www.cxg.phil.fau.eu/person/mathis-immertreu/> .
 
 membr:Kashigin a foaf:Person ;
     foaf:currentProject membr:Project_Kashigin ;
     foaf:familyName "Kashigin" ;
-    foaf:givenName "Kyra" .
+    foaf:givenName "Kyra" ;
+    foaf:homepage <https://www.cxg.phil.fau.eu/person/kyra-kashigin/> .
 
 membr:Kassler a foaf:Person ;
     foaf:currentProject membr:Project_Kassler ;
     foaf:familyName "Kassler" ;
-    foaf:givenName "Annika" .
+    foaf:givenName "Annika" ;
+    foaf:homepage <https://www.cxg.phil.fau.eu/person/annika-kassler/> .
 
 membr:Kenanidis a foaf:Person ;
     foaf:currentProject membr:Project_Kenanidis ;
     foaf:familyName "Kenanidis" ;
-    foaf:givenName "Panagiotis" .
+    foaf:givenName "Panagiotis" ;
+    foaf:homepage <https://www.cxg.phil.fau.eu/person/panagiotis-kenanidis/> .
 
 membr:Kessler a foaf:Person ;
     foaf:currentProject membr:Project_Kessler ;
     foaf:familyName "Keßler" ;
-    foaf:givenName "Florian" .
+    foaf:givenName "Florian" ;
+    foaf:homepage <https://www.cxg.phil.fau.eu/person/florian-kesler/> .
 
 membr:Khanoub a foaf:Person ;
     foaf:currentProject membr:Project_Khanoub ;
     foaf:familyName "Khanoub" ;
-    foaf:givenName "Rania" .
+    foaf:givenName "Rania" ;
+    foaf:homepage <https://www.cxg.phil.fau.eu/person/rania-khanoub/> .
 
 membr:Kissane a foaf:Person ;
     foaf:currentProject membr:Project_Kissane ;
     foaf:familyName "Kissane" ;
-    foaf:givenName "Hassane" .
+    foaf:givenName "Hassane" ;
+    foaf:homepage <https://www.cxg.phil.fau.eu/person/hassane-kissane/> .
 
 membr:Kligge a foaf:Person ;
     foaf:currentProject membr:Project_Kligge ;
     foaf:familyName "Kligge" ;
-    foaf:givenName "Hendrik" .
+    foaf:givenName "Hendrik" ;
+    foaf:homepage <https://www.cxg.phil.fau.eu/person/hendrik-kligge/> .
 
 membr:Lee a foaf:Person ;
     foaf:currentProject membr:Project_Lee ;
     foaf:familyName "Lee" ;
-    foaf:givenName "Dongeun" .
+    foaf:givenName "Dongeun" ;
+    foaf:homepage <https://www.cxg.phil.fau.eu/person/dongeun-lee/> .
 
 membr:Legoute a foaf:Person ;
     foaf:currentProject membr:Project_Legoute ;
     foaf:familyName "Legouté" ;
-    foaf:givenName "Anne Sherley" .
+    foaf:givenName "Anne Sherley" ;
+    foaf:homepage <https://www.cxg.phil.fau.eu/person/anne-sherley-legoute/> .
 
 membr:Makhanina a foaf:Person ;
     foaf:currentProject membr:Project_Makhanina ;
     foaf:familyName "Makhanina" ;
-    foaf:givenName "Asia" .
+    foaf:givenName "Asia" ;
+    foaf:homepage <https://www.cxg.phil.fau.eu/person/asia-makhanina/> .
 
 membr:Patel a foaf:Person ;
     foaf:currentProject membr:Project_Patel ;
     foaf:familyName "Patel" ;
-    foaf:givenName "Malin" .
+    foaf:givenName "Malin" ;
+    foaf:homepage <https://www.cxg.phil.fau.eu/person/malin-patel/> .
 
 membr:Petrenko a foaf:Person ;
     foaf:currentProject membr:Project_Petrenko ;
     foaf:familyName "Petrenko" ;
-    foaf:givenName "Elizaveta" .
+    foaf:givenName "Elizaveta" ;
+    foaf:homepage <https://www.cxg.phil.fau.eu/person/elizaveta-petrenko/> .
 
 membr:Prela a foaf:Person ;
     foaf:currentProject membr:Project_Prela ;
     foaf:familyName "Prela" ;
-    foaf:givenName "Leonarda" .
+    foaf:givenName "Leonarda" ;
+    foaf:homepage <https://www.cxg.phil.fau.eu/person/leonarda-prela/> .
 
 membr:Ramezani a foaf:Person ;
     foaf:currentProject membr:Project_Ramezani ;
     foaf:familyName "Ramezani" ;
-    foaf:givenName "Pegah" .
+    foaf:givenName "Pegah" ;
+    foaf:homepage <https://www.cxg.phil.fau.eu/person/pegah-ramezani/> .
 
 membr:Rastegar a foaf:Person ;
     foaf:currentProject membr:Project_Rastegar ;
     foaf:familyName "Rastegar" ;
-    foaf:givenName "Aria" .
+    foaf:givenName "Aria" ;
+    foaf:homepage <https://www.cxg.phil.fau.eu/person/aria-rastegar/> .
 
 membr:Rohwedder a foaf:Person ;
     foaf:currentProject membr:Project_Rohwedder ;
     foaf:familyName "Rohwedder" ;
-    foaf:givenName "Paul" .
+    foaf:givenName "Paul" ;
+    foaf:homepage <https://www.cxg.phil.fau.eu/person/paul-rohwedder/> .
 
 membr:Schmechel a foaf:Person ;
     foaf:currentProject membr:Project_Schmechel ;
     foaf:familyName "Schmechel" ;
-    foaf:givenName "Dennis" .
+    foaf:givenName "Dennis" ;
+    foaf:homepage <https://www.cxg.phil.fau.eu/person/dennis-schmechel/> .
 
 membr:Senger a foaf:Person ;
     foaf:currentProject membr:Project_Senger ;
     foaf:familyName "Senger" ;
-    foaf:givenName "Lena" .
+    foaf:givenName "Lena" ;
+    foaf:homepage <https://www.cxg.phil.fau.eu/person/lena-senger/> .
 
 membr:Stampfer a foaf:Person ;
     foaf:currentProject membr:Project_Stampfer ;
     foaf:familyName "Stampfer" ;
-    foaf:givenName "Veronika" .
+    foaf:givenName "Veronika" ;
+    foaf:homepage <https://www.cxg.phil.fau.eu/person/veronika-stampfer/> .
 
 membr:Trombetta a foaf:Person ;
     foaf:currentProject membr:Project_Trombetta ;
     foaf:familyName "Trombetta" ;
-    foaf:givenName "Chiara" .
+    foaf:givenName "Chiara" ;
+    foaf:homepage <https://www.cxg.phil.fau.eu/person/chiara-trombetta/> .
 
 membr:Tzimas a foaf:Person ;
     foaf:currentProject membr:Project_Tzimas ;
     foaf:familyName "Tzimas" ;
-    foaf:givenName "Theocharis" .
+    foaf:givenName "Theocharis" ;
+    foaf:homepage <https://www.cxg.phil.fau.eu/person/theocharis-tzimas/> .
 
 membr:Weigelt a foaf:Person ;
     foaf:currentProject membr:Project_Weigelt ;
     foaf:familyName "Weigelt" ;
-    foaf:givenName "Lina" .
+    foaf:givenName "Lina" ;
+    foaf:homepage <https://www.cxg.phil.fau.eu/person/lina-weigelt/> .
 
 membr:Winckel a foaf:Person ;
     foaf:currentProject membr:Project_Winckel ;
     foaf:familyName "Winckel" ;
-    foaf:givenName "Elodie" .
+    foaf:givenName "Elodie" ;
+    foaf:homepage <https://www.cxg.phil.fau.eu/person/elodie-winckel/> .
 
 membr:Wright a foaf:Person ;
     foaf:currentProject membr:Project_Wright ;
     foaf:familyName "Wright" ;
-    foaf:givenName "Richenda" .
+    foaf:givenName "Richenda" ;
+    foaf:homepage <https://www.cxg.phil.fau.eu/person/richenda-wright/> .
 
 membr:Project_Alhabyan a rsrch:Project ;
     rsrch:projectName "Valency, preposition governing, and phrasal verbs in Arabic and Semitic"@en .

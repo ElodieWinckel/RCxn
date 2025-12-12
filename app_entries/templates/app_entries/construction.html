@@ -242,7 +242,9 @@
         {% for triple in metadata %}
             <tr>
                 <th>{{ triple.property }}</th>
-                <td>{{ triple.object }}</td>
+                <td>{% if triple.homepage %}<a href="{{ triple.homepage }}" target="_blank">{{ triple.given }} {{ triple.family }}</a> {% endif %}
+                    {% if not triple.homepage %} {{ triple.object }} {% endif %}
+                </td>
             </tr>
         {% endfor %}
         {% for ref in references %}

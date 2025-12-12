@@ -17,10 +17,10 @@ cx:Adjectiveexclamativeconstruction a rcxn:Construction ;
     rcxn:hasTitle "Adjective! exclamative construction" .
 
 cx:Adjectiveexclamativeconstruction_MD a rcxn:Metadata ;
-    cx:annotator membr:Winckel ;
-    cx:annotator membr:Boos ;
-    cx:annotator membr:Weigelt ;
-    cx:annotator membr:Petrenko ;
+    rcxn:annotator membr:Winckel ;
+    rcxn:annotator membr:Boos ;
+    rcxn:annotator membr:Weigelt ;
+    rcxn:annotator membr:Petrenko ;
     rcxn:creationDate "2025-12-10"^^xsd:date .
 
 cx:coolasadmirableconstruction rcxn:elementOf cx:engInf_Coolexclamativeconstruction .
@@ -39,10 +39,10 @@ cx:engInf_Coolexclamativeconstruction_2_Form a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "!" .
 
 cx:engInf_Coolexclamativeconstruction_MD a rcxn:Metadata ;
-    cx:annotator membr:Winckel ;
-    cx:annotator membr:Boos ;
-    cx:annotator membr:Weigelt ;
-    cx:annotator membr:Petrenko ;
+    rcxn:annotator membr:Winckel ;
+    rcxn:annotator membr:Boos ;
+    rcxn:annotator membr:Weigelt ;
+    rcxn:annotator membr:Petrenko ;
     cx:hasSources cx:eng_coolconstruction_Sources ;
     rcxn:creationDate "2025-12-10"^^xsd:date .
 

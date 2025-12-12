@@ -351,7 +351,7 @@ def form_submit():
     g.add((cx[construction_name_cleaned], rcxn.hasMetadata, cx[metadata_uri]))
 
     # ANNOTATOR
-    g.add((cx[metadata_uri], cx.annotator, membr[user_name]))
+    g.add((cx[metadata_uri], rcxn.annotator, membr[user_name]))
 
     # CREATION DATA
     # Add creation date as today.

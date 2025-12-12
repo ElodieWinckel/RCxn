@@ -69,7 +69,7 @@ graph_cx.bind("rdf_ns", rdf_ns)
 graph_membr.bind("rdf_ns", rdf_ns)
 
 # Function to add a user to the graph
-def add_user(last_name, first_name, project_name):
+def add_user(last_name, first_name, project_name, homepage):
     # Remove all blank spaces from the last name
     last_name_cleaned = last_name.replace(" ", "")
     last_name_cleaned = last_name_cleaned.replace("-", "")
@@ -89,51 +89,172 @@ def add_user(last_name, first_name, project_name):
     g.add((user_uri, FOAF.familyName, Literal(last_name)))
     g.add((user_uri, FOAF.givenName, Literal(first_name)))
     g.add((user_uri, FOAF.currentProject, project_uri))
+    g.add((user_uri, FOAF.homepage, URIRef(homepage)))
     # related to projects
     g.add((project_uri, RDF.type, rsrch.Project))
     g.add((project_uri, rsrch.projectName, Literal(project_name, lang = "en")))
 
 # Add RTG members to the graph
-add_user("Alhabyan", "Raghad", "Valency, preposition governing, and phrasal verbs in Arabic and Semitic")
-add_user("Badawi", "Soran", "Corpus-based measures of constructionhood")
-add_user("Bayer", "Nadine", "Project Bayer")
-add_user("Benito Fernandez", "Elba", "Spanish quotative constructions in oral narratives — an Interactional Construction Grammar approach")
-add_user("Blake", "Ashley", "Project Blake")
-add_user("Boos", "Julia", "Entrenchment meets literacy: How the development of reading ability affects child and adult language processing")
-add_user("De la Garza", "Vania", "Project De la Garza")
-add_user("Fernández Santos", "Sara", "Artificial language learning as a window to the early entrenchment of constructions")
-add_user("Fokashchuk", "Iryna", "Functions and cognitive semantics of prepositions in complex constructions")
-add_user("Führer", "Bastian", "German verbs with particles or prefixes in language change: Form, meaning, and syntax")
-add_user("Gedik", "Tan Arda", "Project Gedik")
-add_user("Gromadsky", "Dmitry", "Constructions in communication")
-add_user("Grose-Hodge", "Magdalena", "Project Grose-Hodge")
-add_user("Hutta", "Sophie", "Project Hutta")
-add_user("Iabdounane", "Yassine", "Multimodal constructional space")
-add_user("Immertreu", "Mathis", "Multimodal cognitive maps for cross-domain constructional networks")
-add_user("Kashigin", "Kyra", "Contrastive Construction Grammar: The interaction of argument-structure constructions and sentence-type constructions in english, Dutch and German")
-add_user("Kassler", "Annika", "Project Kassler")
-add_user("Kenanidis", "Panagiotis", "Project Kenanidis")
-add_user("Keßler", "Florian", "Chinese Mathematics")
-add_user("Khanoub", "Rania", "Project Khanoub")
-add_user("Kissane", "Hassane", "Form and meaning as factors in the identification and learning of constructional slots – English phrasal verbs and verb-preposition combinations")
-add_user("Kligge", "Hendrik", "Representation and acquisition of agreement relations in a usage-based framework")
-add_user("Lee", "Dongeun", "Project Lee")
-add_user("Makhanina", "Asia", "Representation and acquisition of idiomatic constructions in L1 and L2 learners")
-add_user("Patel", "Malin", "Corpus evidence for delineating constructions")
-add_user("Petrenko", "Elizaveta", "Comparing constructions cross-linguistically — Connecting constructicons")
-add_user("Prela", "Leonarda", "Project Prela")
-add_user("Ramezani", "Pegah", "Representation and processing of constructions in the brain")
-add_user("Rastegar", "Aria", "Representation and acquisition of idiomatic constructions in L1 and L2 learners")
-add_user("Rohwedder", "Paul", "Project Rohwedder")
-add_user("Legouté", "Anne Sherley", "Multifunctionality in Haitian Creole: New insights from a Construction Grammar perspective")
-add_user("Schmechel", "Dennis", "Project Schmechel")
-add_user("Senger", "Lena", "Project Senger")
-add_user("Stampfer", "Veronika", "Semantically related argument structures in the history of English")
-add_user("Trombetta", "Chiara", "Constructions beyond the sentence: text-structuring in (esp.) sixteenth-century historiographical texts")
-add_user("Tzimas", "Theocharis", "Subject-inversion throughout Early Modern English: changing relations in individual and communal constructions")
-add_user("Wright", "Richenda", "Project Wright")
-add_user("Weigelt", "Lina", "Project Weigelt")
-add_user("Winckel", "Elodie", "Building a Research Constructicon")
+add_user("Alhabyan",
+         "Raghad",
+         "Valency, preposition governing, and phrasal verbs in Arabic and Semitic",
+         "https://www.cxg.phil.fau.eu/person/raghad-alhabyan/")
+add_user("Badawi",
+         "Soran",
+         "Corpus-based measures of constructionhood",
+         "https://www.cxg.phil.fau.eu/person/soran-badawi/")
+add_user("Bayer",
+         "Nadine",
+         "Project Bayer",
+         "https://www.cxg.phil.fau.eu/person/nadine-bayer/")
+add_user("Benito Fernandez",
+         "Elba",
+         "Spanish quotative constructions in oral narratives — an Interactional Construction Grammar approach",
+         "https://www.cxg.phil.fau.eu/person/elba-benito-fernandez/")
+add_user("Blake",
+         "Ashley",
+         "Project Blake",
+         "https://www.cxg.phil.fau.eu/person/ashley-blake/")
+add_user("Boos",
+         "Julia",
+         "Entrenchment meets literacy: How the development of reading ability affects child and adult language processing",
+         "https://www.cxg.phil.fau.eu/person/julia-boos/")
+add_user("De la Garza",
+         "Vania",
+         "Project De la Garza",
+         "https://www.cxg.phil.fau.eu/person/vania-de-la-garza/")
+add_user("Fernández Santos",
+         "Sara",
+         "Artificial language learning as a window to the early entrenchment of constructions",
+         "https://www.cxg.phil.fau.eu/person/vania-de-la-garza/")
+add_user("Fokashchuk",
+         "Iryna",
+         "Functions and cognitive semantics of prepositions in complex constructions",
+         "https://www.cxg.phil.fau.eu/person/iryna-fokashchuk/")
+add_user("Führer",
+         "Bastian",
+         "German verbs with particles or prefixes in language change: Form, meaning, and syntax",
+         "https://www.cxg.phil.fau.eu/person/bastian-fuhrer/")
+add_user("Gedik",
+         "Tan Arda",
+         "Project Gedik",
+         "https://www.cxg.phil.fau.eu/person/tan-arda-gedik/")
+add_user("Gromadsky",
+         "Dmitry",
+         "Constructions in communication",
+         "https://www.cxg.phil.fau.eu/person/dmitry-gromadsky/")
+add_user("Grose-Hodge",
+         "Magdalena",
+         "Project Grose-Hodge",
+         "https://www.cxg.phil.fau.eu/person/magdalena-grose-hodge/")
+add_user("Hutta",
+         "Sophie",
+         "Project Hutta",
+         "https://www.cxg.phil.fau.eu/person/sophie-hutta/")
+add_user("Iabdounane",
+         "Yassine",
+         "Multimodal constructional space",
+         "https://www.cxg.phil.fau.eu/person/yassine-iabdounane/")
+add_user("Immertreu",
+         "Mathis",
+         "Multimodal cognitive maps for cross-domain constructional networks",
+         "https://www.cxg.phil.fau.eu/person/mathis-immertreu/")
+add_user("Kashigin",
+         "Kyra",
+         "Contrastive Construction Grammar: The interaction of argument-structure constructions and sentence-type constructions in english, Dutch and German",
+         "https://www.cxg.phil.fau.eu/person/kyra-kashigin/")
+add_user("Kassler",
+         "Annika",
+         "Project Kassler",
+         "https://www.cxg.phil.fau.eu/person/annika-kassler/")
+add_user("Kenanidis",
+         "Panagiotis",
+         "Project Kenanidis",
+         "https://www.cxg.phil.fau.eu/person/panagiotis-kenanidis/")
+add_user("Keßler",
+         "Florian",
+         "Chinese Mathematics",
+         "https://www.cxg.phil.fau.eu/person/florian-kesler/")
+add_user("Khanoub",
+         "Rania",
+         "Project Khanoub",
+         "https://www.cxg.phil.fau.eu/person/rania-khanoub/")
+add_user("Kissane",
+         "Hassane",
+         "Form and meaning as factors in the identification and learning of constructional slots – English phrasal verbs and verb-preposition combinations",
+         "https://www.cxg.phil.fau.eu/person/hassane-kissane/")
+add_user("Kligge",
+         "Hendrik",
+         "Representation and acquisition of agreement relations in a usage-based framework",
+         "https://www.cxg.phil.fau.eu/person/hendrik-kligge/")
+add_user("Lee",
+         "Dongeun",
+         "Project Lee",
+         "https://www.cxg.phil.fau.eu/person/dongeun-lee/")
+add_user("Makhanina",
+         "Asia",
+         "Representation and acquisition of idiomatic constructions in L1 and L2 learners",
+         "https://www.cxg.phil.fau.eu/person/asia-makhanina/")
+add_user("Patel",
+         "Malin",
+         "Corpus evidence for delineating constructions",
+         "https://www.cxg.phil.fau.eu/person/malin-patel/")
+add_user("Petrenko",
+         "Elizaveta",
+         "Comparing constructions cross-linguistically — Connecting constructicons",
+         "https://www.cxg.phil.fau.eu/person/elizaveta-petrenko/")
+add_user("Prela",
+         "Leonarda",
+         "Project Prela",
+         "https://www.cxg.phil.fau.eu/person/leonarda-prela/")
+add_user("Ramezani",
+         "Pegah",
+         "Representation and processing of constructions in the brain",
+         "https://www.cxg.phil.fau.eu/person/pegah-ramezani/")
+add_user("Rastegar",
+         "Aria",
+         "Representation and acquisition of idiomatic constructions in L1 and L2 learners",
+         "https://www.cxg.phil.fau.eu/person/aria-rastegar/")
+add_user("Rohwedder",
+         "Paul",
+         "Project Rohwedder",
+         "https://www.cxg.phil.fau.eu/person/paul-rohwedder/")
+add_user("Legouté",
+         "Anne Sherley",
+         "Multifunctionality in Haitian Creole: New insights from a Construction Grammar perspective",
+         "https://www.cxg.phil.fau.eu/person/anne-sherley-legoute/")
+add_user("Schmechel",
+         "Dennis",
+         "Project Schmechel",
+         "https://www.cxg.phil.fau.eu/person/dennis-schmechel/")
+add_user("Senger",
+         "Lena",
+         "Project Senger",
+         "https://www.cxg.phil.fau.eu/person/lena-senger/")
+add_user("Stampfer",
+         "Veronika",
+         "Semantically related argument structures in the history of English",
+         "https://www.cxg.phil.fau.eu/person/veronika-stampfer/")
+add_user("Trombetta",
+         "Chiara",
+         "Constructions beyond the sentence: text-structuring in (esp.) sixteenth-century historiographical texts",
+         "https://www.cxg.phil.fau.eu/person/chiara-trombetta/")
+add_user("Tzimas",
+         "Theocharis",
+         "Subject-inversion throughout Early Modern English: changing relations in individual and communal constructions",
+         "https://www.cxg.phil.fau.eu/person/theocharis-tzimas/")
+add_user("Wright",
+         "Richenda",
+         "Project Wright",
+         "https://www.cxg.phil.fau.eu/person/richenda-wright/")
+add_user("Weigelt",
+         "Lina",
+         "Project Weigelt",
+         "https://www.cxg.phil.fau.eu/person/lina-weigelt/")
+add_user("Winckel",
+         "Elodie",
+         "Building a Research Constructicon",
+         "https://www.cxg.phil.fau.eu/person/elodie-winckel/")
 
 # If some construction uses another construction as construction element, then link back the second construction to the first one
 for construction in g.subjects(rdf_ns.type, rcxn.Construction):

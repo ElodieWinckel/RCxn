@@ -17,10 +17,10 @@ cx:eng_Adjective a rcxn:Construction ;
     rcxn:elementOf cx:eng_coolconstruction .
 
 cx:eng_Adjective_MD a rcxn:Metadata ;
-    cx:annotator membr:Winckel ;
-    cx:annotator membr:Boos ;
-    cx:annotator membr:Weigelt ;
-    cx:annotator membr:Petrenko ;
+    rcxn:annotator membr:Winckel ;
+    rcxn:annotator membr:Boos ;
+    rcxn:annotator membr:Weigelt ;
+    rcxn:annotator membr:Petrenko ;
     rcxn:creationDate "2025-11-28"^^xsd:date .
 
 
@@ -44,10 +44,10 @@ cx:coolascolourconstruction a rcxn:Construction ;
     rcxn:hasTitle "cool as colour construction" .
 
 cx:coolascolourconstruction_MD a rcxn:Metadata ;
-    cx:annotator membr:Winckel ;
-    cx:annotator membr:Boos ;
-    cx:annotator membr:Weigelt ;
-    cx:annotator membr:Petrenko ;
+    rcxn:annotator membr:Winckel ;
+    rcxn:annotator membr:Boos ;
+    rcxn:annotator membr:Weigelt ;
+    rcxn:annotator membr:Petrenko ;
     cx:hasSources cx:eng_coolconstruction_Sources ;
     rcxn:creationDate "2025-11-28"^^xsd:date .
 
@@ -98,10 +98,10 @@ cx:coolasemotionconstruction a rcxn:Construction ;
     rcxn:hasTitle "cool as emotion construction" .
 
 cx:coolasemotionconstruction_MD a rcxn:Metadata ;
-    cx:annotator membr:Winckel ;
-    cx:annotator membr:Boos ;
-    cx:annotator membr:Weigelt ;
-    cx:annotator membr:Petrenko ;
+    rcxn:annotator membr:Winckel ;
+    rcxn:annotator membr:Boos ;
+    rcxn:annotator membr:Weigelt ;
+    rcxn:annotator membr:Petrenko ;
     cx:hasSources cx:eng_coolconstruction_Sources ;
     rcxn:creationDate "2025-11-28"^^xsd:date .
 
@@ -149,10 +149,10 @@ cx:coolasadmirableconstruction a rcxn:Construction ;
     rcxn:hasTitle "cool as admirable construction" .
 
 cx:coolasadmirableconstruction_MD a rcxn:Metadata ;
-    cx:annotator membr:Winckel ;
-    cx:annotator membr:Boos ;
-    cx:annotator membr:Weigelt ;
-    cx:annotator membr:Petrenko ;
+    rcxn:annotator membr:Winckel ;
+    rcxn:annotator membr:Boos ;
+    rcxn:annotator membr:Weigelt ;
+    rcxn:annotator membr:Petrenko ;
     cx:hasSources cx:eng_coolconstruction_Sources ;
     rcxn:creationDate "2025-11-28"^^xsd:date .
 
@@ -201,10 +201,10 @@ cx:Adverb a rcxn:Construction ;
     rcxn:hasTitle "Adverb" .
 
 cx:Adverb_MD a rcxn:Metadata ;
-    cx:annotator membr:Winckel ;
-    cx:annotator membr:Boos ;
-    cx:annotator membr:Weigelt ;
-    cx:annotator membr:Petrenko ;
+    rcxn:annotator membr:Winckel ;
+    rcxn:annotator membr:Boos ;
+    rcxn:annotator membr:Weigelt ;
+    rcxn:annotator membr:Petrenko ;
     rcxn:creationDate "2025-12-08"^^xsd:date .
 
 cx:eng_Adjective rcxn:elementOf cx:eng_AdjectivePhrase .
@@ -231,10 +231,10 @@ cx:eng_AdjectivePhrase_3_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_PrepositionalPhrase .
 
 cx:eng_AdjectivePhrase_MD a rcxn:Metadata ;
-    cx:annotator membr:Winckel ;
-    cx:annotator membr:Boos ;
-    cx:annotator membr:Weigelt ;
-    cx:annotator membr:Petrenko ;
+    rcxn:annotator membr:Winckel ;
+    rcxn:annotator membr:Boos ;
+    rcxn:annotator membr:Weigelt ;
+    rcxn:annotator membr:Petrenko ;
     rcxn:creationDate "2025-12-08"^^xsd:date .
 
 cx:eng_AdjectivePhrase_Meaning a rcxn:ConstructionMeaning ;
@@ -297,10 +297,10 @@ cx:eng_Keepacoolheadconstruction_Ex_A a cx:Example ;
     RDFS:comment "BNC, Newspaper, 1992" .
 
 cx:eng_Keepacoolheadconstruction_MD a rcxn:Metadata ;
-    cx:annotator membr:Winckel ;
-    cx:annotator membr:Boos ;
-    cx:annotator membr:Weigelt ;
-    cx:annotator membr:Petrenko ;
+    rcxn:annotator membr:Winckel ;
+    rcxn:annotator membr:Boos ;
+    rcxn:annotator membr:Weigelt ;
+    rcxn:annotator membr:Petrenko ;
     cx:hasSources cx:eng_coolconstruction_Sources ;
     rcxn:creationDate "2025-11-28"^^xsd:date .
 
@@ -373,10 +373,10 @@ cx:eng_coolconstruction_Ex_D a cx:Example ;
     cx:hasText "cool climate" .
 
 cx:eng_coolconstruction_MD a rcxn:Metadata ;
-    cx:annotator membr:Winckel ;
-    cx:annotator membr:Boos ;
-    cx:annotator membr:Weigelt ;
-    cx:annotator membr:Petrenko ;
+    rcxn:annotator membr:Winckel ;
+    rcxn:annotator membr:Boos ;
+    rcxn:annotator membr:Weigelt ;
+    rcxn:annotator membr:Petrenko ;
     cx:hasSources cx:eng_coolconstruction_Sources ;
     rcxn:creationDate "2025-11-28"^^xsd:date .
 
@@ -405,10 +405,10 @@ cx:Determiner a rcxn:Construction ;
     rcxn:hasTitle "Determiner" .
 
 cx:Determiner_MD a rcxn:Metadata ;
-    cx:annotator membr:Winckel ;
-    cx:annotator membr:Boos ;
-    cx:annotator membr:Weigelt ;
-    cx:annotator membr:Petrenko ;
+    rcxn:annotator membr:Winckel ;
+    rcxn:annotator membr:Boos ;
+    rcxn:annotator membr:Weigelt ;
+    rcxn:annotator membr:Petrenko ;
     rcxn:creationDate "2025-12-01"^^xsd:date .
 
 cx:Noun a rcxn:Construction ;
@@ -417,10 +417,10 @@ cx:Noun a rcxn:Construction ;
     rcxn:hasTitle "Noun" .
 
 cx:Noun_MD a rcxn:Metadata ;
-    cx:annotator membr:Winckel ;
-    cx:annotator membr:Boos ;
-    cx:annotator membr:Weigelt ;
-    cx:annotator membr:Petrenko ;
+    rcxn:annotator membr:Winckel ;
+    rcxn:annotator membr:Boos ;
+    rcxn:annotator membr:Weigelt ;
+    rcxn:annotator membr:Petrenko ;
     rcxn:creationDate "2025-12-01"^^xsd:date .
 
 cx:eng_AdjectiveAttributiveconstruction_1 a rcxn:SlotOptional ;
@@ -442,10 +442,10 @@ cx:eng_AdjectiveAttributiveconstruction_3_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:Noun .
 
 cx:eng_AdjectiveAttributiveconstruction_MD a rcxn:Metadata ;
-    cx:annotator membr:Winckel ;
-    cx:annotator membr:Boos ;
-    cx:annotator membr:Weigelt ;
-    cx:annotator membr:Petrenko ;
+    rcxn:annotator membr:Winckel ;
+    rcxn:annotator membr:Boos ;
+    rcxn:annotator membr:Weigelt ;
+    rcxn:annotator membr:Petrenko ;
     rcxn:creationDate "2025-12-01"^^xsd:date .
 
 cx:eng_AdjectiveAttributiveconstruction_Meaning a rcxn:ConstructionMeaning ;
@@ -486,10 +486,10 @@ cx:Copula a rcxn:Construction ;
     rcxn:hasTitle "Copula" .
 
 cx:Copula_MD a rcxn:Metadata ;
-    cx:annotator membr:Winckel ;
-    cx:annotator membr:Boos ;
-    cx:annotator membr:Weigelt ;
-    cx:annotator membr:Petrenko ;
+    rcxn:annotator membr:Winckel ;
+    rcxn:annotator membr:Boos ;
+    rcxn:annotator membr:Weigelt ;
+    rcxn:annotator membr:Petrenko ;
     rcxn:creationDate "2025-12-01"^^xsd:date .
 
 cx:eng_AdjectivePhrase rcxn:elementOf cx:eng_AdjectivePredicativeconstruction .
@@ -513,10 +513,10 @@ cx:eng_AdjectivePredicativeconstruction_3_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_AdjectivePhrase .
 
 cx:eng_AdjectivePredicativeconstruction_MD a rcxn:Metadata ;
-    cx:annotator membr:Winckel ;
-    cx:annotator membr:Boos ;
-    cx:annotator membr:Weigelt ;
-    cx:annotator membr:Petrenko ;
+    rcxn:annotator membr:Winckel ;
+    rcxn:annotator membr:Boos ;
+    rcxn:annotator membr:Weigelt ;
+    rcxn:annotator membr:Petrenko ;
     rcxn:creationDate "2025-12-01"^^xsd:date .
 
 cx:eng_AdjectivePredicativeconstruction_Meaning a rcxn:ConstructionMeaning ;
