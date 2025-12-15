@@ -686,15 +686,15 @@ def form_submit():
 ### IMPLEMENT CONSTRUCTION COTEXT
 ###################################################
 
-    # INFORMATION STRUCTURE #TODO: For the moment, each slot gets an IS; maybe we want the cx to have an IS instead
+    # INFORMATION STRUCTURE #TODO: For the moment, each slot gets an IS; maybe we want the cx to have an IS instead, OLiA does it differently and it is maybe better
     for topic in topics:
-        g.add((cx[topic], cx.hasIS, cx.Topic))
+        g.add((rcxn[topic], rcxn.hasIS, rcxn.Topic))
     for comment in comments:
-        g.add((cx[comment], cx.hasIS, cx.Comment))
+        g.add((rcxn[comment], rcxn.hasIS, rcxn.ISComment))
     for focus in focuses:
-        g.add((cx[focus], cx.hasIS, cx.Focus))
+        g.add((rcxn[focus], rcxn.hasIS, rcxn.Focus))
     for background in backgrounds:
-        g.add((cx[background], cx.hasIS, cx.Background))
+        g.add((rcxn[background], rcxn.hasIS, rcxn.Background))
 
     # INTONATION #TODO
     if intonation.strip():

@@ -80,6 +80,17 @@
     
 
 
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#hasIS -->
+
+    <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#hasIS">
+        <rdfs:domain rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#Slot"/>
+        <rdfs:range rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#informationStructure"/>
+        <rdfs:comment xml:lang="en">The construction element is part of the Focus or Background / Topic or Comment of the full utterance.</rdfs:comment>
+        <rdfs:label xml:lang="en">Information Structure</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#hasMeaning -->
 
     <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#hasMeaning">
@@ -318,6 +329,40 @@
     
 
 
+    <!-- http://purl.org/olia/olia.owl#Focus -->
+
+    <owl:Class rdf:about="http://purl.org/olia/olia.owl#Focus">
+        <owl:equivalentClass rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#Focus"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/olia/olia.owl#PragmaticUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/olia/olia.owl#PragmaticUnit -->
+
+    <owl:Class rdf:about="http://purl.org/olia/olia.owl#PragmaticUnit"/>
+    
+
+
+    <!-- http://purl.org/olia/olia.owl#Topic -->
+
+    <owl:Class rdf:about="http://purl.org/olia/olia.owl#Topic">
+        <owl:equivalentClass rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#Topic"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/olia/olia.owl#PragmaticUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#Background -->
+
+    <owl:Class rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#Background">
+        <rdfs:subClassOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#informationStructure"/>
+        <rdfs:comment xml:lang="en">The Background is in complementary distribution with the Focus. Typically, the background is discourse-given and can be derived from the context of the utterance. It is the not so relevant information of the utterance.</rdfs:comment>
+        <rdfs:label xml:lang="en">Background</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#Construction -->
 
     <owl:Class rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#Construction">
@@ -330,6 +375,31 @@
     <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#ConstructionMeaning -->
 
     <owl:Class rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#ConstructionMeaning"/>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#Focus -->
+
+    <owl:Class rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#Focus">
+        <rdfs:subClassOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#informationStructure"/>
+        <rdfs:comment xml:lang="en">Focus indicates the presence of alternatives that are relevant for the interpretation of linguistic expressions. (Féry et al. 2007)
+
+That part of an expression which provides the most relevant information in a particular context as opposed to the (not so relevant) rest of information making up the background of the utterance. Typically, focus on a subexpression indicates that it is selected from possible alternatives that are either implicit or given explicitly, whereas the background can be derived from the context of the utterance. (SFB632 Guidelines)
+
+Foci are classified here according to their discourse function (independently from their structural realization).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/olia/olia.owl#Focus"/>
+        <rdfs:label xml:lang="en">Focus</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#ISComment -->
+
+    <owl:Class rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#ISComment">
+        <rdfs:subClassOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#informationStructure"/>
+        <rdfs:comment xml:lang="en">The Comment is in complementary distribution with the Topic. It is what is said about the topic, the main predication of the utterance.</rdfs:comment>
+        <rdfs:label xml:lang="en">Comment</rdfs:label>
+    </owl:Class>
     
 
 
@@ -375,6 +445,27 @@
         <rdfs:comment xml:lang="en">Optional construction elements; the meaning of the construction is not dependent on its realization.</rdfs:comment>
         <rdfs:label xml:lang="en">Optional element</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#Topic -->
+
+    <owl:Class rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#Topic">
+        <rdfs:subClassOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#informationStructure"/>
+        <rdfs:comment xml:lang="en">The topic constituent identifies the entity or set of entities under which the information expressed in the comment constituent should be stored in the CG content.
+
+The notion of topic is best understood as a kind of address or file card which specifies the individual or set about which the remainder of the sentence makes a comment (see Reinhart 1981 for such a concept of topicality). It has no truthconditional effect except that it presupposes the existence of that individual. In this sense, the complement of ‘topic’ is ‘comment,’ which can itself be partitioned into a focused and a backgrounded part. Sentences usually have only one topic, but can also have none, or more than one. Following Jacobs (2001), topics can be aboutness or frame-setting topics, and the means to express a topic in the grammar can be pinpointed rather precisely in terms of which syntactic and intonational preferences the topic displays, at least in an intonation language. However, according to Féry’s theses, none of these properties are definitional for topic. Rather they express preferences as to how a ‘good’ topic has to be realized (see also Jacobs 2001 for a similar view).
+
+(Féry et al. 2007)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/olia/olia.owl#Topic"/>
+        <rdfs:label xml:lang="en">Topic</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#informationStructure -->
+
+    <owl:Class rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#informationStructure"/>
     
 
 

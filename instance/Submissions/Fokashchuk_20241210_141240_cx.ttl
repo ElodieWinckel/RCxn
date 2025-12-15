@@ -18,7 +18,7 @@
     lg:partOfLanguage lg:deuStdHigh .
 
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_1> a rcxn:SlotMandatory ;
-    cx:hasIS cx:Focus ;
+    rcxn:hasIS rcxn:Focus ;
     rcxn:hasSlotForm <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_1_Form> ;
     cx:hasIndex <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_1_Index> ;
     RDFS:comment "usually the nominative case" ;
@@ -49,7 +49,7 @@
 
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_4> a rcxn:SlotMandatory ;
     cx:WordOrder "follows Element 3" ;
-    cx:hasIS cx:Background ;
+    rcxn:hasIS rcxn:Background ;
     rcxn:hasSyntacticFunction "complement of Element 3" ;
     rcxn:hasSemanticRole olia:ThemeRole .
 

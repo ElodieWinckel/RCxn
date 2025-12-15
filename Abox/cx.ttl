@@ -74,9 +74,9 @@ cx:Adverb_MD a rcxn:Metadata ;
     rcxn:creationDate "2025-12-08"^^xsd:date .
 
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_1> a rcxn:SlotMandatory ;
-    cx:hasIS cx:Focus ;
     cx:hasIndex <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_1_Index> ;
     rdfs:comment "usually the nominative case" ;
+    rcxn:hasIS rcxn:Focus ;
     rcxn:hasSlotForm <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_1_Form> ;
     rcxn:hasSyntacticFunction "head of Element 2" .
 
@@ -109,7 +109,7 @@ cx:Adverb_MD a rcxn:Metadata ;
 
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_4> a rcxn:SlotMandatory ;
     cx:WordOrder "follows Element 3" ;
-    cx:hasIS cx:Background ;
+    rcxn:hasIS rcxn:Background ;
     rcxn:hasSemanticRole olia:ThemeRole ;
     rcxn:hasSyntacticFunction "complement of Element 3" .
 
