@@ -18,11 +18,55 @@
     <h2>Construction elements</h2>
     <div id="table-container"></div>
 
-    <script>
-    // Accessing elements sent by Flask
-    const elements = {{ elements | tojson }};
+<script>
+// Accessing elements sent by Flask
+const rawElements = {{ elements | tojson }};
 
-    function createCrossTable(data) {
+//---------------------------------------------
+// 0. Helper: extract numeric index from label "Element N"
+// returns integer N or null if not found
+//---------------------------------------------
+function extractElementNumber(label) {
+    if (!label || typeof label !== 'string') return null;
+    const m = label.match(/\d+/);
+    return m ? parseInt(m[0], 10) : null;
+}
+
+//---------------------------------------------
+// 1. Build map: subject → children[]
+//---------------------------------------------
+function buildChildrenMap(data) {
+    const map = {};
+    data.forEach(item => {
+        if (item.subject && item.children) {
+            map[item.subject] = item.children;
+        }
+    });
+    return map;
+}
+const childrenMap = buildChildrenMap(rawElements);
+
+//---------------------------------------------
+// 2. Extract only top-level property entries
+//    (we keep children in childrenMap; do not flatten)
+//---------------------------------------------
+function extractTopLevel(entries) {
+    const result = [];
+    entries.forEach(item => {
+        if (item.subject && item.property) {
+            result.push(item);
+        }
+        // children left intact in childrenMap
+    });
+    return result;
+}
+const elements = extractTopLevel(rawElements);
+
+//---------------------------------------------
+// 3. Build main table data mapping
+//---------------------------------------------
+function createCrossTable(data) {
+
     const subjects = [...new Set(data.map(item => item.subject))];
     const properties = [...new Set(data.map(item => item.property))];
 
@@ -49,64 +93,153 @@
         'hasVoice', 'type', 'comment', 'Colloprofile'
     ];
 
-    // Define a list of background colors -- they are also defined in CSS
+    // Define colors (palette)
     const colors = [
-        '#F94144', //CE1
-        '#F8961E', //CE2
-        '#F9C74F', //CE3
-        '#90BE6D', //CE4
-        '#43AA8B', //CE5
-        '#577590', //CE6
-        '#FFD1DC', // Light pink; CE7
-        '#E6E6FA', // Lavender; CE8
-        '#98FB98', // Pale green; CE9
-        '#F0E68C', // Khaki; CE10
-        '#FFB6C1', // Light pink; CE11
-        '#FFA07A', // Light salmon; CE12
-        '#DDA0DD', // Plum
-        '#90EE90'  // Light green
+        '#F94144','#F8961E','#F9C74F','#90BE6D','#43AA8B','#577590',
+        '#FFD1DC','#E6E6FA','#98FB98','#F0E68C','#FFB6C1','#FFA07A',
+        '#DDA0DD','#90EE90'
     ];
 
+    //---------------------------------------------
+    // Helper: get color for a subject label using its element number
+    // If no number found, fallback to using the column index (fallbackIndex)
+    //---------------------------------------------
+    function colorForLabel(label, fallbackIndex = 0) {
+        const num = extractElementNumber(label);
+        if (Number.isInteger(num) && num > 0) {
+            return colors[(num - 1) % colors.length];
+        }
+        // fallback: use given index
+        return colors[fallbackIndex % colors.length];
+    }
+
+    //---------------------------------------------
+    // Helper: render only top-level values for a cell
+    //---------------------------------------------
+    function renderTopLevelValues(values) {
+        return values.map(v =>
+            v.href ? `<a href="${v.href}" target="_blank">${v.object}</a>` : v.object
+        ).join('<br>');
+    }
+
+    //---------------------------------------------
+    // Helper: build nested table HTML for a subject (once)
+    //---------------------------------------------
+    function buildNestedTableFor(subject) {
+        const children = childrenMap[subject];
+        if (!children || children.length === 0) return ''; // no children
+
+        // child subject names (Element 3, Element 4, ...)
+        const childSubjects = [...new Set(children.map(ch => ch.subject))];
+
+        // all properties present in children, sorted by desiredOrder
+        let childProperties = [...new Set(children.map(ch => ch.property))];
+
+        // sort using desiredOrder; unknown properties go at the end
+        childProperties.sort((a, b) => {
+            const ia = desiredOrder.indexOf(a);
+            const ib = desiredOrder.indexOf(b);
+
+            if (ia === -1 && ib === -1) return a.localeCompare(b);     // both not in desiredOrder → alphabetical
+            if (ia === -1) return 1;                                   // a after b
+            if (ib === -1) return -1;                                  // b after a
+            return ia - ib;                                            // both inside desiredOrder → compare index
+        });
+
+
+        // group child data by property and subject
+        const nestedTableData = {};
+        childProperties.forEach(p => nestedTableData[p] = {});
+        children.forEach(({ subject: chSubj, property, object, href }) => {
+            if (!nestedTableData[property][chSubj]) nestedTableData[property][chSubj] = [];
+            nestedTableData[property][chSubj].push({ object, href });
+        });
+
+        // Build nested table HTML (single nested table returned)
+        let nested = `<table class="nested-table" style="border-collapse:collapse; margin-top:6px; width:100%;">`;
+
+        // Header row: blank corner + child subjects — use color based on element number
+        nested += `<tr><td style="padding:4px 6px;"></td>${childSubjects.map((s, i) => {
+            const bg = colorForLabel(s, i);
+            return `<td style="padding:4px 6px; font-weight:bold; text-align:center; background-color:${bg};">${s}</td>`;
+        }).join('')}</tr>`;
+
+        // Rows: one per child property
+        childProperties.forEach(prop => {
+            nested += `<tr>`;
+            nested += `<td style="padding:4px 6px; font-weight:bold;">${prop}</td>`;
+            nested += childSubjects.map(s => {
+                const vals = nestedTableData[prop][s] || [];
+                return `<td style="padding:4px 6px;">${vals.map(v =>
+                    v.href ? `<a href="${v.href}" target="_blank">${v.object}</a>` : v.object
+                ).join('<br>')}</td>`;
+            }).join('');
+            nested += `</tr>`;
+        });
+
+        nested += `</table>`;
+        return nested;
+    }
+
+    //---------------------------------------------
+    // Build main table DOM
+    //---------------------------------------------
     const table = document.createElement('table');
-    const thead = document.createElement('thead');
     const tbody = document.createElement('tbody');
 
-    // Create header row with "Property" and colored subjects
+    // Header row: empty corner + top-level subjects with color (use element number if present)
     const headerRow = document.createElement('tr');
-    headerRow.innerHTML = `<td></td>${subjects.map((subject, index) =>
-        `<td style="color: #3d3d3d; font-weight: bold; text-align: center; background-color: ${colors[index % colors.length]}">${subject}</td>`
-    ).join('')}`;
+    headerRow.innerHTML = `<td></td>` +
+        subjects.map((subject, index) => {
+            const bg = colorForLabel(subject, index);
+            return `<td style="color:#3d3d3d; font-weight:bold; text-align:center; background-color:${bg};">${subject}</td>`;
+        }).join('');
     tbody.appendChild(headerRow);
 
-    // Create data rows (no background color)
+    // Main property rows: only top-level values (no nested table repeated here)
     desiredOrder.forEach(property => {
         if (tableData[property]) {
             const row = document.createElement('tr');
+
             const cells = [
-                `<td>${property}</td>`,
-                ...subjects.map(subject => {
-                    const values = tableData[property][subject];
-                    return `<td>${values.map(v =>
-                        v.href
-                            ? `<a href="${v.href}" target="_blank">${v.object}</a>`
-                            : v.object
-                    ).join('<br>')}</td>`;
-                })
+                `<td style="font-weight:bold; vertical-align:top; padding:6px 8px;">${property}</td>`,
+                ...subjects.map(subject =>
+                    `<td style="vertical-align:top; padding:6px 8px;">${renderTopLevelValues(tableData[property][subject])}</td>`
+                )
             ];
+
             row.innerHTML = cells.join('');
             tbody.appendChild(row);
         }
     });
 
+    //---------------------------------------------
+    // Now append ONE extra row that holds nested subtables,
+    // placed under each subject column (subject without children -> empty cell)
+    //---------------------------------------------
+    const nestedRow = document.createElement('tr');
+
+    // first cell can be left blank or show a label
+    nestedRow.innerHTML = `<td style="font-weight:bold; vertical-align:top; padding:6px 8px;"></td>` +
+        subjects.map(subject => {
+            const nestedHTML = buildNestedTableFor(subject);
+            return nestedHTML
+                ? `<td style="vertical-align:top; padding:6px 8px;">${nestedHTML}</td>`
+                : `<td style="vertical-align:top; padding:6px 8px;"></td>`;
+        }).join('');
+
+    tbody.appendChild(nestedRow);
+
     table.appendChild(tbody);
     return table;
 }
 
-    // Render the table
-    const container = document.getElementById('table-container');
-    const table = createCrossTable(elements);
-    container.appendChild(table);
+// Render the table
+const container = document.getElementById('table-container');
+container.appendChild(createCrossTable(elements));
 </script>
+
+
 {% endif %}
 
 {% if colloprofiles %}

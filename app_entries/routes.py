@@ -6,6 +6,147 @@ from rdflib import Graph, URIRef, Literal, Namespace, RDF, RDFS, FOAF
 import os
 from io import BytesIO
 
+###################################################
+### FUNCTIONS
+###################################################
+
+def get_metalanguage(lang_uri, graph, is_variety_of):
+    """
+    Walks up the isVarietyOf chain until it finds
+    the top-level 'metalanguage' (no parent).
+    """
+    current = lang_uri
+    visited = set()  # to avoid infinite loops if bad data
+    while True:
+        parents = list(graph.objects(subject=current, predicate=is_variety_of))
+        if not parents:
+            # no further parent, return current as the metalanguage
+            return current
+        parent = parents[0]
+        if parent in visited:
+            # cycle detected
+            return current
+        visited.add(parent)
+        current = parent
+
+# A list of prefixes that we might want to delete later from the URI
+prefixes = ("http://example.org/cx/|"
+            "http://example.org/rd/|"
+            "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#|"
+            "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#|"
+            "https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#|"
+            "http://purl.org/olia/olia.owl#|"
+            "http://purl.org/olia/olia-top.owl#|"
+            "http://www.w3.org/2000/01/rdf-schema#|"
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#|"
+            "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#|"
+            "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rdata#")
+
+def get_label_or_iri(term, data_graph, ont_graph):
+    """Return rdfs:label from ontologies if available, else fallback."""
+    if isinstance(term, Literal):
+        return str(term)
+    elif isinstance(term, URIRef):
+        # First try ontology graph
+        for label in ont_graph.objects(term, RDFS.label):
+            return str(label)
+        # Fallback: maybe the data graph has labels too
+        for label in data_graph.objects(term, RDFS.label):
+            return str(label)
+        # Last resort: strip prefixes
+        return re.sub(prefixes, "", str(term))
+    else:
+        return str(term)
+
+def identify_construction_element_triples(slots_uri):
+    # Step 1: Extract the elements of the sequence
+    unique_slot_uri = []
+    for predicate, obj in g.predicate_objects(subject=slots_uri):
+        if predicate.startswith(str(RDF)) and predicate[len(str(RDF))] == "_":  # Check for rdf:_n
+            unique_slot_uri.append(obj)
+    # Step 2: Identify the sequence members that have slots
+    list_of_nested = []
+    for slot_uri in unique_slot_uri:
+        for predicate, obj in g.predicate_objects(subject=slot_uri):
+            if str(predicate) == "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#hasSlots":
+                list_of_nested.append(str(slot_uri))
+    # Step 2: Collect triples where each sequence member is the subject
+    elements = []
+    colloprofiles = []
+    for slot_uri in unique_slot_uri:
+        # Define the name of the slot
+        element_number = "Element " + slot_uri[-1]
+        # Extract colloprofiles for this slot
+        collocations = []
+        for collocation_list in g.objects(subject=slot_uri, predicate=cx.collocations):
+            for item in g.items(collocation_list):
+                word = g.value(item, cx.word)
+                freq = g.value(item, cx.frequency)
+                collocations.append({"word": str(word), "frequency": int(freq)})
+        if collocations:  # append only if there is a colloprofile
+            colloprofiles.append({
+                "subject_name": element_number,
+                "collocations": collocations
+            })
+        collocations.sort(key=lambda x: x["frequency"], reverse=True)  # Sort by frequency (descending)
+        # Gather triplets
+        for predicate, obj in g.predicate_objects(subject=slot_uri):
+            if str(predicate) == "http://www.w3.org/1999/02/22-rdf-syntax-ns#type":  # special case for type mandatory/optional slot
+                elements.append({
+                    'subject': element_number,
+                    'property': "Optionality",
+                    'object': get_label_or_iri(obj, g, ont),
+                })
+            else:
+                if str(predicate) == "http://example.org/cx/collocations":  # special case for colloprofile
+                    elements.append({
+                        'subject': element_number,
+                        'property': "Colloprofile",
+                        'object': "See colloprofile for " + element_number + " below",
+                    })
+                else:  # all other cases
+                    elements.append({
+                        'subject': element_number,
+                        'property': get_label_or_iri(predicate, g, ont),
+                        'object': get_label_or_iri(obj, g, ont),
+                    })
+
+        # Step 3: Collect triples for form of each sequence member
+        subject_slotform = URIRef(str(slot_uri) + "_Form")
+        for predicate, obj in g.predicate_objects(subject=subject_slotform):
+            if str(predicate) == "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#hasSyntacticForm":  # special case for syntactic form that should be displayed as a link
+                title = g.value(obj, rcxn.hasTitle)
+                elements.append({
+                    'subject': element_number,
+                    'property': get_label_or_iri(predicate, g, ont),
+                    'object': get_label_or_iri(title, g, ont),
+                    'href': get_label_or_iri(obj, g, ont),
+                })
+            else:
+                elements.append({
+                    'subject': element_number,
+                    'property': get_label_or_iri(predicate, g, ont),
+                    'object': get_label_or_iri(obj, g, ont),
+                })
+
+        # Step 4: Collect triples for index of each sequence member
+        subject_index = URIRef(str(slot_uri) + "_Index")
+        for predicate, obj in g.predicate_objects(subject=subject_index):
+            elements.append({
+                'subject': element_number,
+                'property': get_label_or_iri(predicate, g, ont),
+                'object': get_label_or_iri(obj, g, ont),
+            })
+    elements[:] = [item for item in elements if item['property'] != "type"]
+    elements[:] = [item for item in elements if item['property'] != "hasSlotForm"]
+    elements[:] = [item for item in elements if item['property'] != "hasIndex"]
+    return elements, colloprofiles, list_of_nested
+
+
+###################################################
+### CREATE RDF GRAPH
+###################################################
+
 g = Graph()
 
 # Check if the production directory exists (otherwise, defaults to development directory)
@@ -50,24 +191,9 @@ for xlm_file in glob.glob("ontologies/*.rdf"):
 for xlm_file in glob.glob("ontologies/*.owl"):
     ont.parse(xlm_file, format="xml")
 
-def get_metalanguage(lang_uri, graph, is_variety_of):
-    """
-    Walks up the isVarietyOf chain until it finds
-    the top-level 'metalanguage' (no parent).
-    """
-    current = lang_uri
-    visited = set()  # to avoid infinite loops if bad data
-    while True:
-        parents = list(graph.objects(subject=current, predicate=is_variety_of))
-        if not parents:
-            # no further parent, return current as the metalanguage
-            return current
-        parent = parents[0]
-        if parent in visited:
-            # cycle detected
-            return current
-        visited.add(parent)
-        current = parent
+###################################################
+### CREATE A LIST OF CONSTRUCTIONS
+###################################################
 
 @app_entries_blueprint.route("/")
 def list_view():
@@ -113,36 +239,12 @@ def list_view():
 
     return render_template("app_entries/list.html", constructions=constructions)
 
+###################################################
+### CREATE CONSTRUCTION ENTRIES
+###################################################
+
 @app_entries_blueprint.route('/construction/<path:uri>', endpoint='construction_detail')
 def construction_detail(uri):
-    # A list of prefixes that we might want to delete later from the URI
-    prefixes = ("http://example.org/cx/|"
-                "http://example.org/rd/|"
-                "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#|"
-                "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#|"
-                "https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#|"
-                "http://purl.org/olia/olia.owl#|"
-                "http://purl.org/olia/olia-top.owl#|"
-                "http://www.w3.org/2000/01/rdf-schema#|"
-                "http://www.w3.org/1999/02/22-rdf-syntax-ns#|"
-                "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#|"
-                "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rdata#")
-
-    def get_label_or_iri(term, data_graph, ont_graph):
-        """Return rdfs:label from ontologies if available, else fallback."""
-        if isinstance(term, Literal):
-            return str(term)
-        elif isinstance(term, URIRef):
-            # First try ontology graph
-            for label in ont_graph.objects(term, RDFS.label):
-                return str(label)
-            # Fallback: maybe the data graph has labels too
-            for label in data_graph.objects(term, RDFS.label):
-                return str(label)
-            # Last resort: strip prefixes
-            return re.sub(prefixes, "", str(term))
-        else:
-            return str(term)
 
     # Rebuild the full URI for the construction
     entry_uri = URIRef("http://example.org/cx/" + uri)
@@ -213,82 +315,16 @@ def construction_detail(uri):
     triples[:] = [item for item in triples if item['property'] != "basedOnStudy"]
 
     # Collect triples for elements / slots
-    # Step 1: Extract the elements of the sequence
-    unique_slot_uri = []
-    for predicate, obj in g.predicate_objects(subject=slots_uri):
-        if predicate.startswith(str(RDF)) and predicate[len(str(RDF))] == "_":  # Check for rdf:_n
-            unique_slot_uri.append(obj)
-    # Step 2: Collect triples where each sequence member is the subject
-    elements = []
-    colloprofiles = []
-    for slot_uri in unique_slot_uri:
+    elements, colloprofiles, list_of_nested = identify_construction_element_triples(slots_uri)
+    for nested in list_of_nested:
+        slot_uri_nested = URIRef(nested + "_slots")
+        nested_elements, nested_colloprofiles, nested_list_of_nested = identify_construction_element_triples(slot_uri_nested)
         # Define the name of the slot
-        element_number = "Element " + slot_uri[-1]
-        # Extract colloprofiles for this slot
-        collocations = []
-        for collocation_list in g.objects(subject=slot_uri, predicate=cx.collocations):
-            for item in g.items(collocation_list):
-                word = g.value(item, cx.word)
-                freq = g.value(item, cx.frequency)
-                collocations.append({"word": str(word), "frequency": int(freq)})
-        if collocations: # append only if there is a colloprofile
-            colloprofiles.append({
-                "subject_name": element_number,
-                "collocations": collocations
-            })
-        collocations.sort(key=lambda x: x["frequency"], reverse=True) # Sort by frequency (descending)
-        # Gather triplets
-        for predicate, obj in g.predicate_objects(subject=slot_uri):
-            if str(predicate) == "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": # special case for type mandatory/optional slot
-                elements.append({
-                    'subject': element_number,
-                    'property': "Optionality",
-                    'object': get_label_or_iri(obj, g, ont),
-                })
-            else:
-                if str(predicate) == "http://example.org/cx/collocations": # special case for colloprofile
-                    elements.append({
-                        'subject': element_number,
-                        'property': "Colloprofile",
-                        'object': "See colloprofile for "+ element_number + " below",
-                    })
-                else: # all other cases
-                    elements.append({
-                        'subject': element_number,
-                        'property': get_label_or_iri(predicate, g, ont),
-                        'object': get_label_or_iri(obj, g, ont),
-                    })
-
-    # Step 3: Collect triples for form of each sequence member
-        subject_slotform = URIRef(str(slot_uri) + "_Form")
-        for predicate, obj in g.predicate_objects(subject=subject_slotform):
-            if str(predicate) == "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#hasSyntacticForm":  # special case for syntactic form that should be displayed as a link
-                title = g.value(obj, rcxn.hasTitle)
-                elements.append({
-                    'subject': element_number,
-                    'property': get_label_or_iri(predicate, g, ont),
-                    'object': get_label_or_iri(title, g, ont),
-                    'href': get_label_or_iri(obj, g, ont),
-                })
-            else:
-                elements.append({
-                    'subject': element_number,
-                    'property': get_label_or_iri(predicate, g, ont),
-                    'object': get_label_or_iri(obj, g, ont),
-                })
-
-        # Step 4: Collect triples for index of each sequence member
-        subject_index = URIRef(str(slot_uri) + "_Index")
-        for predicate, obj in g.predicate_objects(subject=subject_index):
-            elements.append({
-                'subject': element_number,
-                'property': get_label_or_iri(predicate, g, ont),
-                'object': get_label_or_iri(obj, g, ont),
-            })
-    # Step 5: Delete functional URIs
-    elements[:] = [item for item in elements if item['property'] != "hasSlotForm"]
-    elements[:] = [item for item in elements if item['property'] != "hasIndex"]
-    elements[:] = [item for item in elements if item['property'] != "type"]
+        element_number = "Element " + nested[-1]
+        elements.append({
+            'subject': str(element_number),
+            'children': nested_elements
+        })
 
 
     # Collect triples for examples

@@ -1,0 +1,34 @@
+@prefix cx: <http://example.org/cx/> .
+@prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
+@prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
+@prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+membr:Project_Winckel_F2511281100 rsrch:basedOn cx:ara_coolconstruction .
+
+cx:ara_coolconstruction_1 a rcxn:SlotMandatory ;
+    rcxn:hasSlotForm cx:ara_coolconstruction_1_Form .
+
+cx:ara_coolconstruction_1_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:eng_PrepositionalPhrase .
+
+cx:ara_coolconstruction_MD a rcxn:Metadata ;
+    rcxn:annotator membr:Winckel ;
+    rcxn:creationDate "2025-12-15"^^xsd:date .
+
+cx:ara_coolconstruction_Meaning a rcxn:ConstructionMeaning .
+
+cx:ara_coolconstruction_slots a rdf:Seq ;
+    rdf:_1 cx:ara_coolconstruction_1 .
+
+cx:eng_PrepositionalPhrase rcxn:elementOf cx:ara_coolconstruction .
+
+cx:ara_coolconstruction a rcxn:Construction ;
+    lg:partOfLanguage lg:ara ;
+    rcxn:hasConstructionMeaning cx:ara_coolconstruction_Meaning ;
+    rcxn:hasMetadata cx:ara_coolconstruction_MD ;
+    rcxn:hasSlots cx:ara_coolconstruction_slots ;
+    rcxn:hasTitle "cool construction" .
+

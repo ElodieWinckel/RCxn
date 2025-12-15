@@ -10,7 +10,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_3_Form> a cx:SlotForm ;
+<http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_4_Form> a cx:SlotForm ;
     rcxn:hasSyntacticForm cx:deu_NounPhrase .
 
 cx:Definitearticle rdfs:label "Definite article" .
@@ -73,20 +73,13 @@ cx:Adverb_MD a rcxn:Metadata ;
         membr:Winckel ;
     rcxn:creationDate "2025-12-08"^^xsd:date .
 
-<http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions> a rcxn:Construction ;
-    lg:partOfLanguage lg:deuStdHigh ;
-    rcxn:hasConstructionMeaning <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_Meaning> ;
-    rcxn:hasMetadata <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_MD> ;
-    rcxn:hasSlots <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_slots> ;
-    rcxn:hasTitle "Allative NP1 + auf + NP2 & NP1 + an + NP2 constructions" .
-
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_1> a rcxn:SlotMandatory ;
     cx:WordOrder "NP1+P+NP2" ;
     cx:hasIS cx:Focus ;
     cx:hasIndex <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_1_Index> ;
     rdfs:comment "usually the nominative case" ;
     rcxn:hasSlotForm <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_1_Form> ;
-    rcxn:hasSyntacticFunction "head of auf/an-PP" .
+    rcxn:hasSyntacticFunction "head of Element 2" .
 
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_1_Form> a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:deu_NounPhrase .
@@ -95,30 +88,40 @@ cx:Adverb_MD a rcxn:Metadata ;
     cx:hasAnimacy cx:inanimate .
 
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_2> a rcxn:SlotMandatory ;
-    rcxn:hasSemanticRole olia:DirectionRole ;
-    rcxn:hasSlotForm <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_2_Form> .
+    rcxn:hasSlotForm <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_2_Form> ;
+    rcxn:hasSlots <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_2_slots> .
 
-<http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_2_Form> a cx:SlotForm ;
+<http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_2_Form> a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:eng_PrepositionalPhrase .
+
+<http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_2_slots> a rdf_ns:Seq ;
+    rdf_ns:_1 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_3> ;
+    rdf_ns:_2 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_4> .
+
+<http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_3> a rcxn:SlotMandatory ;
+    rcxn:hasSemanticRole olia:DirectionRole ;
+    rcxn:hasSlotForm <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_3_Form> .
+
+<http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_3_Form> a cx:SlotForm ;
     rcxn:hasSurfaceForm "an",
         "auf" .
 
-<http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_3> a rcxn:SlotMandatory ;
+<http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_4> a rcxn:SlotMandatory ;
     cx:hasIS cx:Background ;
     rcxn:hasSemanticRole olia:ThemeRole ;
-    rcxn:hasSyntacticFunction "complement of preposition (element 2)" .
+    rcxn:hasSyntacticFunction "complement of Element 3" .
 
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_MD> a rcxn:Metadata ;
     rcxn:annotator membr:Fokashchuk ;
     rcxn:creationDate "2024-12-10"^^xsd:date .
 
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_Meaning> a rcxn:ConstructionMeaning ;
-    rcxn:hasMeaning "The sense of direction of [one entity]1 towards [another entity]3" ;
+    rcxn:hasMeaning "The sense of direction of [one entity]1 towards [another entity]4" ;
     rcxn:usesImageSchema "SUPPORT, DIRECTION, CONTACT, PROXIMITY, LOCATION, CONTAINMENT, SOURCE-PATH-GOAL, FORCE, PART-WHOLE, SURFACE" .
 
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_slots> a rdf_ns:Seq ;
     rdf_ns:_1 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_1> ;
-    rdf_ns:_2 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_2> ;
-    rdf_ns:_3 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_3> .
+    rdf_ns:_2 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_2> .
 
 cx:Argumentstructureconstruction_1 a rcxn:SlotMandatory ;
     rcxn:hasSlotForm cx:Argumentstructureconstruction_1_Form ;
@@ -1871,6 +1874,13 @@ cx:zho_VerbPhrase a rcxn:Construction ;
     rcxn:elementOf cx:Dooperationwithoperand1onoperand2construction ;
     rcxn:hasTitle "Verb Phrase" .
 
+<http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions> a rcxn:Construction ;
+    lg:partOfLanguage lg:deuStdHigh ;
+    rcxn:hasConstructionMeaning <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_Meaning> ;
+    rcxn:hasMetadata <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_MD> ;
+    rcxn:hasSlots <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_slots> ;
+    rcxn:hasTitle "Allative NP1 + auf + NP2 & NP1 + an + NP2 constructions" .
+
 cx:Argumentstructureconstruction a rcxn:Construction ;
     rdfs:comment """The main data includes 2000 sentences that are generated by GPT-4, which is a text file.\r
 The extension data includes a representation of these data in LLM and brain, \r
@@ -2143,12 +2153,6 @@ cx:coolasemotionconstruction a rcxn:Construction ;
     rcxn:hasSlots cx:coolasemotionconstruction_slots ;
     rcxn:hasTitle "cool as emotion construction" .
 
-cx:eng_PrepositionalPhrase a rcxn:Construction ;
-    lg:partOfLanguage lg:eng ;
-    rcxn:elementOf cx:EvaluativeAttributionConstruction,
-        cx:eng_AdjectivePhrase ;
-    rcxn:hasTitle "Prepositional Phrase" .
-
 cx:EvaluativeAttributionConstruction a rcxn:Construction ;
     lg:partOfLanguage lg:engUsUkWr ;
     rcxn:hasConstructionMeaning cx:EvaluativeAttributionConstruction_Meaning ;
@@ -2180,6 +2184,13 @@ cx:eng_Adjective a rcxn:Construction ;
         cx:eng_coolconstruction ;
     rcxn:hasMetadata cx:eng_Adjective_MD ;
     rcxn:hasTitle "Adjective" .
+
+cx:eng_PrepositionalPhrase a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    rcxn:elementOf <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions>,
+        cx:EvaluativeAttributionConstruction,
+        cx:eng_AdjectivePhrase ;
+    rcxn:hasTitle "Prepositional Phrase" .
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]> a rcxn:Construction ;
     lg:partOfLanguage lg:deuWrSt20 ;

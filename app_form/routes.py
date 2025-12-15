@@ -577,7 +577,7 @@ def form_submit():
             g.add((index_uri, cx.hasAnimacy, Literal(other_animacy)))
             g.add((index_uri, RDF.type, cx.Individual))
         else:
-            if animacy.strip():
+            if animacy.strip(): # TODO we could use olia's terminology (see AnimacyFeature in olia), because it's basically the same
                 g.add((index_uri, cx.hasAnimacy, cx[animacy]))
                 g.add((index_uri, RDF.type, cx.Individual))
         if other_gender.strip():

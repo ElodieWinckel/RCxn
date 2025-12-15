@@ -23,7 +23,7 @@
     rcxn:hasSlotForm <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_1_Form> ;
     cx:hasIndex <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_1_Index> ;
     RDFS:comment "usually the nominative case" ;
-    rcxn:hasSyntacticFunction "head of auf/an-PP" .
+    rcxn:hasSyntacticFunction "head of Element 2" .
 
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_1_Form> a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:deu_NounPhrase .
@@ -33,18 +33,25 @@
 
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_2> a rcxn:SlotMandatory ;
     rcxn:hasSlotForm <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_2_Form> ;
+    rcxn:hasSlots <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_2_slots> .
+
+<http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_2_Form> a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:eng_PrepositionalPhrase .
+
+<http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_3> a rcxn:SlotMandatory ;
+    rcxn:hasSlotForm <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_3_Form> ;
     rcxn:hasSemanticRole olia:DirectionRole .
 
-<http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_2_Form> a cx:SlotForm ;
+<http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_3_Form> a cx:SlotForm ;
     rcxn:hasSurfaceForm "auf" ;
     rcxn:hasSurfaceForm "an" .
 
-<http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_3> a rcxn:SlotMandatory ;
+<http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_4> a rcxn:SlotMandatory ;
     cx:hasIS cx:Background ;
-    rcxn:hasSyntacticFunction "complement of preposition (element 2)" ;
+    rcxn:hasSyntacticFunction "complement of Element 3" ;
     rcxn:hasSemanticRole olia:ThemeRole .
 
-<http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_3_Form> a cx:SlotForm ;
+<http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_4_Form> a cx:SlotForm ;
     rcxn:hasSyntacticForm cx:deu_NounPhrase .
 
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_MD> a rcxn:Metadata ;
@@ -53,12 +60,15 @@
 
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_Meaning> a rcxn:ConstructionMeaning ;
     rcxn:usesImageSchema "SUPPORT, DIRECTION, CONTACT, PROXIMITY, LOCATION, CONTAINMENT, SOURCE-PATH-GOAL, FORCE, PART-WHOLE, SURFACE" ;
-    rcxn:hasMeaning "The sense of direction of [one entity]1 towards [another entity]3" .
+    rcxn:hasMeaning "The sense of direction of [one entity]1 towards [another entity]4" .
 
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_slots> a rdf:Seq ;
     rdf:_1 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_1> ;
-    rdf:_2 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_2> ;
-    rdf:_3 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_3> .
+    rdf:_2 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_2> .
+
+<http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_2_slots> a rdf:Seq ;
+    rdf:_1 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_3> ;
+    rdf:_2 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_4> .
 
 cx:deu_NounPhrase  a rcxn:Construction ;
     rcxn:hasTitle "Noun Phrase" ;
