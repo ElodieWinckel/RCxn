@@ -922,9 +922,9 @@ cx:Relative-Topic-ShiftConstruction_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "Transition from one (discourse) topic to another" .
 
 cx:Relative-Topic-ShiftConstruction_Sources a cx:Collection ;
-    cx:hasLiterature [ ],
-        [ ],
-        <https://doi.org/10.1093/llc/fqw021> .
+    cx:hasLiterature <file:///home/meuhlodi/Travail/RCxn/instance/Submissions/La_lingua_del_Guicciardini>,
+        <https://doi.org/10.1093/llc/fqw021>,
+        <https://doi.org/10.1417/81352> .
 
 cx:Spanishobjectrelativeclause a rcxn:Construction ;
     lg:partOfLanguage lg:spa ;
