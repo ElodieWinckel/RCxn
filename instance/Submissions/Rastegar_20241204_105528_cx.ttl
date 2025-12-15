@@ -116,7 +116,7 @@ cx:Idiomaticconstruction_4_Form a rcxn:SlotForm ;
 
 cx:Idiomaticconstruction_4_Index a cx:Event ;
     cx:hasMode olia:IndicativeVerb ;
-    cx:hasVoice cx:active .
+    olia:hasVoice olia:ActiveVoice .
 
 cx:Idiomaticconstruction_Ex_A a cx:Example ;
     cx:hasGlosses "a daycare-spot(ACC) can one not just.like.that out the sleeve shake" ;

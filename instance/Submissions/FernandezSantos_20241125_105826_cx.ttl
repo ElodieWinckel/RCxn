@@ -137,7 +137,7 @@ cx:Transitiveobjectrelativeclause_5_Form a rcxn:SlotForm ;
 
 cx:Transitiveobjectrelativeclause_5_Index a cx:Event ;
     olia:hasTense olia:Present ;
-    cx:hasVoice cx:active .
+    olia:hasVoice olia:ActiveVoice .
 
 cx:Transitiveobjectrelativeclause_Ex_A a cx:Example ;
     cx:hasGlosses "The grandpa to:the that the kid hugs" ;

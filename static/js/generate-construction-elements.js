@@ -686,11 +686,11 @@ function generateFields() {
         voiceEmptyOption.textContent = '';
         // Second option: Active
         const activeOption = document.createElement('option');
-        activeOption.value = 'active';
+        activeOption.value = 'ActiveVoice';
         activeOption.textContent = 'Active';
         // Third option: Passive
         const passiveOption = document.createElement('option');
-        passiveOption.value = 'passive';
+        passiveOption.value = 'PassiveVoice';
         passiveOption.textContent = 'Passive';
         // Option other
         const voiceOtherOption = document.createElement('option');

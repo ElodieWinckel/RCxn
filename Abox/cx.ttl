@@ -445,7 +445,7 @@ cx:Idiomaticconstruction_4_Form a rcxn:SlotForm ;
 
 cx:Idiomaticconstruction_4_Index a cx:Event ;
     cx:hasMode olia:IndicativeVerb ;
-    cx:hasVoice cx:active .
+    olia:hasVoice olia:ActiveVoice .
 
 cx:Idiomaticconstruction_Ex_A a cx:Example ;
     cx:hasAnnotatedText "Ein KitaPlatz kann man nicht einfach [aus]1 [dem]2 [Ärmel]3 [schütteln]4. [Saarbrücker Zeitung, 09.02.2022]" ;
@@ -498,7 +498,7 @@ cx:Idiomaticconstructions_2_Form a rcxn:SlotForm ;
 
 cx:Idiomaticconstructions_2_Index a cx:Event ;
     cx:hasMode olia:IndicativeVerb ;
-    cx:hasVoice cx:active .
+    olia:hasVoice olia:ActiveVoice .
 
 cx:Idiomaticconstructions_3 a rcxn:SlotMandatory ;
     cx:WordOrder "Precedes \"bridges\"" ;
@@ -999,7 +999,7 @@ cx:ThisCloseToV-ing_1_Form a rcxn:SlotForm ;
         "Come" .
 
 cx:ThisCloseToV-ing_1_Index a cx:Event ;
-    cx:hasVoice cx:active .
+    olia:hasVoice olia:ActiveVoice .
 
 cx:ThisCloseToV-ing_2 a rcxn:SlotMandatory ;
     cx:WordOrder "Element 2 comes immediately before Element 3" ;
@@ -1080,7 +1080,7 @@ cx:Transitivedurch-Präfixverbkonstruktion_3_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:gmh_Verb .
 
 cx:Transitivedurch-Präfixverbkonstruktion_3_Index a cx:Event ;
-    cx:hasVoice cx:active .
+    olia:hasVoice olia:ActiveVoice .
 
 cx:Transitivedurch-Präfixverbkonstruktion_4 a rcxn:SlotMandatory ;
     cx:hasTranslation "das Schlachtfeld",
@@ -1233,8 +1233,8 @@ cx:Transitiveobjectrelativeclause_5_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:spa_Verb .
 
 cx:Transitiveobjectrelativeclause_5_Index a cx:Event ;
-    cx:hasVoice cx:active ;
-    olia:hasTense olia:Present .
+    olia:hasTense olia:Present ;
+    olia:hasVoice olia:ActiveVoice .
 
 cx:Transitiveobjectrelativeclause_Ex_A a cx:Example ;
     cx:hasAnnotatedText "[El abuelo]1 [al]2 [que]3 [el niño]4 [abraza]5" ;

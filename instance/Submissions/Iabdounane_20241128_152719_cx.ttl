@@ -2,6 +2,7 @@
 @prefix cx: <http://example.org/cx/> .
 @prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
 @prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
+@prefix olia: <http://purl.org/olia/olia.owl#> .
 @prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
 @prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -30,7 +31,7 @@ cx:ThisCloseToV-ing_1_Form a rcxn:SlotForm ;
     rcxn:hasStem "Come" .
 
 cx:ThisCloseToV-ing_1_Index a cx:Event ;
-    cx:hasVoice cx:active .
+    olia:hasVoice olia:ActiveVoice .
 
 cx:ThisCloseToV-ing_2 a rcxn:SlotMandatory ;
     rcxn:hasSlotForm cx:ThisCloseToV-ing_2_Form ;

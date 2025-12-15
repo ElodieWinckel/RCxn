@@ -87,7 +87,7 @@ cx:Transitivedurch-Präfixverbkonstruktion_3_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:gmh_Verb .
 
 cx:Transitivedurch-Präfixverbkonstruktion_3_Index a cx:Event ;
-    cx:hasVoice cx:active .
+    olia:hasVoice olia:ActiveVoice .
 
 cx:Transitivedurch-Präfixverbkonstruktion_4 a rcxn:SlotMandatory ;
     rcxn:hasSlotForm cx:Transitivedurch-Präfixverbkonstruktion_4_Form ;

@@ -619,11 +619,11 @@ def form_submit():
                 g.add((index_uri, RDF.type, cx.Event))
         if other_voice.strip():
             print("Warning: new value for voice!")
-            g.add((index_uri, cx.hasVoice, Literal(other_voice)))
+            g.add((index_uri, olia.hasVoice, Literal(other_voice)))
             g.add((index_uri, RDF.type, cx.Event))
         else:
             if voice.strip():
-                g.add((index_uri, cx.hasVoice, cx[voice]))
+                g.add((index_uri, olia.hasVoice, olia[voice]))
                 g.add((index_uri, RDF.type, cx.Event))
 
         # URI for Slot Form
