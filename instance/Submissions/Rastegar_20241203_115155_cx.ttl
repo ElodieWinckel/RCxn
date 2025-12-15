@@ -28,7 +28,7 @@ cx:Idiomaticconstructions_1_Form a rcxn:SlotForm ;
     cx:hasSyntacticForm cx:eng_Pronoun .
 
 cx:Idiomaticconstructions_1_Index a cx:Individual ;
-    cx:hasAnimacy cx:animate .
+    olia:hasAnimacy olia:Animate .
 
 cx:Idiomaticconstructions_2 a rcxn:SlotMandatory ;
     cx:WordOrder "Follows subject, precedes object" ;
@@ -54,7 +54,7 @@ cx:Idiomaticconstructions_3_Form a rcxn:SlotForm ;
     cx:hasSyntacticForm cx:eng_PossessivePronoun .
 
 cx:Idiomaticconstructions_3_Index a cx:Individual ;
-    cx:hasAnimacy cx:animate .
+    olia:hasAnimacy olia:Animate .
 
 cx:Idiomaticconstructions_4 a rcxn:SlotMandatory ;
     cx:WordOrder "Final position" ;
@@ -69,7 +69,7 @@ cx:Idiomaticconstructions_4_Form a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "bridges" .
 
 cx:Idiomaticconstructions_4_Index a cx:Individual ;
-    cx:hasAnimacy cx:inanimate ;
+    olia:hasAnimacy olia:Inanimate ;
     olia:hasNumber olia:Paucal .
 
 cx:Idiomaticconstructions_Ex_A a cx:Example ;

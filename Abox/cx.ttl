@@ -85,7 +85,7 @@ cx:Adverb_MD a rcxn:Metadata ;
     rcxn:hasSyntacticForm cx:deu_NounPhrase .
 
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_1_Index> a cx:Individual ;
-    cx:hasAnimacy cx:inanimate .
+    olia:hasAnimacy olia:Inanimate .
 
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_2> a rcxn:SlotMandatory ;
     rcxn:hasSlotForm <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_2_Form> ;
@@ -426,8 +426,8 @@ cx:Idiomaticconstruction_3_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:deu_Noun .
 
 cx:Idiomaticconstruction_3_Index a cx:Individual ;
-    cx:hasAnimacy cx:inanimate ;
     cx:hasGender cx:masculine ;
+    olia:hasAnimacy olia:Inanimate ;
     olia:hasNumber olia:Singular .
 
 cx:Idiomaticconstruction_4 a rcxn:SlotMandatory ;
@@ -483,7 +483,7 @@ cx:Idiomaticconstructions_1_Form a rcxn:SlotForm ;
     cx:hasSyntacticForm cx:eng_Pronoun .
 
 cx:Idiomaticconstructions_1_Index a cx:Individual ;
-    cx:hasAnimacy cx:animate .
+    olia:hasAnimacy olia:Animate .
 
 cx:Idiomaticconstructions_2 a rcxn:SlotMandatory ;
     cx:WordOrder "Follows subject, precedes object" ;
@@ -509,7 +509,7 @@ cx:Idiomaticconstructions_3_Form a rcxn:SlotForm ;
     cx:hasSyntacticForm cx:eng_PossessivePronoun .
 
 cx:Idiomaticconstructions_3_Index a cx:Individual ;
-    cx:hasAnimacy cx:animate .
+    olia:hasAnimacy olia:Animate .
 
 cx:Idiomaticconstructions_4 a rcxn:SlotMandatory ;
     cx:WordOrder "Final position" ;
@@ -524,7 +524,7 @@ cx:Idiomaticconstructions_4_Form a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "bridges" .
 
 cx:Idiomaticconstructions_4_Index a cx:Individual ;
-    cx:hasAnimacy cx:inanimate ;
+    olia:hasAnimacy olia:Inanimate ;
     olia:hasNumber olia:Paucal .
 
 cx:Idiomaticconstructions_Ex_A a cx:Example ;
@@ -1046,7 +1046,7 @@ cx:Transitivedurch-Präfixverbkonstruktion_1 a rcxn:Slot ;
     rcxn:hasSyntacticFunction "Subject" .
 
 cx:Transitivedurch-Präfixverbkonstruktion_1_Index a cx:Individual ;
-    cx:hasAnimacy cx:animate .
+    olia:hasAnimacy olia:Animate .
 
 cx:Transitivedurch-Präfixverbkonstruktion_2 a rcxn:SlotMandatory ;
     cx:WordOrder "2 vor 3" ;
@@ -1121,7 +1121,7 @@ cx:Transitivedurch-Präfixverbkonstruktion_6_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:gmh_Pronoun .
 
 cx:Transitivedurch-Präfixverbkonstruktion_6_Index a cx:Individual ;
-    cx:hasAnimacy cx:animate .
+    olia:hasAnimacy olia:Animate .
 
 cx:Transitivedurch-Präfixverbkonstruktion_Ex_A a cx:Example ;
     cx:hasAnnotatedText "[Thie criſtenen]1 [thurh]2[thrungen]3 [ſie]4" ;
@@ -1184,8 +1184,8 @@ cx:Transitiveobjectrelativeclause_1_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:spa_NounPhrase .
 
 cx:Transitiveobjectrelativeclause_1_Index a cx:Individual ;
-    cx:hasAnimacy cx:animate ;
     cx:hasGender "[1]" ;
+    olia:hasAnimacy olia:Animate ;
     olia:hasNumber olia:Singular .
 
 cx:Transitiveobjectrelativeclause_2 a rcxn:SlotOptional ;
@@ -1217,8 +1217,8 @@ cx:Transitiveobjectrelativeclause_4_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:spa_NounPhrase .
 
 cx:Transitiveobjectrelativeclause_4_Index a cx:Individual ;
-    cx:hasAnimacy cx:animate ;
     cx:hasGender "[1]" ;
+    olia:hasAnimacy olia:Animate ;
     olia:hasNumber olia:Singular .
 
 cx:Transitiveobjectrelativeclause_5 a rcxn:SlotMandatory ;

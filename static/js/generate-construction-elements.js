@@ -369,11 +369,11 @@ function generateFields() {
         animacyEmptyOption.textContent = '';
         // Second option: animate
         const animateOption = document.createElement('option');
-        animateOption.value = 'animate';
+        animateOption.value = 'Animate';
         animateOption.textContent = 'Animate';
         // Third option: inanimate
         const inanimateOption = document.createElement('option');
-        inanimateOption.value = 'inanimate';
+        inanimateOption.value = 'Inanimate';
         inanimateOption.textContent = 'Inanimate';
         // Option other
         const animacyOtherOption = document.createElement('option');

@@ -55,7 +55,7 @@ cx:Transitivedurch-Präfixverbkonstruktion_1_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:gmh_NounPhrase .
 
 cx:Transitivedurch-Präfixverbkonstruktion_1_Index a cx:Individual ;
-    cx:hasAnimacy cx:animate .
+    olia:hasAnimacy olia:Animate .
 
 cx:Transitivedurch-Präfixverbkonstruktion_2 a rcxn:SlotMandatory ;
     cx:WordOrder "2 vor 3" ;
@@ -147,7 +147,7 @@ cx:Transitivedurch-Präfixverbkonstruktion_6_Form a rcxn:SlotForm ;
     cx:hasCaseFeature olia:DativeCase .
 
 cx:Transitivedurch-Präfixverbkonstruktion_6_Index a cx:Individual ;
-    cx:hasAnimacy cx:animate .
+    olia:hasAnimacy olia:Animate .
 
 cx:Transitivedurch-Präfixverbkonstruktion_MD a rcxn:Metadata ;
     rcxn:annotator membr:Fuehrer ;

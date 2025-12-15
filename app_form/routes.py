@@ -574,11 +574,11 @@ def form_submit():
         # If the index has tense, mode or voice, it refers to an event (subtype of index)
         if other_animacy.strip():
             print("Warning: new value for animacy!")
-            g.add((index_uri, cx.hasAnimacy, Literal(other_animacy)))
+            g.add((index_uri, olia.hasAnimacy, Literal(other_animacy)))
             g.add((index_uri, RDF.type, cx.Individual))
         else:
             if animacy.strip(): # TODO we could use olia's terminology (see AnimacyFeature in olia), because it's basically the same
-                g.add((index_uri, cx.hasAnimacy, cx[animacy]))
+                g.add((index_uri, olia.hasAnimacy, olia[animacy]))
                 g.add((index_uri, RDF.type, cx.Individual))
         if other_gender.strip():
             print("Warning: new value for gender!")

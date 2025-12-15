@@ -29,7 +29,7 @@
     rcxn:hasSyntacticForm cx:deu_NounPhrase .
 
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_1_Index> a cx:Individual ;
-    cx:hasAnimacy cx:inanimate .
+    olia:hasAnimacy olia:Inanimate .
 
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_2> a rcxn:SlotMandatory ;
     rcxn:hasSlotForm <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_2_Form> ;

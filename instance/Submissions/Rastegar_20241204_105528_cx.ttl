@@ -99,7 +99,7 @@ cx:Idiomaticconstruction_3_Form a rcxn:SlotForm ;
     cx:hasCaseFeature olia:DativeCase .
 
 cx:Idiomaticconstruction_3_Index a cx:Individual ;
-    cx:hasAnimacy cx:inanimate ;
+    olia:hasAnimacy olia:Inanimate ;
     cx:hasGender cx:masculine ;
     olia:hasNumber olia:Singular .
 
