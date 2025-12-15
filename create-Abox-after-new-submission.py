@@ -1,5 +1,6 @@
 from rdflib import Graph, Namespace, Literal, URIRef
 from rdflib.namespace import FOAF, RDF
+import re
 import glob
 
 # File paths
@@ -257,18 +258,11 @@ add_user("Winckel",
          "https://www.cxg.phil.fau.eu/person/elodie-winckel/")
 
 # If some construction uses another construction as construction element, then link back the second construction to the first one
-for construction in g.subjects(rdf_ns.type, rcxn.Construction):
-    # Get the sequence of slots
-    for sequence in g.objects(construction, rcxn.hasSlots):
-        # RDF collections are often numbered rdf:_1, rdf:_2, etc.
-        for slot_pred, slot in g.predicate_objects(sequence):
-            if str(slot_pred).startswith(str(rdf_ns["_"])):
-                # Get the slot form
-                for form in g.objects(slot, rcxn.hasSlotForm):
-                    # Get the syntactic form (part)
-                    for part in g.objects(form, rcxn.hasSyntacticForm):
-                        # Add new triple: ?part rcxn:elementOf ?construction
-                        g.add((part, rcxn.elementOf, construction))
+for subj, part in g.subject_objects(rcxn.hasSyntacticForm):
+    # identify the IRI of the construction
+    construction_uri = re.sub(r'_\d+_Form$', '', subj)
+    # Add new triple: ?part rcxn:elementOf ?construction
+    g.add((part, rcxn.elementOf, URIRef(construction_uri)))
 
 for mainCX in g.subjects(rdf_ns.type, rcxn.Construction):
     # identify inheritsFrom links
@@ -299,7 +293,7 @@ for prop in properties_to_mirror:
 for subj, obj in g.subject_objects(links.metaphoricalLink):
         g.add((obj, links.isMetaphoricalExtensionOf, subj))
 ###############################################################################
-# We now distinguish between the info that should go into cx.ttl and membr.ttl
+# We now distinguish between the IRI that belong to cx.ttl, membr.ttl and references.ttl
 ###############################################################################
 
 # Iterate over all triples in the original graph (for cx.ttl)

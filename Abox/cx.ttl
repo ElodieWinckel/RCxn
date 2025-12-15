@@ -1844,6 +1844,7 @@ cx:hat_Phrase a rcxn:Construction ;
 
 cx:ita_Noun a rcxn:Construction ;
     lg:partOfLanguage lg:ita ;
+    rcxn:elementOf cx:Relative-Topic-ShiftConstruction ;
     rcxn:hasTitle "Noun" .
 
 cx:ita_NounPhrase a rcxn:Construction ;
@@ -1915,21 +1916,6 @@ This is a similar publicly available dataset: https://github.com/SPOClab-ca/neur
     rcxn:hasSlots cx:Argumentstructureconstruction_slots ;
     rcxn:hasTitle "Argument structure construction" .
 
-cx:Relative-Topic-ShiftConstruction a rcxn:Construction ;
-    cx:hasExample cx:Relative-Topic-ShiftConstruction_Ex_A,
-        cx:Relative-Topic-ShiftConstruction_Ex_B ;
-    lg:partOfLanguage lg:itaStoria ;
-    ns1:CL_sameFormSameFunction <http://example.org/cx/Latinlinkingcliché(i.e.,inCaesar'sandTacitus'works)> ;
-    ns1:inheritsFrom cx:ItalianConiunctioRelativa,
-        cx:ItalianSiPassivante,
-        cx:ItalianTemporalSubordinateClause ;
-    ns1:similarFormDifferentFunction cx:ItalianRelativeClause ;
-    ns1:similarFormSameFunction cx:Demonstrative-Topic-ShiftConstruction ;
-    rcxn:hasConstructionMeaning cx:Relative-Topic-ShiftConstruction_Meaning ;
-    rcxn:hasMetadata cx:Relative-Topic-ShiftConstruction_MD ;
-    rcxn:hasSlots cx:Relative-Topic-ShiftConstruction_slots ;
-    rcxn:hasTitle "Relative-Topic-Shift Construction " .
-
 cx:Relative-Topic-ShiftConstruction_slots a rdf_ns:Seq ;
     rdf_ns:_1 cx:Relative-Topic-ShiftConstruction_1 ;
     rdf_ns:_2 cx:Relative-Topic-ShiftConstruction_4 ;
@@ -1986,7 +1972,8 @@ cx:engInf_Coolexclamativeconstruction a rcxn:Construction ;
 
 cx:eng_Particle a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
-    rcxn:elementOf <http://example.org/cx/TheEnglishGIVE-OUTVerbParticleConstruction.> ;
+    rcxn:elementOf <http://example.org/cx/TheEnglishGIVE-OUTVerbParticleConstruction.>,
+        cx:comePLUSnoisemannerofmovementVing ;
     rcxn:hasTitle "Particle" .
 
 cx:eng_Phrase a rcxn:Construction ;
@@ -2027,6 +2014,21 @@ cx:POU-beneficiaryconstruction a rcxn:Construction ;
     rcxn:hasSlots cx:POU-beneficiaryconstruction_slots ;
     rcxn:hasTitle "POU-beneficiary construction" .
 
+cx:Relative-Topic-ShiftConstruction a rcxn:Construction ;
+    cx:hasExample cx:Relative-Topic-ShiftConstruction_Ex_A,
+        cx:Relative-Topic-ShiftConstruction_Ex_B ;
+    lg:partOfLanguage lg:itaStoria ;
+    ns1:CL_sameFormSameFunction <http://example.org/cx/Latinlinkingcliché(i.e.,inCaesar'sandTacitus'works)> ;
+    ns1:inheritsFrom cx:ItalianConiunctioRelativa,
+        cx:ItalianSiPassivante,
+        cx:ItalianTemporalSubordinateClause ;
+    ns1:similarFormDifferentFunction cx:ItalianRelativeClause ;
+    ns1:similarFormSameFunction cx:Demonstrative-Topic-ShiftConstruction ;
+    rcxn:hasConstructionMeaning cx:Relative-Topic-ShiftConstruction_Meaning ;
+    rcxn:hasMetadata cx:Relative-Topic-ShiftConstruction_MD ;
+    rcxn:hasSlots cx:Relative-Topic-ShiftConstruction_slots ;
+    rcxn:hasTitle "Relative-Topic-Shift Construction " .
+
 cx:Relative-Topic-ShiftConstruction_1_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:ita_NounPhrase .
 
@@ -2037,18 +2039,6 @@ cx:Relative-Topic-ShiftConstruction_1_Form a rcxn:SlotForm ;
     rcxn:hasMetadata cx:TheEnglishGIVE-OUTVerbParticleConstruction._MD ;
     rcxn:hasSlots cx:TheEnglishGIVE-OUTVerbParticleConstruction._slots ;
     rcxn:hasTitle "GIVE-OUT Verb Particle Construction." .
-
-cx:comePLUSnoisemannerofmovementVing a rcxn:Construction ;
-    cx:hasExample cx:comePLUSnoisemannerofmovementVing_Ex_A,
-        cx:comePLUSnoisemannerofmovementVing_Ex_B,
-        cx:comePLUSnoisemannerofmovementVing_Ex_C,
-        cx:comePLUSnoisemannerofmovementVing_Ex_D ;
-    rdfs:comment "tables (of association scores, etc.) and possibly some figures" ;
-    lg:partOfLanguage lg:eng ;
-    rcxn:hasConstructionMeaning cx:comePLUSnoisemannerofmovementVing_Meaning ;
-    rcxn:hasMetadata cx:comePLUSnoisemannerofmovementVing_MD ;
-    rcxn:hasSlots cx:comePLUSnoisemannerofmovementVing_slots ;
-    rcxn:hasTitle "come + [noise/manner of movement] V-ing" .
 
 cx:coolasadmirableconstruction a rcxn:Construction ;
     cx:hasExample cx:coolasadmirableconstruction_Ex_A,
@@ -2198,6 +2188,18 @@ cx:Transitivedurch-Präfixverbkonstruktion a rcxn:Construction ;
     rcxn:hasSlots cx:Transitivedurch-Präfixverbkonstruktion_slots ;
     rcxn:hasTitle "Transitive durch-Präfixverbkonstruktion" .
 
+cx:comePLUSnoisemannerofmovementVing a rcxn:Construction ;
+    cx:hasExample cx:comePLUSnoisemannerofmovementVing_Ex_A,
+        cx:comePLUSnoisemannerofmovementVing_Ex_B,
+        cx:comePLUSnoisemannerofmovementVing_Ex_C,
+        cx:comePLUSnoisemannerofmovementVing_Ex_D ;
+    rdfs:comment "tables (of association scores, etc.) and possibly some figures" ;
+    lg:partOfLanguage lg:eng ;
+    rcxn:hasConstructionMeaning cx:comePLUSnoisemannerofmovementVing_Meaning ;
+    rcxn:hasMetadata cx:comePLUSnoisemannerofmovementVing_MD ;
+    rcxn:hasSlots cx:comePLUSnoisemannerofmovementVing_slots ;
+    rcxn:hasTitle "come + [noise/manner of movement] V-ing" .
+
 cx:eng_Adjective a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
     rcxn:elementOf cx:coolasadmirableconstruction,
@@ -2212,6 +2214,7 @@ cx:eng_PrepositionalPhrase a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
     rcxn:elementOf <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions>,
         cx:EvaluativeAttributionConstruction,
+        cx:comePLUSnoisemannerofmovementVing,
         cx:eng_AdjectivePhrase ;
     rcxn:hasTitle "Prepositional Phrase" .
 
