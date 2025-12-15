@@ -18,7 +18,6 @@
     lg:partOfLanguage lg:deuStdHigh .
 
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_1> a rcxn:SlotMandatory ;
-    cx:WordOrder "NP1+P+NP2" ;
     cx:hasIS cx:Focus ;
     rcxn:hasSlotForm <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_1_Form> ;
     cx:hasIndex <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_1_Index> ;
@@ -32,6 +31,7 @@
     olia:hasAnimacy olia:Inanimate .
 
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_2> a rcxn:SlotMandatory ;
+    cx:WordOrder "follows Element 1" ;
     rcxn:hasSlotForm <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_2_Form> ;
     rcxn:hasSlots <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_2_slots> .
 
@@ -39,6 +39,7 @@
     rcxn:hasSyntacticForm cx:eng_PrepositionalPhrase .
 
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_3> a rcxn:SlotMandatory ;
+    cx:WordOrder "first element of Element 2" ;
     rcxn:hasSlotForm <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_3_Form> ;
     rcxn:hasSemanticRole olia:DirectionRole .
 
@@ -47,6 +48,7 @@
     rcxn:hasSurfaceForm "an" .
 
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_4> a rcxn:SlotMandatory ;
+    cx:WordOrder "follows Element 3" ;
     cx:hasIS cx:Background ;
     rcxn:hasSyntacticFunction "complement of Element 3" ;
     rcxn:hasSemanticRole olia:ThemeRole .
