@@ -43,7 +43,10 @@ cx:ThisCloseToV-ing_2_Form a rcxn:SlotForm ;
 cx:ThisCloseToV-ing_3 a rcxn:SlotMandatory ;
     cx:WordOrder "Element 3 comes immediately before Element 4" ;
     rcxn:hasSlotForm cx:ThisCloseToV-ing_3_Form ;
-    RDFS:comment "colloprofile: be (0.07 PM) ; get (0.05 PM) ; have (0.015 PM)" .
+    cx:collocations (
+        [ cx:word "be"; cx:frequency 70 ]
+        [ cx:word "get"; cx:frequency 50 ]
+        [ cx:word "have"; cx:frequency 15 ] ) .
 
 cx:ThisCloseToV-ing_3_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_VerbRoot .

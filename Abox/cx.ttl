@@ -1010,7 +1010,7 @@ cx:ThisCloseToV-ing_2_Form a rcxn:SlotForm ;
 
 cx:ThisCloseToV-ing_3 a rcxn:SlotMandatory ;
     cx:WordOrder "Element 3 comes immediately before Element 4" ;
-    rdfs:comment "colloprofile: be (0.07 PM) ; get (0.05 PM) ; have (0.015 PM)" ;
+    cx:collocations [ ] ;
     rcxn:hasSlotForm cx:ThisCloseToV-ing_3_Form .
 
 cx:ThisCloseToV-ing_3_Form a rcxn:SlotForm ;
