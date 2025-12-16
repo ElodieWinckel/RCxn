@@ -18,9 +18,7 @@ cx:Relative-Topic-ShiftConstruction a rcxn:Construction ;
         cx:Relative-Topic-ShiftConstruction_Ex_B ;
     rcxn:hasMetadata cx:Relative-Topic-ShiftConstruction_MD ;
     rcxn:hasSlots cx:Relative-Topic-ShiftConstruction_slots ;
-    links:inheritsFrom cx:ItalianConiunctioRelativa,
-        cx:ItalianSiPassivante,
-        cx:ItalianTemporalSubordinateClause ;
+    links:inheritsFrom cx:ItalianTemporalSubordinateClause ;
     lg:partOfLanguage lg:itaStoria ;
     links:similarFormDifferentFunction cx:ItalianRelativeClause ;
     links:similarFormSameFunction cx:Demonstrative-Topic-ShiftConstruction .
@@ -86,7 +84,8 @@ cx:Relative-Topic-ShiftConstruction_1 a rcxn:SlotMandatory ;
     RDFS:comment "Element 1 is a \"coniunctio relativa\", i.e., a structure in which a relative pronoun (e.g., il quale, la quale) introduces a subordinate clause. The head noun can be omitted, remaining contextually recoverable. When this happens, the coniunctio relativa represents an elliptical noun phrase, with the relative pronoun standing in place of the implicit nominal head. Such an NP is anaphorically linked to the preceding co-text" .
 
 cx:Relative-Topic-ShiftConstruction_1_Form a rcxn:SlotForm ;
-    rcxn:hasSyntacticForm cx:ita_NounPhrase .
+    rcxn:hasSyntacticForm cx:ItalianConiunctioRelativa,
+        cx:ita_NounPhrase .
 
 cx:Relative-Topic-ShiftConstruction_2 a rcxn:SlotMandatory ;
     rcxn:hasSlotForm cx:Relative-Topic-ShiftConstruction_1_Form .
@@ -115,7 +114,8 @@ cx:Relative-Topic-ShiftConstruction_5 a rcxn:SlotMandatory ;
     RDFS:comment "The verb is often, though not exclusively, in the present tense. It frequently, but not exclusively, features a \"si passivante\" construction (formed by the particle 'si' combined with a transitive verb to convey a passive meaning). Additionally, the VP may have a more complex internal structure, incorporating various other elements. The verb appearing in the VP often anaphorically references an action or process already mentioned in the preceding co-text. This can occur either through direct repetition of the same verb or through synonyms" .
 
 cx:Relative-Topic-ShiftConstruction_5_Form a rcxn:SlotForm ;
-    rcxn:hasSyntacticForm cx:ita_VerbPhrase .
+    rcxn:hasSyntacticForm cx:ita_VerbPhrase ,
+        cx:ItalianSiPassivante .
 
 cx:Relative-Topic-ShiftConstruction_Ex_A a cx:Example ;
     cx:hasAnnotatedText "Ma era al tutto diversa la deliberazione del senato viniziano. (Discorso indiretto del portavoce veneziano). [Le quali]2 [cose]3 [mentre che]4 [con aperta disunione si trattano tra i collegati]5, nuovo accidente che sopravenne partorì effetti molto diversi da' pensieri degli uomini;" ;

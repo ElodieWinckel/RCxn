@@ -569,6 +569,7 @@ cx:Idiomaticconstructions_slots a rdf_ns:Seq ;
 
 cx:ItalianConiunctioRelativa a rcxn:Construction ;
     lg:partOfLanguage lg:ita ;
+    rcxn:elementOf cx:Relative-Topic-ShiftConstruction ;
     rcxn:hasMetadata cx:ItalianConiunctioRelativa_MD ;
     rcxn:hasTitle "Coniunctio Relativa" .
 
@@ -587,6 +588,7 @@ cx:ItalianRelativeClause_MD a rcxn:Metadata ;
 
 cx:ItalianSiPassivante a rcxn:Construction ;
     lg:partOfLanguage lg:ita ;
+    rcxn:elementOf cx:Relative-Topic-ShiftConstruction ;
     rcxn:hasMetadata cx:ItalianSiPassivante_MD ;
     rcxn:hasTitle "Si Passivante" .
 
@@ -905,7 +907,8 @@ cx:Relative-Topic-ShiftConstruction_5 a rcxn:SlotMandatory ;
     rcxn:hasSlotForm cx:Relative-Topic-ShiftConstruction_5_Form .
 
 cx:Relative-Topic-ShiftConstruction_5_Form a rcxn:SlotForm ;
-    rcxn:hasSyntacticForm cx:ita_VerbPhrase .
+    rcxn:hasSyntacticForm cx:ItalianSiPassivante,
+        cx:ita_VerbPhrase .
 
 cx:Relative-Topic-ShiftConstruction_Ex_A a cx:Example ;
     cx:hasAnnotatedText "Ma era al tutto diversa la deliberazione del senato viniziano. (Discorso indiretto del portavoce veneziano). [Le quali]2 [cose]3 [mentre che]4 [con aperta disunione si trattano tra i collegati]5, nuovo accidente che sopravenne partorì effetti molto diversi da' pensieri degli uomini;" ;
@@ -2085,23 +2088,9 @@ cx:POU-beneficiaryconstruction a rcxn:Construction ;
     rcxn:hasSlots cx:POU-beneficiaryconstruction_slots ;
     rcxn:hasTitle "POU-beneficiary construction" .
 
-cx:Relative-Topic-ShiftConstruction a rcxn:Construction ;
-    cx:hasExample cx:Relative-Topic-ShiftConstruction_Ex_A,
-        cx:Relative-Topic-ShiftConstruction_Ex_B ;
-    lg:partOfLanguage lg:itaStoria ;
-    ns1:CL_sameFormSameFunction <http://example.org/cx/Latinlinkingcliché(i.e.,inCaesar'sandTacitus'works)> ;
-    ns1:inheritsFrom cx:ItalianConiunctioRelativa,
-        cx:ItalianSiPassivante,
-        cx:ItalianTemporalSubordinateClause ;
-    ns1:similarFormDifferentFunction cx:ItalianRelativeClause ;
-    ns1:similarFormSameFunction cx:Demonstrative-Topic-ShiftConstruction ;
-    rcxn:hasConstructionMeaning cx:Relative-Topic-ShiftConstruction_Meaning ;
-    rcxn:hasMetadata cx:Relative-Topic-ShiftConstruction_MD ;
-    rcxn:hasSlots cx:Relative-Topic-ShiftConstruction_slots ;
-    rcxn:hasTitle "Relative-Topic-Shift Construction " .
-
 cx:Relative-Topic-ShiftConstruction_1_Form a rcxn:SlotForm ;
-    rcxn:hasSyntacticForm cx:ita_NounPhrase .
+    rcxn:hasSyntacticForm cx:ItalianConiunctioRelativa,
+        cx:ita_NounPhrase .
 
 <http://example.org/cx/TheEnglishGIVE-OUTVerbParticleConstruction.> a rcxn:Construction ;
     cx:hasExample cx:TheEnglishGIVE-OUTVerbParticleConstruction._Ex_A ;
@@ -2242,6 +2231,19 @@ cx:EvaluativeAttributionConstruction a rcxn:Construction ;
     rcxn:hasMetadata cx:EvaluativeAttributionConstruction_MD ;
     rcxn:hasSlots cx:EvaluativeAttributionConstruction_slots ;
     rcxn:hasTitle "Evaluative Attribution Construction" .
+
+cx:Relative-Topic-ShiftConstruction a rcxn:Construction ;
+    cx:hasExample cx:Relative-Topic-ShiftConstruction_Ex_A,
+        cx:Relative-Topic-ShiftConstruction_Ex_B ;
+    lg:partOfLanguage lg:itaStoria ;
+    ns1:CL_sameFormSameFunction <http://example.org/cx/Latinlinkingcliché(i.e.,inCaesar'sandTacitus'works)> ;
+    ns1:inheritsFrom cx:ItalianTemporalSubordinateClause ;
+    ns1:similarFormDifferentFunction cx:ItalianRelativeClause ;
+    ns1:similarFormSameFunction cx:Demonstrative-Topic-ShiftConstruction ;
+    rcxn:hasConstructionMeaning cx:Relative-Topic-ShiftConstruction_Meaning ;
+    rcxn:hasMetadata cx:Relative-Topic-ShiftConstruction_MD ;
+    rcxn:hasSlots cx:Relative-Topic-ShiftConstruction_slots ;
+    rcxn:hasTitle "Relative-Topic-Shift Construction " .
 
 cx:Transitivedurch-Präfixverbkonstruktion a rcxn:Construction ;
     cx:hasExample cx:Transitivedurch-Präfixverbkonstruktion_Ex_A,
