@@ -35,7 +35,14 @@ cx:Generalprepositionalconstructions_MD a rcxn:Metadata ;
     cx:WordOrder "In most cases, NP precedes the prepositional phrase \"vor Augen\"." ;
     cx:hasIS cx:Topic ;
     rcxn:hasSlotForm <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_1_Form> ;
-    RDFS:comment "colloprofile: Ziel (39); Bild (24); Tod (22); Beispiel (16); Welt (13); Tatsache (12); Volk (10)" ;
+    cx:colloprofile (
+        [ cx:word "Ziel"; cx:frequency 39 ]
+        [ cx:word "Bild"; cx:frequency 24 ]
+        [ cx:word "Tod"; cx:frequency 22 ]
+        [ cx:word "Beispiel"; cx:frequency 16 ]
+        [ cx:word "Welt"; cx:frequency 13 ]
+        [ cx:word "Tatsache"; cx:frequency 12 ]
+        [ cx:word "Volk"; cx:frequency 10 ] ) ;
     rcxn:hasSyntacticFunction "Object" ;
     rcxn:hasSemanticProperty "The NP predominantly denotes abstract concepts, particularly those that are 1) subject to mental representation (Ziel, Bild, Beispiel), 2) abstract existential element or phenomenon (Welt, Tod, Tatsache), 3) collective entities." .
 
@@ -45,8 +52,15 @@ cx:Generalprepositionalconstructions_MD a rcxn:Metadata ;
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_2> a rcxn:SlotOptional ;
     cx:WordOrder "The adjectives mostly directly precedes the prepositional phrase \"vor Augen\"." ;
     rcxn:hasSlotForm <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_2_Form> ;
-    RDFS:comment "The adjectives are also frequently modified by an adverb \"so\", forming adverbial phrases such as \"so deutlich, so klar\", etc. ",
-        "colloprofile: deutlich (51); klar (47); anschaulich (10); eindringlich (9); lebendig (9); unmittelbar (9); lebhaft (7)" ;
+    RDFS:comment "The adjectives are also frequently modified by an adverb \"so\", forming adverbial phrases such as \"so deutlich, so klar\", etc. " ;
+    cx:colloprofile (
+        [ cx:word "deutlich"; cx:frequency 51 ]
+        [ cx:word "klar"; cx:frequency 47 ]
+        [ cx:word "anschaulich"; cx:frequency 10 ]
+        [ cx:word "eindringlich"; cx:frequency 9 ]
+        [ cx:word "lebendig"; cx:frequency 9 ]
+        [ cx:word "unmittelbar"; cx:frequency 9 ]
+        [ cx:word "lebhaft"; cx:frequency 7 ] ) ;
     rcxn:hasSemanticProperty "The adjectives share the semantic property of describing vividness or clarity." .
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_2_Form> a rcxn:SlotForm ;
@@ -55,7 +69,12 @@ cx:Generalprepositionalconstructions_MD a rcxn:Metadata ;
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_3> a rcxn:SlotOptional ;
     cx:WordOrder "The adverbs typically appear directly before the prepositional phrase \"vor Augen\"." ;
     rcxn:hasSlotForm <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_3_Form> ;
-    RDFS:comment "colloprofile: immer (42); wieder (32); stets (27); noch (25); täglich (9)" ;
+    cx:colloprofile (
+        [ cx:word "immer"; cx:frequency 42 ]
+        [ cx:word "wieder"; cx:frequency 32 ]
+        [ cx:word "stets"; cx:frequency 27 ]
+        [ cx:word "noch"; cx:frequency 25 ]
+        [ cx:word "täglich"; cx:frequency 9 ] ) ;
     rcxn:hasSemanticProperty "The adverbs share a semantic property of expressing recurrence or regularity." .
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_3_Form> a rcxn:SlotForm ;
@@ -91,8 +110,13 @@ cx:Generalprepositionalconstructions_MD a rcxn:Metadata ;
     cx:WordOrder "The position of the verb within the construction is relatively flexible." ;
     cx:hasIS cx:Comment ;
     rcxn:hasSlotForm <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_6_Form> ;
-    RDFS:comment "When the verb führen or halten occur, the reflexive pronoun \"sich\" is obligatory present (Element 1).",
-        "colloprofile: führen (225); halten (143); haben (129); stellen (25); stehen (15)" ;
+    RDFS:comment "When the verb führen or halten occur, the reflexive pronoun \"sich\" is obligatory present (Element 1)." ;
+    cx:colloprofile (
+        [ cx:word "führen"; cx:frequency 225 ]
+        [ cx:word "halten"; cx:frequency 143 ]
+        [ cx:word "haben"; cx:frequency 129 ]
+        [ cx:word "stellen"; cx:frequency 25 ]
+        [ cx:word "stehen"; cx:frequency 15 ] ) ;
     rcxn:hasSemanticProperty "Though these verbs are highly polysemous, they either relate to the positioning of something in space, either actively (führen, stellen) or passively (stehen), or imply control or possession (halten, haben, führen)" .
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_6_Form> a rcxn:SlotForm ;

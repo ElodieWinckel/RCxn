@@ -1,4 +1,5 @@
 @prefix cx: <http://example.org/cx/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
 @prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
 @prefix ns1: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#> .
@@ -258,7 +259,12 @@ cx:Dooperationwithoperand1onoperand2construction_Meaning a rcxn:ConstructionMean
     rcxn:hasMeaning "Do [operation]3 with [operand 1]2 and [operand 2]4" .
 
 cx:Dooperationwithoperand1onoperand2construction_Sources a cx:Collection ;
-    cx:basedOn [ ] .
+    cx:basedOn [ dc:creator "Chemla, Karine",
+                "Guo Shuchun 郭書春" ;
+            dc:date "2004" ;
+            dc:publisher "Dunod" ;
+            dc:title "Les neuf chapitres: Le classique mathématique de la Chine ancienne et ses commentaires" ;
+            dc:type "book" ] .
 
 cx:Dooperationwithoperand1onoperand2construction_slots a rdf_ns:Seq ;
     rdf_ns:_1 cx:Dooperationwithoperand1onoperand2construction_1 ;
@@ -1019,7 +1025,10 @@ cx:ThisCloseToV-ing_2_Form a rcxn:SlotForm ;
 
 cx:ThisCloseToV-ing_3 a rcxn:SlotMandatory ;
     cx:WordOrder "Element 3 comes immediately before Element 4" ;
-    cx:collocations [ ] ;
+    cx:colloprofile ( [ cx:frequency 70 ;
+                cx:word "be" ] [ cx:frequency 50 ;
+                cx:word "get" ] [ cx:frequency 15 ;
+                cx:word "have" ] ) ;
     rcxn:hasSlotForm cx:ThisCloseToV-ing_3_Form .
 
 cx:ThisCloseToV-ing_3_Form a rcxn:SlotForm ;
@@ -1294,8 +1303,15 @@ cx:Transitiveobjectrelativeclause_slots a rdf_ns:Seq ;
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_1> a rcxn:SlotOptional ;
     cx:WordOrder "In most cases, NP precedes the prepositional phrase \"vor Augen\"." ;
+    cx:colloprofile ( [ cx:frequency 39 ;
+                cx:word "Ziel" ] [ cx:frequency 24 ;
+                cx:word "Bild" ] [ cx:frequency 22 ;
+                cx:word "Tod" ] [ cx:frequency 16 ;
+                cx:word "Beispiel" ] [ cx:frequency 13 ;
+                cx:word "Welt" ] [ cx:frequency 12 ;
+                cx:word "Tatsache" ] [ cx:frequency 10 ;
+                cx:word "Volk" ] ) ;
     cx:hasIS cx:Topic ;
-    rdfs:comment "colloprofile: Ziel (39); Bild (24); Tod (22); Beispiel (16); Welt (13); Tatsache (12); Volk (10)" ;
     rcxn:hasSemanticProperty "The NP predominantly denotes abstract concepts, particularly those that are 1) subject to mental representation (Ziel, Bild, Beispiel), 2) abstract existential element or phenomenon (Welt, Tod, Tatsache), 3) collective entities." ;
     rcxn:hasSlotForm <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_1_Form> ;
     rcxn:hasSyntacticFunction "Object" .
@@ -1305,8 +1321,15 @@ cx:Transitiveobjectrelativeclause_slots a rdf_ns:Seq ;
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_2> a rcxn:SlotOptional ;
     cx:WordOrder "The adjectives mostly directly precedes the prepositional phrase \"vor Augen\"." ;
-    rdfs:comment "The adjectives are also frequently modified by an adverb \"so\", forming adverbial phrases such as \"so deutlich, so klar\", etc. ",
-        "colloprofile: deutlich (51); klar (47); anschaulich (10); eindringlich (9); lebendig (9); unmittelbar (9); lebhaft (7)" ;
+    cx:colloprofile ( [ cx:frequency 51 ;
+                cx:word "deutlich" ] [ cx:frequency 47 ;
+                cx:word "klar" ] [ cx:frequency 10 ;
+                cx:word "anschaulich" ] [ cx:frequency 9 ;
+                cx:word "eindringlich" ] [ cx:frequency 9 ;
+                cx:word "lebendig" ] [ cx:frequency 9 ;
+                cx:word "unmittelbar" ] [ cx:frequency 7 ;
+                cx:word "lebhaft" ] ) ;
+    rdfs:comment "The adjectives are also frequently modified by an adverb \"so\", forming adverbial phrases such as \"so deutlich, so klar\", etc. " ;
     rcxn:hasSemanticProperty "The adjectives share the semantic property of describing vividness or clarity." ;
     rcxn:hasSlotForm <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_2_Form> .
 
@@ -1315,7 +1338,12 @@ cx:Transitiveobjectrelativeclause_slots a rdf_ns:Seq ;
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_3> a rcxn:SlotOptional ;
     cx:WordOrder "The adverbs typically appear directly before the prepositional phrase \"vor Augen\"." ;
-    rdfs:comment "colloprofile: immer (42); wieder (32); stets (27); noch (25); täglich (9)" ;
+    cx:colloprofile ( [ cx:frequency 42 ;
+                cx:word "immer" ] [ cx:frequency 32 ;
+                cx:word "wieder" ] [ cx:frequency 27 ;
+                cx:word "stets" ] [ cx:frequency 25 ;
+                cx:word "noch" ] [ cx:frequency 9 ;
+                cx:word "täglich" ] ) ;
     rcxn:hasSemanticProperty "The adverbs share a semantic property of expressing recurrence or regularity." ;
     rcxn:hasSlotForm <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_3_Form> .
 
@@ -1350,9 +1378,14 @@ cx:Transitiveobjectrelativeclause_slots a rdf_ns:Seq ;
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_6> a rcxn:SlotOptional ;
     cx:WordOrder "The position of the verb within the construction is relatively flexible." ;
+    cx:colloprofile ( [ cx:frequency 225 ;
+                cx:word "führen" ] [ cx:frequency 143 ;
+                cx:word "halten" ] [ cx:frequency 129 ;
+                cx:word "haben" ] [ cx:frequency 25 ;
+                cx:word "stellen" ] [ cx:frequency 15 ;
+                cx:word "stehen" ] ) ;
     cx:hasIS cx:Comment ;
-    rdfs:comment "When the verb führen or halten occur, the reflexive pronoun \"sich\" is obligatory present (Element 1).",
-        "colloprofile: führen (225); halten (143); haben (129); stellen (25); stehen (15)" ;
+    rdfs:comment "When the verb führen or halten occur, the reflexive pronoun \"sich\" is obligatory present (Element 1)." ;
     rcxn:hasSemanticProperty "Though these verbs are highly polysemous, they either relate to the positioning of something in space, either actively (führen, stellen) or passively (stehen), or imply control or possession (halten, haben, führen)" ;
     rcxn:hasSlotForm <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_6_Form> .
 
@@ -1392,7 +1425,45 @@ cx:comePLUSnoisemannerofmovementVing_2_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_Verb .
 
 cx:comePLUSnoisemannerofmovementVing_3 a rcxn:SlotMandatory ;
-    cx:collocations [ ] ;
+    cx:colloprofile ( [ cx:frequency 36 ;
+                cx:word "tumbling" ] [ cx:frequency 22 ;
+                cx:word "hurrying" ] [ cx:frequency 11 ;
+                cx:word "barging" ] [ cx:frequency 22 ;
+                cx:word "hurtling" ] [ cx:frequency 20 ;
+                cx:word "striding" ] [ cx:frequency 27 ;
+                cx:word "crashing" ] [ cx:frequency 56 ;
+                cx:word "rushing" ] [ cx:frequency 14 ;
+                cx:word "bounding" ] [ cx:frequency 19 ;
+                cx:word "bursting" ] [ cx:frequency 11 ;
+                cx:word "crowding" ] [ cx:frequency 23 ;
+                cx:word "pouring" ] [ cx:frequency 109 ;
+                cx:word "running" ] [ cx:frequency 7 ;
+                cx:word "surging" ] [ cx:frequency 12 ;
+                cx:word "roaring" ] [ cx:frequency 7 ;
+                cx:word "streaming" ] [ cx:frequency 10 ;
+                cx:word "trotting" ] [ cx:frequency 22 ;
+                cx:word "flying" ] [ cx:frequency 4 ;
+                cx:word "shambling" ] [ cx:frequency 21 ;
+                cx:word "riding" ] [ cx:frequency 5 ;
+                cx:word "blundering" ] [ cx:frequency 7 ;
+                cx:word "leaping" ] [ cx:frequency 6 ;
+                cx:word "stumbling" ] [ cx:frequency 5 ;
+                cx:word "clattering" ] [ cx:frequency 5 ;
+                cx:word "floating" ] [ cx:frequency 5 ;
+                cx:word "thundering" ] [ cx:frequency 9 ;
+                cx:word "charging" ] [ cx:frequency 5 ;
+                cx:word "spilling" ] [ cx:frequency 5 ;
+                cx:word "storming" ] [ cx:frequency 3 ;
+                cx:word "lolloping" ] [ cx:frequency 7 ;
+                cx:word "drifting" ] [ cx:frequency 7 ;
+                cx:word "tearing" ] [ cx:frequency 4 ;
+                cx:word "galloping" ] [ cx:frequency 6 ;
+                cx:word "panting" ] [ cx:frequency 11 ;
+                cx:word "racing" ] [ cx:frequency 4 ;
+                cx:word "scurrying" ] [ cx:frequency 3 ;
+                cx:word "loping" ] [ cx:frequency 3 ;
+                cx:word "prancing" ] [ cx:frequency 3 ;
+                cx:word "straggling" ] ) ;
     rdfs:comment "present participle" ;
     rcxn:hasSlotForm cx:comePLUSnoisemannerofmovementVing_3_Form .
 

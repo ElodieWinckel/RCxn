@@ -1,4 +1,4 @@
-from rdflib import Graph, Namespace, Literal, URIRef
+from rdflib import Graph, Namespace, Literal, URIRef, BNode
 from rdflib.namespace import FOAF, RDF
 import re
 import glob
@@ -296,11 +296,18 @@ for subj, obj in g.subject_objects(links.metaphoricalLink):
 # We now distinguish between the IRI that belong to cx.ttl, membr.ttl and references.ttl
 ###############################################################################
 
-# Iterate over all triples in the original graph (for cx.ttl)
+def add_triples_recursively(g, graph_cx, subject):
+    # Add all triples where 'subject' is the subject
+    for p, o in g.predicate_objects(subject):
+        graph_cx.add((subject, p, o))
+        # If the object is a blank node, recursively add its triples
+        if isinstance(o, BNode):
+            add_triples_recursively(g, graph_cx, o)
+
+# Iterate over all triples in the original graph
 for s, p, o in g:
-    # Check if the subject starts with the desired prefix
     if isinstance(s, URIRef) and str(s).startswith(cx):
-        graph_cx.add((s, p, o))
+        add_triples_recursively(g, graph_cx, s)
 
 # Serialize the filtered graph
 graph_cx.serialize(destination=output_cx, format="turtle")
