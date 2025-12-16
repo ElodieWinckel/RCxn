@@ -2117,12 +2117,24 @@ cx:coolasadmirableconstruction a rcxn:Construction ;
         cx:coolasadmirableconstruction_Ex_C ;
     rdfs:comment "first attested: 1884, cf. OED" ;
     lg:partOfLanguage lg:engInf ;
-    ns1:isMetaphoricalExtensionOf cx:coolasemotionconstruction ;
+    ns1:isMetaphoricalExtensionOf cx:eng_coolconstruction ;
     rcxn:elementOf cx:engInf_Coolexclamativeconstruction ;
     rcxn:hasConstructionMeaning cx:coolasadmirableconstruction_Meaning ;
     rcxn:hasMetadata cx:coolasadmirableconstruction_MD ;
     rcxn:hasSlots cx:coolasadmirableconstruction_slots ;
     rcxn:hasTitle "cool as admirable construction" .
+
+cx:coolasemotionconstruction a rcxn:Construction ;
+    cx:hasExample cx:coolasemotionconstruction_Ex_A,
+        cx:coolasemotionconstruction_Ex_B ;
+    rdfs:comment "first attested: Old English, Beowulf (Oxford English Dictionary)" ;
+    lg:partOfLanguage lg:eng ;
+    ns1:isMetaphoricalExtensionOf cx:eng_coolconstruction ;
+    rcxn:elementOf cx:eng_Keepacoolheadconstruction ;
+    rcxn:hasConstructionMeaning cx:coolasemotionconstruction_Meaning ;
+    rcxn:hasMetadata cx:coolasemotionconstruction_MD ;
+    rcxn:hasSlots cx:coolasemotionconstruction_slots ;
+    rcxn:hasTitle "cool as emotion construction" .
 
 cx:deu_Noun a rcxn:Construction ;
     lg:partOfLanguage lg:deu ;
@@ -2162,20 +2174,6 @@ cx:eng_VerbPhrase a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
     rcxn:elementOf cx:EvaluativeAttributionConstruction ;
     rcxn:hasTitle "Verb Phrase" .
-
-cx:eng_coolconstruction a rcxn:Construction ;
-    cx:hasExample cx:eng_coolconstruction_Ex_A,
-        cx:eng_coolconstruction_Ex_B,
-        cx:eng_coolconstruction_Ex_C,
-        cx:eng_coolconstruction_Ex_D ;
-    rdfs:comment "from Indo-european *gel(ə) (DWDS)" ;
-    lg:partOfLanguage lg:eng ;
-    ns1:metaphoricalLink cx:coolascolourconstruction,
-        cx:coolasemotionconstruction ;
-    rcxn:hasConstructionMeaning cx:eng_coolconstruction_Meaning ;
-    rcxn:hasMetadata cx:eng_coolconstruction_MD ;
-    rcxn:hasSlots cx:eng_coolconstruction_slots ;
-    rcxn:hasTitle "cool construction" .
 
 cx:Idiomaticconstruction a rcxn:Construction ;
     cx:hasExample cx:Idiomaticconstruction_Ex_A,
@@ -2223,19 +2221,20 @@ cx:Transitiveobjectrelativeclause a rcxn:Construction ;
     rcxn:hasSlots cx:Transitiveobjectrelativeclause_slots ;
     rcxn:hasTitle "Potentially ambiguous object relative clause" .
 
-cx:coolasemotionconstruction a rcxn:Construction ;
-    cx:hasExample cx:coolasemotionconstruction_Ex_A,
-        cx:coolasemotionconstruction_Ex_B ;
-    rdfs:comment "first attested: Old English, Beowulf (Oxford English Dictionary)" ;
+cx:eng_coolconstruction a rcxn:Construction ;
+    cx:hasExample cx:eng_coolconstruction_Ex_A,
+        cx:eng_coolconstruction_Ex_B,
+        cx:eng_coolconstruction_Ex_C,
+        cx:eng_coolconstruction_Ex_D ;
+    rdfs:comment "from Indo-european *gel(ə) (DWDS)" ;
     lg:partOfLanguage lg:eng ;
-    ns1:isMetaphoricalExtensionOf cx:eng_coolconstruction ;
     ns1:metaphoricalLink cx:coolasadmirableconstruction,
-        cx:keepacoolheadconstruction ;
-    rcxn:elementOf cx:eng_Keepacoolheadconstruction ;
-    rcxn:hasConstructionMeaning cx:coolasemotionconstruction_Meaning ;
-    rcxn:hasMetadata cx:coolasemotionconstruction_MD ;
-    rcxn:hasSlots cx:coolasemotionconstruction_slots ;
-    rcxn:hasTitle "cool as emotion construction" .
+        cx:coolascolourconstruction,
+        cx:coolasemotionconstruction ;
+    rcxn:hasConstructionMeaning cx:eng_coolconstruction_Meaning ;
+    rcxn:hasMetadata cx:eng_coolconstruction_MD ;
+    rcxn:hasSlots cx:eng_coolconstruction_slots ;
+    rcxn:hasTitle "cool (temperature) construction" .
 
 cx:EvaluativeAttributionConstruction a rcxn:Construction ;
     lg:partOfLanguage lg:engUsUkWr ;

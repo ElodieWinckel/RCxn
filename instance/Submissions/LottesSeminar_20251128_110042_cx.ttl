@@ -88,8 +88,6 @@ cx:coolasemotionconstruction a rcxn:Construction ;
                   cx:coolasemotionconstruction_Ex_B ;
     RDFS:comment "first attested: Old English, Beowulf (Oxford English Dictionary)" ;
     lg:partOfLanguage lg:eng ;
-    links:metaphoricalLink cx:keepacoolheadconstruction,
-        cx:coolasadmirableconstruction ;
     links:isMetaphoricalExtensionOf cx:eng_coolconstruction ;
     rcxn:elementOf cx:eng_Keepacoolheadconstruction ;
     rcxn:hasConstructionMeaning cx:coolasemotionconstruction_Meaning ;
@@ -142,7 +140,7 @@ cx:coolasadmirableconstruction a rcxn:Construction ;
                   cx:coolasadmirableconstruction_Ex_C ;
     RDFS:comment "first attested: 1884, cf. OED" ;
     lg:partOfLanguage lg:engInf ;
-    links:isMetaphoricalExtensionOf cx:coolasemotionconstruction ;
+    links:isMetaphoricalExtensionOf cx:eng_coolconstruction ;
     rcxn:hasConstructionMeaning cx:coolasadmirableconstruction_Meaning ;
     rcxn:hasMetadata cx:coolasadmirableconstruction_MD ;
     rcxn:hasSlots cx:coolasadmirableconstruction_slots ;
@@ -341,11 +339,12 @@ cx:eng_coolconstruction a rcxn:Construction ;
     RDFS:comment "from Indo-european *gel(ə) (DWDS)" ;
     lg:partOfLanguage lg:eng ;
     links:metaphoricalLink cx:coolascolourconstruction,
-        cx:coolasemotionconstruction ;
+        cx:coolasemotionconstruction,
+        cx:coolasadmirableconstruction ;
     rcxn:hasConstructionMeaning cx:eng_coolconstruction_Meaning ;
     rcxn:hasMetadata cx:eng_coolconstruction_MD ;
     rcxn:hasSlots cx:eng_coolconstruction_slots ;
-    rcxn:hasTitle "cool construction" .
+    rcxn:hasTitle "cool (temperature) construction" .
 
 cx:eng_coolconstruction_1 a rcxn:SlotMandatory ;
     rcxn:hasPhonology "/kuːl/" ;
