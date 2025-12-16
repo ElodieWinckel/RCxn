@@ -77,18 +77,18 @@ def identify_construction_element_triples(slots_uri):
         # Define the name of the slot
         element_number = "Element " + slot_uri[-1]
         # Extract colloprofiles for this slot
-        collocations = []
-        for collocation_list in g.objects(subject=slot_uri, predicate=cx.collocations):
-            for item in g.items(collocation_list):
+        collo = []
+        for collo_list in g.objects(subject=slot_uri, predicate=cx.colloprofile):
+            for item in g.items(collo_list):
                 word = g.value(item, cx.word)
                 freq = g.value(item, cx.frequency)
-                collocations.append({"word": str(word), "frequency": int(freq)})
-        if collocations:  # append only if there is a colloprofile
+                collo.append({"word": str(word), "frequency": int(freq)})
+        if collo:  # append only if there is a colloprofile
+            collo.sort(key=lambda x: x["frequency"], reverse=True)  # Sort by frequency (descending)
             colloprofiles.append({
                 "subject_name": element_number,
-                "collocations": collocations
+                "collocations": collo
             })
-        collocations.sort(key=lambda x: x["frequency"], reverse=True)  # Sort by frequency (descending)
         # Gather triplets
         for predicate, obj in g.predicate_objects(subject=slot_uri):
             if str(predicate) == "http://www.w3.org/1999/02/22-rdf-syntax-ns#type":  # special case for type mandatory/optional slot
@@ -98,7 +98,7 @@ def identify_construction_element_triples(slots_uri):
                     'object': get_label_or_iri(obj, g, ont),
                 })
             else:
-                if str(predicate) == "http://example.org/cx/collocations":  # special case for colloprofile
+                if str(predicate) == "http://example.org/cx/colloprofile":  # special case for colloprofile
                     elements.append({
                         'subject': element_number,
                         'property': "Colloprofile",
@@ -459,8 +459,6 @@ def construction_detail(uri):
 
     # Fetch the title to display
     title = g.value(entry_uri, rcxn.hasTitle)
-
-    print(references)
 
     return render_template("app_entries/construction.html",
                            title=title,

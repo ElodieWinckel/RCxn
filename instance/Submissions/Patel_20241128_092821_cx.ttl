@@ -41,7 +41,7 @@ cx:comePLUSnoisemannerofmovementVing_2_Form a rcxn:SlotForm ;
 
 cx:comePLUSnoisemannerofmovementVing_3 a rcxn:SlotMandatory ;
     rcxn:hasSlotForm cx:comePLUSnoisemannerofmovementVing_3_Form ;
-    cx:collocations (
+    cx:colloprofile (
         [ cx:word "tumbling"; cx:frequency 36 ]
         [ cx:word "hurrying"; cx:frequency 22 ]
         [ cx:word "barging"; cx:frequency 11 ]

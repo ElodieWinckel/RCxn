@@ -43,7 +43,7 @@ cx:ThisCloseToV-ing_2_Form a rcxn:SlotForm ;
 cx:ThisCloseToV-ing_3 a rcxn:SlotMandatory ;
     cx:WordOrder "Element 3 comes immediately before Element 4" ;
     rcxn:hasSlotForm cx:ThisCloseToV-ing_3_Form ;
-    cx:collocations (
+    cx:colloprofile (
         [ cx:word "be"; cx:frequency 70 ]
         [ cx:word "get"; cx:frequency 50 ]
         [ cx:word "have"; cx:frequency 15 ] ) .
