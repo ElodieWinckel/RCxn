@@ -96,7 +96,7 @@ cx:Adverb_MD a rcxn:Metadata ;
 
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_3> a rcxn:SlotMandatory ;
     cx:WordOrder "first element of Element 2" ;
-    rcxn:hasSemanticRole olia:DirectionRole ;
+    olia:hasSemanticRole olia:DirectionRole ;
     rcxn:hasSlotForm <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_3_Form> .
 
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_3_Form> a cx:SlotForm ;
@@ -105,8 +105,8 @@ cx:Adverb_MD a rcxn:Metadata ;
 
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_4> a rcxn:SlotMandatory ;
     cx:WordOrder "follows Element 3" ;
+    olia:hasSemanticRole olia:ThemeRole ;
     rcxn:hasIS rcxn:Background ;
-    rcxn:hasSemanticRole olia:ThemeRole ;
     rcxn:hasSyntacticFunction "complement of Element 3" .
 
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_MD> a rcxn:Metadata ;
@@ -204,9 +204,9 @@ cx:Dooperationwithoperand1onoperand2construction_1_Form a rcxn:SlotForm ;
 
 cx:Dooperationwithoperand1onoperand2construction_2 a rcxn:SlotMandatory ;
     cx:WordOrder "Immediately before Element 3" ;
+    olia:hasSemanticRole olia:InstrumentRole ;
     rdfs:comment "Semantically, Element 2 is not optional. However, if it is the result of the directly preceding operation, what would normally be expressed by \"之\", the slot can be empty, as it is implied by 以." ;
     rcxn:hasSemanticProperty "In case when the operation (Element 3) is \"subtraction\", this operand is the one that is being subtracted." ;
-    rcxn:hasSemanticRole olia:InstrumentRole ;
     rcxn:hasSlotForm cx:Dooperationwithoperand1onoperand2construction_2_Form .
 
 cx:Dooperationwithoperand1onoperand2construction_2_Form a rcxn:SlotForm ;
@@ -222,8 +222,8 @@ cx:Dooperationwithoperand1onoperand2construction_3_Form a rcxn:SlotForm ;
 
 cx:Dooperationwithoperand1onoperand2construction_4 a rcxn:SlotMandatory ;
     cx:WordOrder "Immediately after Element 3" ;
+    olia:hasSemanticRole olia:UndergoerMacroRole ;
     rcxn:hasSemanticProperty "In contrast to Element 2, this Element is changed as result of the operation" ;
-    rcxn:hasSemanticRole olia:UndergoerMacroRole ;
     rcxn:hasSlotForm cx:Dooperationwithoperand1onoperand2construction_4_Form .
 
 cx:Dooperationwithoperand1onoperand2construction_4_Form a rcxn:SlotForm ;
@@ -430,7 +430,7 @@ cx:Idiomaticconstruction_3 a rcxn:SlotMandatory ;
     cx:WordOrder "Follows article" ;
     cx:hasIndex cx:Idiomaticconstruction_3_Index ;
     cx:hasTranslation "sleeve" ;
-    rcxn:hasSemanticRole oliatop:LocationRole ;
+    olia:hasSemanticRole olia:LocationRole ;
     rcxn:hasSlotForm cx:Idiomaticconstruction_3_Form .
 
 cx:Idiomaticconstruction_3_Form a rcxn:SlotForm ;
@@ -488,7 +488,7 @@ cx:Idiomaticconstruction_slots a rdf_ns:Seq ;
 cx:Idiomaticconstructions_1 a rcxn:SlotMandatory ;
     cx:WordOrder "Initial position" ;
     cx:hasIndex cx:Idiomaticconstructions_1_Index ;
-    rcxn:hasSemanticRole oliatop:ActorMacroRole ;
+    olia:hasSemanticRole oliatop:ActorMacroRole ;
     rcxn:hasSlotForm cx:Idiomaticconstructions_1_Form ;
     rcxn:hasSyntacticFunction "Subject" .
 
@@ -514,7 +514,7 @@ cx:Idiomaticconstructions_2_Index a cx:Event ;
 cx:Idiomaticconstructions_3 a rcxn:SlotMandatory ;
     cx:WordOrder "Precedes \"bridges\"" ;
     cx:hasIndex cx:Idiomaticconstructions_3_Index ;
-    rcxn:hasSemanticRole oliatop:PossessorRole ;
+    olia:hasSemanticRole oliatop:PossessorRole ;
     rcxn:hasSlotForm cx:Idiomaticconstructions_3_Form ;
     rcxn:hasSyntacticFunction "Determiner/Possessive modifier" .
 
@@ -527,7 +527,7 @@ cx:Idiomaticconstructions_3_Index a cx:Individual ;
 cx:Idiomaticconstructions_4 a rcxn:SlotMandatory ;
     cx:WordOrder "Final position" ;
     cx:hasIndex cx:Idiomaticconstructions_4_Index ;
-    rcxn:hasSemanticRole oliatop:ThemeRole ;
+    olia:hasSemanticRole oliatop:ThemeRole ;
     rcxn:hasSlotForm cx:Idiomaticconstructions_4_Form .
 
 cx:Idiomaticconstructions_4_Form a rcxn:SlotForm ;
@@ -835,8 +835,8 @@ cx:Noun_MD a rcxn:Metadata ;
     rcxn:creationDate "2025-12-01"^^xsd:date .
 
 cx:POU-beneficiaryconstruction_1 a rcxn:SlotMandatory ;
+    olia:hasSemanticRole olia:ThemeRole ;
     rdfs:comment "not always concrete" ;
-    rcxn:hasSemanticRole olia:ThemeRole ;
     rcxn:hasSlotForm cx:POU-beneficiaryconstruction_1_Form .
 
 cx:POU-beneficiaryconstruction_1_Form a rcxn:SlotForm ;
@@ -1087,8 +1087,8 @@ cx:Transitivedurch-Partikelverbkonstruktion links:similarFormSameFunction cx:Tra
 
 cx:Transitivedurch-Präfixverbkonstruktion_1 a rcxn:Slot ;
     cx:hasIndex cx:Transitivedurch-Präfixverbkonstruktion_1_Index ;
+    olia:hasSemanticRole olia:ActorMacroRole ;
     rcxn:hasSemanticProperty "Figur" ;
-    rcxn:hasSemanticRole olia:ActorMacroRole ;
     rcxn:hasSyntacticFunction "Subject" .
 
 cx:Transitivedurch-Präfixverbkonstruktion_1_Index a cx:Individual ;
@@ -1097,7 +1097,7 @@ cx:Transitivedurch-Präfixverbkonstruktion_1_Index a cx:Individual ;
 cx:Transitivedurch-Präfixverbkonstruktion_2 a rcxn:SlotMandatory ;
     cx:WordOrder "2 vor 3" ;
     cx:hasTranslation "'durch'" ;
-    rcxn:hasSemanticRole olia:DirectionRole ;
+    olia:hasSemanticRole olia:DirectionRole ;
     rcxn:hasSlotForm cx:Transitivedurch-Präfixverbkonstruktion_2_Form .
 
 cx:Transitivedurch-Präfixverbkonstruktion_2_Form a rcxn:SlotForm ;
@@ -1146,7 +1146,7 @@ cx:Transitivedurch-Präfixverbkonstruktion_4_Form a rcxn:SlotForm ;
 cx:Transitivedurch-Präfixverbkonstruktion_5 a rcxn:SlotOptional ;
     cx:hasTranslation "da",
         "somit" ;
-    rcxn:hasSemanticRole olia:TimeRole ;
+    olia:hasSemanticRole olia:TimeRole ;
     rcxn:hasSlotForm cx:Transitivedurch-Präfixverbkonstruktion_5_Form ;
     rcxn:hasSyntacticFunction "Temporaladverbiale" .
 
@@ -1157,7 +1157,7 @@ cx:Transitivedurch-Präfixverbkonstruktion_6 a rcxn:SlotOptional ;
     cx:hasIndex cx:Transitivedurch-Präfixverbkonstruktion_6_Index ;
     cx:hasTranslation "ihm",
         "ihr" ;
-    rcxn:hasSemanticRole olia:AddresseeRole ;
+    olia:hasSemanticRole olia:AddresseeRole ;
     rcxn:hasSlotForm cx:Transitivedurch-Präfixverbkonstruktion_6_Form ;
     rcxn:hasSyntacticFunction "Dativobjekt" .
 
@@ -1382,7 +1382,7 @@ cx:Transitiveobjectrelativeclause_slots a rdf_ns:Seq ;
     cx:hasIS cx:Background,
         cx:Comment ;
     cx:hasTranslation "in front of " ;
-    rcxn:hasSemanticRole oliatop:LocationRole ;
+    olia:hasSemanticRole olia:LocationRole ;
     rcxn:hasSlotForm <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_4_Form> ;
     rcxn:hasSyntacticFunction "Head of a prepositional phrase" .
 
@@ -1498,7 +1498,7 @@ cx:comePLUSnoisemannerofmovementVing_3_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_VerbING .
 
 cx:comePLUSnoisemannerofmovementVing_4 a rcxn:SlotOptional ;
-    rcxn:hasSemanticRole olia:GoalRole .
+    olia:hasSemanticRole olia:GoalRole .
 
 cx:comePLUSnoisemannerofmovementVing_Ex_A a cx:Example ;
     cx:hasAnnotatedText "The back door burst open and [six-year-old Sally]1 [came]2 [running]3 excitedly [into the room]4 ." ;

@@ -559,7 +559,7 @@ def form_submit():
         else:
             if semantic_contribution.strip():
                 semantic_contribution = semantic_contribution + "Role"
-                g.add((element_uri, rcxn.hasSemanticRole, olia[semantic_contribution])) # TODO I need to make sure that they all have the prefix olia: do some of them have the prefix oliatop?
+                g.add((element_uri, olia.hasSemanticRole, olia[semantic_contribution])) # TODO I need to make sure that they all have the prefix olia: do some of them have the prefix oliatop?
         if semantic_property.strip():
             g.add((element_uri, rcxn.hasSemanticProperty, Literal(semantic_property)))
 

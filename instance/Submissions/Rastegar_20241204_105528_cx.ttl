@@ -91,7 +91,7 @@ cx:Idiomaticconstruction_3 a rcxn:SlotMandatory ;
     rcxn:hasSlotForm cx:Idiomaticconstruction_3_Form ;
     cx:hasTranslation "sleeve" ;
     cx:hasIndex cx:Idiomaticconstruction_3_Index ;
-    rcxn:hasSemanticRole oliatop:LocationRole .
+    olia:hasSemanticRole olia:LocationRole .
 
 cx:Idiomaticconstruction_3_Form a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "Ärmel" ;

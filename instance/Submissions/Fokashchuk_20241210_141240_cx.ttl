@@ -41,7 +41,7 @@
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_3> a rcxn:SlotMandatory ;
     cx:WordOrder "first element of Element 2" ;
     rcxn:hasSlotForm <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_3_Form> ;
-    rcxn:hasSemanticRole olia:DirectionRole .
+    olia:hasSemanticRole olia:DirectionRole .
 
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_3_Form> a cx:SlotForm ;
     rcxn:hasSurfaceForm "auf" ;
@@ -51,7 +51,7 @@
     cx:WordOrder "follows Element 3" ;
     rcxn:hasIS rcxn:Background ;
     rcxn:hasSyntacticFunction "complement of Element 3" ;
-    rcxn:hasSemanticRole olia:ThemeRole .
+    olia:hasSemanticRole olia:ThemeRole .
 
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_4_Form> a cx:SlotForm ;
     rcxn:hasSyntacticForm cx:deu_NounPhrase .

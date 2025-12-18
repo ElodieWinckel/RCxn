@@ -23,7 +23,7 @@ cx:POU-beneficiaryconstruction a rcxn:Construction ;
 cx:POU-beneficiaryconstruction_1 a rcxn:SlotMandatory ;
     rcxn:hasSlotForm cx:POU-beneficiaryconstruction_1_Form ;
     RDFS:comment "not always concrete" ;
-    rcxn:hasSemanticRole olia:ThemeRole .
+    olia:hasSemanticRole olia:ThemeRole .
 
 cx:POU-beneficiaryconstruction_1_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:hat_Phrase .

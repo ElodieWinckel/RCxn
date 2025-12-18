@@ -86,7 +86,7 @@ cx:comePLUSnoisemannerofmovementVing_3_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_VerbING .
 
 cx:comePLUSnoisemannerofmovementVing_4 a rcxn:SlotOptional ;
-    rcxn:hasSemanticRole olia:GoalRole .
+    olia:hasSemanticRole olia:GoalRole .
 
 cx:comePLUSnoisemannerofmovementVing_4_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_PrepositionalPhrase , cx:eng_Particle .

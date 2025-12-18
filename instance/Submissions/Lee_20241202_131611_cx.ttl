@@ -87,7 +87,7 @@ cx:Generalprepositionalconstructions_MD a rcxn:Metadata ;
     rcxn:hasSlotForm <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_4_Form> ;
     cx:hasTranslation "in front of " ;
     rcxn:hasSyntacticFunction "Head of a prepositional phrase" ;
-    rcxn:hasSemanticRole oliatop:LocationRole .
+    olia:hasSemanticRole olia:LocationRole .
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_4_Form> a rcxn:SlotForm ;
     rcxn:hasStem "vor" ;

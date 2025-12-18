@@ -32,7 +32,7 @@ cx:Dooperationwithoperand1onoperand2construction_1_Form a rcxn:SlotForm ;
 cx:Dooperationwithoperand1onoperand2construction_2 a rcxn:SlotMandatory ;
     cx:WordOrder "Immediately before Element 3" ;
     rcxn:hasSlotForm cx:Dooperationwithoperand1onoperand2construction_2_Form ;
-    rcxn:hasSemanticRole olia:InstrumentRole ;
+    olia:hasSemanticRole olia:InstrumentRole ;
     rcxn:hasSemanticProperty "In case when the operation (Element 3) is \"subtraction\", this operand is the one that is being subtracted." ;
     RDFS:comment "Semantically, Element 2 is not optional. However, if it is the result of the directly preceding operation, what would normally be expressed by \"之\", the slot can be empty, as it is implied by 以." .
 
@@ -50,7 +50,7 @@ cx:Dooperationwithoperand1onoperand2construction_3_Form a rcxn:SlotForm ;
 cx:Dooperationwithoperand1onoperand2construction_4 a rcxn:SlotMandatory ;
     cx:WordOrder "Immediately after Element 3" ;
     rcxn:hasSlotForm cx:Dooperationwithoperand1onoperand2construction_4_Form ;
-    rcxn:hasSemanticRole olia:UndergoerMacroRole ;
+    olia:hasSemanticRole olia:UndergoerMacroRole ;
     rcxn:hasSemanticProperty "In contrast to Element 2, this Element is changed as result of the operation" .
 
 cx:Dooperationwithoperand1onoperand2construction_4_Form a rcxn:SlotForm ;

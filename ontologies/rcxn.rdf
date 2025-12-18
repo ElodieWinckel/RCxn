@@ -22,6 +22,14 @@
     
 
 
+    <!-- http://purl.org/olia/olia.owl#hasSemanticRole -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/olia/olia.owl#hasSemanticRole">
+        <owl:equivalentProperty rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#hasSemanticRole"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.w3.org/2002/07/owl#topObjectProperty -->
 
     <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty">
