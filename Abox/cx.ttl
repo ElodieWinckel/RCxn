@@ -207,7 +207,7 @@ cx:Determiner_MD a rcxn:Metadata ;
     rcxn:creationDate "2025-12-01"^^xsd:date .
 
 cx:Dooperationwithoperand1onoperand2construction_1 a rcxn:SlotOptional ;
-    cx:WordOrder "Immediately before element 2" ;
+    cx:WordOrder "Immediately before Element 2" ;
     cx:hasTranslation "with" ;
     cx:hasTransliteration "yi" ;
     rcxn:hasSlotForm cx:Dooperationwithoperand1onoperand2construction_1_Form .
@@ -217,17 +217,17 @@ cx:Dooperationwithoperand1onoperand2construction_1_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:zho_Particle .
 
 cx:Dooperationwithoperand1onoperand2construction_2 a rcxn:SlotMandatory ;
-    cx:WordOrder "Immediately before element 3" ;
-    rdfs:comment "Semantically, element 2 is not optional. However, if it is the result of the directly preceding operation, what would normally be expressed by \"之\", the slot can be empty, as it is implied by 以." ;
-    rcxn:hasSemanticProperty "In case when the operation (element 3) is \"subtraction\", this operand is the one that is being subtracted." ;
-    rcxn:hasSemanticRole oliatop:InstrumentRole ;
+    cx:WordOrder "Immediately before Element 3" ;
+    rdfs:comment "Semantically, Element 2 is not optional. However, if it is the result of the directly preceding operation, what would normally be expressed by \"之\", the slot can be empty, as it is implied by 以." ;
+    rcxn:hasSemanticProperty "In case when the operation (Element 3) is \"subtraction\", this operand is the one that is being subtracted." ;
+    rcxn:hasSemanticRole olia:InstrumentRole ;
     rcxn:hasSlotForm cx:Dooperationwithoperand1onoperand2construction_2_Form .
 
 cx:Dooperationwithoperand1onoperand2construction_2_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:zho_NounPhrase .
 
 cx:Dooperationwithoperand1onoperand2construction_3 a rcxn:SlotMandatory ;
-    cx:WordOrder "Immediately after element 2" ;
+    cx:WordOrder "Immediately after Element 2" ;
     rdfs:comment "colloprofile: 加 (frequent), 減 (frequent), 乘 (frequent), 除 (frequent)" ;
     rcxn:hasSlotForm cx:Dooperationwithoperand1onoperand2construction_3_Form .
 
@@ -235,9 +235,9 @@ cx:Dooperationwithoperand1onoperand2construction_3_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:zho_VerbPhrase .
 
 cx:Dooperationwithoperand1onoperand2construction_4 a rcxn:SlotMandatory ;
-    cx:WordOrder "Immediately after element 3" ;
-    rcxn:hasSemanticProperty "In contrast to element 2, this element is changed as result of the operation" ;
-    rcxn:hasSemanticRole oliatop:UndergoerMacroRole ;
+    cx:WordOrder "Immediately after Element 3" ;
+    rcxn:hasSemanticProperty "In contrast to Element 2, this Element is changed as result of the operation" ;
+    rcxn:hasSemanticRole olia:UndergoerMacroRole ;
     rcxn:hasSlotForm cx:Dooperationwithoperand1onoperand2construction_4_Form .
 
 cx:Dooperationwithoperand1onoperand2construction_4_Form a rcxn:SlotForm ;
@@ -820,15 +820,15 @@ cx:Noun_MD a rcxn:Metadata ;
 
 cx:POU-beneficiaryconstruction_1 a rcxn:SlotMandatory ;
     rdfs:comment "not always concrete" ;
-    rcxn:hasSemanticRole oliatop:ThemeRole ;
+    rcxn:hasSemanticRole olia:ThemeRole ;
     rcxn:hasSlotForm cx:POU-beneficiaryconstruction_1_Form .
 
 cx:POU-beneficiaryconstruction_1_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:hat_Phrase .
 
 cx:POU-beneficiaryconstruction_2 a rcxn:SlotMandatory ;
-    cx:WordOrder "element POU is always before the NP" ;
-    cx:hasTranslation "For" ;
+    cx:WordOrder "Element 2 is always before Element 3" ;
+    cx:hasTranslation "for" ;
     rcxn:hasSlotForm cx:POU-beneficiaryconstruction_2_Form .
 
 cx:POU-beneficiaryconstruction_2_Form a rcxn:SlotForm ;
@@ -854,7 +854,7 @@ cx:POU-beneficiaryconstruction_MD a rcxn:Metadata ;
     rcxn:creationDate "2024-11-28"^^xsd:date .
 
 cx:POU-beneficiaryconstruction_Meaning a rcxn:ConstructionMeaning ;
-    rcxn:hasMeaning "Refer to [a beneficiary]3",
+    rcxn:hasMeaning "Refers to [a beneficiary]3",
         "[A beneficiary]3 benefits from [a theme]1" .
 
 cx:POU-beneficiaryconstruction_slots a rdf_ns:Seq ;
@@ -966,13 +966,13 @@ cx:Spanishtransitiveconstruction_MD a rcxn:Metadata ;
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._1 a rcxn:SlotOptional ;
     rcxn:hasOtherSemanticContribution "ÆFFECTOR" ;
     rcxn:hasSlotForm cx:TheEnglishGIVE-OUTVerbParticleConstruction._1_Form ;
-    rcxn:hasSyntacticFunction "SUBJ" .
+    rcxn:hasSyntacticFunction "Subject" .
 
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._1_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_NounPhrase .
 
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._2 a rcxn:SlotMandatory ;
-    cx:WordOrder "Element 2 follows the element 1" ;
+    cx:WordOrder "Element 2 follows Element 1" ;
     rcxn:hasSlotForm cx:TheEnglishGIVE-OUTVerbParticleConstruction._2_Form .
 
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._2_Form a rcxn:SlotForm ;
@@ -980,7 +980,7 @@ cx:TheEnglishGIVE-OUTVerbParticleConstruction._2_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_Verb .
 
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._3 a rcxn:SlotMandatory ;
-    cx:WordOrder "The element 3 follows the element 2 but not necessarily directly" ;
+    cx:WordOrder "Element 3 follows Element 2 but not necessarily directly" ;
     rcxn:hasSlotForm cx:TheEnglishGIVE-OUTVerbParticleConstruction._3_Form .
 
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._3_Form a rcxn:SlotForm ;
@@ -2098,7 +2098,7 @@ cx:Relative-Topic-ShiftConstruction_1_Form a rcxn:SlotForm ;
     rcxn:hasConstructionMeaning cx:TheEnglishGIVE-OUTVerbParticleConstruction._Meaning ;
     rcxn:hasMetadata cx:TheEnglishGIVE-OUTVerbParticleConstruction._MD ;
     rcxn:hasSlots cx:TheEnglishGIVE-OUTVerbParticleConstruction._slots ;
-    rcxn:hasTitle "GIVE-OUT Verb Particle Construction." .
+    rcxn:hasTitle "GIVE-OUT Verb Particle Construction" .
 
 cx:coolasadmirableconstruction a rcxn:Construction ;
     cx:hasExample cx:coolasadmirableconstruction_Ex_A,

@@ -7,7 +7,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://example.org/cx/TheEnglishGIVE-OUTVerbParticleConstruction.> a rcxn:Construction ;
-    rcxn:hasTitle "GIVE-OUT Verb Particle Construction." ;
+    rcxn:hasTitle "GIVE-OUT Verb Particle Construction" ;
     rcxn:hasConstructionMeaning cx:TheEnglishGIVE-OUTVerbParticleConstruction._Meaning ;
     cx:hasExample cx:TheEnglishGIVE-OUTVerbParticleConstruction._Ex_A ;
     rcxn:hasMetadata cx:TheEnglishGIVE-OUTVerbParticleConstruction._MD ;
@@ -16,14 +16,14 @@
 
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._1 a rcxn:SlotOptional ;
     rcxn:hasSlotForm cx:TheEnglishGIVE-OUTVerbParticleConstruction._1_Form ;
-    rcxn:hasSyntacticFunction "SUBJ" ;
+    rcxn:hasSyntacticFunction "Subject" ;
     rcxn:hasOtherSemanticContribution "ÆFFECTOR" .
 
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._1_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_NounPhrase .
 
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._2 a rcxn:SlotMandatory ;
-    cx:WordOrder "Element 2 follows the element 1" ;
+    cx:WordOrder "Element 2 follows Element 1" ;
     rcxn:hasSlotForm cx:TheEnglishGIVE-OUTVerbParticleConstruction._2_Form .
 
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._2_Form a rcxn:SlotForm ;
@@ -31,7 +31,7 @@ cx:TheEnglishGIVE-OUTVerbParticleConstruction._2_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_Verb .
 
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._3 a rcxn:SlotMandatory ;
-    cx:WordOrder "The element 3 follows the element 2 but not necessarily directly" ;
+    cx:WordOrder "Element 3 follows Element 2 but not necessarily directly" ;
     rcxn:hasSlotForm cx:TheEnglishGIVE-OUTVerbParticleConstruction._3_Form .
 
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._3_Form a rcxn:SlotForm ;

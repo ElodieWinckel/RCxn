@@ -20,7 +20,7 @@ cx:Dooperationwithoperand1onoperand2construction a rcxn:Construction ;
     lg:partOfLanguage lg:lzh .
 
 cx:Dooperationwithoperand1onoperand2construction_1 a rcxn:SlotOptional ;
-    cx:WordOrder "Immediately before element 2" ;
+    cx:WordOrder "Immediately before Element 2" ;
     rcxn:hasSlotForm cx:Dooperationwithoperand1onoperand2construction_1_Form ;
     cx:hasTranslation "with" ;
     cx:hasTransliteration "yi" .
@@ -30,17 +30,17 @@ cx:Dooperationwithoperand1onoperand2construction_1_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:zho_Particle .
 
 cx:Dooperationwithoperand1onoperand2construction_2 a rcxn:SlotMandatory ;
-    cx:WordOrder "Immediately before element 3" ;
+    cx:WordOrder "Immediately before Element 3" ;
     rcxn:hasSlotForm cx:Dooperationwithoperand1onoperand2construction_2_Form ;
-    rcxn:hasSemanticRole oliatop:InstrumentRole ;
-    rcxn:hasSemanticProperty "In case when the operation (element 3) is \"subtraction\", this operand is the one that is being subtracted." ;
-    RDFS:comment "Semantically, element 2 is not optional. However, if it is the result of the directly preceding operation, what would normally be expressed by \"之\", the slot can be empty, as it is implied by 以." .
+    rcxn:hasSemanticRole olia:InstrumentRole ;
+    rcxn:hasSemanticProperty "In case when the operation (Element 3) is \"subtraction\", this operand is the one that is being subtracted." ;
+    RDFS:comment "Semantically, Element 2 is not optional. However, if it is the result of the directly preceding operation, what would normally be expressed by \"之\", the slot can be empty, as it is implied by 以." .
 
 cx:Dooperationwithoperand1onoperand2construction_2_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:zho_NounPhrase .
 
 cx:Dooperationwithoperand1onoperand2construction_3 a rcxn:SlotMandatory ;
-    cx:WordOrder "Immediately after element 2" ;
+    cx:WordOrder "Immediately after Element 2" ;
     rcxn:hasSlotForm cx:Dooperationwithoperand1onoperand2construction_3_Form ;
     RDFS:comment "colloprofile: 加 (frequent), 減 (frequent), 乘 (frequent), 除 (frequent)" .
 
@@ -48,10 +48,10 @@ cx:Dooperationwithoperand1onoperand2construction_3_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:zho_VerbPhrase .
 
 cx:Dooperationwithoperand1onoperand2construction_4 a rcxn:SlotMandatory ;
-    cx:WordOrder "Immediately after element 3" ;
+    cx:WordOrder "Immediately after Element 3" ;
     rcxn:hasSlotForm cx:Dooperationwithoperand1onoperand2construction_4_Form ;
-    rcxn:hasSemanticRole oliatop:UndergoerMacroRole ;
-    rcxn:hasSemanticProperty "In contrast to element 2, this element is changed as result of the operation" .
+    rcxn:hasSemanticRole olia:UndergoerMacroRole ;
+    rcxn:hasSemanticProperty "In contrast to Element 2, this Element is changed as result of the operation" .
 
 cx:Dooperationwithoperand1onoperand2construction_4_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:zho_NounPhrase .

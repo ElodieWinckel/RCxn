@@ -23,15 +23,15 @@ cx:POU-beneficiaryconstruction a rcxn:Construction ;
 cx:POU-beneficiaryconstruction_1 a rcxn:SlotMandatory ;
     rcxn:hasSlotForm cx:POU-beneficiaryconstruction_1_Form ;
     RDFS:comment "not always concrete" ;
-    rcxn:hasSemanticRole oliatop:ThemeRole .
+    rcxn:hasSemanticRole olia:ThemeRole .
 
 cx:POU-beneficiaryconstruction_1_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:hat_Phrase .
 
 cx:POU-beneficiaryconstruction_2 a rcxn:SlotMandatory ;
-    cx:WordOrder "element POU is always before the NP" ;
+    cx:WordOrder "Element 2 is always before Element 3" ;
     rcxn:hasSlotForm cx:POU-beneficiaryconstruction_2_Form ;
-    cx:hasTranslation "For" .
+    cx:hasTranslation "for" .
 
 cx:POU-beneficiaryconstruction_2_Form a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "POU" ;
@@ -56,7 +56,7 @@ cx:POU-beneficiaryconstruction_MD a rcxn:Metadata ;
     rcxn:creationDate "2024-11-28"^^xsd:date .
 
 cx:POU-beneficiaryconstruction_Meaning a rcxn:ConstructionMeaning ;
-    rcxn:hasMeaning "Refer to [a beneficiary]3" ;
+    rcxn:hasMeaning "Refers to [a beneficiary]3" ;
     rcxn:hasMeaning "[A beneficiary]3 benefits from [a theme]1" .
 
 cx:POU-beneficiaryconstruction_slots a rdf:Seq ;
