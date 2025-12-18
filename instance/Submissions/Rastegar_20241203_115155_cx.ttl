@@ -64,7 +64,7 @@ cx:Idiomaticconstructions_4 a rcxn:SlotMandatory ;
 
 cx:Idiomaticconstructions_4_Form a rcxn:SlotForm ;
     cx:hasSyntacticForm cx:eng_NounPhrase ;
-    cx:hasCaseFeature olia:AccusativeCase ;
+    olia:hasCase olia:Accusative ;
     rcxn:hasStem "bridge" ;
     rcxn:hasSurfaceForm "bridges" .
 

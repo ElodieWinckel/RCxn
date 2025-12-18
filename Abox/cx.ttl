@@ -418,7 +418,7 @@ cx:Idiomaticconstruction_2 a rcxn:SlotMandatory ;
     rcxn:hasSyntacticFunction "Determiner" .
 
 cx:Idiomaticconstruction_2_Form a rcxn:SlotForm ;
-    cx:hasCaseFeature olia:DativeCase ;
+    olia:hasCase olia:DativeCase ;
     rcxn:hasSurfaceForm "dem" ;
     rcxn:hasSyntacticForm cx:deu_DefiniteArticle .
 
@@ -434,7 +434,7 @@ cx:Idiomaticconstruction_3 a rcxn:SlotMandatory ;
     rcxn:hasSlotForm cx:Idiomaticconstruction_3_Form .
 
 cx:Idiomaticconstruction_3_Form a rcxn:SlotForm ;
-    cx:hasCaseFeature olia:DativeCase ;
+    olia:hasCase olia:DativeCase ;
     rcxn:hasSurfaceForm "Ärmel" ;
     rcxn:hasSyntacticForm cx:deu_Noun .
 
@@ -531,8 +531,8 @@ cx:Idiomaticconstructions_4 a rcxn:SlotMandatory ;
     rcxn:hasSlotForm cx:Idiomaticconstructions_4_Form .
 
 cx:Idiomaticconstructions_4_Form a rcxn:SlotForm ;
-    cx:hasCaseFeature olia:AccusativeCase ;
     cx:hasSyntacticForm cx:eng_NounPhrase ;
+    olia:hasCase olia:Accusative ;
     rcxn:hasStem "bridge" ;
     rcxn:hasSurfaceForm "bridges" .
 
@@ -1140,7 +1140,7 @@ cx:Transitivedurch-Präfixverbkonstruktion_4 a rcxn:SlotMandatory ;
     rcxn:hasSyntacticFunction "Object" .
 
 cx:Transitivedurch-Präfixverbkonstruktion_4_Form a rcxn:SlotForm ;
-    cx:hasCaseFeature olia:AccusativeCase ;
+    olia:hasCase olia:Accusative ;
     rcxn:hasSyntacticForm cx:gmh_NounPhrase .
 
 cx:Transitivedurch-Präfixverbkonstruktion_5 a rcxn:SlotOptional ;
@@ -1162,7 +1162,7 @@ cx:Transitivedurch-Präfixverbkonstruktion_6 a rcxn:SlotOptional ;
     rcxn:hasSyntacticFunction "Dativobjekt" .
 
 cx:Transitivedurch-Präfixverbkonstruktion_6_Form a rcxn:SlotForm ;
-    cx:hasCaseFeature olia:DativeCase ;
+    olia:hasCase olia:DativeCase ;
     rcxn:hasStem "er" ;
     rcxn:hasSyntacticForm cx:gmh_Pronoun .
 

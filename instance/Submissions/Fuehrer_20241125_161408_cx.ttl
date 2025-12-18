@@ -100,7 +100,7 @@ cx:Transitivedurch-Präfixverbkonstruktion_4 a rcxn:SlotMandatory ;
 
 cx:Transitivedurch-Präfixverbkonstruktion_4_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:gmh_NounPhrase ;
-    cx:hasCaseFeature olia:AccusativeCase .
+    olia:hasCase olia:Accusative .
 
 cx:Transitivedurch-Präfixverbkonstruktion_5 a rcxn:SlotOptional ;
     rcxn:hasSlotForm cx:Transitivedurch-Präfixverbkonstruktion_5_Form ;
@@ -144,7 +144,7 @@ cx:Transitivedurch-Präfixverbkonstruktion_6 a rcxn:SlotOptional ;
 cx:Transitivedurch-Präfixverbkonstruktion_6_Form a rcxn:SlotForm ;
     rcxn:hasStem "er" ;
     rcxn:hasSyntacticForm cx:gmh_Pronoun ;
-    cx:hasCaseFeature olia:DativeCase .
+    olia:hasCase olia:DativeCase .
 
 cx:Transitivedurch-Präfixverbkonstruktion_6_Index a cx:Individual ;
     olia:hasAnimacy olia:Animate .

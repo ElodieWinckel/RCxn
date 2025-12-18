@@ -80,7 +80,7 @@ cx:Idiomaticconstruction_2 a rcxn:SlotMandatory ;
 cx:Idiomaticconstruction_2_Form a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "dem" ;
     rcxn:hasSyntacticForm cx:deu_DefiniteArticle ;
-    cx:hasCaseFeature olia:DativeCase .
+    olia:hasCase olia:DativeCase .
 
 cx:Idiomaticconstruction_2_Index a cx:Individual ;
     cx:hasGender cx:masculine ;
@@ -96,7 +96,7 @@ cx:Idiomaticconstruction_3 a rcxn:SlotMandatory ;
 cx:Idiomaticconstruction_3_Form a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "Ärmel" ;
     rcxn:hasSyntacticForm cx:deu_Noun ;
-    cx:hasCaseFeature olia:DativeCase .
+    olia:hasCase olia:DativeCase .
 
 cx:Idiomaticconstruction_3_Index a cx:Individual ;
     olia:hasAnimacy olia:Inanimate ;

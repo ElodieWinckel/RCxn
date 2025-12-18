@@ -676,11 +676,11 @@ def form_submit():
             g.add((element_uri, rcxn.hasSyntacticFunction, Literal(syntactic_function)))
         if add_case.strip():
             print("Warning: new value for case!")
-            g.add((element_uri, cx.hasCaseFeature, Literal(add_case)))
+            g.add((element_uri, olia.hasCase, Literal(add_case)))
         else:
             if case.strip():
                 case = case + "Case"
-                g.add((element_uri, cx.hasCaseFeature, olia[case]))
+                g.add((element_uri, olia.hasCase, olia[case]))
 
 ###################################################
 ### IMPLEMENT CONSTRUCTION COTEXT
