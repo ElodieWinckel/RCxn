@@ -50,7 +50,8 @@ cx:Argumentstructureconstruction_3 a rcxn:SlotMandatory ;
     rcxn:hasSyntacticFunction "Complement(s)" .
 
 cx:Argumentstructureconstruction_3_Form a rcxn:SlotForm ;
-    rcxn:hasSyntacticForm "one or several Phrases" .
+    rcxn:hasSyntacticForm cx:eng_Phrase ;
+    RDFS:comment "one or several Phrases" .
 
 cx:Argumentstructureconstruction_MD a rcxn:Metadata ;
     rcxn:annotator membr:Ramezani ;
@@ -61,8 +62,8 @@ cx:Argumentstructureconstruction_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning """The central senses of argument structure construction have been argued to be in association with humanly relevant scenes like: transferring [something]2 to someone, causing [something]2 to change state or move, experiencing something, [something]1 undergoing a change of state or location""" .
 
 cx:Argumentstructureconstruction_Sources a cx:Collection ;
-    cx:basedOn <> ;
-    cx:hasLiterature <> .
+    cx:basedOn <https://doi.org/10.3389/frai.2025.1477246> ;
+    cx:hasLiterature <Goldberg-1995> .
 
 cx:Argumentstructureconstruction_slots a rdf:Seq ;
     rdf:_1 cx:Argumentstructureconstruction_1 ;
@@ -105,17 +106,19 @@ cx:EnglishTransitiveconstruction_MD a cx:Metadata ;
     rcxn:annotator membr:Ramezani ;
     rcxn:creationDate "2025-02-14"^^xsd:date .
 
-<> dcterms:creator "A. E. Goldberg",
-        "Pegah Ramezani, Achim Schilling, Patrick Krauss" ;
-    dcterms:date "1995",
-        "2025" ;
+<Goldberg-1995> dcterms:creator "A. E. Goldberg" ;
+    dcterms:date "1995" ;
+    dcterms:publisher "University of Chicago Press" ;
+    dcterms:title "Constructions: A Construction Grammar Approach to Argument Structure" ;
+    dcterms:type "Book" .
+
+<https://doi.org/10.3389/frai.2025.1477246> dcterms:creator "Pegah Ramezani, Achim Schilling, Patrick Krauss" ;
+    dcterms:date "2025" ;
     dcterms:identifier "https://doi.org/10.3389/frai.2025.1477246" ;
     dcterms:publisher "Frontiers in Artificial Intelligence",
         "University of Chicago Press" ;
-    dcterms:title "Analysis of Argument Structure Constructions in the Large Language Model BERT",
-        "Constructions: A Construction Grammar Approach to Argument Structure" ;
-    dcterms:type "Article",
-        "Book" .
+    dcterms:title "Analysis of Argument Structure Constructions in the Large Language Model BERT" ;
+    dcterms:type "Article" .
 
 cx:eng_Phrase a rcxn:Construction ;
     rcxn:hasTitle "Phrase" ;

@@ -11,13 +11,15 @@ cx:FernandezSantos_20250910_629471 a rdata:Study .
 cx:Transitiveobjectrelativeclause rdata:basedOnStudy rd:FernandezSantos_20250910_629471 .
 
 rd:FernandezSantos_20250910_629471_Sources a cx:Collection ;
-    cx:hasLiterature [ dc:creator "Dąbrowska, Ewa",
+    cx:hasLiterature <doi.org/10.1017/langcog.2025.10015> .
+
+<10.1017/langcog.2025.10015> dc:creator "Dąbrowska, Ewa",
                 "Fernández Santos, Sara",
                 "Llompart, Miquel" ;
             dc:date "2025" ;
             dc:identifier "DOI 10.1017/langcog.2025.10015" ;
             dc:title "Predictive processing can override perceptual information: evidence from Spanish object relative clauses" ;
-            dc:type "journalArticle" ] .
+            dc:type "journalArticle" .
 
 rd:FernandezSantos_20250910_629471_picture1 a foaf:Image ;
     dc:creator membr:FernandezSantos ;

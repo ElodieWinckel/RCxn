@@ -1,23 +1,24 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 
+<file:///home/meuhlodi/Travail/RCxn/instance/Submissions/Goldberg-1995> dcterms:creator "A. E. Goldberg" ;
+    dcterms:date "1995" ;
+    dcterms:publisher "University of Chicago Press" ;
+    dcterms:title "Constructions: A Construction Grammar Approach to Argument Structure" ;
+    dcterms:type "Book" .
+
 <file:///home/meuhlodi/Travail/RCxn/instance/Submissions/La_lingua_del_Guicciardini> dc:creator "Nencioni, Giovanni" ;
     dc:date "1984" ;
     dc:publisher "Leo S. Olschki" ;
     dc:title "La lingua del Guicciardini" ;
     dc:type "bookSection" .
 
-<file:///home/meuhlodi/Travail/RCxn/instance/Submissions/Ramezani_20250214_134546_cx.ttl> dcterms:creator "A. E. Goldberg",
-        "Pegah Ramezani, Achim Schilling, Patrick Krauss" ;
-    dcterms:date "1995",
-        "2025" ;
-    dcterms:identifier "https://doi.org/10.3389/frai.2025.1477246" ;
-    dcterms:publisher "Frontiers in Artificial Intelligence",
-        "University of Chicago Press" ;
-    dcterms:title "Analysis of Argument Structure Constructions in the Large Language Model BERT",
-        "Constructions: A Construction Grammar Approach to Argument Structure" ;
-    dcterms:type "Article",
-        "Book" .
+<file:///home/meuhlodi/Travail/RCxn/instance/Submissions/Shuchun-2004> dc:creator "Chemla, Karine",
+        "Guo Shuchun 郭書春" ;
+    dc:date "2004" ;
+    dc:publisher "Dunod" ;
+    dc:title "Les neuf chapitres: Le classique mathématique de la Chine ancienne et ses commentaires" ;
+    dc:type "book" .
 
 <file:///home/meuhlodi/Travail/RCxn/instance/Submissions/www.english-corpora.org/bnc/> dc:contributor "Davies, Mark" ;
     dc:date "2024" ;
@@ -43,11 +44,29 @@
     dc:title "Sintassi e narrazione nella «Storia d'Italia» di Guicciardini: effetti di legato e di staccato" ;
     dc:type "journalArticle" .
 
+<https://journals.openedition.org/anglophonia/5335> dc:creator "Gournay, Lucie" ;
+    dc:date "2023/07/13" ;
+    dc:identifier "DOI 10.4000/11qbf",
+        "ISSN 2427-0466" ;
+    dc:rights "https://creativecommons.org/licenses/by-nc-nd/4.0/" ;
+    dc:title "Implementing quantitative data in a qualitative contrastive approach: the case of COME+V-ING" ;
+    dc:type "journalArticle" .
+
 <https://onlinelibrary.wiley.com/doi/10.1111/lang.12066> dc:creator "Reali, Florencia" ;
     dc:date "2014" ;
     dc:identifier "DOI 10.1111/lang.12066",
         "ISSN 00238333" ;
     dc:title "Frequency Affects Object Relative Clause Processing: Some Evidence in Favor of Usage-Based Accounts: Frequency Affects Object Relative Clause Processing" ;
+    dc:type "journalArticle" .
+
+<https://www.degruyter.com/document/doi/10.1515/cog-2024-0016/html> dc:creator "Dąbrowska, Ewa",
+        "Fernández Santos, Sara",
+        "Llompart, Miquel" ;
+    dc:date "2024-10-10" ;
+    dc:identifier "DOI 10.1515/cog-2024-0016",
+        "ISSN 0936-5907, 1613-3641" ;
+    dc:rights "http://creativecommons.org/licenses/by/4.0" ;
+    dc:title "Comprehension of object relatives in Spanish: the role of frequency and transparency in acquisition and adult grammar" ;
     dc:type "journalArticle" .
 
 <https://www.dwds.de/wb/cool> dc:date "2025" ;

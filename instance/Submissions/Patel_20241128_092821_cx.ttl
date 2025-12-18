@@ -116,7 +116,8 @@ cx:comePLUSnoisemannerofmovementVing_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "[Someone or something]1 moves towards [a reference point]4 in [a specified manner]3, often in a manner that is fast, sudden, uncontrolled, noisy, or otherwise overwhelming." .
 
 cx:comePLUSnoisemannerofmovementVing_Sources a cx:Collection ;
-    cx:basedOn <https://journals.openedition.org/anglophonia/5335> .
+    cx:basedOn <https://journals.openedition.org/anglophonia/5335> ;
+    cx:hasLiterature <https://journals.openedition.org/anglophonia/5335> .
 
 cx:comePLUSnoisemannerofmovementVing_slots a rdf:Seq ;
     rdf:_1 cx:comePLUSnoisemannerofmovementVing_1 ;

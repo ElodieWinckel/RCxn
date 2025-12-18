@@ -1,5 +1,4 @@
 @prefix cx: <http://example.org/cx/> .
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
 @prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#> .
 @prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
@@ -138,7 +137,8 @@ cx:Argumentstructureconstruction_3 a rcxn:SlotMandatory ;
     rcxn:hasSyntacticFunction "Complement(s)" .
 
 cx:Argumentstructureconstruction_3_Form a rcxn:SlotForm ;
-    rcxn:hasSyntacticForm "one or several Phrases" .
+    rdfs:comment "one or several Phrases" ;
+    rcxn:hasSyntacticForm cx:eng_Phrase .
 
 cx:Argumentstructureconstruction_MD a rcxn:Metadata ;
     cx:hasSources cx:Argumentstructureconstruction_Sources ;
@@ -149,8 +149,8 @@ cx:Argumentstructureconstruction_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "The central senses of argument structure construction have been argued to be in association with humanly relevant scenes like: transferring [something]2 to someone, causing [something]2 to change state or move, experiencing something, [something]1 undergoing a change of state or location" .
 
 cx:Argumentstructureconstruction_Sources a cx:Collection ;
-    cx:basedOn <file:///home/meuhlodi/Travail/RCxn/instance/Submissions/Ramezani_20250214_134546_cx.ttl> ;
-    cx:hasLiterature <file:///home/meuhlodi/Travail/RCxn/instance/Submissions/Ramezani_20250214_134546_cx.ttl> .
+    cx:basedOn <https://doi.org/10.3389/frai.2025.1477246> ;
+    cx:hasLiterature <file:///home/meuhlodi/Travail/RCxn/instance/Submissions/Goldberg-1995> .
 
 cx:Argumentstructureconstruction_slots a rdf_ns:Seq ;
     rdf_ns:_1 cx:Argumentstructureconstruction_1 ;
@@ -244,12 +244,8 @@ cx:Dooperationwithoperand1onoperand2construction_Meaning a rcxn:ConstructionMean
     rcxn:hasMeaning "Do [operation]3 with [operand 1]2 and [operand 2]4" .
 
 cx:Dooperationwithoperand1onoperand2construction_Sources a cx:Collection ;
-    cx:basedOn [ dc:creator "Chemla, Karine",
-                "Guo Shuchun 郭書春" ;
-            dc:date "2004" ;
-            dc:publisher "Dunod" ;
-            dc:title "Les neuf chapitres: Le classique mathématique de la Chine ancienne et ses commentaires" ;
-            dc:type "book" ] .
+    cx:basedOn <file:///home/meuhlodi/Travail/RCxn/instance/Submissions/Shuchun-2004> ;
+    cx:hasLiterature <file:///home/meuhlodi/Travail/RCxn/instance/Submissions/Shuchun-2004> .
 
 cx:Dooperationwithoperand1onoperand2construction_slots a rdf_ns:Seq ;
     rdf_ns:_1 cx:Dooperationwithoperand1onoperand2construction_1 ;
@@ -1327,7 +1323,8 @@ cx:Transitiveobjectrelativeclause_Meaning a rcxn:ConstructionMeaning ;
 
 cx:Transitiveobjectrelativeclause_Sources a cx:Collection ;
     cx:basedOn <https://www.degruyter.com/document/doi/10.1515/cog-2024-0016/html> ;
-    cx:hasLiterature <https://onlinelibrary.wiley.com/doi/10.1111/lang.12066> .
+    cx:hasLiterature <https://onlinelibrary.wiley.com/doi/10.1111/lang.12066>,
+        <https://www.degruyter.com/document/doi/10.1515/cog-2024-0016/html> .
 
 cx:Transitiveobjectrelativeclause_slots a rdf_ns:Seq ;
     rdf_ns:_1 cx:Transitiveobjectrelativeclause_1 ;
@@ -1533,7 +1530,8 @@ cx:comePLUSnoisemannerofmovementVing_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "[Someone or something]1 moves towards [a reference point]4 in [a specified manner]3, often in a manner that is fast, sudden, uncontrolled, noisy, or otherwise overwhelming." .
 
 cx:comePLUSnoisemannerofmovementVing_Sources a cx:Collection ;
-    cx:basedOn <https://journals.openedition.org/anglophonia/5335> .
+    cx:basedOn <https://journals.openedition.org/anglophonia/5335> ;
+    cx:hasLiterature <https://journals.openedition.org/anglophonia/5335> .
 
 cx:comePLUSnoisemannerofmovementVing_slots a rdf_ns:Seq ;
     rdf_ns:_1 cx:comePLUSnoisemannerofmovementVing_1 ;
@@ -2066,12 +2064,6 @@ cx:eng_Particle a rcxn:Construction ;
         cx:comePLUSnoisemannerofmovementVing ;
     rcxn:hasTitle "Particle" .
 
-cx:eng_Phrase a rcxn:Construction ;
-    lg:partOfLanguage lg:eng ;
-    rcxn:elementOf cx:Argumentstructureconstruction,
-        cx:eng_AdjectivePredicativeconstruction ;
-    rcxn:hasTitle "Phrase" .
-
 cx:gmh_NounPhrase a rcxn:Construction ;
     lg:partOfLanguage lg:gmh ;
     rcxn:elementOf cx:Transitivedurch-Präfixverbkonstruktion ;
@@ -2158,6 +2150,12 @@ cx:eng_AdjectivePredicativeconstruction a rcxn:Construction ;
     rcxn:hasMetadata cx:eng_AdjectivePredicativeconstruction_MD ;
     rcxn:hasSlots cx:eng_AdjectivePredicativeconstruction_slots ;
     rcxn:hasTitle "Adjective Predicative construction" .
+
+cx:eng_Phrase a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    rcxn:elementOf cx:Argumentstructureconstruction,
+        cx:eng_AdjectivePredicativeconstruction ;
+    rcxn:hasTitle "Phrase" .
 
 cx:eng_Verb a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;

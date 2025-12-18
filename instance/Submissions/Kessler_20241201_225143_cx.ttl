@@ -72,12 +72,15 @@ cx:Dooperationwithoperand1onoperand2construction_Meaning a rcxn:ConstructionMean
     rcxn:hasMeaning "Do [operation]3 with [operand 1]2 and [operand 2]4" .
 
 cx:Dooperationwithoperand1onoperand2construction_Sources a cx:Collection ;
-    cx:basedOn [ dc:creator "Chemla, Karine",
+    cx:basedOn <Shuchun-2004> ;
+    cx:hasLiterature <Shuchun-2004> .
+
+<Shuchun-2004> dc:creator "Chemla, Karine",
                 "Guo Shuchun 郭書春" ;
             dc:date "2004" ;
             dc:publisher "Dunod" ;
             dc:title "Les neuf chapitres: Le classique mathématique de la Chine ancienne et ses commentaires" ;
-            dc:type "book" ] .
+            dc:type "book" .
 
 cx:Dooperationwithoperand1onoperand2construction_slots a rdf:Seq ;
     rdf:_1 cx:Dooperationwithoperand1onoperand2construction_1 ;
