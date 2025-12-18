@@ -265,6 +265,9 @@ def construction_detail(uri):
                 object_value = get_label_or_iri(obj, g, ont)
                 uri = URIRef(f"http://example.org/cx/{object_value}")
                 for title in g.objects(subject=uri, predicate=rcxn.hasTitle):
+                    print("List")
+                    print(name_of_link)
+
                     lang_uri = g.value(subject=uri, predicate=lg.partOfLanguage)
                     links.append({
                         'property': name_of_link,
@@ -273,7 +276,7 @@ def construction_detail(uri):
                         'lang': get_label_or_iri(lang_uri, g, ont),
                     })
             else:
-                if str(predicate).endswith("elementOf"): # Special case for "eelement of", which is not part of the ontology of links
+                if str(predicate).endswith("elementOf"): # Special case for "element of", which is not part of the ontology of links
                     name_of_link = get_label_or_iri(predicate, g, ont)
                     object_value = get_label_or_iri(obj, g, ont)
                     uri = URIRef(f"http://example.org/cx/{object_value}")
@@ -459,6 +462,8 @@ def construction_detail(uri):
 
     # Fetch the title to display
     title = g.value(entry_uri, rcxn.hasTitle)
+
+    print(links)
 
     return render_template("app_entries/construction.html",
                            title=title,

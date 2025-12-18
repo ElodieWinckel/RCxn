@@ -1083,7 +1083,15 @@ cx:ThisCloseToV-ing_slots a rdf_ns:Seq ;
     rdf_ns:_3 cx:ThisCloseToV-ing_3 ;
     rdf_ns:_4 cx:ThisCloseToV-ing_4 .
 
-cx:Transitivedurch-Partikelverbkonstruktion links:similarFormSameFunction cx:Transitivedurch-Präfixverbkonstruktion .
+cx:Transitivedurch-Partikelverbkonstruktion a rcxn:Construction ;
+    lg:partOfLanguage lg:gmh ;
+    links:similarFormSameFunction cx:Transitivedurch-Präfixverbkonstruktion ;
+    rcxn:hasMetadata cx:Transitivedurch-Partikelverbkonstruktion_MD ;
+    rcxn:hasTitle "Transitive durch Partikelverbkonstruktion" .
+
+cx:Transitivedurch-Partikelverbkonstruktion_MD a rcxn:Metadata ;
+    rcxn:annotator membr:Fuehrer ;
+    rcxn:creationDate "2024-11-25"^^xsd:date .
 
 cx:Transitivedurch-Präfixverbkonstruktion_1 a rcxn:Slot ;
     cx:hasIndex cx:Transitivedurch-Präfixverbkonstruktion_1_Index ;
@@ -1216,7 +1224,8 @@ cx:Transitivedurch-Verbkonstruktion a rcxn:Construction ;
     cx:hasTitle "Transitive durch-Verbkonstruktion" ;
     lg:partOfLanguage lg:gmh ;
     links:similarFormSameFunction cx:Transitivedurch-Präfixverbkonstruktion ;
-    rcxn:hasMetadata cx:Transitivedurch-Verbkonstruktion_MD .
+    rcxn:hasMetadata cx:Transitivedurch-Verbkonstruktion_MD ;
+    rcxn:hasTitle "Transitive durch Verbkonstruktion" .
 
 cx:Transitivedurch-Verbkonstruktion_MD a rcxn:Metadata ;
     rcxn:annotator membr:Fuehrer ;

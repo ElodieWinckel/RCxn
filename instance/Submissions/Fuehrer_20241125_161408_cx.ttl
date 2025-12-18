@@ -51,6 +51,24 @@ cx:Transitivedurch-Präfixverbkonstruktion_1 a rcxn:Slot ;
     olia:hasSemanticRole olia:ActorMacroRole ;
     rcxn:hasSemanticProperty "Figur" .
 
+cx:Transitivedurch-Partikelverbkonstruktion a rcxn:Construction ;
+    rcxn:hasMetadata cx:Transitivedurch-Partikelverbkonstruktion_MD ;
+    rcxn:hasTitle "Transitive durch Partikelverbkonstruktion" ;
+    lg:partOfLanguage lg:gmh.
+
+cx:Transitivedurch-Partikelverbkonstruktion_MD a rcxn:Metadata ;
+    rcxn:annotator membr:Fuehrer ;
+    rcxn:creationDate "2024-11-25"^^xsd:date .
+
+cx:Transitivedurch-Verbkonstruktion a rcxn:Construction ;
+    rcxn:hasMetadata cx:Transitivedurch-Verbkonstruktion_MD ;
+    rcxn:hasTitle "Transitive durch Verbkonstruktion" ;
+    lg:partOfLanguage lg:gmh.
+
+cx:Transitivedurch-Verbkonstruktion_MD a rcxn:Metadata ;
+    rcxn:annotator membr:Fuehrer ;
+    rcxn:creationDate "2024-11-25"^^xsd:date .
+
 cx:Transitivedurch-Präfixverbkonstruktion_1_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:gmh_NounPhrase .
 
