@@ -107,7 +107,7 @@ cx:coolasemotionconstruction_slots a rdf:Seq ;
     rdf:_1 cx:coolasemotionconstruction_1 .
 
 cx:coolasemotionconstruction_1 a rcxn:SlotMandatory ;
-    rcxn:hasPhonologycx:hasPhonology "/kuːl/" ;
+    rcxn:hasPhonology "/kuːl/" ;
     rcxn:hasSlotForm cx:coolasemotionconstruction_1_Form .
 
 cx:coolasemotionconstruction_1_Form a rcxn:SlotForm ;

@@ -265,9 +265,6 @@ def construction_detail(uri):
                 object_value = get_label_or_iri(obj, g, ont)
                 uri = URIRef(f"http://example.org/cx/{object_value}")
                 for title in g.objects(subject=uri, predicate=rcxn.hasTitle):
-                    print("List")
-                    print(name_of_link)
-
                     lang_uri = g.value(subject=uri, predicate=lg.partOfLanguage)
                     links.append({
                         'property': name_of_link,
@@ -462,8 +459,6 @@ def construction_detail(uri):
 
     # Fetch the title to display
     title = g.value(entry_uri, rcxn.hasTitle)
-
-    print(links)
 
     return render_template("app_entries/construction.html",
                            title=title,
