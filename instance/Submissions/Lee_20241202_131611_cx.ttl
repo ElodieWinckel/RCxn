@@ -103,7 +103,7 @@ cx:Generalprepositionalconstructions_MD a rcxn:Metadata ;
     rcxn:hasSemanticProperty "The noun does not refer to the literal body part but rather conveys a metaphorically extended meaning, representing perception, awareness or mental visualization." .
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_5_Form> a rcxn:SlotForm ;
-    rcxn:hasStem "Auge" ;
+    rcxn:hasSurfaceForm "Augen" ;
     rcxn:hasSyntacticForm cx:deu_Noun .
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_6> a rcxn:SlotOptional ;
