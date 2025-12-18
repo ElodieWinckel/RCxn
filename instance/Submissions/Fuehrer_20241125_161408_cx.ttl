@@ -23,7 +23,7 @@ cx:Transitivedurch-Präfixverbkonstruktion a rcxn:Construction ;
     links:inheritsFrom cx:Monotransitivkonstruktion,
         cx:Präfixverbkonstruktion ;
     lg:partOfLanguage lg:gmhWr12 ;
-    cx:similarFormSameFunction cx:Transitivedurch-Partikelverbkonstruktion,
+    links:similarFormSameFunction cx:Transitivedurch-Partikelverbkonstruktion,
         cx:Transitivedurch-Verbkonstruktion ;
     RDFS:comment "Depends on what is doable, all MHG data is available in form of one big csv-file. Can be split into multiple files,  however." .
 
@@ -48,7 +48,7 @@ cx:Präfixverbkonstruktion_MD a rcxn:Metadata ;
 cx:Transitivedurch-Präfixverbkonstruktion_1 a rcxn:Slot ;
     rcxn:hasSyntacticFunction "Subject" ;
     cx:hasIndex cx:Transitivedurch-Präfixverbkonstruktion_1_Index ;
-    rcxn:hasSemanticRole oliatop:ActorMacroRole ;
+    rcxn:hasSemanticRole olia:ActorMacroRole ;
     rcxn:hasSemanticProperty "Figur" .
 
 cx:Transitivedurch-Präfixverbkonstruktion_1_Form a rcxn:SlotForm ;
@@ -61,7 +61,7 @@ cx:Transitivedurch-Präfixverbkonstruktion_2 a rcxn:SlotMandatory ;
     cx:WordOrder "2 vor 3" ;
     rcxn:hasSlotForm cx:Transitivedurch-Präfixverbkonstruktion_2_Form ;
     cx:hasTranslation "'durch'" ;
-    rcxn:hasSemanticRole oliatop:DirectionRole .
+    rcxn:hasSemanticRole olia:DirectionRole .
 
 cx:Transitivedurch-Präfixverbkonstruktion_2_Form a rcxn:SlotForm ;
     rcxn:hasStem "durh" ;
@@ -107,7 +107,7 @@ cx:Transitivedurch-Präfixverbkonstruktion_5 a rcxn:SlotOptional ;
     cx:hasTranslation "da" ,
         "somit" ;
     rcxn:hasSyntacticFunction "Temporaladverbiale" ;
-    rcxn:hasSemanticRole oliatop:TimeRole .
+    rcxn:hasSemanticRole olia:TimeRole .
 
 cx:Transitivedurch-Präfixverbkonstruktion_5_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:gmh_AdverbialPhrase .
@@ -136,7 +136,7 @@ cx:Transitivedurch-Präfixverbkonstruktion_Ex_C a cx:Example ;
 cx:Transitivedurch-Präfixverbkonstruktion_6 a rcxn:SlotOptional ;
     rcxn:hasSlotForm cx:Transitivedurch-Präfixverbkonstruktion_6_Form ;
     cx:hasIndex cx:Transitivedurch-Präfixverbkonstruktion_6_Index ;
-    rcxn:hasSemanticRole oliatop:AddresseeRole ;
+    rcxn:hasSemanticRole olia:AddresseeRole ;
     cx:hasTranslation "ihr",
         "ihm" ;
     rcxn:hasSyntacticFunction "Dativobjekt" .

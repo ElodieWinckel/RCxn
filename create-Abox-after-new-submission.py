@@ -39,7 +39,7 @@ g.bind("rsrch", rsrch)
 graph_cx.bind("rsrch", rsrch)
 graph_membr.bind("rsrch", rsrch)
 
-links = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.0#")
+links = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#")
 g.bind("links", links)
 graph_cx.bind("links", links)
 graph_membr.bind("links", links)
