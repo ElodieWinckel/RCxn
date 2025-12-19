@@ -293,13 +293,30 @@ membr:Project_Fokashchuk_241210_F250218 a rsrch:Finding ;
     rsrch:basedOn <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions> .
 
 membr:Project_Fuehrer a rsrch:Project ;
-    rsrch:hasFindings membr:Project_Fuehrer_F250218 ;
+    rsrch:hasFindings membr:Project_Fuehrer_F250218,
+        membr:Project_Fuehrer_F2512191334,
+        membr:Project_Fuehrer_F2512191344,
+        membr:Project_Fuehrer_F2512191440 ;
     rsrch:projectName "German verbs with particles or prefixes in language change: Form, meaning, and syntax"@en .
 
 membr:Project_Fuehrer_F250218 a rsrch:Finding ;
     rdfs:label """Subjekt ist Figur, Objekt ist Grund; \r
 Gegenstände als Objekt erlauben nur intermediäre Interpretationen, während Lokalitäten auch multidirektionale Interpretationen erlauben""" ;
     rsrch:basedOn cx:Transitivedurch-Präfixverbkonstruktion .
+
+membr:Project_Fuehrer_F2512191334 a rsrch:Finding ;
+    rdfs:label """Subject is mostly animate (~85%), and sometimes inanimate (~15%).\r
+Accusative object can fluctuate between a locality and things/persons, thus altering the interpretation of the construct.\r
+Intensifying function occurs when there's already a directional element present in the base verb.""" ;
+    rsrch:basedOn <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung> .
+
+membr:Project_Fuehrer_F2512191344 a rsrch:Finding ;
+    rdfs:label "none" ;
+    rsrch:basedOn <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Tätigkeit> .
+
+membr:Project_Fuehrer_F2512191440 a rsrch:Finding ;
+    rdfs:label "directional information seemingly two times present, thus redundant" ;
+    rsrch:basedOn <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit> .
 
 membr:Project_Gedik a rsrch:Project ;
     rsrch:projectName "Project Gedik"@en .

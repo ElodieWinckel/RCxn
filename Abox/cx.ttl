@@ -37,6 +37,15 @@ cx:comePLUSnoisemannerofmovementVing_4_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_Particle,
         cx:eng_PrepositionalPhrase .
 
+<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Tätigkeit> a rcxn:Construction ;
+    cx:hasExample <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Tätigkeit_Ex_A> ;
+    rdfs:comment "1 csv file with all the data from the 12th century" ;
+    lg:partOfLanguage lg:gmh ;
+    rcxn:hasConstructionMeaning <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Tätigkeit_Meaning> ;
+    rcxn:hasMetadata <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Tätigkeit_MD> ;
+    rcxn:hasSlots <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Tätigkeit_slots> ;
+    rcxn:hasTitle "Präfixverbkonstruktion (12. Jh., Tätigkeit)" .
+
 cx:Adjectiveexclamativeconstruction a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
     links:inheritedBy cx:engInf_Coolexclamativeconstruction ;
@@ -883,6 +892,10 @@ cx:Präfixverbkonstruktion a rcxn:Construction ;
     links:inheritedBy cx:Transitivedurch-Präfixverbkonstruktion ;
     rcxn:hasMetadata cx:Präfixverbkonstruktion_MD ;
     rcxn:hasTitle "Präfixverbkonstruktion" .
+
+cx:Präfixverbkonstruktion12Jh_MD a rcxn:Metadata ;
+    cx:annotator membr:Fuehrer ;
+    rcxn:creationDate "2025-12-19"^^xsd:date .
 
 cx:Präfixverbkonstruktion_MD a rcxn:Metadata ;
     rcxn:annotator membr:Fuehrer ;
@@ -1927,20 +1940,221 @@ cx:gmh_AdverbialPhrase a rcxn:Construction ;
     rcxn:elementOf cx:Transitivedurch-Präfixverbkonstruktion ;
     rcxn:hasTitle "Adverbial Phrase" .
 
-cx:gmh_Prefix a rcxn:Construction ;
-    lg:partOfLanguage lg:gmh ;
-    rcxn:elementOf cx:Transitivedurch-Präfixverbkonstruktion ;
-    rcxn:hasTitle "Prefix" .
-
 cx:gmh_Pronoun a rcxn:Construction ;
     lg:partOfLanguage lg:gmh ;
     rcxn:elementOf cx:Transitivedurch-Präfixverbkonstruktion ;
     rcxn:hasTitle "Pronoun" .
 
-cx:gmh_Verb a rcxn:Construction ;
-    lg:partOfLanguage lg:gmh ;
-    rcxn:elementOf cx:Transitivedurch-Präfixverbkonstruktion ;
-    rcxn:hasTitle "Verb" .
+<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung_1> a rcxn:SlotOptional ;
+    olia:hasCase olia:NominativeCase ;
+    olia:hasSemanticRole olia:ActorMacroRole ;
+    rcxn:hasSlotForm <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung_1_Form> ;
+    rcxn:hasSyntacticFunction "Subject" .
+
+<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung_1_Form> a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:gmh_NounPhrase .
+
+<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung_2> a rcxn:SlotMandatory ;
+    cx:WordOrder "2nd" ;
+    cx:hasTranslation "dt. 'durch', eng. 'through'" ;
+    rcxn:hasSlotForm <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung_2_Form> ;
+    rcxn:hasSyntacticFunction "Verb" .
+
+<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung_2_Form> a rcxn:SlotForm ;
+    rcxn:hasStem "durh" ;
+    rcxn:hasSurfaceForm "durch, durh, dur, thurh" ;
+    rcxn:hasSyntacticForm cx:gmh_Prefix .
+
+<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung_3> a rcxn:SlotMandatory ;
+    cx:WordOrder "3rd" ;
+    rcxn:hasSlotForm <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung_3_Form> ;
+    rcxn:hasSyntacticFunction "Verb" .
+
+<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung_3_Form> a rcxn:SlotForm ;
+    rcxn:hasSurfaceForm "æhten, bîzen, dringen, gân, houwen, leiten, rîten, stëchen, varn" .
+
+<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung_4> a rcxn:SlotMandatory ;
+    olia:hasCase olia:AccusativeCase ;
+    rcxn:hasOtherSemanticContribution "Location, UndergoerMacro" ;
+    rcxn:hasSlotForm <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung_4_Form> ;
+    rcxn:hasSyntacticFunction "Accusative Object" .
+
+<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung_4_Form> a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:gmh_NounPhrase .
+
+<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung_Ex_A> a cx:Example ;
+    cx:hasAnnotatedText "[ſi]1 [durh]2 [hiwen]3 [daz wal]4 " ;
+    cx:hasGlosses "they through punched the battlefield" ;
+    cx:hasText "ſi durh hiwen daz wal " ;
+    cx:hasTranslation "'they punched their way through the battlefield'" ;
+    cx:hasTransliteration "si durh hiwen daz wal" ;
+    rdfs:comment "Source: Jüngere Judith: 0a,415; see https://www.linguistics.rub.de/rem/pub/texts//M119_dipl.pdf" .
+
+<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung_Ex_B> a cx:Example ;
+    cx:hasAnnotatedText "[ſi]1 giengen ûz unt [durh]2 [giengen]3 [div caſtel]4 brediginde vnt heilinde allen thalbin " ;
+    cx:hasGlosses "they went out and through went the castle preaching and healing to all directions" ;
+    cx:hasText "ſi giengen ûz unt durh giengen div caſtel brediginde vnt heilinde allen thalbin " ;
+    cx:hasTranslation "'they went out and went through the castle, preaching and healing to every side'" ;
+    cx:hasTransliteration "si giengen uz und durh giengen div castel brediginde unt heilinde allen thalbin" ;
+    rdfs:comment "Source: Wien-Münchner Evangelienübersetzung: 48ba,14; see https://www.linguistics.rub.de/rem/pub/texts//M067_dipl.pdf" .
+
+<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung_Ex_C> a cx:Example ;
+    cx:hasAnnotatedText "got uir lazin hat in. [durch]2[ethint]3 [in]4 un̄ begrifet in" ;
+    cx:hasGlosses "god left him. chase him and get him" ;
+    cx:hasText "got uir lazin hat in. durchethint in un̄ begrifet in" ;
+    cx:hasTranslation "'God left him. Chase him down and get him!'" ;
+    rdfs:comment "Source: Trierer Interlinearversion zum Psalter: 28va,9; see https://www.linguistics.rub.de/rem/pub/texts//M188_dipl.pdf" .
+
+<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung_MD> a rcxn:Metadata ;
+    rcxn:annotator membr:Fuehrer ;
+    rcxn:creationDate "2025-12-19"^^xsd:date .
+
+<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung_Meaning> a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "local-concrete, local-abstract, intensifying" .
+
+<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung_slots> a rdf_ns:Seq ;
+    rdf_ns:_1 <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung_1> ;
+    rdf_ns:_2 <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung_2> ;
+    rdf_ns:_3 <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung_3> ;
+    rdf_ns:_4 <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung_4> .
+
+<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Tätigkeit_1> a rcxn:SlotMandatory ;
+    cx:WordOrder "1st" ;
+    cx:hasIndex <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Tätigkeit_1_Index> ;
+    cx:hasTranslation "'I'" ;
+    olia:hasCase olia:NominativeCase ;
+    olia:hasSemanticRole olia:ActorMacroRole ;
+    rcxn:hasSlotForm <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Tätigkeit_1_Form> ;
+    rcxn:hasSyntacticFunction "Subject" .
+
+<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Tätigkeit_1_Form> a rcxn:SlotForm ;
+    rcxn:hasSurfaceForm "ich" .
+
+<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Tätigkeit_1_Index> a cx:Individual ;
+    olia:hasAnimacy olia:Animate ;
+    olia:hasNumber olia:Singular .
+
+<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Tätigkeit_2> a rcxn:SlotMandatory ;
+    cx:WordOrder "2nd" ;
+    cx:hasTranslation "dt. 'durch', eng. 'through'" ;
+    rcxn:hasSlotForm <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Tätigkeit_2_Form> ;
+    rcxn:hasSyntacticFunction "Verb" .
+
+<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Tätigkeit_2_Form> a rcxn:SlotForm ;
+    rcxn:hasSurfaceForm "durc" .
+
+<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Tätigkeit_3> a rcxn:SlotMandatory ;
+    cx:WordOrder "3rd" ;
+    cx:hasIndex <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Tätigkeit_3_Index> ;
+    cx:hasTranslation "'to go'" ;
+    rcxn:hasSlotForm <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Tätigkeit_3_Form> ;
+    rcxn:hasSyntacticFunction "Verb" .
+
+<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Tätigkeit_3_Form> a rcxn:SlotForm ;
+    rcxn:hasStem "gân" ;
+    rcxn:hasSurfaceForm "ginc" .
+
+<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Tätigkeit_3_Index> a cx:Event ;
+    cx:hasMode olia:IndicativeVerb ;
+    cx:hasPerson cx:first ;
+    olia:hasNumber olia:Singular ;
+    olia:hasTense olia:Past ;
+    olia:hasVoice olia:ActiveVoice .
+
+<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Tätigkeit_Ex_A> a cx:Example ;
+    cx:hasAnnotatedText "ich durc ginc in miner unſculde hercē mineſ in mitten huſeſ mineſ [TP h/55va,6]" ;
+    cx:hasGlosses "I through went in my innocence heart's mine in middle house's mine" ;
+    cx:hasText "ich durc ginc in miner unſculde hercē mineſ in mitten huſeſ mineſ [TP h/55va,6]" ;
+    cx:hasTranslation "I strolled through the inside of my house in my heart's complete innocence" ;
+    cx:hasTransliteration "ich durc ginc in miner unschulde herce mines in mitten huses mines" ;
+    rdfs:comment "Source: Trierer Interlinearversion zum Psalter: 55va,6; see https://www.linguistics.rub.de/rem/pub/texts//M188_dipl.pdf" .
+
+<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Tätigkeit_MD> a rcxn:Metadata ;
+    rcxn:annotator membr:Fuehrer ;
+    rcxn:creationDate "2025-12-19"^^xsd:date .
+
+<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Tätigkeit_Meaning> a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "local-concrete" .
+
+<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Tätigkeit_slots> a rdf_ns:Seq ;
+    rdf_ns:_1 <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Tätigkeit_1> ;
+    rdf_ns:_2 <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Tätigkeit_2> ;
+    rdf_ns:_3 <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Tätigkeit_3> .
+
+<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit_1> a rcxn:SlotMandatory ;
+    cx:WordOrder "1st" ;
+    olia:hasSemanticRole olia:ActorMacroRole ;
+    rcxn:hasSlotForm <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit_1_Form> ;
+    rcxn:hasSyntacticFunction "Subject" .
+
+<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit_1_Form> a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:gmh_NounPhrase .
+
+<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit_2> a rcxn:SlotMandatory ;
+    cx:WordOrder "2nd" ;
+    cx:hasTranslation "dt. 'durch', eng. 'through'" ;
+    rcxn:hasSlotForm <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit_2_Form> ;
+    rcxn:hasSyntacticFunction "Verb" .
+
+<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit_2_Form> a rcxn:SlotForm ;
+    rcxn:hasStem "durh" ;
+    rcxn:hasSurfaceForm "durch" ;
+    rcxn:hasSyntacticForm cx:gmh_Prefix .
+
+<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit_3> a rcxn:SlotMandatory ;
+    cx:WordOrder "3rd" ;
+    cx:hasTranslation "'to break', 'to drive'" ;
+    rcxn:hasSlotForm <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit_3_Form> ;
+    rcxn:hasSyntacticFunction "Verb" .
+
+<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit_3_Form> a rcxn:SlotForm ;
+    rcxn:hasStem "brëchen, varn" ;
+    rcxn:hasSyntacticForm cx:gmh_Verb .
+
+<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit_4> a rcxn:SlotMandatory ;
+    cx:WordOrder "4th" ;
+    cx:hasTranslation "'through fire and water', 'into the earth', 'into the fighting hordes'" ;
+    olia:hasSemanticRole olia:DirectionRole ;
+    rcxn:hasSlotForm <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit_4_Form> ;
+    rcxn:hasSyntacticFunction "Adverbial" .
+
+<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit_4_Form> a rcxn:SlotForm ;
+    rcxn:hasSurfaceForm "durch daz fur un̄ daz wazer, in die erdᵉn, indi ſcar " .
+
+<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit_Ex_A> a cx:Example ;
+    cx:hasAnnotatedText "[Wir]1 [durch]2 [furen]3 [durch daz fur un̄ daz wazer]4 " ;
+    cx:hasGlosses "we through went through the fire and the water" ;
+    cx:hasText "Wir durch furen durch daz fur un̄ daz wazer " ;
+    cx:hasTranslation "'we went through fire and water'" ;
+    rdfs:comment "Source: Trierer Interlinearversion zum Psalter: 23ra, 6; see https://www.linguistics.rub.de/rem/pub/texts//M188_dipl.pdf" .
+
+<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit_Ex_B> a cx:Example ;
+    cx:hasAnnotatedText "[zunge ire]1 [durch]2 [fur]3 [in die erdᵉn]4" ;
+    cx:hasGlosses "tongue their through went in the earth" ;
+    cx:hasText "zunge ire durch fur in die erdᵉn" ;
+    cx:hasTranslation "'their tongue went into the ground'" ;
+    rdfs:comment "Source: Trierer Interlinearversion zum Psalter: 30va, 11; see https://www.linguistics.rub.de/rem/pub/texts//M188_dipl.pdf" .
+
+<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit_Ex_C> a cx:Example ;
+    cx:hasAnnotatedText "[er]1 [durch]2 [prach]3 [indi ſcar]4" ;
+    cx:hasGlosses "he through broke into the hordes" ;
+    cx:hasText "er durch prach indi ſcar" ;
+    cx:hasTranslation "'he broke through into the fighting hordes'" ;
+    cx:hasTransliteration "er durch prach indi scar" ;
+    rdfs:comment "Source: Kaiserchronik A [V]: 0a, 7074; see https://www.linguistics.rub.de/rem/pub/texts//M121Y_dipl.pdf" .
+
+<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit_MD> a rcxn:Metadata ;
+    rcxn:annotator membr:Fuehrer ;
+    rcxn:creationDate "2025-12-19"^^xsd:date .
+
+<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit_Meaning> a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "local-concrete" .
+
+<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit_slots> a rdf_ns:Seq ;
+    rdf_ns:_1 <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit_1> ;
+    rdf_ns:_2 <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit_2> ;
+    rdf_ns:_3 <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit_3> ;
+    rdf_ns:_4 <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit_4> .
 
 cx:hat_InvariableSyntacticMorpheme a rcxn:Construction ;
     lg:partOfLanguage lg:hat ;
@@ -2013,6 +2227,12 @@ cx:zho_VerbPhrase a rcxn:Construction ;
     rcxn:hasSlots <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_slots> ;
     rcxn:hasTitle "Allative NP1 + auf + NP2 & NP1 + an + NP2 constructions" .
 
+cx:Präfixverbkonstruktion12Jh a rcxn:Construction ;
+    links:inheritedBy <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung>,
+        <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit> ;
+    rcxn:hasMetadata cx:Präfixverbkonstruktion12Jh_MD ;
+    rcxn:hasTitle "Präfixverbkonstruktion (12. Jh.)" .
+
 cx:ThisCloseToV-ing a rcxn:Construction ;
     cx:hasExample cx:ThisCloseToV-ing_Ex_A ;
     cx:hasGesture """The gesture is part of the construction's form.\r
@@ -2068,10 +2288,11 @@ cx:eng_Particle a rcxn:Construction ;
         cx:comePLUSnoisemannerofmovementVing ;
     rcxn:hasTitle "Particle" .
 
-cx:gmh_NounPhrase a rcxn:Construction ;
+cx:gmh_Verb a rcxn:Construction ;
     lg:partOfLanguage lg:gmh ;
-    rcxn:elementOf cx:Transitivedurch-Präfixverbkonstruktion ;
-    rcxn:hasTitle "Noun Phrase" .
+    rcxn:elementOf cx:Transitivedurch-Präfixverbkonstruktion,
+        <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit> ;
+    rcxn:hasTitle "Verb" .
 
 cx:spa_NounPhrase a rcxn:Construction ;
     lg:partOfLanguage lg:spa ;
@@ -2173,6 +2394,25 @@ cx:eng_VerbPhrase a rcxn:Construction ;
     rcxn:elementOf cx:EvaluativeAttributionConstruction ;
     rcxn:hasTitle "Verb Phrase" .
 
+cx:gmh_Prefix a rcxn:Construction ;
+    lg:partOfLanguage lg:gmh ;
+    rcxn:elementOf cx:Transitivedurch-Präfixverbkonstruktion,
+        <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung>,
+        <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit> ;
+    rcxn:hasTitle "Prefix" .
+
+<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung> a rcxn:Construction ;
+    cx:hasExample <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung_Ex_A>,
+        <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung_Ex_B>,
+        <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung_Ex_C> ;
+    rdfs:comment "1 csv file with all the data from the 12th century" ;
+    lg:partOfLanguage lg:gmh ;
+    links:inheritsFrom cx:Präfixverbkonstruktion12Jh ;
+    rcxn:hasConstructionMeaning <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung_Meaning> ;
+    rcxn:hasMetadata <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung_MD> ;
+    rcxn:hasSlots <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung_slots> ;
+    rcxn:hasTitle "Präfixverbkonstruktion (12. Jh., Handlung)" .
+
 cx:POU-beneficiaryconstruction a rcxn:Construction ;
     cx:hasExample cx:POU-beneficiaryconstruction_Ex_A ;
     lg:partOfLanguage lg:hat ;
@@ -2196,6 +2436,18 @@ cx:eng_coolconstruction a rcxn:Construction ;
     rcxn:hasMetadata cx:eng_coolconstruction_MD ;
     rcxn:hasSlots cx:eng_coolconstruction_slots ;
     rcxn:hasTitle "cool (temperature) construction" .
+
+<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit> a rcxn:Construction ;
+    cx:hasExample <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit_Ex_A>,
+        <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit_Ex_B>,
+        <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit_Ex_C> ;
+    rdfs:comment "1 csv file with all the data from the 12th century" ;
+    lg:partOfLanguage lg:gmh ;
+    links:inheritsFrom cx:Präfixverbkonstruktion12Jh ;
+    rcxn:hasConstructionMeaning <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit_Meaning> ;
+    rcxn:hasMetadata <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit_MD> ;
+    rcxn:hasSlots <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit_slots> ;
+    rcxn:hasTitle "Präfixverbkonstruktion (12. Jh., lokalistische Tätigkeit)" .
 
 cx:EvaluativeAttributionConstruction a rcxn:Construction ;
     lg:partOfLanguage lg:engUsUkWr ;
@@ -2233,6 +2485,13 @@ cx:eng_PrepositionalPhrase a rcxn:Construction ;
         cx:comePLUSnoisemannerofmovementVing,
         cx:eng_AdjectivePhrase ;
     rcxn:hasTitle "Prepositional Phrase" .
+
+cx:gmh_NounPhrase a rcxn:Construction ;
+    lg:partOfLanguage lg:gmh ;
+    rcxn:elementOf cx:Transitivedurch-Präfixverbkonstruktion,
+        <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung>,
+        <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit> ;
+    rcxn:hasTitle "Noun Phrase" .
 
 cx:Argumentstructureconstruction a rcxn:Construction ;
     rdfs:comment """The main data includes 2000 sentences that are generated by GPT-4, which is a text file.\r

@@ -1,0 +1,117 @@
+@prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cx: <http://example.org/cx/> .
+@prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
+@prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#> .
+@prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
+@prefix olia: <http://purl.org/olia/olia.owl#> .
+@prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+membr:Project_Fuehrer rsrch:hasFindings membr:Project_Fuehrer_F2512191334 .
+
+cx:Präfixverbkonstruktion12Jh a rcxn:Construction ;
+    links:inheritedBy <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung> ;
+    rcxn:hasMetadata cx:Präfixverbkonstruktion12Jh_MD ;
+    rcxn:hasTitle "Präfixverbkonstruktion (12. Jh.)" .
+
+cx:Präfixverbkonstruktion12Jh_MD a rcxn:Metadata ;
+    cx:annotator membr:Fuehrer ;
+    rcxn:creationDate "2025-12-19"^^xsd:date .
+
+cx:gmh_Prefix rcxn:elementOf <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung> .
+
+<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung_1> a rcxn:SlotOptional ;
+    olia:hasCase olia:NominativeCase ;
+    olia:hasSemanticRole olia:ActorMacroRole ;
+    rcxn:hasSlotForm <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung_1_Form> ;
+    rcxn:hasSyntacticFunction "Subject" .
+
+<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung_1_Form> a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:gmh_NounPhrase .
+
+<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung_2> a rcxn:SlotMandatory ;
+    cx:WordOrder "2nd" ;
+    cx:hasTranslation "dt. 'durch', eng. 'through'" ;
+    rcxn:hasSlotForm <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung_2_Form> ;
+    rcxn:hasSyntacticFunction "Verb" .
+
+<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung_2_Form> a rcxn:SlotForm ;
+    rcxn:hasStem "durh" ;
+    rcxn:hasSurfaceForm "durch, durh, dur, thurh" ;
+    rcxn:hasSyntacticForm cx:gmh_Prefix .
+
+<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung_3> a rcxn:SlotMandatory ;
+    cx:WordOrder "3rd" ;
+    rcxn:hasSlotForm <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung_3_Form> ;
+    rcxn:hasSyntacticFunction "Verb" .
+
+<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung_3_Form> a rcxn:SlotForm ;
+    rcxn:hasSurfaceForm "æhten, bîzen, dringen, gân, houwen, leiten, rîten, stëchen, varn" .
+
+<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung_4> a rcxn:SlotMandatory ;
+    olia:hasCase olia:AccusativeCase ;
+    rcxn:hasOtherSemanticContribution "Location, UndergoerMacro" ;
+    rcxn:hasSlotForm <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung_4_Form> ;
+    rcxn:hasSyntacticFunction "Accusative Object" .
+
+<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung_4_Form> a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:gmh_NounPhrase .
+
+<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung_Ex_A> a cx:Example ;
+    cx:hasAnnotatedText "[ſi]1 [durh]2 [hiwen]3 [daz wal]4 " ;
+    cx:hasGlosses "they through punched the battlefield" ;
+    cx:hasText "ſi durh hiwen daz wal " ;
+    cx:hasTranslation "'they punched their way through the battlefield'" ;
+    cx:hasTransliteration "si durh hiwen daz wal" ;
+    RDFS:comment "Source: Jüngere Judith: 0a,415; see https://www.linguistics.rub.de/rem/pub/texts//M119_dipl.pdf" .
+
+<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung_Ex_B> a cx:Example ;
+    cx:hasAnnotatedText "[ſi]1 giengen ûz unt [durh]2 [giengen]3 [div caſtel]4 brediginde vnt heilinde allen thalbin " ;
+    cx:hasGlosses "they went out and through went the castle preaching and healing to all directions" ;
+    cx:hasText "ſi giengen ûz unt durh giengen div caſtel brediginde vnt heilinde allen thalbin " ;
+    cx:hasTranslation "'they went out and went through the castle, preaching and healing to every side'" ;
+    cx:hasTransliteration "si giengen uz und durh giengen div castel brediginde unt heilinde allen thalbin" ;
+    RDFS:comment "Source: Wien-Münchner Evangelienübersetzung: 48ba,14; see https://www.linguistics.rub.de/rem/pub/texts//M067_dipl.pdf" .
+
+<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung_Ex_C> a cx:Example ;
+    cx:hasAnnotatedText "got uir lazin hat in. [durch]2[ethint]3 [in]4 un̄ begrifet in" ;
+    cx:hasGlosses "god left him. chase him and get him" ;
+    cx:hasText "got uir lazin hat in. durchethint in un̄ begrifet in" ;
+    cx:hasTranslation "'God left him. Chase him down and get him!'" ;
+    RDFS:comment "Source: Trierer Interlinearversion zum Psalter: 28va,9; see https://www.linguistics.rub.de/rem/pub/texts//M188_dipl.pdf" .
+
+<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung_MD> a rcxn:Metadata ;
+    rcxn:annotator membr:Fuehrer ;
+    rcxn:creationDate "2025-12-19"^^xsd:date .
+
+<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung_Meaning> a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "local-concrete, local-abstract, intensifying" .
+
+<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung_slots> a rdf:Seq ;
+    rdf:_1 <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung_1> ;
+    rdf:_2 <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung_2> ;
+    rdf:_3 <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung_3> ;
+    rdf:_4 <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung_4> .
+
+membr:Project_Fuehrer_F2512191334 a rsrch:Finding ;
+    RDFS:label """Subject is mostly animate (~85%), and sometimes inanimate (~15%).\r
+Accusative object can fluctuate between a locality and things/persons, thus altering the interpretation of the construct.\r
+Intensifying function occurs when there's already a directional element present in the base verb.""" ;
+    rsrch:basedOn <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung> .
+
+cx:gmh_NounPhrase rcxn:elementOf <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung> .
+
+<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung> a rcxn:Construction ;
+    cx:hasExample <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung_Ex_A>,
+        <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung_Ex_B>,
+        <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung_Ex_C> ;
+    RDFS:comment "1 csv file with all the data from the 12th century" ;
+    lg:partOfLanguage lg:gmh ;
+    links:inheritsFrom cx:Präfixverbkonstruktion12Jh ;
+    rcxn:hasConstructionMeaning <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung_Meaning> ;
+    rcxn:hasMetadata <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung_MD> ;
+    rcxn:hasSlots <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung_slots> ;
+    rcxn:hasTitle "Präfixverbkonstruktion (12. Jh., Handlung)" .
+
