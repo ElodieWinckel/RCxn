@@ -610,12 +610,12 @@ def form_submit():
                 g.add((index_uri, RDF.type, cx.Event))
         if add_modus.strip():
             print("Warning: new value for mode!")
-            g.add((index_uri, cx.hasMode, Literal(add_modus)))
+            g.add((index_uri, olia.hasMode, Literal(add_modus)))
             g.add((index_uri, RDF.type, cx.Event))
         else:
             if modus.strip():
                 modus = modus + "Verb"
-                g.add((index_uri, cx.hasMode, olia[modus]))
+                g.add((index_uri, olia.hasMode, olia[modus]))
                 g.add((index_uri, RDF.type, cx.Event))
         if other_voice.strip():
             print("Warning: new value for voice!")

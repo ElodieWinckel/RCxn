@@ -40,7 +40,7 @@ cx:Idiomaticconstructions_2_Form a rcxn:SlotForm ;
     rcxn:hasStem "burn" .
 
 cx:Idiomaticconstructions_2_Index a cx:Event ;
-    cx:hasMode olia:IndicativeVerb ;
+    olia:hasModality olia:IndicativeVerb ;
     olia:hasVoice olia:ActiveVoice .
 
 cx:Idiomaticconstructions_3 a rcxn:SlotMandatory ;

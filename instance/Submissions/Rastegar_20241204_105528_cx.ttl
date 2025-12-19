@@ -115,7 +115,7 @@ cx:Idiomaticconstruction_4_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:deu_Verb .
 
 cx:Idiomaticconstruction_4_Index a cx:Event ;
-    cx:hasMode olia:IndicativeVerb ;
+    olia:hasModality olia:IndicativeVerb ;
     olia:hasVoice olia:ActiveVoice .
 
 cx:Idiomaticconstruction_Ex_A a cx:Example ;

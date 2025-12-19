@@ -455,7 +455,7 @@ cx:Idiomaticconstruction_4_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:deu_Verb .
 
 cx:Idiomaticconstruction_4_Index a cx:Event ;
-    cx:hasMode olia:IndicativeVerb ;
+    olia:hasModality olia:IndicativeVerb ;
     olia:hasVoice olia:ActiveVoice .
 
 cx:Idiomaticconstruction_Ex_A a cx:Example ;
@@ -508,7 +508,7 @@ cx:Idiomaticconstructions_2_Form a rcxn:SlotForm ;
     rcxn:hasStem "burn" .
 
 cx:Idiomaticconstructions_2_Index a cx:Event ;
-    cx:hasMode olia:IndicativeVerb ;
+    olia:hasModality olia:IndicativeVerb ;
     olia:hasVoice olia:ActiveVoice .
 
 cx:Idiomaticconstructions_3 a rcxn:SlotMandatory ;
@@ -2055,8 +2055,8 @@ cx:gmh_Pronoun a rcxn:Construction ;
     rcxn:hasSurfaceForm "ginc" .
 
 <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Tätigkeit_3_Index> a cx:Event ;
-    cx:hasMode olia:IndicativeVerb ;
     cx:hasPerson cx:first ;
+    olia:hasModality olia:IndicativeVerb ;
     olia:hasNumber olia:Singular ;
     olia:hasTense olia:Past ;
     olia:hasVoice olia:ActiveVoice .
