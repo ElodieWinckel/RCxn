@@ -3,7 +3,6 @@
 @prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#> .
 @prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
 @prefix olia: <http://purl.org/olia/olia.owl#> .
-@prefix oliatop: <http://purl.org/olia/olia-top.owl#> .
 @prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
 @prefix rdf_ns: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -480,7 +479,7 @@ cx:Idiomaticconstruction_slots a rdf_ns:Seq ;
 cx:Idiomaticconstructions_1 a rcxn:SlotMandatory ;
     cx:WordOrder "Initial position" ;
     cx:hasIndex cx:Idiomaticconstructions_1_Index ;
-    olia:hasSemanticRole oliatop:ActorMacroRole ;
+    olia:hasSemanticRole olia:ActorMacroRole ;
     rcxn:hasSlotForm cx:Idiomaticconstructions_1_Form ;
     rcxn:hasSyntacticFunction "Subject" .
 
@@ -506,7 +505,7 @@ cx:Idiomaticconstructions_2_Index a cx:Event ;
 cx:Idiomaticconstructions_3 a rcxn:SlotMandatory ;
     cx:WordOrder "Precedes \"bridges\"" ;
     cx:hasIndex cx:Idiomaticconstructions_3_Index ;
-    olia:hasSemanticRole oliatop:PossessorRole ;
+    olia:hasSemanticRole olia:PossessorRole ;
     rcxn:hasSlotForm cx:Idiomaticconstructions_3_Form ;
     rcxn:hasSyntacticFunction "Determiner/Possessive modifier" .
 
@@ -519,13 +518,12 @@ cx:Idiomaticconstructions_3_Index a cx:Individual ;
 cx:Idiomaticconstructions_4 a rcxn:SlotMandatory ;
     cx:WordOrder "Final position" ;
     cx:hasIndex cx:Idiomaticconstructions_4_Index ;
-    olia:hasSemanticRole oliatop:ThemeRole ;
+    olia:hasSemanticRole olia:ThemeRole ;
     rcxn:hasSlotForm cx:Idiomaticconstructions_4_Form .
 
 cx:Idiomaticconstructions_4_Form a rcxn:SlotForm ;
     cx:hasSyntacticForm cx:eng_NounPhrase ;
     olia:hasCase olia:Accusative ;
-    rcxn:hasStem "bridge" ;
     rcxn:hasSurfaceForm "bridges" .
 
 cx:Idiomaticconstructions_4_Index a cx:Individual ;

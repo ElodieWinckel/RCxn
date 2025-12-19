@@ -22,7 +22,7 @@ cx:Idiomaticconstructions_1 a rcxn:SlotMandatory ;
     rcxn:hasSlotForm cx:Idiomaticconstructions_1_Form ;
     rcxn:hasSyntacticFunction "Subject" ;
     cx:hasIndex cx:Idiomaticconstructions_1_Index ;
-    olia:hasSemanticRole oliatop:ActorMacroRole .
+    olia:hasSemanticRole olia:ActorMacroRole .
 
 cx:Idiomaticconstructions_1_Form a rcxn:SlotForm ;
     cx:hasSyntacticForm cx:eng_Pronoun .
@@ -48,7 +48,7 @@ cx:Idiomaticconstructions_3 a rcxn:SlotMandatory ;
     rcxn:hasSlotForm cx:Idiomaticconstructions_3_Form ;
     rcxn:hasSyntacticFunction "Determiner/Possessive modifier" ;
     cx:hasIndex cx:Idiomaticconstructions_3_Index ;
-    olia:hasSemanticRole oliatop:PossessorRole .
+    olia:hasSemanticRole olia:PossessorRole .
 
 cx:Idiomaticconstructions_3_Form a rcxn:SlotForm ;
     cx:hasSyntacticForm cx:eng_PossessivePronoun .
@@ -60,12 +60,11 @@ cx:Idiomaticconstructions_4 a rcxn:SlotMandatory ;
     cx:WordOrder "Final position" ;
     rcxn:hasSlotForm cx:Idiomaticconstructions_4_Form ;
     cx:hasIndex cx:Idiomaticconstructions_4_Index ;
-    olia:hasSemanticRole oliatop:ThemeRole .
+    olia:hasSemanticRole olia:ThemeRole .
 
 cx:Idiomaticconstructions_4_Form a rcxn:SlotForm ;
     cx:hasSyntacticForm cx:eng_NounPhrase ;
     olia:hasCase olia:Accusative ;
-    rcxn:hasStem "bridge" ;
     rcxn:hasSurfaceForm "bridges" .
 
 cx:Idiomaticconstructions_4_Index a cx:Individual ;
