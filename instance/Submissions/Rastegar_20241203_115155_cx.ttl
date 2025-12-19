@@ -68,7 +68,6 @@ cx:Idiomaticconstructions_4_Form a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "bridges" .
 
 cx:Idiomaticconstructions_4_Index a cx:Individual ;
-    olia:hasAnimacy olia:Inanimate ;
     olia:hasNumber olia:Paucal .
 
 cx:Idiomaticconstructions_Ex_A a cx:Example ;
