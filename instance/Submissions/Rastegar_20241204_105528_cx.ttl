@@ -83,7 +83,7 @@ cx:Idiomaticconstruction_2_Form a rcxn:SlotForm ;
     olia:hasCase olia:DativeCase .
 
 cx:Idiomaticconstruction_2_Index a cx:Individual ;
-    cx:hasGender cx:masculine ;
+    olia:hasGender olia:Masculine ;
     olia:hasNumber olia:Singular .
 
 cx:Idiomaticconstruction_3 a rcxn:SlotMandatory ;
@@ -100,7 +100,7 @@ cx:Idiomaticconstruction_3_Form a rcxn:SlotForm ;
 
 cx:Idiomaticconstruction_3_Index a cx:Individual ;
     olia:hasAnimacy olia:Inanimate ;
-    cx:hasGender cx:masculine ;
+    olia:hasGender olia:Masculine ;
     olia:hasNumber olia:Singular .
 
 cx:Idiomaticconstruction_4 a rcxn:SlotMandatory ;

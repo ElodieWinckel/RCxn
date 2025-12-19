@@ -416,23 +416,23 @@ function generateFields() {
         genderEmptyOption.textContent = '';
         // Second option: feminine
         const feminineOption = document.createElement('option');
-        feminineOption.value = 'feminine';
+        feminineOption.value = 'Feminine';
         feminineOption.textContent = 'Feminine';
         // Third option: neuter
         const neuterOption = document.createElement('option');
-        neuterOption.value = 'neuter';
+        neuterOption.value = 'Neuter';
         neuterOption.textContent = 'Neuter';
         // Fourth option: masculine
         const masculineOption = document.createElement('option');
-        masculineOption.value = 'masculine';
+        masculineOption.value = 'Masculine';
         masculineOption.textContent = 'Masculine';
         // Fifth option: common
         const commonOption = document.createElement('option');
-        commonOption.value = 'common';
+        commonOption.value = 'CommonGender';
         commonOption.textContent = 'Common';
         // Sixth option: vegetable
         const vegetableOption = document.createElement('option');
-        vegetableOption.value = 'vegetable';
+        vegetableOption.value = 'VegetableGender';
         vegetableOption.textContent = 'Vegetable';
         // Option other
         const genderOtherOption = document.createElement('option');

@@ -91,7 +91,7 @@ cx:Transitiveobjectrelativeclause_1_Form a rcxn:SlotForm ;
 cx:Transitiveobjectrelativeclause_1_Index a cx:Individual ;
     olia:hasAnimacy olia:Animate ;
     olia:hasNumber olia:Singular ;
-    cx:hasGender "[1]" .
+    olia:hasGender "[1]" .
 
 cx:Transitiveobjectrelativeclause_2 a rcxn:SlotOptional ;
     cx:WordOrder "If present, Element 2 immediately after Element 1" ;
@@ -124,7 +124,7 @@ cx:Transitiveobjectrelativeclause_4_Form a rcxn:SlotForm ;
 cx:Transitiveobjectrelativeclause_4_Index a cx:Individual ;
     olia:hasAnimacy olia:Animate ;
     olia:hasNumber olia:Singular ;
-    cx:hasGender "[1]" .
+    olia:hasGender "[1]" .
 
 cx:Transitiveobjectrelativeclause_5 a rcxn:SlotMandatory ;
     cx:WordOrder "immediately after Element 4" ;

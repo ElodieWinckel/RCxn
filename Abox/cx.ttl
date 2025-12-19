@@ -423,7 +423,7 @@ cx:Idiomaticconstruction_2_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:deu_DefiniteArticle .
 
 cx:Idiomaticconstruction_2_Index a cx:Individual ;
-    cx:hasGender cx:masculine ;
+    olia:hasGender olia:Masculine ;
     olia:hasNumber olia:Singular .
 
 cx:Idiomaticconstruction_3 a rcxn:SlotMandatory ;
@@ -439,8 +439,8 @@ cx:Idiomaticconstruction_3_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:deu_Noun .
 
 cx:Idiomaticconstruction_3_Index a cx:Individual ;
-    cx:hasGender cx:masculine ;
     olia:hasAnimacy olia:Inanimate ;
+    olia:hasGender olia:Masculine ;
     olia:hasNumber olia:Singular .
 
 cx:Idiomaticconstruction_4 a rcxn:SlotMandatory ;
@@ -1257,8 +1257,8 @@ cx:Transitiveobjectrelativeclause_1_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:spa_NounPhrase .
 
 cx:Transitiveobjectrelativeclause_1_Index a cx:Individual ;
-    cx:hasGender "[1]" ;
     olia:hasAnimacy olia:Animate ;
+    olia:hasGender "[1]" ;
     olia:hasNumber olia:Singular .
 
 cx:Transitiveobjectrelativeclause_2 a rcxn:SlotOptional ;
@@ -1290,8 +1290,8 @@ cx:Transitiveobjectrelativeclause_4_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:spa_NounPhrase .
 
 cx:Transitiveobjectrelativeclause_4_Index a cx:Individual ;
-    cx:hasGender "[1]" ;
     olia:hasAnimacy olia:Animate ;
+    olia:hasGender "[1]" ;
     olia:hasNumber olia:Singular .
 
 cx:Transitiveobjectrelativeclause_5 a rcxn:SlotMandatory ;

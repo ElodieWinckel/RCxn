@@ -582,11 +582,11 @@ def form_submit():
                 g.add((index_uri, RDF.type, cx.Individual))
         if other_gender.strip():
             print("Warning: new value for gender!")
-            g.add((index_uri, cx.hasGender, Literal(other_gender)))
+            g.add((index_uri, olia.hasGender, Literal(other_gender)))
             g.add((index_uri, RDF.type, cx.Individual))
         else:
             if gender.strip():
-                g.add((index_uri, cx.hasGender, cx[gender]))
+                g.add((index_uri, olia.hasGender, olia[gender]))
                 g.add((index_uri, RDF.type, cx.Individual))
         if number.strip():
             g.add((index_uri, olia.hasNumber, olia[number]))
