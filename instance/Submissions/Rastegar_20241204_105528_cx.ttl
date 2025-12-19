@@ -60,61 +60,68 @@ cx:Englishrollupyoursleeves_MD a rcxn:Metadata ;
     lg:partOfLanguage lg:pes .
 
 cx:Idiomaticconstruction_1 a rcxn:SlotMandatory ;
-    cx:WordOrder "Initial position in prepositional phrase" ;
     rcxn:hasSlotForm cx:Idiomaticconstruction_1_Form ;
-    cx:hasTranslation "out of" ;
-    rcxn:hasSyntacticFunction "Head of PP" ;
-    rcxn:hasOtherSemanticContribution "source" .
+    rcxn:hasSlots cx:Idiomaticconstruction_1_slots .
 
 cx:Idiomaticconstruction_1_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:deu_PrepositionalPhrase .
+
+cx:Idiomaticconstruction_2 a rcxn:SlotMandatory ;
+    cx:WordOrder "Initial position in prepositional phrase" ;
+    rcxn:hasSlotForm cx:Idiomaticconstruction_2_Form ;
+    cx:hasTranslation "out of" ;
+    rcxn:hasSyntacticFunction "head of Element 1" ;
+    rcxn:hasOtherSemanticContribution "source" .
+
+cx:Idiomaticconstruction_2_Form a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "aus" ;
     rcxn:hasSyntacticForm cx:deu_Preposition .
 
-cx:Idiomaticconstruction_2 a rcxn:SlotMandatory ;
+cx:Idiomaticconstruction_3 a rcxn:SlotMandatory ;
     cx:WordOrder "follows preposition, precedes noun" ;
-    rcxn:hasSlotForm cx:Idiomaticconstruction_2_Form ;
+    rcxn:hasSlotForm cx:Idiomaticconstruction_3_Form ;
     cx:hasTranslation "the" ;
     rcxn:hasSyntacticFunction "Determiner" ;
-    cx:hasIndex cx:Idiomaticconstruction_2_Index .
+    cx:hasIndex cx:Idiomaticconstruction_3_Index .
 
-cx:Idiomaticconstruction_2_Form a rcxn:SlotForm ;
+cx:Idiomaticconstruction_3_Form a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "dem" ;
     rcxn:hasSyntacticForm cx:deu_DefiniteArticle ;
     olia:hasCase olia:DativeCase .
 
-cx:Idiomaticconstruction_2_Index a cx:Individual ;
-    olia:hasGender olia:Masculine ;
-    olia:hasNumber olia:Singular .
-
-cx:Idiomaticconstruction_3 a rcxn:SlotMandatory ;
-    cx:WordOrder "Follows article" ;
-    rcxn:hasSlotForm cx:Idiomaticconstruction_3_Form ;
-    cx:hasTranslation "sleeve" ;
-    cx:hasIndex cx:Idiomaticconstruction_3_Index ;
-    olia:hasSemanticRole olia:LocationRole .
-
-cx:Idiomaticconstruction_3_Form a rcxn:SlotForm ;
-    rcxn:hasSurfaceForm "Ärmel" ;
-    rcxn:hasSyntacticForm cx:deu_Noun ;
-    olia:hasCase olia:DativeCase .
-
 cx:Idiomaticconstruction_3_Index a cx:Individual ;
-    olia:hasAnimacy olia:Inanimate ;
     olia:hasGender olia:Masculine ;
     olia:hasNumber olia:Singular .
 
 cx:Idiomaticconstruction_4 a rcxn:SlotMandatory ;
-    cx:WordOrder "Verb-final in dependent clauses / V2 in main clauses" ;
+    cx:WordOrder "Follows article" ;
     rcxn:hasSlotForm cx:Idiomaticconstruction_4_Form ;
-    cx:hasTranslation "shake" ;
+    cx:hasTranslation "sleeve" ;
     cx:hasIndex cx:Idiomaticconstruction_4_Index ;
-    rcxn:hasOtherSemanticContribution "Action" .
+    olia:hasSemanticRole olia:LocationRole .
 
 cx:Idiomaticconstruction_4_Form a rcxn:SlotForm ;
+    rcxn:hasSurfaceForm "Ärmel" ;
+    rcxn:hasSyntacticForm cx:deu_Noun ;
+    olia:hasCase olia:DativeCase .
+
+cx:Idiomaticconstruction_4_Index a cx:Individual ;
+    olia:hasAnimacy olia:Inanimate ;
+    olia:hasGender olia:Masculine ;
+    olia:hasNumber olia:Singular .
+
+cx:Idiomaticconstruction_5 a rcxn:SlotMandatory ;
+    cx:WordOrder "Verb-final in dependent clauses / V2 in main clauses" ;
+    rcxn:hasSlotForm cx:Idiomaticconstruction_5_Form ;
+    cx:hasTranslation "shake" ;
+    cx:hasIndex cx:Idiomaticconstruction_5_Index ;
+    rcxn:hasOtherSemanticContribution "Action" .
+
+cx:Idiomaticconstruction_5_Form a rcxn:SlotForm ;
     rcxn:hasStem "schütteln" ;
     rcxn:hasSyntacticForm cx:deu_Verb .
 
-cx:Idiomaticconstruction_4_Index a cx:Event ;
+cx:Idiomaticconstruction_5_Index a cx:Event ;
     olia:hasModality olia:IndicativeVerb ;
     olia:hasVoice olia:ActiveVoice .
 
@@ -141,10 +148,17 @@ cx:Idiomaticconstruction_Meaning a rcxn:ConstructionMeaning ;
 
 cx:Idiomaticconstruction_slots a rdf:Seq ;
     rdf:_1 cx:Idiomaticconstruction_1 ;
-    rdf:_2 cx:Idiomaticconstruction_2 ;
-    rdf:_3 cx:Idiomaticconstruction_3 ;
-    rdf:_4 cx:Idiomaticconstruction_4 .
+    rdf:_2 cx:Idiomaticconstruction_5 .
+
+cx:Idiomaticconstruction_1_slots a rdf:Seq ;
+    rdf:_1 cx:Idiomaticconstruction_2 ;
+    rdf:_2 cx:Idiomaticconstruction_3 ;
+    rdf:_3 cx:Idiomaticconstruction_4 .
 
 cx:deu_DefiniteArticle a rcxn:Construction ;
     rcxn:hasTitle "Definite Article" ;
+    lg:partOfLanguage lg:deu .
+
+cx:deu_PrepositionalPhrase a rcxn:Construction ;
+    rcxn:hasTitle "Prepositional Phrase" ;
     lg:partOfLanguage lg:deu .

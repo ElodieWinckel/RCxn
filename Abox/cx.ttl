@@ -400,61 +400,73 @@ cx:Generalprepositionalconstructions_MD a rcxn:Metadata ;
     rcxn:creationDate "2024-12-02"^^xsd:date .
 
 cx:Idiomaticconstruction_1 a rcxn:SlotMandatory ;
+    rcxn:hasSlotForm cx:Idiomaticconstruction_1_Form ;
+    rcxn:hasSlots cx:Idiomaticconstruction_1_slots .
+
+cx:Idiomaticconstruction_1_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:deu_PrepositionalPhrase .
+
+cx:Idiomaticconstruction_1_slots a rdf_ns:Seq ;
+    rdf_ns:_1 cx:Idiomaticconstruction_2 ;
+    rdf_ns:_2 cx:Idiomaticconstruction_3 ;
+    rdf_ns:_3 cx:Idiomaticconstruction_4 .
+
+cx:Idiomaticconstruction_2 a rcxn:SlotMandatory ;
     cx:WordOrder "Initial position in prepositional phrase" ;
     cx:hasTranslation "out of" ;
     rcxn:hasOtherSemanticContribution "source" ;
-    rcxn:hasSlotForm cx:Idiomaticconstruction_1_Form ;
-    rcxn:hasSyntacticFunction "Head of PP" .
+    rcxn:hasSlotForm cx:Idiomaticconstruction_2_Form ;
+    rcxn:hasSyntacticFunction "head of Element 1" .
 
-cx:Idiomaticconstruction_1_Form a rcxn:SlotForm ;
+cx:Idiomaticconstruction_2_Form a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "aus" ;
     rcxn:hasSyntacticForm cx:deu_Preposition .
 
-cx:Idiomaticconstruction_2 a rcxn:SlotMandatory ;
+cx:Idiomaticconstruction_3 a rcxn:SlotMandatory ;
     cx:WordOrder "follows preposition, precedes noun" ;
-    cx:hasIndex cx:Idiomaticconstruction_2_Index ;
+    cx:hasIndex cx:Idiomaticconstruction_3_Index ;
     cx:hasTranslation "the" ;
-    rcxn:hasSlotForm cx:Idiomaticconstruction_2_Form ;
+    rcxn:hasSlotForm cx:Idiomaticconstruction_3_Form ;
     rcxn:hasSyntacticFunction "Determiner" .
 
-cx:Idiomaticconstruction_2_Form a rcxn:SlotForm ;
+cx:Idiomaticconstruction_3_Form a rcxn:SlotForm ;
     olia:hasCase olia:DativeCase ;
     rcxn:hasSurfaceForm "dem" ;
     rcxn:hasSyntacticForm cx:deu_DefiniteArticle .
 
-cx:Idiomaticconstruction_2_Index a cx:Individual ;
-    olia:hasGender olia:Masculine ;
-    olia:hasNumber olia:Singular .
-
-cx:Idiomaticconstruction_3 a rcxn:SlotMandatory ;
-    cx:WordOrder "Follows article" ;
-    cx:hasIndex cx:Idiomaticconstruction_3_Index ;
-    cx:hasTranslation "sleeve" ;
-    olia:hasSemanticRole olia:LocationRole ;
-    rcxn:hasSlotForm cx:Idiomaticconstruction_3_Form .
-
-cx:Idiomaticconstruction_3_Form a rcxn:SlotForm ;
-    olia:hasCase olia:DativeCase ;
-    rcxn:hasSurfaceForm "Ärmel" ;
-    rcxn:hasSyntacticForm cx:deu_Noun .
-
 cx:Idiomaticconstruction_3_Index a cx:Individual ;
-    olia:hasAnimacy olia:Inanimate ;
     olia:hasGender olia:Masculine ;
     olia:hasNumber olia:Singular .
 
 cx:Idiomaticconstruction_4 a rcxn:SlotMandatory ;
-    cx:WordOrder "Verb-final in dependent clauses / V2 in main clauses" ;
+    cx:WordOrder "Follows article" ;
     cx:hasIndex cx:Idiomaticconstruction_4_Index ;
-    cx:hasTranslation "shake" ;
-    rcxn:hasOtherSemanticContribution "Action" ;
+    cx:hasTranslation "sleeve" ;
+    olia:hasSemanticRole olia:LocationRole ;
     rcxn:hasSlotForm cx:Idiomaticconstruction_4_Form .
 
 cx:Idiomaticconstruction_4_Form a rcxn:SlotForm ;
+    olia:hasCase olia:DativeCase ;
+    rcxn:hasSurfaceForm "Ärmel" ;
+    rcxn:hasSyntacticForm cx:deu_Noun .
+
+cx:Idiomaticconstruction_4_Index a cx:Individual ;
+    olia:hasAnimacy olia:Inanimate ;
+    olia:hasGender olia:Masculine ;
+    olia:hasNumber olia:Singular .
+
+cx:Idiomaticconstruction_5 a rcxn:SlotMandatory ;
+    cx:WordOrder "Verb-final in dependent clauses / V2 in main clauses" ;
+    cx:hasIndex cx:Idiomaticconstruction_5_Index ;
+    cx:hasTranslation "shake" ;
+    rcxn:hasOtherSemanticContribution "Action" ;
+    rcxn:hasSlotForm cx:Idiomaticconstruction_5_Form .
+
+cx:Idiomaticconstruction_5_Form a rcxn:SlotForm ;
     rcxn:hasStem "schütteln" ;
     rcxn:hasSyntacticForm cx:deu_Verb .
 
-cx:Idiomaticconstruction_4_Index a cx:Event ;
+cx:Idiomaticconstruction_5_Index a cx:Event ;
     olia:hasModality olia:IndicativeVerb ;
     olia:hasVoice olia:ActiveVoice .
 
@@ -481,9 +493,7 @@ cx:Idiomaticconstruction_Meaning a rcxn:ConstructionMeaning ;
 
 cx:Idiomaticconstruction_slots a rdf_ns:Seq ;
     rdf_ns:_1 cx:Idiomaticconstruction_1 ;
-    rdf_ns:_2 cx:Idiomaticconstruction_2 ;
-    rdf_ns:_3 cx:Idiomaticconstruction_3 ;
-    rdf_ns:_4 cx:Idiomaticconstruction_4 .
+    rdf_ns:_2 cx:Idiomaticconstruction_5 .
 
 cx:Idiomaticconstructions_1 a rcxn:SlotMandatory ;
     cx:WordOrder "Initial position" ;
@@ -1673,6 +1683,11 @@ cx:deu_DefiniteDeterminer a rcxn:Construction ;
     rcxn:elementOf <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]> ;
     rcxn:hasTitle "Definite Determiner" .
 
+cx:deu_PrepositionalPhrase a rcxn:Construction ;
+    lg:partOfLanguage lg:deu ;
+    rcxn:elementOf cx:Idiomaticconstruction ;
+    rcxn:hasTitle "Prepositional Phrase" .
+
 cx:engInf_Coolexclamativeconstruction_1 a rcxn:SlotMandatory ;
     rcxn:hasSlotForm cx:engInf_Coolexclamativeconstruction_1_Form .
 
@@ -2550,19 +2565,6 @@ cx:Transitiveobjectrelativeclause a rcxn:Construction ;
     rcxn:hasSlots cx:Transitiveobjectrelativeclause_slots ;
     rcxn:hasTitle "Potentially ambiguous object relative clause" .
 
-cx:Idiomaticconstruction a rcxn:Construction ;
-    cx:hasExample cx:Idiomaticconstruction_Ex_A,
-        cx:Idiomaticconstruction_Ex_B ;
-    lg:partOfLanguage lg:deu ;
-    links:CL_differentFormSameFunction cx:EnglishPullsomethingoutofahat ;
-    links:CL_similarFormDifferentFunction cx:Englishrollupyoursleeves,
-        <http://example.org/cx/Farsibarāyekasiāstinbālāzadan:torollupsleevesforsomething>,
-        <http://example.org/cx/Farsimārāstin-exodparvarāndan:tonurtureasnakeinone'sbosom> ;
-    rcxn:hasConstructionMeaning cx:Idiomaticconstruction_Meaning ;
-    rcxn:hasMetadata cx:Idiomaticconstruction_MD ;
-    rcxn:hasSlots cx:Idiomaticconstruction_slots ;
-    rcxn:hasTitle "Aus dem Ärmel schütteln construction" .
-
 <http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc> a rcxn:Construction ;
     lg:partOfLanguage lg:deu ;
     links:inheritsFrom <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]>,
@@ -2586,6 +2588,19 @@ cx:Idiomaticconstruction a rcxn:Construction ;
     rcxn:hasMetadata <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_MD> ;
     rcxn:hasSlots <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_slots> ;
     rcxn:hasTitle "(sich) (NP) (ADJ) (ADV) [vor Augen] (VP)" .
+
+cx:Idiomaticconstruction a rcxn:Construction ;
+    cx:hasExample cx:Idiomaticconstruction_Ex_A,
+        cx:Idiomaticconstruction_Ex_B ;
+    lg:partOfLanguage lg:deu ;
+    links:CL_differentFormSameFunction cx:EnglishPullsomethingoutofahat ;
+    links:CL_similarFormDifferentFunction cx:Englishrollupyoursleeves,
+        <http://example.org/cx/Farsibarāyekasiāstinbālāzadan:torollupsleevesforsomething>,
+        <http://example.org/cx/Farsimārāstin-exodparvarāndan:tonurtureasnakeinone'sbosom> ;
+    rcxn:hasConstructionMeaning cx:Idiomaticconstruction_Meaning ;
+    rcxn:hasMetadata cx:Idiomaticconstruction_MD ;
+    rcxn:hasSlots cx:Idiomaticconstruction_slots ;
+    rcxn:hasTitle "Aus dem Ärmel schütteln construction" .
 
 cx:Relative-Topic-ShiftConstruction a rcxn:Construction ;
     cx:hasExample cx:Relative-Topic-ShiftConstruction_Ex_A,
