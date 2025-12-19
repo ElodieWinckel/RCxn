@@ -28,9 +28,6 @@ cx:Relative-Topic-ShiftConstruction_2_Form a rcxn:SlotForm ;
 cx:Relative-Topic-ShiftConstruction_3_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:ita_Noun .
 
-cx:Transitivedurch-Präfixverbkonstruktion_1_Form a rcxn:SlotForm ;
-    rcxn:hasSyntacticForm cx:gmh_NounPhrase .
-
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_5_Index> olia:hasNumber olia:Plural .
 
 cx:comePLUSnoisemannerofmovementVing_4_Form a rcxn:SlotForm ;
@@ -619,16 +616,6 @@ cx:ItalianTemporalSubordinateClause_MD a rcxn:Metadata ;
     rcxn:annotator membr:Trombetta ;
     rcxn:creationDate "2024-11-21"^^xsd:date .
 
-cx:Monotransitivkonstruktion a rcxn:Construction ;
-    lg:partOfLanguage lg:gmh ;
-    links:inheritedBy cx:Transitivedurch-Präfixverbkonstruktion ;
-    rcxn:hasMetadata cx:Monotransitivkonstruktion_MD ;
-    rcxn:hasTitle "Monotransitivkonstruktion" .
-
-cx:Monotransitivkonstruktion_MD a rcxn:Metadata ;
-    rcxn:annotator membr:Fuehrer ;
-    rcxn:creationDate "2024-11-25"^^xsd:date .
-
 <http://example.org/cx/NP[ADJ-strong+ADJ-strong+N]> a rcxn:Construction ;
     lg:partOfLanguage lg:deu ;
     links:similarFormSameFunction <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]> ;
@@ -895,19 +882,9 @@ cx:POU-purposeconstruction_MD a rcxn:Metadata ;
     rcxn:annotator membr:Legoute ;
     rcxn:creationDate "2024-11-28"^^xsd:date .
 
-cx:Präfixverbkonstruktion a rcxn:Construction ;
-    lg:partOfLanguage lg:gmh ;
-    links:inheritedBy cx:Transitivedurch-Präfixverbkonstruktion ;
-    rcxn:hasMetadata cx:Präfixverbkonstruktion_MD ;
-    rcxn:hasTitle "Präfixverbkonstruktion" .
-
 cx:Präfixverbkonstruktion12Jh_MD a rcxn:Metadata ;
     cx:annotator membr:Fuehrer ;
     rcxn:creationDate "2025-12-19"^^xsd:date .
-
-cx:Präfixverbkonstruktion_MD a rcxn:Metadata ;
-    rcxn:annotator membr:Fuehrer ;
-    rcxn:creationDate "2024-11-25"^^xsd:date .
 
 cx:Relative-Topic-ShiftConstruction_1 a rcxn:SlotMandatory ;
     cx:WordOrder "Element 1 immediately before element 4" ;
@@ -1107,154 +1084,6 @@ cx:ThisCloseToV-ing_slots a rdf_ns:Seq ;
     rdf_ns:_2 cx:ThisCloseToV-ing_2 ;
     rdf_ns:_3 cx:ThisCloseToV-ing_3 ;
     rdf_ns:_4 cx:ThisCloseToV-ing_4 .
-
-cx:Transitivedurch-Partikelverbkonstruktion a rcxn:Construction ;
-    lg:partOfLanguage lg:gmh ;
-    links:similarFormSameFunction cx:Transitivedurch-Präfixverbkonstruktion ;
-    rcxn:hasMetadata cx:Transitivedurch-Partikelverbkonstruktion_MD ;
-    rcxn:hasTitle "Transitive durch Partikelverbkonstruktion" .
-
-cx:Transitivedurch-Partikelverbkonstruktion_MD a rcxn:Metadata ;
-    rcxn:annotator membr:Fuehrer ;
-    rcxn:creationDate "2024-11-25"^^xsd:date .
-
-cx:Transitivedurch-Präfixverbkonstruktion_1 a rcxn:Slot ;
-    cx:hasIndex cx:Transitivedurch-Präfixverbkonstruktion_1_Index ;
-    olia:hasSemanticRole olia:ActorMacroRole ;
-    rcxn:hasSemanticProperty "Figur" ;
-    rcxn:hasSyntacticFunction "Subject" .
-
-cx:Transitivedurch-Präfixverbkonstruktion_1_Index a cx:Individual ;
-    olia:hasAnimacy olia:Animate .
-
-cx:Transitivedurch-Präfixverbkonstruktion_2 a rcxn:SlotMandatory ;
-    cx:WordOrder "2 vor 3" ;
-    cx:hasTranslation "'durch'" ;
-    olia:hasSemanticRole olia:DirectionRole ;
-    rcxn:hasSlotForm cx:Transitivedurch-Präfixverbkonstruktion_2_Form .
-
-cx:Transitivedurch-Präfixverbkonstruktion_2_Form a rcxn:SlotForm ;
-    rcxn:hasStem "durh" ;
-    rcxn:hasSyntacticForm cx:gmh_Prefix .
-
-cx:Transitivedurch-Präfixverbkonstruktion_3 a rcxn:SlotMandatory ;
-    cx:WordOrder "3 nach 2" ;
-    cx:hasIndex cx:Transitivedurch-Präfixverbkonstruktion_3_Index ;
-    cx:hasTranslation "beißen",
-        "brechen",
-        "dringen",
-        "hauen",
-        "reiten" ;
-    rcxn:hasSemanticProperty "'zerstörerische' Verben oder allg. Bewegungsverben" ;
-    rcxn:hasSlotForm cx:Transitivedurch-Präfixverbkonstruktion_3_Form .
-
-cx:Transitivedurch-Präfixverbkonstruktion_3_Form a rcxn:SlotForm ;
-    rcxn:hasStem "brëchen",
-        "bîzen",
-        "dringen",
-        "houwen",
-        "rîten" ;
-    rcxn:hasSyntacticForm cx:gmh_Verb .
-
-cx:Transitivedurch-Präfixverbkonstruktion_3_Index a cx:Event ;
-    olia:hasVoice olia:ActiveVoice .
-
-cx:Transitivedurch-Präfixverbkonstruktion_4 a rcxn:SlotMandatory ;
-    cx:hasTranslation "das Schlachtfeld",
-        "die Lande",
-        "die Schar",
-        "die Seite",
-        "sie" ;
-    rdfs:comment "Akkusativ ist schon interpretiert; formale Basis oft formgleich mit anderen Fällen" ;
-    rcxn:hasOtherSemanticContribution "Location",
-        "Undergoer" ;
-    rcxn:hasSemanticProperty "Gegenständliches oder Lokalitäten" ;
-    rcxn:hasSlotForm cx:Transitivedurch-Präfixverbkonstruktion_4_Form ;
-    rcxn:hasSyntacticFunction "Object" .
-
-cx:Transitivedurch-Präfixverbkonstruktion_4_Form a rcxn:SlotForm ;
-    olia:hasCase olia:Accusative ;
-    rcxn:hasSyntacticForm cx:gmh_NounPhrase .
-
-cx:Transitivedurch-Präfixverbkonstruktion_5 a rcxn:SlotOptional ;
-    cx:hasTranslation "da",
-        "somit" ;
-    olia:hasSemanticRole olia:TimeRole ;
-    rcxn:hasSlotForm cx:Transitivedurch-Präfixverbkonstruktion_5_Form ;
-    rcxn:hasSyntacticFunction "Temporaladverbiale" .
-
-cx:Transitivedurch-Präfixverbkonstruktion_5_Form a rcxn:SlotForm ;
-    rcxn:hasSyntacticForm cx:gmh_AdverbialPhrase .
-
-cx:Transitivedurch-Präfixverbkonstruktion_6 a rcxn:SlotOptional ;
-    cx:hasIndex cx:Transitivedurch-Präfixverbkonstruktion_6_Index ;
-    cx:hasTranslation "ihm",
-        "ihr" ;
-    olia:hasSemanticRole olia:AddresseeRole ;
-    rcxn:hasSlotForm cx:Transitivedurch-Präfixverbkonstruktion_6_Form ;
-    rcxn:hasSyntacticFunction "Dativobjekt" .
-
-cx:Transitivedurch-Präfixverbkonstruktion_6_Form a rcxn:SlotForm ;
-    olia:hasCase olia:DativeCase ;
-    rcxn:hasStem "er" ;
-    rcxn:hasSyntacticForm cx:gmh_Pronoun .
-
-cx:Transitivedurch-Präfixverbkonstruktion_6_Index a cx:Individual ;
-    olia:hasAnimacy olia:Animate .
-
-cx:Transitivedurch-Präfixverbkonstruktion_Ex_A a cx:Example ;
-    cx:hasAnnotatedText "[Thie criſtenen]1 [thurh]2[thrungen]3 [ſie]4" ;
-    cx:hasGlosses "NG_nom - Prä - Verb - NG_akk" ;
-    cx:hasText "Thie criſtenen thurhthrungen ſie" ;
-    cx:hasTranslation "Die Christen durchdrungen sie" ;
-    rdfs:comment "Intermediär" .
-
-cx:Transitivedurch-Präfixverbkonstruktion_Ex_B a cx:Example ;
-    cx:hasAnnotatedText "[der]1 [durch]2 [reit]3 [div lant]4" ;
-    cx:hasGlosses "pN_nom - Prä - Verb - NG_akk " ;
-    cx:hasText "der durch reit div lant" ;
-    cx:hasTranslation "der durchreitet die Lande" ;
-    rdfs:comment "Intermediär/Multidirektional" .
-
-cx:Transitivedurch-Präfixverbkonstruktion_Ex_C a cx:Example ;
-    cx:hasAnnotatedText "[ſi]1 [durh]2 [hiwen]3 [daz wal]4" ;
-    cx:hasGlosses "pN_nom - Prä - Verb - NG_akk" ;
-    cx:hasText "ſi durh hiwen daz wal" ;
-    cx:hasTranslation "sie durchbrechen das Schlachtfeld" ;
-    rdfs:comment "teil-intermediär" .
-
-cx:Transitivedurch-Präfixverbkonstruktion_MD a rcxn:Metadata ;
-    cx:hasSources cx:Transitivedurch-Präfixverbkonstruktion_Sources ;
-    rcxn:annotator membr:Fuehrer ;
-    rcxn:creationDate "2024-11-25"^^xsd:date .
-
-cx:Transitivedurch-Präfixverbkonstruktion_Meaning a rcxn:ConstructionMeaning ;
-    cx:hasImageSchema "intermediäres durch",
-        "multidirektionales durch",
-        "teil-intermediäres durch" ;
-    rcxn:hasMeaning "[Jemand]1 bewegt sich durch [etwas/einen Ort]4." .
-
-cx:Transitivedurch-Präfixverbkonstruktion_Sources a cx:Collection ;
-    cx:basedOn <https://www.linguistics.ruhr-uni-bochum.de/rem/> .
-
-cx:Transitivedurch-Präfixverbkonstruktion_slots a rdf_ns:Seq ;
-    rdf_ns:_1 cx:Transitivedurch-Präfixverbkonstruktion_1 ;
-    rdf_ns:_2 cx:Transitivedurch-Präfixverbkonstruktion_2 ;
-    rdf_ns:_3 cx:Transitivedurch-Präfixverbkonstruktion_3 ;
-    rdf_ns:_4 cx:Transitivedurch-Präfixverbkonstruktion_4 ;
-    rdf_ns:_5 cx:Transitivedurch-Präfixverbkonstruktion_5 ;
-    rdf_ns:_6 cx:Transitivedurch-Präfixverbkonstruktion_6 .
-
-cx:Transitivedurch-Verbkonstruktion a rcxn:Construction ;
-    cx:hasTitle "Transitive durch-Verbkonstruktion" ;
-    lg:partOfLanguage lg:gmh ;
-    links:similarFormSameFunction cx:Transitivedurch-Präfixverbkonstruktion ;
-    rcxn:hasMetadata cx:Transitivedurch-Verbkonstruktion_MD ;
-    rcxn:hasTitle "Transitive durch Verbkonstruktion" .
-
-cx:Transitivedurch-Verbkonstruktion_MD a rcxn:Metadata ;
-    rcxn:annotator membr:Fuehrer ;
-    rcxn:creationDate "2024-11-25"^^xsd:date .
 
 cx:Transitiveobjectrelativeclause_1 a rcxn:SlotMandatory ;
     cx:hasIndex cx:Transitiveobjectrelativeclause_1_Index ;
@@ -1948,16 +1777,6 @@ cx:eng_coolconstruction_slots a rdf_ns:Seq ;
 
 <http://example.org/cx/etc.> links:inheritsFrom <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]> .
 
-cx:gmh_AdverbialPhrase a rcxn:Construction ;
-    lg:partOfLanguage lg:gmh ;
-    rcxn:elementOf cx:Transitivedurch-Präfixverbkonstruktion ;
-    rcxn:hasTitle "Adverbial Phrase" .
-
-cx:gmh_Pronoun a rcxn:Construction ;
-    lg:partOfLanguage lg:gmh ;
-    rcxn:elementOf cx:Transitivedurch-Präfixverbkonstruktion ;
-    rcxn:hasTitle "Pronoun" .
-
 <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung_1> a rcxn:SlotOptional ;
     olia:hasCase olia:Nominative ;
     olia:hasSemanticRole olia:ActorMacroRole ;
@@ -2190,6 +2009,11 @@ cx:gmh_Pronoun a rcxn:Construction ;
     rdf_ns:_3 <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit_3> ;
     rdf_ns:_4 <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit_4> .
 
+cx:gmh_Verb a rcxn:Construction ;
+    lg:partOfLanguage lg:gmh ;
+    rcxn:elementOf <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit> ;
+    rcxn:hasTitle "Verb" .
+
 cx:hat_InvariableSyntacticMorpheme a rcxn:Construction ;
     lg:partOfLanguage lg:hat ;
     rcxn:elementOf cx:POU-beneficiaryconstruction ;
@@ -2262,6 +2086,7 @@ cx:zho_VerbPhrase a rcxn:Construction ;
     rcxn:hasTitle "Allative NP1 + auf + NP2 & NP1 + an + NP2 constructions" .
 
 cx:Präfixverbkonstruktion12Jh a rcxn:Construction ;
+    lg:partOfLanguage lg:gmh ;
     links:inheritedBy <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung>,
         <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit> ;
     rcxn:hasMetadata cx:Präfixverbkonstruktion12Jh_MD ;
@@ -2322,11 +2147,11 @@ cx:eng_Particle a rcxn:Construction ;
         cx:comePLUSnoisemannerofmovementVing ;
     rcxn:hasTitle "Particle" .
 
-cx:gmh_Verb a rcxn:Construction ;
+cx:gmh_Prefix a rcxn:Construction ;
     lg:partOfLanguage lg:gmh ;
-    rcxn:elementOf cx:Transitivedurch-Präfixverbkonstruktion,
+    rcxn:elementOf <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung>,
         <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit> ;
-    rcxn:hasTitle "Verb" .
+    rcxn:hasTitle "Prefix" .
 
 cx:spa_NounPhrase a rcxn:Construction ;
     lg:partOfLanguage lg:spa ;
@@ -2428,12 +2253,11 @@ cx:eng_VerbPhrase a rcxn:Construction ;
     rcxn:elementOf cx:EvaluativeAttributionConstruction ;
     rcxn:hasTitle "Verb Phrase" .
 
-cx:gmh_Prefix a rcxn:Construction ;
+cx:gmh_NounPhrase a rcxn:Construction ;
     lg:partOfLanguage lg:gmh ;
-    rcxn:elementOf cx:Transitivedurch-Präfixverbkonstruktion,
-        <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung>,
+    rcxn:elementOf <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung>,
         <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit> ;
-    rcxn:hasTitle "Prefix" .
+    rcxn:hasTitle "Noun Phrase" .
 
 <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung> a rcxn:Construction ;
     cx:hasExample <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung_Ex_A>,
@@ -2519,13 +2343,6 @@ cx:eng_PrepositionalPhrase a rcxn:Construction ;
         cx:comePLUSnoisemannerofmovementVing,
         cx:eng_AdjectivePhrase ;
     rcxn:hasTitle "Prepositional Phrase" .
-
-cx:gmh_NounPhrase a rcxn:Construction ;
-    lg:partOfLanguage lg:gmh ;
-    rcxn:elementOf cx:Transitivedurch-Präfixverbkonstruktion,
-        <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung>,
-        <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit> ;
-    rcxn:hasTitle "Noun Phrase" .
 
 cx:Argumentstructureconstruction a rcxn:Construction ;
     rdfs:comment """The main data includes 2000 sentences that are generated by GPT-4, which is a text file.\r
@@ -2633,21 +2450,6 @@ cx:Relative-Topic-ShiftConstruction a rcxn:Construction ;
     rcxn:hasMetadata cx:Relative-Topic-ShiftConstruction_MD ;
     rcxn:hasSlots cx:Relative-Topic-ShiftConstruction_slots ;
     rcxn:hasTitle "Relative Topic Shift Construction " .
-
-cx:Transitivedurch-Präfixverbkonstruktion a rcxn:Construction ;
-    cx:hasExample cx:Transitivedurch-Präfixverbkonstruktion_Ex_A,
-        cx:Transitivedurch-Präfixverbkonstruktion_Ex_B,
-        cx:Transitivedurch-Präfixverbkonstruktion_Ex_C ;
-    rdfs:comment "Depends on what is doable, all MHG data is available in form of one big csv-file. Can be split into multiple files,  however." ;
-    lg:partOfLanguage lg:gmhWr12 ;
-    links:inheritsFrom cx:Monotransitivkonstruktion,
-        cx:Präfixverbkonstruktion ;
-    links:similarFormSameFunction cx:Transitivedurch-Partikelverbkonstruktion,
-        cx:Transitivedurch-Verbkonstruktion ;
-    rcxn:hasConstructionMeaning cx:Transitivedurch-Präfixverbkonstruktion_Meaning ;
-    rcxn:hasMetadata cx:Transitivedurch-Präfixverbkonstruktion_MD ;
-    rcxn:hasSlots cx:Transitivedurch-Präfixverbkonstruktion_slots ;
-    rcxn:hasTitle "Transitive durch-Präfixverbkonstruktion" .
 
 <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]> a rcxn:Construction ;
     lg:partOfLanguage lg:deu ;

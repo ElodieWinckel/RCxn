@@ -14,6 +14,7 @@ membr:Project_Fuehrer rsrch:hasFindings membr:Project_Fuehrer_F2512191334 .
 cx:Präfixverbkonstruktion12Jh a rcxn:Construction ;
     links:inheritedBy <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung> ;
     rcxn:hasMetadata cx:Präfixverbkonstruktion12Jh_MD ;
+    lg:partOfLanguage lg:gmh ;
     rcxn:hasTitle "Präfixverbkonstruktion (12. Jh.)" .
 
 cx:Präfixverbkonstruktion12Jh_MD a rcxn:Metadata ;
