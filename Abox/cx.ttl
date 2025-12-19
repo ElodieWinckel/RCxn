@@ -23,10 +23,6 @@ cx:Idiomaticconstructions a rcxn:Construction ;
     rcxn:hasSlots cx:Idiomaticconstructions_slots ;
     rcxn:hasTitle "Burn one's bridges construction" .
 
-cx:Relative-Topic-ShiftConstruction_1_slots a rdf_ns:Seq ;
-    rdf_ns:_2 cx:Relative-Topic-ShiftConstruction_2 ;
-    rdf_ns:_3 cx:Relative-Topic-ShiftConstruction_3 .
-
 cx:Relative-Topic-ShiftConstruction_2_Form a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "Il quale" .
 
@@ -897,7 +893,11 @@ cx:Relative-Topic-ShiftConstruction_1 a rcxn:SlotMandatory ;
     cx:WordOrder "Element 1 immediately before element 4" ;
     rdfs:comment "Element 1 is a \"coniunctio relativa\", i.e., a structure in which a relative pronoun (e.g., il quale, la quale) introduces a subordinate clause. The head noun can be omitted, remaining contextually recoverable. When this happens, the coniunctio relativa represents an elliptical noun phrase, with the relative pronoun standing in place of the implicit nominal head. Such an NP is anaphorically linked to the preceding co-text" ;
     rcxn:hasSlotForm cx:Relative-Topic-ShiftConstruction_1_Form ;
-    rcxn:hasSlots cx:Relative-Topic-ShiftConstruction_slots .
+    rcxn:hasSlots cx:Relative-Topic-ShiftConstruction_1_slots .
+
+cx:Relative-Topic-ShiftConstruction_1_slots a rdf_ns:Seq ;
+    rdf_ns:_2 cx:Relative-Topic-ShiftConstruction_2 ;
+    rdf_ns:_3 cx:Relative-Topic-ShiftConstruction_3 .
 
 cx:Relative-Topic-ShiftConstruction_2 a rcxn:SlotMandatory ;
     rcxn:hasSlotForm cx:Relative-Topic-ShiftConstruction_1_Form .
@@ -908,29 +908,35 @@ cx:Relative-Topic-ShiftConstruction_3 a rcxn:SlotOptional ;
     rcxn:hasSlotForm cx:Relative-Topic-ShiftConstruction_1_Form .
 
 cx:Relative-Topic-ShiftConstruction_4 a rcxn:SlotMandatory ;
-    cx:WordOrder "Element 4 immediately before Element 5" ;
-    rcxn:hasSlotForm cx:Relative-Topic-ShiftConstruction_4_Form .
+    rcxn:hasSlots cx:Relative-Topic-ShiftConstruction_4_slots .
 
-cx:Relative-Topic-ShiftConstruction_4_Form a rcxn:SlotForm ;
-    rcxn:hasSurfaceForm "mentre che" .
+cx:Relative-Topic-ShiftConstruction_4_slots a rdf_ns:Seq ;
+    rdf_ns:_1 cx:Relative-Topic-ShiftConstruction_5 ;
+    rdf_ns:_2 cx:Relative-Topic-ShiftConstruction_6 .
 
 cx:Relative-Topic-ShiftConstruction_5 a rcxn:SlotMandatory ;
-    cx:WordOrder "Element 5 follows Element 4" ;
-    rdfs:comment "The verb is often, though not exclusively, in the present tense. It frequently, but not exclusively, features a \"si passivante\" construction (formed by the particle 'si' combined with a transitive verb to convey a passive meaning). Additionally, the VP may have a more complex internal structure, incorporating various other elements. The verb appearing in the VP often anaphorically references an action or process already mentioned in the preceding co-text. This can occur either through direct repetition of the same verb or through synonyms" ;
+    cx:WordOrder "Element 5 immediately before Element 6" ;
     rcxn:hasSlotForm cx:Relative-Topic-ShiftConstruction_5_Form .
 
 cx:Relative-Topic-ShiftConstruction_5_Form a rcxn:SlotForm ;
+    rcxn:hasSurfaceForm "mentre che" .
+
+cx:Relative-Topic-ShiftConstruction_6 a rcxn:SlotMandatory ;
+    rdfs:comment "The verb is often, though not exclusively, in the present tense. It frequently, but not exclusively, features a \"si passivante\" construction (formed by the particle 'si' combined with a transitive verb to convey a passive meaning). Additionally, the VP may have a more complex internal structure, incorporating various other elements. The verb appearing in the VP often anaphorically references an action or process already mentioned in the preceding co-text. This can occur either through direct repetition of the same verb or through synonyms" ;
+    rcxn:hasSlotForm cx:Relative-Topic-ShiftConstruction_6_Form .
+
+cx:Relative-Topic-ShiftConstruction_6_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:ItalianSiPassivante,
         cx:ita_VerbPhrase .
 
 cx:Relative-Topic-ShiftConstruction_Ex_A a cx:Example ;
-    cx:hasAnnotatedText "Ma era al tutto diversa la deliberazione del senato viniziano. (Discorso indiretto del portavoce veneziano). [Le quali]2 [cose]3 [mentre che]4 [con aperta disunione si trattano tra i collegati]5, nuovo accidente che sopravenne partorì effetti molto diversi da' pensieri degli uomini;" ;
+    cx:hasAnnotatedText "Ma era al tutto diversa la deliberazione del senato viniziano. (Discorso indiretto del portavoce veneziano). [Le quali]2 [cose]3 [mentre che]5 [con aperta disunione si trattano tra i collegati]6, nuovo accidente che sopravenne partorì effetti molto diversi da' pensieri degli uomini;" ;
     cx:hasText "Ma era al tutto diversa la deliberazione del senato viniziano. (Discorso indiretto del portavoce veneziano). Le quali cose mentre che con aperta disunione si trattano tra i collegati, nuovo accidente che sopravenne partorì effetti molto diversi da' pensieri degli uomini;" ;
     cx:hasTranslation "But the decision of the Venetian Senate was completely different. (Indirect speech of the Venetian spokesman). [While these things were being discussed with open disunity among the allies], a new event that arose produced effects very different from the common expectations;" ;
     rdfs:comment "The Construction is in square brackets, while the rest has been included to allow for an understanding of its function. The NP with the coniunctio relativa includes the noun \"cose\" ('things'), which functions as an anaphoric encapsulator, summarizing the entire portion of the preceding text related to the discussions taking place among the allies. The verb \"trattare\" ('to discuss'), appearing in the VP with a 'si passivante' (thus, without a specified agent), carries an anaphoric value and refers to the action of discussing, which is the topic of the preceding co-text. The main clause that follows the Relative-Topic-Shift Construction introduces a new topic (the new and unexpected event being mentioned). Thus, it can be seen how, thanks to its anaphoric value, the Construction connects the preceding topic, which has already been concluded, to the subsequent one, simultaneously creating an effect of both cohesion and \"separation\" between two distinct subjects" .
 
 cx:Relative-Topic-ShiftConstruction_Ex_B a cx:Example ;
-    cx:hasAnnotatedText "...; e si ritirorno verso Cascina, attendendo che provisioni facesse più il re contro a sì manifesta contumacia de' suoi medesimi. [Le quali]2 [mentre che]4 [s'aspettano]5, non mancavano da altre parti a' fiorentini nuovi e pericolosi travagli, suscitati principalmente da' potentati della lega." ;
+    cx:hasAnnotatedText "...; e si ritirorno verso Cascina, attendendo che provisioni facesse più il re contro a sì manifesta contumacia de' suoi medesimi. [Le quali]2 [mentre che]5 [s'aspettano]6, non mancavano da altre parti a' fiorentini nuovi e pericolosi travagli, suscitati principalmente da' potentati della lega." ;
     cx:hasText "...; e si ritirorno verso Cascina, attendendo che provisioni facesse più il re contro a sì manifesta contumacia de' suoi medesimi. Le quali mentre che s'aspettano, non mancavano da altre parti a' fiorentini nuovi e pericolosi travagli, suscitati principalmente da' potentati della lega." ;
     cx:hasTranslation "...; and they withdrew toward Cascina, waiting for the king to take further measures against such open defiance from his own subjects. [While these were being awaited], the Florentines faced new and dangerous troubles from other quarters, stirred up primarily by the powers of the league." ;
     rdfs:comment "The Construction is in square brackets, while the rest has been included to allow for an understanding of its function. The coniunctio relativa 'Le quali' anaphorically refers to the 'provisioni' mentioned before the Construction. The noun in the NP thus remains implicit. The verb in the VP, 'aspettare' ('to wait') functions anaphorically, as it is a synonym of 'attendere', which appears shortly before the Construction. The main clause following the Construction introduces a new topic (the new trouble that the Florentines have to face). " .
@@ -947,6 +953,10 @@ cx:Relative-Topic-ShiftConstruction_Sources a cx:Collection ;
     cx:hasLiterature <file:///home/meuhlodi/Travail/RCxn/instance/Submissions/La_lingua_del_Guicciardini>,
         <https://doi.org/10.1093/llc/fqw021>,
         <https://doi.org/10.1417/81352> .
+
+cx:Relative-Topic-ShiftConstruction_slots a rdf_ns:Seq ;
+    rdf_ns:_1 cx:Relative-Topic-ShiftConstruction_1 ;
+    rdf_ns:_2 cx:Relative-Topic-ShiftConstruction_4 .
 
 cx:Spanishobjectrelativeclause a rcxn:Construction ;
     lg:partOfLanguage lg:spa ;
@@ -2004,11 +2014,6 @@ cx:zho_VerbPhrase a rcxn:Construction ;
     rcxn:hasSlots <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_slots> ;
     rcxn:hasTitle "Allative NP1 + auf + NP2 & NP1 + an + NP2 constructions" .
 
-cx:Relative-Topic-ShiftConstruction_slots a rdf_ns:Seq ;
-    rdf_ns:_1 cx:Relative-Topic-ShiftConstruction_1 ;
-    rdf_ns:_2 cx:Relative-Topic-ShiftConstruction_4 ;
-    rdf_ns:_3 cx:Relative-Topic-ShiftConstruction_5 .
-
 cx:ThisCloseToV-ing a rcxn:Construction ;
     cx:hasExample cx:ThisCloseToV-ing_Ex_A ;
     cx:hasGesture """The gesture is part of the construction's form.\r
@@ -2335,7 +2340,7 @@ cx:Relative-Topic-ShiftConstruction a rcxn:Construction ;
     rcxn:hasConstructionMeaning cx:Relative-Topic-ShiftConstruction_Meaning ;
     rcxn:hasMetadata cx:Relative-Topic-ShiftConstruction_MD ;
     rcxn:hasSlots cx:Relative-Topic-ShiftConstruction_slots ;
-    rcxn:hasTitle "Relative-Topic-Shift Construction " .
+    rcxn:hasTitle "Relative Topic Shift Construction " .
 
 cx:Transitivedurch-Präfixverbkonstruktion a rcxn:Construction ;
     cx:hasExample cx:Transitivedurch-Präfixverbkonstruktion_Ex_A,
