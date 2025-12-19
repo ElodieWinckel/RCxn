@@ -23,7 +23,7 @@ cx:Präfixverbkonstruktion12Jh_MD a rcxn:Metadata ;
 cx:gmh_Prefix rcxn:elementOf <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung> .
 
 <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung_1> a rcxn:SlotOptional ;
-    olia:hasCase olia:NominativeCase ;
+    olia:hasCase olia:Nominative ;
     olia:hasSemanticRole olia:ActorMacroRole ;
     rcxn:hasSlotForm <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung_1_Form> ;
     rcxn:hasSyntacticFunction "Subject" .
@@ -33,13 +33,13 @@ cx:gmh_Prefix rcxn:elementOf <http://example.org/cx/gmh_Präfixverbkonstruktion1
 
 <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung_2> a rcxn:SlotMandatory ;
     cx:WordOrder "2nd" ;
-    cx:hasTranslation "dt. 'durch', eng. 'through'" ;
+    cx:hasTranslation "dt. 'durch'", "eng. 'through'" ;
     rcxn:hasSlotForm <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung_2_Form> ;
     rcxn:hasSyntacticFunction "Verb" .
 
 <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung_2_Form> a rcxn:SlotForm ;
     rcxn:hasStem "durh" ;
-    rcxn:hasSurfaceForm "durch, durh, dur, thurh" ;
+    rcxn:hasSurfaceForm "durch", "durh", "dur", "thurh" ;
     rcxn:hasSyntacticForm cx:gmh_Prefix .
 
 <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung_3> a rcxn:SlotMandatory ;
@@ -48,11 +48,11 @@ cx:gmh_Prefix rcxn:elementOf <http://example.org/cx/gmh_Präfixverbkonstruktion1
     rcxn:hasSyntacticFunction "Verb" .
 
 <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung_3_Form> a rcxn:SlotForm ;
-    rcxn:hasSurfaceForm "æhten, bîzen, dringen, gân, houwen, leiten, rîten, stëchen, varn" .
+    rcxn:hasSurfaceForm "æhten", "bîzen", "dringen", "gân", "houwen", "leiten", "rîten", "stëchen", "varn" .
 
 <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung_4> a rcxn:SlotMandatory ;
-    olia:hasCase olia:AccusativeCase ;
-    rcxn:hasOtherSemanticContribution "Location, UndergoerMacro" ;
+    olia:hasCase olia:Accusative ;
+    olia:hasSemanticRole olia:Location, olia:UndergoerMacro ;
     rcxn:hasSlotForm <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung_4_Form> ;
     rcxn:hasSyntacticFunction "Accusative Object" .
 

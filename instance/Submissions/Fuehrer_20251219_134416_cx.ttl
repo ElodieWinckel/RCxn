@@ -23,7 +23,7 @@ membr:Project_Fuehrer rsrch:hasFindings membr:Project_Fuehrer_F2512191344 .
     cx:WordOrder "1st" ;
     cx:hasIndex <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Tätigkeit_1_Index> ;
     cx:hasTranslation "'I'" ;
-    olia:hasCase olia:NominativeCase ;
+    olia:hasCase olia:Nominative ;
     olia:hasSemanticRole olia:ActorMacroRole ;
     rcxn:hasSlotForm <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Tätigkeit_1_Form> ;
     rcxn:hasSyntacticFunction "Subject" .
@@ -37,7 +37,7 @@ membr:Project_Fuehrer rsrch:hasFindings membr:Project_Fuehrer_F2512191344 .
 
 <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Tätigkeit_2> a rcxn:SlotMandatory ;
     cx:WordOrder "2nd" ;
-    cx:hasTranslation "dt. 'durch', eng. 'through'" ;
+    cx:hasTranslation "dt. 'durch'", "eng. 'through'" ;
     rcxn:hasSlotForm <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Tätigkeit_2_Form> ;
     rcxn:hasSyntacticFunction "Verb" .
 
@@ -63,7 +63,7 @@ membr:Project_Fuehrer rsrch:hasFindings membr:Project_Fuehrer_F2512191344 .
     olia:hasVoice olia:ActiveVoice .
 
 <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Tätigkeit_Ex_A> a cx:Example ;
-    cx:hasAnnotatedText "ich durc ginc in miner unſculde hercē mineſ in mitten huſeſ mineſ [TP h/55va,6]" ;
+    cx:hasAnnotatedText "[ich]1 [durc]2 [ginc]3 in miner unſculde hercē mineſ in mitten huſeſ mineſ [TP h/55va,6]" ;
     cx:hasGlosses "I through went in my innocence heart's mine in middle house's mine" ;
     cx:hasText "ich durc ginc in miner unſculde hercē mineſ in mitten huſeſ mineſ [TP h/55va,6]" ;
     cx:hasTranslation "I strolled through the inside of my house in my heart's complete innocence" ;

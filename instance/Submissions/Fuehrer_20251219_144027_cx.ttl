@@ -35,7 +35,7 @@ cx:gmh_Prefix rcxn:elementOf <http://example.org/cx/gmh_Präfixverbkonstruktion1
 
 <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit_2> a rcxn:SlotMandatory ;
     cx:WordOrder "2nd" ;
-    cx:hasTranslation "dt. 'durch', eng. 'through'" ;
+    cx:hasTranslation "dt. 'durch'", "eng. 'through'" ;
     rcxn:hasSlotForm <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit_2_Form> ;
     rcxn:hasSyntacticFunction "Verb" .
 
@@ -46,23 +46,23 @@ cx:gmh_Prefix rcxn:elementOf <http://example.org/cx/gmh_Präfixverbkonstruktion1
 
 <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit_3> a rcxn:SlotMandatory ;
     cx:WordOrder "3rd" ;
-    cx:hasTranslation "'to break', 'to drive'" ;
+    cx:hasTranslation "'to break'", "'to drive'" ;
     rcxn:hasSlotForm <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit_3_Form> ;
     rcxn:hasSyntacticFunction "Verb" .
 
 <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit_3_Form> a rcxn:SlotForm ;
-    rcxn:hasStem "brëchen, varn" ;
+    rcxn:hasStem "brëchen", "varn" ;
     rcxn:hasSyntacticForm cx:gmh_Verb .
 
 <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit_4> a rcxn:SlotMandatory ;
     cx:WordOrder "4th" ;
-    cx:hasTranslation "'through fire and water', 'into the earth', 'into the fighting hordes'" ;
+    cx:hasTranslation "'through fire and water'", "'into the earth'", "'into the fighting hordes'" ;
     olia:hasSemanticRole olia:DirectionRole ;
     rcxn:hasSlotForm <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit_4_Form> ;
     rcxn:hasSyntacticFunction "Adverbial" .
 
 <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit_4_Form> a rcxn:SlotForm ;
-    rcxn:hasSurfaceForm "durch daz fur un̄ daz wazer, in die erdᵉn, indi ſcar " .
+    rcxn:hasSurfaceForm "durch daz fur un̄ daz wazer", "in die erdᵉn", "indi ſcar " .
 
 <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit_Ex_A> a cx:Example ;
     cx:hasAnnotatedText "[Wir]1 [durch]2 [furen]3 [durch daz fur un̄ daz wazer]4 " ;
