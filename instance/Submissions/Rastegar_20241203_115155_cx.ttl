@@ -31,7 +31,7 @@ cx:Idiomaticconstructions_1_Index a cx:Individual ;
     olia:hasAnimacy olia:Animate .
 
 cx:Idiomaticconstructions_2 a rcxn:SlotMandatory ;
-    cx:WordOrder "Follows subject, precedes object" ;
+    cx:WordOrder "Follows Element 1, precedes Element 3" ;
     rcxn:hasSlotForm cx:Idiomaticconstructions_2_Form ;
     cx:hasIndex cx:Idiomaticconstructions_2_Index .
 
@@ -44,7 +44,7 @@ cx:Idiomaticconstructions_2_Index a cx:Event ;
     olia:hasVoice olia:ActiveVoice .
 
 cx:Idiomaticconstructions_3 a rcxn:SlotMandatory ;
-    cx:WordOrder "Precedes \"bridges\"" ;
+    cx:WordOrder "Precedes Element 4" ;
     rcxn:hasSlotForm cx:Idiomaticconstructions_3_Form ;
     rcxn:hasSyntacticFunction "Determiner/Possessive modifier" ;
     cx:hasIndex cx:Idiomaticconstructions_3_Index ;

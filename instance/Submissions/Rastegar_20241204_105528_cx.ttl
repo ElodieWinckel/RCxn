@@ -67,7 +67,7 @@ cx:Idiomaticconstruction_1_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:deu_PrepositionalPhrase .
 
 cx:Idiomaticconstruction_2 a rcxn:SlotMandatory ;
-    cx:WordOrder "Initial position in prepositional phrase" ;
+    cx:WordOrder "Initial position in Element 1" ;
     rcxn:hasSlotForm cx:Idiomaticconstruction_2_Form ;
     cx:hasTranslation "out of" ;
     rcxn:hasSyntacticFunction "head of Element 1" ;
@@ -78,7 +78,7 @@ cx:Idiomaticconstruction_2_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:deu_Preposition .
 
 cx:Idiomaticconstruction_3 a rcxn:SlotMandatory ;
-    cx:WordOrder "follows preposition, precedes noun" ;
+    cx:WordOrder "follows Element 2, precedes Element 4" ;
     rcxn:hasSlotForm cx:Idiomaticconstruction_3_Form ;
     cx:hasTranslation "the" ;
     rcxn:hasSyntacticFunction "Determiner" ;
@@ -94,7 +94,7 @@ cx:Idiomaticconstruction_3_Index a cx:Individual ;
     olia:hasNumber olia:Singular .
 
 cx:Idiomaticconstruction_4 a rcxn:SlotMandatory ;
-    cx:WordOrder "Follows article" ;
+    cx:WordOrder "Follows Element 3" ;
     rcxn:hasSlotForm cx:Idiomaticconstruction_4_Form ;
     cx:hasTranslation "sleeve" ;
     cx:hasIndex cx:Idiomaticconstruction_4_Index ;
@@ -111,7 +111,6 @@ cx:Idiomaticconstruction_4_Index a cx:Individual ;
     olia:hasNumber olia:Singular .
 
 cx:Idiomaticconstruction_5 a rcxn:SlotMandatory ;
-    cx:WordOrder "Verb-final in dependent clauses / V2 in main clauses" ;
     rcxn:hasSlotForm cx:Idiomaticconstruction_5_Form ;
     cx:hasTranslation "shake" ;
     cx:hasIndex cx:Idiomaticconstruction_5_Index ;
