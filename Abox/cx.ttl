@@ -146,7 +146,8 @@ cx:Argumentstructureconstruction_Meaning a rcxn:ConstructionMeaning ;
 
 cx:Argumentstructureconstruction_Sources a cx:Collection ;
     cx:basedOn <https://doi.org/10.3389/frai.2025.1477246> ;
-    cx:hasLiterature <file:///home/meuhlodi/Travail/RCxn/instance/Submissions/Goldberg-1995> .
+    cx:hasLiterature <file:///home/meuhlodi/Travail/RCxn/instance/Submissions/Goldberg-1995>,
+        <https://doi.org/10.3389/frai.2025.1477246> .
 
 cx:Argumentstructureconstruction_slots a rdf_ns:Seq ;
     rdf_ns:_1 cx:Argumentstructureconstruction_1 ;

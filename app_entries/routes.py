@@ -460,6 +460,8 @@ def construction_detail(uri):
     # Fetch the title to display
     title = g.value(entry_uri, rcxn.hasTitle)
 
+    print(references)
+
     return render_template("app_entries/construction.html",
                            title=title,
                            triples=triples,

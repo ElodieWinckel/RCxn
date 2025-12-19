@@ -1,6 +1,6 @@
 @prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix cx: <http://example.org/cx/> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
 @prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#> .
@@ -63,7 +63,8 @@ cx:Argumentstructureconstruction_Meaning a rcxn:ConstructionMeaning ;
 
 cx:Argumentstructureconstruction_Sources a cx:Collection ;
     cx:basedOn <https://doi.org/10.3389/frai.2025.1477246> ;
-    cx:hasLiterature <Goldberg-1995> .
+    cx:hasLiterature <Goldberg-1995> ,
+        <https://doi.org/10.3389/frai.2025.1477246> .
 
 cx:Argumentstructureconstruction_slots a rdf:Seq ;
     rdf:_1 cx:Argumentstructureconstruction_1 ;
@@ -106,19 +107,21 @@ cx:EnglishTransitiveconstruction_MD a cx:Metadata ;
     rcxn:annotator membr:Ramezani ;
     rcxn:creationDate "2025-02-14"^^xsd:date .
 
-<Goldberg-1995> dcterms:creator "A. E. Goldberg" ;
-    dcterms:date "1995" ;
-    dcterms:publisher "University of Chicago Press" ;
-    dcterms:title "Constructions: A Construction Grammar Approach to Argument Structure" ;
-    dcterms:type "Book" .
+<Goldberg-1995> dc:creator "Adele E. Goldberg" ;
+    dc:date "1995" ;
+    dc:publisher "University of Chicago Press" ;
+    dc:title "Constructions: A Construction Grammar Approach to Argument Structure" ;
+    dc:type "Book" .
 
-<https://doi.org/10.3389/frai.2025.1477246> dcterms:creator "Pegah Ramezani, Achim Schilling, Patrick Krauss" ;
-    dcterms:date "2025" ;
-    dcterms:identifier "https://doi.org/10.3389/frai.2025.1477246" ;
-    dcterms:publisher "Frontiers in Artificial Intelligence",
+<https://doi.org/10.3389/frai.2025.1477246> dc:creator "Pegah Ramezani",
+        "Achim Schilling",
+        "Patrick Krauss" ;
+    dc:date "2025" ;
+    dc:identifier "https://doi.org/10.3389/frai.2025.1477246" ;
+    dc:publisher "Frontiers in Artificial Intelligence",
         "University of Chicago Press" ;
-    dcterms:title "Analysis of Argument Structure Constructions in the Large Language Model BERT" ;
-    dcterms:type "Article" .
+    dc:title "Analysis of Argument Structure Constructions in the Large Language Model BERT" ;
+    dc:type "Article" .
 
 cx:eng_Phrase a rcxn:Construction ;
     rcxn:hasTitle "Phrase" ;
