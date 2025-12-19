@@ -412,7 +412,7 @@ cx:Idiomaticconstruction_1_slots a rdf_ns:Seq ;
     rdf_ns:_3 cx:Idiomaticconstruction_4 .
 
 cx:Idiomaticconstruction_2 a rcxn:SlotMandatory ;
-    cx:WordOrder "Initial position in prepositional phrase" ;
+    cx:WordOrder "Initial position in Element 1" ;
     cx:hasTranslation "out of" ;
     rcxn:hasOtherSemanticContribution "source" ;
     rcxn:hasSlotForm cx:Idiomaticconstruction_2_Form ;
@@ -423,7 +423,7 @@ cx:Idiomaticconstruction_2_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:deu_Preposition .
 
 cx:Idiomaticconstruction_3 a rcxn:SlotMandatory ;
-    cx:WordOrder "follows preposition, precedes noun" ;
+    cx:WordOrder "follows Element 2, precedes Element 4" ;
     cx:hasIndex cx:Idiomaticconstruction_3_Index ;
     cx:hasTranslation "the" ;
     rcxn:hasSlotForm cx:Idiomaticconstruction_3_Form ;
@@ -439,7 +439,7 @@ cx:Idiomaticconstruction_3_Index a cx:Individual ;
     olia:hasNumber olia:Singular .
 
 cx:Idiomaticconstruction_4 a rcxn:SlotMandatory ;
-    cx:WordOrder "Follows article" ;
+    cx:WordOrder "Follows Element 3" ;
     cx:hasIndex cx:Idiomaticconstruction_4_Index ;
     cx:hasTranslation "sleeve" ;
     olia:hasSemanticRole olia:LocationRole ;
@@ -456,7 +456,6 @@ cx:Idiomaticconstruction_4_Index a cx:Individual ;
     olia:hasNumber olia:Singular .
 
 cx:Idiomaticconstruction_5 a rcxn:SlotMandatory ;
-    cx:WordOrder "Verb-final in dependent clauses / V2 in main clauses" ;
     cx:hasIndex cx:Idiomaticconstruction_5_Index ;
     cx:hasTranslation "shake" ;
     rcxn:hasOtherSemanticContribution "Action" ;
@@ -509,7 +508,7 @@ cx:Idiomaticconstructions_1_Index a cx:Individual ;
     olia:hasAnimacy olia:Animate .
 
 cx:Idiomaticconstructions_2 a rcxn:SlotMandatory ;
-    cx:WordOrder "Follows subject, precedes object" ;
+    cx:WordOrder "Follows Element 1, precedes Element 3" ;
     cx:hasIndex cx:Idiomaticconstructions_2_Index ;
     rcxn:hasSlotForm cx:Idiomaticconstructions_2_Form .
 
@@ -522,7 +521,7 @@ cx:Idiomaticconstructions_2_Index a cx:Event ;
     olia:hasVoice olia:ActiveVoice .
 
 cx:Idiomaticconstructions_3 a rcxn:SlotMandatory ;
-    cx:WordOrder "Precedes \"bridges\"" ;
+    cx:WordOrder "Precedes Element 4" ;
     cx:hasIndex cx:Idiomaticconstructions_3_Index ;
     olia:hasSemanticRole olia:PossessorRole ;
     rcxn:hasSlotForm cx:Idiomaticconstructions_3_Form ;
