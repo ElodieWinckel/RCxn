@@ -142,7 +142,7 @@ cx:Argumentstructureconstruction_MD a rcxn:Metadata ;
     rcxn:creationDate "2025-02-14"^^xsd:date .
 
 cx:Argumentstructureconstruction_Meaning a rcxn:ConstructionMeaning ;
-    rcxn:hasMeaning "The central senses of argument structure construction have been argued to be in association with humanly relevant scenes like: transferring [something]2 to someone, causing [something]2 to change state or move, experiencing something, [something]1 undergoing a change of state or location" .
+    rcxn:hasMeaning "The central senses of argument structure construction have been argued to be in association with humanly relevant scenes like: transferring [something]3 to [someone]3, causing [something]3 to change state or move, experiencing [something,]3 [something]1 undergoing a change of state or location" .
 
 cx:Argumentstructureconstruction_Sources a cx:Collection ;
     cx:basedOn <https://doi.org/10.3389/frai.2025.1477246> ;
