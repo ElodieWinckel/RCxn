@@ -371,7 +371,11 @@ function generateFields() {
         const animateOption = document.createElement('option');
         animateOption.value = 'Animate';
         animateOption.textContent = 'Animate';
-        // Third option: inanimate
+        // Third option: human (type of animate)
+        const humanOption = document.createElement('option');
+        humanOption.value = 'Human';
+        humanOption.textContent = 'Animate: Human';
+        // Fourth option: inanimate
         const inanimateOption = document.createElement('option');
         inanimateOption.value = 'Inanimate';
         inanimateOption.textContent = 'Inanimate';
@@ -382,6 +386,7 @@ function generateFields() {
         // Select option
         animacySelect.appendChild(animacyEmptyOption);
         animacySelect.appendChild(animateOption);
+        animacySelect.appendChild(humanOption);
         animacySelect.appendChild(inanimateOption);
         animacySelect.appendChild(animacyOtherOption);
         elementDetails.appendChild(animacySelect);
