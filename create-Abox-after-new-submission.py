@@ -127,7 +127,7 @@ add_user("De la Garza",
 add_user("Fernández Santos",
          "Sara",
          "Artificial language learning as a window to the early entrenchment of constructions",
-         "https://www.cxg.phil.fau.eu/person/vania-de-la-garza/")
+         "https://www.cxg.phil.fau.eu/person/sara-fernandez-santos/")
 add_user("Fokashchuk",
          "Iryna",
          "Functions and cognitive semantics of prepositions in complex constructions",
