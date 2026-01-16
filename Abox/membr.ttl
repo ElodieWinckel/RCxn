@@ -66,7 +66,8 @@ membr:Fuehrer a foaf:Person ;
     foaf:homepage <https://www.cxg.phil.fau.eu/person/bastian-fuhrer/> .
 
 membr:Garibyan a foaf:Person ;
-    foaf:currentProject membr:Project_Garibyan ;
+    foaf:currentProject membr:Project_Garibyan,
+        membr:Project_Winckel_2601131454 ;
     foaf:familyName "Garibyan" ;
     foaf:givenName "Armine" ;
     foaf:homepage <https://www.cxg.phil.fau.eu/person/armine-garibyan/> .
@@ -240,7 +241,8 @@ membr:Weigelt a foaf:Person ;
     foaf:homepage <https://www.cxg.phil.fau.eu/person/lina-weigelt/> .
 
 membr:Winckel a foaf:Person ;
-    foaf:currentProject membr:Project_Winckel ;
+    foaf:currentProject membr:Project_Winckel,
+        membr:Project_Winckel_2601131454 ;
     foaf:familyName "Winckel" ;
     foaf:givenName "Elodie" ;
     foaf:homepage <https://www.cxg.phil.fau.eu/person/elodie-winckel/> .
@@ -319,6 +321,7 @@ membr:Project_Fuehrer_F2512191440 a rsrch:Finding ;
     rsrch:basedOn <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit> .
 
 membr:Project_Garibyan a rsrch:Project ;
+    rsrch:hasResearchQuestion membr:Project_Winckel_2601131454 ;
     rsrch:projectName "Project Garibyan"@en .
 
 membr:Project_Gedik a rsrch:Project ;
@@ -454,7 +457,12 @@ membr:Project_Weigelt a rsrch:Project ;
 
 membr:Project_Winckel a rsrch:Project ;
     rsrch:hasFindings membr:Project_Winckel_F2511281100 ;
+    rsrch:hasResearchQuestion membr:Project_Winckel_2601131454 ;
     rsrch:projectName "Building a Research Constructicon"@en .
+
+membr:Project_Winckel_2601131454_F2601131454 a rsrch:Finding ;
+    rdfs:label "The relational database for CASA entries can be translated into the RDF format of the Research Constructicon." ;
+    rsrch:basedOn cx:eng_AttributeConstruction .
 
 membr:Project_Winckel_F2511281100 a rsrch:Finding ;
     rdfs:label "Implement a lexical item in the research constructicon" ;
@@ -468,4 +476,8 @@ membr:Project_Winckel_F2511281100 a rsrch:Finding ;
 
 membr:Project_Wright a rsrch:Project ;
     rsrch:projectName "Project Wright"@en .
+
+membr:Project_Winckel_2601131454 a rsrch:Project ;
+    rsrch:hasFindings membr:Project_Winckel_2601131454_F2601131454 ;
+    rsrch:projectName "Link CASA (a Construction Grammar Approach to Syntactic Analysis) and the Research Constructicon" .
 

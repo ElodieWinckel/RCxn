@@ -43,6 +43,15 @@ cx:comePLUSnoisemannerofmovementVing_4_Form a rcxn:SlotForm ;
     rcxn:hasSlots <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Tätigkeit_slots> ;
     rcxn:hasTitle "Präfixverbkonstruktion (12. Jh., Tätigkeit)" .
 
+cx:Active3ArgumentStructureConstruction a rcxn:Construction ;
+    links:inheritedBy cx:eng_AttributeConstruction ;
+    rcxn:hasMetadata cx:Active3ArgumentStructureConstruction_MD ;
+    rcxn:hasTitle "Active 3 Argument Structure Construction" .
+
+cx:Active3ArgumentStructureConstruction_MD a rcxn:Metadata ;
+    cx:annotator membr:Winckel ;
+    rcxn:creationDate "2026-01-13"^^xsd:date .
+
 cx:Adjectiveexclamativeconstruction a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
     links:inheritedBy cx:engInf_Coolexclamativeconstruction ;
@@ -281,12 +290,6 @@ cx:EnglishPullsomethingoutofahat a rcxn:Construction ;
     rcxn:annotator membr:Rastegar ;
     rcxn:creationDate "2024-12-04"^^xsd:date ;
     rcxn:hasTitle "Pull something out of a hat" .
-
-cx:EnglishResultativeconstruction a rcxn:Construction ;
-    lg:partOfLanguage lg:eng ;
-    links:inheritsFrom cx:Argumentstructureconstruction ;
-    rcxn:hasMetadata cx:EnglishResultativeconstruction_MD ;
-    rcxn:hasTitle "Resultative construction" .
 
 cx:EnglishResultativeconstruction_MD a cx:Metadata ;
     rcxn:annotator membr:Ramezani ;
@@ -1652,6 +1655,58 @@ cx:eng_Adjective_MD a rcxn:Metadata ;
         membr:Winckel ;
     rcxn:creationDate "2025-11-28"^^xsd:date .
 
+cx:eng_AttributeConstruction_1 a rcxn:SlotMandatory ;
+    rcxn:hasOtherSemanticContribution "Æffector" ;
+    rcxn:hasSlotForm cx:eng_AttributeConstruction_1_Form .
+
+cx:eng_AttributeConstruction_1_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:eng_NounPhrase .
+
+cx:eng_AttributeConstruction_2 a rcxn:SlotMandatory ;
+    rdfs:comment "Source for collo-profile: Valency Dictionary of English, Patternbank; Borderline cases: buy sell (something cheap) ",
+        "colloprofile: account  assume  beat  believe  consider  discover  dream  find  guarantee  judge  label  lay  mark  pass  present  show  think  worry  " ;
+    rcxn:hasSlotForm cx:eng_AttributeConstruction_2_Form .
+
+cx:eng_AttributeConstruction_2_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:eng_Verb .
+
+cx:eng_AttributeConstruction_3 a rcxn:SlotMandatory ;
+    rcxn:hasOtherSemanticContribution "Æffected-Attributee" ;
+    rcxn:hasSlotForm cx:eng_AttributeConstruction_3_Form ;
+    rcxn:hasSyntacticFunction "direct object" .
+
+cx:eng_AttributeConstruction_3_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:eng_NounPhrase .
+
+cx:eng_AttributeConstruction_4 a rcxn:SlotMandatory ;
+    rcxn:hasOtherSemanticContribution "Attribute" ;
+    rcxn:hasSlotForm cx:eng_AttributeConstruction_4_Form ;
+    rcxn:hasSyntacticFunction "object complement" .
+
+cx:eng_AttributeConstruction_4_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:eng_AdjectivePhrase .
+
+cx:eng_AttributeConstruction_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "[She]1 [called]2 [the idea]3 [stupid]4." ;
+    cx:hasText "She called the idea stupid." .
+
+cx:eng_AttributeConstruction_MD a rcxn:Metadata ;
+    cx:hasSources cx:eng_AttributeConstruction_Sources ;
+    rcxn:annotator membr:Winckel ;
+    rcxn:creationDate "2026-01-13"^^xsd:date .
+
+cx:eng_AttributeConstruction_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "An [ÆFFECTOR]1 assigns an [ATTRIBUTE]4 to an [ATTRIBUTEE]3." .
+
+cx:eng_AttributeConstruction_Sources a cx:Collection ;
+    rdfs:seeAlso <https://constructicon.de/constructions/23> .
+
+cx:eng_AttributeConstruction_slots a rdf_ns:Seq ;
+    rdf_ns:_1 cx:eng_AttributeConstruction_1 ;
+    rdf_ns:_2 cx:eng_AttributeConstruction_2 ;
+    rdf_ns:_3 cx:eng_AttributeConstruction_3 ;
+    rdf_ns:_4 cx:eng_AttributeConstruction_4 .
+
 cx:eng_Keepacoolheadconstruction a rcxn:Construction ;
     cx:hasExample cx:eng_Keepacoolheadconstruction_Ex_A ;
     rdfs:comment "first attested 1718, cf. OED" ;
@@ -2085,6 +2140,13 @@ cx:zho_VerbPhrase a rcxn:Construction ;
     rcxn:hasSlots <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_slots> ;
     rcxn:hasTitle "Allative NP1 + auf + NP2 & NP1 + an + NP2 constructions" .
 
+cx:EnglishResultativeconstruction a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    links:inheritsFrom cx:Argumentstructureconstruction ;
+    links:sameFormDifferentFunction cx:eng_AttributeConstruction ;
+    rcxn:hasMetadata cx:EnglishResultativeconstruction_MD ;
+    rcxn:hasTitle "Resultative construction" .
+
 cx:Präfixverbkonstruktion12Jh a rcxn:Construction ;
     lg:partOfLanguage lg:gmh ;
     links:inheritedBy <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung>,
@@ -2241,13 +2303,6 @@ cx:eng_Phrase a rcxn:Construction ;
         cx:eng_AdjectivePredicativeconstruction ;
     rcxn:hasTitle "Phrase" .
 
-cx:eng_Verb a rcxn:Construction ;
-    lg:partOfLanguage lg:eng ;
-    rcxn:elementOf cx:Argumentstructureconstruction,
-        <http://example.org/cx/TheEnglishGIVE-OUTVerbParticleConstruction.>,
-        cx:comePLUSnoisemannerofmovementVing ;
-    rcxn:hasTitle "Verb" .
-
 cx:eng_VerbPhrase a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
     rcxn:elementOf cx:EvaluativeAttributionConstruction ;
@@ -2279,6 +2334,14 @@ cx:POU-beneficiaryconstruction a rcxn:Construction ;
     rcxn:hasMetadata cx:POU-beneficiaryconstruction_MD ;
     rcxn:hasSlots cx:POU-beneficiaryconstruction_slots ;
     rcxn:hasTitle "POU-beneficiary construction" .
+
+cx:eng_Verb a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    rcxn:elementOf cx:Argumentstructureconstruction,
+        <http://example.org/cx/TheEnglishGIVE-OUTVerbParticleConstruction.>,
+        cx:comePLUSnoisemannerofmovementVing,
+        cx:eng_AttributeConstruction ;
+    rcxn:hasTitle "Verb" .
 
 cx:eng_coolconstruction a rcxn:Construction ;
     cx:hasExample cx:eng_coolconstruction_Ex_A,
@@ -2336,6 +2399,16 @@ cx:eng_Adjective a rcxn:Construction ;
     rcxn:hasMetadata cx:eng_Adjective_MD ;
     rcxn:hasTitle "Adjective" .
 
+cx:eng_AttributeConstruction a rcxn:Construction ;
+    cx:hasExample cx:eng_AttributeConstruction_Ex_A ;
+    lg:partOfLanguage lg:eng ;
+    links:inheritsFrom cx:Active3ArgumentStructureConstruction ;
+    links:sameFormDifferentFunction cx:EnglishResultativeconstruction ;
+    rcxn:hasConstructionMeaning cx:eng_AttributeConstruction_Meaning ;
+    rcxn:hasMetadata cx:eng_AttributeConstruction_MD ;
+    rcxn:hasSlots cx:eng_AttributeConstruction_slots ;
+    rcxn:hasTitle "Attribute Construction" .
+
 cx:eng_PrepositionalPhrase a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
     rcxn:elementOf <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions>,
@@ -2363,23 +2436,6 @@ This is a similar publicly available dataset: https://github.com/SPOClab-ca/neur
     rcxn:hasSlots cx:Argumentstructureconstruction_slots ;
     rcxn:hasTitle "Argument structure construction" .
 
-cx:eng_AdjectivePhrase a rcxn:Construction ;
-    lg:partOfLanguage lg:eng ;
-    rcxn:elementOf cx:EvaluativeAttributionConstruction,
-        cx:eng_AdjectiveAttributiveconstruction,
-        cx:eng_AdjectivePredicativeconstruction ;
-    rcxn:hasConstructionMeaning cx:eng_AdjectivePhrase_Meaning ;
-    rcxn:hasMetadata cx:eng_AdjectivePhrase_MD ;
-    rcxn:hasSlots cx:eng_AdjectivePhrase_slots ;
-    rcxn:hasTitle "Adjective Phrase" .
-
-cx:eng_NounPhrase a rcxn:Construction ;
-    lg:partOfLanguage lg:eng ;
-    rcxn:elementOf cx:EvaluativeAttributionConstruction,
-        <http://example.org/cx/TheEnglishGIVE-OUTVerbParticleConstruction.>,
-        cx:comePLUSnoisemannerofmovementVing ;
-    rcxn:hasTitle "Noun Phrase" .
-
 cx:eng_coolconstruction_Sources a cx:Collection ;
     cx:hasLiterature <file:///home/meuhlodi/Travail/RCxn/instance/Submissions/www.english-corpora.org/bnc/>,
         <file:///home/meuhlodi/Travail/RCxn/instance/Submissions/www.english-corpora.org/coca/>,
@@ -2400,6 +2456,17 @@ cx:Transitiveobjectrelativeclause a rcxn:Construction ;
     rcxn:hasMetadata cx:Transitiveobjectrelativeclause_MD ;
     rcxn:hasSlots cx:Transitiveobjectrelativeclause_slots ;
     rcxn:hasTitle "Potentially ambiguous object relative clause" .
+
+cx:eng_AdjectivePhrase a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    rcxn:elementOf cx:EvaluativeAttributionConstruction,
+        cx:eng_AdjectiveAttributiveconstruction,
+        cx:eng_AdjectivePredicativeconstruction,
+        cx:eng_AttributeConstruction ;
+    rcxn:hasConstructionMeaning cx:eng_AdjectivePhrase_Meaning ;
+    rcxn:hasMetadata cx:eng_AdjectivePhrase_MD ;
+    rcxn:hasSlots cx:eng_AdjectivePhrase_slots ;
+    rcxn:hasTitle "Adjective Phrase" .
 
 <http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc> a rcxn:Construction ;
     lg:partOfLanguage lg:deu ;
@@ -2424,6 +2491,14 @@ cx:Transitiveobjectrelativeclause a rcxn:Construction ;
     rcxn:hasMetadata <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_MD> ;
     rcxn:hasSlots <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_slots> ;
     rcxn:hasTitle "(sich) (NP) (ADJ) (ADV) [vor Augen] (VP)" .
+
+cx:eng_NounPhrase a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    rcxn:elementOf cx:EvaluativeAttributionConstruction,
+        <http://example.org/cx/TheEnglishGIVE-OUTVerbParticleConstruction.>,
+        cx:comePLUSnoisemannerofmovementVing,
+        cx:eng_AttributeConstruction ;
+    rcxn:hasTitle "Noun Phrase" .
 
 cx:Idiomaticconstruction a rcxn:Construction ;
     cx:hasExample cx:Idiomaticconstruction_Ex_A,

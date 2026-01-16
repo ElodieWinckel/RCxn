@@ -1,0 +1,91 @@
+@prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cx: <http://example.org/cx/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
+@prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#> .
+@prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
+@prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cx:Active3ArgumentStructureConstruction a rcxn:Construction ;
+    links:inheritedBy cx:eng_AttributeConstruction ;
+    rcxn:hasMetadata cx:Active3ArgumentStructureConstruction_MD ;
+    rcxn:hasTitle "Active 3 Argument Structure Construction" .
+
+cx:Active3ArgumentStructureConstruction_MD a rcxn:Metadata ;
+    cx:annotator membr:Winckel ;
+    rcxn:creationDate "2026-01-13"^^xsd:date .
+
+cx:EnglishResultativeconstruction links:sameFormDifferentFunction cx:eng_AttributeConstruction .
+
+cx:eng_AdjectivePhrase rcxn:elementOf cx:eng_AttributeConstruction .
+
+cx:eng_AttributeConstruction_1 a rcxn:SlotMandatory ;
+    rcxn:hasOtherSemanticContribution "Æffector" ;
+    rcxn:hasSlotForm cx:eng_AttributeConstruction_1_Form .
+
+cx:eng_AttributeConstruction_1_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:eng_NounPhrase .
+
+cx:eng_AttributeConstruction_2 a rcxn:SlotMandatory ;
+    RDFS:comment "Source for collo-profile: Valency Dictionary of English, Patternbank; Borderline cases: buy sell (something cheap) ",
+        "colloprofile: account  assume  beat  believe  consider  discover  dream  find  guarantee  judge  label  lay  mark  pass  present  show  think  worry  " ;
+    rcxn:hasSlotForm cx:eng_AttributeConstruction_2_Form .
+
+cx:eng_AttributeConstruction_2_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:eng_Verb .
+
+cx:eng_AttributeConstruction_3 a rcxn:SlotMandatory ;
+    rcxn:hasOtherSemanticContribution "Æffected-Attributee" ;
+    rcxn:hasSlotForm cx:eng_AttributeConstruction_3_Form ;
+    rcxn:hasSyntacticFunction "direct object" .
+
+cx:eng_AttributeConstruction_3_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:eng_NounPhrase .
+
+cx:eng_AttributeConstruction_4 a rcxn:SlotMandatory ;
+    rcxn:hasOtherSemanticContribution "Attribute" ;
+    rcxn:hasSlotForm cx:eng_AttributeConstruction_4_Form ;
+    rcxn:hasSyntacticFunction "object complement" .
+
+cx:eng_AttributeConstruction_4_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:eng_AdjectivePhrase .
+
+cx:eng_AttributeConstruction_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "[She]1 [called]2 [the idea]3 [stupid]4." ;
+    cx:hasText "She called the idea stupid." .
+
+cx:eng_AttributeConstruction_MD a rcxn:Metadata ;
+    cx:hasSources cx:eng_AttributeConstruction_Sources ;
+    rcxn:annotator membr:Winckel ;
+    rcxn:creationDate "2026-01-13"^^xsd:date .
+
+cx:eng_AttributeConstruction_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "An [ÆFFECTOR]1 assigns an [ATTRIBUTE]4 to an [ATTRIBUTEE]3." .
+
+cx:eng_AttributeConstruction_Sources a cx:Collection ;
+    RDFS:seeAlso <https://constructicon.de/constructions/23> .
+
+cx:eng_AttributeConstruction_slots a rdf:Seq ;
+    rdf:_1 cx:eng_AttributeConstruction_1 ;
+    rdf:_2 cx:eng_AttributeConstruction_2 ;
+    rdf:_3 cx:eng_AttributeConstruction_3 ;
+    rdf:_4 cx:eng_AttributeConstruction_4 .
+
+cx:eng_Verb rcxn:elementOf cx:eng_AttributeConstruction .
+
+cx:eng_NounPhrase rcxn:elementOf cx:eng_AttributeConstruction .
+
+cx:eng_AttributeConstruction a rcxn:Construction ;
+    cx:hasExample cx:eng_AttributeConstruction_Ex_A ;
+    lg:partOfLanguage lg:eng ;
+    links:inheritsFrom cx:Active3ArgumentStructureConstruction ;
+    links:sameFormDifferentFunction cx:EnglishResultativeconstruction ;
+    rcxn:hasConstructionMeaning cx:eng_AttributeConstruction_Meaning ;
+    rcxn:hasMetadata cx:eng_AttributeConstruction_MD ;
+    rcxn:hasSlots cx:eng_AttributeConstruction_slots ;
+    rcxn:hasTitle "Attribute Construction" .
+
+membr:Project_Winckel_2601131454_F2601131454 rsrch:basedOn cx:eng_AttributeConstruction .
