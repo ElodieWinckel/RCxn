@@ -106,7 +106,7 @@ add_user("Badawi",
          "https://www.cxg.phil.fau.eu/person/soran-badawi/")
 add_user("Bayer",
          "Nadine",
-         "Project Bayer",
+         "Differential argument marking in Arabic",
          "https://www.cxg.phil.fau.eu/person/nadine-bayer/")
 add_user("Benito Fernandez",
          "Elba",
