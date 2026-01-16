@@ -1,4 +1,5 @@
 @prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix casa: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/casa#> .
 @prefix cx: <http://example.org/cx/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
@@ -22,9 +23,11 @@ cx:EnglishResultativeconstruction links:sameFormDifferentFunction cx:eng_Attribu
 
 cx:eng_AdjectivePhrase rcxn:elementOf cx:eng_AttributeConstruction .
 
-cx:eng_AttributeConstruction_1 a rcxn:SlotMandatory ;
+cx:eng_AttributeConstruction_1 a rcxn:SlotOptional ;
     rcxn:hasOtherSemanticContribution "Æffector" ;
-    rcxn:hasSlotForm cx:eng_AttributeConstruction_1_Form .
+    rcxn:hasSlotForm cx:eng_AttributeConstruction_1_Form ;
+    rcxn:hasSyntacticFunction "potential subject" ;
+    casa:hasCasaSyntacticFunction "potential subject" .
 
 cx:eng_AttributeConstruction_1_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_NounPhrase .

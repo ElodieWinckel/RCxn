@@ -2,6 +2,7 @@
 @prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
 @prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#> .
 @prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
+@prefix ns1: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/casa#> .
 @prefix olia: <http://purl.org/olia/olia.owl#> .
 @prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
 @prefix rdf_ns: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -1655,9 +1656,11 @@ cx:eng_Adjective_MD a rcxn:Metadata ;
         membr:Winckel ;
     rcxn:creationDate "2025-11-28"^^xsd:date .
 
-cx:eng_AttributeConstruction_1 a rcxn:SlotMandatory ;
+cx:eng_AttributeConstruction_1 a rcxn:SlotOptional ;
+    ns1:hasCasaSyntacticFunction "potential subject" ;
     rcxn:hasOtherSemanticContribution "Æffector" ;
-    rcxn:hasSlotForm cx:eng_AttributeConstruction_1_Form .
+    rcxn:hasSlotForm cx:eng_AttributeConstruction_1_Form ;
+    rcxn:hasSyntacticFunction "potential subject" .
 
 cx:eng_AttributeConstruction_1_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_NounPhrase .
@@ -1672,6 +1675,7 @@ cx:eng_AttributeConstruction_2_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_Verb .
 
 cx:eng_AttributeConstruction_3 a rcxn:SlotMandatory ;
+    ns1:hasCasaSyntacticFunction "Obj" ;
     rcxn:hasOtherSemanticContribution "Æffected-Attributee" ;
     rcxn:hasSlotForm cx:eng_AttributeConstruction_3_Form ;
     rcxn:hasSyntacticFunction "direct object" .
@@ -1680,6 +1684,7 @@ cx:eng_AttributeConstruction_3_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_NounPhrase .
 
 cx:eng_AttributeConstruction_4 a rcxn:SlotMandatory ;
+    ns1:hasCasaSyntacticFunction "Attr" ;
     rcxn:hasOtherSemanticContribution "Attribute" ;
     rcxn:hasSlotForm cx:eng_AttributeConstruction_4_Form ;
     rcxn:hasSyntacticFunction "object complement" .
@@ -2409,7 +2414,7 @@ cx:eng_AttributeConstruction a rcxn:Construction ;
     rcxn:hasConstructionMeaning cx:eng_AttributeConstruction_Meaning ;
     rcxn:hasMetadata cx:eng_AttributeConstruction_MD ;
     rcxn:hasSlots cx:eng_AttributeConstruction_slots ;
-    rcxn:hasTitle "Attribute Construction" .
+    rcxn:hasTitle "Attribute Construction (Attr: Adj)" .
 
 cx:eng_PrepositionalPhrase a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
