@@ -63,7 +63,7 @@ cx:Argumentstructureconstruction_Meaning a rcxn:ConstructionMeaning ;
 
 cx:Argumentstructureconstruction_Sources a cx:Collection ;
     cx:basedOn <https://doi.org/10.3389/frai.2025.1477246> ;
-    cx:hasLiterature <Goldberg-1995> ,
+    cx:hasLiterature <Goldberg_1995> ,
         <https://doi.org/10.3389/frai.2025.1477246> .
 
 cx:Argumentstructureconstruction_slots a rdf:Seq ;
@@ -106,12 +106,6 @@ cx:EnglishTransitiveconstruction a rcxn:Construction ;
 cx:EnglishTransitiveconstruction_MD a cx:Metadata ;
     rcxn:annotator membr:Ramezani ;
     rcxn:creationDate "2025-02-14"^^xsd:date .
-
-<Goldberg-1995> dc:creator "Adele E. Goldberg" ;
-    dc:date "1995" ;
-    dc:publisher "University of Chicago Press" ;
-    dc:title "Constructions: A Construction Grammar Approach to Argument Structure" ;
-    dc:type "Book" .
 
 <https://doi.org/10.3389/frai.2025.1477246> dc:creator "Pegah Ramezani",
         "Achim Schilling",

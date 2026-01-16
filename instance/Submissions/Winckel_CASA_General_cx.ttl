@@ -1,5 +1,6 @@
 @prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix cx: <http://example.org/cx/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
 @prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#> .
@@ -23,3 +24,40 @@ membr:Project_Winckel_2601131454 a rsrch:Project ;
 membr:Winckel foaf:currentProject membr:Project_Winckel_2601131454 .
 
 membr:Garibyan foaf:currentProject membr:Project_Winckel_2601131454 .
+
+##############
+# LITERATURE
+##############
+
+<Croft_2012> dc:creator "William Croft" ;
+    dc:date "2012" ;
+    dc:publisher "Oxford University Press" ;
+    dc:title "Constructions at Work" ;
+    dc:type "Book" .
+
+<Goldberg_2006> dc:creator "Adele E. Goldberg" ;
+    dc:date "2006" ;
+    dc:publisher "Oxford University Press" ;
+    dc:title "Verbs: aspect and causal structure" ;
+    dc:type "Book" .
+
+<Goldberg_1995> dc:creator "Adele E. Goldberg" ;
+    dc:date "1995" ;
+    dc:publisher "University of Chicago Press" ;
+    dc:title "Constructions: A Construction Grammar Approach to Argument Structure" ;
+    dc:type "Book" .
+
+<Herbst_2020> dc:creator "Thomas Herbst" ;
+    dc:date "2020" ;
+    dc:identifier "DOI 10.1075/cf.00035.her" ;
+    dc:title "Constructions, generalizations, and the unpredictability of language: Moving towards colloconstruction grammar" ;
+    dc:type "journalArticle" .
+
+<Herbst_Hoffman_2024> dc:creator "Herbst, Thomas",
+        "Hoffmann, Thomas" ;
+    dc:date "2024" ;
+    dc:identifier "ISBN 978-90-272-4676-9" ;
+    dc:publisher "John Benjamins Publishing Company" ;
+    dc:rights "De Gruyter expressly reserves the right to use all content for commercial text and data mining within the meaning of Section 44b of the German Copyright Act." ;
+    dc:title "A Construction Grammar of the English Language: CASA – a Constructionist Approach to Syntactic Analysis" ;
+    dc:type "book" .

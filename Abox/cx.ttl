@@ -161,13 +161,31 @@ cx:Argumentstructureconstruction_Meaning a rcxn:ConstructionMeaning ;
 
 cx:Argumentstructureconstruction_Sources a cx:Collection ;
     cx:basedOn <https://doi.org/10.3389/frai.2025.1477246> ;
-    cx:hasLiterature <file:///home/meuhlodi/Travail/RCxn/instance/Submissions/Goldberg-1995>,
+    cx:hasLiterature <file:///home/meuhlodi/Travail/RCxn/instance/Submissions/Goldberg_1995>,
         <https://doi.org/10.3389/frai.2025.1477246> .
 
 cx:Argumentstructureconstruction_slots a rdf_ns:Seq ;
     rdf_ns:_1 cx:Argumentstructureconstruction_1 ;
     rdf_ns:_2 cx:Argumentstructureconstruction_2 ;
     rdf_ns:_3 cx:Argumentstructureconstruction_3 .
+
+<http://example.org/cx/AttributeConstructionObj:NP> a rcxn:Construction ;
+    links:sameFormDifferentFunction <http://example.org/cx/eng_DitransitiveConstructionObj:NP> ;
+    rcxn:hasMetadata <http://example.org/cx/AttributeConstructionObj:NP_MD> ;
+    rcxn:hasTitle "Attribute Construction (Obj: NP)" .
+
+<http://example.org/cx/AttributeConstructionObj:NP_MD> a rcxn:Metadata ;
+    cx:annotator membr:Winckel ;
+    rcxn:creationDate "2026-01-16"^^xsd:date .
+
+cx:CausedMotionConstrutionPPto a rcxn:Construction ;
+    links:differentFormSimilarFunction <http://example.org/cx/eng_DitransitiveConstructionObj:NP> ;
+    rcxn:hasMetadata cx:CausedMotionConstrutionPPto_MD ;
+    rcxn:hasTitle "Caused-Motion Constrution (PPto)" .
+
+cx:CausedMotionConstrutionPPto_MD a rcxn:Metadata ;
+    cx:annotator membr:Winckel ;
+    rcxn:creationDate "2026-01-16"^^xsd:date .
 
 cx:Copula a rcxn:Construction ;
     rcxn:elementOf cx:eng_AdjectivePredicativeconstruction ;
@@ -1714,6 +1732,68 @@ cx:eng_AttributeConstruction_slots a rdf_ns:Seq ;
     rdf_ns:_3 cx:eng_AttributeConstruction_3 ;
     rdf_ns:_4 cx:eng_AttributeConstruction_4 .
 
+<http://example.org/cx/eng_DitransitiveConstructionObj:NP_1> a rcxn:SlotOptional ;
+    ns1:hasCasaSyntacticFunction "potential subject" ;
+    rcxn:hasOtherSemanticContribution "Æffector" ;
+    rcxn:hasSlotForm <http://example.org/cx/eng_DitransitiveConstructionObj:NP_1_Form> ;
+    rcxn:hasSyntacticFunction "potential subject" .
+
+<http://example.org/cx/eng_DitransitiveConstructionObj:NP_1_Form> a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:eng_NounPhrase .
+
+<http://example.org/cx/eng_DitransitiveConstructionObj:NP_2> a rcxn:SlotMandatory ;
+    rdfs:comment "Borderline cases: bet excuse (attendance)",
+        "Sources for collo-profile: Valency Dictionary of English, British National Corpus",
+        "colloprofile: give  tell  bring  cost  offer  send  show  allow  ask  buy  cause  do  find  get  grant  hand  owe  lend  make  pay  save  take  wish  afford  answer  award  bid  build  call  concede  create  cut  deal  design  deny  draw  drop  earn  ensure  feed  fix  forbid  gain  guarantee  hire  insure  lead  lease  leave  lend  light  loose  make  mix  order  pack  pass  permit  pick  play  pour  prepare  promise  quote  read  refuse  rent  sell  serve  set  shoot  sing  slip  spare  strike  teach  throw  win  write  " ;
+    rcxn:hasSlotForm <http://example.org/cx/eng_DitransitiveConstructionObj:NP_2_Form> .
+
+<http://example.org/cx/eng_DitransitiveConstructionObj:NP_2_Form> a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:eng_Verb .
+
+<http://example.org/cx/eng_DitransitiveConstructionObj:NP_3> a rcxn:SlotMandatory ;
+    ns1:hasCasaSyntacticFunction "Obj" ;
+    rcxn:hasOtherSemanticContribution "Recipient" ;
+    rcxn:hasSlotForm <http://example.org/cx/eng_DitransitiveConstructionObj:NP_3_Form> ;
+    rcxn:hasSyntacticFunction "indirect object" .
+
+<http://example.org/cx/eng_DitransitiveConstructionObj:NP_3_Form> a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:eng_NounPhrase .
+
+<http://example.org/cx/eng_DitransitiveConstructionObj:NP_4> a rcxn:SlotMandatory ;
+    ns1:hasCasaSyntacticFunction "Obj" ;
+    rcxn:hasOtherSemanticContribution "Æffected" ;
+    rcxn:hasSlotForm <http://example.org/cx/eng_DitransitiveConstructionObj:NP_4_Form> ;
+    rcxn:hasSyntacticFunction "direct object" .
+
+<http://example.org/cx/eng_DitransitiveConstructionObj:NP_4_Form> a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:eng_NounPhrase .
+
+<http://example.org/cx/eng_DitransitiveConstructionObj:NP_Ex_A> a cx:Example ;
+    cx:hasAnnotatedText "[She]1 [gave]2 [him]3 [a present]4." ;
+    cx:hasText "She gave him a present." .
+
+<http://example.org/cx/eng_DitransitiveConstructionObj:NP_MD> a rcxn:Metadata ;
+    cx:hasSources <http://example.org/cx/eng_DitransitiveConstructionObj:NP_Sources> ;
+    rcxn:annotator membr:Winckel ;
+    rcxn:creationDate "2026-01-16"^^xsd:date .
+
+<http://example.org/cx/eng_DitransitiveConstructionObj:NP_Meaning> a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "[ÆFFECTOR]1 makes [RECIPIENT]3 receive [ÆFFECTED]4." .
+
+<http://example.org/cx/eng_DitransitiveConstructionObj:NP_Sources> a cx:Collection ;
+    cx:hasLiterature <file:///home/meuhlodi/Travail/RCxn/instance/Submissions/Croft_2012>,
+        <file:///home/meuhlodi/Travail/RCxn/instance/Submissions/Goldberg_1995>,
+        <file:///home/meuhlodi/Travail/RCxn/instance/Submissions/Goldberg_2006>,
+        <file:///home/meuhlodi/Travail/RCxn/instance/Submissions/Herbst_2020>,
+        <file:///home/meuhlodi/Travail/RCxn/instance/Submissions/Herbst_Hoffman_2024> ;
+    rdfs:seeAlso <https://constructicon.de/constructions/5> .
+
+<http://example.org/cx/eng_DitransitiveConstructionObj:NP_slots> a rdf_ns:Seq ;
+    rdf_ns:_1 <http://example.org/cx/eng_DitransitiveConstructionObj:NP_1> ;
+    rdf_ns:_2 <http://example.org/cx/eng_DitransitiveConstructionObj:NP_2> ;
+    rdf_ns:_3 <http://example.org/cx/eng_DitransitiveConstructionObj:NP_3> ;
+    rdf_ns:_4 <http://example.org/cx/eng_DitransitiveConstructionObj:NP_4> .
+
 cx:eng_Keepacoolheadconstruction a rcxn:Construction ;
     cx:hasExample cx:eng_Keepacoolheadconstruction_Ex_A ;
     rdfs:comment "first attested 1718, cf. OED" ;
@@ -2342,13 +2422,15 @@ cx:POU-beneficiaryconstruction a rcxn:Construction ;
     rcxn:hasSlots cx:POU-beneficiaryconstruction_slots ;
     rcxn:hasTitle "POU-beneficiary construction" .
 
-cx:eng_Verb a rcxn:Construction ;
+<http://example.org/cx/eng_DitransitiveConstructionObj:NP> a rcxn:Construction ;
+    cx:hasExample <http://example.org/cx/eng_DitransitiveConstructionObj:NP_Ex_A> ;
     lg:partOfLanguage lg:eng ;
-    rcxn:elementOf cx:Argumentstructureconstruction,
-        <http://example.org/cx/TheEnglishGIVE-OUTVerbParticleConstruction.>,
-        cx:comePLUSnoisemannerofmovementVing,
-        cx:eng_AttributeConstruction ;
-    rcxn:hasTitle "Verb" .
+    links:differentFormSimilarFunction cx:CausedMotionConstrutionPPto ;
+    links:sameFormDifferentFunction <http://example.org/cx/AttributeConstructionObj:NP> ;
+    rcxn:hasConstructionMeaning <http://example.org/cx/eng_DitransitiveConstructionObj:NP_Meaning> ;
+    rcxn:hasMetadata <http://example.org/cx/eng_DitransitiveConstructionObj:NP_MD> ;
+    rcxn:hasSlots <http://example.org/cx/eng_DitransitiveConstructionObj:NP_slots> ;
+    rcxn:hasTitle "Ditransitive Construction (Obj: NP)" .
 
 cx:eng_coolconstruction a rcxn:Construction ;
     cx:hasExample cx:eng_coolconstruction_Ex_A,
@@ -2423,6 +2505,15 @@ cx:eng_PrepositionalPhrase a rcxn:Construction ;
         cx:comePLUSnoisemannerofmovementVing,
         cx:eng_AdjectivePhrase ;
     rcxn:hasTitle "Prepositional Phrase" .
+
+cx:eng_Verb a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    rcxn:elementOf cx:Argumentstructureconstruction,
+        <http://example.org/cx/TheEnglishGIVE-OUTVerbParticleConstruction.>,
+        cx:comePLUSnoisemannerofmovementVing,
+        cx:eng_AttributeConstruction,
+        <http://example.org/cx/eng_DitransitiveConstructionObj:NP> ;
+    rcxn:hasTitle "Verb" .
 
 cx:Argumentstructureconstruction a rcxn:Construction ;
     rdfs:comment """The main data includes 2000 sentences that are generated by GPT-4, which is a text file.\r
@@ -2499,14 +2590,6 @@ cx:eng_AdjectivePhrase a rcxn:Construction ;
     rcxn:hasSlots <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_slots> ;
     rcxn:hasTitle "(sich) (NP) (ADJ) (ADV) [vor Augen] (VP)" .
 
-cx:eng_NounPhrase a rcxn:Construction ;
-    lg:partOfLanguage lg:eng ;
-    rcxn:elementOf cx:EvaluativeAttributionConstruction,
-        <http://example.org/cx/TheEnglishGIVE-OUTVerbParticleConstruction.>,
-        cx:comePLUSnoisemannerofmovementVing,
-        cx:eng_AttributeConstruction ;
-    rcxn:hasTitle "Noun Phrase" .
-
 cx:Idiomaticconstruction a rcxn:Construction ;
     cx:hasExample cx:Idiomaticconstruction_Ex_A,
         cx:Idiomaticconstruction_Ex_B ;
@@ -2532,6 +2615,15 @@ cx:Relative-Topic-ShiftConstruction a rcxn:Construction ;
     rcxn:hasMetadata cx:Relative-Topic-ShiftConstruction_MD ;
     rcxn:hasSlots cx:Relative-Topic-ShiftConstruction_slots ;
     rcxn:hasTitle "Relative Topic Shift Construction " .
+
+cx:eng_NounPhrase a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    rcxn:elementOf cx:EvaluativeAttributionConstruction,
+        <http://example.org/cx/TheEnglishGIVE-OUTVerbParticleConstruction.>,
+        cx:comePLUSnoisemannerofmovementVing,
+        cx:eng_AttributeConstruction,
+        <http://example.org/cx/eng_DitransitiveConstructionObj:NP> ;
+    rcxn:hasTitle "Noun Phrase" .
 
 <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]> a rcxn:Construction ;
     lg:partOfLanguage lg:deu ;
