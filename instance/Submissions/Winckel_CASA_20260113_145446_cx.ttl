@@ -41,7 +41,8 @@ cx:eng_AttributeConstruction_2_Form a rcxn:SlotForm ;
 cx:eng_AttributeConstruction_3 a rcxn:SlotMandatory ;
     rcxn:hasOtherSemanticContribution "Æffected-Attributee" ;
     rcxn:hasSlotForm cx:eng_AttributeConstruction_3_Form ;
-    rcxn:hasSyntacticFunction "direct object" .
+    rcxn:hasSyntacticFunction "direct object" ;
+    casa:hasCasaSyntacticFunction "Obj" .
 
 cx:eng_AttributeConstruction_3_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_NounPhrase .
@@ -49,7 +50,8 @@ cx:eng_AttributeConstruction_3_Form a rcxn:SlotForm ;
 cx:eng_AttributeConstruction_4 a rcxn:SlotMandatory ;
     rcxn:hasOtherSemanticContribution "Attribute" ;
     rcxn:hasSlotForm cx:eng_AttributeConstruction_4_Form ;
-    rcxn:hasSyntacticFunction "object complement" .
+    rcxn:hasSyntacticFunction "object complement" ;
+    casa:hasCasaSyntacticFunction "Attr" .
 
 cx:eng_AttributeConstruction_4_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_AdjectivePhrase .
@@ -88,6 +90,6 @@ cx:eng_AttributeConstruction a rcxn:Construction ;
     rcxn:hasConstructionMeaning cx:eng_AttributeConstruction_Meaning ;
     rcxn:hasMetadata cx:eng_AttributeConstruction_MD ;
     rcxn:hasSlots cx:eng_AttributeConstruction_slots ;
-    rcxn:hasTitle "Attribute Construction" .
+    rcxn:hasTitle "Attribute Construction (Attr: Adj)" .
 
 membr:Project_Winckel_2601131454_F2601131454 rsrch:basedOn cx:eng_AttributeConstruction .
