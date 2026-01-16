@@ -1663,7 +1663,8 @@ cx:eng_AttributeConstruction_1_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_NounPhrase .
 
 cx:eng_AttributeConstruction_2 a rcxn:SlotMandatory ;
-    rdfs:comment "Source for collo-profile: Valency Dictionary of English, Patternbank; Borderline cases: buy sell (something cheap) ",
+    rdfs:comment "Borderline cases: buy sell (something cheap) ",
+        "Source for collo-profile: Valency Dictionary of English, Patternbank",
         "colloprofile: account  assume  beat  believe  consider  discover  dream  find  guarantee  judge  label  lay  mark  pass  present  show  think  worry  " ;
     rcxn:hasSlotForm cx:eng_AttributeConstruction_2_Form .
 
@@ -1692,7 +1693,8 @@ cx:eng_AttributeConstruction_Ex_A a cx:Example ;
 
 cx:eng_AttributeConstruction_MD a rcxn:Metadata ;
     cx:hasSources cx:eng_AttributeConstruction_Sources ;
-    rcxn:annotator membr:Winckel ;
+    rcxn:annotator membr:Garibyan,
+        membr:Winckel ;
     rcxn:creationDate "2026-01-13"^^xsd:date .
 
 cx:eng_AttributeConstruction_Meaning a rcxn:ConstructionMeaning ;
