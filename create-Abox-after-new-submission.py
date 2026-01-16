@@ -136,6 +136,10 @@ add_user("Führer",
          "Bastian",
          "German verbs with particles or prefixes in language change: Form, meaning, and syntax",
          "https://www.cxg.phil.fau.eu/person/bastian-fuhrer/")
+add_user("Garibyan",
+         "Armine",
+         "Project Garibyan",
+         "https://www.cxg.phil.fau.eu/person/armine-garibyan/")
 add_user("Gedik",
          "Tan Arda",
          "Project Gedik",

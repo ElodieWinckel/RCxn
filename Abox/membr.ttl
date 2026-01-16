@@ -51,7 +51,7 @@ membr:FernandezSantos a foaf:Person ;
     foaf:currentProject membr:Project_FernandezSantos ;
     foaf:familyName "Fernández Santos" ;
     foaf:givenName "Sara" ;
-    foaf:homepage <https://www.cxg.phil.fau.eu/person/vania-de-la-garza/> .
+    foaf:homepage <https://www.cxg.phil.fau.eu/person/sara-fernandez-santos/> .
 
 membr:Fokashchuk a foaf:Person ;
     foaf:currentProject membr:Project_Fokashchuk ;
@@ -64,6 +64,12 @@ membr:Fuehrer a foaf:Person ;
     foaf:familyName "Führer" ;
     foaf:givenName "Bastian" ;
     foaf:homepage <https://www.cxg.phil.fau.eu/person/bastian-fuhrer/> .
+
+membr:Garibyan a foaf:Person ;
+    foaf:currentProject membr:Project_Garibyan ;
+    foaf:familyName "Garibyan" ;
+    foaf:givenName "Armine" ;
+    foaf:homepage <https://www.cxg.phil.fau.eu/person/armine-garibyan/> .
 
 membr:Gedik a foaf:Person ;
     foaf:currentProject membr:Project_Gedik ;
@@ -252,7 +258,7 @@ membr:Project_Badawi a rsrch:Project ;
     rsrch:projectName "Corpus-based measures of constructionhood"@en .
 
 membr:Project_Bayer a rsrch:Project ;
-    rsrch:projectName "Project Bayer"@en .
+    rsrch:projectName "Differential argument marking in Arabic"@en .
 
 membr:Project_BenitoFernandez a rsrch:Project ;
     rsrch:projectName "Spanish quotative constructions in oral narratives — an Interactional Construction Grammar approach"@en .
@@ -311,6 +317,9 @@ membr:Project_Fuehrer_F2512191344 a rsrch:Finding ;
 membr:Project_Fuehrer_F2512191440 a rsrch:Finding ;
     rdfs:label "directional information seemingly two times present, thus redundant" ;
     rsrch:basedOn <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit> .
+
+membr:Project_Garibyan a rsrch:Project ;
+    rsrch:projectName "Project Garibyan"@en .
 
 membr:Project_Gedik a rsrch:Project ;
     rsrch:projectName "Project Gedik"@en .
