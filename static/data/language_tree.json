@@ -3,6 +3,7 @@
     "id": "ara",
     "text": "Arabic",
     "children": [
+      {"id": "araCla", "text": "Classical Arabic"},
       {
         "id": "arz",
         "text": "Egyptian Arabic",
