@@ -1,7 +1,16 @@
 [
   {
     "id": "ara",
-    "text": "Arabic"
+    "text": "Arabic",
+    "children": [
+      {
+        "id": "arz",
+        "text": "Egyptian Arabic",
+        "children": [
+          {"id": "arzCai", "text": "Cairo Arabic"}
+        ]
+      }
+    ]
   },
   {
     "id": "zho",
