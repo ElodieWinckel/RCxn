@@ -463,7 +463,8 @@ membr:Project_Winckel a rsrch:Project ;
 membr:Project_Winckel_2601131454_F2601131454 a rsrch:Finding ;
     rdfs:label "The relational database for CASA entries can be translated into the RDF format of the Research Constructicon." ;
     rsrch:basedOn cx:eng_AttributeConstruction,
-        <http://example.org/cx/eng_DitransitiveConstructionObj:NP> .
+        <http://example.org/cx/eng_DitransitiveConstructionObj:NP>,
+        cx:eng_GenitiveNPConstruction .
 
 membr:Project_Winckel_F2511281100 a rsrch:Finding ;
     rdfs:label "Implement a lexical item in the research constructicon" ;

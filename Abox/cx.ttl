@@ -418,6 +418,15 @@ cx:Generalprepositionalconstructions_MD a rcxn:Metadata ;
     rcxn:annotator membr:Lee ;
     rcxn:creationDate "2024-12-02"^^xsd:date .
 
+cx:GenitiveConstruction a rcxn:Construction ;
+    links:inheritedBy cx:eng_GenitiveNPConstruction ;
+    rcxn:hasMetadata cx:GenitiveConstruction_MD ;
+    rcxn:hasTitle "Genitive Construction" .
+
+cx:GenitiveConstruction_MD a rcxn:Metadata ;
+    cx:annotator membr:Winckel ;
+    rcxn:creationDate "2026-01-16"^^xsd:date .
+
 cx:Idiomaticconstruction_1 a rcxn:SlotMandatory ;
     rcxn:hasSlotForm cx:Idiomaticconstruction_1_Form ;
     rcxn:hasSlots cx:Idiomaticconstruction_1_slots .
@@ -838,17 +847,14 @@ cx:NPnom.sg.masc a rcxn:Construction ;
     rcxn:creationDate "2024-12-02"^^xsd:date ;
     rcxn:hasTitle "NP nom.sg.masc" .
 
-cx:Noun a rcxn:Construction ;
-    rcxn:elementOf cx:eng_AdjectiveAttributiveconstruction ;
-    rcxn:hasMetadata cx:Noun_MD ;
-    rcxn:hasTitle "Noun" .
-
 cx:Noun_MD a rcxn:Metadata ;
+    cx:annotator membr:Winckel ;
     rcxn:annotator membr:Boos,
         membr:Petrenko,
         membr:Weigelt,
         membr:Winckel ;
-    rcxn:creationDate "2025-12-01"^^xsd:date .
+    rcxn:creationDate "2025-12-01"^^xsd:date,
+        "2026-01-16"^^xsd:date .
 
 cx:POU-beneficiaryconstruction_1 a rcxn:SlotMandatory ;
     olia:hasSemanticRole olia:ThemeRole ;
@@ -1794,6 +1800,54 @@ cx:eng_AttributeConstruction_slots a rdf_ns:Seq ;
     rdf_ns:_3 <http://example.org/cx/eng_DitransitiveConstructionObj:NP_3> ;
     rdf_ns:_4 <http://example.org/cx/eng_DitransitiveConstructionObj:NP_4> .
 
+cx:eng_GenitiveNPConstruction_1 a rcxn:SlotMandatory ;
+    olia:hasSemanticRole olia:PossessorRole ;
+    rdfs:comment "[1] president’s state’s government’s week’s party’s court’s night’s ...",
+        "[2] world’s people’s year’s mother’s man’s nation’s father’s company’s city’s country’s ...",
+        "[3] church’s judge’s horse’s ...",
+        "[4] women's children's ...",
+        "[5] students' partners' teachers' ...",
+        "colloprofile: his  my  her  your  their  our  its  one's  everyone's  everything's  everybody's  nobody's  each other's  " ;
+    rcxn:hasSlots cx:eng_GenitiveNPConstruction_1_slots .
+
+cx:eng_GenitiveNPConstruction_1_slots a rdf_ns:Seq ;
+    rdf_ns:_1 cx:eng_GenitiveNPConstruction_2 ;
+    rdf_ns:_2 cx:eng_GenitiveNPConstruction_3 .
+
+cx:eng_GenitiveNPConstruction_2 a rcxn:SlotMandatory ;
+    rcxn:hasPhonology "[1] Nsg ending in voiceless consonant except /s, ʃ, tʃ/",
+        "[2] Nsg ending in vowel or voiced consonant except /z, ʒ, ʤ/",
+        "[3] Nsg ending in /s, z, ʃ, ʒ, tʃ, ʤ/ ",
+        "[4] Npl in <en> ",
+        "[5] Npl in <s>	" .
+
+cx:eng_GenitiveNPConstruction_3 a rcxn:SlotMandatory ;
+    rcxn:hasPhonology "[1] /s/",
+        "[2] /z/",
+        "[3] /ɪz/",
+        "[4] /z/",
+        "[5] /z/" ;
+    rcxn:hasSurfaceForm "[1, 2, 3, 4] <'s>",
+        "[5] <'>" .
+
+cx:eng_GenitiveNPConstruction_4 a rcxn:SlotMandatory ;
+    rcxn:hasOtherSemanticContribution "Referent" ;
+    rcxn:hasSlotForm cx:eng_GenitiveNPConstruction_4_Form .
+
+cx:eng_GenitiveNPConstruction_4_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:Noun .
+
+cx:eng_GenitiveNPConstruction_MD a rcxn:Metadata ;
+    rcxn:annotator membr:Winckel ;
+    rcxn:creationDate "2026-01-16"^^xsd:date .
+
+cx:eng_GenitiveNPConstruction_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "Establishing a relation between a [REFERENT]4 and a [POSSESSOR]2." .
+
+cx:eng_GenitiveNPConstruction_slots a rdf_ns:Seq ;
+    rdf_ns:_1 cx:eng_GenitiveNPConstruction_1 ;
+    rdf_ns:_2 cx:eng_GenitiveNPConstruction_4 .
+
 cx:eng_Keepacoolheadconstruction a rcxn:Construction ;
     cx:hasExample cx:eng_Keepacoolheadconstruction_Ex_A ;
     rdfs:comment "first attested 1718, cf. OED" ;
@@ -2234,6 +2288,12 @@ cx:EnglishResultativeconstruction a rcxn:Construction ;
     rcxn:hasMetadata cx:EnglishResultativeconstruction_MD ;
     rcxn:hasTitle "Resultative construction" .
 
+cx:Noun a rcxn:Construction ;
+    rcxn:elementOf cx:eng_AdjectiveAttributiveconstruction,
+        cx:eng_GenitiveNPConstruction ;
+    rcxn:hasMetadata cx:Noun_MD ;
+    rcxn:hasTitle "Noun" .
+
 cx:Präfixverbkonstruktion12Jh a rcxn:Construction ;
     lg:partOfLanguage lg:gmh ;
     links:inheritedBy <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung>,
@@ -2289,6 +2349,14 @@ cx:engInf_Coolexclamativeconstruction a rcxn:Construction ;
     rcxn:hasMetadata cx:engInf_Coolexclamativeconstruction_MD ;
     rcxn:hasSlots cx:engInf_Coolexclamativeconstruction_slots ;
     rcxn:hasTitle "Cool! exclamative construction" .
+
+cx:eng_GenitiveNPConstruction a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    links:inheritsFrom cx:GenitiveConstruction ;
+    rcxn:hasConstructionMeaning cx:eng_GenitiveNPConstruction_Meaning ;
+    rcxn:hasMetadata cx:eng_GenitiveNPConstruction_MD ;
+    rcxn:hasSlots cx:eng_GenitiveNPConstruction_slots ;
+    rcxn:hasTitle "Genitive-NP Construction" .
 
 cx:eng_Particle a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
