@@ -1,0 +1,46 @@
+@prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cx: <http://example.org/cx/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
+@prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#> .
+@prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
+@prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rsrch: <http://example.org/rsrch> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cx:EnglishResultativeconstruction rcxn:hasConstructionMeaning cx:EnglishResultativeconstruction_Meaning ;
+    rcxn:hasSlots cx:EnglishResultativeconstruction_slots ;
+    cx:hasExample cx:EnglishResultativeconstruction_Ex_A .
+
+cx:EnglishResultativeconstruction_slots a rdf:Seq ;
+    rdf:_1 cx:EnglishResultativeconstruction_1 ;
+    rdf:_2 cx:EnglishResultativeconstruction_2 ;
+    rdf:_3 cx:EnglishResultativeconstruction_3 ;
+    rdf:_4 cx:EnglishResultativeconstruction_4 .
+
+cx:EnglishResultativeconstruction_1 a rcxn:SlotMandatory ;
+    rcxn:hasSyntacticFunction "Subject" .
+
+cx:EnglishResultativeconstruction_2 a rcxn:SlotMandatory .
+
+cx:EnglishResultativeconstruction_2_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:eng_Verb .
+
+cx:EnglishResultativeconstruction_3 a rcxn:SlotMandatory ;
+    rcxn:hasSyntacticFunction "Object" .
+
+cx:EnglishResultativeconstruction_4 a rcxn:SlotMandatory ;
+    rcxn:hasOtherSemanticContribution "State" .
+
+cx:EnglishResultativeconstruction_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning """[An action]2 results in a change of state of [the object]3.""" .
+
+cx:EnglishResultativeconstruction_Ex_A a cx:Example ;
+    cx:hasText "The chef cut the cake into slices." ;
+    cx:hasAnnotatedText "[The chef]1 [cut]2 [the cake]3 [into slices]4." .
+
+membr:Project_Ramezani_250214_F250218 rsrch:basedOn cx:EnglishResultativeconstruction .
+

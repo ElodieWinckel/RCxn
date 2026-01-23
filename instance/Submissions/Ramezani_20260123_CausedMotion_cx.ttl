@@ -1,0 +1,46 @@
+@prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cx: <http://example.org/cx/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
+@prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#> .
+@prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
+@prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rsrch: <http://example.org/rsrch> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cx:eng_CauseMotionconstruction rcxn:hasConstructionMeaning cx:eng_CauseMotionconstruction_Meaning ;
+    rcxn:hasSlots cx:eng_CauseMotionconstruction_slots ;
+    cx:hasExample cx:eng_CauseMotionconstruction_Ex_A .
+
+cx:eng_CauseMotionconstruction_slots a rdf:Seq ;
+    rdf:_1 cx:eng_CauseMotionconstruction_1 ;
+    rdf:_2 cx:eng_CauseMotionconstruction_2 ;
+    rdf:_3 cx:eng_CauseMotionconstruction_3 ;
+    rdf:_4 cx:eng_CauseMotionconstruction_4 .
+
+cx:eng_CauseMotionconstruction_1 a rcxn:SlotMandatory ;
+    rcxn:hasSyntacticFunction "Subject" .
+
+cx:eng_CauseMotionconstruction_2 a rcxn:SlotMandatory .
+
+cx:eng_CauseMotionconstruction_2_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:eng_Verb .
+
+cx:eng_CauseMotionconstruction_3 a rcxn:SlotMandatory ;
+    rcxn:hasSyntacticFunction "Object" .
+
+cx:eng_CauseMotionconstruction_4 a rcxn:SlotMandatory ;
+    rcxn:hasOtherSemanticContribution "Path" .
+
+cx:eng_CauseMotionconstruction_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning """A [subject]1 causes [an object]3 to move along [a trajectory]4.""" .
+
+cx:eng_CauseMotionconstruction_Ex_A a cx:Example ;
+    cx:hasText "The cat chased the mouse into the garden." ;
+    cx:hasAnnotatedText "[The cat]1 [chased]2 [the mouse]3 [into the garden]4." .
+
+membr:Project_Ramezani_250214_F250218 rsrch:basedOn cx:eng_CauseMotionconstruction .
+

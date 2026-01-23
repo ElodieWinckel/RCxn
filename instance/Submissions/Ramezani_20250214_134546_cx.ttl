@@ -16,7 +16,7 @@ cx:Argumentstructureconstruction a rcxn:Construction ;
     rcxn:hasMetadata cx:Argumentstructureconstruction_MD ;
     rcxn:hasSlots cx:Argumentstructureconstruction_slots ;
     rcxn:hasTitle "Argument structure construction" ;
-    links:inheritedBy cx:EnglishCause-Motionconstruction,
+    links:inheritedBy cx:eng_CauseMotionconstruction,
         cx:EnglishDitransitiveconstruction,
         cx:EnglishResultativeconstruction,
         cx:EnglishTransitiveconstruction ;
@@ -71,12 +71,12 @@ cx:Argumentstructureconstruction_slots a rdf:Seq ;
     rdf:_2 cx:Argumentstructureconstruction_2 ;
     rdf:_3 cx:Argumentstructureconstruction_3 .
 
-cx:EnglishCause-Motionconstruction a rcxn:Construction ;
-    rcxn:hasMetadata cx:EnglishCause-Motionconstruction_MD ;
-    rcxn:hasTitle "Cause-Motion construction" ;
+cx:eng_CauseMotionconstruction a rcxn:Construction ;
+    rcxn:hasMetadata cx:eng_CauseMotionconstruction_MD ;
+    rcxn:hasTitle "Caused-Motion construction" ;
     lg:partOfLanguage lg:eng .
 
-cx:EnglishCause-Motionconstruction_MD a cx:Metadata ;
+cx:eng_CauseMotionconstruction_MD a cx:Metadata ;
     rcxn:annotator membr:Ramezani ;
     rcxn:creationDate "2025-02-14"^^xsd:date .
 

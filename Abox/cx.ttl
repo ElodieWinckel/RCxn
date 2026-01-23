@@ -14,6 +14,12 @@
 
 cx:Definitearticle rdfs:label "Definite article" .
 
+cx:EnglishDitransitiveconstruction_2_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:eng_Verb .
+
+cx:EnglishTransitiveconstruction_2_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:eng_Verb .
+
 cx:Idiomaticconstructions a rcxn:Construction ;
     cx:hasExample cx:Idiomaticconstructions_Ex_A,
         cx:Idiomaticconstructions_Ex_B ;
@@ -34,6 +40,9 @@ cx:Relative-Topic-ShiftConstruction_3_Form a rcxn:SlotForm ;
 cx:comePLUSnoisemannerofmovementVing_4_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_Particle,
         cx:eng_PrepositionalPhrase .
+
+cx:eng_CauseMotionconstruction_2_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:eng_Verb .
 
 <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Tätigkeit> a rcxn:Construction ;
     cx:hasExample <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Tätigkeit_Ex_A> ;
@@ -283,25 +292,33 @@ cx:Dooperationwithoperand1onoperand2construction_slots a rdf_ns:Seq ;
     rdf_ns:_3 cx:Dooperationwithoperand1onoperand2construction_3 ;
     rdf_ns:_4 cx:Dooperationwithoperand1onoperand2construction_4 .
 
-cx:EnglishCause-Motionconstruction a rcxn:Construction ;
-    lg:partOfLanguage lg:eng ;
-    links:inheritsFrom cx:Argumentstructureconstruction ;
-    rcxn:hasMetadata cx:EnglishCause-Motionconstruction_MD ;
-    rcxn:hasTitle "Cause-Motion construction" .
+cx:EnglishDitransitiveconstruction_1 a rcxn:SlotMandatory ;
+    rcxn:hasSyntacticFunction "Subject" .
 
-cx:EnglishCause-Motionconstruction_MD a cx:Metadata ;
-    rcxn:annotator membr:Ramezani ;
-    rcxn:creationDate "2025-02-14"^^xsd:date .
+cx:EnglishDitransitiveconstruction_2 a rcxn:SlotMandatory .
 
-cx:EnglishDitransitiveconstruction a rcxn:Construction ;
-    lg:partOfLanguage lg:eng ;
-    links:inheritsFrom cx:Argumentstructureconstruction ;
-    rcxn:hasMetadata cx:EnglishDitransitiveconstruction_MD ;
-    rcxn:hasTitle "Ditransitive construction" .
+cx:EnglishDitransitiveconstruction_3 a rcxn:SlotMandatory ;
+    rcxn:hasSyntacticFunction "Object" .
+
+cx:EnglishDitransitiveconstruction_4 a rcxn:SlotMandatory ;
+    rcxn:hasSyntacticFunction "Object" .
+
+cx:EnglishDitransitiveconstruction_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "[The teacher]1 [gave]2 [students]3 [homework]4." ;
+    cx:hasText "The teacher gave students homework." .
 
 cx:EnglishDitransitiveconstruction_MD a cx:Metadata ;
     rcxn:annotator membr:Ramezani ;
     rcxn:creationDate "2025-02-14"^^xsd:date .
+
+cx:EnglishDitransitiveconstruction_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "A [subject]1 performs [an action of transfer]2 involving [a direct object]3 and [an indirect object]4." .
+
+cx:EnglishDitransitiveconstruction_slots a rdf_ns:Seq ;
+    rdf_ns:_1 cx:EnglishDitransitiveconstruction_1 ;
+    rdf_ns:_2 cx:EnglishDitransitiveconstruction_2 ;
+    rdf_ns:_3 cx:EnglishDitransitiveconstruction_3 ;
+    rdf_ns:_4 cx:EnglishDitransitiveconstruction_4 .
 
 cx:EnglishPullsomethingoutofahat a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
@@ -314,15 +331,29 @@ cx:EnglishResultativeconstruction_MD a cx:Metadata ;
     rcxn:annotator membr:Ramezani ;
     rcxn:creationDate "2025-02-14"^^xsd:date .
 
-cx:EnglishTransitiveconstruction a rcxn:Construction ;
-    lg:partOfLanguage lg:eng ;
-    links:inheritsFrom cx:Argumentstructureconstruction ;
-    rcxn:hasMetadata cx:EnglishTransitiveconstruction_MD ;
-    rcxn:hasTitle "Transitive construction" .
+cx:EnglishTransitiveconstruction_1 a rcxn:SlotMandatory ;
+    rcxn:hasSyntacticFunction "Subject" .
+
+cx:EnglishTransitiveconstruction_2 a rcxn:SlotMandatory .
+
+cx:EnglishTransitiveconstruction_3 a rcxn:SlotMandatory ;
+    rcxn:hasSyntacticFunction "Object" .
+
+cx:EnglishTransitiveconstruction_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "[The baker]1 [baked]2 [a cake]3." ;
+    cx:hasText "The baker baked a cake." .
 
 cx:EnglishTransitiveconstruction_MD a cx:Metadata ;
     rcxn:annotator membr:Ramezani ;
     rcxn:creationDate "2025-02-14"^^xsd:date .
+
+cx:EnglishTransitiveconstruction_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "A [subject]1 performs [an action]2 on [a direct object]3." .
+
+cx:EnglishTransitiveconstruction_slots a rdf_ns:Seq ;
+    rdf_ns:_1 cx:EnglishTransitiveconstruction_1 ;
+    rdf_ns:_2 cx:EnglishTransitiveconstruction_2 ;
+    rdf_ns:_3 cx:EnglishTransitiveconstruction_3 .
 
 cx:Englishrollupyoursleeves a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
@@ -1738,6 +1769,34 @@ cx:eng_AttributeConstruction_slots a rdf_ns:Seq ;
     rdf_ns:_3 cx:eng_AttributeConstruction_3 ;
     rdf_ns:_4 cx:eng_AttributeConstruction_4 .
 
+cx:eng_CauseMotionconstruction_1 a rcxn:SlotMandatory ;
+    rcxn:hasSyntacticFunction "Subject" .
+
+cx:eng_CauseMotionconstruction_2 a rcxn:SlotMandatory .
+
+cx:eng_CauseMotionconstruction_3 a rcxn:SlotMandatory ;
+    rcxn:hasSyntacticFunction "Object" .
+
+cx:eng_CauseMotionconstruction_4 a rcxn:SlotMandatory ;
+    rcxn:hasOtherSemanticContribution "Path" .
+
+cx:eng_CauseMotionconstruction_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "[The cat]1 [chased]2 [the mouse]3 [into the garden]4." ;
+    cx:hasText "The cat chased the mouse into the garden." .
+
+cx:eng_CauseMotionconstruction_MD a cx:Metadata ;
+    rcxn:annotator membr:Ramezani ;
+    rcxn:creationDate "2025-02-14"^^xsd:date .
+
+cx:eng_CauseMotionconstruction_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "A [subject]1 causes [an object]3 to move along [a trajectory]4." .
+
+cx:eng_CauseMotionconstruction_slots a rdf_ns:Seq ;
+    rdf_ns:_1 cx:eng_CauseMotionconstruction_1 ;
+    rdf_ns:_2 cx:eng_CauseMotionconstruction_2 ;
+    rdf_ns:_3 cx:eng_CauseMotionconstruction_3 ;
+    rdf_ns:_4 cx:eng_CauseMotionconstruction_4 .
+
 <http://example.org/cx/eng_DitransitiveConstructionObj:NP_1> a rcxn:SlotOptional ;
     ns1:hasCasaSyntacticFunction "potential subject" ;
     rcxn:hasOtherSemanticContribution "Æffector" ;
@@ -2281,12 +2340,30 @@ cx:zho_VerbPhrase a rcxn:Construction ;
     rcxn:hasSlots <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions_slots> ;
     rcxn:hasTitle "Allative NP1 + auf + NP2 & NP1 + an + NP2 constructions" .
 
+cx:EnglishDitransitiveconstruction a rcxn:Construction ;
+    cx:hasExample cx:EnglishDitransitiveconstruction_Ex_A ;
+    lg:partOfLanguage lg:eng ;
+    links:inheritsFrom cx:Argumentstructureconstruction ;
+    rcxn:hasConstructionMeaning cx:EnglishDitransitiveconstruction_Meaning ;
+    rcxn:hasMetadata cx:EnglishDitransitiveconstruction_MD ;
+    rcxn:hasSlots cx:EnglishDitransitiveconstruction_slots ;
+    rcxn:hasTitle "Ditransitive construction" .
+
 cx:EnglishResultativeconstruction a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
     links:inheritsFrom cx:Argumentstructureconstruction ;
     links:sameFormDifferentFunction cx:eng_AttributeConstruction ;
     rcxn:hasMetadata cx:EnglishResultativeconstruction_MD ;
     rcxn:hasTitle "Resultative construction" .
+
+cx:EnglishTransitiveconstruction a rcxn:Construction ;
+    cx:hasExample cx:EnglishTransitiveconstruction_Ex_A ;
+    lg:partOfLanguage lg:eng ;
+    links:inheritsFrom cx:Argumentstructureconstruction ;
+    rcxn:hasConstructionMeaning cx:EnglishTransitiveconstruction_Meaning ;
+    rcxn:hasMetadata cx:EnglishTransitiveconstruction_MD ;
+    rcxn:hasSlots cx:EnglishTransitiveconstruction_slots ;
+    rcxn:hasTitle "Transitive construction" .
 
 cx:Noun a rcxn:Construction ;
     rcxn:elementOf cx:eng_AdjectiveAttributiveconstruction,
@@ -2349,6 +2426,15 @@ cx:engInf_Coolexclamativeconstruction a rcxn:Construction ;
     rcxn:hasMetadata cx:engInf_Coolexclamativeconstruction_MD ;
     rcxn:hasSlots cx:engInf_Coolexclamativeconstruction_slots ;
     rcxn:hasTitle "Cool! exclamative construction" .
+
+cx:eng_CauseMotionconstruction a rcxn:Construction ;
+    cx:hasExample cx:eng_CauseMotionconstruction_Ex_A ;
+    lg:partOfLanguage lg:eng ;
+    links:inheritsFrom cx:Argumentstructureconstruction ;
+    rcxn:hasConstructionMeaning cx:eng_CauseMotionconstruction_Meaning ;
+    rcxn:hasMetadata cx:eng_CauseMotionconstruction_MD ;
+    rcxn:hasSlots cx:eng_CauseMotionconstruction_slots ;
+    rcxn:hasTitle "Caused-Motion construction" .
 
 cx:eng_GenitiveNPConstruction a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
@@ -2574,15 +2660,6 @@ cx:eng_PrepositionalPhrase a rcxn:Construction ;
         cx:eng_AdjectivePhrase ;
     rcxn:hasTitle "Prepositional Phrase" .
 
-cx:eng_Verb a rcxn:Construction ;
-    lg:partOfLanguage lg:eng ;
-    rcxn:elementOf cx:Argumentstructureconstruction,
-        <http://example.org/cx/TheEnglishGIVE-OUTVerbParticleConstruction.>,
-        cx:comePLUSnoisemannerofmovementVing,
-        cx:eng_AttributeConstruction,
-        <http://example.org/cx/eng_DitransitiveConstructionObj:NP> ;
-    rcxn:hasTitle "Verb" .
-
 cx:Argumentstructureconstruction a rcxn:Construction ;
     rdfs:comment """The main data includes 2000 sentences that are generated by GPT-4, which is a text file.\r
 The extension data includes a representation of these data in LLM and brain, \r
@@ -2593,10 +2670,10 @@ Both are matrixes in the format of NumPy arrays but can be converted to any supp
 This is a similar publicly available dataset: https://github.com/SPOClab-ca/neural-reality-constructions\r
 """ ;
     lg:partOfLanguage lg:eng ;
-    links:inheritedBy cx:EnglishCause-Motionconstruction,
-        cx:EnglishDitransitiveconstruction,
+    links:inheritedBy cx:EnglishDitransitiveconstruction,
         cx:EnglishResultativeconstruction,
-        cx:EnglishTransitiveconstruction ;
+        cx:EnglishTransitiveconstruction,
+        cx:eng_CauseMotionconstruction ;
     rcxn:hasConstructionMeaning cx:Argumentstructureconstruction_Meaning ;
     rcxn:hasMetadata cx:Argumentstructureconstruction_MD ;
     rcxn:hasSlots cx:Argumentstructureconstruction_slots ;
@@ -2657,6 +2734,18 @@ cx:eng_AdjectivePhrase a rcxn:Construction ;
     rcxn:hasMetadata <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_MD> ;
     rcxn:hasSlots <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_slots> ;
     rcxn:hasTitle "(sich) (NP) (ADJ) (ADV) [vor Augen] (VP)" .
+
+cx:eng_Verb a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    rcxn:elementOf cx:Argumentstructureconstruction,
+        cx:EnglishDitransitiveconstruction,
+        cx:EnglishTransitiveconstruction,
+        <http://example.org/cx/TheEnglishGIVE-OUTVerbParticleConstruction.>,
+        cx:comePLUSnoisemannerofmovementVing,
+        cx:eng_AttributeConstruction,
+        cx:eng_CauseMotionconstruction,
+        <http://example.org/cx/eng_DitransitiveConstructionObj:NP> ;
+    rcxn:hasTitle "Verb" .
 
 cx:Idiomaticconstruction a rcxn:Construction ;
     cx:hasExample cx:Idiomaticconstruction_Ex_A,
