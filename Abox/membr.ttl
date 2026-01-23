@@ -426,6 +426,7 @@ membr:Project_Ramezani_250214_F250218 a ns1:rsrchFinding ;
     rdfs:label "So far we have results from LLM analysis that can significantly recognize and differentiate between argument structure constructions." ;
     ns1:rsrchbasedOn cx:Argumentstructureconstruction,
         cx:EnglishDitransitiveconstruction,
+        cx:EnglishResultativeconstruction,
         cx:EnglishTransitiveconstruction,
         cx:eng_CauseMotionconstruction .
 

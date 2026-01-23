@@ -17,6 +17,9 @@ cx:Definitearticle rdfs:label "Definite article" .
 cx:EnglishDitransitiveconstruction_2_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_Verb .
 
+cx:EnglishResultativeconstruction_2_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:eng_Verb .
+
 cx:EnglishTransitiveconstruction_2_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_Verb .
 
@@ -327,9 +330,33 @@ cx:EnglishPullsomethingoutofahat a rcxn:Construction ;
     rcxn:creationDate "2024-12-04"^^xsd:date ;
     rcxn:hasTitle "Pull something out of a hat" .
 
+cx:EnglishResultativeconstruction_1 a rcxn:SlotMandatory ;
+    rcxn:hasSyntacticFunction "Subject" .
+
+cx:EnglishResultativeconstruction_2 a rcxn:SlotMandatory .
+
+cx:EnglishResultativeconstruction_3 a rcxn:SlotMandatory ;
+    rcxn:hasSyntacticFunction "Object" .
+
+cx:EnglishResultativeconstruction_4 a rcxn:SlotMandatory ;
+    rcxn:hasOtherSemanticContribution "State" .
+
+cx:EnglishResultativeconstruction_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "[The chef]1 [cut]2 [the cake]3 [into slices]4." ;
+    cx:hasText "The chef cut the cake into slices." .
+
 cx:EnglishResultativeconstruction_MD a cx:Metadata ;
     rcxn:annotator membr:Ramezani ;
     rcxn:creationDate "2025-02-14"^^xsd:date .
+
+cx:EnglishResultativeconstruction_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "[An action]2 results in a change of state of [the object]3." .
+
+cx:EnglishResultativeconstruction_slots a rdf_ns:Seq ;
+    rdf_ns:_1 cx:EnglishResultativeconstruction_1 ;
+    rdf_ns:_2 cx:EnglishResultativeconstruction_2 ;
+    rdf_ns:_3 cx:EnglishResultativeconstruction_3 ;
+    rdf_ns:_4 cx:EnglishResultativeconstruction_4 .
 
 cx:EnglishTransitiveconstruction_1 a rcxn:SlotMandatory ;
     rcxn:hasSyntacticFunction "Subject" .
@@ -2349,13 +2376,6 @@ cx:EnglishDitransitiveconstruction a rcxn:Construction ;
     rcxn:hasSlots cx:EnglishDitransitiveconstruction_slots ;
     rcxn:hasTitle "Ditransitive construction" .
 
-cx:EnglishResultativeconstruction a rcxn:Construction ;
-    lg:partOfLanguage lg:eng ;
-    links:inheritsFrom cx:Argumentstructureconstruction ;
-    links:sameFormDifferentFunction cx:eng_AttributeConstruction ;
-    rcxn:hasMetadata cx:EnglishResultativeconstruction_MD ;
-    rcxn:hasTitle "Resultative construction" .
-
 cx:EnglishTransitiveconstruction a rcxn:Construction ;
     cx:hasExample cx:EnglishTransitiveconstruction_Ex_A ;
     lg:partOfLanguage lg:eng ;
@@ -2473,6 +2493,16 @@ cx:Dooperationwithoperand1onoperand2construction a rcxn:Construction ;
     rcxn:hasMetadata cx:Dooperationwithoperand1onoperand2construction_MD ;
     rcxn:hasSlots cx:Dooperationwithoperand1onoperand2construction_slots ;
     rcxn:hasTitle "Do operation with operand1 on operand2 construction" .
+
+cx:EnglishResultativeconstruction a rcxn:Construction ;
+    cx:hasExample cx:EnglishResultativeconstruction_Ex_A ;
+    lg:partOfLanguage lg:eng ;
+    links:inheritsFrom cx:Argumentstructureconstruction ;
+    links:sameFormDifferentFunction cx:eng_AttributeConstruction ;
+    rcxn:hasConstructionMeaning cx:EnglishResultativeconstruction_Meaning ;
+    rcxn:hasMetadata cx:EnglishResultativeconstruction_MD ;
+    rcxn:hasSlots cx:EnglishResultativeconstruction_slots ;
+    rcxn:hasTitle "Resultative construction" .
 
 cx:Relative-Topic-ShiftConstruction_1_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:ItalianConiunctioRelativa,
@@ -2735,18 +2765,6 @@ cx:eng_AdjectivePhrase a rcxn:Construction ;
     rcxn:hasSlots <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_slots> ;
     rcxn:hasTitle "(sich) (NP) (ADJ) (ADV) [vor Augen] (VP)" .
 
-cx:eng_Verb a rcxn:Construction ;
-    lg:partOfLanguage lg:eng ;
-    rcxn:elementOf cx:Argumentstructureconstruction,
-        cx:EnglishDitransitiveconstruction,
-        cx:EnglishTransitiveconstruction,
-        <http://example.org/cx/TheEnglishGIVE-OUTVerbParticleConstruction.>,
-        cx:comePLUSnoisemannerofmovementVing,
-        cx:eng_AttributeConstruction,
-        cx:eng_CauseMotionconstruction,
-        <http://example.org/cx/eng_DitransitiveConstructionObj:NP> ;
-    rcxn:hasTitle "Verb" .
-
 cx:Idiomaticconstruction a rcxn:Construction ;
     cx:hasExample cx:Idiomaticconstruction_Ex_A,
         cx:Idiomaticconstruction_Ex_B ;
@@ -2772,6 +2790,19 @@ cx:Relative-Topic-ShiftConstruction a rcxn:Construction ;
     rcxn:hasMetadata cx:Relative-Topic-ShiftConstruction_MD ;
     rcxn:hasSlots cx:Relative-Topic-ShiftConstruction_slots ;
     rcxn:hasTitle "Relative Topic Shift Construction " .
+
+cx:eng_Verb a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    rcxn:elementOf cx:Argumentstructureconstruction,
+        cx:EnglishDitransitiveconstruction,
+        cx:EnglishResultativeconstruction,
+        cx:EnglishTransitiveconstruction,
+        <http://example.org/cx/TheEnglishGIVE-OUTVerbParticleConstruction.>,
+        cx:comePLUSnoisemannerofmovementVing,
+        cx:eng_AttributeConstruction,
+        cx:eng_CauseMotionconstruction,
+        <http://example.org/cx/eng_DitransitiveConstructionObj:NP> ;
+    rcxn:hasTitle "Verb" .
 
 cx:eng_NounPhrase a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
