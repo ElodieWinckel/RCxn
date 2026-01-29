@@ -230,7 +230,7 @@ add_user("Legouté",
          "https://www.cxg.phil.fau.eu/person/anne-sherley-legoute/")
 add_user("Schmechel",
          "Dennis",
-         "Project Schmechel",
+         "A constructional approach to prepositions and prepositional phrases in Old English",
          "https://www.cxg.phil.fau.eu/person/dennis-schmechel/")
 add_user("Senger",
          "Lena",
