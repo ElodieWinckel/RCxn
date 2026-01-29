@@ -310,15 +310,15 @@ membr:Project_Fuehrer_F2512191334 a rsrch:Finding ;
     rdfs:label """Subject is mostly animate (~85%), and sometimes inanimate (~15%).\r
 Accusative object can fluctuate between a locality and things/persons, thus altering the interpretation of the construct.\r
 Intensifying function occurs when there's already a directional element present in the base verb.""" ;
-    rsrch:basedOn <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Handlung> .
+    rsrch:basedOn cx:gmh12C_PräfixverbkonstruktionHandlung .
 
 membr:Project_Fuehrer_F2512191344 a rsrch:Finding ;
     rdfs:label "none" ;
-    rsrch:basedOn <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Tätigkeit> .
+    rsrch:basedOn cx:gmh12C_PräfixverbkonstruktionTätigkeit .
 
 membr:Project_Fuehrer_F2512191440 a rsrch:Finding ;
     rdfs:label "directional information seemingly two times present, thus redundant" ;
-    rsrch:basedOn <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit> .
+    rsrch:basedOn cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit .
 
 membr:Project_Garibyan a rsrch:Project ;
     rsrch:hasResearchQuestion membr:Project_Winckel_2601131454 ;

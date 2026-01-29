@@ -63,7 +63,10 @@
     "id": "gmh",
     "text": "Middle High German (ca. 1050-1500)",
     "children": [
-      {"id": "gmhWr12", "text":  "Written Middle High Geman of the 12th century"}
+      {"id": "gmh11C", "text":  "Middle High German, 11th century"},
+      {"id": "gmh12C", "text":  "Middle High German, 12th century"},
+      {"id": "gmh13C", "text":  "Middle High German, 13th century"},
+      {"id": "gmh14C", "text":  "Middle High German, 14th century"}
     ]
   },
   {

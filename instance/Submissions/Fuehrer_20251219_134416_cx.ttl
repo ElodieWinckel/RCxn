@@ -1,6 +1,7 @@
 @prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix cx: <http://example.org/cx/> .
 @prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
+@prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#> .
 @prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
 @prefix olia: <http://purl.org/olia/olia.owl#> .
 @prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
@@ -10,59 +11,60 @@
 
 membr:Project_Fuehrer rsrch:hasFindings membr:Project_Fuehrer_F2512191344 .
 
-<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Tätigkeit> a rcxn:Construction ;
-    cx:hasExample <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Tätigkeit_Ex_A> ;
+<http://example.org/cx/gmh12C_PräfixverbkonstruktionTätigkeit> a rcxn:Construction ;
+    cx:hasExample <http://example.org/cx/gmh12C_PräfixverbkonstruktionTätigkeit_Ex_A> ;
     RDFS:comment "1 csv file with all the data from the 12th century" ;
-    lg:partOfLanguage lg:gmh ;
-    rcxn:hasConstructionMeaning <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Tätigkeit_Meaning> ;
-    rcxn:hasMetadata <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Tätigkeit_MD> ;
-    rcxn:hasSlots <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Tätigkeit_slots> ;
-    rcxn:hasTitle "Präfixverbkonstruktion (12. Jh., Tätigkeit)" .
+    lg:partOfLanguage lg:gmh12C ;
+    links:inheritsFrom cx:gmh12C_Präfixverbkonstruktion ;
+    rcxn:hasConstructionMeaning <http://example.org/cx/gmh12C_PräfixverbkonstruktionTätigkeit_Meaning> ;
+    rcxn:hasMetadata <http://example.org/cx/gmh12C_PräfixverbkonstruktionTätigkeit_MD> ;
+    rcxn:hasSlots <http://example.org/cx/gmh12C_PräfixverbkonstruktionTätigkeit_slots> ;
+    rcxn:hasTitle "Präfixverbkonstruktion (Tätigkeit)" .
 
-<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Tätigkeit_1> a rcxn:SlotMandatory ;
+<http://example.org/cx/gmh12C_PräfixverbkonstruktionTätigkeit_1> a rcxn:SlotMandatory ;
     cx:WordOrder "1st" ;
-    cx:hasIndex <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Tätigkeit_1_Index> ;
+    cx:hasIndex <http://example.org/cx/gmh12C_PräfixverbkonstruktionTätigkeit_1_Index> ;
     cx:hasTranslation "'I'" ;
     olia:hasCase olia:Nominative ;
     olia:hasSemanticRole olia:ActorMacroRole ;
-    rcxn:hasSlotForm <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Tätigkeit_1_Form> ;
+    rcxn:hasSlotForm <http://example.org/cx/gmh12C_PräfixverbkonstruktionTätigkeit_1_Form> ;
     rcxn:hasSyntacticFunction "Subject" .
 
-<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Tätigkeit_1_Form> a rcxn:SlotForm ;
+<http://example.org/cx/gmh12C_PräfixverbkonstruktionTätigkeit_1_Form> a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "ich" .
 
-<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Tätigkeit_1_Index> a cx:Individual ;
+<http://example.org/cx/gmh12C_PräfixverbkonstruktionTätigkeit_1_Index> a cx:Individual ;
     olia:hasAnimacy olia:Animate ;
     olia:hasNumber olia:Singular .
 
-<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Tätigkeit_2> a rcxn:SlotMandatory ;
+<http://example.org/cx/gmh12C_PräfixverbkonstruktionTätigkeit_2> a rcxn:SlotMandatory ;
     cx:WordOrder "2nd" ;
     cx:hasTranslation "dt. 'durch'", "eng. 'through'" ;
-    rcxn:hasSlotForm <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Tätigkeit_2_Form> ;
+    rcxn:hasSlotForm <http://example.org/cx/gmh12C_PräfixverbkonstruktionTätigkeit_2_Form> ;
     rcxn:hasSyntacticFunction "Verb" .
 
-<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Tätigkeit_2_Form> a rcxn:SlotForm ;
+<http://example.org/cx/gmh12C_PräfixverbkonstruktionTätigkeit_2_Form> a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "durc" .
 
-<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Tätigkeit_3> a rcxn:SlotMandatory ;
+<http://example.org/cx/gmh12C_PräfixverbkonstruktionTätigkeit_3> a rcxn:SlotMandatory ;
     cx:WordOrder "3rd" ;
-    cx:hasIndex <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Tätigkeit_3_Index> ;
+    cx:hasIndex <http://example.org/cx/gmh12C_PräfixverbkonstruktionTätigkeit_3_Index> ;
     cx:hasTranslation "'to go'" ;
-    rcxn:hasSlotForm <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Tätigkeit_3_Form> ;
+    rcxn:hasSlotForm <http://example.org/cx/gmh12C_PräfixverbkonstruktionTätigkeit_3_Form> ;
     rcxn:hasSyntacticFunction "Verb" .
 
-<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Tätigkeit_3_Form> a rcxn:SlotForm ;
+<http://example.org/cx/gmh12C_PräfixverbkonstruktionTätigkeit_3_Form> a rcxn:SlotForm ;
     rcxn:hasStem "gân" ;
     rcxn:hasSurfaceForm "ginc" .
 
-<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Tätigkeit_3_Index> a cx:Event ;
+<http://example.org/cx/gmh12C_PräfixverbkonstruktionTätigkeit_3_Index> a cx:Event ;
     olia:hasModality olia:IndicativeVerb ;
     cx:hasPerson cx:first ;
     olia:hasNumber olia:Singular ;
     olia:hasTense olia:Past ;
     olia:hasVoice olia:ActiveVoice .
 
-<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Tätigkeit_Ex_A> a cx:Example ;
+<http://example.org/cx/gmh12C_PräfixverbkonstruktionTätigkeit_Ex_A> a cx:Example ;
     cx:hasAnnotatedText "[ich]1 [durc]2 [ginc]3 in miner unſculde hercē mineſ in mitten huſeſ mineſ [TP h/55va,6]" ;
     cx:hasGlosses "I through went in my innocence heart's mine in middle house's mine" ;
     cx:hasText "ich durc ginc in miner unſculde hercē mineſ in mitten huſeſ mineſ [TP h/55va,6]" ;
@@ -70,19 +72,19 @@ membr:Project_Fuehrer rsrch:hasFindings membr:Project_Fuehrer_F2512191344 .
     cx:hasTransliteration "ich durc ginc in miner unschulde herce mines in mitten huses mines" ;
     RDFS:comment "Source: Trierer Interlinearversion zum Psalter: 55va,6; see https://www.linguistics.rub.de/rem/pub/texts//M188_dipl.pdf" .
 
-<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Tätigkeit_MD> a rcxn:Metadata ;
+<http://example.org/cx/gmh12C_PräfixverbkonstruktionTätigkeit_MD> a rcxn:Metadata ;
     rcxn:annotator membr:Fuehrer ;
     rcxn:creationDate "2025-12-19"^^xsd:date .
 
-<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Tätigkeit_Meaning> a rcxn:ConstructionMeaning ;
+<http://example.org/cx/gmh12C_PräfixverbkonstruktionTätigkeit_Meaning> a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "local-concrete" .
 
-<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Tätigkeit_slots> a rdf:Seq ;
-    rdf:_1 <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Tätigkeit_1> ;
-    rdf:_2 <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Tätigkeit_2> ;
-    rdf:_3 <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Tätigkeit_3> .
+<http://example.org/cx/gmh12C_PräfixverbkonstruktionTätigkeit_slots> a rdf:Seq ;
+    rdf:_1 <http://example.org/cx/gmh12C_PräfixverbkonstruktionTätigkeit_1> ;
+    rdf:_2 <http://example.org/cx/gmh12C_PräfixverbkonstruktionTätigkeit_2> ;
+    rdf:_3 <http://example.org/cx/gmh12C_PräfixverbkonstruktionTätigkeit_3> .
 
 membr:Project_Fuehrer_F2512191344 a rsrch:Finding ;
     RDFS:label "none" ;
-    rsrch:basedOn <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,Tätigkeit> .
+    rsrch:basedOn <http://example.org/cx/gmh12C_PräfixverbkonstruktionTätigkeit> .
 

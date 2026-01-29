@@ -225,12 +225,42 @@
     
 
 
-    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#gmhWr12 -->
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#gmh11C -->
 
-    <owl:NamedIndividual rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#gmhWr12">
+    <owl:NamedIndividual rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#gmh11C">
         <rdf:type rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#variety"/>
         <lg:isVarietyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#gmh"/>
-        <rdfs:label xml:lang="en">Written Middle High Geman of the 12th century</rdfs:label>
+        <rdfs:label xml:lang="en">Middle High German, 11th century</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#gmh12C -->
+
+    <owl:NamedIndividual rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#gmh12C">
+        <rdf:type rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#variety"/>
+        <lg:isVarietyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#gmh"/>
+        <rdfs:label xml:lang="en">Middle High German, 12th century</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#gmh13C -->
+
+    <owl:NamedIndividual rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#gmh13C">
+        <rdf:type rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#variety"/>
+        <lg:isVarietyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#gmh"/>
+        <rdfs:label xml:lang="en">Middle High German, 13th century</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#gmh14C -->
+
+    <owl:NamedIndividual rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#gmh14C">
+        <rdf:type rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#variety"/>
+        <lg:isVarietyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#gmh"/>
+        <rdfs:label xml:lang="en">Middle High German, 14th century</rdfs:label>
     </owl:NamedIndividual>
     
 

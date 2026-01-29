@@ -11,74 +11,75 @@
 
 membr:Project_Fuehrer rsrch:hasFindings membr:Project_Fuehrer_F2512191440 .
 
-cx:Präfixverbkonstruktion12Jh a rcxn:Construction ;
-    links:inheritedBy <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit> ;
-    rcxn:hasMetadata cx:Präfixverbkonstruktion12Jh_MD ;
-    rcxn:hasTitle "Präfixverbkonstruktion (12. Jh.)" .
+cx:gmh12C_Präfixverbkonstruktion a rcxn:Construction ;
+    links:inheritedBy <http://example.org/cx/gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit> ;
+    lg:partOfLanguage lg:gmh12C ;
+    rcxn:hasMetadata cx:gmh12C_Präfixverbkonstruktion_MD ;
+    rcxn:hasTitle "Präfixverbkonstruktion" .
 
-cx:Präfixverbkonstruktion12Jh_MD a rcxn:Metadata ;
+cx:gmh12C_Präfixverbkonstruktion_MD a rcxn:Metadata ;
     cx:annotator membr:Fuehrer ;
     rcxn:creationDate "2025-12-19"^^xsd:date .
 
-cx:gmh_NounPhrase rcxn:elementOf <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit> .
+cx:gmh_NounPhrase rcxn:elementOf <http://example.org/cx/gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit> .
 
-cx:gmh_Prefix rcxn:elementOf <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit> .
+cx:gmh_Prefix rcxn:elementOf <http://example.org/cx/gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit> .
 
-<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit_1> a rcxn:SlotMandatory ;
+<http://example.org/cx/gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_1> a rcxn:SlotMandatory ;
     cx:WordOrder "1st" ;
     olia:hasSemanticRole olia:ActorMacroRole ;
-    rcxn:hasSlotForm <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit_1_Form> ;
+    rcxn:hasSlotForm <http://example.org/cx/gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_1_Form> ;
     rcxn:hasSyntacticFunction "Subject" .
 
-<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit_1_Form> a rcxn:SlotForm ;
+<http://example.org/cx/gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_1_Form> a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:gmh_NounPhrase .
 
-<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit_2> a rcxn:SlotMandatory ;
+<http://example.org/cx/gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_2> a rcxn:SlotMandatory ;
     cx:WordOrder "2nd" ;
     cx:hasTranslation "dt. 'durch'", "eng. 'through'" ;
-    rcxn:hasSlotForm <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit_2_Form> ;
+    rcxn:hasSlotForm <http://example.org/cx/gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_2_Form> ;
     rcxn:hasSyntacticFunction "Verb" .
 
-<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit_2_Form> a rcxn:SlotForm ;
+<http://example.org/cx/gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_2_Form> a rcxn:SlotForm ;
     rcxn:hasStem "durh" ;
     rcxn:hasSurfaceForm "durch" ;
     rcxn:hasSyntacticForm cx:gmh_Prefix .
 
-<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit_3> a rcxn:SlotMandatory ;
+<http://example.org/cx/gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_3> a rcxn:SlotMandatory ;
     cx:WordOrder "3rd" ;
     cx:hasTranslation "'to break'", "'to drive'" ;
-    rcxn:hasSlotForm <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit_3_Form> ;
+    rcxn:hasSlotForm <http://example.org/cx/gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_3_Form> ;
     rcxn:hasSyntacticFunction "Verb" .
 
-<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit_3_Form> a rcxn:SlotForm ;
+<http://example.org/cx/gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_3_Form> a rcxn:SlotForm ;
     rcxn:hasStem "brëchen", "varn" ;
     rcxn:hasSyntacticForm cx:gmh_Verb .
 
-<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit_4> a rcxn:SlotMandatory ;
+<http://example.org/cx/gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_4> a rcxn:SlotMandatory ;
     cx:WordOrder "4th" ;
     cx:hasTranslation "'through fire and water'", "'into the earth'", "'into the fighting hordes'" ;
     olia:hasSemanticRole olia:DirectionRole ;
-    rcxn:hasSlotForm <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit_4_Form> ;
+    rcxn:hasSlotForm <http://example.org/cx/gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_4_Form> ;
     rcxn:hasSyntacticFunction "Adverbial" .
 
-<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit_4_Form> a rcxn:SlotForm ;
+<http://example.org/cx/gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_4_Form> a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "durch daz fur un̄ daz wazer", "in die erdᵉn", "indi ſcar " .
 
-<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit_Ex_A> a cx:Example ;
+<http://example.org/cx/gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_Ex_A> a cx:Example ;
     cx:hasAnnotatedText "[Wir]1 [durch]2 [furen]3 [durch daz fur un̄ daz wazer]4 " ;
     cx:hasGlosses "we through went through the fire and the water" ;
     cx:hasText "Wir durch furen durch daz fur un̄ daz wazer " ;
     cx:hasTranslation "'we went through fire and water'" ;
     RDFS:comment "Source: Trierer Interlinearversion zum Psalter: 23ra, 6; see https://www.linguistics.rub.de/rem/pub/texts//M188_dipl.pdf" .
 
-<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit_Ex_B> a cx:Example ;
+<http://example.org/cx/gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_Ex_B> a cx:Example ;
     cx:hasAnnotatedText "[zunge ire]1 [durch]2 [fur]3 [in die erdᵉn]4" ;
     cx:hasGlosses "tongue their through went in the earth" ;
     cx:hasText "zunge ire durch fur in die erdᵉn" ;
     cx:hasTranslation "'their tongue went into the ground'" ;
     RDFS:comment "Source: Trierer Interlinearversion zum Psalter: 30va, 11; see https://www.linguistics.rub.de/rem/pub/texts//M188_dipl.pdf" .
 
-<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit_Ex_C> a cx:Example ;
+<http://example.org/cx/gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_Ex_C> a cx:Example ;
     cx:hasAnnotatedText "[er]1 [durch]2 [prach]3 [indi ſcar]4" ;
     cx:hasGlosses "he through broke into the hordes" ;
     cx:hasText "er durch prach indi ſcar" ;
@@ -86,34 +87,34 @@ cx:gmh_Prefix rcxn:elementOf <http://example.org/cx/gmh_Präfixverbkonstruktion1
     cx:hasTransliteration "er durch prach indi scar" ;
     RDFS:comment "Source: Kaiserchronik A [V]: 0a, 7074; see https://www.linguistics.rub.de/rem/pub/texts//M121Y_dipl.pdf" .
 
-<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit_MD> a rcxn:Metadata ;
+<http://example.org/cx/gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_MD> a rcxn:Metadata ;
     rcxn:annotator membr:Fuehrer ;
     rcxn:creationDate "2025-12-19"^^xsd:date .
 
-<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit_Meaning> a rcxn:ConstructionMeaning ;
+<http://example.org/cx/gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_Meaning> a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "local-concrete" .
 
-<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit_slots> a rdf:Seq ;
-    rdf:_1 <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit_1> ;
-    rdf:_2 <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit_2> ;
-    rdf:_3 <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit_3> ;
-    rdf:_4 <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit_4> .
+<http://example.org/cx/gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_slots> a rdf:Seq ;
+    rdf:_1 <http://example.org/cx/gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_1> ;
+    rdf:_2 <http://example.org/cx/gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_2> ;
+    rdf:_3 <http://example.org/cx/gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_3> ;
+    rdf:_4 <http://example.org/cx/gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_4> .
 
-cx:gmh_Verb rcxn:elementOf <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit> .
+cx:gmh_Verb rcxn:elementOf <http://example.org/cx/gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit> .
 
 membr:Project_Fuehrer_F2512191440 a rsrch:Finding ;
     RDFS:label "directional information seemingly two times present, thus redundant" ;
-    rsrch:basedOn <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit> .
+    rsrch:basedOn <http://example.org/cx/gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit> .
 
-<http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit> a rcxn:Construction ;
-    cx:hasExample <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit_Ex_A>,
-        <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit_Ex_B>,
-        <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit_Ex_C> ;
+<http://example.org/cx/gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit> a rcxn:Construction ;
+    cx:hasExample <http://example.org/cx/gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_Ex_A>,
+        <http://example.org/cx/gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_Ex_B>,
+        <http://example.org/cx/gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_Ex_C> ;
     RDFS:comment "1 csv file with all the data from the 12th century" ;
-    lg:partOfLanguage lg:gmh ;
-    links:inheritsFrom cx:Präfixverbkonstruktion12Jh ;
-    rcxn:hasConstructionMeaning <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit_Meaning> ;
-    rcxn:hasMetadata <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit_MD> ;
-    rcxn:hasSlots <http://example.org/cx/gmh_Präfixverbkonstruktion12Jh,lokalistischeTätigkeit_slots> ;
-    rcxn:hasTitle "Präfixverbkonstruktion (12. Jh., lokalistische Tätigkeit)" .
+    lg:partOfLanguage lg:gmh12C ;
+    links:inheritsFrom cx:gmh12C_Präfixverbkonstruktion ;
+    rcxn:hasConstructionMeaning <http://example.org/cx/gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_Meaning> ;
+    rcxn:hasMetadata <http://example.org/cx/gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_MD> ;
+    rcxn:hasSlots <http://example.org/cx/gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_slots> ;
+    rcxn:hasTitle "Präfixverbkonstruktion (lokalistische Tätigkeit)" .
 
