@@ -437,7 +437,7 @@ membr:Project_Rohwedder a rsrch:Project ;
     rsrch:projectName "Project Rohwedder"@en .
 
 membr:Project_Schmechel a rsrch:Project ;
-    rsrch:projectName "Project Schmechel"@en .
+    rsrch:projectName "A constructional approach to prepositions and prepositional phrases in Old English"@en .
 
 membr:Project_Senger a rsrch:Project ;
     rsrch:projectName "Project Senger"@en .
