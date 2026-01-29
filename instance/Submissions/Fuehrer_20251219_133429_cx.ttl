@@ -39,7 +39,7 @@ cx:gmh_Prefix rcxn:elementOf <http://example.org/cx/gmh12C_Präfixverbkonstrukti
     rcxn:hasSyntacticFunction "Verb" .
 
 <http://example.org/cx/gmh12C_PräfixverbkonstruktionHandlung_2_Form> a rcxn:SlotForm ;
-    rcxn:hasStem "durh" ;
+    rcxn:hasStem cx:gmh_durh ;
     rcxn:hasSurfaceForm "durch", "durh", "dur", "thurh" ;
     rcxn:hasSyntacticForm cx:gmh_Prefix .
 
@@ -49,7 +49,7 @@ cx:gmh_Prefix rcxn:elementOf <http://example.org/cx/gmh12C_Präfixverbkonstrukti
     rcxn:hasSyntacticFunction "Verb" .
 
 <http://example.org/cx/gmh12C_PräfixverbkonstruktionHandlung_3_Form> a rcxn:SlotForm ;
-    rcxn:hasSurfaceForm "æhten", "bîzen", "dringen", "gân", "houwen", "leiten", "rîten", "stëchen", "varn" .
+    rcxn:hasStem cx:gmh_æhten, cx:gmh_bîzen, cx:gmh_dringen, cx:gmh_gân, cx:gmh_houwen, cx:gmh_leiten, cx:gmh_rîten, cx:gmh_stëchen, cx:gmh_varn .
 
 <http://example.org/cx/gmh12C_PräfixverbkonstruktionHandlung_4> a rcxn:SlotMandatory ;
     olia:hasCase olia:Accusative ;
@@ -102,8 +102,6 @@ Accusative object can fluctuate between a locality and things/persons, thus alte
 Intensifying function occurs when there's already a directional element present in the base verb.""" ;
     rsrch:basedOn <http://example.org/cx/gmh12C_PräfixverbkonstruktionHandlung> .
 
-cx:gmh_NounPhrase rcxn:elementOf <http://example.org/cx/gmh12C_PräfixverbkonstruktionHandlung> .
-
 <http://example.org/cx/gmh12C_PräfixverbkonstruktionHandlung> a rcxn:Construction ;
     cx:hasExample <http://example.org/cx/gmh12C_PräfixverbkonstruktionHandlung_Ex_A>,
         <http://example.org/cx/gmh12C_PräfixverbkonstruktionHandlung_Ex_B>,
@@ -116,3 +114,40 @@ cx:gmh_NounPhrase rcxn:elementOf <http://example.org/cx/gmh12C_Präfixverbkonstr
     rcxn:hasSlots <http://example.org/cx/gmh12C_PräfixverbkonstruktionHandlung_slots> ;
     rcxn:hasTitle "Präfixverbkonstruktion (Handlung)" .
 
+cx:gmh_æhten a rcxn:Construction ;
+    rcxn:hasTitle "æhten" ;
+    lg:partOfLanguage lg:gmh.
+cx:gmh_bîzen a rcxn:Construction ;
+    rcxn:hasTitle "bîzen" ;
+    lg:partOfLanguage lg:gmh.
+cx:gmh_dringen a rcxn:Construction ;
+    rcxn:hasTitle "dringen" ;
+    lg:partOfLanguage lg:gmh.
+cx:gmh_gân a rcxn:Construction ;
+    rcxn:hasTitle "gân" ;
+    lg:partOfLanguage lg:gmh.
+cx:gmh_houwen a rcxn:Construction ;
+    rcxn:hasTitle "houwen" ;
+    lg:partOfLanguage lg:gmh.
+cx:gmh_leiten a rcxn:Construction ;
+    rcxn:hasTitle "leiten" ;
+    lg:partOfLanguage lg:gmh.
+cx:gmh_rîten a rcxn:Construction ;
+    rcxn:hasTitle "rîten" ;
+    lg:partOfLanguage lg:gmh.
+cx:gmh_stëchen a rcxn:Construction ;
+    rcxn:hasTitle "stëchen" ;
+    lg:partOfLanguage lg:gmh.
+cx:gmh_varn a rcxn:Construction ;
+    rcxn:hasTitle "varn" ;
+    lg:partOfLanguage lg:gmh ;
+    rcxn:hasConstructionMeaning cx:gmh_varn_Meaning .
+cx:gmh_durh a rcxn:Construction ;
+    rcxn:hasTitle "durh" ;
+    lg:partOfLanguage lg:gmh ;
+    rcxn:hasConstructionMeaning cx:gmh_durh_Meaning .
+
+cx:gmh_durh_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "dt. 'durch'", "eng. 'through'" .
+cx:gmh_varn_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "to drive" .

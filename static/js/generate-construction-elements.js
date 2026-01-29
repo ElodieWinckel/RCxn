@@ -176,39 +176,22 @@ function generateFields() {
         elementDetails.appendChild(rootTooltipContainer);
         elementDetails.appendChild(document.createElement('br'));
 
-        // Create fields for stem
-        const stemLabel = document.createElement('label');
-        stemLabel.textContent = `Stem / Lemma (optional):`;
-        // Create an info icon
-        const stemInfoIcon = document.createElement('span');
-        stemInfoIcon.className = 'info-icon';
-        stemInfoIcon.textContent = 'ℹ️'; // Unicode info symbol
-        // Create the tooltip text container with HTML content
-        const stemTooltipText = document.createElement('span');
-        stemTooltipText.className = 'tooltiptext';
-        stemTooltipText.innerHTML = `
-            NB: You probably don't need this field if you entered a surface form above.<br>
-            For example: <br>
-            English: talk (lemma) <br>
-            Spanish: habl- (stem)`;
-        // Create a container for the label and the info icon
-        const stemLabelContainer = document.createElement('div');
-        stemLabelContainer.className = 'label-container';
-        stemLabelContainer.appendChild(stemLabel);
-        stemLabelContainer.appendChild(stemInfoIcon);
-        const stemInput = document.createElement('input');
-        stemInput.type = 'text';
-        stemInput.name = `stem_${i + 1}`;
-        // Create a container for the input and the tooltip
-        const stemTooltipContainer = document.createElement('div');
-        stemTooltipContainer.className = 'tooltip-container';
-        stemTooltipContainer.appendChild(stemInput);
-        stemTooltipContainer.appendChild(stemTooltipText);
-        // Add tooltip functionality to the info icon
-        stemInfoIcon.appendChild(stemTooltipText);
-        elementDetails.appendChild(stemLabelContainer);
-        elementDetails.appendChild(stemTooltipContainer);
-        elementDetails.appendChild(document.createElement('br'));
+        // Field for stem: Due to the complexity of the code for this field, it is defined in a distinct js-file.
+        createMultiValueAutocompleteField({
+            container: elementDetails,
+            index: i + 1,
+            labelText: 'Stem / Lemma (optional):',
+            inputId: `stems_${i + 1}`,
+            hiddenInputName: `stems_${i + 1}`,
+            autocompleteSource: existingConstructions,
+            placeholder: 'Type name of lemma',
+            tooltipHtml: `
+                NB: You probably don't need this field if you entered a surface form above.<br>
+                For example:<br>
+                English: talk (lemma)<br>
+                Spanish: habl- (stem)
+            `
+        });
 
         // Create fields for transliteration
         const transliterationLabel = document.createElement('label');
@@ -230,71 +213,16 @@ function generateFields() {
         elementDetails.appendChild(translationInput);
         elementDetails.appendChild(document.createElement('br'));
 
-        // --- Syntactic Form field with autocomplete + multiple values ---
-        const syntacticFormLabel = document.createElement('label');
-        syntacticFormLabel.textContent = `Syntactic form(s) of element ${i + 1} (optional):`;
-
-        // Input + button
-        const syntacticFormInput = document.createElement('input');
-        syntacticFormInput.type = 'text';
-        syntacticFormInput.id = `syntactic_form_${i + 1}`;
-        syntacticFormInput.placeholder = "Type construction name";
-
-        // Autocomplete
-        $(() => {
-            $(`#syntactic_form_${i + 1}`).autocomplete({
-                source: existingConstructions
-            });
+        // Field for syntactic form: Due to the complexity of the code for this field, it is defined in a distinct js-file.
+        createMultiValueAutocompleteField({
+            container: elementDetails,
+            index: i + 1,
+            labelText: `Syntactic form(s) of element ${i + 1} (optional):`,
+            inputId: `syntactic_form_${i + 1}`,
+            hiddenInputName: `morphosyntactic_form_${i + 1}`,
+            autocompleteSource: existingConstructions,
+            placeholder: 'Type construction name'
         });
-
-        const addSyntacticFormBtn = document.createElement('button');
-        addSyntacticFormBtn.type = 'button';
-        addSyntacticFormBtn.textContent = 'Add';
-
-        // Container for selected syntactic forms
-        const selectedSyntacticFormDiv = document.createElement('div');
-        selectedSyntacticFormDiv.id = `selected_syntactic_form_${i + 1}`;
-
-        // Hidden input to store JSON list
-        const hiddenSyntacticFormInput = document.createElement('input');
-        hiddenSyntacticFormInput.type = 'hidden';
-        hiddenSyntacticFormInput.id = `morphosyntactic_form_${i + 1}`;
-        hiddenSyntacticFormInput.name = `morphosyntactic_form_${i + 1}`;
-
-        // Logic to add and remove items
-        let selectedSyntacticForms = [];
-
-        addSyntacticFormBtn.onclick = function() {
-            let value = syntacticFormInput.value.trim();
-            if (value && !selectedSyntacticForms.includes(value)) {
-                selectedSyntacticForms.push(value);
-                updateSelectedSyntacticForms();
-            }
-            syntacticFormInput.value = '';
-        };
-
-        function updateSelectedSyntacticForms() {
-            selectedSyntacticFormDiv.innerHTML = '';
-            selectedSyntacticForms.forEach((form, index) => {
-                let btn = document.createElement('button');
-                btn.type = 'button';
-                btn.textContent = form;
-                btn.onclick = function() {
-                    selectedSyntacticForms.splice(index, 1);
-                    updateSelectedSyntacticForms();
-                };
-                selectedSyntacticFormDiv.appendChild(btn);
-            });
-            hiddenSyntacticFormInput.value = selectedSyntacticForms.length ? JSON.stringify(selectedSyntacticForms) : '[]';
-        }
-
-        // Append all
-        elementDetails.appendChild(syntacticFormLabel);
-        elementDetails.appendChild(syntacticFormInput);
-        elementDetails.appendChild(addSyntacticFormBtn);
-        elementDetails.appendChild(selectedSyntacticFormDiv);
-        elementDetails.appendChild(hiddenSyntacticFormInput);
-        elementDetails.appendChild(document.createElement('br'));
 
 
         // Create fields for syntactic function

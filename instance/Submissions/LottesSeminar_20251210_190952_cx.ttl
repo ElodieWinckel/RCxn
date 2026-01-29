@@ -29,7 +29,7 @@ cx:engInf_Coolexclamativeconstruction_1 a rcxn:SlotMandatory ;
     rcxn:hasSlotForm cx:engInf_Coolexclamativeconstruction_1_Form .
 
 cx:engInf_Coolexclamativeconstruction_1_Form a rcxn:SlotForm ;
-    rcxn:hasSyntacticForm cx:coolasadmirableconstruction .
+    rcxn:hasStem cx:coolasadmirableconstruction .
 
 cx:engInf_Coolexclamativeconstruction_2 a rcxn:SlotOptional ;
     RDFS:comment "Typically added in the written modality." ;

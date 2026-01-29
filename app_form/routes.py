@@ -529,7 +529,11 @@ def form_submit():
         case = request.form[f'case_{i}']
         add_case = request.form[f'add_case_{i}']
         root = request.form[f'root_{i}']
-        stem = request.form[f'stem_{i}']
+        stem_json = request.form.get(f"stems_{i}", "[]")
+        try:
+            stems = json.loads(stem_json)
+        except json.JSONDecodeError:
+            stems = []
         add_semantic_contribution = request.form[f'add_semantic_contribution_{i}']
         other_element_specification = request.form[f'element_specification_{i}']
 
@@ -630,7 +634,7 @@ def form_submit():
         # URI for Slot Form
         slot_form_uri = cx[f"{construction_name_cleaned}_{i}_Form"]
         # Triple to relate slot to it meaning (if needed)
-        if morphosyntactic_form or phonology.strip() or root.strip() or stem.strip() or surface.strip():
+        if morphosyntactic_form or phonology.strip() or root.strip() or stems or surface.strip():
             g.add((element_uri, rcxn.hasSlotForm, slot_form_uri))
             g.add((slot_form_uri, RDF.type, rcxn.SlotForm))
 
@@ -639,8 +643,36 @@ def form_submit():
             g.add((slot_form_uri, rcxn.hasPhonology, Literal(phonology)))
         if root.strip():
             g.add((slot_form_uri, rcxn.hasRoot, Literal(root)))
-        if stem.strip():
-            g.add((slot_form_uri, rcxn.hasStem, Literal(stem)))
+        if stems:
+            for stem in stems:
+                # Users can select a stem that corresponds to a construction already in the constructicon
+                # When this happens, the uri has to be identified
+                if stem in {entry['title'] for entry in list_cx}:
+                    cleaned_stem_construction = next(
+                        (entry['uri'] for entry in list_cx if entry['title'] == stem),
+                        None  # Default if not found
+                    )
+                else:  # Users can also enter the name of a stem that has not been implemented yet
+                    # When this happens, create a new construction entry, with title, language, annotator and creation date
+                    cleaned_stem_construction = str(metalanguage_code) + "_" + clean_name(stem)
+                    metadata_stem_construction = f"{cleaned_stem_construction}_MD"
+                    g.add((cx[cleaned_stem_construction], RDF.type, rcxn.Construction))
+                    g.add((cx[cleaned_stem_construction], lg.partOfLanguage, metalanguage_uri))  # A metaphorical extension belong automatically to the same (meta-)language
+                    g.add((cx[cleaned_stem_construction], rcxn.hasMetadata, cx[metadata_stem_construction]))
+                    g.add((cx[metadata_stem_construction], RDF.type, rcxn.Metadata))
+                    g.add((cx[metadata_stem_construction], cx.annotator, membr[user_name]))
+                    g.add((cx[metadata_stem_construction], rcxn.creationDate, Literal(datetime.now().strftime('%Y-%m-%d'), datatype=XSD.date)))
+                    g.add((cx[cleaned_stem_construction], rcxn.hasTitle, Literal(stem)))
+                    # If the lemma has be translated, ass this translation as a meaning of the new construction
+                    if translation.strip():
+                        meaning_stem_uri = f"{cleaned_stem_construction}_Meaning"
+                        g.add((cx[meaning_stem_uri], RDF.type, rcxn.ConstructionMeaning))
+                        g.add((cx[cleaned_stem_construction], rcxn.hasConstructionMeaning, cx[meaning_stem_uri]))
+                        g.add((cx[meaning_stem_uri], rcxn.hasMeaning, Literal(translation)))
+                    print("New construction needed!")
+                # In any case, write a triplet defining this construction as the object of hasStem, and a triplet for the corresponding link
+                g.add((slot_form_uri, rcxn.hasStem, cx[cleaned_stem_construction]))
+                g.add((cx[cleaned_stem_construction], rcxn.elementOf, cx[construction_name_cleaned]))
         if surface.strip():
             g.add((slot_form_uri, rcxn.hasSurfaceForm, Literal(surface)))
         if translation.strip():
@@ -658,9 +690,10 @@ def form_submit():
                     )
                 else:  # Users can also enter the name of a construction that has not been implemented yet
                     # When this happens, create a new construction entry, with title, annotator and creation date
-                    cleaned_morphosyn_construction = clean_name(morphosyn)
+                    cleaned_morphosyn_construction = str(metalanguage_code) + "_" + clean_name(morphosyn)
                     metadata_morphosyn_construction = f"{cleaned_morphosyn_construction}_MD"
                     g.add((cx[cleaned_morphosyn_construction], RDF.type, rcxn.Construction))
+                    g.add((cx[cleaned_morphosyn_construction], lg.partOfLanguage, metalanguage_uri))  # A metaphorical extension belong automatically to the same (meta-)language
                     g.add((cx[cleaned_morphosyn_construction], rcxn.hasMetadata, cx[metadata_morphosyn_construction]))
                     g.add((cx[metadata_morphosyn_construction], RDF.type, rcxn.Metadata))
                     g.add((cx[metadata_morphosyn_construction], cx.annotator, membr[user_name]))

@@ -23,15 +23,6 @@ cx:EnglishResultativeconstruction_2_Form a rcxn:SlotForm ;
 cx:EnglishTransitiveconstruction_2_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_Verb .
 
-cx:Idiomaticconstructions a rcxn:Construction ;
-    cx:hasExample cx:Idiomaticconstructions_Ex_A,
-        cx:Idiomaticconstructions_Ex_B ;
-    lg:partOfLanguage lg:eng ;
-    rcxn:hasConstructionMeaning cx:Idiomaticconstructions_Meaning ;
-    rcxn:hasMetadata cx:Idiomaticconstructions_MD ;
-    rcxn:hasSlots cx:Idiomaticconstructions_slots ;
-    rcxn:hasTitle "Burn one's bridges construction" .
-
 cx:Relative-Topic-ShiftConstruction_2_Form a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "Il quale" .
 
@@ -408,7 +399,7 @@ cx:EvaluativeAttributionConstruction_4 a rcxn:SlotOptional ;
     rcxn:hasSlotForm cx:EvaluativeAttributionConstruction_4_Form .
 
 cx:EvaluativeAttributionConstruction_4_Form a rcxn:SlotForm ;
-    rcxn:hasStem "to be (lemma)" .
+    rcxn:hasStem cx:eng_be .
 
 cx:EvaluativeAttributionConstruction_5 a rcxn:SlotMandatory ;
     rcxn:hasOtherSemanticContribution "Attribute" ;
@@ -534,12 +525,12 @@ cx:Idiomaticconstruction_4_Index a cx:Individual ;
 
 cx:Idiomaticconstruction_5 a rcxn:SlotMandatory ;
     cx:hasIndex cx:Idiomaticconstruction_5_Index ;
-    cx:hasTranslation "shake" ;
+    cx:hasTranslation "to shake" ;
     rcxn:hasOtherSemanticContribution "Action" ;
     rcxn:hasSlotForm cx:Idiomaticconstruction_5_Form .
 
 cx:Idiomaticconstruction_5_Form a rcxn:SlotForm ;
-    rcxn:hasStem "schütteln" ;
+    rcxn:hasStem cx:deu_schütteln ;
     rcxn:hasSyntacticForm cx:deu_Verb .
 
 cx:Idiomaticconstruction_5_Index a cx:Event ;
@@ -571,6 +562,15 @@ cx:Idiomaticconstruction_slots a rdf_ns:Seq ;
     rdf_ns:_1 cx:Idiomaticconstruction_1 ;
     rdf_ns:_2 cx:Idiomaticconstruction_5 .
 
+cx:Idiomaticconstructions a rcxn:Construction ;
+    cx:hasExample cx:Idiomaticconstructions_Ex_A,
+        cx:Idiomaticconstructions_Ex_B ;
+    lg:partOfLanguage lg:eng ;
+    rcxn:hasConstructionMeaning cx:Idiomaticconstructions_Meaning ;
+    rcxn:hasMetadata cx:Idiomaticconstructions_MD ;
+    rcxn:hasSlots cx:Idiomaticconstructions_slots ;
+    rcxn:hasTitle "Burn one's bridges construction" .
+
 cx:Idiomaticconstructions_1 a rcxn:SlotMandatory ;
     cx:WordOrder "Initial position" ;
     cx:hasIndex cx:Idiomaticconstructions_1_Index ;
@@ -591,7 +591,7 @@ cx:Idiomaticconstructions_2 a rcxn:SlotMandatory ;
 
 cx:Idiomaticconstructions_2_Form a rcxn:SlotForm ;
     cx:hasSyntacticForm cx:eng_VerbPhrase ;
-    rcxn:hasStem "burn" .
+    rcxn:hasStem cx:eng_burn .
 
 cx:Idiomaticconstructions_2_Index a cx:Event ;
     olia:hasModality olia:IndicativeVerb ;
@@ -1072,7 +1072,7 @@ cx:TheEnglishGIVE-OUTVerbParticleConstruction._2 a rcxn:SlotMandatory ;
     rcxn:hasSlotForm cx:TheEnglishGIVE-OUTVerbParticleConstruction._2_Form .
 
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._2_Form a rcxn:SlotForm ;
-    rcxn:hasStem "give" ;
+    rcxn:hasStem cx:eng_give ;
     rcxn:hasSyntacticForm cx:eng_Verb .
 
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._3 a rcxn:SlotMandatory ;
@@ -1109,8 +1109,8 @@ cx:ThisCloseToV-ing_1 a rcxn:SlotMandatory ;
     rcxn:hasSlotForm cx:ThisCloseToV-ing_1_Form .
 
 cx:ThisCloseToV-ing_1_Form a rcxn:SlotForm ;
-    rcxn:hasStem "Be",
-        "Come" .
+    rcxn:hasStem cx:eng_be,
+        cx:eng_come .
 
 cx:ThisCloseToV-ing_1_Index a cx:Event ;
     olia:hasVoice olia:ActiveVoice .
@@ -1324,8 +1324,7 @@ cx:Transitiveobjectrelativeclause_slots a rdf_ns:Seq ;
     rcxn:hasSyntacticFunction "Head of a prepositional phrase" .
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_4_Form> a rcxn:SlotForm ;
-    rcxn:hasStem "vor" ;
-    rcxn:hasSyntacticForm cx:deu_Preposition .
+    rcxn:hasStem cx:deu_vor .
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_5> a rcxn:SlotMandatory ;
     cx:WordOrder "The noun always directly follows the preposition \"vor\"." ;
@@ -1385,7 +1384,7 @@ cx:comePLUSnoisemannerofmovementVing_2 a rcxn:SlotMandatory ;
     rcxn:hasSlotForm cx:comePLUSnoisemannerofmovementVing_2_Form .
 
 cx:comePLUSnoisemannerofmovementVing_2_Form a rcxn:SlotForm ;
-    rcxn:hasStem "come" ;
+    rcxn:hasStem cx:eng_come ;
     rcxn:hasSyntacticForm cx:eng_Verb .
 
 cx:comePLUSnoisemannerofmovementVing_3 a rcxn:SlotMandatory ;
@@ -1476,7 +1475,7 @@ cx:coolasadmirableconstruction_1 a rcxn:SlotMandatory ;
     rcxn:hasSlotForm cx:coolasadmirableconstruction_1_Form .
 
 cx:coolasadmirableconstruction_1_Form a rcxn:SlotForm ;
-    rcxn:hasStem "cool" ;
+    rcxn:hasStem cx:eng_cool ;
     rcxn:hasSyntacticForm cx:eng_Adjective .
 
 cx:coolasadmirableconstruction_Ex_A a cx:Example ;
@@ -1511,7 +1510,7 @@ cx:coolascolourconstruction_1 a rcxn:SlotMandatory ;
     rcxn:hasSlotForm cx:coolascolourconstruction_1_Form .
 
 cx:coolascolourconstruction_1_Form a rcxn:SlotForm ;
-    rcxn:hasStem "cool" ;
+    rcxn:hasStem cx:eng_cool ;
     rcxn:hasSyntacticForm cx:eng_Adjective .
 
 cx:coolascolourconstruction_Ex_A a cx:Example ;
@@ -1542,7 +1541,7 @@ cx:coolasemotionconstruction_1 a rcxn:SlotMandatory ;
     rcxn:hasSlotForm cx:coolasemotionconstruction_1_Form .
 
 cx:coolasemotionconstruction_1_Form a rcxn:SlotForm ;
-    rcxn:hasStem "cool" ;
+    rcxn:hasStem cx:eng_cool ;
     rcxn:hasSyntacticForm cx:eng_Adjective .
 
 cx:coolasemotionconstruction_Ex_A a cx:Example ;
@@ -1583,16 +1582,39 @@ cx:deu_DefiniteDeterminer a rcxn:Construction ;
     rcxn:elementOf <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]> ;
     rcxn:hasTitle "Definite Determiner" .
 
+cx:deu_Preposition a rcxn:Construction ;
+    lg:partOfLanguage lg:deu ;
+    rcxn:elementOf cx:Idiomaticconstruction ;
+    rcxn:hasTitle "Preposition" .
+
 cx:deu_PrepositionalPhrase a rcxn:Construction ;
     lg:partOfLanguage lg:deu ;
     rcxn:elementOf cx:Idiomaticconstruction ;
     rcxn:hasTitle "Prepositional Phrase" .
 
+cx:deu_schütteln a rcxn:Construction ;
+    lg:partOfLanguage lg:deu ;
+    rcxn:elementOf cx:Idiomaticconstruction ;
+    rcxn:hasConstructionMeaning cx:deu_schütteln_Meaning ;
+    rcxn:hasTitle "schütteln" .
+
+cx:deu_schütteln_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "to shake" .
+
+cx:deu_vor a rcxn:Construction ;
+    lg:partOfLanguage lg:deu ;
+    rcxn:elementOf <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]> ;
+    rcxn:hasConstructionMeaning cx:deu_vor_Meaning ;
+    rcxn:hasTitle "vor" .
+
+cx:deu_vor_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "in front of" .
+
 cx:engInf_Coolexclamativeconstruction_1 a rcxn:SlotMandatory ;
     rcxn:hasSlotForm cx:engInf_Coolexclamativeconstruction_1_Form .
 
 cx:engInf_Coolexclamativeconstruction_1_Form a rcxn:SlotForm ;
-    rcxn:hasSyntacticForm cx:coolasadmirableconstruction .
+    rcxn:hasStem cx:coolasadmirableconstruction .
 
 cx:engInf_Coolexclamativeconstruction_2 a rcxn:SlotOptional ;
     rdfs:comment "Typically added in the written modality." ;
@@ -1921,20 +1943,11 @@ cx:eng_GenitiveNPConstruction_slots a rdf_ns:Seq ;
     rdf_ns:_1 cx:eng_GenitiveNPConstruction_1 ;
     rdf_ns:_2 cx:eng_GenitiveNPConstruction_4 .
 
-cx:eng_Keepacoolheadconstruction a rcxn:Construction ;
-    cx:hasExample cx:eng_Keepacoolheadconstruction_Ex_A ;
-    rdfs:comment "first attested 1718, cf. OED" ;
-    lg:partOfLanguage lg:eng ;
-    rcxn:hasConstructionMeaning cx:eng_Keepacoolheadconstruction_Meaning ;
-    rcxn:hasMetadata cx:eng_Keepacoolheadconstruction_MD ;
-    rcxn:hasSlots cx:eng_Keepacoolheadconstruction_slots ;
-    rcxn:hasTitle "Keep a cool head construction" .
-
 cx:eng_Keepacoolheadconstruction_1 a rcxn:SlotMandatory ;
     rcxn:hasSlotForm cx:eng_Keepacoolheadconstruction_1_Form .
 
 cx:eng_Keepacoolheadconstruction_1_Form a rcxn:SlotForm ;
-    rcxn:hasStem "keep" .
+    rcxn:hasStem cx:eng_keep .
 
 cx:eng_Keepacoolheadconstruction_2 a rcxn:SlotMandatory ;
     rcxn:hasSlotForm cx:eng_Keepacoolheadconstruction_2_Form .
@@ -1946,8 +1959,8 @@ cx:eng_Keepacoolheadconstruction_3 a rcxn:SlotMandatory ;
     rcxn:hasSlotForm cx:eng_Keepacoolheadconstruction_3_Form .
 
 cx:eng_Keepacoolheadconstruction_3_Form a rcxn:SlotForm ;
-    rcxn:hasSurfaceForm "cool" ;
-    rcxn:hasSyntacticForm cx:coolasemotionconstruction .
+    rcxn:hasStem cx:coolasemotionconstruction ;
+    rcxn:hasSurfaceForm "cool" .
 
 cx:eng_Keepacoolheadconstruction_4 a rcxn:SlotMandatory ;
     rcxn:hasSlotForm cx:eng_Keepacoolheadconstruction_4_Form .
@@ -2000,6 +2013,11 @@ cx:eng_VerbRoot a rcxn:Construction ;
     rcxn:elementOf cx:ThisCloseToV-ing ;
     rcxn:hasTitle "Verb Root" .
 
+cx:eng_burn a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    rcxn:elementOf cx:Idiomaticconstructions ;
+    rcxn:hasTitle "burn" .
+
 cx:eng_clause a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
     rcxn:elementOf cx:EvaluativeAttributionConstruction ;
@@ -2010,7 +2028,7 @@ cx:eng_coolconstruction_1 a rcxn:SlotMandatory ;
     rcxn:hasSlotForm cx:eng_coolconstruction_1_Form .
 
 cx:eng_coolconstruction_1_Form a rcxn:SlotForm ;
-    rcxn:hasStem "cool" ;
+    rcxn:hasStem cx:eng_cool ;
     rcxn:hasSyntacticForm cx:eng_Adjective .
 
 cx:eng_coolconstruction_Ex_A a cx:Example ;
@@ -2044,6 +2062,16 @@ cx:eng_coolconstruction_Meaning a rcxn:ConstructionMeaning ;
 cx:eng_coolconstruction_slots a rdf_ns:Seq ;
     rdf_ns:_1 cx:eng_coolconstruction_1 .
 
+cx:eng_give a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    rcxn:elementOf <http://example.org/cx/TheEnglishGIVE-OUTVerbParticleConstruction.> ;
+    rcxn:hasTitle "give" .
+
+cx:eng_keep a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    rcxn:elementOf cx:eng_Keepacoolheadconstruction ;
+    rcxn:hasTitle "keep" .
+
 <http://example.org/cx/etc.> links:inheritsFrom <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]> .
 
 cx:gmh12C_PräfixverbkonstruktionHandlung_1 a rcxn:SlotOptional ;
@@ -2063,7 +2091,7 @@ cx:gmh12C_PräfixverbkonstruktionHandlung_2 a rcxn:SlotMandatory ;
     rcxn:hasSyntacticFunction "Verb" .
 
 cx:gmh12C_PräfixverbkonstruktionHandlung_2_Form a rcxn:SlotForm ;
-    rcxn:hasStem "durh" ;
+    rcxn:hasStem cx:gmh_durh ;
     rcxn:hasSurfaceForm "dur",
         "durch",
         "durh",
@@ -2076,15 +2104,15 @@ cx:gmh12C_PräfixverbkonstruktionHandlung_3 a rcxn:SlotMandatory ;
     rcxn:hasSyntacticFunction "Verb" .
 
 cx:gmh12C_PräfixverbkonstruktionHandlung_3_Form a rcxn:SlotForm ;
-    rcxn:hasSurfaceForm "bîzen",
-        "dringen",
-        "gân",
-        "houwen",
-        "leiten",
-        "rîten",
-        "stëchen",
-        "varn",
-        "æhten" .
+    rcxn:hasStem cx:gmh_bîzen,
+        cx:gmh_dringen,
+        cx:gmh_gân,
+        cx:gmh_houwen,
+        cx:gmh_leiten,
+        cx:gmh_rîten,
+        cx:gmh_stëchen,
+        cx:gmh_varn,
+        cx:gmh_æhten .
 
 cx:gmh12C_PräfixverbkonstruktionHandlung_4 a rcxn:SlotMandatory ;
     olia:hasCase olia:Accusative ;
@@ -2132,16 +2160,6 @@ cx:gmh12C_PräfixverbkonstruktionHandlung_slots a rdf_ns:Seq ;
     rdf_ns:_3 cx:gmh12C_PräfixverbkonstruktionHandlung_3 ;
     rdf_ns:_4 cx:gmh12C_PräfixverbkonstruktionHandlung_4 .
 
-cx:gmh12C_PräfixverbkonstruktionTätigkeit a rcxn:Construction ;
-    cx:hasExample cx:gmh12C_PräfixverbkonstruktionTätigkeit_Ex_A ;
-    rdfs:comment "1 csv file with all the data from the 12th century" ;
-    lg:partOfLanguage lg:gmh12C ;
-    links:inheritsFrom cx:gmh12C_Präfixverbkonstruktion ;
-    rcxn:hasConstructionMeaning cx:gmh12C_PräfixverbkonstruktionTätigkeit_Meaning ;
-    rcxn:hasMetadata cx:gmh12C_PräfixverbkonstruktionTätigkeit_MD ;
-    rcxn:hasSlots cx:gmh12C_PräfixverbkonstruktionTätigkeit_slots ;
-    rcxn:hasTitle "Präfixverbkonstruktion (Tätigkeit)" .
-
 cx:gmh12C_PräfixverbkonstruktionTätigkeit_1 a rcxn:SlotMandatory ;
     cx:WordOrder "1st" ;
     cx:hasIndex cx:gmh12C_PräfixverbkonstruktionTätigkeit_1_Index ;
@@ -2152,7 +2170,7 @@ cx:gmh12C_PräfixverbkonstruktionTätigkeit_1 a rcxn:SlotMandatory ;
     rcxn:hasSyntacticFunction "Subject" .
 
 cx:gmh12C_PräfixverbkonstruktionTätigkeit_1_Form a rcxn:SlotForm ;
-    rcxn:hasSurfaceForm "ich" .
+    rcxn:hasStem cx:gmh_ich .
 
 cx:gmh12C_PräfixverbkonstruktionTätigkeit_1_Index a cx:Individual ;
     olia:hasAnimacy olia:Animate ;
@@ -2176,7 +2194,7 @@ cx:gmh12C_PräfixverbkonstruktionTätigkeit_3 a rcxn:SlotMandatory ;
     rcxn:hasSyntacticFunction "Verb" .
 
 cx:gmh12C_PräfixverbkonstruktionTätigkeit_3_Form a rcxn:SlotForm ;
-    rcxn:hasStem "gân" ;
+    rcxn:hasStem cx:gmh_gân ;
     rcxn:hasSurfaceForm "ginc" .
 
 cx:gmh12C_PräfixverbkonstruktionTätigkeit_3_Index a cx:Event ;
@@ -2227,7 +2245,7 @@ cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_2 a rcxn:SlotMandatory 
     rcxn:hasSyntacticFunction "Verb" .
 
 cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_2_Form a rcxn:SlotForm ;
-    rcxn:hasStem "durh" ;
+    rcxn:hasStem cx:gmh_durh ;
     rcxn:hasSurfaceForm "durch" ;
     rcxn:hasSyntacticForm cx:gmh_Prefix .
 
@@ -2239,8 +2257,8 @@ cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_3 a rcxn:SlotMandatory 
     rcxn:hasSyntacticFunction "Verb" .
 
 cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_3_Form a rcxn:SlotForm ;
-    rcxn:hasStem "brëchen",
-        "varn" ;
+    rcxn:hasStem cx:gmh_brëchen,
+        cx:gmh_varn ;
     rcxn:hasSyntacticForm cx:gmh_Verb .
 
 cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_4 a rcxn:SlotMandatory ;
@@ -2296,6 +2314,66 @@ cx:gmh_Verb a rcxn:Construction ;
     lg:partOfLanguage lg:gmh ;
     rcxn:elementOf cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit ;
     rcxn:hasTitle "Verb" .
+
+cx:gmh_brëchen a rcxn:Construction ;
+    lg:partOfLanguage lg:gmh ;
+    rcxn:elementOf cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit ;
+    rcxn:hasConstructionMeaning cx:gmh_brëchen_Meaning ;
+    rcxn:hasTitle "brëchen" .
+
+cx:gmh_brëchen_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "to break" .
+
+cx:gmh_bîzen a rcxn:Construction ;
+    lg:partOfLanguage lg:gmh ;
+    rcxn:elementOf cx:gmh12C_PräfixverbkonstruktionHandlung ;
+    rcxn:hasTitle "bîzen" .
+
+cx:gmh_dringen a rcxn:Construction ;
+    lg:partOfLanguage lg:gmh ;
+    rcxn:elementOf cx:gmh12C_PräfixverbkonstruktionHandlung ;
+    rcxn:hasTitle "dringen" .
+
+cx:gmh_durh_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "dt. 'durch'",
+        "eng. 'through'" .
+
+cx:gmh_houwen a rcxn:Construction ;
+    lg:partOfLanguage lg:gmh ;
+    rcxn:elementOf cx:gmh12C_PräfixverbkonstruktionHandlung ;
+    rcxn:hasTitle "houwen" .
+
+cx:gmh_ich a rcxn:Construction ;
+    lg:partOfLanguage lg:gmh ;
+    rcxn:elementOf cx:gmh12C_PräfixverbkonstruktionTätigkeit ;
+    rcxn:hasConstructionMeaning cx:gmh_ich_Meaning ;
+    rcxn:hasTitle "ich" .
+
+cx:gmh_ich_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "I" .
+
+cx:gmh_leiten a rcxn:Construction ;
+    lg:partOfLanguage lg:gmh ;
+    rcxn:elementOf cx:gmh12C_PräfixverbkonstruktionHandlung ;
+    rcxn:hasTitle "leiten" .
+
+cx:gmh_rîten a rcxn:Construction ;
+    lg:partOfLanguage lg:gmh ;
+    rcxn:elementOf cx:gmh12C_PräfixverbkonstruktionHandlung ;
+    rcxn:hasTitle "rîten" .
+
+cx:gmh_stëchen a rcxn:Construction ;
+    lg:partOfLanguage lg:gmh ;
+    rcxn:elementOf cx:gmh12C_PräfixverbkonstruktionHandlung ;
+    rcxn:hasTitle "stëchen" .
+
+cx:gmh_varn_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "to drive" .
+
+cx:gmh_æhten a rcxn:Construction ;
+    lg:partOfLanguage lg:gmh ;
+    rcxn:elementOf cx:gmh12C_PräfixverbkonstruktionHandlung ;
+    rcxn:hasTitle "æhten" .
 
 cx:hat_InvariableSyntacticMorpheme a rcxn:Construction ;
     lg:partOfLanguage lg:hat ;
@@ -2392,40 +2470,11 @@ cx:Noun a rcxn:Construction ;
     rcxn:hasMetadata cx:Noun_MD ;
     rcxn:hasTitle "Noun" .
 
-cx:ThisCloseToV-ing a rcxn:Construction ;
-    cx:hasExample cx:ThisCloseToV-ing_Ex_A ;
-    cx:hasGesture """The gesture is part of the construction's form.\r
-The index finger and the thumb are stretched (or partially crooked) and drawn near one another while the rest of the fingers remain retracted.\r
-The gesture is sometimes used a few milliseconds before uttering "this" and is most often maintained until uttering the V-ing element (and its complement if the verb is transitive).""" ;
-    rdfs:comment "I would need to upload an Excel file with all the concordance lines and a link with all the video-snippets" ;
-    lg:partOfLanguage lg:engUsSpo ;
-    rcxn:hasConstructionMeaning cx:ThisCloseToV-ing_Meaning ;
-    rcxn:hasMetadata cx:ThisCloseToV-ing_MD ;
-    rcxn:hasSlots cx:ThisCloseToV-ing_slots ;
-    rcxn:hasTitle "This Close To V-ing" .
-
-cx:coolascolourconstruction a rcxn:Construction ;
-    cx:hasExample cx:coolascolourconstruction_Ex_A,
-        cx:coolascolourconstruction_Ex_B ;
-    rdfs:comment "first attested: 1758, cf. OED" ;
-    lg:partOfLanguage lg:eng ;
-    links:isMetaphoricalExtensionOf cx:eng_coolconstruction ;
-    rcxn:hasConstructionMeaning cx:coolascolourconstruction_Meaning ;
-    rcxn:hasMetadata cx:coolascolourconstruction_MD ;
-    rcxn:hasSlots cx:coolascolourconstruction_slots ;
-    rcxn:hasTitle "cool as colour construction" .
-
 cx:deu_Adjective a rcxn:Construction ;
     lg:partOfLanguage lg:deu ;
     rcxn:elementOf <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]>,
         <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]> ;
     rcxn:hasTitle "Adjective" .
-
-cx:deu_Preposition a rcxn:Construction ;
-    lg:partOfLanguage lg:deu ;
-    rcxn:elementOf cx:Idiomaticconstruction,
-        <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]> ;
-    rcxn:hasTitle "Preposition" .
 
 cx:deu_Verb a rcxn:Construction ;
     lg:partOfLanguage lg:deu ;
@@ -2458,17 +2507,58 @@ cx:eng_GenitiveNPConstruction a rcxn:Construction ;
     rcxn:hasSlots cx:eng_GenitiveNPConstruction_slots ;
     rcxn:hasTitle "Genitive-NP Construction" .
 
+cx:eng_Keepacoolheadconstruction a rcxn:Construction ;
+    cx:hasExample cx:eng_Keepacoolheadconstruction_Ex_A ;
+    rdfs:comment "first attested 1718, cf. OED" ;
+    lg:partOfLanguage lg:eng ;
+    rcxn:hasConstructionMeaning cx:eng_Keepacoolheadconstruction_Meaning ;
+    rcxn:hasMetadata cx:eng_Keepacoolheadconstruction_MD ;
+    rcxn:hasSlots cx:eng_Keepacoolheadconstruction_slots ;
+    rcxn:hasTitle "Keep a cool head construction" .
+
 cx:eng_Particle a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
     rcxn:elementOf <http://example.org/cx/TheEnglishGIVE-OUTVerbParticleConstruction.>,
         cx:comePLUSnoisemannerofmovementVing ;
     rcxn:hasTitle "Particle" .
 
+cx:eng_be a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    rcxn:elementOf cx:EvaluativeAttributionConstruction,
+        cx:ThisCloseToV-ing ;
+    rcxn:hasTitle "be" .
+
+cx:eng_come a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    rcxn:elementOf cx:ThisCloseToV-ing,
+        cx:comePLUSnoisemannerofmovementVing ;
+    rcxn:hasTitle "come" .
+
 cx:gmh_Prefix a rcxn:Construction ;
     lg:partOfLanguage lg:gmh ;
     rcxn:elementOf cx:gmh12C_PräfixverbkonstruktionHandlung,
         cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit ;
     rcxn:hasTitle "Prefix" .
+
+cx:gmh_durh a rcxn:Construction ;
+    lg:partOfLanguage lg:gmh ;
+    rcxn:elementOf cx:gmh12C_PräfixverbkonstruktionHandlung,
+        cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit ;
+    rcxn:hasConstructionMeaning cx:gmh_durh_Meaning ;
+    rcxn:hasTitle "durh" .
+
+cx:gmh_gân a rcxn:Construction ;
+    lg:partOfLanguage lg:gmh ;
+    rcxn:elementOf cx:gmh12C_PräfixverbkonstruktionHandlung,
+        cx:gmh12C_PräfixverbkonstruktionTätigkeit ;
+    rcxn:hasTitle "gân" .
+
+cx:gmh_varn a rcxn:Construction ;
+    lg:partOfLanguage lg:gmh ;
+    rcxn:elementOf cx:gmh12C_PräfixverbkonstruktionHandlung,
+        cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit ;
+    rcxn:hasConstructionMeaning cx:gmh_varn_Meaning ;
+    rcxn:hasTitle "varn" .
 
 cx:spa_NounPhrase a rcxn:Construction ;
     lg:partOfLanguage lg:spa ;
@@ -2502,38 +2592,16 @@ cx:Relative-Topic-ShiftConstruction_1_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:ItalianConiunctioRelativa,
         cx:ita_NounPhrase .
 
-<http://example.org/cx/TheEnglishGIVE-OUTVerbParticleConstruction.> a rcxn:Construction ;
-    cx:hasExample cx:TheEnglishGIVE-OUTVerbParticleConstruction._Ex_A ;
-    lg:partOfLanguage lg:eng ;
-    rcxn:hasConstructionMeaning cx:TheEnglishGIVE-OUTVerbParticleConstruction._Meaning ;
-    rcxn:hasMetadata cx:TheEnglishGIVE-OUTVerbParticleConstruction._MD ;
-    rcxn:hasSlots cx:TheEnglishGIVE-OUTVerbParticleConstruction._slots ;
-    rcxn:hasTitle "GIVE-OUT Verb Particle Construction" .
-
-cx:coolasadmirableconstruction a rcxn:Construction ;
-    cx:hasExample cx:coolasadmirableconstruction_Ex_A,
-        cx:coolasadmirableconstruction_Ex_B,
-        cx:coolasadmirableconstruction_Ex_C ;
-    rdfs:comment "first attested: 1884, cf. OED" ;
-    lg:partOfLanguage lg:engInf ;
-    links:isMetaphoricalExtensionOf cx:eng_coolconstruction ;
-    rcxn:elementOf cx:engInf_Coolexclamativeconstruction ;
-    rcxn:hasConstructionMeaning cx:coolasadmirableconstruction_Meaning ;
-    rcxn:hasMetadata cx:coolasadmirableconstruction_MD ;
-    rcxn:hasSlots cx:coolasadmirableconstruction_slots ;
-    rcxn:hasTitle "cool as admirable construction" .
-
-cx:coolasemotionconstruction a rcxn:Construction ;
-    cx:hasExample cx:coolasemotionconstruction_Ex_A,
-        cx:coolasemotionconstruction_Ex_B ;
-    rdfs:comment "first attested: Old English, Beowulf (Oxford English Dictionary)" ;
+cx:coolascolourconstruction a rcxn:Construction ;
+    cx:hasExample cx:coolascolourconstruction_Ex_A,
+        cx:coolascolourconstruction_Ex_B ;
+    rdfs:comment "first attested: 1758, cf. OED" ;
     lg:partOfLanguage lg:eng ;
     links:isMetaphoricalExtensionOf cx:eng_coolconstruction ;
-    rcxn:elementOf cx:eng_Keepacoolheadconstruction ;
-    rcxn:hasConstructionMeaning cx:coolasemotionconstruction_Meaning ;
-    rcxn:hasMetadata cx:coolasemotionconstruction_MD ;
-    rcxn:hasSlots cx:coolasemotionconstruction_slots ;
-    rcxn:hasTitle "cool as emotion construction" .
+    rcxn:hasConstructionMeaning cx:coolascolourconstruction_Meaning ;
+    rcxn:hasMetadata cx:coolascolourconstruction_MD ;
+    rcxn:hasSlots cx:coolascolourconstruction_slots ;
+    rcxn:hasTitle "cool as colour construction" .
 
 cx:deu_Noun a rcxn:Construction ;
     lg:partOfLanguage lg:deu ;
@@ -2581,17 +2649,15 @@ cx:gmh12C_Präfixverbkonstruktion a rcxn:Construction ;
     rcxn:hasMetadata cx:gmh12C_Präfixverbkonstruktion_MD ;
     rcxn:hasTitle "Präfixverbkonstruktion" .
 
-cx:gmh12C_PräfixverbkonstruktionHandlung a rcxn:Construction ;
-    cx:hasExample cx:gmh12C_PräfixverbkonstruktionHandlung_Ex_A,
-        cx:gmh12C_PräfixverbkonstruktionHandlung_Ex_B,
-        cx:gmh12C_PräfixverbkonstruktionHandlung_Ex_C ;
+cx:gmh12C_PräfixverbkonstruktionTätigkeit a rcxn:Construction ;
+    cx:hasExample cx:gmh12C_PräfixverbkonstruktionTätigkeit_Ex_A ;
     rdfs:comment "1 csv file with all the data from the 12th century" ;
     lg:partOfLanguage lg:gmh12C ;
     links:inheritsFrom cx:gmh12C_Präfixverbkonstruktion ;
-    rcxn:hasConstructionMeaning cx:gmh12C_PräfixverbkonstruktionHandlung_Meaning ;
-    rcxn:hasMetadata cx:gmh12C_PräfixverbkonstruktionHandlung_MD ;
-    rcxn:hasSlots cx:gmh12C_PräfixverbkonstruktionHandlung_slots ;
-    rcxn:hasTitle "Präfixverbkonstruktion (Handlung)" .
+    rcxn:hasConstructionMeaning cx:gmh12C_PräfixverbkonstruktionTätigkeit_Meaning ;
+    rcxn:hasMetadata cx:gmh12C_PräfixverbkonstruktionTätigkeit_MD ;
+    rcxn:hasSlots cx:gmh12C_PräfixverbkonstruktionTätigkeit_slots ;
+    rcxn:hasTitle "Präfixverbkonstruktion (Tätigkeit)" .
 
 cx:gmh_NounPhrase a rcxn:Construction ;
     lg:partOfLanguage lg:gmh ;
@@ -2608,6 +2674,51 @@ cx:POU-beneficiaryconstruction a rcxn:Construction ;
     rcxn:hasSlots cx:POU-beneficiaryconstruction_slots ;
     rcxn:hasTitle "POU-beneficiary construction" .
 
+<http://example.org/cx/TheEnglishGIVE-OUTVerbParticleConstruction.> a rcxn:Construction ;
+    cx:hasExample cx:TheEnglishGIVE-OUTVerbParticleConstruction._Ex_A ;
+    lg:partOfLanguage lg:eng ;
+    rcxn:hasConstructionMeaning cx:TheEnglishGIVE-OUTVerbParticleConstruction._Meaning ;
+    rcxn:hasMetadata cx:TheEnglishGIVE-OUTVerbParticleConstruction._MD ;
+    rcxn:hasSlots cx:TheEnglishGIVE-OUTVerbParticleConstruction._slots ;
+    rcxn:hasTitle "GIVE-OUT Verb Particle Construction" .
+
+cx:ThisCloseToV-ing a rcxn:Construction ;
+    cx:hasExample cx:ThisCloseToV-ing_Ex_A ;
+    cx:hasGesture """The gesture is part of the construction's form.\r
+The index finger and the thumb are stretched (or partially crooked) and drawn near one another while the rest of the fingers remain retracted.\r
+The gesture is sometimes used a few milliseconds before uttering "this" and is most often maintained until uttering the V-ing element (and its complement if the verb is transitive).""" ;
+    rdfs:comment "I would need to upload an Excel file with all the concordance lines and a link with all the video-snippets" ;
+    lg:partOfLanguage lg:engUsSpo ;
+    rcxn:hasConstructionMeaning cx:ThisCloseToV-ing_Meaning ;
+    rcxn:hasMetadata cx:ThisCloseToV-ing_MD ;
+    rcxn:hasSlots cx:ThisCloseToV-ing_slots ;
+    rcxn:hasTitle "This Close To V-ing" .
+
+cx:coolasadmirableconstruction a rcxn:Construction ;
+    cx:hasExample cx:coolasadmirableconstruction_Ex_A,
+        cx:coolasadmirableconstruction_Ex_B,
+        cx:coolasadmirableconstruction_Ex_C ;
+    rdfs:comment "first attested: 1884, cf. OED" ;
+    lg:partOfLanguage lg:engInf ;
+    links:isMetaphoricalExtensionOf cx:eng_coolconstruction ;
+    rcxn:elementOf cx:engInf_Coolexclamativeconstruction ;
+    rcxn:hasConstructionMeaning cx:coolasadmirableconstruction_Meaning ;
+    rcxn:hasMetadata cx:coolasadmirableconstruction_MD ;
+    rcxn:hasSlots cx:coolasadmirableconstruction_slots ;
+    rcxn:hasTitle "cool as admirable construction" .
+
+cx:coolasemotionconstruction a rcxn:Construction ;
+    cx:hasExample cx:coolasemotionconstruction_Ex_A,
+        cx:coolasemotionconstruction_Ex_B ;
+    rdfs:comment "first attested: Old English, Beowulf (Oxford English Dictionary)" ;
+    lg:partOfLanguage lg:eng ;
+    links:isMetaphoricalExtensionOf cx:eng_coolconstruction ;
+    rcxn:elementOf cx:eng_Keepacoolheadconstruction ;
+    rcxn:hasConstructionMeaning cx:coolasemotionconstruction_Meaning ;
+    rcxn:hasMetadata cx:coolasemotionconstruction_MD ;
+    rcxn:hasSlots cx:coolasemotionconstruction_slots ;
+    rcxn:hasTitle "cool as emotion construction" .
+
 <http://example.org/cx/eng_DitransitiveConstructionObj:NP> a rcxn:Construction ;
     cx:hasExample <http://example.org/cx/eng_DitransitiveConstructionObj:NP_Ex_A> ;
     lg:partOfLanguage lg:eng ;
@@ -2618,51 +2729,13 @@ cx:POU-beneficiaryconstruction a rcxn:Construction ;
     rcxn:hasSlots <http://example.org/cx/eng_DitransitiveConstructionObj:NP_slots> ;
     rcxn:hasTitle "Ditransitive Construction (Obj: NP)" .
 
-cx:eng_coolconstruction a rcxn:Construction ;
-    cx:hasExample cx:eng_coolconstruction_Ex_A,
-        cx:eng_coolconstruction_Ex_B,
-        cx:eng_coolconstruction_Ex_C,
-        cx:eng_coolconstruction_Ex_D ;
-    rdfs:comment "from Indo-european *gel(ə) (DWDS)" ;
+cx:eng_cool a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
-    links:metaphoricalLink cx:coolasadmirableconstruction,
+    rcxn:elementOf cx:coolasadmirableconstruction,
         cx:coolascolourconstruction,
-        cx:coolasemotionconstruction ;
-    rcxn:hasConstructionMeaning cx:eng_coolconstruction_Meaning ;
-    rcxn:hasMetadata cx:eng_coolconstruction_MD ;
-    rcxn:hasSlots cx:eng_coolconstruction_slots ;
-    rcxn:hasTitle "cool (temperature) construction" .
-
-cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit a rcxn:Construction ;
-    cx:hasExample cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_Ex_A,
-        cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_Ex_B,
-        cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_Ex_C ;
-    rdfs:comment "1 csv file with all the data from the 12th century" ;
-    lg:partOfLanguage lg:gmh12C ;
-    links:inheritsFrom cx:gmh12C_Präfixverbkonstruktion ;
-    rcxn:hasConstructionMeaning cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_Meaning ;
-    rcxn:hasMetadata cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_MD ;
-    rcxn:hasSlots cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_slots ;
-    rcxn:hasTitle "Präfixverbkonstruktion (lokalistische Tätigkeit)" .
-
-cx:EvaluativeAttributionConstruction a rcxn:Construction ;
-    lg:partOfLanguage lg:engUsUkWr ;
-    rcxn:hasConstructionMeaning cx:EvaluativeAttributionConstruction_Meaning ;
-    rcxn:hasMetadata cx:EvaluativeAttributionConstruction_MD ;
-    rcxn:hasSlots cx:EvaluativeAttributionConstruction_slots ;
-    rcxn:hasTitle "Evaluative Attribution Construction" .
-
-cx:comePLUSnoisemannerofmovementVing a rcxn:Construction ;
-    cx:hasExample cx:comePLUSnoisemannerofmovementVing_Ex_A,
-        cx:comePLUSnoisemannerofmovementVing_Ex_B,
-        cx:comePLUSnoisemannerofmovementVing_Ex_C,
-        cx:comePLUSnoisemannerofmovementVing_Ex_D ;
-    rdfs:comment "tables (of association scores, etc.) and possibly some figures" ;
-    lg:partOfLanguage lg:eng ;
-    rcxn:hasConstructionMeaning cx:comePLUSnoisemannerofmovementVing_Meaning ;
-    rcxn:hasMetadata cx:comePLUSnoisemannerofmovementVing_MD ;
-    rcxn:hasSlots cx:comePLUSnoisemannerofmovementVing_slots ;
-    rcxn:hasTitle "come + [noise/manner of movement] V-ing" .
+        cx:coolasemotionconstruction,
+        cx:eng_coolconstruction ;
+    rcxn:hasTitle "cool" .
 
 cx:eng_Adjective a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
@@ -2692,6 +2765,21 @@ cx:eng_PrepositionalPhrase a rcxn:Construction ;
         cx:eng_AdjectivePhrase ;
     rcxn:hasTitle "Prepositional Phrase" .
 
+cx:eng_coolconstruction a rcxn:Construction ;
+    cx:hasExample cx:eng_coolconstruction_Ex_A,
+        cx:eng_coolconstruction_Ex_B,
+        cx:eng_coolconstruction_Ex_C,
+        cx:eng_coolconstruction_Ex_D ;
+    rdfs:comment "from Indo-european *gel(ə) (DWDS)" ;
+    lg:partOfLanguage lg:eng ;
+    links:metaphoricalLink cx:coolasadmirableconstruction,
+        cx:coolascolourconstruction,
+        cx:coolasemotionconstruction ;
+    rcxn:hasConstructionMeaning cx:eng_coolconstruction_Meaning ;
+    rcxn:hasMetadata cx:eng_coolconstruction_MD ;
+    rcxn:hasSlots cx:eng_coolconstruction_slots ;
+    rcxn:hasTitle "cool (temperature) construction" .
+
 cx:Argumentstructureconstruction a rcxn:Construction ;
     rdfs:comment """The main data includes 2000 sentences that are generated by GPT-4, which is a text file.\r
 The extension data includes a representation of these data in LLM and brain, \r
@@ -2710,6 +2798,25 @@ This is a similar publicly available dataset: https://github.com/SPOClab-ca/neur
     rcxn:hasMetadata cx:Argumentstructureconstruction_MD ;
     rcxn:hasSlots cx:Argumentstructureconstruction_slots ;
     rcxn:hasTitle "Argument structure construction" .
+
+cx:EvaluativeAttributionConstruction a rcxn:Construction ;
+    lg:partOfLanguage lg:engUsUkWr ;
+    rcxn:hasConstructionMeaning cx:EvaluativeAttributionConstruction_Meaning ;
+    rcxn:hasMetadata cx:EvaluativeAttributionConstruction_MD ;
+    rcxn:hasSlots cx:EvaluativeAttributionConstruction_slots ;
+    rcxn:hasTitle "Evaluative Attribution Construction" .
+
+cx:comePLUSnoisemannerofmovementVing a rcxn:Construction ;
+    cx:hasExample cx:comePLUSnoisemannerofmovementVing_Ex_A,
+        cx:comePLUSnoisemannerofmovementVing_Ex_B,
+        cx:comePLUSnoisemannerofmovementVing_Ex_C,
+        cx:comePLUSnoisemannerofmovementVing_Ex_D ;
+    rdfs:comment "tables (of association scores, etc.) and possibly some figures" ;
+    lg:partOfLanguage lg:eng ;
+    rcxn:hasConstructionMeaning cx:comePLUSnoisemannerofmovementVing_Meaning ;
+    rcxn:hasMetadata cx:comePLUSnoisemannerofmovementVing_MD ;
+    rcxn:hasSlots cx:comePLUSnoisemannerofmovementVing_slots ;
+    rcxn:hasTitle "come + [noise/manner of movement] V-ing" .
 
 cx:eng_coolconstruction_Sources a cx:Collection ;
     cx:hasLiterature <file:///home/meuhlodi/Travail/RCxn/instance/Submissions/www.english-corpora.org/bnc/>,
@@ -2743,6 +2850,18 @@ cx:eng_AdjectivePhrase a rcxn:Construction ;
     rcxn:hasSlots cx:eng_AdjectivePhrase_slots ;
     rcxn:hasTitle "Adjective Phrase" .
 
+cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit a rcxn:Construction ;
+    cx:hasExample cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_Ex_A,
+        cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_Ex_B,
+        cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_Ex_C ;
+    rdfs:comment "1 csv file with all the data from the 12th century" ;
+    lg:partOfLanguage lg:gmh12C ;
+    links:inheritsFrom cx:gmh12C_Präfixverbkonstruktion ;
+    rcxn:hasConstructionMeaning cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_Meaning ;
+    rcxn:hasMetadata cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_MD ;
+    rcxn:hasSlots cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_slots ;
+    rcxn:hasTitle "Präfixverbkonstruktion (lokalistische Tätigkeit)" .
+
 <http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc> a rcxn:Construction ;
     lg:partOfLanguage lg:deu ;
     links:inheritsFrom <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]>,
@@ -2766,19 +2885,6 @@ cx:eng_AdjectivePhrase a rcxn:Construction ;
     rcxn:hasMetadata <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_MD> ;
     rcxn:hasSlots <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_slots> ;
     rcxn:hasTitle "(sich) (NP) (ADJ) (ADV) [vor Augen] (VP)" .
-
-cx:Idiomaticconstruction a rcxn:Construction ;
-    cx:hasExample cx:Idiomaticconstruction_Ex_A,
-        cx:Idiomaticconstruction_Ex_B ;
-    lg:partOfLanguage lg:deu ;
-    links:CL_differentFormSameFunction cx:EnglishPullsomethingoutofahat ;
-    links:CL_similarFormDifferentFunction cx:Englishrollupyoursleeves,
-        <http://example.org/cx/Farsibarāyekasiāstinbālāzadan:torollupsleevesforsomething>,
-        <http://example.org/cx/Farsimārāstin-exodparvarāndan:tonurtureasnakeinone'sbosom> ;
-    rcxn:hasConstructionMeaning cx:Idiomaticconstruction_Meaning ;
-    rcxn:hasMetadata cx:Idiomaticconstruction_MD ;
-    rcxn:hasSlots cx:Idiomaticconstruction_slots ;
-    rcxn:hasTitle "Aus dem Ärmel schütteln construction" .
 
 cx:Relative-Topic-ShiftConstruction a rcxn:Construction ;
     cx:hasExample cx:Relative-Topic-ShiftConstruction_Ex_A,
@@ -2806,6 +2912,19 @@ cx:eng_Verb a rcxn:Construction ;
         <http://example.org/cx/eng_DitransitiveConstructionObj:NP> ;
     rcxn:hasTitle "Verb" .
 
+cx:Idiomaticconstruction a rcxn:Construction ;
+    cx:hasExample cx:Idiomaticconstruction_Ex_A,
+        cx:Idiomaticconstruction_Ex_B ;
+    lg:partOfLanguage lg:deu ;
+    links:CL_differentFormSameFunction cx:EnglishPullsomethingoutofahat ;
+    links:CL_similarFormDifferentFunction cx:Englishrollupyoursleeves,
+        <http://example.org/cx/Farsibarāyekasiāstinbālāzadan:torollupsleevesforsomething>,
+        <http://example.org/cx/Farsimārāstin-exodparvarāndan:tonurtureasnakeinone'sbosom> ;
+    rcxn:hasConstructionMeaning cx:Idiomaticconstruction_Meaning ;
+    rcxn:hasMetadata cx:Idiomaticconstruction_MD ;
+    rcxn:hasSlots cx:Idiomaticconstruction_slots ;
+    rcxn:hasTitle "Aus dem Ärmel schütteln construction" .
+
 cx:eng_NounPhrase a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
     rcxn:elementOf cx:EvaluativeAttributionConstruction,
@@ -2814,6 +2933,18 @@ cx:eng_NounPhrase a rcxn:Construction ;
         cx:eng_AttributeConstruction,
         <http://example.org/cx/eng_DitransitiveConstructionObj:NP> ;
     rcxn:hasTitle "Noun Phrase" .
+
+cx:gmh12C_PräfixverbkonstruktionHandlung a rcxn:Construction ;
+    cx:hasExample cx:gmh12C_PräfixverbkonstruktionHandlung_Ex_A,
+        cx:gmh12C_PräfixverbkonstruktionHandlung_Ex_B,
+        cx:gmh12C_PräfixverbkonstruktionHandlung_Ex_C ;
+    rdfs:comment "1 csv file with all the data from the 12th century" ;
+    lg:partOfLanguage lg:gmh12C ;
+    links:inheritsFrom cx:gmh12C_Präfixverbkonstruktion ;
+    rcxn:hasConstructionMeaning cx:gmh12C_PräfixverbkonstruktionHandlung_Meaning ;
+    rcxn:hasMetadata cx:gmh12C_PräfixverbkonstruktionHandlung_MD ;
+    rcxn:hasSlots cx:gmh12C_PräfixverbkonstruktionHandlung_slots ;
+    rcxn:hasTitle "Präfixverbkonstruktion (Handlung)" .
 
 <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]> a rcxn:Construction ;
     lg:partOfLanguage lg:deu ;

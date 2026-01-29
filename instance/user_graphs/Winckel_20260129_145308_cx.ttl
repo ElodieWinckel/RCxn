@@ -1,0 +1,47 @@
+@prefix cx: <http://example.org/cx/> .
+@prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
+@prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
+@prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+membr:Project_Winckel_F2511281100 rsrch:basedOn cx:hat_AdjectivePredicativeconstruction .
+
+cx:eng_NounPhrase rcxn:elementOf cx:hat_AdjectivePredicativeconstruction .
+
+cx:eng_give rcxn:elementOf cx:hat_AdjectivePredicativeconstruction .
+
+cx:hat_AdjectivePredicativeconstruction_1 a rcxn:SlotMandatory ;
+    rcxn:hasSlotForm cx:hat_AdjectivePredicativeconstruction_1_Form .
+
+cx:hat_AdjectivePredicativeconstruction_1_Form a rcxn:SlotForm ;
+    rcxn:hasStem cx:eng_give,
+        cx:neglect ;
+    rcxn:hasSyntacticForm cx:eng_NounPhrase .
+
+cx:hat_AdjectivePredicativeconstruction_MD a rcxn:Metadata ;
+    rcxn:annotator membr:Winckel ;
+    rcxn:creationDate "2026-01-29"^^xsd:date .
+
+cx:hat_AdjectivePredicativeconstruction_Meaning a rcxn:ConstructionMeaning .
+
+cx:hat_AdjectivePredicativeconstruction_slots a rdf:Seq ;
+    rdf:_1 cx:hat_AdjectivePredicativeconstruction_1 .
+
+cx:neglect a rcxn:Construction ;
+    rcxn:elementOf cx:hat_AdjectivePredicativeconstruction ;
+    rcxn:hasMetadata cx:neglect_MD ;
+    rcxn:hasTitle "neglect" .
+
+cx:neglect_MD a rcxn:Metadata ;
+    cx:annotator membr:Winckel ;
+    rcxn:creationDate "2026-01-29"^^xsd:date .
+
+cx:hat_AdjectivePredicativeconstruction a rcxn:Construction ;
+    lg:partOfLanguage lg:hat ;
+    rcxn:hasConstructionMeaning cx:hat_AdjectivePredicativeconstruction_Meaning ;
+    rcxn:hasMetadata cx:hat_AdjectivePredicativeconstruction_MD ;
+    rcxn:hasSlots cx:hat_AdjectivePredicativeconstruction_slots ;
+    rcxn:hasTitle "Adjective Predicative construction" .
+

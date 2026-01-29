@@ -27,7 +27,7 @@ cx:TheEnglishGIVE-OUTVerbParticleConstruction._2 a rcxn:SlotMandatory ;
     rcxn:hasSlotForm cx:TheEnglishGIVE-OUTVerbParticleConstruction._2_Form .
 
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._2_Form a rcxn:SlotForm ;
-    rcxn:hasStem "give" ;
+    rcxn:hasStem cx:eng_give ;
     rcxn:hasSyntacticForm cx:eng_Verb .
 
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._3 a rcxn:SlotMandatory ;
@@ -68,4 +68,8 @@ cx:eng_Verb a rcxn:Construction ;
 
 cx:eng_Particle a rcxn:Construction ;
     rcxn:hasTitle "Particle" ;
+    lg:partOfLanguage lg:eng.
+
+cx:eng_give a rcxn:Construction ;
+    rcxn:hasTitle "give" ;
     lg:partOfLanguage lg:eng.

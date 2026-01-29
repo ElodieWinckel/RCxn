@@ -37,7 +37,7 @@ cx:EvaluativeAttributionConstruction_4 a rcxn:SlotOptional ;
     rcxn:hasSlotForm cx:EvaluativeAttributionConstruction_4_Form .
 
 cx:EvaluativeAttributionConstruction_4_Form a rcxn:SlotForm ;
-    rcxn:hasStem "to be (lemma)" .
+    rcxn:hasStem cx:eng_be .
 
 cx:EvaluativeAttributionConstruction_5 a rcxn:SlotMandatory ;
     rcxn:hasSlotForm cx:EvaluativeAttributionConstruction_5_Form ;

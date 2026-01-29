@@ -36,7 +36,7 @@ cx:comePLUSnoisemannerofmovementVing_2 a rcxn:SlotMandatory ;
     RDFS:comment "perspective may imply subjective perception, enhanced expressivity, or inevitability of the action decribed by element 3" .
 
 cx:comePLUSnoisemannerofmovementVing_2_Form a rcxn:SlotForm ;
-    rcxn:hasStem "come" ;
+    rcxn:hasStem cx:eng_come ;
     rcxn:hasSyntacticForm cx:eng_Verb .
 
 cx:comePLUSnoisemannerofmovementVing_3 a rcxn:SlotMandatory ;

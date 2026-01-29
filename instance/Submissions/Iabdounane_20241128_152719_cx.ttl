@@ -27,8 +27,7 @@ cx:ThisCloseToV-ing_1 a rcxn:SlotMandatory ;
     cx:hasIndex cx:ThisCloseToV-ing_1_Index .
 
 cx:ThisCloseToV-ing_1_Form a rcxn:SlotForm ;
-    rcxn:hasStem "Be" ;
-    rcxn:hasStem "Come" .
+    rcxn:hasStem cx:eng_be , cx:eng_come .
 
 cx:ThisCloseToV-ing_1_Index a cx:Event ;
     olia:hasVoice olia:ActiveVoice .
@@ -93,3 +92,10 @@ The construction is multimodal.\r
 """ ;
     rsrch:basedOn cx:ThisCloseToV-ing .
 
+cx:eng_be a rcxn:Construction ;
+    rcxn:hasTitle "be" ;
+    lg:partOfLanguage lg:eng.
+
+cx:eng_come a rcxn:Construction ;
+    rcxn:hasTitle "come" ;
+    lg:partOfLanguage lg:eng.

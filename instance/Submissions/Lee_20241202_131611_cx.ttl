@@ -90,8 +90,7 @@ cx:Generalprepositionalconstructions_MD a rcxn:Metadata ;
     olia:hasSemanticRole olia:LocationRole .
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_4_Form> a rcxn:SlotForm ;
-    rcxn:hasStem "vor" ;
-    rcxn:hasSyntacticForm cx:deu_Preposition .
+    rcxn:hasStem cx:deu_vor .
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_5> a rcxn:SlotMandatory ;
     cx:WordOrder "The noun always directly follows the preposition \"vor\"." ;
@@ -168,3 +167,10 @@ membr:Project_Lee_241202_F250218 a rsrch:Finding ;
     rdfs:label "Grammatically fixed with zero-realization, the \"vor-Augen construction\" displays a distinct collocational pattern closely tied to its meaning and contextual usage." ;
     rsrch:basedOn <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_MD> .
 
+cx:deu_vor a rcxn:Construction ;
+    rcxn:hasTitle "vor" ;
+    rcxn:hasConstructionMeaning cx:deu_vor_Meaning ;
+    lg:partOfLanguage lg:deu.
+
+cx:deu_vor_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "in front of" .

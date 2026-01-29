@@ -37,7 +37,7 @@ cx:Idiomaticconstructions_2 a rcxn:SlotMandatory ;
 
 cx:Idiomaticconstructions_2_Form a rcxn:SlotForm ;
     cx:hasSyntacticForm cx:eng_VerbPhrase ;
-    rcxn:hasStem "burn" .
+    rcxn:hasStem cx:eng_burn .
 
 cx:Idiomaticconstructions_2_Index a cx:Event ;
     olia:hasModality olia:IndicativeVerb ;
@@ -102,4 +102,8 @@ cx:eng_VerbPhrase a rcxn:Construction ;
 
 cx:eng_PossessivePronoun a rcxn:Construction ;
     rcxn:hasTitle "Possessive Pronoun" ;
+    lg:partOfLanguage lg:eng .
+
+cx:eng_burn a rcxn:Construction ;
+    rcxn:hasTitle "burn" ;
     lg:partOfLanguage lg:eng .

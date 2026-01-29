@@ -31,7 +31,7 @@ membr:Project_Fuehrer rsrch:hasFindings membr:Project_Fuehrer_F2512191344 .
     rcxn:hasSyntacticFunction "Subject" .
 
 <http://example.org/cx/gmh12C_PräfixverbkonstruktionTätigkeit_1_Form> a rcxn:SlotForm ;
-    rcxn:hasSurfaceForm "ich" .
+    rcxn:hasStem cx:gmh_ich .
 
 <http://example.org/cx/gmh12C_PräfixverbkonstruktionTätigkeit_1_Index> a cx:Individual ;
     olia:hasAnimacy olia:Animate ;
@@ -54,7 +54,7 @@ membr:Project_Fuehrer rsrch:hasFindings membr:Project_Fuehrer_F2512191344 .
     rcxn:hasSyntacticFunction "Verb" .
 
 <http://example.org/cx/gmh12C_PräfixverbkonstruktionTätigkeit_3_Form> a rcxn:SlotForm ;
-    rcxn:hasStem "gân" ;
+    rcxn:hasStem cx:gmh_gân ;
     rcxn:hasSurfaceForm "ginc" .
 
 <http://example.org/cx/gmh12C_PräfixverbkonstruktionTätigkeit_3_Index> a cx:Event ;
@@ -88,3 +88,10 @@ membr:Project_Fuehrer_F2512191344 a rsrch:Finding ;
     RDFS:label "none" ;
     rsrch:basedOn <http://example.org/cx/gmh12C_PräfixverbkonstruktionTätigkeit> .
 
+cx:gmh_ich a rcxn:Construction ;
+    rcxn:hasTitle "ich" ;
+    rcxn:hasConstructionMeaning cx:gmh_ich_Meaning ;
+    lg:partOfLanguage lg:gmh.
+
+cx:gmh_ich_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "I" .

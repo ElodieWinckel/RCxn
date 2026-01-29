@@ -114,7 +114,7 @@ def identify_construction_element_triples(slots_uri):
         # Step 3: Collect triples for form of each sequence member
         subject_slotform = URIRef(str(slot_uri) + "_Form")
         for predicate, obj in g.predicate_objects(subject=subject_slotform):
-            if str(predicate) == "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#hasSyntacticForm":  # special case for syntactic form that should be displayed as a link
+            if str(predicate) == "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#hasSyntacticForm" or str(predicate) == "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#hasStem":  # special case for syntactic form that should be displayed as a link
                 title = g.value(obj, rcxn.hasTitle)
                 elements.append({
                     'subject': element_number,

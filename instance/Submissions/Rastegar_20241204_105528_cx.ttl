@@ -112,12 +112,12 @@ cx:Idiomaticconstruction_4_Index a cx:Individual ;
 
 cx:Idiomaticconstruction_5 a rcxn:SlotMandatory ;
     rcxn:hasSlotForm cx:Idiomaticconstruction_5_Form ;
-    cx:hasTranslation "shake" ;
+    cx:hasTranslation "to shake" ;
     cx:hasIndex cx:Idiomaticconstruction_5_Index ;
     rcxn:hasOtherSemanticContribution "Action" .
 
 cx:Idiomaticconstruction_5_Form a rcxn:SlotForm ;
-    rcxn:hasStem "schütteln" ;
+    rcxn:hasStem cx:deu_schütteln ;
     rcxn:hasSyntacticForm cx:deu_Verb .
 
 cx:Idiomaticconstruction_5_Index a cx:Event ;
@@ -161,3 +161,11 @@ cx:deu_DefiniteArticle a rcxn:Construction ;
 cx:deu_PrepositionalPhrase a rcxn:Construction ;
     rcxn:hasTitle "Prepositional Phrase" ;
     lg:partOfLanguage lg:deu .
+
+cx:deu_schütteln a rcxn:Construction ;
+    rcxn:hasTitle "schütteln" ;
+    rcxn:hasConstructionMeaning cx:deu_schütteln_Meaning ;
+    lg:partOfLanguage lg:deu .
+
+cx:deu_schütteln_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "to shake" .

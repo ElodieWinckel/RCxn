@@ -261,11 +261,16 @@ add_user("Winckel",
          "Building a Research Constructicon",
          "https://www.cxg.phil.fau.eu/person/elodie-winckel/")
 
-# If some construction uses another construction as construction element, then link back the second construction to the first one
+# If some construction uses another construction as construction element (syntactic form), then link back the second construction to the first one
 for subj, part in g.subject_objects(rcxn.hasSyntacticForm):
     # identify the IRI of the construction
     construction_uri = re.sub(r'_\d+_Form$', '', subj)
-    # Add new triple: ?part rcxn:elementOf ?construction
+    g.add((part, rcxn.elementOf, URIRef(construction_uri)))
+
+# If some construction uses another construction as construction element (stem), then link back the second construction to the first one
+for subj, part in g.subject_objects(rcxn.hasStem):
+    # identify the IRI of the construction
+    construction_uri = re.sub(r'_\d+_Form$', '', subj)
     g.add((part, rcxn.elementOf, URIRef(construction_uri)))
 
 for mainCX in g.subjects(rdf_ns.type, rcxn.Construction):

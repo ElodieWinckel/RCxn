@@ -60,7 +60,7 @@ cx:coolascolourconstruction_1 a rcxn:SlotMandatory ;
 
 cx:coolascolourconstruction_1_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_Adjective ;
-    rcxn:hasStem "cool" .
+    rcxn:hasStem cx:eng_cool .
 
 cx:coolascolourconstruction_Ex_A a cx:Example ;
     cx:hasAnnotatedText "The [cool]1 palette consists of French ultramarine, Prussian green, lamp black and titanium white." ;
@@ -111,7 +111,7 @@ cx:coolasemotionconstruction_1 a rcxn:SlotMandatory ;
     rcxn:hasSlotForm cx:coolasemotionconstruction_1_Form .
 
 cx:coolasemotionconstruction_1_Form a rcxn:SlotForm ;
-    rcxn:hasStem "cool" ;
+    rcxn:hasStem cx:eng_cool ;
     rcxn:hasSyntacticForm cx:eng_Adjective .
 
 cx:coolasemotionconstruction_Ex_A a cx:Example ;
@@ -162,7 +162,7 @@ cx:coolasadmirableconstruction_1 a rcxn:SlotMandatory ;
     rcxn:hasSlotForm cx:coolasadmirableconstruction_1_Form .
 
 cx:coolasadmirableconstruction_1_Form a rcxn:SlotForm ;
-    rcxn:hasStem "cool" ;
+    rcxn:hasStem cx:eng_cool ;
     rcxn:hasSyntacticForm cx:eng_Adjective .
 
 cx:coolasadmirableconstruction_Ex_A a cx:Example ;
@@ -268,7 +268,7 @@ cx:eng_Keepacoolheadconstruction_1 a rcxn:SlotMandatory ;
     rcxn:hasSlotForm cx:eng_Keepacoolheadconstruction_1_Form .
 
 cx:eng_Keepacoolheadconstruction_1_Form a rcxn:SlotForm ;
-    rcxn:hasStem "keep" .
+    rcxn:hasStem cx:eng_keep .
 
 cx:eng_Keepacoolheadconstruction_2 a rcxn:SlotMandatory ;
     rcxn:hasSlotForm cx:eng_Keepacoolheadconstruction_2_Form .
@@ -280,7 +280,7 @@ cx:eng_Keepacoolheadconstruction_3 a rcxn:SlotMandatory ;
     rcxn:hasSlotForm cx:eng_Keepacoolheadconstruction_3_Form .
 
 cx:eng_Keepacoolheadconstruction_3_Form a rcxn:SlotForm ;
-    rcxn:hasSyntacticForm cx:coolasemotionconstruction ;
+    rcxn:hasStem cx:coolasemotionconstruction ;
     rcxn:hasSurfaceForm "cool" .
 
 cx:eng_Keepacoolheadconstruction_4 a rcxn:SlotMandatory ;
@@ -351,7 +351,7 @@ cx:eng_coolconstruction_1 a rcxn:SlotMandatory ;
     rcxn:hasSlotForm cx:eng_coolconstruction_1_Form .
 
 cx:eng_coolconstruction_1_Form a rcxn:SlotForm ;
-    rcxn:hasStem "cool" ;
+    rcxn:hasStem cx:eng_cool ;
     rcxn:hasSyntacticForm cx:eng_Adjective .
 
 cx:eng_coolconstruction_Ex_A a cx:Example ;
@@ -553,6 +553,14 @@ cx:eng_AdjectivePredicativeconstruction a rcxn:Construction ;
 
 
 
+
+cx:eng_cool a rcxn:Construction ;
+    rcxn:hasTitle "cool" ;
+    lg:partOfLanguage lg:eng.
+
+cx:eng_keep a rcxn:Construction ;
+    rcxn:hasTitle "keep" ;
+    lg:partOfLanguage lg:eng.
 
 
 
