@@ -374,6 +374,7 @@ container.appendChild(createCrossTable(elements));
             <tr>
                 <th>{{ triple.property }}</th>
                 <td>{% if triple.homepage %}<a href="{{ triple.homepage }}" target="_blank">{{ triple.given }} {{ triple.family }}</a> {% endif %}
+                    {% if triple.url %}<a href="{{ triple.url }}" target="_blank">{{ triple.url }}</a> {% endif %}
                     {% if not triple.homepage %} {{ triple.object }} {% endif %}
                 </td>
             </tr>

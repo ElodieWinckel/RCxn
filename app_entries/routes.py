@@ -426,6 +426,11 @@ def construction_detail(uri):
                 if str(source).strip() != "None":
                     reference["source"] = str(source)
                 references.append(reference)
+            for url in g.objects(collection, RDFS.seeAlso):
+                metadata.append({
+                    'property': "Similar construction in other Constructicons",
+                    'url': get_label_or_iri(url, g, ont),
+                })
 
     # Collect triples for research question and findings
     research = []
