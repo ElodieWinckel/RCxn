@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1768576589202" name="http://purl.org/olia/olia.owl" uri="olia.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1768576589202" name="http://www.semanticweb.org/em27upeq/ontologies/2025/7/untitled-ontology-83/" uri="lg.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1768576589202" name="http://www.semanticweb.org/meuhlodi/ontologies/2026/0/untitled-ontology-15/" uri="casa.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1768576589202" name="duplicate:https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links" uri="links-1.0.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1768576589202" name="duplicate:https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links" uri="links-1.1.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1768576589202" name="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn" uri="rcxn.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1768576589202" name="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch/" uri="rsrch.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1769786097253" name="http://purl.org/olia/olia.owl" uri="olia.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1769786097253" name="http://www.semanticweb.org/em27upeq/ontologies/2025/7/untitled-ontology-83/" uri="lg.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1769786097253" name="http://www.semanticweb.org/meuhlodi/ontologies/2026/0/untitled-ontology-15/" uri="casa.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1769786097253" name="duplicate:https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links" uri="links-1.0.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1769786097253" name="duplicate:https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links" uri="links-1.1.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1769786097253" name="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn" uri="rcxn.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1769786097253" name="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch/" uri="rsrch.rdf"/>
     </group>
 </catalog>

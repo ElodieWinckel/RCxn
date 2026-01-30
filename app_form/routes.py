@@ -53,10 +53,25 @@ def load_SemanticRoles(file_path):
     g.parse(file_path, format='xml')
     oliatop = Namespace("http://purl.org/olia/olia-top.owl#")
     RDFS = Namespace("http://www.w3.org/2000/01/rdf-schema#")
-    role_names = [(str(s).replace("http://purl.org/olia/olia.owl#", "")) for s in g.subjects(RDFS.subClassOf, oliatop.SemanticRole)]
-    role_names = [(str(s).replace("Role", "")) for s in role_names]
-    role_names.sort()
-    return role_names
+
+    semantic_roles = []
+
+    # Find all subclasses and get their labels
+    for subclass in g.subjects(RDFS.subClassOf, oliatop.SemanticRole):
+        label = g.value(subclass, RDFS.label, None)
+        if label:
+            semantic_roles.append((str(subclass), str(label)))
+
+        # Find subclasses of subclasses
+        for indirect_subclass in g.subjects(RDFS.subClassOf, subclass):
+            label = g.value(subclass, RDFS.label, None) + ": " + g.value(indirect_subclass, RDFS.label, None)
+            if label:
+                semantic_roles.append((str(indirect_subclass), str(label)))
+
+    # Sort by label
+    semantic_roles = sorted(semantic_roles, key=lambda x: x[1].lower())
+
+    return semantic_roles
 
 # Loads URIs of number features in OLIA
 def load_NumberFeatures(file_path):
@@ -72,7 +87,6 @@ def load_NumberFeatures(file_path):
 def load_CaseFeatures(file_path):
     g = Graph()
     g.parse(file_path, format='xml')
-    #g.parse("http://purl.org/olia/olia-top.owl#", format='xml') #TODO: cases are not found, but no error message
     oliatop = Namespace("http://purl.org/olia/olia-top.owl#")
     RDFS = Namespace("http://www.w3.org/2000/01/rdf-schema#")
     names = [(str(s).replace("http://purl.org/olia/olia.owl#", "")) for s in g.subjects(RDFS.subClassOf, oliatop.CaseFeature)]
@@ -563,8 +577,7 @@ def form_submit():
             g.add((element_uri, rcxn.hasOtherSemanticContribution, Literal(add_semantic_contribution)))
         else:
             if semantic_contribution.strip():
-                semantic_contribution = semantic_contribution + "Role"
-                g.add((element_uri, olia.hasSemanticRole, olia[semantic_contribution])) # TODO I need to make sure that they all have the prefix olia: do some of them have the prefix oliatop?
+                g.add((element_uri, olia.hasSemanticRole, URIRef(semantic_contribution)))
         if semantic_property.strip():
             g.add((element_uri, rcxn.hasSemanticProperty, Literal(semantic_property)))
 
