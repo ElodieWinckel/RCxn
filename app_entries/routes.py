@@ -1,10 +1,9 @@
 from . import app_entries_blueprint
 import glob
 import re
-from flask import Flask, render_template, Response
+from flask import render_template, Response
 from rdflib import Graph, URIRef, Literal, Namespace, RDF, RDFS, FOAF
 import os
-from io import BytesIO
 
 ###################################################
 ### FUNCTIONS
@@ -43,7 +42,7 @@ prefixes = ("http://example.org/cx/|"
             "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rdata#")
 
 def get_label_or_iri(term, data_graph, ont_graph):
-    """Return rdfs:label from ontologies if available, else fallback."""
+    """Return rdfs:label from ontologies if available."""
     if isinstance(term, Literal):
         return str(term)
     elif isinstance(term, URIRef):
@@ -70,7 +69,7 @@ def identify_construction_element_triples(slots_uri):
         for predicate, obj in g.predicate_objects(subject=slot_uri):
             if str(predicate) == "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#hasSlots":
                 list_of_nested.append(str(slot_uri))
-    # Step 2: Collect triples where each sequence member is the subject
+    # Step 3: Collect triples where each sequence member is the subject
     elements = []
     colloprofiles = []
     for slot_uri in unique_slot_uri:
@@ -111,7 +110,7 @@ def identify_construction_element_triples(slots_uri):
                         'object': get_label_or_iri(obj, g, ont),
                     })
 
-        # Step 3: Collect triples for form of each sequence member
+        # Step 4: Collect triples for form of each sequence member
         subject_slotform = URIRef(str(slot_uri) + "_Form")
         for predicate, obj in g.predicate_objects(subject=subject_slotform):
             if str(predicate) == "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#hasSyntacticForm" or str(predicate) == "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#hasStem":  # special case for syntactic form that should be displayed as a link
@@ -129,7 +128,7 @@ def identify_construction_element_triples(slots_uri):
                     'object': get_label_or_iri(obj, g, ont),
                 })
 
-        # Step 4: Collect triples for index of each sequence member
+        # Step 5: Collect triples for index of each sequence member
         subject_index = URIRef(str(slot_uri) + "_Index")
         for predicate, obj in g.predicate_objects(subject=subject_index):
             elements.append({
