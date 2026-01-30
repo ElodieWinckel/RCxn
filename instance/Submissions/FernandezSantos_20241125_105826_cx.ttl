@@ -194,9 +194,9 @@ cx:Transitiveobjectrelativeclause_slots a rdf:Seq ;
     dc:title "Frequency Affects Object Relative Clause Processing: Some Evidence in Favor of Usage-Based Accounts: Frequency Affects Object Relative Clause Processing" ;
     dc:type "journalArticle" .
 
-<https://www.degruyter.com/document/doi/10.1515/cog-2024-0016/html> dc:creator "Dąbrowska, Ewa",
+<https://www.degruyter.com/document/doi/10.1515/cog-2024-0016/html> dc:creator "Llompart, Miquel",
         "Fernández Santos, Sara",
-        "Llompart, Miquel" ;
+        "Dąbrowska, Ewa" ;
     dc:date "2024-10-10" ;
     dc:identifier "DOI 10.1515/cog-2024-0016",
         "ISSN 0936-5907, 1613-3641" ;
