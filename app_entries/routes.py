@@ -450,12 +450,12 @@ def construction_detail(uri):
     for study in g.objects(entry_uri, rdata.basedOnStudy):
         title = g.value(study, rdata.hasTitle)
         type = g.value(study, rdata.studyType)
-        summary = g.value(study, rdata.Summary)
-        href = re.sub(prefixes, "", str(study))
+        repository = g.value(study, rdata.dataRepository)
+        publication = g.value(study, rdata.publishedIn)
         research_data.append({'title': str(title),
                               'type': re.sub(prefixes, "", str(type)),
-                              'summary': str(summary),
-                              'href': href})
+                              'repository': str(repository),
+                              'publication': publication})
 
     # Fetch the title to display
     title = g.value(entry_uri, rcxn.hasTitle)

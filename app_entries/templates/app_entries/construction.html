@@ -350,21 +350,19 @@ container.appendChild(createCrossTable(elements));
 
     <table border="1">
         <tr>
-            <th>Study</th>
-            <th>Study type</th>
-            <th>Study Summary</th>
+            <th>Artefact</th>
+            <th>Publication</th>
+            <th>Repository</th>
         </tr>
         {% for triple in research_data %}
         <tr>
+            <td>{{ triple.type }}</td>
+            <td>{{ triple.publication }}</td>
             <td>
-                {% if triple.href %}
-                    <a href="{{ url_for('app_studies.study_detail', uri=triple.href) }}" target="_blank"> {{ triple.title }} </a>
-                {% else %}
-                    {{ triple.title }}
+                {% if triple.repository %}
+                    <a href="{{ triple.repository }}" target="_blank">{{ triple.repository }}</a>
                 {% endif %}
             </td>
-            <td>{{ triple.type }}</td>
-            <td>{{ triple.summary }}</td>
         </tr>
         {% endfor %}
     </table>
