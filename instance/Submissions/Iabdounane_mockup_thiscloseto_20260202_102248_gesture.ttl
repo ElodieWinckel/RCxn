@@ -13,7 +13,7 @@ cx:SmallQuantityGestureConstruction a cx:GestureConstruction ;
 cx:SmallQuantityGestureConstruction_Form cx:duration "Usually for the entire duration of the co-occuring verbal construction." ;
     cx:handedness "One-handed." ;
     cx:handshape "Middle, right, and little fingers retracted toward the palm.",
-        "Thumb and indey extended or crooked and parallel to each other." ;
+        "Thumb and index extended or crooked and parallel to each other." ;
     cx:movement "Static hold or beat." ;
     cx:orientation "Palm Lateral." ;
     cx:position "Central space or at face level." .
