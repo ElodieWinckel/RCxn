@@ -301,17 +301,23 @@ container.appendChild(createCrossTable(elements));
 <h2>Examples</h2>
 
     {% for subject, rows in grouped_examples.items() %}
-        <h3>Example {{ loop.index }}</h3>
-        <table>
-            <tbody>
-                {% for row in rows %}
-                    <tr>
-                        <th>{{ row.property }}</th>
-                        <td>{% if row.property == 'Text' %}{{ row.object|safe }}{% else %}{{ row.object }}{% endif %}</td>
-                    </tr>
-                {% endfor %}
-            </tbody>
-        </table>
+    <h3>Example {{ loop.index }}</h3>
+    <table>
+        <tbody>
+            {% for row in rows %}
+                <tr>
+                    <th>{{ row.property }}</th>
+                    <td>
+                        {% if row.object.startswith('https://') %}
+                            <a href="{{ row.object }}" target="_blank">{{ row.object }}</a>
+                        {% else %}
+                            {{ row.object|safe }}
+                        {% endif %}
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
     {% endfor %}
 {% endif %}
 
