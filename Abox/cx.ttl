@@ -32,6 +32,13 @@ cx:Relative-Topic-ShiftConstruction_3_Form a rcxn:SlotForm ;
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_5_Index> olia:hasNumber olia:Plural .
 
 cx:comePLUSnoisemannerofmovementVing_4_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:eng_PrepositionalPhrase .
+
+cx:comePLUSnoisemannerofmovementVing_5_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:eng_Particle,
+        cx:eng_PrepositionalPhrase .
+
+cx:comePLUSnoisemannerofmovementVing_6_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_Particle,
         cx:eng_PrepositionalPhrase .
 
@@ -1379,14 +1386,20 @@ cx:comePLUSnoisemannerofmovementVing_3_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_VerbING .
 
 cx:comePLUSnoisemannerofmovementVing_4 a rcxn:SlotOptional ;
+    olia:hasSemanticRole olia:SourceRole .
+
+cx:comePLUSnoisemannerofmovementVing_5 a rcxn:SlotOptional ;
+    rcxn:hasOtherSemanticContribution "trajectory" .
+
+cx:comePLUSnoisemannerofmovementVing_6 a rcxn:SlotOptional ;
     olia:hasSemanticRole olia:GoalRole .
 
 cx:comePLUSnoisemannerofmovementVing_Ex_A a cx:Example ;
-    cx:hasAnnotatedText "The back door burst open and [six-year-old Sally]1 [came]2 [running]3 excitedly [into the room]4 ." ;
+    cx:hasAnnotatedText "The back door burst open and [six-year-old Sally]1 [came]2 [running]3 excitedly [into the room]6 ." ;
     cx:hasText "The back door burst open and six-year-old Sally came running excitedly into the room ." .
 
 cx:comePLUSnoisemannerofmovementVing_Ex_B a cx:Example ;
-    cx:hasAnnotatedText "Then came thunder out of the east as [rank after rank of tanks]1 [came]2 [roaring]3 past, plunged through the infantry and turned north for the kill ." ;
+    cx:hasAnnotatedText "Then came thunder out of the east as [rank after rank of tanks]1 [came]2 [roaring]3 [past]5, plunged through the infantry and turned north for the kill ." ;
     cx:hasText "Then came thunder out of the east as rank after rank of tanks came roaring past, plunged through the infantry and turned north for the kill ." .
 
 cx:comePLUSnoisemannerofmovementVing_Ex_C a cx:Example ;
@@ -1413,7 +1426,9 @@ cx:comePLUSnoisemannerofmovementVing_slots a rdf_ns:Seq ;
     rdf_ns:_1 cx:comePLUSnoisemannerofmovementVing_1 ;
     rdf_ns:_2 cx:comePLUSnoisemannerofmovementVing_2 ;
     rdf_ns:_3 cx:comePLUSnoisemannerofmovementVing_3 ;
-    rdf_ns:_4 cx:comePLUSnoisemannerofmovementVing_4 .
+    rdf_ns:_4 cx:comePLUSnoisemannerofmovementVing_4 ;
+    rdf_ns:_5 cx:comePLUSnoisemannerofmovementVing_5 ;
+    rdf_ns:_6 cx:comePLUSnoisemannerofmovementVing_6 .
 
 cx:coolasadmirableconstruction_1 a rcxn:SlotMandatory ;
     rcxn:hasPhonology "/kuːl/" ;
@@ -2542,12 +2557,6 @@ cx:eng_Keepacoolheadconstruction a rcxn:Construction ;
     rcxn:hasSlots cx:eng_Keepacoolheadconstruction_slots ;
     rcxn:hasTitle "Keep a cool head construction" .
 
-cx:eng_Particle a rcxn:Construction ;
-    lg:partOfLanguage lg:eng ;
-    rcxn:elementOf <http://example.org/cx/TheEnglishGIVE-OUTVerbParticleConstruction.>,
-        cx:comePLUSnoisemannerofmovementVing ;
-    rcxn:hasTitle "Particle" .
-
 cx:gmh_Prefix a rcxn:Construction ;
     lg:partOfLanguage lg:gmh ;
     rcxn:elementOf cx:gmh12C_PräfixverbkonstruktionHandlung,
@@ -2643,6 +2652,12 @@ cx:eng_AdjectivePredicativeconstruction a rcxn:Construction ;
     rcxn:hasMetadata cx:eng_AdjectivePredicativeconstruction_MD ;
     rcxn:hasSlots cx:eng_AdjectivePredicativeconstruction_slots ;
     rcxn:hasTitle "Adjective Predicative construction" .
+
+cx:eng_Particle a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    rcxn:elementOf <http://example.org/cx/TheEnglishGIVE-OUTVerbParticleConstruction.>,
+        cx:comePLUSnoisemannerofmovementVing ;
+    rcxn:hasTitle "Particle" .
 
 cx:eng_Phrase a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
@@ -2767,14 +2782,6 @@ cx:eng_AttributeConstruction a rcxn:Construction ;
     rcxn:hasSlots cx:eng_AttributeConstruction_slots ;
     rcxn:hasTitle "Attribute Construction (Attr: Adj)" .
 
-cx:eng_PrepositionalPhrase a rcxn:Construction ;
-    lg:partOfLanguage lg:eng ;
-    rcxn:elementOf <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions>,
-        cx:EvaluativeAttributionConstruction,
-        cx:comePLUSnoisemannerofmovementVing,
-        cx:eng_AdjectivePhrase ;
-    rcxn:hasTitle "Prepositional Phrase" .
-
 cx:eng_coolconstruction a rcxn:Construction ;
     cx:hasExample cx:eng_coolconstruction_Ex_A,
         cx:eng_coolconstruction_Ex_B,
@@ -2859,6 +2866,14 @@ cx:eng_AdjectivePhrase a rcxn:Construction ;
     rcxn:hasMetadata cx:eng_AdjectivePhrase_MD ;
     rcxn:hasSlots cx:eng_AdjectivePhrase_slots ;
     rcxn:hasTitle "Adjective Phrase" .
+
+cx:eng_PrepositionalPhrase a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    rcxn:elementOf <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions>,
+        cx:EvaluativeAttributionConstruction,
+        cx:comePLUSnoisemannerofmovementVing,
+        cx:eng_AdjectivePhrase ;
+    rcxn:hasTitle "Prepositional Phrase" .
 
 cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit a rcxn:Construction ;
     cx:hasExample cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_Ex_A,

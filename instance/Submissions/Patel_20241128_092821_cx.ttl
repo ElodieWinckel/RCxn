@@ -86,26 +86,38 @@ cx:comePLUSnoisemannerofmovementVing_3_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_VerbING .
 
 cx:comePLUSnoisemannerofmovementVing_4 a rcxn:SlotOptional ;
-    olia:hasSemanticRole olia:GoalRole .
+    olia:hasSemanticRole olia:SourceRole .
 
 cx:comePLUSnoisemannerofmovementVing_4_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:eng_PrepositionalPhrase .
+
+cx:comePLUSnoisemannerofmovementVing_5 a rcxn:SlotOptional ;
+    rcxn:hasOtherSemanticContribution "trajectory" .
+
+cx:comePLUSnoisemannerofmovementVing_5_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:eng_PrepositionalPhrase , cx:eng_Particle .
+
+cx:comePLUSnoisemannerofmovementVing_6 a rcxn:SlotOptional ;
+    olia:hasSemanticRole olia:GoalRole .
+
+cx:comePLUSnoisemannerofmovementVing_6_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_PrepositionalPhrase , cx:eng_Particle .
 
 cx:comePLUSnoisemannerofmovementVing_Ex_A a cx:Example ;
     cx:hasText "The back door burst open and six-year-old Sally came running excitedly into the room ." ;
-    cx:hasAnnotatedText "The back door burst open and [six-year-old Sally]1 [came]2 [running]3 excitedly [into the room]4 ." .
+    cx:hasAnnotatedText "The back door burst open and [six-year-old Sally]1 [came]2 [running]3 excitedly [into the room]6 ." .
 
 cx:comePLUSnoisemannerofmovementVing_Ex_B a cx:Example ;
     cx:hasText "Then came thunder out of the east as rank after rank of tanks came roaring past, plunged through the infantry and turned north for the kill ." ;
-    cx:hasAnnotatedText "Then came thunder out of the east as [rank after rank of tanks]1 [came]2 [roaring]3 past, plunged through the infantry and turned north for the kill ." .
+    cx:hasAnnotatedText "Then came thunder out of the east as [rank after rank of tanks]1 [came]2 [roaring]3 [past]5, plunged through the infantry and turned north for the kill ." .
 
 cx:comePLUSnoisemannerofmovementVing_Ex_C a cx:Example ;
     cx:hasText "People came running with lanterns and torches, and soon hundreds of people were hurrying to the house ." ;
-    cx:hasText "[People]1 [came]2 [running]3 with lanterns and torches, and soon hundreds of people were hurrying to the house ." .
+    cx:hasAnnotatedText "[People]1 [came]2 [running]3 with lanterns and torches, and soon hundreds of people were hurrying to the house ." .
 
 cx:comePLUSnoisemannerofmovementVing_Ex_D a cx:Example ;
     cx:hasText "A second or two later , everything came crashing down in a big heap on the railway line below ." ;
-    cx:hasText "A second or two later , [everything]1 [came]2 [crashing]3 [down]4 in a big heap on the railway line below ." .
+    cx:hasAnnotatedText "A second or two later , [everything]1 [came]2 [crashing]3 [down]6 in a big heap on the railway line below ." .
 
 cx:comePLUSnoisemannerofmovementVing_MD a rcxn:Metadata ;
     rcxn:annotator membr:Patel ;
@@ -123,7 +135,9 @@ cx:comePLUSnoisemannerofmovementVing_slots a rdf:Seq ;
     rdf:_1 cx:comePLUSnoisemannerofmovementVing_1 ;
     rdf:_2 cx:comePLUSnoisemannerofmovementVing_2 ;
     rdf:_3 cx:comePLUSnoisemannerofmovementVing_3 ;
-    rdf:_4 cx:comePLUSnoisemannerofmovementVing_4 .
+    rdf:_4 cx:comePLUSnoisemannerofmovementVing_4 ;
+    rdf:_5 cx:comePLUSnoisemannerofmovementVing_5 ;
+    rdf:_6 cx:comePLUSnoisemannerofmovementVing_6 .
 
 <https://journals.openedition.org/anglophonia/5335> dc:creator "Gournay, Lucie" ;
     dc:date "2023/07/13" ;
