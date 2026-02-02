@@ -325,6 +325,27 @@ def construction_detail(uri):
             'children': nested_elements
         })
 
+    # Collect triples for gesture
+    gesture = []
+    gesture_title = ""
+    for gesture_uri in g.objects(subject=entry_uri, predicate=cx.usesGesture):
+        for title in g.objects(subject=gesture_uri, predicate=cx.hasTitle):
+            gesture_title = str(title)
+        gesture_form_uri = gesture_uri + "_Form"
+        gesture_meaning_uri = gesture_uri + "_Meaning"
+        for pred, obj in g.predicate_objects(subject=gesture_form_uri):
+            gesture.append({
+                'synsem': "syn",
+                'property': get_label_or_iri(pred, g, ont),
+                'object': get_label_or_iri(obj, g, ont),
+            })
+        for pred, obj in g.predicate_objects(subject=gesture_meaning_uri):
+            gesture.append({
+                'synsem': "sem",
+                'property': get_label_or_iri(pred, g, ont),
+                'object': get_label_or_iri(obj, g, ont),
+            })
+    triples[:] = [item for item in triples if item['property'] != "usesGesture"]
 
     # Collect triples for examples
     # Step 1: Extract the examples
@@ -474,7 +495,9 @@ def construction_detail(uri):
                            research=research,
                            research_data=research_data,
                            references=references,
-                           colloprofiles=colloprofiles)
+                           colloprofiles=colloprofiles,
+                           gesture_title=gesture_title,
+                           gesture=gesture)
 
 @app_entries_blueprint.route('/construction/<path:uri>/submit', methods=['POST'])
 def download_subgraph(uri):

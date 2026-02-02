@@ -18,6 +18,15 @@
     <h2>Construction elements</h2>
     <div id="table-container"></div>
 
+<!-- Display an arrow with a gesture -->
+{% if gesture_title %}
+    <div id="arrow-container" style="width: 100%; position: relative; margin-top: 10px; height: 40px;">
+        <div id="arrow-line" style="height: 2px; background-color: #000; position: absolute; top: 50%; left: 15%; right: 0;"></div>
+        <div id="arrow-head" style="width: 0; height: 0; border-top: 8px solid transparent; border-bottom: 8px solid transparent; border-left: 12px solid #000; position: absolute; top: 50%; right: 0; transform: translateY(-50%);"></div>
+        <div id="arrow-text" style="position: absolute; top: 70%; left: 50%; transform: translateX(-50%); text-align: center; width: 85%; font-weight: bold;">{{gesture_title}}</div>
+    </div>
+{% endif %}
+
 <script>
 // Accessing elements sent by Flask
 const rawElements = {{ elements | tojson }};
@@ -296,6 +305,28 @@ container.appendChild(createCrossTable(elements));
       });
     {% endfor %}
   </script>
+{% endif %}
+
+{% if gesture %}
+<h3>{{gesture_title}}</h3>
+<table>
+    <tbody style="border: 3px double black; border-collapse: collapse; width: 100%;">
+    {% for row in gesture if row.synsem == "syn" %}
+        <tr>
+            <th>{{ row.property }}</th>
+            <td>{{ row.object }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+    <tbody style="border: 3px double black; border-collapse: collapse; width: 100%;">
+    {% for row in gesture if row.synsem == "sem" %}
+        <tr>
+            <th>{{ row.property }}</th>
+            <td>{{ row.object }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
 {% endif %}
 
 {% if grouped_examples %}

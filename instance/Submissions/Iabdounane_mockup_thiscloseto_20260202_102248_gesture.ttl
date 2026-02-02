@@ -1,0 +1,24 @@
+@prefix cx: <http://example.org/cx/> .
+
+cx:eng_ThisclosetoVingconstruction cx:usesGesture cx:SmallQuantityGestureConstruction .
+
+cx:SmallQuantityGestureConstruction a cx:GestureConstruction ;
+    cx:endsOnSlot cx:eng_ThisclosetoVingconstruction_6 ;
+    cx:hasForm cx:SmallQuantityGestureConstruction_Form ;
+    cx:hasMeaning cx:SmallQuantityGestureConstruction_Meaning ;
+    cx:hasPhases "1" ;
+    cx:hasTitle "Small Quantity Gesture Construction" ;
+    cx:stratsOnSlot cx:eng_ThisclosetoVingconstruction_1 .
+
+cx:SmallQuantityGestureConstruction_Form cx:duration "Usually for the entire duration of the co-occuring verbal construction." ;
+    cx:handedness "One-handed." ;
+    cx:handshape "Middle, right, and little fingers retracted toward the palm.",
+        "Thumb and indey extended or crooked and parallel to each other." ;
+    cx:movement "Static hold or beat." ;
+    cx:orientation "Palm Lateral." ;
+    cx:position "Central space or at face level." .
+
+cx:SmallQuantityGestureConstruction_Meaning cx:pragmaticProperty "Affective/evaluative framing.",
+        "Foregrounding the small quantity of the referent." ;
+    cx:semanticProperty "Small quantity." .
+
