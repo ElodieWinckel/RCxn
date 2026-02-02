@@ -1,0 +1,102 @@
+@prefix cx: <http://example.org/cx/> .
+@prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
+@prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
+@prefix olia: <http://purl.org/olia/olia.owl#> .
+@prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+membr:Project_Iabdounane_F250218 rsrch:basedOn cx:_ThisclosetoVingconstruction .
+
+cx:_PrepositionalPhrasetoPLUSVing a rcxn:Construction ;
+    lg:partOfLanguage lg: ;
+    rcxn:elementOf cx:_ThisclosetoVingconstruction ;
+    rcxn:hasMetadata cx:_PrepositionalPhrasetoPLUSVing_MD ;
+    rcxn:hasTitle "Prepositional Phrase (to + V-ing)" .
+
+cx:_PrepositionalPhrasetoPLUSVing_MD a rcxn:Metadata ;
+    cx:annotator membr:Iabdounane ;
+    rcxn:creationDate "2026-02-02"^^xsd:date .
+
+cx:_ThisclosetoVingconstruction_1 a rcxn:SlotMandatory ;
+    olia:hasSemanticRole olia:AgentRole ;
+    rcxn:hasSyntacticFunction "Subject" .
+
+cx:_ThisclosetoVingconstruction_2 a rcxn:SlotMandatory ;
+    rcxn:hasOtherSemanticContribution "CLOSE" ;
+    rcxn:hasSyntacticFunction "PREDICATOR" .
+
+cx:_ThisclosetoVingconstruction_3 a rcxn:SlotMandatory ;
+    olia:hasSemanticRole <undefined> ;
+    rcxn:hasSlotForm cx:_ThisclosetoVingconstruction_3_Form .
+
+cx:_ThisclosetoVingconstruction_3_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:eng_Verb .
+
+cx:_ThisclosetoVingconstruction_4 a rcxn:SlotMandatory ;
+    olia:hasSemanticRole <undefined> ;
+    rcxn:hasSlotForm cx:_ThisclosetoVingconstruction_4_Form .
+
+cx:_ThisclosetoVingconstruction_4_Form a rcxn:SlotForm ;
+    rcxn:hasStem cx:_this .
+
+cx:_ThisclosetoVingconstruction_5 a rcxn:SlotMandatory ;
+    olia:hasSemanticRole <undefined> ;
+    rcxn:hasSlotForm cx:_ThisclosetoVingconstruction_5_Form .
+
+cx:_ThisclosetoVingconstruction_5_Form a rcxn:SlotForm ;
+    rcxn:hasStem cx:_close .
+
+cx:_ThisclosetoVingconstruction_6 a rcxn:SlotMandatory ;
+    olia:hasSemanticRole olia:GoalRole ;
+    rcxn:hasSlotForm cx:_ThisclosetoVingconstruction_6_Form ;
+    rcxn:hasSyntacticFunction "Complement" .
+
+cx:_ThisclosetoVingconstruction_6_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:_PrepositionalPhrasetoPLUSVing .
+
+cx:_ThisclosetoVingconstruction_MD a rcxn:Metadata ;
+    rcxn:annotator membr:Iabdounane ;
+    rcxn:creationDate "2026-02-02"^^xsd:date .
+
+cx:_ThisclosetoVingconstruction_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "An agent is/was metaphorically very close to a goal or an outcome." .
+
+cx:_ThisclosetoVingconstruction_slots a rdf:Seq ;
+    rdf:_1 cx:_ThisclosetoVingconstruction_1 ;
+    rdf:_2 cx:_ThisclosetoVingconstruction_2 ;
+    rdf:_3 cx:_ThisclosetoVingconstruction_3 ;
+    rdf:_4 cx:_ThisclosetoVingconstruction_4 ;
+    rdf:_5 cx:_ThisclosetoVingconstruction_5 ;
+    rdf:_6 cx:_ThisclosetoVingconstruction_6 .
+
+cx:_close a rcxn:Construction ;
+    lg:partOfLanguage lg: ;
+    rcxn:elementOf cx:_ThisclosetoVingconstruction ;
+    rcxn:hasMetadata cx:_close_MD ;
+    rcxn:hasTitle "close" .
+
+cx:_close_MD a rcxn:Metadata ;
+    cx:annotator membr:Iabdounane ;
+    rcxn:creationDate "2026-02-02"^^xsd:date .
+
+cx:_this a rcxn:Construction ;
+    lg:partOfLanguage lg: ;
+    rcxn:elementOf cx:_ThisclosetoVingconstruction ;
+    rcxn:hasMetadata cx:_this_MD ;
+    rcxn:hasTitle "this" .
+
+cx:_this_MD a rcxn:Metadata ;
+    cx:annotator membr:Iabdounane ;
+    rcxn:creationDate "2026-02-02"^^xsd:date .
+
+cx:eng_Verb rcxn:elementOf cx:_ThisclosetoVingconstruction .
+
+cx:_ThisclosetoVingconstruction a rcxn:Construction ;
+    lg:partOfLanguage lg: ;
+    rcxn:hasConstructionMeaning cx:_ThisclosetoVingconstruction_Meaning ;
+    rcxn:hasMetadata cx:_ThisclosetoVingconstruction_MD ;
+    rcxn:hasSlots cx:_ThisclosetoVingconstruction_slots ;
+    rcxn:hasTitle "This close to V-ing construction" .
+

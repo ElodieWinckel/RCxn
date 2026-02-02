@@ -1103,61 +1103,6 @@ cx:TheEnglishGIVE-OUTVerbParticleConstruction._slots a rdf_ns:Seq ;
     rdf_ns:_3 cx:TheEnglishGIVE-OUTVerbParticleConstruction._3,
         cx:TheEnglishGIVE-OUTVerbParticleConstruction._4 .
 
-cx:ThisCloseToV-ing_1 a rcxn:SlotMandatory ;
-    cx:WordOrder "Element 1 comes immediately before Element 2" ;
-    cx:hasIndex cx:ThisCloseToV-ing_1_Index ;
-    rcxn:hasSlotForm cx:ThisCloseToV-ing_1_Form .
-
-cx:ThisCloseToV-ing_1_Form a rcxn:SlotForm ;
-    rcxn:hasStem cx:eng_be,
-        cx:eng_come .
-
-cx:ThisCloseToV-ing_1_Index a cx:Event ;
-    olia:hasVoice olia:ActiveVoice .
-
-cx:ThisCloseToV-ing_2 a rcxn:SlotMandatory ;
-    cx:WordOrder "Element 2 comes immediately before Element 3" ;
-    rcxn:hasSlotForm cx:ThisCloseToV-ing_2_Form .
-
-cx:ThisCloseToV-ing_2_Form a rcxn:SlotForm ;
-    rcxn:hasSurfaceForm "this close to" .
-
-cx:ThisCloseToV-ing_3 a rcxn:SlotMandatory ;
-    cx:WordOrder "Element 3 comes immediately before Element 4" ;
-    cx:colloprofile ( [ cx:frequency 70 ;
-                cx:word "be" ] [ cx:frequency 50 ;
-                cx:word "get" ] [ cx:frequency 15 ;
-                cx:word "have" ] ) ;
-    rcxn:hasSlotForm cx:ThisCloseToV-ing_3_Form .
-
-cx:ThisCloseToV-ing_3_Form a rcxn:SlotForm ;
-    rcxn:hasSyntacticForm cx:eng_VerbRoot .
-
-cx:ThisCloseToV-ing_4 a rcxn:SlotMandatory ;
-    rcxn:hasSlotForm cx:ThisCloseToV-ing_4_Form .
-
-cx:ThisCloseToV-ing_4_Form a rcxn:SlotForm ;
-    rcxn:hasSurfaceForm "-ing" ;
-    rcxn:hasSyntacticForm cx:eng_Suffix .
-
-cx:ThisCloseToV-ing_Ex_A a cx:Example ;
-    cx:hasAnnotatedText "It [was]1 [this close to]2 [happen]3[ing]4, right? [This close to]2 [happen]3[ing]4! " ;
-    cx:hasText "It was this close to happening, right? This close to happening! " ;
-    rdfs:comment "https://pisa.vrnewsscape.ucla.edu/newsscape_mp4_snippet.cgi?file=fa5d0dfc-cb7b-11e6-97cd-089e01ba0338&start=2396&end=2401" .
-
-cx:ThisCloseToV-ing_MD a rcxn:Metadata ;
-    rcxn:annotator membr:Iabdounane ;
-    rcxn:creationDate "2024-11-28"^^xsd:date .
-
-cx:ThisCloseToV-ing_Meaning a rcxn:ConstructionMeaning ;
-    rcxn:hasMeaning "Something or someone is metaphorically very close to an [outcome/goal]3." .
-
-cx:ThisCloseToV-ing_slots a rdf_ns:Seq ;
-    rdf_ns:_1 cx:ThisCloseToV-ing_1 ;
-    rdf_ns:_2 cx:ThisCloseToV-ing_2 ;
-    rdf_ns:_3 cx:ThisCloseToV-ing_3 ;
-    rdf_ns:_4 cx:ThisCloseToV-ing_4 .
-
 cx:Transitiveobjectrelativeclause_1 a rcxn:SlotMandatory ;
     cx:hasIndex cx:Transitiveobjectrelativeclause_1_Index ;
     rcxn:hasSlotForm cx:Transitiveobjectrelativeclause_1_Form ;
@@ -1994,24 +1939,83 @@ cx:eng_PossessivePronoun a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
     rcxn:hasTitle "Possessive Pronoun" .
 
+cx:eng_PrepositionalPhrasetoPLUSVing a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    rcxn:elementOf cx:eng_ThisclosetoVingconstruction ;
+    rcxn:hasMetadata cx:eng_PrepositionalPhrasetoPLUSVing_MD ;
+    rcxn:hasTitle "Prepositional Phrase (to + V-ing)" .
+
+cx:eng_PrepositionalPhrasetoPLUSVing_MD a rcxn:Metadata ;
+    cx:annotator membr:Iabdounane ;
+    rcxn:creationDate "2026-02-02"^^xsd:date .
+
 cx:eng_Pronoun a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
     rcxn:hasTitle "Pronoun" .
 
-cx:eng_Suffix a rcxn:Construction ;
-    lg:partOfLanguage lg:eng ;
-    rcxn:elementOf cx:ThisCloseToV-ing ;
-    rcxn:hasTitle "Suffix" .
+cx:eng_ThisclosetoVingconstruction_1 a rcxn:SlotMandatory ;
+    olia:hasSemanticRole olia:AgentRole ;
+    rcxn:hasSyntacticFunction "Subject" .
+
+cx:eng_ThisclosetoVingconstruction_2 a rcxn:SlotMandatory ;
+    rcxn:hasOtherSemanticContribution "CLOSE" ;
+    rcxn:hasSlots cx:eng_ThisclosetoVingconstruction_2_slots ;
+    rcxn:hasSyntacticFunction "PREDICATOR" .
+
+cx:eng_ThisclosetoVingconstruction_2_slots a rdf_ns:Seq ;
+    rdf_ns:_1 cx:eng_ThisclosetoVingconstruction_3 ;
+    rdf_ns:_2 cx:eng_ThisclosetoVingconstruction_4 ;
+    rdf_ns:_3 cx:eng_ThisclosetoVingconstruction_5 .
+
+cx:eng_ThisclosetoVingconstruction_3 a rcxn:SlotMandatory ;
+    rcxn:hasSlotForm cx:eng_ThisclosetoVingconstruction_3_Form .
+
+cx:eng_ThisclosetoVingconstruction_3_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:eng_Verb .
+
+cx:eng_ThisclosetoVingconstruction_4 a rcxn:SlotMandatory ;
+    rcxn:hasSlotForm cx:eng_ThisclosetoVingconstruction_4_Form .
+
+cx:eng_ThisclosetoVingconstruction_4_Form a rcxn:SlotForm ;
+    rcxn:hasStem cx:eng_this .
+
+cx:eng_ThisclosetoVingconstruction_5 a rcxn:SlotMandatory ;
+    rcxn:hasSlotForm cx:eng_ThisclosetoVingconstruction_5_Form .
+
+cx:eng_ThisclosetoVingconstruction_5_Form a rcxn:SlotForm ;
+    rcxn:hasStem cx:eng_close .
+
+cx:eng_ThisclosetoVingconstruction_6 a rcxn:SlotMandatory ;
+    olia:hasSemanticRole olia:GoalRole ;
+    rcxn:hasSlotForm cx:eng_ThisclosetoVingconstruction_6_Form ;
+    rcxn:hasSyntacticFunction "Complement" .
+
+cx:eng_ThisclosetoVingconstruction_6_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:eng_PrepositionalPhrasetoPLUSVing .
+
+cx:eng_ThisclosetoVingconstruction_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "[It]1 [was this close]2 [to happening]6, right? [This close]2 [to happening]6! " ;
+    cx:hasText "It was this close to happening, right? This close to happening! " ;
+    rdfs:comment "https://pisa.vrnewsscape.ucla.edu/newsscape_mp4_snippet.cgi?file=fa5d0dfc-cb7b-11e6-97cd-089e01ba0338&start=2396&end=2401" .
+
+cx:eng_ThisclosetoVingconstruction_MD a rcxn:Metadata ;
+    rcxn:annotator membr:Iabdounane ;
+    rcxn:creationDate "2026-02-02"^^xsd:date .
+
+cx:eng_ThisclosetoVingconstruction_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "[An agent]1 is/was metaphorically very close to [a goal or an outcome]6." .
+
+cx:eng_ThisclosetoVingconstruction_slots a rdf_ns:Seq ;
+    rdf_ns:_1 cx:eng_ThisclosetoVingconstruction_1 ;
+    rdf_ns:_2 cx:eng_ThisclosetoVingconstruction_2 ;
+    rdf_ns:_3 cx:eng_ThisclosetoVingconstruction_6 .
 
 cx:eng_VerbING a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
     rcxn:elementOf cx:comePLUSnoisemannerofmovementVing ;
     rcxn:hasTitle "Verb + -ing" .
 
-cx:eng_VerbRoot a rcxn:Construction ;
-    lg:partOfLanguage lg:eng ;
-    rcxn:elementOf cx:ThisCloseToV-ing ;
-    rcxn:hasTitle "Verb Root" .
+cx:eng_be rcxn:elementOf cx:EvaluativeAttributionConstruction .
 
 cx:eng_burn a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
@@ -2022,6 +2026,18 @@ cx:eng_clause a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
     rcxn:elementOf cx:EvaluativeAttributionConstruction ;
     rcxn:hasTitle "Clause" .
+
+cx:eng_close a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    rcxn:elementOf cx:eng_ThisclosetoVingconstruction ;
+    rcxn:hasMetadata cx:eng_close_MD ;
+    rcxn:hasTitle "close" .
+
+cx:eng_close_MD a rcxn:Metadata ;
+    cx:annotator membr:Iabdounane ;
+    rcxn:creationDate "2026-02-02"^^xsd:date .
+
+cx:eng_come rcxn:elementOf cx:comePLUSnoisemannerofmovementVing .
 
 cx:eng_coolconstruction_1 a rcxn:SlotMandatory ;
     rcxn:hasPhonology "/kuːl/" ;
@@ -2071,6 +2087,16 @@ cx:eng_keep a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
     rcxn:elementOf cx:eng_Keepacoolheadconstruction ;
     rcxn:hasTitle "keep" .
+
+cx:eng_this a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    rcxn:elementOf cx:eng_ThisclosetoVingconstruction ;
+    rcxn:hasMetadata cx:eng_this_MD ;
+    rcxn:hasTitle "this" .
+
+cx:eng_this_MD a rcxn:Metadata ;
+    cx:annotator membr:Iabdounane ;
+    rcxn:creationDate "2026-02-02"^^xsd:date .
 
 <http://example.org/cx/etc.> links:inheritsFrom <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]> .
 
@@ -2522,18 +2548,6 @@ cx:eng_Particle a rcxn:Construction ;
         cx:comePLUSnoisemannerofmovementVing ;
     rcxn:hasTitle "Particle" .
 
-cx:eng_be a rcxn:Construction ;
-    lg:partOfLanguage lg:eng ;
-    rcxn:elementOf cx:EvaluativeAttributionConstruction,
-        cx:ThisCloseToV-ing ;
-    rcxn:hasTitle "be" .
-
-cx:eng_come a rcxn:Construction ;
-    lg:partOfLanguage lg:eng ;
-    rcxn:elementOf cx:ThisCloseToV-ing,
-        cx:comePLUSnoisemannerofmovementVing ;
-    rcxn:hasTitle "come" .
-
 cx:gmh_Prefix a rcxn:Construction ;
     lg:partOfLanguage lg:gmh ;
     rcxn:elementOf cx:gmh12C_PräfixverbkonstruktionHandlung,
@@ -2682,18 +2696,6 @@ cx:POU-beneficiaryconstruction a rcxn:Construction ;
     rcxn:hasSlots cx:TheEnglishGIVE-OUTVerbParticleConstruction._slots ;
     rcxn:hasTitle "GIVE-OUT Verb Particle Construction" .
 
-cx:ThisCloseToV-ing a rcxn:Construction ;
-    cx:hasExample cx:ThisCloseToV-ing_Ex_A ;
-    cx:hasGesture """The gesture is part of the construction's form.\r
-The index finger and the thumb are stretched (or partially crooked) and drawn near one another while the rest of the fingers remain retracted.\r
-The gesture is sometimes used a few milliseconds before uttering "this" and is most often maintained until uttering the V-ing element (and its complement if the verb is transitive).""" ;
-    rdfs:comment "I would need to upload an Excel file with all the concordance lines and a link with all the video-snippets" ;
-    lg:partOfLanguage lg:engUsSpo ;
-    rcxn:hasConstructionMeaning cx:ThisCloseToV-ing_Meaning ;
-    rcxn:hasMetadata cx:ThisCloseToV-ing_MD ;
-    rcxn:hasSlots cx:ThisCloseToV-ing_slots ;
-    rcxn:hasTitle "This Close To V-ing" .
-
 cx:coolasadmirableconstruction a rcxn:Construction ;
     cx:hasExample cx:coolasadmirableconstruction_Ex_A,
         cx:coolasadmirableconstruction_Ex_B,
@@ -2728,6 +2730,14 @@ cx:coolasemotionconstruction a rcxn:Construction ;
     rcxn:hasMetadata <http://example.org/cx/eng_DitransitiveConstructionObj:NP_MD> ;
     rcxn:hasSlots <http://example.org/cx/eng_DitransitiveConstructionObj:NP_slots> ;
     rcxn:hasTitle "Ditransitive Construction (Obj: NP)" .
+
+cx:eng_ThisclosetoVingconstruction a rcxn:Construction ;
+    cx:hasExample cx:eng_ThisclosetoVingconstruction_Ex_A ;
+    lg:partOfLanguage lg:eng ;
+    rcxn:hasConstructionMeaning cx:eng_ThisclosetoVingconstruction_Meaning ;
+    rcxn:hasMetadata cx:eng_ThisclosetoVingconstruction_MD ;
+    rcxn:hasSlots cx:eng_ThisclosetoVingconstruction_slots ;
+    rcxn:hasTitle "This close to V-ing construction" .
 
 cx:eng_cool a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
@@ -2899,19 +2909,6 @@ cx:Relative-Topic-ShiftConstruction a rcxn:Construction ;
     rcxn:hasSlots cx:Relative-Topic-ShiftConstruction_slots ;
     rcxn:hasTitle "Relative Topic Shift Construction " .
 
-cx:eng_Verb a rcxn:Construction ;
-    lg:partOfLanguage lg:eng ;
-    rcxn:elementOf cx:Argumentstructureconstruction,
-        cx:EnglishDitransitiveconstruction,
-        cx:EnglishResultativeconstruction,
-        cx:EnglishTransitiveconstruction,
-        <http://example.org/cx/TheEnglishGIVE-OUTVerbParticleConstruction.>,
-        cx:comePLUSnoisemannerofmovementVing,
-        cx:eng_AttributeConstruction,
-        cx:eng_CauseMotionconstruction,
-        <http://example.org/cx/eng_DitransitiveConstructionObj:NP> ;
-    rcxn:hasTitle "Verb" .
-
 cx:Idiomaticconstruction a rcxn:Construction ;
     cx:hasExample cx:Idiomaticconstruction_Ex_A,
         cx:Idiomaticconstruction_Ex_B ;
@@ -2924,6 +2921,20 @@ cx:Idiomaticconstruction a rcxn:Construction ;
     rcxn:hasMetadata cx:Idiomaticconstruction_MD ;
     rcxn:hasSlots cx:Idiomaticconstruction_slots ;
     rcxn:hasTitle "Aus dem Ärmel schütteln construction" .
+
+cx:eng_Verb a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    rcxn:elementOf cx:Argumentstructureconstruction,
+        cx:EnglishDitransitiveconstruction,
+        cx:EnglishResultativeconstruction,
+        cx:EnglishTransitiveconstruction,
+        <http://example.org/cx/TheEnglishGIVE-OUTVerbParticleConstruction.>,
+        cx:comePLUSnoisemannerofmovementVing,
+        cx:eng_AttributeConstruction,
+        cx:eng_CauseMotionconstruction,
+        <http://example.org/cx/eng_DitransitiveConstructionObj:NP>,
+        cx:eng_ThisclosetoVingconstruction ;
+    rcxn:hasTitle "Verb" .
 
 cx:eng_NounPhrase a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;

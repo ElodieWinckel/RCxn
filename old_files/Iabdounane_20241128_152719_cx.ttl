@@ -12,7 +12,6 @@
 cx:ThisCloseToV-ing a rcxn:Construction ;
     rcxn:hasTitle "This Close To V-ing" ;
     rcxn:hasConstructionMeaning cx:ThisCloseToV-ing_Meaning ;
-    cx:hasExample cx:ThisCloseToV-ing_Ex_A ;
     cx:hasGesture """The gesture is part of the construction's form.\r
 The index finger and the thumb are stretched (or partially crooked) and drawn near one another while the rest of the fingers remain retracted.\r
 The gesture is sometimes used a few milliseconds before uttering "this" and is most often maintained until uttering the V-ing element (and its complement if the verb is transitive).""" ;
@@ -83,13 +82,7 @@ cx:eng_Suffix a rcxn:Construction ;
     rcxn:hasTitle "Suffix" ;
     lg:partOfLanguage lg:eng.
 
-membr:Project_Iabdounane rsrch:hasFindings membr:Project_Iabdounane_F250218 .
-
-membr:Project_Iabdounane_F250218 a rsrch:Finding ;
-    rdfs:label """The verbal form “this close to V-ing” and the close index finger - thumb gesture co-occur 93% of the time.\r
-The two forms are likely entrenched together as a single unit, thus making it one formal multimodal unit.\r
-The construction is multimodal.\r
-""" ;
+;
     rsrch:basedOn cx:ThisCloseToV-ing .
 
 cx:eng_be a rcxn:Construction ;

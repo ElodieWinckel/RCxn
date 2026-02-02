@@ -1,0 +1,113 @@
+@prefix cx: <http://example.org/cx/> .
+@prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
+@prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
+@prefix olia: <http://purl.org/olia/olia.owl#> .
+@prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+membr:Project_Iabdounane_F250218 rsrch:basedOn cx:eng_ThisclosetoVingconstruction .
+
+cx:eng_PrepositionalPhrasetoPLUSVing a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    rcxn:elementOf cx:eng_ThisclosetoVingconstruction ;
+    rcxn:hasMetadata cx:eng_PrepositionalPhrasetoPLUSVing_MD ;
+    rcxn:hasTitle "Prepositional Phrase (to + V-ing)" .
+
+cx:eng_PrepositionalPhrasetoPLUSVing_MD a rcxn:Metadata ;
+    cx:annotator membr:Iabdounane ;
+    rcxn:creationDate "2026-02-02"^^xsd:date .
+
+cx:eng_ThisclosetoVingconstruction_1 a rcxn:SlotMandatory ;
+    olia:hasSemanticRole olia:AgentRole ;
+    rcxn:hasSyntacticFunction "Subject" .
+
+cx:eng_ThisclosetoVingconstruction_2 a rcxn:SlotMandatory ;
+    rcxn:hasSlots cx:eng_ThisclosetoVingconstruction_2_slots ;
+    rcxn:hasOtherSemanticContribution "CLOSE" ;
+    rcxn:hasSyntacticFunction "PREDICATOR" .
+
+cx:eng_ThisclosetoVingconstruction_3 a rcxn:SlotMandatory ;
+    rcxn:hasSlotForm cx:eng_ThisclosetoVingconstruction_3_Form .
+
+cx:eng_ThisclosetoVingconstruction_3_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:eng_Verb .
+
+cx:eng_ThisclosetoVingconstruction_4 a rcxn:SlotMandatory ;
+    rcxn:hasSlotForm cx:eng_ThisclosetoVingconstruction_4_Form .
+
+cx:eng_ThisclosetoVingconstruction_4_Form a rcxn:SlotForm ;
+    rcxn:hasStem cx:eng_this .
+
+cx:eng_ThisclosetoVingconstruction_5 a rcxn:SlotMandatory ;
+    rcxn:hasSlotForm cx:eng_ThisclosetoVingconstruction_5_Form .
+
+cx:eng_ThisclosetoVingconstruction_5_Form a rcxn:SlotForm ;
+    rcxn:hasStem cx:eng_close .
+
+cx:eng_ThisclosetoVingconstruction_6 a rcxn:SlotMandatory ;
+    olia:hasSemanticRole olia:GoalRole ;
+    rcxn:hasSlotForm cx:eng_ThisclosetoVingconstruction_6_Form ;
+    rcxn:hasSyntacticFunction "Complement" .
+
+cx:eng_ThisclosetoVingconstruction_6_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:eng_PrepositionalPhrasetoPLUSVing .
+
+cx:eng_ThisclosetoVingconstruction_MD a rcxn:Metadata ;
+    rcxn:annotator membr:Iabdounane ;
+    rcxn:creationDate "2026-02-02"^^xsd:date .
+
+cx:eng_ThisclosetoVingconstruction_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "[An agent]1 is/was metaphorically very close to [a goal or an outcome]6." .
+
+cx:eng_ThisclosetoVingconstruction_slots a rdf:Seq ;
+    rdf:_1 cx:eng_ThisclosetoVingconstruction_1 ;
+    rdf:_2 cx:eng_ThisclosetoVingconstruction_2 ;
+    rdf:_3 cx:eng_ThisclosetoVingconstruction_6 .
+
+cx:eng_ThisclosetoVingconstruction_2_slots a rdf:Seq ;
+    rdf:_1 cx:eng_ThisclosetoVingconstruction_3 ;
+    rdf:_2 cx:eng_ThisclosetoVingconstruction_4 ;
+    rdf:_3 cx:eng_ThisclosetoVingconstruction_5 .
+
+cx:eng_Verb rcxn:elementOf cx:eng_ThisclosetoVingconstruction .
+
+cx:eng_close a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    rcxn:elementOf cx:eng_ThisclosetoVingconstruction ;
+    rcxn:hasMetadata cx:eng_close_MD ;
+    rcxn:hasTitle "close" .
+
+cx:eng_close_MD a rcxn:Metadata ;
+    cx:annotator membr:Iabdounane ;
+    rcxn:creationDate "2026-02-02"^^xsd:date .
+
+cx:eng_this a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    rcxn:elementOf cx:eng_ThisclosetoVingconstruction ;
+    rcxn:hasMetadata cx:eng_this_MD ;
+    rcxn:hasTitle "this" .
+
+cx:eng_this_MD a rcxn:Metadata ;
+    cx:annotator membr:Iabdounane ;
+    rcxn:creationDate "2026-02-02"^^xsd:date .
+
+cx:eng_ThisclosetoVingconstruction a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    rcxn:hasConstructionMeaning cx:eng_ThisclosetoVingconstruction_Meaning ;
+    cx:hasExample cx:eng_ThisclosetoVingconstruction_Ex_A ;
+    rcxn:hasMetadata cx:eng_ThisclosetoVingconstruction_MD ;
+    rcxn:hasSlots cx:eng_ThisclosetoVingconstruction_slots ;
+    rcxn:hasTitle "This close to V-ing construction" .
+
+cx:eng_ThisclosetoVingconstruction_Ex_A a cx:Example ;
+    cx:hasText "It was this close to happening, right? This close to happening! " ;
+    cx:hasAnnotatedText "[It]1 [was this close]2 [to happening]6, right? [This close]2 [to happening]6! " ;
+    rdfs:comment "https://pisa.vrnewsscape.ucla.edu/newsscape_mp4_snippet.cgi?file=fa5d0dfc-cb7b-11e6-97cd-089e01ba0338&start=2396&end=2401" .
+
+membr:Project_Iabdounane rsrch:hasFindings membr:Project_Iabdounane_F250218 .
+
+membr:Project_Iabdounane_F250218 a rsrch:Finding ;
+    rdfs:label """The verbal form “this close to V-ing” and the close index finger - thumb gesture co-occur 93% of the time. The two forms are likely entrenched together as a single unit, thus making it one formal multimodal unit.\r The construction is multimodal.""" .
