@@ -1,0 +1,70 @@
+@prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cx: <http://example.org/cx/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
+@prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#> .
+@prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
+@prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cx:eng_attribute_construction_attr_to_inf links:sameFormDifferentFunction cx:eng_ditransitive_construction_obj_inf .
+
+cx:eng_resultative_construction_attr_to_inf links:sameFormDifferentFunction cx:eng_ditransitive_construction_obj_inf .
+
+cx:eng_ditransitive_construction_obj_inf_slots a rdf:Seq ;
+    rdf:_1 cx:eng_ditransitive_construction_obj_inf_1 ;
+    rdf:_2 cx:eng_ditransitive_construction_obj_inf_2 ;
+    rdf:_3 cx:eng_ditransitive_construction_obj_inf_3 ;
+    rdf:_4 cx:eng_ditransitive_construction_obj_inf_4 .
+
+cx:eng_ditransitive_construction_obj_inf_1 a rcxn:SlotOptional ;
+    rcxn:hasSlotForm "NP" ;
+    rcxn:hasOtherSemanticContribution "Æffector" ;
+    rcxn:hasSyntacticFunction "potential subject" ;
+    rcxn:hasCasaSyntacticFunction "potential subject" .
+
+
+cx:eng_ditransitive_construction_obj_inf_2 a rcxn:SlotMandatory ;
+    rcxn:hasSlotForm "V" ;
+    RDFS:comment "Source for collo-profile: Valency Dictionary of English, Patternbank" ,
+        "colloprofile: bid  help  let  make" .
+
+
+cx:eng_ditransitive_construction_obj_inf_3 a rcxn:SlotMandatory ;
+    rcxn:hasSlotForm "NP" ;
+    rcxn:hasOtherSemanticContribution "Recipient" ;
+    rcxn:hasSyntacticFunction "unit in predicate" ;
+    rcxn:hasCasaSyntacticFunction "Obj" .
+
+
+cx:eng_ditransitive_construction_obj_inf_4 a rcxn:SlotMandatory ;
+    rcxn:hasSlotForm "INF" ;
+    rcxn:hasOtherSemanticContribution "Æffected-action" ;
+    rcxn:hasSyntacticFunction "unit in predicate" ;
+    rcxn:hasCasaSyntacticFunction "Obj" .
+
+
+cx:eng_ditransitive_construction_obj_inf_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "[She]1 [let]2 [him]3 [come to the meeting.]4" ;
+    cx:hasText "She let him come to the meeting." .
+
+cx:eng_ditransitive_construction_obj_inf_MD a rcxn:Metadata ;
+    rcxn:annotator membr:Winckel ;
+    rcxn:creationDate "2026-02-04"^^xsd:date .
+
+cx:eng_ditransitive_construction_obj_inf_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "ÆFFECTOR makes RECIPIENT receive ÆFFECTED (i.e. ÆFFECTOR causes or enables the RECIPIENT to carry out ÆFFECTED-ACTION.)" .
+
+cx:eng_active_3_argument_structure_construction links:inheritedBy cx:eng_ditransitive_construction_obj_inf .
+
+cx:eng_ditransitive_construction_obj_inf a rcxn:Construction ;
+    cx:hasExample cx:eng_ditransitive_construction_obj_inf_Ex_A ;
+    lg:partOfLanguage lg:eng ;
+    links:inheritsFrom cx:eng_active_3_argument_structure_construction ;
+
+    rcxn:hasConstructionMeaning cx:eng_ditransitive_construction_obj_inf_Meaning ;
+    rcxn:hasMetadata cx:eng_ditransitive_construction_obj_inf_MD ;
+    rcxn:hasSlots cx:eng_ditransitive_construction_obj_inf_slots ;
+    rcxn:hasTitle "Ditransitive Construction (Obj: INF)" .

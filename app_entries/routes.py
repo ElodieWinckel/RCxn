@@ -121,6 +121,8 @@ def identify_construction_element_triples(slots_uri):
                     'object': get_label_or_iri(title, g, ont),
                     'href': get_label_or_iri(obj, g, ont),
                 })
+            elif predicate == cx.hasSlotForm and not isinstance(obj, Literal):
+                pass
             else:
                 elements.append({
                     'subject': element_number,
@@ -137,7 +139,7 @@ def identify_construction_element_triples(slots_uri):
                 'object': get_label_or_iri(obj, g, ont),
             })
     elements[:] = [item for item in elements if item['property'] != "type"]
-    elements[:] = [item for item in elements if item['property'] != "hasSlotForm"]
+    #elements[:] = [item for item in elements if item['property'] != "hasSlotForm"] --> We need to handle this differently for imports from CASA
     elements[:] = [item for item in elements if item['property'] != "hasIndex"]
     return elements, colloprofiles, list_of_nested
 

@@ -1,0 +1,55 @@
+@prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cx: <http://example.org/cx/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
+@prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#> .
+@prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
+@prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cx:eng_monotransitive_construction_slots a rdf:Seq ;
+    rdf:_1 cx:eng_monotransitive_construction_1 ;
+    rdf:_2 cx:eng_monotransitive_construction_2 ;
+    rdf:_3 cx:eng_monotransitive_construction_3 .
+
+cx:eng_monotransitive_construction_1 a rcxn:SlotOptional ;
+    rcxn:hasSlotForm "NP" ;
+    rcxn:hasOtherSemanticContribution "Æffector" ;
+    rcxn:hasSyntacticFunction "potential subject" ;
+    rcxn:hasCasaSyntacticFunction "potential subject" .
+
+
+cx:eng_monotransitive_construction_2 a rcxn:SlotMandatory ;
+    rcxn:hasSlotForm "V" .
+
+
+cx:eng_monotransitive_construction_3 a rcxn:SlotMandatory ;
+    rcxn:hasSlotForm "NP" ;
+    rcxn:hasOtherSemanticContribution "Æffected" ;
+    rcxn:hasSyntacticFunction "unit in predicate" ;
+    rcxn:hasCasaSyntacticFunction "Obj" .
+
+
+cx:eng_monotransitive_construction_Ex_A a cx:Example ;
+    cx:hasText "She kissed him. (COCA-2010-FIC)" .
+
+cx:eng_monotransitive_construction_Ex_B a cx:Example ;
+    cx:hasText "He opened the window. (COCA-2012-FIC)" .
+
+cx:eng_monotransitive_construction_MD a rcxn:Metadata ;
+    rcxn:annotator membr:Winckel ;
+    rcxn:creationDate "2026-02-03"^^xsd:date .
+
+cx:eng_monotransitive_construction_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "An ÆFFECTOR does something to an ÆFFECTED." .
+
+cx:eng_monotransitive_construction a rcxn:Construction ;
+    cx:hasExample cx:eng_monotransitive_construction_Ex_A ;
+    cx:hasExample cx:eng_monotransitive_construction_Ex_B ;
+    lg:partOfLanguage lg:eng ;
+    rcxn:hasConstructionMeaning cx:eng_monotransitive_construction_Meaning ;
+    rcxn:hasMetadata cx:eng_monotransitive_construction_MD ;
+    rcxn:hasSlots cx:eng_monotransitive_construction_slots ;
+    rcxn:hasTitle "Monotransitive Construction" .

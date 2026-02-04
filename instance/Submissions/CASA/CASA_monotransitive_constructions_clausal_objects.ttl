@@ -1,0 +1,93 @@
+@prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cx: <http://example.org/cx/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
+@prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#> .
+@prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
+@prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+eng_monotransitive_constructions_clausal_objects_slots a rdf:Seq ;
+    rdf:_1 cx:eng_monotransitive_constructions_clausal_objects_1 ;
+    rdf:_2 cx:eng_monotransitive_constructions_clausal_objects_2 ;
+    rdf:_3 cx:eng_monotransitive_constructions_clausal_objects_3 .
+
+cx:eng_monotransitive_constructions_clausal_objects_1 a rcxn:SlotOptional ;
+    rcxn:hasSlotForm "NP" ;
+    rcxn:hasOtherSemanticContribution "Æffector" ;
+    rcxn:hasSyntacticFunction "potential subject" ;
+    rcxn:hasCasaSyntacticFunction "potential subject" .
+
+
+cx:eng_monotransitive_constructions_clausal_objects_2 a rcxn:SlotMandatory ;
+    rcxn:hasSlotForm "V" .
+
+
+cx:eng_monotransitive_constructions_clausal_objects_3 a rcxn:SlotMandatory ;
+    rcxn:hasSlotForm "V-ing-CL to_INF-CL that_CL wh-CL wh_to_inf-CL NP V-ing NP to_inf-CL NP inf-CL NP V-en-CL NP PP" ;
+    rcxn:hasOtherSemanticContribution "Æffected" ;
+    rcxn:hasSyntacticFunction "unit in predicate" ;
+    rcxn:hasCasaSyntacticFunction "Obj" .
+
+
+eng_monotransitive_constructions_clausal_objects_Ex_A a cx:Example ;
+    cx:hasText "They enjoy seeing each other and talking and so on. (COCA-1999-M)" .
+
+eng_monotransitive_constructions_clausal_objects_Ex_B a cx:Example ;
+    cx:hasText "
+            …Nancy Pelosi (D-CA) wants to have a climate bill on the House floor by July 4… (COCA-2007-MAG)" .
+
+eng_monotransitive_constructions_clausal_objects_Ex_C a cx:Example ;
+    cx:hasText "
+            Scientists argue that human activity has placed the planet in uncertain but potentially calamitous peril… (COCA-2012-NEWS)" .
+
+eng_monotransitive_constructions_clausal_objects_Ex_D a cx:Example ;
+    cx:hasText "
+            I don't see how the president benefits by belittling and criticizing the Republican leadership on the Hill. (COCA-2017-SPOK)" .
+
+eng_monotransitive_constructions_clausal_objects_Ex_E a cx:Example ;
+    cx:hasText "
+            Donald Trump knows how to put on a good show. (COCA-2016-SPOK)" .
+
+eng_monotransitive_constructions_clausal_objects_Ex_F a cx:Example ;
+    cx:hasText "
+            She heard the wind skittering dried leaves around the balcony… (COCA-2010-F)" .
+
+eng_monotransitive_constructions_clausal_objects_Ex_G a cx:Example ;
+    cx:hasText "
+            They want Obama to run for president. (COCA-2014-SPOK)" .
+
+eng_monotransitive_constructions_clausal_objects_Ex_H a cx:Example ;
+    cx:hasText "
+            She heard the door close. (COCA-2012-F)
+            At this point, who doesn't want Trump impeached? (COCA-2017-M)" .
+
+eng_monotransitive_constructions_clausal_objects_Ex_I a cx:Example ;
+    cx:hasText "
+            … most Republican voters want Trump at the top of the ticket. (COCA-2016-SPOK)
+            " .
+
+eng_monotransitive_constructions_clausal_objects_MD a rcxn:Metadata ;
+    rcxn:annotator membr:Winckel ;
+    rcxn:creationDate "2026-02-03"^^xsd:date .
+
+eng_monotransitive_constructions_clausal_objects_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "An ÆFFECTOR does something to an ÆFFECTED." .
+
+cx:eng_monotransitive_constructions_clausal_objects a rcxn:Construction ;
+    cx:hasExample eng_monotransitive_constructions_clausal_objects_Ex_A ;
+    cx:hasExample eng_monotransitive_constructions_clausal_objects_Ex_B ;
+    cx:hasExample eng_monotransitive_constructions_clausal_objects_Ex_C ;
+    cx:hasExample eng_monotransitive_constructions_clausal_objects_Ex_D ;
+    cx:hasExample eng_monotransitive_constructions_clausal_objects_Ex_E ;
+    cx:hasExample eng_monotransitive_constructions_clausal_objects_Ex_F ;
+    cx:hasExample eng_monotransitive_constructions_clausal_objects_Ex_G ;
+    cx:hasExample eng_monotransitive_constructions_clausal_objects_Ex_H ;
+    cx:hasExample eng_monotransitive_constructions_clausal_objects_Ex_I ;
+    lg:partOfLanguage lg:eng ;
+    rcxn:hasConstructionMeaning eng_monotransitive_constructions_clausal_objects_Meaning ;
+    rcxn:hasMetadata eng_monotransitive_constructions_clausal_objects_MD ;
+    rcxn:hasSlots eng_monotransitive_constructions_clausal_objects_slots ;
+    rcxn:hasTitle "Monotransitive Constructions (clausal objects)" .

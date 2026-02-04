@@ -1,0 +1,52 @@
+@prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cx: <http://example.org/cx/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
+@prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#> .
+@prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
+@prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+eng_self_motion_construction_slots a rdf:Seq ;
+    rdf:_1 cx:eng_self_motion_construction_1 ;
+    rdf:_2 cx:eng_self_motion_construction_2 ;
+    rdf:_3 cx:eng_self_motion_construction_3 .
+
+cx:eng_self_motion_construction_1 a rcxn:SlotOptional ;
+    rcxn:hasSlotForm "NP" ;
+    rcxn:hasOtherSemanticContribution "Æffector-theme" ;
+    rcxn:hasSyntacticFunction "potential subject" ;
+    rcxn:hasCasaSyntacticFunction "potential subject" .
+
+
+cx:eng_self_motion_construction_2 a rcxn:SlotMandatory ;
+    rcxn:hasSlotForm "V" .
+
+
+cx:eng_self_motion_construction_3 a rcxn:SlotMandatory ;
+    rcxn:hasSlotForm "PP" ;
+    rcxn:hasOtherSemanticContribution "Source / path / direction / goal" ;
+    rcxn:hasSyntacticFunction "unit in predicate" ;
+    rcxn:hasCasaSyntacticFunction "Object" .
+
+
+eng_self_motion_construction_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "[They]1 [flew]2 [from Frankfurt to New York.]3" ;
+    cx:hasText "They flew from Frankfurt to New York." .
+
+eng_self_motion_construction_MD a rcxn:Metadata ;
+    rcxn:annotator membr:Winckel ;
+    rcxn:creationDate "2026-02-03"^^xsd:date .
+
+eng_self_motion_construction_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "An AFFECTOR-THEME moves from a SOURCE along a PATH in a particular DIRECTION towards a GOAL." .
+
+cx:eng_self_motion_construction a rcxn:Construction ;
+    cx:hasExample eng_self_motion_construction_Ex_A ;
+    lg:partOfLanguage lg:eng ;
+    rcxn:hasConstructionMeaning eng_self_motion_construction_Meaning ;
+    rcxn:hasMetadata eng_self_motion_construction_MD ;
+    rcxn:hasSlots eng_self_motion_construction_slots ;
+    rcxn:hasTitle "Self-Motion Construction" .

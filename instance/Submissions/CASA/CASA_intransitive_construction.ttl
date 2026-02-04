@@ -1,0 +1,37 @@
+@prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cx: <http://example.org/cx/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
+@prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#> .
+@prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
+@prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+eng_intransitive_construction_slots a rdf:Seq ;
+    rdf:_1 cx:eng_intransitive_construction_1 ;
+    rdf:_2 cx:eng_intransitive_construction_2 .
+
+cx:eng_intransitive_construction_1 a rcxn:SlotOptional ;
+    rcxn:hasOtherSemanticContribution "Undergoer" ;
+    rcxn:hasSyntacticFunction "potential subject" .
+
+
+cx:eng_intransitive_construction_2 a rcxn:SlotMandatory ;
+    rcxn:hasSlotForm "V" .
+
+
+eng_intransitive_construction_MD a rcxn:Metadata ;
+    rcxn:annotator membr:Winckel ;
+    rcxn:creationDate "2026-02-03"^^xsd:date .
+
+eng_intransitive_construction_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "An UNDERGOER does or experiences something." .
+
+cx:eng_intransitive_construction a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    rcxn:hasConstructionMeaning eng_intransitive_construction_Meaning ;
+    rcxn:hasMetadata eng_intransitive_construction_MD ;
+    rcxn:hasSlots eng_intransitive_construction_slots ;
+    rcxn:hasTitle "Intransitive Construction" .
