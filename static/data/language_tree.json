@@ -24,9 +24,16 @@
     "id": "eng",
     "text": "English",
     "children": [
-      {"id": "engUsSpo", "text": "Spoken American English"},
-      {"id": "engUsUkWr", "text": "Written British & American English"},
-      {"id": "engInf", "text": "Informal English"}
+      {"id": "engEME", "text": "Early Modern English (1500-1800)"},
+      {
+        "id": "engLME",
+        "text": "Late Modern English (1800-now)",
+        "children": [
+          {"id": "engUsSpo", "text": "Spoken American English"},
+          {"id": "engUsUkWr", "text": "Written British & American English"},
+          {"id": "engInf", "text": "Informal English"}
+        ]
+      }
     ]
   },
   {
