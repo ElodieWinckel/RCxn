@@ -2,7 +2,7 @@ from . import app_entries_blueprint
 import glob
 import re
 from flask import render_template, Response
-from rdflib import Graph, URIRef, Literal, Namespace, RDF, RDFS, FOAF
+from rdflib import Graph, URIRef, Literal, Namespace, RDF, RDFS, FOAF, SKOS
 import os
 
 ###################################################
@@ -46,7 +46,10 @@ def get_label_or_iri(term, data_graph, ont_graph):
     if isinstance(term, Literal):
         return str(term)
     elif isinstance(term, URIRef):
-        # First try ontology graph
+        # First try ontology graph with preflabel
+        for label in ont_graph.objects(term, SKOS.prefLabel):
+            return str(label)
+        # Then try ontology graph with label
         for label in ont_graph.objects(term, RDFS.label):
             return str(label)
         # Fallback: maybe the data graph has labels too
