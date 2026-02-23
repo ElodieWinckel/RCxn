@@ -151,6 +151,10 @@ cx:eng_VerbING a rcxn:Construction ;
     rcxn:hasTitle "Verb + -ing" ;
     lg:partOfLanguage lg:eng .
 
+cx:eng_come a rcxn:Construction ;
+    rcxn:hasTitle "come" ;
+    lg:partOfLanguage lg:eng .
+
 cx:eng_PrepositionalPhrase a rcxn:Construction ;
     rcxn:hasTitle "Prepositional Phrase" ;
     lg:partOfLanguage lg:eng .
