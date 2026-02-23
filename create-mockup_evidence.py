@@ -25,7 +25,7 @@ study = "FernandezSantos_20260130_629471"
 summary = "Participants' accuracy on subject relative clauses is at ceiling only when the verb follows the relativizer. Accuracy decreases when the verb is in a clause-final position. Object relative clauses are not at ceiling, but are misinterpreted as subject relative clauses over 90% of the time when there is no object marker and the verb follows the relativizer. The presence of an object marker does not impact accuracy when the verb is clause-final."
 
 g.add((rd[study], RDF.type, rdata.Study))
-g.add((rd[study], rdata.studyType, rdata.behavioral))
+g.add((rd[study], rdata.studyType, rdata.behavioralExperiment))
 g.add((rd[study], rdata.relevantFor, cx.Transitiveobjectrelativeclause))
 g.add((cx.Transitiveobjectrelativeclause, rdata.basedOnStudy, rd[study]))
 g.add((rd[study], rdata.dataRepository, Literal("https://osf.io/4x6pz/files/osfstorage")))
@@ -33,6 +33,6 @@ g.add((rd[study], rdata.publishedIn, Literal("Llompart, Fernández Santos & Dąb
 g.add((rd[study], rdata.Summary, Literal(summary)))
 
 # TODO create a real ontology
-g.add((rdata.behavioral, RDFS.label, Literal("Behavioral experiment")))
+g.add((rdata.behavioralExperiment, RDFS.label, Literal("Behavioral experiment")))
 
 g.serialize(destination="instance/Submissions/FernandezSantos_mockup_20250910_105826_rd.ttl", format='turtle')

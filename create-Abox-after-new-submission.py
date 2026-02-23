@@ -15,7 +15,7 @@ graph_membr = Graph()
 graph_references = Graph()
 
 # Load everything from the submissions (assuming that everything in the submission folder has now a green light)
-for ttl_file in glob.glob("instance/Submissions/*_cx.ttl"):
+for ttl_file in glob.glob("instance/Submissions/*.ttl"):
     g.parse(ttl_file, format="turtle")
 
 # Namespaces
@@ -23,6 +23,11 @@ cx = Namespace("http://example.org/cx/")
 g.bind("cx", cx)
 graph_cx.bind("cx", cx)
 graph_membr.bind("cx", cx)
+
+rd = Namespace("http://example.org/rd/")
+g.bind("rd", rd)
+graph_cx.bind("rd", rd)
+graph_membr.bind("rd", rd)
 
 membr = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#")
 g.bind("membr", membr)
@@ -316,6 +321,10 @@ def add_triples_recursively(g, graph_cx, subject):
 # Iterate over all triples in the original graph
 for s, p, o in g:
     if isinstance(s, URIRef) and str(s).startswith(cx):
+        add_triples_recursively(g, graph_cx, s)
+# For the moment, we save research data into cx. TODO: should we put them in their own Abox?
+for s, p, o in g:
+    if isinstance(s, URIRef) and str(s).startswith(rd):
         add_triples_recursively(g, graph_cx, s)
 
 # Serialize the filtered graph
