@@ -182,7 +182,7 @@ add_user("Keßler",
          "https://www.cxg.phil.fau.eu/person/florian-kesler/")
 add_user("Khanoub",
          "Rania",
-         "Project Khanoub",
+         "Competition and change in Modern English quantifier constructions",
          "https://www.cxg.phil.fau.eu/person/rania-khanoub/")
 add_user("Kissane",
          "Hassane",

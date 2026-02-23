@@ -268,6 +268,7 @@
         <dc:description xml:lang="en">link between &quot;similar or contrastive constructions, even when these constructions are not (immediately) subsumed under a schema&quot; (Diessel 2019:200)</dc:description>
         <rdfs:label xml:lang="en">horizontal paradigmatic link</rdfs:label>
         <skos:altLabel xml:lang="en">horizontal relation</skos:altLabel>
+        <skos:altLabel xml:lang="en">sister link</skos:altLabel>
     </owl:ObjectProperty>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#ParagRelHorizontal"/>

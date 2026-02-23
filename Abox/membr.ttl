@@ -365,7 +365,7 @@ membr:Project_Kessler_F250218 a rsrch:Finding ;
     rsrch:basedOn cx:Dooperationwithoperand1onoperand2construction .
 
 membr:Project_Khanoub a rsrch:Project ;
-    rsrch:projectName "Project Khanoub"@en .
+    rsrch:projectName "Competition and change in Modern English quantifier constructions"@en .
 
 membr:Project_Kissane a rsrch:Project ;
     rsrch:projectName "Form and meaning as factors in the identification and learning of constructional slots – English phrasal verbs and verb-preposition combinations"@en .
