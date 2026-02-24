@@ -21,25 +21,27 @@ g.bind("rd", rd)
 rdata = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rdata#")
 g.bind("rdata", rdata)
 
-g.add((cx.eng_ThisclosetoVingconstruction, cx.usesGesture, cx.SmallQuantityGestureConstruction))
-g.add((cx.SmallQuantityGestureConstruction, RDF.type, cx.GestureConstruction))
-g.add((cx.SmallQuantityGestureConstruction, cx.stratsOnSlot, cx.eng_ThisclosetoVingconstruction_1))
-g.add((cx.SmallQuantityGestureConstruction, cx.endsOnSlot, cx.eng_ThisclosetoVingconstruction_6))
-g.add((cx.SmallQuantityGestureConstruction, cx.hasPhases, Literal("1")))
-g.add((cx.SmallQuantityGestureConstruction, cx.hasTitle, Literal("Small Quantity Gesture Construction")))
-g.add((cx.SmallQuantityGestureConstruction, cx.hasForm, cx.SmallQuantityGestureConstruction_Form))
-g.add((cx.SmallQuantityGestureConstruction, cx.hasMeaning, cx.SmallQuantityGestureConstruction_Meaning))
+g.add((cx.eng_ThisclosetoVingconstruction, cx.usesGesture, cx.SmallQuantityGestureConstruction)) # TODO usesGesture in gstr
+g.add((cx.SmallQuantityGestureConstruction, RDF.type, cx.GestureConstruction)) # TODO GestureConstruction in rcxn
+g.add((cx.SmallQuantityGestureConstruction, lg.partOfLanguage, lg.eng))
 
-# Form
-g.add((cx.SmallQuantityGestureConstruction_Form, cx.handshape, Literal("Thumb and indey extended or crooked and parallel to each other.")))
+g.add((cx.SmallQuantityGestureConstruction, cx.stratsOnSlot, cx.eng_ThisclosetoVingconstruction_1)) # TODO stratsOnSlot gstr
+g.add((cx.SmallQuantityGestureConstruction, cx.endsOnSlot, cx.eng_ThisclosetoVingconstruction_6)) # TODO endsOnSlot in gstr
+g.add((cx.SmallQuantityGestureConstruction, cx.hasPhases, Literal("1"))) # TODO hasPhases in gstr
+g.add((cx.SmallQuantityGestureConstruction, rcxn.hasTitle, Literal("Small Quantity Gesture Construction")))
+g.add((cx.SmallQuantityGestureConstruction, cx.hasForm, cx.SmallQuantityGestureConstruction_Form)) # TODO hasForm in rcxn
+g.add((cx.SmallQuantityGestureConstruction, rcxn.hasMeaning, cx.SmallQuantityGestureConstruction_Meaning))
+
+# Form # TODO all properties in gstr
+g.add((cx.SmallQuantityGestureConstruction_Form, cx.handshape, Literal("Thumb and index extended or crooked and parallel to each other.")))
 g.add((cx.SmallQuantityGestureConstruction_Form, cx.handshape, Literal("Middle, right, and little fingers retracted toward the palm.")))
 g.add((cx.SmallQuantityGestureConstruction_Form, cx.orientation, Literal("Palm Lateral.")))
 g.add((cx.SmallQuantityGestureConstruction_Form, cx.movement, Literal("Static hold or beat.")))
 g.add((cx.SmallQuantityGestureConstruction_Form, cx.position, Literal("Central space or at face level.")))
 g.add((cx.SmallQuantityGestureConstruction_Form, cx.handedness, Literal("One-handed.")))
-g.add((cx.SmallQuantityGestureConstruction_Form, cx.duration, Literal("Usually for the entire duration of the co-occuring verbal construction.")))
+g.add((cx.SmallQuantityGestureConstruction_Form, cx.duration, Literal("Usually for the entire duration of the co-occurring verbal construction.")))
 
-# Meaning
+# Meaning # TODO all properties in gstr
 g.add((cx.SmallQuantityGestureConstruction_Meaning, cx.semanticProperty, Literal("Small quantity.")))
 g.add((cx.SmallQuantityGestureConstruction_Meaning, cx.pragmaticProperty, Literal("Affective/evaluative framing.")))
 g.add((cx.SmallQuantityGestureConstruction_Meaning, cx.pragmaticProperty, Literal("Foregrounding the small quantity of the referent.")))

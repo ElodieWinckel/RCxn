@@ -340,7 +340,7 @@ container.appendChild(createCrossTable(elements));
                 <tr>
                     <th>{{ row.property }}</th>
                     <td>
-                        {% if row.object.startswith('https://') %}
+                        {% if row.object.startswith('http') %}
                             <a href="{{ row.object }}" target="_blank">{{ row.object }}</a>
                         {% else %}
                             {{ row.object|safe }}

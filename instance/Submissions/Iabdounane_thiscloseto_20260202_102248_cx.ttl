@@ -20,8 +20,7 @@ cx:eng_PrepositionalPhrasetoPLUSVing_MD a rcxn:Metadata ;
     cx:annotator membr:Iabdounane ;
     rcxn:creationDate "2026-02-02"^^xsd:date .
 
-cx:eng_ThisclosetoVingconstruction_1 a rcxn:SlotMandatory ;
-    olia:hasSemanticRole olia:AgentRole ;
+cx:eng_ThisclosetoVingconstruction_1 a rcxn:SlotOptional ;
     rcxn:hasSyntacticFunction "Subject" .
 
 cx:eng_ThisclosetoVingconstruction_2 a rcxn:SlotMandatory ;
@@ -29,7 +28,7 @@ cx:eng_ThisclosetoVingconstruction_2 a rcxn:SlotMandatory ;
     rcxn:hasOtherSemanticContribution "CLOSE" ;
     rcxn:hasSyntacticFunction "PREDICATOR" .
 
-cx:eng_ThisclosetoVingconstruction_3 a rcxn:SlotMandatory ;
+cx:eng_ThisclosetoVingconstruction_3 a rcxn:SlotOptional ;
     rcxn:hasSlotForm cx:eng_ThisclosetoVingconstruction_3_Form .
 
 cx:eng_ThisclosetoVingconstruction_3_Form a rcxn:SlotForm ;
@@ -95,7 +94,7 @@ cx:eng_this_MD a rcxn:Metadata ;
     rcxn:creationDate "2026-02-02"^^xsd:date .
 
 cx:eng_ThisclosetoVingconstruction a rcxn:Construction ;
-    lg:partOfLanguage lg:eng ;
+    lg:partOfLanguage lg:engUsSpo ;
     rcxn:hasConstructionMeaning cx:eng_ThisclosetoVingconstruction_Meaning ;
     cx:hasExample cx:eng_ThisclosetoVingconstruction_Ex_A ;
     rcxn:hasMetadata cx:eng_ThisclosetoVingconstruction_MD ;
@@ -105,7 +104,8 @@ cx:eng_ThisclosetoVingconstruction a rcxn:Construction ;
 cx:eng_ThisclosetoVingconstruction_Ex_A a cx:Example ;
     cx:hasText "It was this close to happening, right? This close to happening! " ;
     cx:hasAnnotatedText "[It]1 [was this close]2 [to happening]6, right? [This close]2 [to happening]6! " ;
-    rdfs:comment "https://pisa.vrnewsscape.ucla.edu/newsscape_mp4_snippet.cgi?file=fa5d0dfc-cb7b-11e6-97cd-089e01ba0338&start=2396&end=2401" .
+    rdfs:comment "http://go.redhenlab.org/yas/0117" .
+# https://pisa.vrnewsscape.ucla.edu/newsscape_mp4_snippet.cgi?file=fa5d0dfc-cb7b-11e6-97cd-089e01ba0338&start=2396&end=2401
 
 membr:Project_Iabdounane rsrch:hasFindings membr:Project_Iabdounane_F250218 .
 

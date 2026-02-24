@@ -334,7 +334,7 @@ def construction_detail(uri):
     gesture = []
     gesture_title = ""
     for gesture_uri in g.objects(subject=entry_uri, predicate=cx.usesGesture):
-        for title in g.objects(subject=gesture_uri, predicate=cx.hasTitle):
+        for title in g.objects(subject=gesture_uri, predicate=rcxn.hasTitle):
             gesture_title = str(title)
         gesture_form_uri = gesture_uri + "_Form"
         gesture_meaning_uri = gesture_uri + "_Meaning"

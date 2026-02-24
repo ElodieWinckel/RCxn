@@ -1,16 +1,19 @@
 @prefix cx: <http://example.org/cx/> .
+@prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
+@prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
 
 cx:eng_ThisclosetoVingconstruction cx:usesGesture cx:SmallQuantityGestureConstruction .
 
 cx:SmallQuantityGestureConstruction a cx:GestureConstruction ;
     cx:endsOnSlot cx:eng_ThisclosetoVingconstruction_6 ;
     cx:hasForm cx:SmallQuantityGestureConstruction_Form ;
-    cx:hasMeaning cx:SmallQuantityGestureConstruction_Meaning ;
     cx:hasPhases "1" ;
-    cx:hasTitle "Small Quantity Gesture Construction" ;
-    cx:stratsOnSlot cx:eng_ThisclosetoVingconstruction_1 .
+    cx:stratsOnSlot cx:eng_ThisclosetoVingconstruction_1 ;
+    lg:partOfLanguage lg:eng ;
+    rcxn:hasMeaning cx:SmallQuantityGestureConstruction_Meaning ;
+    rcxn:hasTitle "Small Quantity Gesture Construction" .
 
-cx:SmallQuantityGestureConstruction_Form cx:duration "Usually for the entire duration of the co-occuring verbal construction." ;
+cx:SmallQuantityGestureConstruction_Form cx:duration "Usually for the entire duration of the co-occurring verbal construction." ;
     cx:handedness "One-handed." ;
     cx:handshape "Middle, right, and little fingers retracted toward the palm.",
         "Thumb and index extended or crooked and parallel to each other." ;
