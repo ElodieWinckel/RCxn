@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.semanticweb.org/em27upeq/ontologies/2025/7/untitled-ontology-83/"
-     xml:base="http://www.semanticweb.org/em27upeq/ontologies/2025/7/untitled-ontology-83/"
-     xmlns:lg="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#"
+<rdf:RDF xmlns="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#"
+     xml:base="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
