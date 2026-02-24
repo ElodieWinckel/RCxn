@@ -86,8 +86,9 @@ def add_entry_to_graph(entry):
         for expression in entry['ExpressionOf']:
             g.add((entry_uri, compcon.expressionOf, compcon[str.replace(expression,":","_")]))
 
-    # Add Definition
-    g.add((entry_uri, DC.description, Literal(entry['Definition'])))
+    # Add Definition (note: some definitions in the yaml-file are empty)
+    if entry['Definition'].strip():
+        g.add((entry_uri, RDFS.comment, Literal(entry['Definition'])))
 
     # Add Sections
     if 'Sections' in entry:
