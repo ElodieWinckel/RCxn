@@ -2,30 +2,11 @@
 @prefix cx: <http://example.org/cx/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
-compcon:compcon a rdfs:Class ;
-    rdfs:label "Comparative concept" .
-
-compcon:cxn a rdfs:Class ;
-    rdfs:label "construction" ;
-    rdfs:subClassOf compcon:compcon .
-
-compcon:inf a rdfs:Class ;
-    rdfs:label "information packaging" ;
-    rdfs:subClassOf compcon:compcon .
-
-compcon:sem a rdfs:Class ;
-    rdfs:label "meaning" ;
-    rdfs:subClassOf compcon:compcon .
-
-compcon:str a rdfs:Class ;
-    rdfs:label "strategy" ;
-    rdfs:subClassOf compcon:compcon .
-
-compcon:ExpressionOf a rdf:Property ;
+compcon:ExpressionOf a owl:ObjectProperty ;
     rdfs:label "Expresses" .
 
 compcon:cxn_action-modification-construction a compcon:cxn ;
@@ -616,10 +597,10 @@ compcon:def_word-class a compcon:def ;
         "properties",
         "syntactic category" .
 
-compcon:functionOf a rdf:Property ;
+compcon:functionOf a owl:ObjectProperty ;
     rdfs:label "Function of" .
 
-compcon:hasCompCon a rdf:Property ;
+compcon:hasCompCon a owl:ObjectProperty ;
     rdfs:label "Comparative Concept" .
 
 compcon:inf_aboutness a compcon:inf ;
@@ -1331,10 +1312,10 @@ compcon:inf_verbal-contrast a compcon:inf ;
     dcterms:isPartOf "11.4.1" ;
     compcon:subtypeOf compcon:inf_parallel-contrast .
 
-compcon:language a rdf:Property ;
+compcon:language a owl:ObjectProperty ;
     rdfs:label "Language" .
 
-compcon:roleOf a rdf:Property ;
+compcon:roleOf a owl:ObjectProperty ;
     rdfs:label "Role of" .
 
 compcon:sem_a-role a compcon:sem ;
@@ -5052,7 +5033,7 @@ compcon:str_zero-copula a compcon:str ;
     compcon:expressionOf compcon:cxn_nonprototypical-predication-construction ;
     compcon:subtypeOf compcon:str_zero-coding .
 
-compcon:subtypeOf a rdf:Property ;
+compcon:subtypeOf a owl:ObjectProperty ;
     rdfs:label "Subtype of" .
 
 compcon:a-not-a-example-0 a cx:Example ;
@@ -10187,6 +10168,9 @@ compcon:str_subject-predicate-alignment a compcon:str ;
     compcon:expressionOf compcon:cxn_thetic-construction ;
     compcon:subtypeOf compcon:str_alignment-system .
 
+compcon:compcon a owl:Class ;
+    rdfs:label "Comparative concept" .
+
 compcon:cxn_causative-construction a compcon:cxn ;
     rdfs:label "causative construction" ;
     cx:hasExample compcon:causative-construction-example-0 ;
@@ -11247,4 +11231,20 @@ compcon:str_encoding-strategy a compcon:str ;
     dcterms:isPartOf "1.4" ;
     compcon:expressionOf compcon:cxn_construction ;
     compcon:subtypeOf compcon:str_strategy .
+
+compcon:inf a owl:Class ;
+    rdfs:label "information packaging" ;
+    rdfs:subClassOf compcon:compcon .
+
+compcon:str a owl:Class ;
+    rdfs:label "strategy" ;
+    rdfs:subClassOf compcon:compcon .
+
+compcon:sem a owl:Class ;
+    rdfs:label "meaning" ;
+    rdfs:subClassOf compcon:compcon .
+
+compcon:cxn a owl:Class ;
+    rdfs:label "construction" ;
+    rdfs:subClassOf compcon:compcon .
 

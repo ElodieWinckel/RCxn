@@ -1,4 +1,4 @@
-from rdflib import Graph, Literal, Namespace, URIRef, RDF, RDFS, XSD, SKOS
+from rdflib import Graph, Literal, Namespace, URIRef, RDF, RDFS, OWL, SKOS
 from rdflib.namespace import DC, DCTERMS
 import yaml
 
@@ -15,37 +15,37 @@ g.bind("compcon", compcon)
 g.bind("cx", cx)
 
 # Define class "Comparative concept"
-g.add((compcon.compcon, RDF.type, RDFS.Class))
+g.add((compcon.compcon, RDF.type, OWL.Class))
 g.add((compcon.compcon, RDFS.label, Literal("Comparative concept")))
 
 # Define subclasses of "Comparative concept"
-g.add((compcon.sem, RDF.type, RDFS.Class))
+g.add((compcon.sem, RDF.type, OWL.Class))
 g.add((compcon.sem, RDFS.label, Literal("meaning")))
 g.add((compcon.sem, RDFS.subClassOf, compcon.compcon))
-g.add((compcon.inf, RDF.type, RDFS.Class))
+g.add((compcon.inf, RDF.type, OWL.Class))
 g.add((compcon.inf, RDFS.label, Literal("information packaging")))
 g.add((compcon.inf, RDFS.subClassOf, compcon.compcon))
-g.add((compcon.str, RDF.type, RDFS.Class))
+g.add((compcon.str, RDF.type, OWL.Class))
 g.add((compcon.str, RDFS.label, Literal("strategy")))
 g.add((compcon.str, RDFS.subClassOf, compcon.compcon))
-g.add((compcon.cxn, RDF.type, RDFS.Class))
+g.add((compcon.cxn, RDF.type, OWL.Class))
 g.add((compcon.cxn, RDFS.label, Literal("construction")))
 g.add((compcon.cxn, RDFS.subClassOf, compcon.compcon))
 
 # Define some properties introduced in the yaml database
-g.add((compcon.subtypeOf, RDF.type, RDF.Property))
+g.add((compcon.subtypeOf, RDF.type, OWL.ObjectProperty))
 g.add((compcon.subtypeOf, RDFS.label, Literal("Subtype of")))
-g.add((compcon.functionOf, RDF.type, RDF.Property))
+g.add((compcon.functionOf, RDF.type, OWL.ObjectProperty))
 g.add((compcon.functionOf, RDFS.label, Literal("Function of")))
-g.add((compcon.roleOf, RDF.type, RDF.Property))
+g.add((compcon.roleOf, RDF.type, OWL.ObjectProperty))
 g.add((compcon.roleOf, RDFS.label, Literal("Role of")))
-g.add((compcon.ExpressionOf, RDF.type, RDF.Property))
+g.add((compcon.ExpressionOf, RDF.type, OWL.ObjectProperty))
 g.add((compcon.ExpressionOf, RDFS.label, Literal("Expresses")))
-g.add((compcon.language, RDF.type, RDF.Property))
+g.add((compcon.language, RDF.type, OWL.ObjectProperty))
 g.add((compcon.language, RDFS.label, Literal("Language")))
 
 # Define property hasCompCon which will be used to annotate construction entries
-g.add((compcon.hasCompCon, RDF.type, RDF.Property))
+g.add((compcon.hasCompCon, RDF.type, OWL.ObjectProperty))
 g.add((compcon.hasCompCon, RDFS.label, Literal("Comparative Concept")))
 
 def add_entry_to_graph(entry):
