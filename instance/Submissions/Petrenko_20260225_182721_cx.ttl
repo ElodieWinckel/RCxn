@@ -1,0 +1,39 @@
+@prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cx: <http://example.org/cx/> .
+@prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
+@prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
+@prefix olia: <http://purl.org/olia/olia.owl#> .
+@prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+membr:Project_Petrenko rsrch:hasFindings membr:Project_Petrenko_F2602251827 .
+
+cx:engLME_GeneralPostmodifierofAdjectiveConstruction a rcxn:Construction ;
+    lg:partOfLanguage lg:engLME ;
+    rcxn:hasConstructionMeaning cx:engLME_GeneralPostmodifierofAdjectiveConstruction_Meaning ;
+    rcxn:hasMetadata cx:engLME_GeneralPostmodifierofAdjectiveConstruction_MD ;
+    rcxn:hasSlots cx:engLME_GeneralPostmodifierofAdjectiveConstruction_slots ;
+    rcxn:hasTitle "General Postmodifier-of-Adjective Construction" .
+
+cx:engLME_GeneralPostmodifierofAdjectiveConstruction_1 a rcxn:SlotMandatory ;
+    olia:hasSemanticRole <undefined> .
+
+cx:engLME_GeneralPostmodifierofAdjectiveConstruction_2 a rcxn:SlotMandatory ;
+    olia:hasSemanticRole <undefined> .
+
+cx:engLME_GeneralPostmodifierofAdjectiveConstruction_MD a rcxn:Metadata ;
+    rcxn:annotator membr:Petrenko ;
+    rcxn:creationDate "2026-02-25"^^xsd:date .
+
+cx:engLME_GeneralPostmodifierofAdjectiveConstruction_Meaning a rcxn:ConstructionMeaning .
+
+cx:engLME_GeneralPostmodifierofAdjectiveConstruction_slots a rdf:Seq ;
+    rdf:_1 cx:engLME_GeneralPostmodifierofAdjectiveConstruction_1 ;
+    rdf:_2 cx:engLME_GeneralPostmodifierofAdjectiveConstruction_2 .
+
+membr:Project_Petrenko_F2602251827 a rsrch:Finding ;
+    RDFS:label "Comparative concepts can partially be applied to CASA Constructicon." ;
+    rsrch:basedOn cx:engLME_GeneralPostmodifierofAdjectiveConstruction .
+
