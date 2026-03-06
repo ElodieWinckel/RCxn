@@ -2,9 +2,9 @@
 @prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
 @prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#> .
 @prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
-@prefix ns1: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/casa#> .
-@prefix ns2: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/compcon#> .
-@prefix ns3: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rdata#> .
+@prefix ns1: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/compcon#> .
+@prefix ns2: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rdata#> .
+@prefix ns3: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/casa#> .
 @prefix olia: <http://purl.org/olia/olia.owl#> .
 @prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
 @prefix rd: <http://example.org/rd/> .
@@ -46,8 +46,8 @@ cx:comePLUSnoisemannerofmovementVing_6_Form a rcxn:SlotForm ;
         cx:eng_PrepositionalPhrase .
 
 cx:engLME_GeneralPostmodifierofAdjectiveConstruction a rcxn:Construction ;
-    ns2:hasCompCon ns2:cxn_adjectival-phrase,
-        ns2:inf_modification ;
+    ns1:hasCompCon ns1:cxn_adjectival-phrase,
+        ns1:inf_modification ;
     lg:partOfLanguage lg:engLME ;
     rcxn:hasConstructionMeaning cx:engLME_GeneralPostmodifierofAdjectiveConstruction_Meaning ;
     rcxn:hasMetadata cx:engLME_GeneralPostmodifierofAdjectiveConstruction_MD ;
@@ -1720,11 +1720,9 @@ cx:engInf_Coolexclamativeconstruction_slots a rdf_ns:Seq ;
     rdf_ns:_1 cx:engInf_Coolexclamativeconstruction_1 ;
     rdf_ns:_2 cx:engInf_Coolexclamativeconstruction_2 .
 
-cx:engLME_GeneralPostmodifierofAdjectiveConstruction_1 a rcxn:SlotMandatory ;
-    olia:hasSemanticRole <file:///home/meuhlodi/Travail/RCxn/instance/Submissions/undefined> .
+cx:engLME_GeneralPostmodifierofAdjectiveConstruction_1 a rcxn:SlotMandatory .
 
-cx:engLME_GeneralPostmodifierofAdjectiveConstruction_2 a rcxn:SlotMandatory ;
-    olia:hasSemanticRole <file:///home/meuhlodi/Travail/RCxn/instance/Submissions/undefined> .
+cx:engLME_GeneralPostmodifierofAdjectiveConstruction_2 a rcxn:SlotMandatory .
 
 cx:engLME_GeneralPostmodifierofAdjectiveConstruction_MD a rcxn:Metadata ;
     rcxn:annotator membr:Petrenko ;
@@ -1846,7 +1844,7 @@ cx:eng_Adjective_MD a rcxn:Metadata ;
     rcxn:creationDate "2025-11-28"^^xsd:date .
 
 cx:eng_AttributeConstruction_1 a rcxn:SlotOptional ;
-    ns1:hasCasaSyntacticFunction "potential subject" ;
+    ns3:hasCasaSyntacticFunction "potential subject" ;
     rcxn:hasOtherSemanticContribution "Æffector" ;
     rcxn:hasSlotForm cx:eng_AttributeConstruction_1_Form ;
     rcxn:hasSyntacticFunction "potential subject" .
@@ -1864,7 +1862,7 @@ cx:eng_AttributeConstruction_2_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_Verb .
 
 cx:eng_AttributeConstruction_3 a rcxn:SlotMandatory ;
-    ns1:hasCasaSyntacticFunction "Obj" ;
+    ns3:hasCasaSyntacticFunction "Obj" ;
     rcxn:hasOtherSemanticContribution "Æffected-Attributee" ;
     rcxn:hasSlotForm cx:eng_AttributeConstruction_3_Form ;
     rcxn:hasSyntacticFunction "direct object" .
@@ -1873,7 +1871,7 @@ cx:eng_AttributeConstruction_3_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_NounPhrase .
 
 cx:eng_AttributeConstruction_4 a rcxn:SlotMandatory ;
-    ns1:hasCasaSyntacticFunction "Attr" ;
+    ns3:hasCasaSyntacticFunction "Attr" ;
     rcxn:hasOtherSemanticContribution "Attribute" ;
     rcxn:hasSlotForm cx:eng_AttributeConstruction_4_Form ;
     rcxn:hasSyntacticFunction "object complement" .
@@ -1932,7 +1930,7 @@ cx:eng_CauseMotionconstruction_slots a rdf_ns:Seq ;
     rdf_ns:_4 cx:eng_CauseMotionconstruction_4 .
 
 <http://example.org/cx/eng_DitransitiveConstructionObj:NP_1> a rcxn:SlotOptional ;
-    ns1:hasCasaSyntacticFunction "potential subject" ;
+    ns3:hasCasaSyntacticFunction "potential subject" ;
     rcxn:hasOtherSemanticContribution "Æffector" ;
     rcxn:hasSlotForm <http://example.org/cx/eng_DitransitiveConstructionObj:NP_1_Form> ;
     rcxn:hasSyntacticFunction "potential subject" .
@@ -1950,7 +1948,7 @@ cx:eng_CauseMotionconstruction_slots a rdf_ns:Seq ;
     rcxn:hasSyntacticForm cx:eng_Verb .
 
 <http://example.org/cx/eng_DitransitiveConstructionObj:NP_3> a rcxn:SlotMandatory ;
-    ns1:hasCasaSyntacticFunction "Obj" ;
+    ns3:hasCasaSyntacticFunction "Obj" ;
     rcxn:hasOtherSemanticContribution "Recipient" ;
     rcxn:hasSlotForm <http://example.org/cx/eng_DitransitiveConstructionObj:NP_3_Form> ;
     rcxn:hasSyntacticFunction "indirect object" .
@@ -1959,7 +1957,7 @@ cx:eng_CauseMotionconstruction_slots a rdf_ns:Seq ;
     rcxn:hasSyntacticForm cx:eng_NounPhrase .
 
 <http://example.org/cx/eng_DitransitiveConstructionObj:NP_4> a rcxn:SlotMandatory ;
-    ns1:hasCasaSyntacticFunction "Obj" ;
+    ns3:hasCasaSyntacticFunction "Obj" ;
     rcxn:hasOtherSemanticContribution "Æffected" ;
     rcxn:hasSlotForm <http://example.org/cx/eng_DitransitiveConstructionObj:NP_4_Form> ;
     rcxn:hasSyntacticFunction "direct object" .
@@ -2741,12 +2739,12 @@ cx:zho_VerbPhrase a rcxn:Construction ;
     rcxn:elementOf cx:Dooperationwithoperand1onoperand2construction ;
     rcxn:hasTitle "Verb Phrase" .
 
-rd:FernandezSantos_20260130_629471 a ns3:Study ;
-    ns3:Summary "Participants' accuracy on subject relative clauses is at ceiling only when the verb follows the relativizer. Accuracy decreases when the verb is in a clause-final position. Object relative clauses are not at ceiling, but are misinterpreted as subject relative clauses over 90% of the time when there is no object marker and the verb follows the relativizer. The presence of an object marker does not impact accuracy when the verb is clause-final." ;
-    ns3:dataRepository "https://osf.io/4x6pz/files/osfstorage" ;
-    ns3:publishedIn "Llompart, Fernández Santos & Dąbrowska (2024-10-10). Comprehension of object relatives in Spanish: the role of frequency and transparency in acquisition and adult grammar. 10.1515/cog-2024-0016" ;
-    ns3:relevantFor cx:Transitiveobjectrelativeclause ;
-    ns3:studyType ns3:behavioralExperiment .
+rd:FernandezSantos_20260130_629471 a ns2:Study ;
+    ns2:Summary "Participants' accuracy on subject relative clauses is at ceiling only when the verb follows the relativizer. Accuracy decreases when the verb is in a clause-final position. Object relative clauses are not at ceiling, but are misinterpreted as subject relative clauses over 90% of the time when there is no object marker and the verb follows the relativizer. The presence of an object marker does not impact accuracy when the verb is clause-final." ;
+    ns2:dataRepository "https://osf.io/4x6pz/files/osfstorage" ;
+    ns2:publishedIn "Llompart, Fernández Santos & Dąbrowska (2024-10-10). Comprehension of object relatives in Spanish: the role of frequency and transparency in acquisition and adult grammar. 10.1515/cog-2024-0016" ;
+    ns2:relevantFor cx:Transitiveobjectrelativeclause ;
+    ns2:studyType ns2:behavioralExperiment .
 
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions> a rcxn:Construction ;
     lg:partOfLanguage lg:deuStdHigh ;
@@ -3202,7 +3200,7 @@ cx:Transitiveobjectrelativeclause a rcxn:Construction ;
     rcxn:hasMetadata cx:Transitiveobjectrelativeclause_MD ;
     rcxn:hasSlots cx:Transitiveobjectrelativeclause_slots ;
     rcxn:hasTitle "Potentially ambiguous object relative clause" ;
-    ns3:basedOnStudy rd:FernandezSantos_20260130_629471 .
+    ns2:basedOnStudy rd:FernandezSantos_20260130_629471 .
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]> a rcxn:Construction ;
     lg:partOfLanguage lg:deuWrSt20 ;
