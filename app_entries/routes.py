@@ -187,13 +187,17 @@ rd = Namespace("http://example.org/rd/") #TODO: is this really the name?
 g.bind("rd", rd)
 rdata = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rdata#") #TODO: is this really the name? create ontology
 g.bind("rdata", rdata)
+compcon = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/compcon#")
+g.bind("compcon", compcon)
 
 # Load the ontologies
 ont = Graph()
 for xlm_file in glob.glob("ontologies/*.rdf"):
     ont.parse(xlm_file, format="xml")
-for xlm_file in glob.glob("ontologies/*.owl"):
+for xlm_file in glob.glob("ontologies/*.owl"): # for olia
     ont.parse(xlm_file, format="xml")
+for ttl_file in glob.glob("ontologies/*.ttl"): # for compcon
+    ont.parse(ttl_file, format="turtle")
 
 ###################################################
 ### CREATE A LIST OF CONSTRUCTIONS
@@ -317,6 +321,7 @@ def construction_detail(uri):
     triples[:] = [item for item in triples if item['property'] != "hasMetadata"]
     triples[:] = [item for item in triples if item['property'] != "Title"]
     triples[:] = [item for item in triples if item['property'] != "basedOnStudy"]
+    triples.sort(key=lambda x: x["property"], reverse=True)  # Sort in reverse alphabetical order so that "part of language" appears first
 
     # Collect triples for elements / slots
     elements, colloprofiles, list_of_nested = identify_construction_element_triples(slots_uri)

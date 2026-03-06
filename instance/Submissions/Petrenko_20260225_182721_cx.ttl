@@ -17,11 +17,9 @@ cx:engLME_GeneralPostmodifierofAdjectiveConstruction a rcxn:Construction ;
     rcxn:hasSlots cx:engLME_GeneralPostmodifierofAdjectiveConstruction_slots ;
     rcxn:hasTitle "General Postmodifier-of-Adjective Construction" .
 
-cx:engLME_GeneralPostmodifierofAdjectiveConstruction_1 a rcxn:SlotMandatory ;
-    olia:hasSemanticRole <undefined> .
+cx:engLME_GeneralPostmodifierofAdjectiveConstruction_1 a rcxn:SlotMandatory .
 
-cx:engLME_GeneralPostmodifierofAdjectiveConstruction_2 a rcxn:SlotMandatory ;
-    olia:hasSemanticRole <undefined> .
+cx:engLME_GeneralPostmodifierofAdjectiveConstruction_2 a rcxn:SlotMandatory .
 
 cx:engLME_GeneralPostmodifierofAdjectiveConstruction_MD a rcxn:Metadata ;
     rcxn:annotator membr:Petrenko ;

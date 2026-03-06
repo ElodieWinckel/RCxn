@@ -2,8 +2,9 @@
 @prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
 @prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#> .
 @prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
-@prefix ns1: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/casa#> .
+@prefix ns1: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/compcon#> .
 @prefix ns2: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rdata#> .
+@prefix ns3: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/casa#> .
 @prefix olia: <http://purl.org/olia/olia.owl#> .
 @prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
 @prefix rd: <http://example.org/rd/> .
@@ -43,6 +44,15 @@ cx:comePLUSnoisemannerofmovementVing_5_Form a rcxn:SlotForm ;
 cx:comePLUSnoisemannerofmovementVing_6_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_Particle,
         cx:eng_PrepositionalPhrase .
+
+cx:engLME_GeneralPostmodifierofAdjectiveConstruction a rcxn:Construction ;
+    ns1:hasCompCon ns1:cxn_adjectival-phrase,
+        ns1:inf_modification ;
+    lg:partOfLanguage lg:engLME ;
+    rcxn:hasConstructionMeaning cx:engLME_GeneralPostmodifierofAdjectiveConstruction_Meaning ;
+    rcxn:hasMetadata cx:engLME_GeneralPostmodifierofAdjectiveConstruction_MD ;
+    rcxn:hasSlots cx:engLME_GeneralPostmodifierofAdjectiveConstruction_slots ;
+    rcxn:hasTitle "General Postmodifier-of-Adjective Construction" .
 
 cx:eng_CauseMotionconstruction_2_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_Verb .
@@ -1356,6 +1366,84 @@ cx:Transitiveobjectrelativeclause_slots a rdf_ns:Seq ;
     rdf_ns:_5 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_5> ;
     rdf_ns:_6 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_6> .
 
+cx:arzCai_Ditransitiveconstruction a rcxn:Construction ;
+    cx:hasExample cx:arzCai_Ditransitiveconstruction_Ex_A,
+        cx:arzCai_Ditransitiveconstruction_Ex_B,
+        cx:arzCai_Ditransitiveconstruction_Ex_C ;
+    lg:partOfLanguage lg:arzCai ;
+    links:similarFormSimilarFunction cx:lidativeconstruction ;
+    rcxn:hasConstructionMeaning cx:arzCai_Ditransitiveconstruction_Meaning ;
+    rcxn:hasMetadata cx:arzCai_Ditransitiveconstruction_MD ;
+    rcxn:hasSlots cx:arzCai_Ditransitiveconstruction_slots ;
+    rcxn:hasTitle "Ditransitive construction" .
+
+cx:arzCai_Ditransitiveconstruction_1 a rcxn:SlotOptional ;
+    cx:WordOrder "Before Element 2" ;
+    cx:hasIndex cx:arzCai_Ditransitiveconstruction_1_Index ;
+    olia:hasSemanticRole olia:PositionerRole ;
+    rdfs:comment "Pronominal subjects are only expressed if emphasized" ;
+    rcxn:hasSyntacticFunction "subject" .
+
+cx:arzCai_Ditransitiveconstruction_1_Index a cx:Individual ;
+    olia:hasAnimacy olia:Animate .
+
+cx:arzCai_Ditransitiveconstruction_2 a rcxn:SlotMandatory ;
+    cx:WordOrder "After Element 1, before Elements 3 and 4" ;
+    rdfs:comment "colloprofile: idda; ʿallim; nāwil; massik; sallif; labbis; sallim; ḥammil; darris; šammim; fahhim; ḥaffaẓ; nassa; ballaġ; saʾal; fahhim; malla; warra; ḫassaṛ; ġaṛṛam; ʾallaʿ" ;
+    rcxn:hasSemanticProperty "Verbs of the four following groups: \"to give\", \"to provide s.o. with sth.\", \"to tell\", \"to withdraw\"" ;
+    rcxn:hasSyntacticFunction "Verb" .
+
+cx:arzCai_Ditransitiveconstruction_3 a rcxn:SlotMandatory ;
+    cx:WordOrder "After Element 2, before or after Element 4" ;
+    cx:hasIndex cx:arzCai_Ditransitiveconstruction_3_Index ;
+    olia:hasSemanticRole olia:RecipientRole ;
+    rdfs:comment "Obligatorily marked by the preposition/dative marker li- if the theme is pronominal, otherwise marking is optional. " ;
+    rcxn:hasSyntacticFunction "object" .
+
+cx:arzCai_Ditransitiveconstruction_3_Index a cx:Individual ;
+    olia:hasAnimacy olia:Animate .
+
+cx:arzCai_Ditransitiveconstruction_4 a rcxn:SlotMandatory ;
+    cx:WordOrder "After Element 2, before or after Element 3" ;
+    olia:hasSemanticRole olia:ThemeRole ;
+    rcxn:hasSyntacticFunction "Object" .
+
+cx:arzCai_Ditransitiveconstruction_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "[Leyla]1 [iddit]2 [(li-)Ḫālid]3 [il-kitāb]4." ;
+    cx:hasGlosses "Leyla give.3SGF.PERF (to-)Ḫālid the-book" ;
+    cx:hasText "Leyla iddit (li-)Ḫālid il-kitāb." ;
+    cx:hasTranslation "Leyla gave Ḫālid the book." .
+
+cx:arzCai_Ditransitiveconstruction_Ex_B a cx:Example ;
+    cx:hasAnnotatedText "[warrēt]2 [(li-)s-suwwāḥ]3 [il-matḥaf]4." ;
+    cx:hasGlosses "show.1SG.PERF (to-)the-tourists the-museum" ;
+    cx:hasText "warrēt (li-)s-suwwāḥ il-matḥaf" ;
+    cx:hasTranslation "I showed the tourists the museum." .
+
+cx:arzCai_Ditransitiveconstruction_Ex_C a cx:Example ;
+    cx:hasAnnotatedText "[fahhimti]2-[hā]4-[l-ha]3?" ;
+    cx:hasGlosses "explain.2SGF.PERF-OBJ.3SGF-DAT-OBJ.3SGF" ;
+    cx:hasText "fahhimti-hā-l-ha?" ;
+    cx:hasTranslation "Have you explained it to her?" .
+
+cx:arzCai_Ditransitiveconstruction_MD a rcxn:Metadata ;
+    cx:hasSources cx:arzCai_Ditransitiveconstruction_Sources ;
+    rcxn:annotator membr:Bayer ;
+    rcxn:creationDate "2026-02-25"^^xsd:date .
+
+cx:arzCai_Ditransitiveconstruction_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "[ÆFFECTOR]1 makes [RECIPIENT]3 receive or lose [ÆFFECTED]4" .
+
+cx:arzCai_Ditransitiveconstruction_Sources a cx:Collection ;
+    cx:hasLiterature <file:///home/meuhlodi/Travail/RCxn/instance/Submissions/Diem_2002>,
+        <file:///home/meuhlodi/Travail/RCxn/instance/Submissions/Woidich_2006> .
+
+cx:arzCai_Ditransitiveconstruction_slots a rdf_ns:Seq ;
+    rdf_ns:_1 cx:arzCai_Ditransitiveconstruction_1 ;
+    rdf_ns:_2 cx:arzCai_Ditransitiveconstruction_2 ;
+    rdf_ns:_3 cx:arzCai_Ditransitiveconstruction_3 ;
+    rdf_ns:_4 cx:arzCai_Ditransitiveconstruction_4 .
+
 cx:comePLUSnoisemannerofmovementVing_1 a rcxn:SlotOptional ;
     rcxn:hasSemanticRole olia:UndergoerMacroRole ;
     rcxn:hasSlotForm cx:comePLUSnoisemannerofmovementVing_1_Form ;
@@ -1632,6 +1720,20 @@ cx:engInf_Coolexclamativeconstruction_slots a rdf_ns:Seq ;
     rdf_ns:_1 cx:engInf_Coolexclamativeconstruction_1 ;
     rdf_ns:_2 cx:engInf_Coolexclamativeconstruction_2 .
 
+cx:engLME_GeneralPostmodifierofAdjectiveConstruction_1 a rcxn:SlotMandatory .
+
+cx:engLME_GeneralPostmodifierofAdjectiveConstruction_2 a rcxn:SlotMandatory .
+
+cx:engLME_GeneralPostmodifierofAdjectiveConstruction_MD a rcxn:Metadata ;
+    rcxn:annotator membr:Petrenko ;
+    rcxn:creationDate "2026-02-25"^^xsd:date .
+
+cx:engLME_GeneralPostmodifierofAdjectiveConstruction_Meaning a rcxn:ConstructionMeaning .
+
+cx:engLME_GeneralPostmodifierofAdjectiveConstruction_slots a rdf_ns:Seq ;
+    rdf_ns:_1 cx:engLME_GeneralPostmodifierofAdjectiveConstruction_1 ;
+    rdf_ns:_2 cx:engLME_GeneralPostmodifierofAdjectiveConstruction_2 .
+
 cx:eng_AdjectiveAttributiveconstruction_1 a rcxn:SlotOptional ;
     rcxn:hasSlotForm cx:eng_AdjectiveAttributiveconstruction_1_Form .
 
@@ -1742,7 +1844,7 @@ cx:eng_Adjective_MD a rcxn:Metadata ;
     rcxn:creationDate "2025-11-28"^^xsd:date .
 
 cx:eng_AttributeConstruction_1 a rcxn:SlotOptional ;
-    ns1:hasCasaSyntacticFunction "potential subject" ;
+    ns3:hasCasaSyntacticFunction "potential subject" ;
     rcxn:hasOtherSemanticContribution "Æffector" ;
     rcxn:hasSlotForm cx:eng_AttributeConstruction_1_Form ;
     rcxn:hasSyntacticFunction "potential subject" .
@@ -1760,7 +1862,7 @@ cx:eng_AttributeConstruction_2_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_Verb .
 
 cx:eng_AttributeConstruction_3 a rcxn:SlotMandatory ;
-    ns1:hasCasaSyntacticFunction "Obj" ;
+    ns3:hasCasaSyntacticFunction "Obj" ;
     rcxn:hasOtherSemanticContribution "Æffected-Attributee" ;
     rcxn:hasSlotForm cx:eng_AttributeConstruction_3_Form ;
     rcxn:hasSyntacticFunction "direct object" .
@@ -1769,7 +1871,7 @@ cx:eng_AttributeConstruction_3_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_NounPhrase .
 
 cx:eng_AttributeConstruction_4 a rcxn:SlotMandatory ;
-    ns1:hasCasaSyntacticFunction "Attr" ;
+    ns3:hasCasaSyntacticFunction "Attr" ;
     rcxn:hasOtherSemanticContribution "Attribute" ;
     rcxn:hasSlotForm cx:eng_AttributeConstruction_4_Form ;
     rcxn:hasSyntacticFunction "object complement" .
@@ -1828,7 +1930,7 @@ cx:eng_CauseMotionconstruction_slots a rdf_ns:Seq ;
     rdf_ns:_4 cx:eng_CauseMotionconstruction_4 .
 
 <http://example.org/cx/eng_DitransitiveConstructionObj:NP_1> a rcxn:SlotOptional ;
-    ns1:hasCasaSyntacticFunction "potential subject" ;
+    ns3:hasCasaSyntacticFunction "potential subject" ;
     rcxn:hasOtherSemanticContribution "Æffector" ;
     rcxn:hasSlotForm <http://example.org/cx/eng_DitransitiveConstructionObj:NP_1_Form> ;
     rcxn:hasSyntacticFunction "potential subject" .
@@ -1846,7 +1948,7 @@ cx:eng_CauseMotionconstruction_slots a rdf_ns:Seq ;
     rcxn:hasSyntacticForm cx:eng_Verb .
 
 <http://example.org/cx/eng_DitransitiveConstructionObj:NP_3> a rcxn:SlotMandatory ;
-    ns1:hasCasaSyntacticFunction "Obj" ;
+    ns3:hasCasaSyntacticFunction "Obj" ;
     rcxn:hasOtherSemanticContribution "Recipient" ;
     rcxn:hasSlotForm <http://example.org/cx/eng_DitransitiveConstructionObj:NP_3_Form> ;
     rcxn:hasSyntacticFunction "indirect object" .
@@ -1855,7 +1957,7 @@ cx:eng_CauseMotionconstruction_slots a rdf_ns:Seq ;
     rcxn:hasSyntacticForm cx:eng_NounPhrase .
 
 <http://example.org/cx/eng_DitransitiveConstructionObj:NP_4> a rcxn:SlotMandatory ;
-    ns1:hasCasaSyntacticFunction "Obj" ;
+    ns3:hasCasaSyntacticFunction "Obj" ;
     rcxn:hasOtherSemanticContribution "Æffected" ;
     rcxn:hasSlotForm <http://example.org/cx/eng_DitransitiveConstructionObj:NP_4_Form> ;
     rcxn:hasSyntacticFunction "direct object" .
@@ -2592,6 +2694,16 @@ cx:ita_VerbPhrase a rcxn:Construction ;
     lg:partOfLanguage lg:ita ;
     rcxn:elementOf cx:Relative-Topic-ShiftConstruction ;
     rcxn:hasTitle "Verb Phrase" .
+
+cx:lidativeconstruction a rcxn:Construction ;
+    lg:partOfLanguage lg:arzCai ;
+    links:similarFormSimilarFunction cx:arzCai_Ditransitiveconstruction ;
+    rcxn:hasMetadata cx:lidativeconstruction_MD ;
+    rcxn:hasTitle "li-dative construction" .
+
+cx:lidativeconstruction_MD a rcxn:Metadata ;
+    cx:annotator membr:Bayer ;
+    rcxn:creationDate "2026-02-25"^^xsd:date .
 
 cx:spa_PrepositionalPhrase a rcxn:Construction ;
     lg:partOfLanguage lg:spa ;

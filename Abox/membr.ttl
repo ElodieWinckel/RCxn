@@ -18,7 +18,8 @@ membr:Badawi a foaf:Person ;
     foaf:homepage <https://www.cxg.phil.fau.eu/person/soran-badawi/> .
 
 membr:Bayer a foaf:Person ;
-    foaf:currentProject membr:Project_Bayer ;
+    foaf:currentProject membr:Project_Bayer,
+        membr:Project_Bayer_2602251146 ;
     foaf:familyName "Bayer" ;
     foaf:givenName "Nadine" ;
     foaf:homepage <https://www.cxg.phil.fau.eu/person/nadine-bayer/> .
@@ -260,7 +261,12 @@ membr:Project_Badawi a rsrch:Project ;
     rsrch:projectName "Corpus-based measures of constructionhood"@en .
 
 membr:Project_Bayer a rsrch:Project ;
+    rsrch:hasResearchQuestion membr:Project_Bayer_2602251146 ;
     rsrch:projectName "Differential argument marking in Arabic"@en .
+
+membr:Project_Bayer_2602251146_F2602251146 a rsrch:Finding ;
+    rdfs:label "Marking of the recipient is conditioned by expectation sensitivity and is advancing." ;
+    rsrch:basedOn cx:arzCai_Ditransitiveconstruction .
 
 membr:Project_BenitoFernandez a rsrch:Project ;
     rsrch:projectName "Spanish quotative constructions in oral narratives — an Interactional Construction Grammar approach"@en .
@@ -408,7 +414,12 @@ membr:Project_Patel_241128 a rsrch:Project ;
     rsrch:projectName "Identifying semantic sub-constructions of the V-ing pattern" .
 
 membr:Project_Petrenko a rsrch:Project ;
+    rsrch:hasFindings membr:Project_Petrenko_F2602251827 ;
     rsrch:projectName "Comparing constructions cross-linguistically — Connecting constructicons"@en .
+
+membr:Project_Petrenko_F2602251827 a rsrch:Finding ;
+    rdfs:label "Comparative concepts can partially be applied to CASA Constructicon." ;
+    rsrch:basedOn cx:engLME_GeneralPostmodifierofAdjectiveConstruction .
 
 membr:Project_Prela a rsrch:Project ;
     rsrch:projectName "Project Prela"@en .
@@ -479,6 +490,10 @@ membr:Project_Winckel_F2511281100 a rsrch:Finding ;
 
 membr:Project_Wright a rsrch:Project ;
     rsrch:projectName "Project Wright"@en .
+
+membr:Project_Bayer_2602251146 a rsrch:Project ;
+    rsrch:hasFindings membr:Project_Bayer_2602251146_F2602251146 ;
+    rsrch:projectName "Recipient marking in Cairo Arabic" .
 
 membr:Project_Winckel_2601131454 a rsrch:Project ;
     rsrch:hasFindings membr:Project_Winckel_2601131454_F2601131454 ;
