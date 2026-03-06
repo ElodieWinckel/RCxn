@@ -1,0 +1,47 @@
+@prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cx: <http://example.org/cx/> .
+@prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
+@prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
+@prefix olia: <http://purl.org/olia/olia.owl#> .
+@prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+membr:Project_Petrenko rsrch:hasFindings membr:Project_Petrenko_F2603061553 .
+
+cx:engLME_MoreThanComparisonConstructiontype2 a rcxn:Construction ;
+    lg:partOfLanguage lg:engLME ;
+    rcxn:hasConstructionMeaning cx:engLME_MoreThanComparisonConstructiontype2_Meaning ;
+    rcxn:hasMetadata cx:engLME_MoreThanComparisonConstructiontype2_MD ;
+    rcxn:hasSlots cx:engLME_MoreThanComparisonConstructiontype2_slots ;
+    rcxn:hasTitle "More-Than-Comparison Construction (type 2)" .
+
+cx:engLME_MoreThanComparisonConstructiontype2_1 a rcxn:SlotMandatory ;
+    olia:hasSemanticRole <undefined> .
+
+cx:engLME_MoreThanComparisonConstructiontype2_2 a rcxn:SlotMandatory ;
+    olia:hasSemanticRole <undefined> .
+
+cx:engLME_MoreThanComparisonConstructiontype2_3 a rcxn:SlotMandatory ;
+    olia:hasSemanticRole <undefined> .
+
+cx:engLME_MoreThanComparisonConstructiontype2_4 a rcxn:SlotMandatory ;
+    olia:hasSemanticRole <undefined> .
+
+cx:engLME_MoreThanComparisonConstructiontype2_MD a rcxn:Metadata ;
+    rcxn:annotator membr:Petrenko ;
+    rcxn:creationDate "2026-03-06"^^xsd:date .
+
+cx:engLME_MoreThanComparisonConstructiontype2_Meaning a rcxn:ConstructionMeaning .
+
+cx:engLME_MoreThanComparisonConstructiontype2_slots a rdf:Seq ;
+    rdf:_1 cx:engLME_MoreThanComparisonConstructiontype2_1 ;
+    rdf:_2 cx:engLME_MoreThanComparisonConstructiontype2_2 ;
+    rdf:_3 cx:engLME_MoreThanComparisonConstructiontype2_3 ;
+    rdf:_4 cx:engLME_MoreThanComparisonConstructiontype2_4 .
+
+membr:Project_Petrenko_F2603061553 a rsrch:Finding ;
+    RDFS:label "Comparative concepts can partially be applied to CASA Constructicon." ;
+    rsrch:basedOn cx:engLME_MoreThanComparisonConstructiontype2 .
+
