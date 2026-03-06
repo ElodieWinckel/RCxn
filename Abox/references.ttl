@@ -6,6 +6,12 @@
     dc:title "Constructions at Work" ;
     dc:type "Book" .
 
+<file:///home/meuhlodi/Travail/RCxn/instance/Submissions/Diem_2002> dc:creator "Werner Diem" ;
+    dc:date "2002" ;
+    dc:publisher "Harrassowitz" ;
+    dc:title "Translokative Verben im Arabischen" ;
+    dc:type "Book" .
+
 <file:///home/meuhlodi/Travail/RCxn/instance/Submissions/Goldberg_1995> dc:creator "Adele E. Goldberg" ;
     dc:date "1995" ;
     dc:publisher "University of Chicago Press" ;
@@ -45,6 +51,12 @@
     dc:publisher "Dunod" ;
     dc:title "Les neuf chapitres: Le classique mathématique de la Chine ancienne et ses commentaires" ;
     dc:type "book" .
+
+<file:///home/meuhlodi/Travail/RCxn/instance/Submissions/Woidich_2006> dc:creator "Manfred Woidich" ;
+    dc:date "2006" ;
+    dc:publisher "Harrassowitz" ;
+    dc:title "Das Kairensisch-Arabische. Eine Grammatik" ;
+    dc:type "Book" .
 
 <file:///home/meuhlodi/Travail/RCxn/instance/Submissions/www.english-corpora.org/bnc/> dc:contributor "Davies, Mark" ;
     dc:date "2024" ;
