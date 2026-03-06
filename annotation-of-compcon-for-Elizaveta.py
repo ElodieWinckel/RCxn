@@ -14,10 +14,6 @@ OUTPUT_DIR = "instance/Submissions"
 
 
 def load_compcon_mapping():
-    """
-    Creates a mapping:
-    (label, class) -> compcon IRI
-    """
     g = Graph()
     g.parse(ONTOLOGY_FILE)
 
