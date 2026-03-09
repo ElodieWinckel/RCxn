@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Comparative Concept - {{ title }}{% endblock %}
+
+{% block content %}
+
+    <h1>{{ title }}</h1>
+    <table border="1">
+        {% for triple in description %}
+            <tr>
+                <th>{{ triple.property }}</th>
+                <td>
+                    <span title="{{ triple.definition }}">
+                        {% if triple.url %}
+                            <a href="{{ url_for('app_entries.construction_detail', uri=triple.url) }}" target="_blank">
+                                {{ triple.object }}
+                            </a>
+                        {% else %}
+                            {{ triple.object }}
+                        {% endif %}
+                    </span>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+
+    <p>
+    <a href="{{ url_for('app_compcon.list_view') }}">Back to list of Comparative Concepts</a>
+    </p>
+
+</body>
+{% endblock %}

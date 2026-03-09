@@ -9,7 +9,15 @@
         {% for triple in triples %}
             <tr>
                 <th>{{ triple.property }}</th>
-                <td>{% if triple.property == 'Meaning of the construction' %}{{ triple.object|safe }}{% else %}{{ triple.object }}{% endif %}</td>
+                <td>
+                    <span title="{{ triple.definition }}">
+                        {% if triple.property == 'Meaning of the construction' %}
+                            {{ triple.object|safe }}
+                        {% else %}
+                            {{ triple.object }}
+                        {% endif %}
+                    </span>
+                </td>
             </tr>
         {% endfor %}
     </table>
@@ -88,9 +96,9 @@ function createCrossTable(data) {
         });
     });
 
-    // Populate with object + href
-    data.forEach(({ subject, property, object, href }) => {
-        tableData[property][subject].push({ object, href });
+    // Populate with object + href + definition
+    data.forEach(({ subject, property, object, href, definition }) => {
+    tableData[property][subject].push({ object, href, definition });
     });
 
     const desiredOrder = [
@@ -128,9 +136,14 @@ function createCrossTable(data) {
     // Helper: render only top-level values for a cell
     //---------------------------------------------
     function renderTopLevelValues(values) {
-        return values.map(v =>
-            v.href ? `<a href="${v.href}" target="_blank">${v.object}</a>` : v.object
-        ).join('<br>');
+        return values.map(v => {
+            const title = v.definition ? ` title="${v.definition}"` : '';
+            if (v.href) {
+                return `<a href="${v.href}" target="_blank"${title}>${v.object}</a>`;
+            } else {
+                return `<span${title}>${v.object}</span>`;
+            }
+        }).join('<br>');
     }
 
     //---------------------------------------------
@@ -181,9 +194,14 @@ function createCrossTable(data) {
             nested += `<td style="padding:4px 6px; font-weight:bold;">${prop}</td>`;
             nested += childSubjects.map(s => {
                 const vals = nestedTableData[prop][s] || [];
-                return `<td style="padding:4px 6px;">${vals.map(v =>
-                    v.href ? `<a href="${v.href}" target="_blank">${v.object}</a>` : v.object
-                ).join('<br>')}</td>`;
+                return `<td style="padding:4px 6px;">${
+                    vals.map(v => {
+                        const title = v.definition ? ` title="${v.definition}"` : '';
+                        return v.href
+                            ? `<a href="${v.href}" target="_blank"${title}>${v.object}</a>`
+                            : `<span${title}>${v.object}</span>`;
+                    }).join('<br>')
+                }</td>`;
             }).join('');
             nested += `</tr>`;
         });
