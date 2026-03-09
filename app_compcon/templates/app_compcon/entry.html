@@ -11,8 +11,10 @@
                 <th>{{ triple.property }}</th>
                 <td>
                     <span title="{{ triple.definition }}">
-                        {% if triple.property == 'Meaning of the construction' %}
-                            {{ triple.object|safe }}
+                        {% if triple.url %}
+                            <a href="{{ url_for('app_entries.construction_detail', uri=triple.url) }}" target="_blank">
+                                {{ triple.object }}
+                            </a>
                         {% else %}
                             {{ triple.object }}
                         {% endif %}

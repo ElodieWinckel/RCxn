@@ -1,3 +1,5 @@
+from typing import Any
+
 from . import app_compcon_blueprint
 import glob
 import re
@@ -80,25 +82,39 @@ for ttl_file in glob.glob("ontologies/*.ttl"): # for compcon
 
 @app_compcon_blueprint.route("/")
 def list_view():
-    list_of_sem = []
+    list_of_sem = list_comparative_concept_for_one_type(compcon.sem)
+    list_of_inf = list_comparative_concept_for_one_type(compcon.inf)
+    list_of_str = list_comparative_concept_for_one_type(compcon.str)
+    list_of_cxn = list_comparative_concept_for_one_type(compcon.cxn)
 
-    for cc in ont.subjects(predicate=RDF.type, object=compcon.sem):
+    return render_template("app_compcon/list.html",
+                           list_of_sem=list_of_sem,
+                           list_of_inf=list_of_inf,
+                           list_of_str=list_of_str,
+                           list_of_cxn=list_of_cxn)
+
+
+def list_comparative_concept_for_one_type(CCtype) -> list[Any]:
+    list_of_CC = []
+
+    CCtype = CCtype
+    for cc in ont.subjects(predicate=RDF.type, object=CCtype):
         compcon_uri = str(cc)
         title = str(ont.value(subject=cc, predicate=RDFS.label))
 
         # Append construction details as dictionary
-        list_of_sem.append({
+        list_of_CC.append({
             'uri': compcon_uri,
             'title': title
         })
 
     # Sorting in alphabetical order
-    list_of_sem = sorted(
-        list_of_sem,
+    list_of_CC = sorted(
+        list_of_CC,
         key=lambda x: (x['title'].lower())
     )
+    return list_of_CC
 
-    return render_template("app_compcon/list.html", list_of_sem=list_of_sem)
 
 ###################################################
 ### CREATE CONSTRUCTION ENTRIES
@@ -118,16 +134,18 @@ def comparative_concept_detail(uri):
             'object': get_label_or_iri(obj, g, ont)
         })
 
-    # Collect all triples from the A-box where entry_uri is the subject
-    for predicate, obj in g.predicate_objects(subject=entry_uri):
+    # Collect constructions that use entry_uri as a comparative concept
+    for subj in g.subjects(predicate=compcon.hasCompCon,object=entry_uri):
+        name = g.value(subject=subj, predicate=URIRef("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#hasTitle"))
+        url = re.sub("http://example.org/cx/","", str(subj))
         description.append({
-            'property': get_label_or_iri(predicate, g, ont),
-            'object': get_label_or_iri(obj, g, ont)
+            'property': 'Corresponding construction',
+            'object': name,
+            'url': url,
         })
 
     # Fetch the title to display
     title = ont.value(entry_uri, RDFS.label)
-    print(title)
 
     return render_template("app_compcon/entry.html",
                            title = title,
