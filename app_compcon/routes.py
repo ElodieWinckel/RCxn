@@ -126,7 +126,9 @@ def comparative_concept_detail(uri):
         })
 
     # Fetch the title to display
-#    title = g.value(entry_uri, rcxn.hasTitle)
+    title = ont.value(entry_uri, RDFS.label)
+    print(title)
 
     return render_template("app_compcon/entry.html",
+                           title = title,
                            description = description)
