@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Construction Details - {{ title }}{% endblock %}
+
+{% block content %}
+
+    <h1>{{ title }}</h1>
+    <table border="1">
+        {% for triple in description %}
+            <tr>
+                <th>{{ triple.property }}</th>
+                <td>
+                    <span title="{{ triple.definition }}">
+                        {% if triple.property == 'Meaning of the construction' %}
+                            {{ triple.object|safe }}
+                        {% else %}
+                            {{ triple.object }}
+                        {% endif %}
+                    </span>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+
+    <p>
+    <a href="{{ url_for('app_compcon.list_view') }}">Back to Constructions List</a>
+    </p>
+
+</body>
+{% endblock %}
