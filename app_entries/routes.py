@@ -42,7 +42,7 @@ prefixes = ("http://example.org/cx/|"
             "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rdata#")
 
 def get_label_or_iri(term, data_graph, ont_graph):
-    """Return rdfs:label from ontologies if available."""
+    """Return skos:prefLabel or rdfs:label from ontologies if available."""
     if isinstance(term, Literal):
         return str(term)
     elif isinstance(term, URIRef):
@@ -59,6 +59,22 @@ def get_label_or_iri(term, data_graph, ont_graph):
         return re.sub(prefixes, "", str(term))
     else:
         return str(term)
+
+def get_definition(term, data_graph, ont_graph):
+    """Return rdfs:comment from ontologies if available."""
+    if isinstance(term, Literal):
+        return str(term)
+    elif isinstance(term, URIRef):
+        # Keep only the text, getting rid of html code <a>, </i> etc.
+        for definition in ont_graph.objects(term, RDFS.comment):
+            return re.sub(r'<[^>]+>', '', str(definition))
+        # Fallback: maybe the data graph has labels too
+        for definition in data_graph.objects(term, RDFS.comment):
+            return re.sub(r'<[^>]+>', '', str(definition))
+        # Last resort: empty string
+        return str("")
+    else:
+        return str("")
 
 def identify_construction_element_triples(slots_uri):
     # Step 1: Extract the elements of the sequence
@@ -297,6 +313,7 @@ def construction_detail(uri):
                     triples.append({
                         'property': get_label_or_iri(predicate, g, ont),
                         'object': get_label_or_iri(obj, g, ont),
+                        'definition': get_definition(obj, g, ont),
                     })
 
     # Add triples for meaning
@@ -313,6 +330,7 @@ def construction_detail(uri):
                 triples.append({
                     'property': get_label_or_iri(predicate, g, ont),
                     'object': get_label_or_iri(obj, g, ont),
+                    'definition': get_definition(obj, g, ont),
                 })
 
     triples[:] = [item for item in triples if item['property'] != "hasConstructionMeaning"]
