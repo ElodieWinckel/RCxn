@@ -63,7 +63,7 @@ def get_label_or_iri(term, data_graph, ont_graph):
 def get_definition(term, data_graph, ont_graph):
     """Return rdfs:comment from ontologies if available."""
     if isinstance(term, Literal):
-        return str(term)
+        return str("")
     elif isinstance(term, URIRef):
         # Keep only the text, getting rid of html code <a>, </i> etc.
         for definition in ont_graph.objects(term, RDFS.comment):
@@ -113,6 +113,7 @@ def identify_construction_element_triples(slots_uri):
                 elements.append({
                     'subject': element_number,
                     'property': "Optionality",
+                    'definition': get_definition(obj, g, ont),
                     'object': get_label_or_iri(obj, g, ont),
                 })
             else:
@@ -126,6 +127,7 @@ def identify_construction_element_triples(slots_uri):
                     elements.append({
                         'subject': element_number,
                         'property': get_label_or_iri(predicate, g, ont),
+                        'definition': get_definition(obj, g, ont),
                         'object': get_label_or_iri(obj, g, ont),
                     })
 
@@ -138,6 +140,7 @@ def identify_construction_element_triples(slots_uri):
                     'subject': element_number,
                     'property': get_label_or_iri(predicate, g, ont),
                     'object': get_label_or_iri(title, g, ont),
+                    'definition': get_definition(obj, g, ont),
                     'href': get_label_or_iri(obj, g, ont),
                 })
             elif predicate == cx.hasSlotForm and not isinstance(obj, Literal):
@@ -146,6 +149,7 @@ def identify_construction_element_triples(slots_uri):
                 elements.append({
                     'subject': element_number,
                     'property': get_label_or_iri(predicate, g, ont),
+                    'definition': get_definition(obj, g, ont),
                     'object': get_label_or_iri(obj, g, ont),
                 })
 
@@ -155,6 +159,7 @@ def identify_construction_element_triples(slots_uri):
             elements.append({
                 'subject': element_number,
                 'property': get_label_or_iri(predicate, g, ont),
+                'definition': get_definition(obj, g, ont),
                 'object': get_label_or_iri(obj, g, ont),
             })
     elements[:] = [item for item in elements if item['property'] != "type"]
