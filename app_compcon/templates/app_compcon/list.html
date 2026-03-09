@@ -4,6 +4,8 @@
 <div class="container" style="max-width: 1000px; margin: auto;">
   <h1>Comparative Concepts</h1>
 
+  <h2>Sem</h2>
+
   {% for cc in list_of_sem %}
       <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 10px; padding: 4px 0;">
         <div>
@@ -13,6 +15,43 @@
         </div>
       </div>
   {% endfor %}
+
+    <h2>Inf</h2>
+
+  {% for cc in list_of_inf %}
+      <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 10px; padding: 4px 0;">
+        <div>
+          <a href="{{ url_for('app_compcon.comparative_concept_detail', uri=cc.uri|replace('https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/compcon#', '')) }}">
+            {{ cc.title }}
+          </a>
+        </div>
+      </div>
+  {% endfor %}
+
+    <h2>Str</h2>
+
+  {% for cc in list_of_str %}
+      <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 10px; padding: 4px 0;">
+        <div>
+          <a href="{{ url_for('app_compcon.comparative_concept_detail', uri=cc.uri|replace('https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/compcon#', '')) }}">
+            {{ cc.title }}
+          </a>
+        </div>
+      </div>
+  {% endfor %}
+
+    <h2>Cxn</h2>
+
+  {% for cc in list_of_cxn %}
+      <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 10px; padding: 4px 0;">
+        <div>
+          <a href="{{ url_for('app_compcon.comparative_concept_detail', uri=cc.uri|replace('https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/compcon#', '')) }}">
+            {{ cc.title }}
+          </a>
+        </div>
+      </div>
+  {% endfor %}
+
 </div>
 
 {% endblock %}
