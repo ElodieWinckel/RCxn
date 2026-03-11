@@ -136,8 +136,18 @@ def comparative_concept_detail(uri):
 
     # Collect constructions that use entry_uri as a comparative concept
     for subj in g.subjects(predicate=compcon.hasCompCon,object=entry_uri):
-        name = g.value(subject=subj, predicate=URIRef("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#hasTitle"))
-        url = re.sub("http://example.org/cx/","", str(subj))
+        type_of_subj = g.value(subject=subj, predicate=RDF.type)
+        # two cases: either the subject of hasCompCon is a construction ...
+        if type_of_subj == URIRef("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#Construction"):
+            construction_uri = subj
+            name = g.value(subject=construction_uri, predicate=URIRef("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#hasTitle"))
+            url = re.sub("http://example.org/cx/","", str(construction_uri))
+        # ... or the subject of hasCompCon is a construction element (then, we need to look for the construction)
+        else:
+            construction_uri = URIRef(re.sub(r"_\d", "", str(subj)))
+            name = g.value(subject=construction_uri,
+                           predicate=URIRef("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#hasTitle"))
+            url = re.sub("http://example.org/cx/", "", str(construction_uri))
         description.append({
             'property': 'Corresponding construction',
             'object': name,

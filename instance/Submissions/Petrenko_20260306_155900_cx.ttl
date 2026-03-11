@@ -17,17 +17,13 @@ cx:engLME_MoreThanComparisonConstructiontype3 a rcxn:Construction ;
     rcxn:hasSlots cx:engLME_MoreThanComparisonConstructiontype3_slots ;
     rcxn:hasTitle "More-Than-Comparison Construction (type 3)" .
 
-cx:engLME_MoreThanComparisonConstructiontype3_1 a rcxn:SlotMandatory ;
-    olia:hasSemanticRole <undefined> .
+cx:engLME_MoreThanComparisonConstructiontype3_1 a rcxn:SlotMandatory .
 
-cx:engLME_MoreThanComparisonConstructiontype3_2 a rcxn:SlotMandatory ;
-    olia:hasSemanticRole <undefined> .
+cx:engLME_MoreThanComparisonConstructiontype3_2 a rcxn:SlotMandatory .
 
-cx:engLME_MoreThanComparisonConstructiontype3_3 a rcxn:SlotMandatory ;
-    olia:hasSemanticRole <undefined> .
+cx:engLME_MoreThanComparisonConstructiontype3_3 a rcxn:SlotMandatory .
 
-cx:engLME_MoreThanComparisonConstructiontype3_4 a rcxn:SlotMandatory ;
-    olia:hasSemanticRole <undefined> .
+cx:engLME_MoreThanComparisonConstructiontype3_4 a rcxn:SlotMandatory .
 
 cx:engLME_MoreThanComparisonConstructiontype3_MD a rcxn:Metadata ;
     rcxn:annotator membr:Petrenko ;
