@@ -1,0 +1,23 @@
+@prefix compcon: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/compcon#> .
+@prefix cx: <http://example.org/cx/> .
+
+cx:engLME_MoreThanComparisonConstructiontype3 compcon:hasCompCon compcon:cxn_comparative-construction,
+        compcon:sem_comparative-relation,
+        compcon:sem_gradable-predicative-scale,
+        compcon:str_particle-comparative .
+
+cx:engLME_MoreThanComparisonConstructiontype3_1 compcon:hasCompCon compcon:cxn_attributive-phrase,
+        compcon:cxn_modifier,
+        compcon:cxn_quantifier-term,
+        compcon:inf_modification .
+
+cx:engLME_MoreThanComparisonConstructiontype3_2 compcon:hasCompCon compcon:sem_comparee,
+        compcon:sem_entity,
+        compcon:sem_gradable-predicative-scale,
+        compcon:sem_object-concept .
+
+cx:engLME_MoreThanComparisonConstructiontype3_3 compcon:hasCompCon compcon:str_conjunction .
+
+cx:engLME_MoreThanComparisonConstructiontype3_4 compcon:hasCompCon compcon:inf_reference,
+        compcon:sem_standard .
+
