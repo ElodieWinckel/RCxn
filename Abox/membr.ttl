@@ -414,12 +414,57 @@ membr:Project_Patel_241128 a rsrch:Project ;
     rsrch:projectName "Identifying semantic sub-constructions of the V-ing pattern" .
 
 membr:Project_Petrenko a rsrch:Project ;
-    rsrch:hasFindings membr:Project_Petrenko_F2602251827 ;
+    rsrch:hasFindings membr:Project_Petrenko_F2602251827,
+        membr:Project_Petrenko_F2603061445,
+        membr:Project_Petrenko_F2603061504,
+        membr:Project_Petrenko_F2603061512,
+        membr:Project_Petrenko_F2603061516,
+        membr:Project_Petrenko_F2603061525,
+        membr:Project_Petrenko_F2603061532,
+        membr:Project_Petrenko_F2603061537,
+        membr:Project_Petrenko_F2603061553,
+        membr:Project_Petrenko_F2603061559 ;
     rsrch:projectName "Comparing constructions cross-linguistically — Connecting constructicons"@en .
 
 membr:Project_Petrenko_F2602251827 a rsrch:Finding ;
     rdfs:label "Comparative concepts can partially be applied to CASA Constructicon." ;
     rsrch:basedOn cx:engLME_GeneralPostmodifierofAdjectiveConstruction .
+
+membr:Project_Petrenko_F2603061445 a rsrch:Finding ;
+    rdfs:label "Comparative concepts can partially be applied to CASA Constructicon." ;
+    rsrch:basedOn cx:engLME_AdjectiveConstruction .
+
+membr:Project_Petrenko_F2603061504 a rsrch:Finding ;
+    rdfs:label "Comparative concepts can partially be applied to CASA Constructicon." ;
+    rsrch:basedOn cx:engLME_AdjectivalwithPARTNERConstruction .
+
+membr:Project_Petrenko_F2603061512 a rsrch:Finding ;
+    rdfs:label "Comparative concepts can partially be applied to CASA Constructicon." ;
+    rsrch:basedOn cx:engLME_PremodifierofAdjectiveConstruction .
+
+membr:Project_Petrenko_F2603061516 a rsrch:Finding ;
+    rdfs:label "Comparative concepts can partially be applied to CASA Constructicon." ;
+    rsrch:basedOn cx:engLME_SuperlativeConstruction .
+
+membr:Project_Petrenko_F2603061525 a rsrch:Finding ;
+    rdfs:label "Comparative concepts can partially be applied to CASA Constructicon." ;
+    rsrch:basedOn cx:engLME_MostLeastConstruction .
+
+membr:Project_Petrenko_F2603061532 a rsrch:Finding ;
+    rdfs:label "Comparative concepts can partially be applied to CASA Constructicon." ;
+    rsrch:basedOn cx:engLME_ComparativeConstruction .
+
+membr:Project_Petrenko_F2603061537 a rsrch:Finding ;
+    rdfs:label "Comparative concepts can partially be applied to CASA Constructicon." ;
+    rsrch:basedOn cx:engLME_MoreThanComparisonConstructiontype1 .
+
+membr:Project_Petrenko_F2603061553 a rsrch:Finding ;
+    rdfs:label "Comparative concepts can partially be applied to CASA Constructicon." ;
+    rsrch:basedOn cx:engLME_MoreThanComparisonConstructiontype2 .
+
+membr:Project_Petrenko_F2603061559 a rsrch:Finding ;
+    rdfs:label "Comparative concepts can partially be applied to CASA Constructicon." ;
+    rsrch:basedOn cx:engLME_MoreThanComparisonConstructiontype3 .
 
 membr:Project_Prela a rsrch:Project ;
     rsrch:projectName "Project Prela"@en .
