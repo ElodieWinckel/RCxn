@@ -1,0 +1,47 @@
+@prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cx: <http://example.org/cx/> .
+@prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
+@prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
+@prefix olia: <http://purl.org/olia/olia.owl#> .
+@prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+membr:Project_Petrenko rsrch:hasFindings membr:Project_Petrenko_F2603061532 .
+
+cx:engLME_ComparativeConstruction a rcxn:Construction ;
+    lg:partOfLanguage lg:engLME ;
+    rcxn:hasConstructionMeaning cx:engLME_ComparativeConstruction_Meaning ;
+    rcxn:hasMetadata cx:engLME_ComparativeConstruction_MD ;
+    rcxn:hasSlots cx:engLME_ComparativeConstruction_slots ;
+    rcxn:hasTitle "Comparative Construction" .
+
+cx:engLME_ComparativeConstruction_1 a rcxn:SlotMandatory ;
+    olia:hasSemanticRole <undefined> .
+
+cx:engLME_ComparativeConstruction_2 a rcxn:SlotMandatory ;
+    olia:hasSemanticRole <undefined> .
+
+cx:engLME_ComparativeConstruction_3 a rcxn:SlotMandatory ;
+    olia:hasSemanticRole <undefined> .
+
+cx:engLME_ComparativeConstruction_4 a rcxn:SlotMandatory ;
+    olia:hasSemanticRole <undefined> .
+
+cx:engLME_ComparativeConstruction_MD a rcxn:Metadata ;
+    rcxn:annotator membr:Petrenko ;
+    rcxn:creationDate "2026-03-06"^^xsd:date .
+
+cx:engLME_ComparativeConstruction_Meaning a rcxn:ConstructionMeaning .
+
+cx:engLME_ComparativeConstruction_slots a rdf:Seq ;
+    rdf:_1 cx:engLME_ComparativeConstruction_1 ;
+    rdf:_2 cx:engLME_ComparativeConstruction_2 ;
+    rdf:_3 cx:engLME_ComparativeConstruction_3 ;
+    rdf:_4 cx:engLME_ComparativeConstruction_4 .
+
+membr:Project_Petrenko_F2603061532 a rsrch:Finding ;
+    RDFS:label "Comparative concepts can partially be applied to CASA Constructicon." ;
+    rsrch:basedOn cx:engLME_ComparativeConstruction .
+

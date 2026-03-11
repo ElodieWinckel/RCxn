@@ -12,4 +12,51 @@
 
 # Liza, this is your FILE!!! I am applying here the CCs to a cxn.
 
-cx:engLME_GeneralPostmodifierofAdjectiveConstruction compcon:hasCompCon compcon:inf_modification , compcon:cxn_adjectival-phrase .
+cx:engLME_GeneralPostmodifierofAdjectiveConstruction compcon:hasCompCon compcon:inf_modification , compcon:cxn_adjectival-phrase , 
+        compcon:cxn_adjective-modification-construction , compcon:cxn_attributive-phrase , compcon:str_word-order .
+cx:engLME_GeneralPostmodifierofAdjectiveConstruction_1 compcon:hasCompCon compcon:cxn_modifier, compcon:cxn_adjective , compcon:sem_property-concept .
+cx:engLME_GeneralPostmodifierofAdjectiveConstruction_2  compcon:hasCompCon compcon:cxn_admodifier , compcon:inf_admodification , compcon:sem_degree .
+
+cx:engLME_AdjectiveConstruction compcon:hasCompCon compcon:inf_modification , compcon:cxn_modification-construction, compcon:cxn_referring-phrase .
+cx:engLME_AdjectiveConstruction_1 compcon:hasCompCon compcon:cxn_modifier, compcon:cxn_attributive-phrase , compcon:cxn_adjectival-phrase, compcon:cxn_adjective , compcon:sem_property-concept .
+cx:engLME_AdjectiveConstruction_2  compcon:hasCompCon compcon:cxn_referent-expression .
+
+cx:engLME_AdjectivalwithPARTNERConstruction compcon:hasCompCon compcon:cxn_referring-phrase , compcon:cxn_modification-construction , compcon:inf_modification , compcon:str_word-order .
+cx:engLME_AdjectivalwithPARTNERConstruction_1 compcon:hasCompCon compcon:cxn_referent-expression .
+cx:engLME_AdjectivalwithPARTNERConstruction_2 compcon:hasCompCon compcon:cxn_modifier, compcon:cxn_adjective , compcon:sem_property-concept .
+cx:engLME_AdjectivalwithPARTNERConstruction_3 compcon:hasCompCon compcon:cxn_attributive-phrase , compcon:cxn_adjectival-phrase , compcon:str_flagging , 
+        compcon:str_adposition , compcon:str_preposition , compcon:cxn_referring-phrase , compcon:cxn_head .
+
+cx:engLME_PremodifierofAdjectiveConstruction compcon:hasCompCon compcon:cxn_adjective-modification-construction , compcon:cxn_attributive-phrase, compcon:cxn_adjectival-phrase , compcon:inf_modification .
+cx:engLME_PremodifierofAdjectiveConstruction_1 compcon:hasCompCon compcon:cxn_admodifier, compcon:sem_degree , compcon:inf_admodification .
+cx:engLME_PremodifierofAdjectiveConstruction_2 compcon:hasCompCon compcon:cxn_attributive-phrase , compcon:cxn_modifier , compcon:cxn_adjective , compcon:sem_property-concept .
+
+cx:engLME_SuperlativeConstruction compcon:hasCompCon compcon:cxn_referring-phrase , compcon:cxn_modification-construction .
+cx:engLME_SuperlativeConstruction_1 compcon:hasCompCon compcon:cxn_modifier , compcon:inf_modification , compcon:cxn_modification-construction , 
+        compcon:cxn_attributive-phrase , compcon:cxn_adjectival-phrase , compcon:cxn_adjective , compcon:sem_property-concept , 
+        compcon:cxn_superlative-form , compcon:sem_superlative-degree , compcon:str_degree-marker .
+cx:engLME_SuperlativeConstruction_2 compcon:hasCompCon compcon:cxn_referent-expression , compcon:sem_object-concept .
+
+cx:engLME_MostLeastConstruction compcon:hasCompCon compcon:cxn_referring-phrase , compcon:cxn_modification-construction .
+cx:engLME_MostLeastConstruction_1 compcon:hasCompCon compcon:cxn_attributive-phrase , compcon:cxn_adjectival-phrase , compcon:cxn_admodifier , compcon:inf_admodification , compcon:str_degree-modifier ,
+        compcon:cxn_superlative-form , compcon:sem_superlative-degree , compcon:cxn_modifier , compcon:inf_modification , compcon:cxn_adjective , compcon:sem_property-concept .
+cx:engLME_MostLeastConstruction_2 compcon:hasCompCon compcon:cxn_referent-expression , compcon:sem_object-concept .
+
+cx:engLME_ComparativeConstruction compcon:hasCompCon compcon:cxn_comparative-construction , compcon:sem_comparative-relation , compcon:str_particle-comparative .
+cx:engLME_ComparativeConstruction_1 compcon:hasCompCon compcon:cxn_comparative-form , compcon:sem_comparative-degree , compcon:str_degree-marker .
+cx:engLME_ComparativeConstruction_2 compcon:hasCompCon compcon:sem_entity , compcon:sem_event , compcon:sem_comparee .
+cx:engLME_ComparativeConstruction_3 compcon:hasCompCon compcon:str_conjunction .
+cx:engLME_ComparativeConstruction_4 compcon:hasCompCon compcon:inf_reference , compcon:sem_standard .
+
+cx:engLME_MoreThanComparisonConstructiontype1 compcon:hasCompCon compcon:cxn_comparative-construction , compcon:str_particle-comparative, 
+        compcon:str_independent-strategy , compcon:sem_degree , compcon:sem_comparative-relation , compcon:str_particle-comparative .
+cx:engLME_MoreThanComparisonConstructiontype1_1 compcon:hasCompCon compcon:cxn_attributive-phrase , compcon:cxn_adjectival-phrase ,
+        compcon:cxn_comparative-form , compcon:sem_comparative-degree , 
+        compcon:cxn_admodifier , compcon:inf_admodification ,
+        compcon:sem_degree , compcon:str_degree-modifier .
+cx:engLME_MoreThanComparisonConstructiontype1_2 compcon:hasCompCon compcon:cxn_adjective , compcon:sem_property-concept , compcon:cxn_modifier , compcon:inf_modification .
+cx:engLME_MoreThanComparisonConstructiontype1_3 compcon:hasCompCon compcon:sem_entity , compcon:sem_object-concept , compcon:sem_comparee , compcon:sem_gradable-predicative-scale .
+cx:engLME_MoreThanComparisonConstructiontype1_4 compcon:hasCompCon compcon:str_conjunction .
+cx:engLME_MoreThanComparisonConstructiontype1_5 compcon:hasCompCon compcon:inf_reference , compcon:sem_standard .
+
+
