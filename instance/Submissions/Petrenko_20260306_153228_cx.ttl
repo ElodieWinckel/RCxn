@@ -17,17 +17,13 @@ cx:engLME_ComparativeConstruction a rcxn:Construction ;
     rcxn:hasSlots cx:engLME_ComparativeConstruction_slots ;
     rcxn:hasTitle "Comparative Construction" .
 
-cx:engLME_ComparativeConstruction_1 a rcxn:SlotMandatory ;
-    olia:hasSemanticRole <undefined> .
+cx:engLME_ComparativeConstruction_1 a rcxn:SlotMandatory .
 
-cx:engLME_ComparativeConstruction_2 a rcxn:SlotMandatory ;
-    olia:hasSemanticRole <undefined> .
+cx:engLME_ComparativeConstruction_2 a rcxn:SlotMandatory .
 
-cx:engLME_ComparativeConstruction_3 a rcxn:SlotMandatory ;
-    olia:hasSemanticRole <undefined> .
+cx:engLME_ComparativeConstruction_3 a rcxn:SlotMandatory .
 
-cx:engLME_ComparativeConstruction_4 a rcxn:SlotMandatory ;
-    olia:hasSemanticRole <undefined> .
+cx:engLME_ComparativeConstruction_4 a rcxn:SlotMandatory .
 
 cx:engLME_ComparativeConstruction_MD a rcxn:Metadata ;
     rcxn:annotator membr:Petrenko ;

@@ -17,11 +17,9 @@ cx:engLME_SuperlativeConstruction a rcxn:Construction ;
     rcxn:hasSlots cx:engLME_SuperlativeConstruction_slots ;
     rcxn:hasTitle "Superlative Construction" .
 
-cx:engLME_SuperlativeConstruction_1 a rcxn:SlotMandatory ;
-    olia:hasSemanticRole <undefined> .
+cx:engLME_SuperlativeConstruction_1 a rcxn:SlotMandatory .
 
-cx:engLME_SuperlativeConstruction_2 a rcxn:SlotMandatory ;
-    olia:hasSemanticRole <undefined> .
+cx:engLME_SuperlativeConstruction_2 a rcxn:SlotMandatory .
 
 cx:engLME_SuperlativeConstruction_MD a rcxn:Metadata ;
     rcxn:annotator membr:Petrenko ;

@@ -17,11 +17,9 @@ cx:engLME_AdjectiveConstruction a rcxn:Construction ;
     rcxn:hasSlots cx:engLME_AdjectiveConstruction_slots ;
     rcxn:hasTitle "Adjective Construction" .
 
-cx:engLME_AdjectiveConstruction_1 a rcxn:SlotMandatory ;
-    olia:hasSemanticRole <undefined> .
+cx:engLME_AdjectiveConstruction_1 a rcxn:SlotMandatory .
 
-cx:engLME_AdjectiveConstruction_2 a rcxn:SlotMandatory ;
-    olia:hasSemanticRole <undefined> .
+cx:engLME_AdjectiveConstruction_2 a rcxn:SlotMandatory .
 
 cx:engLME_AdjectiveConstruction_MD a rcxn:Metadata ;
     rcxn:annotator membr:Petrenko ;

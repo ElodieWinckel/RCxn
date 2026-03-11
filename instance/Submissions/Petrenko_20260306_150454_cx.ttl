@@ -17,14 +17,11 @@ cx:engLME_AdjectivalwithPARTNERConstruction a rcxn:Construction ;
     rcxn:hasSlots cx:engLME_AdjectivalwithPARTNERConstruction_slots ;
     rcxn:hasTitle "Adjectival-with-PARTNER Construction" .
 
-cx:engLME_AdjectivalwithPARTNERConstruction_1 a rcxn:SlotMandatory ;
-    olia:hasSemanticRole <undefined> .
+cx:engLME_AdjectivalwithPARTNERConstruction_1 a rcxn:SlotMandatory .
 
-cx:engLME_AdjectivalwithPARTNERConstruction_2 a rcxn:SlotMandatory ;
-    olia:hasSemanticRole <undefined> .
+cx:engLME_AdjectivalwithPARTNERConstruction_2 a rcxn:SlotMandatory .
 
-cx:engLME_AdjectivalwithPARTNERConstruction_3 a rcxn:SlotMandatory ;
-    olia:hasSemanticRole <undefined> .
+cx:engLME_AdjectivalwithPARTNERConstruction_3 a rcxn:SlotMandatory .
 
 cx:engLME_AdjectivalwithPARTNERConstruction_MD a rcxn:Metadata ;
     rcxn:annotator membr:Petrenko ;

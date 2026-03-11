@@ -17,11 +17,9 @@ cx:engLME_MostLeastConstruction a rcxn:Construction ;
     rcxn:hasSlots cx:engLME_MostLeastConstruction_slots ;
     rcxn:hasTitle "Most-/Least-Construction" .
 
-cx:engLME_MostLeastConstruction_1 a rcxn:SlotMandatory ;
-    olia:hasSemanticRole <undefined> .
+cx:engLME_MostLeastConstruction_1 a rcxn:SlotMandatory .
 
-cx:engLME_MostLeastConstruction_2 a rcxn:SlotMandatory ;
-    olia:hasSemanticRole <undefined> .
+cx:engLME_MostLeastConstruction_2 a rcxn:SlotMandatory .
 
 cx:engLME_MostLeastConstruction_MD a rcxn:Metadata ;
     rcxn:annotator membr:Petrenko ;

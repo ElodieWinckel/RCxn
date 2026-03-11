@@ -1819,17 +1819,14 @@ cx:engInf_Coolexclamativeconstruction_slots a rdf_ns:Seq ;
     rdf_ns:_2 cx:engInf_Coolexclamativeconstruction_2 .
 
 cx:engLME_AdjectivalwithPARTNERConstruction_1 a rcxn:SlotMandatory ;
-    olia:hasSemanticRole <file:///home/meuhlodi/Travail/RCxn/instance/Submissions/undefined> ;
     ns1:hasCompCon ns1:cxn_referent-expression .
 
 cx:engLME_AdjectivalwithPARTNERConstruction_2 a rcxn:SlotMandatory ;
-    olia:hasSemanticRole <file:///home/meuhlodi/Travail/RCxn/instance/Submissions/undefined> ;
     ns1:hasCompCon ns1:cxn_adjective,
         ns1:cxn_modifier,
         ns1:sem_property-concept .
 
 cx:engLME_AdjectivalwithPARTNERConstruction_3 a rcxn:SlotMandatory ;
-    olia:hasSemanticRole <file:///home/meuhlodi/Travail/RCxn/instance/Submissions/undefined> ;
     ns1:hasCompCon ns1:cxn_adjectival-phrase,
         ns1:cxn_attributive-phrase,
         ns1:cxn_head,
@@ -1850,7 +1847,6 @@ cx:engLME_AdjectivalwithPARTNERConstruction_slots a rdf_ns:Seq ;
     rdf_ns:_3 cx:engLME_AdjectivalwithPARTNERConstruction_3 .
 
 cx:engLME_AdjectiveConstruction_1 a rcxn:SlotMandatory ;
-    olia:hasSemanticRole <file:///home/meuhlodi/Travail/RCxn/instance/Submissions/undefined> ;
     ns1:hasCompCon ns1:cxn_adjectival-phrase,
         ns1:cxn_adjective,
         ns1:cxn_attributive-phrase,
@@ -1858,7 +1854,6 @@ cx:engLME_AdjectiveConstruction_1 a rcxn:SlotMandatory ;
         ns1:sem_property-concept .
 
 cx:engLME_AdjectiveConstruction_2 a rcxn:SlotMandatory ;
-    olia:hasSemanticRole <file:///home/meuhlodi/Travail/RCxn/instance/Submissions/undefined> ;
     ns1:hasCompCon ns1:cxn_referent-expression .
 
 cx:engLME_AdjectiveConstruction_MD a rcxn:Metadata ;
@@ -1872,23 +1867,19 @@ cx:engLME_AdjectiveConstruction_slots a rdf_ns:Seq ;
     rdf_ns:_2 cx:engLME_AdjectiveConstruction_2 .
 
 cx:engLME_ComparativeConstruction_1 a rcxn:SlotMandatory ;
-    olia:hasSemanticRole <file:///home/meuhlodi/Travail/RCxn/instance/Submissions/undefined> ;
     ns1:hasCompCon ns1:cxn_comparative-form,
         ns1:sem_comparative-degree,
         ns1:str_degree-marker .
 
 cx:engLME_ComparativeConstruction_2 a rcxn:SlotMandatory ;
-    olia:hasSemanticRole <file:///home/meuhlodi/Travail/RCxn/instance/Submissions/undefined> ;
     ns1:hasCompCon ns1:sem_comparee,
         ns1:sem_entity,
         ns1:sem_event .
 
 cx:engLME_ComparativeConstruction_3 a rcxn:SlotMandatory ;
-    olia:hasSemanticRole <file:///home/meuhlodi/Travail/RCxn/instance/Submissions/undefined> ;
     ns1:hasCompCon ns1:str_conjunction .
 
 cx:engLME_ComparativeConstruction_4 a rcxn:SlotMandatory ;
-    olia:hasSemanticRole <file:///home/meuhlodi/Travail/RCxn/instance/Submissions/undefined> ;
     ns1:hasCompCon ns1:inf_reference,
         ns1:sem_standard .
 
@@ -2029,7 +2020,6 @@ cx:engLME_MoreThanComparisonConstructiontype3_slots a rdf_ns:Seq ;
     rdf_ns:_4 cx:engLME_MoreThanComparisonConstructiontype3_4 .
 
 cx:engLME_MostLeastConstruction_1 a rcxn:SlotMandatory ;
-    olia:hasSemanticRole <file:///home/meuhlodi/Travail/RCxn/instance/Submissions/undefined> ;
     ns1:hasCompCon ns1:cxn_adjectival-phrase,
         ns1:cxn_adjective,
         ns1:cxn_admodifier,
@@ -2043,7 +2033,6 @@ cx:engLME_MostLeastConstruction_1 a rcxn:SlotMandatory ;
         ns1:str_degree-modifier .
 
 cx:engLME_MostLeastConstruction_2 a rcxn:SlotMandatory ;
-    olia:hasSemanticRole <file:///home/meuhlodi/Travail/RCxn/instance/Submissions/undefined> ;
     ns1:hasCompCon ns1:cxn_referent-expression,
         ns1:sem_object-concept .
 
@@ -2058,13 +2047,11 @@ cx:engLME_MostLeastConstruction_slots a rdf_ns:Seq ;
     rdf_ns:_2 cx:engLME_MostLeastConstruction_2 .
 
 cx:engLME_PremodifierofAdjectiveConstruction_1 a rcxn:SlotMandatory ;
-    olia:hasSemanticRole <file:///home/meuhlodi/Travail/RCxn/instance/Submissions/undefined> ;
     ns1:hasCompCon ns1:cxn_admodifier,
         ns1:inf_admodification,
         ns1:sem_degree .
 
 cx:engLME_PremodifierofAdjectiveConstruction_2 a rcxn:SlotMandatory ;
-    olia:hasSemanticRole <file:///home/meuhlodi/Travail/RCxn/instance/Submissions/undefined> ;
     ns1:hasCompCon ns1:cxn_adjective,
         ns1:cxn_attributive-phrase,
         ns1:cxn_modifier,
@@ -2081,7 +2068,6 @@ cx:engLME_PremodifierofAdjectiveConstruction_slots a rdf_ns:Seq ;
     rdf_ns:_2 cx:engLME_PremodifierofAdjectiveConstruction_2 .
 
 cx:engLME_SuperlativeConstruction_1 a rcxn:SlotMandatory ;
-    olia:hasSemanticRole <file:///home/meuhlodi/Travail/RCxn/instance/Submissions/undefined> ;
     ns1:hasCompCon ns1:cxn_adjectival-phrase,
         ns1:cxn_adjective,
         ns1:cxn_attributive-phrase,
@@ -2094,7 +2080,6 @@ cx:engLME_SuperlativeConstruction_1 a rcxn:SlotMandatory ;
         ns1:str_degree-marker .
 
 cx:engLME_SuperlativeConstruction_2 a rcxn:SlotMandatory ;
-    olia:hasSemanticRole <file:///home/meuhlodi/Travail/RCxn/instance/Submissions/undefined> ;
     ns1:hasCompCon ns1:cxn_referent-expression,
         ns1:sem_object-concept .
 

@@ -17,11 +17,9 @@ cx:engLME_PremodifierofAdjectiveConstruction a rcxn:Construction ;
     rcxn:hasSlots cx:engLME_PremodifierofAdjectiveConstruction_slots ;
     rcxn:hasTitle "Premodifier-of-Adjective Construction" .
 
-cx:engLME_PremodifierofAdjectiveConstruction_1 a rcxn:SlotMandatory ;
-    olia:hasSemanticRole <undefined> .
+cx:engLME_PremodifierofAdjectiveConstruction_1 a rcxn:SlotMandatory .
 
-cx:engLME_PremodifierofAdjectiveConstruction_2 a rcxn:SlotMandatory ;
-    olia:hasSemanticRole <undefined> .
+cx:engLME_PremodifierofAdjectiveConstruction_2 a rcxn:SlotMandatory .
 
 cx:engLME_PremodifierofAdjectiveConstruction_MD a rcxn:Metadata ;
     rcxn:annotator membr:Petrenko ;
