@@ -376,7 +376,7 @@ def construction_detail(uri):
                                     "Comparative Concept (inf)": 5,
                                     "Comparative Concept (str)": 6}
         # Return the custom order if the property is in the list
-        return custom_order_for_triples.get(property_value, 2)
+        return custom_order_for_triples.get(property_value, 1)
     triples = sorted(triples, key=custom_sort_key_for_triples)
 
     # Collect triples for elements / slots
