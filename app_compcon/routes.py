@@ -160,7 +160,7 @@ def comparative_concept_detail(uri):
     # Collect all triples from the ontology where entry_uri is the subject
     description = []
     for predicate, obj in ont.predicate_objects(subject=entry_uri):
-        if predicate == URIRef("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/compcon#subtypeOf"):
+        if predicate == compcon.subtypeOf: # For taxonomical relations: link to the relevant comparative concept
             object_clean = get_label_or_iri(obj, g, ont)
             object_with_urls = find_compcon_url_by_label(object_clean)
         else:
@@ -173,6 +173,8 @@ def comparative_concept_detail(uri):
         })
     description[:] = [item for item in description if item[
         'property'] != "http://www.w3.org/2000/01/rdf-schema#label"]  # The label is the title, therefore not needed
+    description[:] = [item for item in description if item[
+        'property'] != "Link to the MoCCA database of Comparative Concepts"]  # The link will be added to the sources, not needed in the main table
 
     # Collect constructions that use entry_uri as a comparative concept
     construction_list = []
@@ -194,10 +196,12 @@ def comparative_concept_detail(uri):
             'url': url,
         })
 
-
+    url_in_mocca_database = ont.value(subject=entry_uri, predicate=compcon.linkToDatabase)
+    print(url_in_mocca_database)
 
 
     return render_template("app_compcon/entry.html",
                            title = title,
                            description = description,
-                           constructions = construction_list)
+                           constructions = construction_list,
+                           url_in_mocca_database = url_in_mocca_database)

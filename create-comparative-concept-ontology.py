@@ -43,6 +43,8 @@ g.add((compcon.ExpressionOf, RDF.type, OWL.ObjectProperty))
 g.add((compcon.ExpressionOf, RDFS.label, Literal("Expresses")))
 g.add((compcon.language, RDF.type, OWL.ObjectProperty))
 g.add((compcon.language, RDFS.label, Literal("Language")))
+g.add((compcon.linkToDatabase, RDF.type, OWL.ObjectProperty))
+g.add((compcon.linkToDatabase, RDFS.label, Literal("Link to the MoCCA database of Comparative Concepts")))
 
 # Define property hasCompCon which will be used to annotate construction entries
 g.add((compcon.hasCompCon, RDF.type, OWL.ObjectProperty))
@@ -114,6 +116,10 @@ def add_entry_to_graph(entry):
                 #    g.add((example_uri, cx.gloss, Literal(gloss_literal)))
                 #g.add((example_uri, cx.translation, Literal(example['Translation'])))
                 g.add((entry_uri, cx.hasExample, example_uri))
+
+    # Add a link to the original
+    url_in_original_database = "https://comparative-concepts.github.io/cc-database/cc-database.html#" + entry_id
+    g.add((entry_uri, compcon.linkToDatabase, Literal(url_in_original_database)))
 
 # Add each entry to the graph
 for entry in database:
