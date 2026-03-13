@@ -117,20 +117,19 @@ def identify_construction_element_triples(slots_uri):
                     'definition': get_definition(obj, g, ont),
                     'object': get_label_or_iri(obj, g, ont),
                 })
-            else:
-                if str(predicate) == "http://example.org/cx/colloprofile":  # special case for colloprofile
-                    elements.append({
-                        'subject': element_number,
-                        'property': "Colloprofile",
-                        'object': "See colloprofile for " + element_number + " below",
-                    })
-                else:  # all other cases
-                    elements.append({
-                        'subject': element_number,
-                        'property': get_label_or_iri(predicate, g, ont),
-                        'definition': get_definition(obj, g, ont),
-                        'object': get_label_or_iri(obj, g, ont),
-                    })
+            elif str(predicate) == "http://example.org/cx/colloprofile":  # special case for colloprofile
+                elements.append({
+                    'subject': element_number,
+                    'property': "Colloprofile",
+                    'object': "See colloprofile for " + element_number + " below",
+                })
+            else:  # all other cases
+                elements.append({
+                    'subject': element_number,
+                    'property': get_label_or_iri(predicate, g, ont),
+                    'definition': get_definition(obj, g, ont),
+                    'object': get_label_or_iri(obj, g, ont),
+                })
 
         # Step 4: Collect triples for form of each sequence member
         subject_slotform = URIRef(str(slot_uri) + "_Form")
