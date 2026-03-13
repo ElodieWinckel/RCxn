@@ -5,16 +5,18 @@
 {% block content %}
 
     <h1>{{ title }}</h1>
-    <table border="1">
+    <table>
         {% for triple in triples %}
             <tr>
                 <th>{{ triple.property }}</th>
                 <td>
                     <span title="{{ triple.definition }}">
-                        {% if triple.property == 'Meaning of the construction' %}
-                            {{ triple.object|safe }}
+                        {% if triple.url %}
+                            <a href="{{ url_for('app_compcon.comparative_concept_detail', uri=triple.url) }}" target="_blank">
+                                {{ triple.object }}
+                            </a>
                         {% else %}
-                            {{ triple.object }}
+                            {{ triple.object|safe }}
                         {% endif %}
                     </span>
                 </td>

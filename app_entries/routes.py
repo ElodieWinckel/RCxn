@@ -1,7 +1,7 @@
 from . import app_entries_blueprint
 import glob
 import re
-from flask import render_template, Response
+from flask import render_template, Response, url_for
 from rdflib import Graph, URIRef, Literal, Namespace, RDF, RDFS, FOAF, SKOS
 import os
 
@@ -39,7 +39,8 @@ prefixes = ("http://example.org/cx/|"
             "http://www.w3.org/2000/01/rdf-schema#|"
             "http://www.w3.org/1999/02/22-rdf-syntax-ns#|"
             "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#|"
-            "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rdata#")
+            "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rdata#|"
+            "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/compcon#")
 
 def get_label_or_iri(term, data_graph, ont_graph):
     """Return skos:prefLabel or rdfs:label from ontologies if available."""
@@ -167,6 +168,12 @@ def identify_construction_element_triples(slots_uri):
     elements[:] = [item for item in elements if item['property'] != "hasIndex"]
     return elements, colloprofiles, list_of_nested
 
+def find_compcon_uri_by_label(label_compcon) -> str:
+    uri_compcon = ont.value(predicate=RDFS.label, object=Literal(label_compcon))
+    if uri_compcon is None:
+        uri_compcon = ont.value(predicate=SKOS.altLabel, object=Literal(label_compcon))
+    uri_compcon_no_prefix = re.sub(prefixes, "", str(uri_compcon))
+    return uri_compcon_no_prefix
 
 ###################################################
 ### CREATE RDF GRAPH
@@ -288,38 +295,51 @@ def construction_detail(uri):
     triples = []
     links = []
     for predicate, obj in g.predicate_objects(subject=entry_uri):
-        if str(predicate) == str(RDF.type): # RDF.type is not interesting to display
+        if str(predicate) == str(RDF.type):  # RDF.type is not interesting to display
             pass
-        elif str(predicate).startswith("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#"): # deal with links
-                name_of_link = get_label_or_iri(predicate, g, ont)
-                object_value = get_label_or_iri(obj, g, ont)
-                uri = URIRef(f"http://example.org/cx/{object_value}")
-                for title in g.objects(subject=uri, predicate=rcxn.hasTitle):
-                    lang_uri = g.value(subject=uri, predicate=lg.partOfLanguage)
-                    links.append({
-                        'property': name_of_link,
-                        'object': get_label_or_iri(title, g, ont),
-                        'href': object_value,
-                        'lang': get_label_or_iri(lang_uri, g, ont),
-                    })
-        elif str(predicate).endswith("elementOf"): # Links: Special case for "element of", which is not part of the ontology of links
-                    name_of_link = get_label_or_iri(predicate, g, ont)
-                    object_value = get_label_or_iri(obj, g, ont)
-                    uri = URIRef(f"http://example.org/cx/{object_value}")
-                    for title in g.objects(subject=uri, predicate=rcxn.hasTitle):
-                        lang_uri = g.value(subject=uri, predicate=lg.partOfLanguage)
-                        links.append({
-                            'property': name_of_link,
-                            'object': get_label_or_iri(title, g, ont),
-                            'href': object_value,
-                            'lang': get_label_or_iri(lang_uri, g, ont),
-                        })
-        else: # all other triples with entry_uri as subject go into the list triples (displayed below the title)
-                    triples.append({
-                        'property': get_label_or_iri(predicate, g, ont),
-                        'object': get_label_or_iri(obj, g, ont),
-                        'definition': get_definition(obj, g, ont),
-                    })
+        elif str(predicate).startswith(
+                "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#"):  # deal with links
+            name_of_link = get_label_or_iri(predicate, g, ont)
+            object_value = get_label_or_iri(obj, g, ont)
+            uri = URIRef(f"http://example.org/cx/{object_value}")
+            for title in g.objects(subject=uri, predicate=rcxn.hasTitle):
+                lang_uri = g.value(subject=uri, predicate=lg.partOfLanguage)
+                links.append({
+                    'property': name_of_link,
+                    'object': get_label_or_iri(title, g, ont),
+                    'href': object_value,
+                    'lang': get_label_or_iri(lang_uri, g, ont),
+                })
+        elif str(predicate).endswith(
+                "elementOf"):  # Links: Special case for "element of", which is not part of the ontology of links
+            name_of_link = get_label_or_iri(predicate, g, ont)
+            object_value = get_label_or_iri(obj, g, ont)
+            uri = URIRef(f"http://example.org/cx/{object_value}")
+            for title in g.objects(subject=uri, predicate=rcxn.hasTitle):
+                lang_uri = g.value(subject=uri, predicate=lg.partOfLanguage)
+                links.append({
+                    'property': name_of_link,
+                    'object': get_label_or_iri(title, g, ont),
+                    'href': object_value,
+                    'lang': get_label_or_iri(lang_uri, g, ont),
+                })
+        elif str(predicate).startswith(
+                "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/compcon#"):  # deal with comparative concepts
+            compcon_label = get_label_or_iri(obj, g, ont)
+            compcon_uri = find_compcon_uri_by_label(compcon_label)
+            compcon_type_abbreviation = compcon_uri[:3]
+            triples.append({
+                'property': get_label_or_iri(predicate, g, ont) + " (" + compcon_type_abbreviation + ")",
+                'object': get_label_or_iri(obj, g, ont),
+                'url': compcon_uri,
+                'definition': get_definition(obj, g, ont),
+            })
+        else:  # all other triples with entry_uri as subject go into the list triples (displayed below the title)
+            triples.append({
+                'property': get_label_or_iri(predicate, g, ont),
+                'object': get_label_or_iri(obj, g, ont),
+                'definition': get_definition(obj, g, ont),
+            })
 
     # Add triples for meaning
     for predicate, obj in g.predicate_objects(subject=meaning_uri):
@@ -344,7 +364,19 @@ def construction_detail(uri):
     triples[:] = [item for item in triples if item['property'] != "hasMetadata"]
     triples[:] = [item for item in triples if item['property'] != "Title"]
     triples[:] = [item for item in triples if item['property'] != "basedOnStudy"]
-    triples.sort(key=lambda x: x["property"], reverse=True)  # Sort in reverse alphabetical order so that "part of language" appears first
+
+    # Sort the list triples
+    def custom_sort_key_for_triples(triple):
+        property_value = triple["property"]  # Access the "property" key
+        # Define the custom order
+        custom_order_for_triples = {"Part of language": 0,
+                                    "Comparative Concept (cxn)": 2,
+                                    "Comparative Concept (sem)": 3,
+                                    "Comparative Concept (inf)": 4,
+                                    "Comparative Concept (str)": 5}
+        # Return the custom order if the property is in the list
+        return custom_order_for_triples.get(property_value, 2)
+    triples = sorted(triples, key=custom_sort_key_for_triples)
 
     # Collect triples for elements / slots
     elements, colloprofiles, list_of_nested = identify_construction_element_triples(slots_uri)
