@@ -370,10 +370,11 @@ def construction_detail(uri):
         property_value = triple["property"]  # Access the "property" key
         # Define the custom order
         custom_order_for_triples = {"Part of language": 0,
-                                    "Comparative Concept (cxn)": 2,
-                                    "Comparative Concept (sem)": 3,
-                                    "Comparative Concept (inf)": 4,
-                                    "Comparative Concept (str)": 5}
+                                    "comment": 2,
+                                    "Comparative Concept (cxn)": 3,
+                                    "Comparative Concept (sem)": 4,
+                                    "Comparative Concept (inf)": 5,
+                                    "Comparative Concept (str)": 6}
         # Return the custom order if the property is in the list
         return custom_order_for_triples.get(property_value, 2)
     triples = sorted(triples, key=custom_sort_key_for_triples)
