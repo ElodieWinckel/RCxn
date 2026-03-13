@@ -163,6 +163,11 @@ def comparative_concept_detail(uri):
         if predicate == compcon.subtypeOf: # For taxonomical relations: link to the relevant comparative concept
             object_clean = get_label_or_iri(obj, g, ont)
             object_with_urls = find_compcon_url_by_label(object_clean)
+        elif predicate == URIRef("http://www.w3.org/2000/01/rdf-schema#comment"):
+            predicate = "Definition"
+            object_clean = get_label_or_iri(obj, g, ont)
+            object_emphasized = re.sub(r'<e>(.*?)</e>', r'<em>\1</em>', object_clean)
+            object_with_urls = convert_a_tags_to_html_links(object_emphasized)
         else:
             object_clean = get_label_or_iri(obj, g, ont)
             object_emphasized = re.sub(r'<e>(.*?)</e>', r'<em>\1</em>', object_clean)
