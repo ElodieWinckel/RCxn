@@ -3,8 +3,8 @@ from typing import Any
 from . import app_compcon_blueprint
 import glob
 import re
-from flask import render_template, Response
-from rdflib import Graph, URIRef, Literal, Namespace, RDF, RDFS, FOAF, SKOS
+from flask import render_template
+from rdflib import Graph, URIRef, Literal, Namespace, RDF, RDFS, SKOS
 import os
 
 ###################################################
@@ -77,7 +77,7 @@ for ttl_file in glob.glob("ontologies/*.ttl"): # for compcon
     ont.parse(ttl_file, format="turtle")
 
 ###################################################
-### CREATE A LIST OF CONSTRUCTIONS
+### CREATE LIST OF COMPARATIVE CONCEPTS
 ###################################################
 
 @app_compcon_blueprint.route("/")
@@ -117,7 +117,7 @@ def list_comparative_concept_for_one_type(CCtype) -> list[Any]:
 
 
 ###################################################
-### CREATE CONSTRUCTION ENTRIES
+### CREATE ENTRIES FOR COMPARATIVE CONCEPTS
 ###################################################
 
 @app_compcon_blueprint.route('/entry/<path:uri>', endpoint='comparative_concept_detail')
