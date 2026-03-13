@@ -60,7 +60,8 @@ cx:eng_ThisclosetoVingconstruction_6 a rcxn:SlotMandatory ;
         [ cx:word "having"; cx:frequency 57 ]
         [ cx:word "losing"; cx:frequency 27 ]
         [ cx:word "winning"; cx:frequency 27 ]
-        [ cx:word "saying"; cx:frequency 24 ]    ) .
+        [ cx:word "saying"; cx:frequency 24 ]    ) ;
+    rdfs:comment "List of Collocations for this close to x-ing as obtained from AntConc 4.2.4" .
 
 cx:eng_ThisclosetoVingconstruction_6_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_PrepositionalPhrasetoPLUSVing .
