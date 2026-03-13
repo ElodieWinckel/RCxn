@@ -197,8 +197,6 @@ def comparative_concept_detail(uri):
         })
 
     url_in_mocca_database = ont.value(subject=entry_uri, predicate=compcon.linkToDatabase)
-    print(url_in_mocca_database)
-
 
     return render_template("app_compcon/entry.html",
                            title = title,

@@ -45,6 +45,8 @@ g.add((compcon.language, RDF.type, OWL.ObjectProperty))
 g.add((compcon.language, RDFS.label, Literal("Language")))
 g.add((compcon.linkToDatabase, RDF.type, OWL.ObjectProperty))
 g.add((compcon.linkToDatabase, RDFS.label, Literal("Link to the MoCCA database of Comparative Concepts")))
+g.add((compcon.Sections, RDF.type, OWL.ObjectProperty))
+g.add((compcon.Sections, RDFS.label, Literal("Definition in Croft (2022), see section")))
 
 # Define property hasCompCon which will be used to annotate construction entries
 g.add((compcon.hasCompCon, RDF.type, OWL.ObjectProperty))
@@ -95,7 +97,7 @@ def add_entry_to_graph(entry):
     # Add Sections
     if 'Sections' in entry:
         for section in entry['Sections']:
-            g.add((entry_uri, DCTERMS.isPartOf, Literal(section)))
+            g.add((entry_uri, compcon.Sections, Literal(section)))
 
     # Add Examples
     if 'Examples' in entry:
