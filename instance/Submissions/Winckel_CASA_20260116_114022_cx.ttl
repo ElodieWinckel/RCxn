@@ -10,10 +10,10 @@
 @prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-membr:Project_Winckel_2601131454_F2601131454 rsrch:basedOn <http://example.org/cx/eng_DitransitiveConstructionObj:NP> .
+membr:Project_Winckel_2601131454_F2601131454 rsrch:basedOn <http://example.org/cx/eng_ditransitive_construction_obj_np> .
 
 <http://example.org/cx/AttributeConstructionObj:NP> a rcxn:Construction ;
-    links:sameFormDifferentFunction <http://example.org/cx/eng_DitransitiveConstructionObj:NP> ;
+    links:sameFormDifferentFunction <http://example.org/cx/eng_ditransitive_construction_obj_np> ;
     rcxn:hasMetadata <http://example.org/cx/AttributeConstructionObj:NP_MD> ;
     rcxn:hasTitle "Attribute Construction (Obj: NP)" .
 
@@ -22,7 +22,7 @@ membr:Project_Winckel_2601131454_F2601131454 rsrch:basedOn <http://example.org/c
     rcxn:creationDate "2026-01-16"^^xsd:date .
 
 cx:CausedMotionConstrutionPPto a rcxn:Construction ;
-    links:differentFormSimilarFunction <http://example.org/cx/eng_DitransitiveConstructionObj:NP> ;
+    links:differentFormSimilarFunction <http://example.org/cx/eng_ditransitive_construction_obj_np> ;
     rcxn:hasMetadata cx:CausedMotionConstrutionPPto_MD ;
     rcxn:hasTitle "Caused-Motion Constrution (PPto)" .
 
@@ -30,55 +30,55 @@ cx:CausedMotionConstrutionPPto_MD a rcxn:Metadata ;
     cx:annotator membr:Winckel ;
     rcxn:creationDate "2026-01-16"^^xsd:date .
 
-<http://example.org/cx/eng_DitransitiveConstructionObj:NP_1> a rcxn:SlotOptional ;
+<http://example.org/cx/eng_ditransitive_construction_obj_np_1> a rcxn:SlotOptional ;
     rcxn:hasOtherSemanticContribution "Æffector" ;
-    rcxn:hasSlotForm <http://example.org/cx/eng_DitransitiveConstructionObj:NP_1_Form> ;
+    rcxn:hasSlotForm <http://example.org/cx/eng_ditransitive_construction_obj_np_1_Form> ;
     rcxn:hasSyntacticFunction "potential subject" ;
     casa:hasCasaSyntacticFunction "potential subject" .
 
-<http://example.org/cx/eng_DitransitiveConstructionObj:NP_1_Form> a rcxn:SlotForm ;
+<http://example.org/cx/eng_ditransitive_construction_obj_np_1_Form> a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_NounPhrase .
 
-<http://example.org/cx/eng_DitransitiveConstructionObj:NP_2> a rcxn:SlotMandatory ;
+<http://example.org/cx/eng_ditransitive_construction_obj_np_2> a rcxn:SlotMandatory ;
     RDFS:comment "colloprofile: give  tell  bring  cost  offer  send  show  allow  ask  buy  cause  do  find  get  grant  hand  owe  lend  make  pay  save  take  wish  afford  answer  award  bid  build  call  concede  create  cut  deal  design  deny  draw  drop  earn  ensure  feed  fix  forbid  gain  guarantee  hire  insure  lead  lease  leave  lend  light  loose  make  mix  order  pack  pass  permit  pick  play  pour  prepare  promise  quote  read  refuse  rent  sell  serve  set  shoot  sing  slip  spare  strike  teach  throw  win  write  " ,
         "Sources for collo-profile: Valency Dictionary of English, British National Corpus" ,
         "Borderline cases: bet excuse (attendance)" ;
-    rcxn:hasSlotForm <http://example.org/cx/eng_DitransitiveConstructionObj:NP_2_Form> .
+    rcxn:hasSlotForm <http://example.org/cx/eng_ditransitive_construction_obj_np_2_Form> .
 
-<http://example.org/cx/eng_DitransitiveConstructionObj:NP_2_Form> a rcxn:SlotForm ;
+<http://example.org/cx/eng_ditransitive_construction_obj_np_2_Form> a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_Verb .
 
-<http://example.org/cx/eng_DitransitiveConstructionObj:NP_3> a rcxn:SlotMandatory ;
+<http://example.org/cx/eng_ditransitive_construction_obj_np_3> a rcxn:SlotMandatory ;
     rcxn:hasOtherSemanticContribution "Recipient" ;
-    rcxn:hasSlotForm <http://example.org/cx/eng_DitransitiveConstructionObj:NP_3_Form> ;
+    rcxn:hasSlotForm <http://example.org/cx/eng_ditransitive_construction_obj_np_3_Form> ;
     rcxn:hasSyntacticFunction "indirect object" ;
     casa:hasCasaSyntacticFunction "Obj" .
 
-<http://example.org/cx/eng_DitransitiveConstructionObj:NP_3_Form> a rcxn:SlotForm ;
+<http://example.org/cx/eng_ditransitive_construction_obj_np_3_Form> a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_NounPhrase .
 
-<http://example.org/cx/eng_DitransitiveConstructionObj:NP_4> a rcxn:SlotMandatory ;
+<http://example.org/cx/eng_ditransitive_construction_obj_np_4> a rcxn:SlotMandatory ;
     rcxn:hasOtherSemanticContribution "Æffected" ;
-    rcxn:hasSlotForm <http://example.org/cx/eng_DitransitiveConstructionObj:NP_4_Form> ;
+    rcxn:hasSlotForm <http://example.org/cx/eng_ditransitive_construction_obj_np_4_Form> ;
     rcxn:hasSyntacticFunction "direct object" ;
     casa:hasCasaSyntacticFunction "Obj" .
 
-<http://example.org/cx/eng_DitransitiveConstructionObj:NP_4_Form> a rcxn:SlotForm ;
+<http://example.org/cx/eng_ditransitive_construction_obj_np_4_Form> a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_NounPhrase .
 
-<http://example.org/cx/eng_DitransitiveConstructionObj:NP_Ex_A> a cx:Example ;
+<http://example.org/cx/eng_ditransitive_construction_obj_np_Ex_A> a cx:Example ;
     cx:hasAnnotatedText "[She]1 [gave]2 [him]3 [a present]4." ;
     cx:hasText "She gave him a present." .
 
-<http://example.org/cx/eng_DitransitiveConstructionObj:NP_MD> a rcxn:Metadata ;
-    cx:hasSources <http://example.org/cx/eng_DitransitiveConstructionObj:NP_Sources> ;
+<http://example.org/cx/eng_ditransitive_construction_obj_np_MD> a rcxn:Metadata ;
+    cx:hasSources <http://example.org/cx/eng_ditransitive_construction_obj_np_Sources> ;
     rcxn:annotator membr:Winckel ;
     rcxn:creationDate "2026-01-16"^^xsd:date .
 
-<http://example.org/cx/eng_DitransitiveConstructionObj:NP_Meaning> a rcxn:ConstructionMeaning ;
+<http://example.org/cx/eng_ditransitive_construction_obj_np_Meaning> a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "[ÆFFECTOR]1 makes [RECIPIENT]3 receive [ÆFFECTED]4." .
 
-<http://example.org/cx/eng_DitransitiveConstructionObj:NP_Sources> a cx:Collection ;
+<http://example.org/cx/eng_ditransitive_construction_obj_np_Sources> a cx:Collection ;
     cx:hasLiterature <Goldberg_1995> ,
         <Goldberg_2006> ,
         <Croft_2012> ,
@@ -86,23 +86,23 @@ cx:CausedMotionConstrutionPPto_MD a rcxn:Metadata ;
         <Herbst_Hoffman_2024> ;
     RDFS:seeAlso <https://constructicon.de/constructions/5> .
 
-<http://example.org/cx/eng_DitransitiveConstructionObj:NP_slots> a rdf:Seq ;
-    rdf:_1 <http://example.org/cx/eng_DitransitiveConstructionObj:NP_1> ;
-    rdf:_2 <http://example.org/cx/eng_DitransitiveConstructionObj:NP_2> ;
-    rdf:_3 <http://example.org/cx/eng_DitransitiveConstructionObj:NP_3> ;
-    rdf:_4 <http://example.org/cx/eng_DitransitiveConstructionObj:NP_4> .
+<http://example.org/cx/eng_ditransitive_construction_obj_np_slots> a rdf:Seq ;
+    rdf:_1 <http://example.org/cx/eng_ditransitive_construction_obj_np_1> ;
+    rdf:_2 <http://example.org/cx/eng_ditransitive_construction_obj_np_2> ;
+    rdf:_3 <http://example.org/cx/eng_ditransitive_construction_obj_np_3> ;
+    rdf:_4 <http://example.org/cx/eng_ditransitive_construction_obj_np_4> .
 
-cx:eng_Verb rcxn:elementOf <http://example.org/cx/eng_DitransitiveConstructionObj:NP> .
+cx:eng_Verb rcxn:elementOf <http://example.org/cx/eng_ditransitive_construction_obj_np> .
 
-cx:eng_NounPhrase rcxn:elementOf <http://example.org/cx/eng_DitransitiveConstructionObj:NP> .
+cx:eng_NounPhrase rcxn:elementOf <http://example.org/cx/eng_ditransitive_construction_obj_np> .
 
-<http://example.org/cx/eng_DitransitiveConstructionObj:NP> a rcxn:Construction ;
-    cx:hasExample <http://example.org/cx/eng_DitransitiveConstructionObj:NP_Ex_A> ;
+<http://example.org/cx/eng_ditransitive_construction_obj_np> a rcxn:Construction ;
+    cx:hasExample <http://example.org/cx/eng_ditransitive_construction_obj_np_Ex_A> ;
     lg:partOfLanguage lg:eng ;
     links:differentFormSimilarFunction cx:CausedMotionConstrutionPPto ;
     links:sameFormDifferentFunction <http://example.org/cx/AttributeConstructionObj:NP> ;
-    rcxn:hasConstructionMeaning <http://example.org/cx/eng_DitransitiveConstructionObj:NP_Meaning> ;
-    rcxn:hasMetadata <http://example.org/cx/eng_DitransitiveConstructionObj:NP_MD> ;
-    rcxn:hasSlots <http://example.org/cx/eng_DitransitiveConstructionObj:NP_slots> ;
+    rcxn:hasConstructionMeaning <http://example.org/cx/eng_ditransitive_construction_obj_np_Meaning> ;
+    rcxn:hasMetadata <http://example.org/cx/eng_ditransitive_construction_obj_np_MD> ;
+    rcxn:hasSlots <http://example.org/cx/eng_ditransitive_construction_obj_np_slots> ;
     rcxn:hasTitle "Ditransitive Construction (Obj: NP)" .
 
