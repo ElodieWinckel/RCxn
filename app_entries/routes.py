@@ -288,8 +288,9 @@ def construction_detail(uri):
     triples = []
     links = []
     for predicate, obj in g.predicate_objects(subject=entry_uri):
-        if str(predicate) != str(RDF.type):
-            if str(predicate).startswith("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#"):
+        if str(predicate) == str(RDF.type): # RDF.type is not interesting to display
+            pass
+        elif str(predicate).startswith("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#"): # deal with links
                 name_of_link = get_label_or_iri(predicate, g, ont)
                 object_value = get_label_or_iri(obj, g, ont)
                 uri = URIRef(f"http://example.org/cx/{object_value}")
@@ -301,8 +302,7 @@ def construction_detail(uri):
                         'href': object_value,
                         'lang': get_label_or_iri(lang_uri, g, ont),
                     })
-            else:
-                if str(predicate).endswith("elementOf"): # Special case for "element of", which is not part of the ontology of links
+        elif str(predicate).endswith("elementOf"): # Links: Special case for "element of", which is not part of the ontology of links
                     name_of_link = get_label_or_iri(predicate, g, ont)
                     object_value = get_label_or_iri(obj, g, ont)
                     uri = URIRef(f"http://example.org/cx/{object_value}")
@@ -314,7 +314,7 @@ def construction_detail(uri):
                             'href': object_value,
                             'lang': get_label_or_iri(lang_uri, g, ont),
                         })
-                else:
+        else: # all other triples with entry_uri as subject go into the list triples (displayed below the title)
                     triples.append({
                         'property': get_label_or_iri(predicate, g, ont),
                         'object': get_label_or_iri(obj, g, ont),
