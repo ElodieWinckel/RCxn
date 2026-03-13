@@ -46,10 +46,6 @@ cx:eng_ditransitive_construction_obj_inf_4 a rcxn:SlotMandatory ;
     rcxn:hasCasaSyntacticFunction "Obj" .
 
 
-cx:eng_ditransitive_construction_obj_inf_Ex_A a cx:Example ;
-    cx:hasAnnotatedText "[She]1 [let]2 [him]3 [come to the meeting.]4" ;
-    cx:hasText "She let him come to the meeting." .
-
 cx:eng_ditransitive_construction_obj_inf_MD a rcxn:Metadata ;
     rcxn:annotator membr:Winckel ;
     rcxn:creationDate "2026-02-04"^^xsd:date .

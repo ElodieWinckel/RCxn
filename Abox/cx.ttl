@@ -3,8 +3,8 @@
 @prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#> .
 @prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
 @prefix ns1: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/compcon#> .
-@prefix ns2: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/casa#> .
-@prefix ns3: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rdata#> .
+@prefix ns2: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rdata#> .
+@prefix ns3: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/casa#> .
 @prefix olia: <http://purl.org/olia/olia.owl#> .
 @prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
 @prefix rd: <http://example.org/rd/> .
@@ -2203,7 +2203,7 @@ cx:eng_Adjective_MD a rcxn:Metadata ;
     rcxn:creationDate "2025-11-28"^^xsd:date .
 
 cx:eng_AttributeConstruction_1 a rcxn:SlotOptional ;
-    ns2:hasCasaSyntacticFunction "potential subject" ;
+    ns3:hasCasaSyntacticFunction "potential subject" ;
     rcxn:hasOtherSemanticContribution "Æffector" ;
     rcxn:hasSlotForm cx:eng_AttributeConstruction_1_Form ;
     rcxn:hasSyntacticFunction "potential subject" .
@@ -2221,7 +2221,7 @@ cx:eng_AttributeConstruction_2_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_Verb .
 
 cx:eng_AttributeConstruction_3 a rcxn:SlotMandatory ;
-    ns2:hasCasaSyntacticFunction "Obj" ;
+    ns3:hasCasaSyntacticFunction "Obj" ;
     rcxn:hasOtherSemanticContribution "Æffected-Attributee" ;
     rcxn:hasSlotForm cx:eng_AttributeConstruction_3_Form ;
     rcxn:hasSyntacticFunction "direct object" .
@@ -2230,7 +2230,7 @@ cx:eng_AttributeConstruction_3_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_NounPhrase .
 
 cx:eng_AttributeConstruction_4 a rcxn:SlotMandatory ;
-    ns2:hasCasaSyntacticFunction "Attr" ;
+    ns3:hasCasaSyntacticFunction "Attr" ;
     rcxn:hasOtherSemanticContribution "Attribute" ;
     rcxn:hasSlotForm cx:eng_AttributeConstruction_4_Form ;
     rcxn:hasSyntacticFunction "object complement" .
@@ -2551,10 +2551,6 @@ cx:eng_ditransitive_construction_obj_inf_4 a rcxn:SlotMandatory ;
     rcxn:hasSlotForm "INF" ;
     rcxn:hasSyntacticFunction "unit in predicate" .
 
-cx:eng_ditransitive_construction_obj_inf_Ex_A a cx:Example ;
-    cx:hasAnnotatedText "[She]1 [let]2 [him]3 [come to the meeting.]4" ;
-    cx:hasText "She let him come to the meeting." .
-
 cx:eng_ditransitive_construction_obj_inf_MD a rcxn:Metadata ;
     rcxn:annotator membr:Winckel ;
     rcxn:creationDate "2026-02-04"^^xsd:date .
@@ -2569,7 +2565,7 @@ cx:eng_ditransitive_construction_obj_inf_slots a rdf_ns:Seq ;
     rdf_ns:_4 cx:eng_ditransitive_construction_obj_inf_4 .
 
 cx:eng_ditransitive_construction_obj_np_1 a rcxn:SlotOptional ;
-    ns2:hasCasaSyntacticFunction "potential subject" ;
+    ns3:hasCasaSyntacticFunction "potential subject" ;
     rcxn:hasCasaSyntacticFunction "potential subject" ;
     rcxn:hasOtherSemanticContribution "Æffector" ;
     rcxn:hasSlotForm cx:eng_ditransitive_construction_obj_np_1_Form,
@@ -2592,7 +2588,7 @@ cx:eng_ditransitive_construction_obj_np_2_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_Verb .
 
 cx:eng_ditransitive_construction_obj_np_3 a rcxn:SlotMandatory ;
-    ns2:hasCasaSyntacticFunction "Obj" ;
+    ns3:hasCasaSyntacticFunction "Obj" ;
     rcxn:hasCasaSyntacticFunction "Obj" ;
     rcxn:hasOtherSemanticContribution "Recipient" ;
     rcxn:hasSlotForm cx:eng_ditransitive_construction_obj_np_3_Form,
@@ -2604,7 +2600,7 @@ cx:eng_ditransitive_construction_obj_np_3_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_NounPhrase .
 
 cx:eng_ditransitive_construction_obj_np_4 a rcxn:SlotMandatory ;
-    ns2:hasCasaSyntacticFunction "Obj" ;
+    ns3:hasCasaSyntacticFunction "Obj" ;
     rcxn:hasCasaSyntacticFunction "Obj" ;
     rcxn:hasOtherSemanticContribution "Æffected" ;
     rcxn:hasSlotForm cx:eng_ditransitive_construction_obj_np_4_Form,
@@ -2616,8 +2612,7 @@ cx:eng_ditransitive_construction_obj_np_4_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_NounPhrase .
 
 cx:eng_ditransitive_construction_obj_np_Ex_A a cx:Example ;
-    cx:hasAnnotatedText "[She]1 [gave]2 [him]3 [a present.]4",
-        "[She]1 [gave]2 [him]3 [a present]4." ;
+    cx:hasAnnotatedText "[She]1 [gave]2 [him]3 [a present]4." ;
     cx:hasText "She gave him a present." .
 
 cx:eng_ditransitive_construction_obj_np_MD a rcxn:Metadata ;
@@ -3076,12 +3071,12 @@ cx:zho_VerbPhrase a rcxn:Construction ;
     rcxn:elementOf cx:Dooperationwithoperand1onoperand2construction ;
     rcxn:hasTitle "Verb Phrase" .
 
-rd:FernandezSantos_20260130_629471 a ns3:Study ;
-    ns3:Summary "Participants' accuracy on subject relative clauses is at ceiling only when the verb follows the relativizer. Accuracy decreases when the verb is in a clause-final position. Object relative clauses are not at ceiling, but are misinterpreted as subject relative clauses over 90% of the time when there is no object marker and the verb follows the relativizer. The presence of an object marker does not impact accuracy when the verb is clause-final." ;
-    ns3:dataRepository "https://osf.io/4x6pz/files/osfstorage" ;
-    ns3:publishedIn "Llompart, Fernández Santos & Dąbrowska (2024-10-10). Comprehension of object relatives in Spanish: the role of frequency and transparency in acquisition and adult grammar. 10.1515/cog-2024-0016" ;
-    ns3:relevantFor cx:Transitiveobjectrelativeclause ;
-    ns3:studyType ns3:behavioralExperiment .
+rd:FernandezSantos_20260130_629471 a ns2:Study ;
+    ns2:Summary "Participants' accuracy on subject relative clauses is at ceiling only when the verb follows the relativizer. Accuracy decreases when the verb is in a clause-final position. Object relative clauses are not at ceiling, but are misinterpreted as subject relative clauses over 90% of the time when there is no object marker and the verb follows the relativizer. The presence of an object marker does not impact accuracy when the verb is clause-final." ;
+    ns2:dataRepository "https://osf.io/4x6pz/files/osfstorage" ;
+    ns2:publishedIn "Llompart, Fernández Santos & Dąbrowska (2024-10-10). Comprehension of object relatives in Spanish: the role of frequency and transparency in acquisition and adult grammar. 10.1515/cog-2024-0016" ;
+    ns2:relevantFor cx:Transitiveobjectrelativeclause ;
+    ns2:studyType ns2:behavioralExperiment .
 
 <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions> a rcxn:Construction ;
     lg:partOfLanguage lg:deuStdHigh ;
@@ -3537,7 +3532,7 @@ cx:Transitiveobjectrelativeclause a rcxn:Construction ;
     rcxn:hasMetadata cx:Transitiveobjectrelativeclause_MD ;
     rcxn:hasSlots cx:Transitiveobjectrelativeclause_slots ;
     rcxn:hasTitle "Potentially ambiguous object relative clause" ;
-    ns3:basedOnStudy rd:FernandezSantos_20260130_629471 .
+    ns2:basedOnStudy rd:FernandezSantos_20260130_629471 .
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]> a rcxn:Construction ;
     lg:partOfLanguage lg:deuWrSt20 ;
