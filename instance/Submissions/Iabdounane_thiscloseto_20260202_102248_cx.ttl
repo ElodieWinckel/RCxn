@@ -53,7 +53,14 @@ cx:eng_ThisclosetoVingconstruction_5_Form a rcxn:SlotForm ;
 cx:eng_ThisclosetoVingconstruction_6 a rcxn:SlotMandatory ;
     olia:hasSemanticRole olia:GoalRole ;
     rcxn:hasSlotForm cx:eng_ThisclosetoVingconstruction_6_Form ;
-    rcxn:hasSyntacticFunction "Complement" .
+    rcxn:hasSyntacticFunction "Complement" ;
+    cx:colloprofile (
+        [ cx:word "being"; cx:frequency 150 ]
+        [ cx:word "getting"; cx:frequency 129 ]
+        [ cx:word "having"; cx:frequency 57 ]
+        [ cx:word "losing"; cx:frequency 27 ]
+        [ cx:word "winning"; cx:frequency 27 ]
+        [ cx:word "saying"; cx:frequency 24 ]    ) .
 
 cx:eng_ThisclosetoVingconstruction_6_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_PrepositionalPhrasetoPLUSVing .
