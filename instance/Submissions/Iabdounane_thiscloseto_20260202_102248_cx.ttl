@@ -29,6 +29,10 @@ cx:eng_ThisclosetoVingconstruction_2 a rcxn:SlotMandatory ;
     rcxn:hasSyntacticFunction "PREDICATOR" .
 
 cx:eng_ThisclosetoVingconstruction_3 a rcxn:SlotOptional ;
+    cx:colloprofile (
+        [ cx:word "be"; cx:frequency 327 ]
+        [ cx:word "come"; cx:frequency 109 ]
+        [ cx:word "get"; cx:frequency 11 ] ) ;
     rcxn:hasSlotForm cx:eng_ThisclosetoVingconstruction_3_Form .
 
 cx:eng_ThisclosetoVingconstruction_3_Form a rcxn:SlotForm ;

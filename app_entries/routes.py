@@ -357,6 +357,8 @@ def construction_detail(uri):
             'subject': str(element_number),
             'children': nested_elements
         })
+        colloprofiles = colloprofiles + nested_colloprofiles
+        print(colloprofiles)
 
     # Collect triples for gesture
     gesture = []
