@@ -99,9 +99,10 @@ function createCrossTable(data) {
     });
 
     // Populate with object + href + definition
-    data.forEach(({ subject, property, object, href, definition }) => {
-    tableData[property][subject].push({ object, href, definition });
-    });
+    data.forEach(({ subject, property, object, href, href_compcon, definition }) => {
+    tableData[property][subject].push({ object, href, href_compcon, definition });
+});
+
 
     const desiredOrder = [
         'Optionality', 'WordOrder',
@@ -111,7 +112,7 @@ function createCrossTable(data) {
         'Semantic property', 'has semantic role', 'has animacy', 'has gender', 'has number',
         'hasPerson', 'has case', 'has tense', 'has modality',
         'has voice', 'Information Structure' , 'type', 'Colloprofile', 'comment',
-        'Comparative Concept'
+        'Comparative Concept (cxn)', 'Comparative Concept (sem)', 'Comparative Concept (inf)', 'Comparative Concept (str)'
     ];
 
     // Define colors (palette)
@@ -138,15 +139,20 @@ function createCrossTable(data) {
     // Helper: render only top-level values for a cell
     //---------------------------------------------
     function renderTopLevelValues(values) {
-        return values.map(v => {
-            const title = v.definition ? ` title="${v.definition}"` : '';
-            if (v.href) {
-                return `<a href="${v.href}" target="_blank"${title}>${v.object}</a>`;
-            } else {
-                return `<span${title}>${v.object}</span>`;
-            }
-        }).join('<br>');
-    }
+    return values.map(v => {
+        const title = v.definition ? ` title="${v.definition}"` : '';
+        if (v.href_compcon) {
+            // Use the blueprint URL for href_compcon
+            const compconUrl = `/app_compcon/entry/${encodeURIComponent(v.href_compcon)}`;
+            return `<a href="${compconUrl}" target="_blank"${title}>${v.object}</a>`;
+        } else if (v.href) {
+            // Use the original href if no href_compcon
+            return `<a href="${v.href}" target="_blank"${title}>${v.object}</a>`;
+        } else {
+            return `<span${title}>${v.object}</span>`;
+        }
+    }).join('<br>');
+}
 
     //---------------------------------------------
     // Helper: build nested table HTML for a subject (once)
@@ -185,10 +191,22 @@ function createCrossTable(data) {
         let nested = `<table class="nested-table" style="border-collapse:collapse; margin-top:6px; width:100%;">`;
 
         // Header row: blank corner + child subjects — use color based on element number
-        nested += `<tr><td style="padding:4px 6px;"></td>${childSubjects.map((s, i) => {
-            const bg = colorForLabel(s, i);
-            return `<td style="padding:4px 6px; font-weight:bold; text-align:center; background-color:${bg};">${s}</td>`;
-        }).join('')}</tr>`;
+        nested += childSubjects.map(s => {
+    const vals = nestedTableData[prop][s] || [];
+    return `<td style="padding:4px 6px;">${
+        vals.map(v => {
+            const title = v.definition ? ` title="${v.definition}"` : '';
+            if (v.href_compcon) {
+                const compconUrl = `/app_compcon/comparative_concept_detail?uri=${encodeURIComponent(v.href_compcon)}`;
+                return `<a href="${compconUrl}" target="_blank"${title}>${v.object}</a>`;
+            } else if (v.href) {
+                return `<a href="${v.href}" target="_blank"${title}>${v.object}</a>`;
+            } else {
+                return `<span${title}>${v.object}</span>`;
+            }
+        }).join('<br>')
+    }</td>`;
+}).join('');
 
         // Rows: one per child property
         childProperties.forEach(prop => {

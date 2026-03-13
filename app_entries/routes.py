@@ -123,6 +123,18 @@ def identify_construction_element_triples(slots_uri):
                     'property': "Colloprofile",
                     'object': "See colloprofile for " + element_number + " below",
                 })
+            elif str(predicate).startswith(
+                    "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/compcon#"):  # deal with comparative concepts
+                compcon_label = get_label_or_iri(obj, g, ont)
+                compcon_uri = find_compcon_uri_by_label(compcon_label)
+                compcon_type_abbreviation = compcon_uri[:3]
+                elements.append({
+                    'subject': element_number,
+                    'property': get_label_or_iri(predicate, g, ont) + " (" + compcon_type_abbreviation + ")",
+                    'definition': get_definition(obj, g, ont),
+                    'object': get_label_or_iri(obj, g, ont),
+                    'href_compcon': compcon_uri,
+                })
             else:  # all other cases
                 elements.append({
                     'subject': element_number,
