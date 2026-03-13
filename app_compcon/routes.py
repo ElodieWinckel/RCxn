@@ -1,9 +1,8 @@
 from typing import Any
-
 from . import app_compcon_blueprint
 import glob
 import re
-from flask import render_template
+from flask import render_template, url_for
 from rdflib import Graph, URIRef, Literal, Namespace, RDF, RDFS, SKOS
 import os
 
@@ -11,7 +10,9 @@ import os
 ### FUNCTIONS
 ###################################################
 
-prefixes = "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/compcon#"
+prefixes = ("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/compcon#|" +
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#|" +
+            "http://www.w3.org/2004/02/skos/core#")
 
 def get_label_or_iri(term, data_graph, ont_graph):
     """Return skos:prefLabel or rdfs:label from ontologies if available."""
@@ -48,6 +49,33 @@ def get_definition(term, data_graph, ont_graph):
     else:
         return str("")
 
+def find_compcon_url_by_label(label_compcon) -> str:
+    # Identify its URI (the definition use either the label or the alternative label)
+    uri_compcon = ont.value(predicate=RDFS.label, object=Literal(label_compcon))
+    if uri_compcon is None:
+        uri_compcon = ont.value(predicate=SKOS.altLabel, object=Literal(label_compcon))
+    uri_compcon_no_prefix = re.sub(prefixes, "", str(uri_compcon))
+    # Create the correct URL
+    url = url_for('app_compcon.comparative_concept_detail', uri=uri_compcon_no_prefix)
+    return f'<a href="{url}">{label_compcon}</a>'
+
+
+def convert_a_tags_to_html_links(text):
+    # The text in the cc yalm file uses <a> </a> to indicate hyperlinks within the cc-database
+    # Use Flask's url_for to generate the actual URL
+    def replace_a_tag(match):
+        # Identify the label of the comparative concept that we need to link to
+        label_compcon = match.group(1)
+        return find_compcon_url_by_label(label_compcon)
+
+    # Replace <a>content</a> with <a href="...">content</a>
+    html_text = re.sub(
+        r'<a>(.*?)</a>',
+        replace_a_tag,
+        text
+    )
+    return html_text
+
 ###################################################
 ### CREATE RDF GRAPH
 ###################################################
@@ -71,7 +99,7 @@ for ttl_file in glob.glob("Abox/*.ttl"):
 compcon = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/compcon#")
 g.bind("compcon", compcon)
 
-# Load the ontology (only compcon needed)
+# Load the ontologies
 ont = Graph()
 for ttl_file in glob.glob("ontologies/*.ttl"): # for compcon
     ont.parse(ttl_file, format="turtle")
@@ -126,15 +154,28 @@ def comparative_concept_detail(uri):
     # Rebuild the full URI for the construction
     entry_uri = URIRef("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/compcon#" + uri)
 
+    # Fetch the title to display
+    title = ont.value(entry_uri, RDFS.label)
+
     # Collect all triples from the ontology where entry_uri is the subject
     description = []
     for predicate, obj in ont.predicate_objects(subject=entry_uri):
+        if predicate == URIRef("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/compcon#subtypeOf"):
+            object_clean = get_label_or_iri(obj, g, ont)
+            object_with_urls = find_compcon_url_by_label(object_clean)
+        else:
+            object_clean = get_label_or_iri(obj, g, ont)
+            object_emphasized = re.sub(r'<e>(.*?)</e>', r'<em>\1</em>', object_clean)
+            object_with_urls = convert_a_tags_to_html_links(object_emphasized)
         description.append({
             'property': get_label_or_iri(predicate, g, ont),
-            'object': get_label_or_iri(obj, g, ont)
+            'object': object_with_urls
         })
+    description[:] = [item for item in description if item[
+        'property'] != "http://www.w3.org/2000/01/rdf-schema#label"]  # The label is the title, therefore not needed
 
     # Collect constructions that use entry_uri as a comparative concept
+    construction_list = []
     for subj in g.subjects(predicate=compcon.hasCompCon,object=entry_uri):
         type_of_subj = g.value(subject=subj, predicate=RDF.type)
         # two cases: either the subject of hasCompCon is a construction ...
@@ -148,15 +189,15 @@ def comparative_concept_detail(uri):
             name = g.value(subject=construction_uri,
                            predicate=URIRef("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#hasTitle"))
             url = re.sub("http://example.org/cx/", "", str(construction_uri))
-        description.append({
-            'property': 'Corresponding construction',
+        construction_list.append({
             'object': name,
             'url': url,
         })
 
-    # Fetch the title to display
-    title = ont.value(entry_uri, RDFS.label)
+
+
 
     return render_template("app_compcon/entry.html",
                            title = title,
-                           description = description)
+                           description = description,
+                           constructions = construction_list)
