@@ -238,14 +238,19 @@ function generateFields() {
         // Create a label for the semantic contribution selection
         const semanticContributionLabel = document.createElement('label');
         semanticContributionLabel.textContent = `Semantic contribution of the element (recommended):`;
-        // Create dropdown (select element) for tense
+        // Create dropdown (select element) for semantic contribution
         const semanticContributionSelect = document.createElement('select');
         semanticContributionSelect.name = `semantic_contribution_${i + 1}`;
+        // Add a default empty option
+        const defaultOption = document.createElement('option');
+        defaultOption.value = ''; // Empty value
+        defaultOption.textContent = '-- Select a semantic contribution --';
+        semanticContributionSelect.appendChild(defaultOption);
         // Populate the dropdown with options from the 'semanticRoles' array
         semanticRoles.forEach(([uri, label]) => {
             const option = document.createElement('option');
-            option.value = uri;         // The URI of the tense feature is used as the value
-            option.textContent = label; // The label is displayed in the dropdown
+            option.value = uri;
+            option.textContent = label;
             semanticContributionSelect.appendChild(option);
         });
         // Add "Other" option to the dropdown

@@ -514,6 +514,7 @@ def form_submit():
         # Retrieve information from the form
         phonology = request.form[f'phonology_{i}']
         semantic_contribution = request.form[f'semantic_contribution_{i}']
+        add_semantic_contribution = request.form[f'add_semantic_contribution_{i}']
         semantic_property = request.form[f'semprop_{i}']
         colloprofile = request.form[f'colloprofile_{i}']
         other_animacy = request.form[f'other_animacy_{i}']
@@ -548,7 +549,6 @@ def form_submit():
             stems = json.loads(stem_json)
         except json.JSONDecodeError:
             stems = []
-        add_semantic_contribution = request.form[f'add_semantic_contribution_{i}']
         other_element_specification = request.form[f'element_specification_{i}']
 
         # Define element/slot as belonging to a subclass of the "Slot" class,
@@ -575,9 +575,8 @@ def form_submit():
         # (i.e., all meaning info except index)
         if add_semantic_contribution.strip():
             g.add((element_uri, rcxn.hasOtherSemanticContribution, Literal(add_semantic_contribution)))
-        else:
-            if semantic_contribution.strip():
-                g.add((element_uri, olia.hasSemanticRole, URIRef(semantic_contribution)))
+        if semantic_contribution.strip():
+            g.add((element_uri, olia.hasSemanticRole, URIRef(semantic_contribution)))
         if semantic_property.strip():
             g.add((element_uri, rcxn.hasSemanticProperty, Literal(semantic_property)))
 
