@@ -38,7 +38,8 @@ g.add((cx.SmallQuantityGestureConstruction_Form, cx.handshape, Literal("Middle, 
 g.add((cx.SmallQuantityGestureConstruction_Form, cx.orientation, Literal("Palm Lateral.")))
 g.add((cx.SmallQuantityGestureConstruction_Form, cx.movement, Literal("Static hold or beat.")))
 g.add((cx.SmallQuantityGestureConstruction_Form, cx.position, Literal("Central space or at face level.")))
-g.add((cx.SmallQuantityGestureConstruction_Form, cx.handedness, Literal("One-handed.")))
+g.add((cx.SmallQuantityGestureConstruction_Form, cx.handedness, cx.oneHand)) # TODO handedness in gstr with three possible values:
+            # oneHand and Twohands, the former can be either leftHand or rightHand
 g.add((cx.SmallQuantityGestureConstruction_Form, cx.duration, Literal("Usually for the entire duration of the co-occurring verbal construction.")))
 
 # Meaning # TODO all properties in gstr
