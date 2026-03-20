@@ -107,8 +107,8 @@ def index():
 
         os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        filename = f"Petrenko_compcon_{timestamp}_cx.ttl"
+        #timestamp = datetime.now().strftime("%Y%m%d_%H%M%S") # not used anymore in the name of the file
+        filename = f"{iri}_compcon.ttl"
         path = os.path.join(OUTPUT_DIR, filename)
 
         g = Graph()
