@@ -171,13 +171,32 @@ def comparative_concept_detail(uri):
             object_clean = get_label_or_iri(obj, g, ont)
             object_emphasized = re.sub(r'<e>(.*?)</e>', r'<em>\1</em>', object_clean)
             object_with_urls = convert_a_tags_to_html_links(object_emphasized)
+        elif predicate == RDF.type :
+            predicate = "Type"
+            if obj == compcon.sem:
+                object_with_urls = "meaning"
+                definition = ont.value(compcon.sem_meaning, RDFS.comment)
+                definition_without_ahref = re.sub(r'<a>(.*?)</a>', r'\1', definition)
+            elif obj == compcon.cxn:
+                object_with_urls = "construction"
+                definition = ont.value(compcon.cxn_construction, RDFS.comment)
+                definition_without_ahref = re.sub(r'<a>(.*?)</a>', r'\1', definition)
+            elif obj == compcon.inf:
+                object_with_urls = "information packaging"
+                definition = ont.value(compcon["inf_information-packaging"], RDFS.comment)
+                definition_without_ahref = re.sub(r'<a>(.*?)</a>', r'\1', definition)
+            else:
+                object_with_urls = "strategy"
+                definition = ont.value(compcon.str_strategy, RDFS.comment)
+                definition_without_ahref = re.sub(r'<a>(.*?)</a>', r'\1', definition)
         else:
             object_clean = get_label_or_iri(obj, g, ont)
             object_emphasized = re.sub(r'<e>(.*?)</e>', r'<em>\1</em>', object_clean)
             object_with_urls = convert_a_tags_to_html_links(object_emphasized)
         description.append({
             'property': get_label_or_iri(predicate, g, ont),
-            'object': object_with_urls
+            'object': object_with_urls,
+            'definition': definition_without_ahref
         })
     description[:] = [item for item in description if item[
         'property'] != "http://www.w3.org/2000/01/rdf-schema#label"]  # The label is the title, therefore not needed
