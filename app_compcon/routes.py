@@ -166,12 +166,14 @@ def comparative_concept_detail(uri):
         if predicate == compcon.subtypeOf: # For taxonomical relations: link to the relevant comparative concept
             object_clean = get_label_or_iri(obj, g, ont)
             object_with_urls = find_compcon_url_by_label(object_clean)
+            definition_without_ahref = ""
         elif predicate == URIRef("http://www.w3.org/2000/01/rdf-schema#comment"): # Display the italics and hyperlinks in the definition
             predicate = "Definition"
             object_clean = get_label_or_iri(obj, g, ont)
             object_emphasized = re.sub(r'<e>(.*?)</e>', r'<em>\1</em>', object_clean)
             object_with_urls = convert_a_tags_to_html_links(object_emphasized)
-        elif predicate == RDF.type :
+            definition_without_ahref = ""
+        elif predicate == RDF.type : # Display the proper definition of the type
             predicate = "Type"
             if obj == compcon.sem:
                 object_with_urls = "meaning"
@@ -193,6 +195,7 @@ def comparative_concept_detail(uri):
             object_clean = get_label_or_iri(obj, g, ont)
             object_emphasized = re.sub(r'<e>(.*?)</e>', r'<em>\1</em>', object_clean)
             object_with_urls = convert_a_tags_to_html_links(object_emphasized)
+            definition_without_ahref = ""
         description.append({
             'property': get_label_or_iri(predicate, g, ont),
             'object': object_with_urls,
