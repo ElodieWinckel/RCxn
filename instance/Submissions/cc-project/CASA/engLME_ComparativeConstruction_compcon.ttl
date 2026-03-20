@@ -1,0 +1,17 @@
+@prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cx: <http://example.org/cx/> .
+@prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
+@prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
+@prefix olia: <http://purl.org/olia/olia.owl#> .
+@prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+
+
+cx:engLME_ComparativeConstruction compcon:hasCompCon compcon:cxn_comparative-construction , compcon:sem_comparative-relation , compcon:str_particle-comparative .
+cx:engLME_ComparativeConstruction_1 compcon:hasCompCon compcon:cxn_comparative-form , compcon:sem_comparative-degree , compcon:str_degree-marker .
+cx:engLME_ComparativeConstruction_2 compcon:hasCompCon compcon:sem_entity , compcon:sem_event , compcon:sem_comparee .
+cx:engLME_ComparativeConstruction_3 compcon:hasCompCon compcon:str_conjunction .
+cx:engLME_ComparativeConstruction_4 compcon:hasCompCon compcon:inf_reference , compcon:sem_standard .
