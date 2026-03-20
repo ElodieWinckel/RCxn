@@ -8,7 +8,7 @@ compcon:ExpressionOf a owl:ObjectProperty ;
     rdfs:label "Expresses" .
 
 compcon:Sections a owl:ObjectProperty ;
-    rdfs:label "Definition in Croft (2022), see section" .
+    rdfs:label "See section (in Croft 2022)" .
 
 compcon:cxn_action-modification-construction a compcon:cxn ;
     rdfs:label "action modification construction" ;

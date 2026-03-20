@@ -50,7 +50,7 @@ g.add((compcon.language, RDFS.label, Literal("Language")))
 g.add((compcon.linkToDatabase, RDF.type, OWL.ObjectProperty))
 g.add((compcon.linkToDatabase, RDFS.label, Literal("Link to the MoCCA database of Comparative Concepts")))
 g.add((compcon.Sections, RDF.type, OWL.ObjectProperty))
-g.add((compcon.Sections, RDFS.label, Literal("Definition in Croft (2022), see section")))
+g.add((compcon.Sections, RDFS.label, Literal("See section (in Croft 2022)")))
 
 # Define property hasCompCon which will be used to annotate construction entries
 g.add((compcon.hasCompCon, RDF.type, OWL.ObjectProperty))
