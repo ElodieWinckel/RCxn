@@ -10,7 +10,7 @@ COMP = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/compcon#")
 CX = Namespace("http://example.org/cx/")
 
 ONTOLOGY_FILE = "ontologies/compcon.ttl"
-OUTPUT_DIR = "instance/Submissions"
+OUTPUT_DIR = "instance/Submissions/cc-project/"
 
 
 def load_compcon_mapping():
