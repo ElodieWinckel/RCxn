@@ -31,6 +31,10 @@ g.add((compcon.str, RDFS.subClassOf, compcon.compcon))
 g.add((compcon.cxn, RDF.type, OWL.Class))
 g.add((compcon.cxn, RDFS.label, Literal("construction")))
 g.add((compcon.cxn, RDFS.subClassOf, compcon.compcon))
+iri_for_definition = "def" # This is just a trick because compcon.def is reserved...
+g.add((compcon[iri_for_definition], RDF.type, OWL.Class))
+g.add((compcon[iri_for_definition], RDFS.label, Literal("definition")))
+g.add((compcon[iri_for_definition], RDFS.comment, Literal("A category of concepts which are part of the terminology used by Croft (2022) to describe comparative concepts. They are not comparative concepts themselves.")))
 
 # Define some properties introduced in the yaml database
 g.add((compcon.subtypeOf, RDF.type, OWL.ObjectProperty))

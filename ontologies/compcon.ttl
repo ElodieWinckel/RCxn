@@ -12092,6 +12092,10 @@ compcon:str_recruitment-strategy a compcon:str ;
     compcon:linkToDatabase "https://comparative-concepts.github.io/cc-database/cc-database.html#str:recruitment-strategy" ;
     compcon:subtypeOf compcon:str_strategy .
 
+compcon:def a owl:Class ;
+    rdfs:label "definition" ;
+    rdfs:comment "A category of concepts which are part of the terminology used by Croft (2022) to describe comparative concepts. They are not comparative concepts themselves." .
+
 compcon:str_encoding-strategy a compcon:str ;
     rdfs:label "encoding strategy" ;
     rdfs:comment "a <a>strategy</a> for a <a>construction</a> defined by the presence (or absence) of certain <a>morphosyntactic</a> structures that are defined in a <a>crosslinguistically valid</a> fashion. (Section 1.4)" ;
