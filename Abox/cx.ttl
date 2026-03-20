@@ -1166,7 +1166,7 @@ cx:SmallQuantityGestureConstruction a cx:GestureConstruction ;
     rcxn:hasTitle "Small Quantity Gesture Construction" .
 
 cx:SmallQuantityGestureConstruction_Form cx:duration "Usually for the entire duration of the co-occurring verbal construction." ;
-    cx:handedness "One-handed." ;
+    cx:handedness cx:oneHand ;
     cx:handshape "Middle, right, and little fingers retracted toward the palm.",
         "Thumb and index extended or crooked and parallel to each other." ;
     cx:movement "Static hold or beat." ;

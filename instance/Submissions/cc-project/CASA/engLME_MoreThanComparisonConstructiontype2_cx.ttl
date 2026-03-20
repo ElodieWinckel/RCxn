@@ -7,6 +7,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix compcon: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/compcon#> .
 
 membr:Project_Petrenko rsrch:hasFindings membr:Project_Petrenko_F2603061553 .
 

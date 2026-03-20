@@ -15,7 +15,7 @@ graph_membr = Graph()
 graph_references = Graph()
 
 # Load everything from the submissions (assuming that everything in the submission folder has now a green light)
-for ttl_file in glob.glob("instance/Submissions/*.ttl"):
+for ttl_file in glob.glob("instance/Submissions/**/*.ttl", recursive=True):
     g.parse(ttl_file, format="turtle")
 
 # Namespaces

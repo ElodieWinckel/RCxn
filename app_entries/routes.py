@@ -198,7 +198,7 @@ if os.path.exists("/data/www/RCxn"):
 
 else:
     # Load and parse all RDF files from the folder with submissions (only during development process)
-    for ttl_file in glob.glob("instance/Submissions/*.ttl"):
+    for ttl_file in glob.glob("instance/Submissions/**/*.ttl", recursive=True):
         g.parse(ttl_file, format="turtle")
 
 # Load and parse all RDF files in the Abox
