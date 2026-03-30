@@ -278,7 +278,7 @@ The URI for the metadata of the construction is based on the URI of the construc
 
 | Property rcxn\#hasMetadata |  |
 | :---- | :---- |
-| description | Relates a construction to its metadata. |
+| description | Relates a construction to the non-linguistic information about its entry (its metadata). |
 | domain (subject) | rcxn\#Construction |
 | range (object) | rcxn\#Metadata |
 
@@ -289,12 +289,7 @@ The URI for the metadata of the construction is based on the URI of the construc
 | range (object) | rsrch\#Member |
 | label | Annotator (en) |
 
-| Property rcxn\#creationDate |  |
-| :---- | :---- |
-| description | Indicates the date where the construction entry was created and links it to the construction’s metadata. |
-| domain (subject) | rcxn\#Metadata |
-| range (object) | xsd\#date |
-| label | Creation date (en) |
+Note that we use dcterm:created in the database to store the date of creation of the construction entry.
 
 ## References & Literature
 

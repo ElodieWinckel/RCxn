@@ -1,0 +1,29 @@
+@prefix cx: <http://example.org/cx/> .
+@prefix dcterm: <http://purl.org/dc/terms/> .
+@prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
+@prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
+@prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+membr:Project_Winckel_2601131454_F2601131454 rsrch:basedOn cx:lat_Adjective .
+
+cx:lat_Adjective a rcxn:Construction ;
+    lg:partOfLanguage lg:lat ;
+    rcxn:hasConstructionMeaning cx:lat_Adjective_Meaning ;
+    rcxn:hasMetadata cx:lat_Adjective_MD ;
+    rcxn:hasSlots cx:lat_Adjective_slots ;
+    rcxn:hasTitle "Adjective" .
+
+cx:lat_Adjective_1 a rcxn:SlotMandatory .
+
+cx:lat_Adjective_MD a rcxn:Metadata ;
+    dcterm:created "2026-03-30"^^xsd:date ;
+    rcxn:annotator membr:Winckel .
+
+cx:lat_Adjective_Meaning a rcxn:ConstructionMeaning .
+
+cx:lat_Adjective_slots a rdf:Seq ;
+    rdf:_1 cx:lat_Adjective_1 .
+
