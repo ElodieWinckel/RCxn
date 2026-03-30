@@ -1,5 +1,6 @@
 @prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix cx: <http://example.org/cx/> .
+@prefix dcterm: <http://purl.org/dc/terms/> .
 @prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
 @prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
 @prefix olia: <http://purl.org/olia/olia.owl#> .
@@ -25,7 +26,7 @@ cx:engLME_AdjectivalwithPARTNERConstruction_3 a rcxn:SlotMandatory .
 
 cx:engLME_AdjectivalwithPARTNERConstruction_MD a rcxn:Metadata ;
     rcxn:annotator membr:Petrenko ;
-    rcxn:creationDate "2026-03-06"^^xsd:date .
+    dcterm:created "2026-03-06"^^xsd:date .
 
 cx:engLME_AdjectivalwithPARTNERConstruction_Meaning a rcxn:ConstructionMeaning .
 

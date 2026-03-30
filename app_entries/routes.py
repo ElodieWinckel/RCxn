@@ -2,7 +2,7 @@ from . import app_entries_blueprint
 import glob
 import re
 from flask import render_template, Response, url_for
-from rdflib import Graph, URIRef, Literal, Namespace, RDF, RDFS, FOAF, SKOS
+from rdflib import Graph, URIRef, Literal, Namespace, RDF, RDFS, FOAF, SKOS, DCTERMS
 import os
 
 ###################################################
@@ -40,7 +40,8 @@ prefixes = ("http://example.org/cx/|"
             "http://www.w3.org/1999/02/22-rdf-syntax-ns#|"
             "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#|"
             "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rdata#|"
-            "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/compcon#")
+            "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/compcon#|"
+            "http://purl.org/dc/terms/")
 
 def get_label_or_iri(term, data_graph, ont_graph):
     """Return skos:prefLabel or rdfs:label from ontologies if available."""
@@ -214,6 +215,8 @@ cx = Namespace("http://example.org/cx/")
 g.bind("cx", cx)
 dc = Namespace("http://purl.org/dc/elements/1.1/")
 g.bind("dc",dc)
+dcterm = Namespace("http://purl.org/dc/terms/")
+g.bind("dcterm",dcterm)
 olia = Namespace("http://purl.org/olia/olia.owl#")
 g.bind("olia", olia)
 rcxn = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#")

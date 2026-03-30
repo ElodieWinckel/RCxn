@@ -1,6 +1,7 @@
 @prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix cx: <http://example.org/cx/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterm: <http://purl.org/dc/terms/> .
 @prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
 @prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#> .
 @prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
@@ -59,7 +60,7 @@ cx:Spanishobjectrelativeclause a rcxn:Construction ;
 
 cx:Spanishobjectrelativeclause_MD a rcxn:Metadata ;
     rcxn:annotator membr:FernandezSantos ;
-    rcxn:creationDate "2024-11-25"^^xsd:date ;
+    dcterm:created "2024-11-25"^^xsd:date ;
     lg:partOfLanguage lg:spa.
 
 cx:Spanishrelativeclause a rcxn:Construction ;
@@ -69,7 +70,7 @@ cx:Spanishrelativeclause a rcxn:Construction ;
 
 cx:Spanishrelativeclause_MD a rcxn:Metadata ;
     rcxn:annotator membr:FernandezSantos ;
-    rcxn:creationDate "2024-11-25"^^xsd:date .
+    dcterm:created "2024-11-25"^^xsd:date .
 
 cx:Spanishtransitiveconstruction a rcxn:Construction ;
     rcxn:hasMetadata cx:Spanishtransitiveconstruction_MD ;
@@ -78,7 +79,7 @@ cx:Spanishtransitiveconstruction a rcxn:Construction ;
 
 cx:Spanishtransitiveconstruction_MD a rcxn:Metadata ;
     rcxn:annotator membr:FernandezSantos ;
-    rcxn:creationDate "2024-11-25"^^xsd:date .
+    dcterm:created "2024-11-25"^^xsd:date .
 
 cx:Transitiveobjectrelativeclause_1 a rcxn:SlotMandatory ;
     rcxn:hasSlotForm cx:Transitiveobjectrelativeclause_1_Form ;

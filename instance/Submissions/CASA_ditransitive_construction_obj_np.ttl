@@ -1,5 +1,6 @@
 @prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix cx: <http://example.org/cx/> .
+@prefix dcterm: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
 @prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#> .
@@ -48,7 +49,7 @@ cx:eng_ditransitive_construction_obj_np_4 a rcxn:SlotMandatory ;
 
 cx:eng_ditransitive_construction_obj_np_MD a rcxn:Metadata ;
     rcxn:annotator membr:Winckel ;
-    rcxn:creationDate "2026-02-04"^^xsd:date .
+    dcterm:created "2026-02-04"^^xsd:date .
 
 cx:eng_ditransitive_construction_obj_np_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "ÆFFECTOR makes RECIPIENT receive ÆFFECTED." .

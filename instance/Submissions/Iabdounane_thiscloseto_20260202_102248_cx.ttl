@@ -1,4 +1,5 @@
 @prefix cx: <http://example.org/cx/> .
+@prefix dcterm: <http://purl.org/dc/terms/> .
 @prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
 @prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
 @prefix olia: <http://purl.org/olia/olia.owl#> .
@@ -18,7 +19,7 @@ cx:eng_PrepositionalPhrasetoPLUSVing a rcxn:Construction ;
 
 cx:eng_PrepositionalPhrasetoPLUSVing_MD a rcxn:Metadata ;
     cx:annotator membr:Iabdounane ;
-    rcxn:creationDate "2026-02-02"^^xsd:date .
+    dcterm:created "2026-02-02"^^xsd:date .
 
 cx:eng_ThisclosetoVingconstruction_1 a rcxn:SlotOptional ;
     rcxn:hasSyntacticFunction "Subject" .
@@ -68,7 +69,7 @@ cx:eng_ThisclosetoVingconstruction_6_Form a rcxn:SlotForm ;
 
 cx:eng_ThisclosetoVingconstruction_MD a rcxn:Metadata ;
     rcxn:annotator membr:Iabdounane ;
-    rcxn:creationDate "2026-02-02"^^xsd:date .
+    dcterm:created "2026-02-02"^^xsd:date .
 
 cx:eng_ThisclosetoVingconstruction_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "[An agent]1 is/was metaphorically very close to [a goal or an outcome]6." .
@@ -93,7 +94,7 @@ cx:eng_close a rcxn:Construction ;
 
 cx:eng_close_MD a rcxn:Metadata ;
     cx:annotator membr:Iabdounane ;
-    rcxn:creationDate "2026-02-02"^^xsd:date .
+    dcterm:created "2026-02-02"^^xsd:date .
 
 cx:eng_this a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
@@ -103,7 +104,7 @@ cx:eng_this a rcxn:Construction ;
 
 cx:eng_this_MD a rcxn:Metadata ;
     cx:annotator membr:Iabdounane ;
-    rcxn:creationDate "2026-02-02"^^xsd:date .
+    dcterm:created "2026-02-02"^^xsd:date .
 
 cx:eng_ThisclosetoVingconstruction a rcxn:Construction ;
     lg:partOfLanguage lg:engUsSpo ;

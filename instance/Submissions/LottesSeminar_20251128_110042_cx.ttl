@@ -1,5 +1,6 @@
 @prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix cx: <http://example.org/cx/> .
+@prefix dcterm: <http://purl.org/dc/terms/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
 @prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#> .
@@ -21,7 +22,7 @@ cx:eng_Adjective_MD a rcxn:Metadata ;
     rcxn:annotator membr:Boos ;
     rcxn:annotator membr:Weigelt ;
     rcxn:annotator membr:Petrenko ;
-    rcxn:creationDate "2025-11-28"^^xsd:date .
+    dcterm:created "2025-11-28"^^xsd:date .
 
 
 
@@ -49,7 +50,7 @@ cx:coolascolourconstruction_MD a rcxn:Metadata ;
     rcxn:annotator membr:Weigelt ;
     rcxn:annotator membr:Petrenko ;
     cx:hasSources cx:eng_coolconstruction_Sources ;
-    rcxn:creationDate "2025-11-28"^^xsd:date .
+    dcterm:created "2025-11-28"^^xsd:date .
 
 cx:coolascolourconstruction_slots a rdf:Seq ;
     rdf:_1 cx:coolascolourconstruction_1 .
@@ -101,7 +102,7 @@ cx:coolasemotionconstruction_MD a rcxn:Metadata ;
     rcxn:annotator membr:Weigelt ;
     rcxn:annotator membr:Petrenko ;
     cx:hasSources cx:eng_coolconstruction_Sources ;
-    rcxn:creationDate "2025-11-28"^^xsd:date .
+    dcterm:created "2025-11-28"^^xsd:date .
 
 cx:coolasemotionconstruction_slots a rdf:Seq ;
     rdf:_1 cx:coolasemotionconstruction_1 .
@@ -152,7 +153,7 @@ cx:coolasadmirableconstruction_MD a rcxn:Metadata ;
     rcxn:annotator membr:Weigelt ;
     rcxn:annotator membr:Petrenko ;
     cx:hasSources cx:eng_coolconstruction_Sources ;
-    rcxn:creationDate "2025-11-28"^^xsd:date .
+    dcterm:created "2025-11-28"^^xsd:date .
 
 cx:coolasadmirableconstruction_slots a rdf:Seq ;
     rdf:_1 cx:coolasadmirableconstruction_1 .
@@ -203,7 +204,7 @@ cx:Adverb_MD a rcxn:Metadata ;
     rcxn:annotator membr:Boos ;
     rcxn:annotator membr:Weigelt ;
     rcxn:annotator membr:Petrenko ;
-    rcxn:creationDate "2025-12-08"^^xsd:date .
+    dcterm:created "2025-12-08"^^xsd:date .
 
 cx:eng_Adjective rcxn:elementOf cx:eng_AdjectivePhrase .
 
@@ -233,7 +234,7 @@ cx:eng_AdjectivePhrase_MD a rcxn:Metadata ;
     rcxn:annotator membr:Boos ;
     rcxn:annotator membr:Weigelt ;
     rcxn:annotator membr:Petrenko ;
-    rcxn:creationDate "2025-12-08"^^xsd:date .
+    dcterm:created "2025-12-08"^^xsd:date .
 
 cx:eng_AdjectivePhrase_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "Ascribing an [attribute]1." .
@@ -300,7 +301,7 @@ cx:eng_Keepacoolheadconstruction_MD a rcxn:Metadata ;
     rcxn:annotator membr:Weigelt ;
     rcxn:annotator membr:Petrenko ;
     cx:hasSources cx:eng_coolconstruction_Sources ;
-    rcxn:creationDate "2025-11-28"^^xsd:date .
+    dcterm:created "2025-11-28"^^xsd:date .
 
 cx:eng_Keepacoolheadconstruction_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "remain composed" .
@@ -377,7 +378,7 @@ cx:eng_coolconstruction_MD a rcxn:Metadata ;
     rcxn:annotator membr:Weigelt ;
     rcxn:annotator membr:Petrenko ;
     cx:hasSources cx:eng_coolconstruction_Sources ;
-    rcxn:creationDate "2025-11-28"^^xsd:date .
+    dcterm:created "2025-11-28"^^xsd:date .
 
 cx:eng_coolconstruction_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "low temperature" .
@@ -408,7 +409,7 @@ cx:Determiner_MD a rcxn:Metadata ;
     rcxn:annotator membr:Boos ;
     rcxn:annotator membr:Weigelt ;
     rcxn:annotator membr:Petrenko ;
-    rcxn:creationDate "2025-12-01"^^xsd:date .
+    dcterm:created "2025-12-01"^^xsd:date .
 
 cx:Noun a rcxn:Construction ;
     rcxn:elementOf cx:eng_AdjectiveAttributiveconstruction ;
@@ -420,7 +421,7 @@ cx:Noun_MD a rcxn:Metadata ;
     rcxn:annotator membr:Boos ;
     rcxn:annotator membr:Weigelt ;
     rcxn:annotator membr:Petrenko ;
-    rcxn:creationDate "2025-12-01"^^xsd:date .
+    dcterm:created "2025-12-01"^^xsd:date .
 
 cx:eng_AdjectiveAttributiveconstruction_1 a rcxn:SlotOptional ;
     rcxn:hasSlotForm cx:eng_AdjectiveAttributiveconstruction_1_Form .
@@ -445,7 +446,7 @@ cx:eng_AdjectiveAttributiveconstruction_MD a rcxn:Metadata ;
     rcxn:annotator membr:Boos ;
     rcxn:annotator membr:Weigelt ;
     rcxn:annotator membr:Petrenko ;
-    rcxn:creationDate "2025-12-01"^^xsd:date .
+    dcterm:created "2025-12-01"^^xsd:date .
 
 cx:eng_AdjectiveAttributiveconstruction_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "Describes [a quality]2 of [an entity]3." .
@@ -489,7 +490,7 @@ cx:Copula_MD a rcxn:Metadata ;
     rcxn:annotator membr:Boos ;
     rcxn:annotator membr:Weigelt ;
     rcxn:annotator membr:Petrenko ;
-    rcxn:creationDate "2025-12-01"^^xsd:date .
+    dcterm:created "2025-12-01"^^xsd:date .
 
 cx:eng_AdjectivePhrase rcxn:elementOf cx:eng_AdjectivePredicativeconstruction .
 
@@ -516,7 +517,7 @@ cx:eng_AdjectivePredicativeconstruction_MD a rcxn:Metadata ;
     rcxn:annotator membr:Boos ;
     rcxn:annotator membr:Weigelt ;
     rcxn:annotator membr:Petrenko ;
-    rcxn:creationDate "2025-12-01"^^xsd:date .
+    dcterm:created "2025-12-01"^^xsd:date .
 
 cx:eng_AdjectivePredicativeconstruction_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "[Something]1 has [a quality]3." .

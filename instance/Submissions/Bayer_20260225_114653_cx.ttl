@@ -1,6 +1,7 @@
 @prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix cx: <http://example.org/cx/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterm: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
 @prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#> .
@@ -65,7 +66,7 @@ cx:arzCai_Ditransitiveconstruction_Ex_C a cx:Example ;
 cx:arzCai_Ditransitiveconstruction_MD a rcxn:Metadata ;
     rcxn:annotator membr:Bayer ;
     cx:hasSources cx:arzCai_Ditransitiveconstruction_Sources ;
-    rcxn:creationDate "2026-02-25"^^xsd:date .
+    dcterm:created "2026-02-25"^^xsd:date .
 
 cx:arzCai_Ditransitiveconstruction_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "[ÆFFECTOR]1 makes [RECIPIENT]3 receive or lose [ÆFFECTED]4" .
@@ -84,7 +85,7 @@ cx:lidativeconstruction a rcxn:Construction ;
 
 cx:lidativeconstruction_MD a rcxn:Metadata ;
     cx:annotator membr:Bayer ;
-    rcxn:creationDate "2026-02-25"^^xsd:date .
+    dcterm:created "2026-02-25"^^xsd:date .
 
 membr:Project_Bayer_2602251146_F2602251146 a rsrch:Finding ;
     RDFS:label "Marking of the recipient is conditioned by expectation sensitivity and is advancing." ;

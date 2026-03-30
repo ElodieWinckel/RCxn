@@ -1,6 +1,7 @@
 @prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix cx: <http://example.org/cx/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterm: <http://purl.org/dc/terms/> .
 @prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
 @prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#> .
 @prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
@@ -30,7 +31,7 @@ cx:Demonstrative-Topic-ShiftConstruction a rcxn:Construction ;
 
 cx:Demonstrative-Topic-ShiftConstruction_MD a rcxn:Metadata ;
     rcxn:annotator membr:Trombetta ;
-    rcxn:creationDate "2024-11-21"^^xsd:date .
+    dcterm:created "2024-11-21"^^xsd:date .
 
 cx:ItalianConiunctioRelativa a rcxn:Construction ;
     rcxn:hasMetadata cx:ItalianConiunctioRelativa_MD ;
@@ -39,7 +40,7 @@ cx:ItalianConiunctioRelativa a rcxn:Construction ;
 
 cx:ItalianConiunctioRelativa_MD a rcxn:Metadata ;
     rcxn:annotator membr:Trombetta ;
-    rcxn:creationDate "2024-11-21"^^xsd:date .
+    dcterm:created "2024-11-21"^^xsd:date .
 
 cx:ItalianRelativeClause a rcxn:Construction ;
     rcxn:hasMetadata cx:ItalianRelativeClause_MD ;
@@ -48,7 +49,7 @@ cx:ItalianRelativeClause a rcxn:Construction ;
 
 cx:ItalianRelativeClause_MD a rcxn:Metadata ;
     rcxn:annotator membr:Trombetta ;
-    rcxn:creationDate "2024-11-21"^^xsd:date .
+    dcterm:created "2024-11-21"^^xsd:date .
 
 cx:ItalianSiPassivante a rcxn:Construction ;
     rcxn:hasMetadata cx:ItalianSiPassivante_MD ;
@@ -57,7 +58,7 @@ cx:ItalianSiPassivante a rcxn:Construction ;
 
 cx:ItalianSiPassivante_MD a rcxn:Metadata ;
     rcxn:annotator membr:Trombetta ;
-    rcxn:creationDate "2024-11-21"^^xsd:date .
+    dcterm:created "2024-11-21"^^xsd:date .
 
 cx:ItalianTemporalSubordinateClause a rcxn:Construction ;
     rcxn:hasMetadata cx:ItalianTemporalSubordinateClause_MD ;
@@ -66,7 +67,7 @@ cx:ItalianTemporalSubordinateClause a rcxn:Construction ;
 
 cx:ItalianTemporalSubordinateClause_MD a rcxn:Metadata ;
     rcxn:annotator membr:Trombetta ;
-    rcxn:creationDate "2024-11-21"^^xsd:date .
+    dcterm:created "2024-11-21"^^xsd:date .
 
 <http://example.org/cx/Latinlinkingcliché(i.e.,inCaesar'sandTacitus'works)> a rcxn:Construction ;
     rcxn:hasMetadata <http://example.org/cx/Latinlinkingcliché(i.e.,inCaesar'sandTacitus'works)_MD> ;
@@ -75,7 +76,7 @@ cx:ItalianTemporalSubordinateClause_MD a rcxn:Metadata ;
 
 <http://example.org/cx/Latinlinkingcliché(i.e.,inCaesar'sandTacitus'works)_MD> a rcxn:Metadata ;
     rcxn:annotator membr:Trombetta ;
-    rcxn:creationDate "2024-11-21"^^xsd:date .
+    dcterm:created "2024-11-21"^^xsd:date .
 
 cx:Relative-Topic-ShiftConstruction_1 a rcxn:SlotMandatory ;
     rcxn:hasSlots cx:Relative-Topic-ShiftConstruction_1_slots ;
@@ -133,7 +134,7 @@ cx:Relative-Topic-ShiftConstruction_Ex_B a cx:Example ;
 
 cx:Relative-Topic-ShiftConstruction_MD a rcxn:Metadata ;
     rcxn:annotator membr:Trombetta ;
-    rcxn:creationDate "2024-11-21"^^xsd:date ;
+    dcterm:created "2024-11-21"^^xsd:date ;
     cx:hasSources cx:Relative-Topic-ShiftConstruction_Sources .
 
 cx:Relative-Topic-ShiftConstruction_Meaning a rcxn:ConstructionMeaning ;

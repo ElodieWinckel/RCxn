@@ -340,6 +340,9 @@ def form_submit():
     foaf = Namespace("http://xmlns.com/foaf/0.1/")
     g.bind("foaf", foaf)
 
+    dcterm = Namespace("http://purl.org/dc/terms/")
+    g.bind("dcterm", dcterm)
+
     olia = Namespace("http://purl.org/olia/olia.owl#")
     g.bind("olia", olia)
 
@@ -370,7 +373,7 @@ def form_submit():
 
     # CREATION DATA
     # Add creation date as today.
-    g.add((cx[metadata_uri], rcxn.creationDate, Literal(datetime.now().strftime('%Y-%m-%d'), datatype=XSD.date)))
+    g.add((cx[metadata_uri], dcterm.created, Literal(datetime.now().strftime('%Y-%m-%d'), datatype=XSD.date)))
 
     # RESEARCH QUESTION
     # Triples needed if new research question has been added by user
@@ -673,7 +676,7 @@ def form_submit():
                     g.add((cx[cleaned_stem_construction], rcxn.hasMetadata, cx[metadata_stem_construction]))
                     g.add((cx[metadata_stem_construction], RDF.type, rcxn.Metadata))
                     g.add((cx[metadata_stem_construction], cx.annotator, membr[user_name]))
-                    g.add((cx[metadata_stem_construction], rcxn.creationDate, Literal(datetime.now().strftime('%Y-%m-%d'), datatype=XSD.date)))
+                    g.add((cx[metadata_stem_construction], dcterm.created, Literal(datetime.now().strftime('%Y-%m-%d'), datatype=XSD.date)))
                     g.add((cx[cleaned_stem_construction], rcxn.hasTitle, Literal(stem)))
                     # If the lemma has be translated, ass this translation as a meaning of the new construction
                     if translation.strip():
@@ -709,7 +712,7 @@ def form_submit():
                     g.add((cx[cleaned_morphosyn_construction], rcxn.hasMetadata, cx[metadata_morphosyn_construction]))
                     g.add((cx[metadata_morphosyn_construction], RDF.type, rcxn.Metadata))
                     g.add((cx[metadata_morphosyn_construction], cx.annotator, membr[user_name]))
-                    g.add((cx[metadata_morphosyn_construction], rcxn.creationDate,
+                    g.add((cx[metadata_morphosyn_construction], dcterm.created,
                            Literal(datetime.now().strftime('%Y-%m-%d'), datatype=XSD.date)))
                     g.add((cx[cleaned_morphosyn_construction], rcxn.hasTitle, Literal(morphosyn)))
                     print("New construction needed!")
@@ -771,7 +774,7 @@ def form_submit():
             g.add((cx[cleaned_inherit_construction], rcxn.hasMetadata, cx[metadata_inherit_construction]))
             g.add((cx[metadata_inherit_construction], RDF.type, rcxn.Metadata))
             g.add((cx[metadata_inherit_construction], cx.annotator, membr[user_name]))
-            g.add((cx[metadata_inherit_construction], rcxn.creationDate,
+            g.add((cx[metadata_inherit_construction], dcterm.created,
                    Literal(datetime.now().strftime('%Y-%m-%d'), datatype=XSD.date)))
             g.add((cx[cleaned_inherit_construction], rcxn.hasTitle, Literal(inherit_construction)))
             print("New construction needed!")
@@ -796,7 +799,7 @@ def form_submit():
             g.add((cx[cleaned_inherit_construction], rcxn.hasMetadata, cx[metadata_inherit_construction]))
             g.add((cx[metadata_inherit_construction], RDF.type, rcxn.Metadata))
             g.add((cx[metadata_inherit_construction], cx.annotator, membr[user_name]))
-            g.add((cx[metadata_inherit_construction], rcxn.creationDate,
+            g.add((cx[metadata_inherit_construction], dcterm.created,
                    Literal(datetime.now().strftime('%Y-%m-%d'), datatype=XSD.date)))
             g.add((cx[cleaned_inherit_construction], rcxn.hasTitle, Literal(inherit_construction)))
             print("New construction needed!")
@@ -822,7 +825,7 @@ def form_submit():
             g.add((cx[cleaned_inherit_construction], lg.partOfLanguage, metalanguage_uri)) # A metaphorical extension belong automatically to the same (meta-)language
             g.add((cx[metadata_inherit_construction], RDF.type, rcxn.Metadata))
             g.add((cx[metadata_inherit_construction], cx.annotator, membr[user_name]))
-            g.add((cx[metadata_inherit_construction], rcxn.creationDate,
+            g.add((cx[metadata_inherit_construction], dcterm.created,
                    Literal(datetime.now().strftime('%Y-%m-%d'), datatype=XSD.date)))
             g.add((cx[cleaned_inherit_construction], rcxn.hasTitle, Literal(inherit_construction)))
             print("New construction needed!")
@@ -862,7 +865,7 @@ def form_submit():
                 g.add((cx[cleaned_inherit_construction], rcxn.hasMetadata, cx[metadata_inherit_construction]))
                 g.add((cx[metadata_inherit_construction], RDF.type, rcxn.Metadata))
                 g.add((cx[metadata_inherit_construction], cx.annotator, membr[user_name]))
-                g.add((cx[metadata_inherit_construction], rcxn.creationDate,
+                g.add((cx[metadata_inherit_construction], dcterm.created,
                        Literal(datetime.now().strftime('%Y-%m-%d'), datatype=XSD.date)))
                 g.add((cx[cleaned_inherit_construction], rcxn.hasTitle, Literal(similarity_link)))
                 print("New construction needed!")

@@ -1,5 +1,6 @@
 @prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix cx: <http://example.org/cx/> .
+@prefix dcterm: <http://purl.org/dc/terms/> .
 @prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
 @prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#> .
 @prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
@@ -29,7 +30,7 @@ cx:Generalprepositionalconstructions a rcxn:Construction ;
 
 cx:Generalprepositionalconstructions_MD a rcxn:Metadata ;
     rcxn:annotator membr:Lee ;
-    rcxn:creationDate "2024-12-02"^^xsd:date .
+    dcterm:created "2024-12-02"^^xsd:date .
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_1> a rcxn:SlotOptional ;
     cx:WordOrder "In most cases, NP precedes the prepositional phrase \"vor Augen\"." ;
@@ -123,7 +124,7 @@ cx:Generalprepositionalconstructions_MD a rcxn:Metadata ;
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_MD> a rcxn:Metadata ;
     rcxn:annotator membr:Lee ;
-    rcxn:creationDate "2024-12-02"^^xsd:date .
+    dcterm:created "2024-12-02"^^xsd:date .
 
 <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_Meaning> a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "The construction denotes a cognitive process involving the act of bringing something into focus or visualizing it mentally, including introspection, planning and imaginative conceptualization." .
@@ -143,7 +144,7 @@ cx:Generalprepositionalconstructions_MD a rcxn:Metadata ;
 
 <http://example.org/cx/vor+bodypartconstructions> a rcxn:Metadata ;
     rcxn:annotator membr:Lee ;
-    rcxn:creationDate "2024-12-02"^^xsd:date .
+    dcterm:created "2024-12-02"^^xsd:date .
 
 cx:deu_Adverb a rcxn:Construction ;
     rcxn:hasTitle "Adverb" ;

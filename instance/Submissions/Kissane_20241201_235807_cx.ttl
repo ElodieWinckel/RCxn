@@ -1,4 +1,5 @@
 @prefix cx: <http://example.org/cx/> .
+@prefix dcterm: <http://purl.org/dc/terms/> .
 @prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
 @prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
 @prefix olia: <http://purl.org/olia/olia.owl#> .
@@ -47,7 +48,7 @@ cx:TheEnglishGIVE-OUTVerbParticleConstruction._Ex_A a cx:Example ;
 
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._MD a rcxn:Metadata ;
     rcxn:annotator membr:Kissane ;
-    rcxn:creationDate "2024-12-01"^^xsd:date .
+    dcterm:created "2024-12-01"^^xsd:date .
 
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "[An ÆFFECTOR]1 distributes [items]4 to multiple recipients or reaches a point of depletion or cessation of function." .

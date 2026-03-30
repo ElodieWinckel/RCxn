@@ -2,6 +2,7 @@
 @prefix casa: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/casa#> .
 @prefix cx: <http://example.org/cx/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterm: <http://purl.org/dc/terms/> .
 @prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
 @prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#> .
 @prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
@@ -19,7 +20,7 @@ membr:Project_Winckel_2601131454_F2601131454 rsrch:basedOn <http://example.org/c
 
 <http://example.org/cx/AttributeConstructionObj:NP_MD> a rcxn:Metadata ;
     cx:annotator membr:Winckel ;
-    rcxn:creationDate "2026-01-16"^^xsd:date .
+    dcterm:created "2026-01-16"^^xsd:date .
 
 cx:CausedMotionConstrutionPPto a rcxn:Construction ;
     links:differentFormSimilarFunction <http://example.org/cx/eng_ditransitive_construction_obj_np> ;
@@ -28,7 +29,7 @@ cx:CausedMotionConstrutionPPto a rcxn:Construction ;
 
 cx:CausedMotionConstrutionPPto_MD a rcxn:Metadata ;
     cx:annotator membr:Winckel ;
-    rcxn:creationDate "2026-01-16"^^xsd:date .
+    dcterm:created "2026-01-16"^^xsd:date .
 
 <http://example.org/cx/eng_ditransitive_construction_obj_np_1> a rcxn:SlotOptional ;
     rcxn:hasOtherSemanticContribution "Æffector" ;
@@ -73,7 +74,7 @@ cx:CausedMotionConstrutionPPto_MD a rcxn:Metadata ;
 <http://example.org/cx/eng_ditransitive_construction_obj_np_MD> a rcxn:Metadata ;
     cx:hasSources <http://example.org/cx/eng_ditransitive_construction_obj_np_Sources> ;
     rcxn:annotator membr:Winckel ;
-    rcxn:creationDate "2026-01-16"^^xsd:date .
+    dcterm:created "2026-01-16"^^xsd:date .
 
 <http://example.org/cx/eng_ditransitive_construction_obj_np_Meaning> a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "[ÆFFECTOR]1 makes [RECIPIENT]3 receive [ÆFFECTED]4." .

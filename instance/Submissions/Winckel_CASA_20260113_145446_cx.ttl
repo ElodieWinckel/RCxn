@@ -1,6 +1,7 @@
 @prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix casa: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/casa#> .
 @prefix cx: <http://example.org/cx/> .
+@prefix dcterm: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
 @prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#> .
@@ -17,7 +18,7 @@ cx:Active3ArgumentStructureConstruction a rcxn:Construction ;
 
 cx:Active3ArgumentStructureConstruction_MD a rcxn:Metadata ;
     cx:annotator membr:Winckel ;
-    rcxn:creationDate "2026-01-13"^^xsd:date .
+    dcterm:created "2026-01-13"^^xsd:date .
 
 cx:EnglishResultativeconstruction links:sameFormDifferentFunction cx:eng_AttributeConstruction .
 
@@ -67,7 +68,7 @@ cx:eng_AttributeConstruction_MD a rcxn:Metadata ;
     cx:hasSources cx:eng_AttributeConstruction_Sources ;
     rcxn:annotator membr:Winckel ,
          membr:Garibyan ;
-    rcxn:creationDate "2026-01-13"^^xsd:date .
+    dcterm:created "2026-01-13"^^xsd:date .
 
 cx:eng_AttributeConstruction_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "An [ÆFFECTOR]1 assigns an [ATTRIBUTE]4 to an [ATTRIBUTEE]3." .

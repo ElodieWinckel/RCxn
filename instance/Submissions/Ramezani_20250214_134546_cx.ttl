@@ -1,6 +1,7 @@
 @prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix cx: <http://example.org/cx/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterm: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
 @prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#> .
@@ -55,7 +56,7 @@ cx:Argumentstructureconstruction_3_Form a rcxn:SlotForm ;
 
 cx:Argumentstructureconstruction_MD a rcxn:Metadata ;
     rcxn:annotator membr:Ramezani ;
-    rcxn:creationDate "2025-02-14"^^xsd:date ;
+    dcterm:created "2025-02-14"^^xsd:date ;
     cx:hasSources cx:Argumentstructureconstruction_Sources .
 
 cx:Argumentstructureconstruction_Meaning a rcxn:ConstructionMeaning ;
@@ -78,7 +79,7 @@ cx:eng_CauseMotionconstruction a rcxn:Construction ;
 
 cx:eng_CauseMotionconstruction_MD a cx:Metadata ;
     rcxn:annotator membr:Ramezani ;
-    rcxn:creationDate "2025-02-14"^^xsd:date .
+    dcterm:created "2025-02-14"^^xsd:date .
 
 cx:EnglishDitransitiveconstruction a rcxn:Construction ;
     rcxn:hasMetadata cx:EnglishDitransitiveconstruction_MD ;
@@ -87,7 +88,7 @@ cx:EnglishDitransitiveconstruction a rcxn:Construction ;
 
 cx:EnglishDitransitiveconstruction_MD a cx:Metadata ;
     rcxn:annotator membr:Ramezani ;
-    rcxn:creationDate "2025-02-14"^^xsd:date .
+    dcterm:created "2025-02-14"^^xsd:date .
 
 cx:EnglishResultativeconstruction a rcxn:Construction ;
     rcxn:hasMetadata cx:EnglishResultativeconstruction_MD ;
@@ -96,7 +97,7 @@ cx:EnglishResultativeconstruction a rcxn:Construction ;
 
 cx:EnglishResultativeconstruction_MD a cx:Metadata ;
     rcxn:annotator membr:Ramezani ;
-    rcxn:creationDate "2025-02-14"^^xsd:date .
+    dcterm:created "2025-02-14"^^xsd:date .
 
 cx:EnglishTransitiveconstruction a rcxn:Construction ;
     rcxn:hasMetadata cx:EnglishTransitiveconstruction_MD ;
@@ -105,7 +106,7 @@ cx:EnglishTransitiveconstruction a rcxn:Construction ;
 
 cx:EnglishTransitiveconstruction_MD a cx:Metadata ;
     rcxn:annotator membr:Ramezani ;
-    rcxn:creationDate "2025-02-14"^^xsd:date .
+    dcterm:created "2025-02-14"^^xsd:date .
 
 <https://doi.org/10.3389/frai.2025.1477246> dc:creator "Pegah Ramezani",
         "Achim Schilling",

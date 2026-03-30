@@ -1,4 +1,5 @@
 @prefix cx: <http://example.org/cx/> .
+@prefix dcterm: <http://purl.org/dc/terms/> .
 @prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
 @prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#> .
 @prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
@@ -31,7 +32,7 @@
 
 <http://example.org/cx/NP[ADJ-strong+ADJ-strong+N]_MD> a rcxn:Metadata ;
     rcxn:annotator membr:Kligge ;
-    rcxn:creationDate "2024-12-02"^^xsd:date .
+    dcterm:created "2024-12-02"^^xsd:date .
 
 <http://example.org/cx/NP[ADJ-strong+ADJ-weak+N]> a rcxn:Construction ;
     rcxn:hasMetadata <http://example.org/cx/NP[ADJ-strong+ADJ-weak+N]_MD> ;
@@ -40,7 +41,7 @@
 
 <http://example.org/cx/NP[ADJ-strong+ADJ-weak+N]_MD> a rcxn:Metadata ;
     rcxn:annotator membr:Kligge ;
-    rcxn:creationDate "2024-12-02"^^xsd:date .
+    dcterm:created "2024-12-02"^^xsd:date .
 
 <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_1> a rcxn:SlotMandatory ;
     rcxn:hasSlotForm <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_1_Form> ;
@@ -64,7 +65,7 @@
 
 <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_MD> a rcxn:Metadata ;
     rcxn:annotator membr:Kligge ;
-    rcxn:creationDate "2024-12-02"^^xsd:date .
+    dcterm:created "2024-12-02"^^xsd:date .
 
 <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_Meaning> a rcxn:ConstructionMeaning .
 
@@ -80,7 +81,7 @@
 
 <http://example.org/cx/NP[das+ADJ-e+N]nom.sg.neut_MD> a rcxn:Metadata ;
     rcxn:annotator membr:Kligge ;
-    rcxn:creationDate "2024-12-02"^^xsd:date .
+    dcterm:created "2024-12-02"^^xsd:date .
 
 <http://example.org/cx/NP[def.DET-strong+N]> a rcxn:Construction ;
     rcxn:hasMetadata <http://example.org/cx/NP[def.DET-strong+N]_MD> ;
@@ -89,7 +90,7 @@
 
 <http://example.org/cx/NP[def.DET-strong+N]_MD> a rcxn:Metadata ;
     rcxn:annotator membr:Kligge ;
-    rcxn:creationDate "2024-12-02"^^xsd:date .
+    dcterm:created "2024-12-02"^^xsd:date .
 
 <http://example.org/cx/NP[dem+ADJ-en+N]dat.sg.masc/neut> a rcxn:Construction ;
     rcxn:hasMetadata <http://example.org/cx/NP[dem+ADJ-en+N]dat.sg.masc/neut_MD> ;
@@ -98,7 +99,7 @@
 
 <http://example.org/cx/NP[dem+ADJ-en+N]dat.sg.masc/neut_MD> a rcxn:Metadata ;
     rcxn:annotator membr:Kligge ;
-    rcxn:creationDate "2024-12-02"^^xsd:date .
+    dcterm:created "2024-12-02"^^xsd:date .
 
 <http://example.org/cx/NP[der+ADJ-e+N]nom.sg.masc> a rcxn:Construction ;
     rcxn:hasMetadata <http://example.org/cx/NP[der+ADJ-e+N]nom.sg.masc_MD> ;
@@ -107,7 +108,7 @@
 
 <http://example.org/cx/NP[der+ADJ-e+N]nom.sg.masc_MD> a rcxn:Metadata ;
     rcxn:annotator membr:Kligge ;
-    rcxn:creationDate "2024-12-02"^^xsd:date .
+    dcterm:created "2024-12-02"^^xsd:date .
 
 <http://example.org/cx/NP[die+ADJ-e+N]nom.sg.fem> a rcxn:Construction ;
     rcxn:hasMetadata <http://example.org/cx/NP[die+ADJ-e+N]nom.sg.fem_MD> ;
@@ -116,7 +117,7 @@
 
 <http://example.org/cx/NP[die+ADJ-e+N]nom.sg.fem_MD> a rcxn:Metadata ;
     rcxn:annotator membr:Kligge ;
-    rcxn:creationDate "2024-12-02"^^xsd:date .
+    dcterm:created "2024-12-02"^^xsd:date .
 
 <http://example.org/cx/NP[indef.DET-strong+ADJ-weak+N]> a rcxn:Construction ;
     rcxn:hasMetadata <http://example.org/cx/NP[indef.DET-strong+ADJ-weak+N]_MD> ;
@@ -125,7 +126,7 @@
 
 <http://example.org/cx/NP[indef.DET-strong+ADJ-weak+N]_MD> a rcxn:Metadata ;
     rcxn:annotator membr:Kligge ;
-    rcxn:creationDate "2024-12-02"^^xsd:date .
+    dcterm:created "2024-12-02"^^xsd:date .
 
 <http://example.org/cx/NP[indef.DET-strong+N]> a rcxn:Construction ;
     rcxn:hasMetadata <http://example.org/cx/NP[indef.DET-strong+N]_MD> ;
@@ -134,7 +135,7 @@
 
 <http://example.org/cx/NP[indef.DET-strong+N]_MD> a rcxn:Metadata ;
     rcxn:annotator membr:Kligge ;
-    rcxn:creationDate "2024-12-02"^^xsd:date .
+    dcterm:created "2024-12-02"^^xsd:date .
 
 <http://example.org/cx/NP[indef.DET-zero+N]> a rcxn:Construction ;
     rcxn:hasMetadata <http://example.org/cx/NP[indef.DET-zero+N]_MD> ;
@@ -143,7 +144,7 @@
 
 <http://example.org/cx/NP[indef.DET-zero+N]_MD> a rcxn:Metadata ;
     rcxn:annotator membr:Kligge ;
-    rcxn:creationDate "2024-12-02"^^xsd:date .
+    dcterm:created "2024-12-02"^^xsd:date .
 
 cx:deu_DefiniteDeterminer a rcxn:Construction ;
     rcxn:hasTitle "Definite Determiner" ;

@@ -50,23 +50,6 @@
     
 
 
-    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#creationDate -->
-
-    <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#creationDate">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#Metadata"/>
-        <rdfs:range>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-            </owl:Restriction>
-        </rdfs:range>
-        <rdfs:comment xml:lang="en">Indicates the date where the construction entry was created and links it to the construction’s metadata.</rdfs:comment>
-        <rdfs:label xml:lang="en">Creation date</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#elementOf -->
 
     <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#elementOf">

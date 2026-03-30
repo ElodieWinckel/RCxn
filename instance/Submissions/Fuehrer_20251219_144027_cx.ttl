@@ -1,5 +1,6 @@
 @prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix cx: <http://example.org/cx/> .
+@prefix dcterm: <http://purl.org/dc/terms/> .
 @prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
 @prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#> .
 @prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
@@ -19,7 +20,7 @@ cx:gmh12C_Präfixverbkonstruktion a rcxn:Construction ;
 
 cx:gmh12C_Präfixverbkonstruktion_MD a rcxn:Metadata ;
     cx:annotator membr:Fuehrer ;
-    rcxn:creationDate "2025-12-19"^^xsd:date .
+    dcterm:created "2025-12-19"^^xsd:date .
 
 cx:gmh_NounPhrase rcxn:elementOf <http://example.org/cx/gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit> .
 
@@ -89,7 +90,7 @@ cx:gmh_Prefix rcxn:elementOf <http://example.org/cx/gmh12C_Präfixverbkonstrukti
 
 <http://example.org/cx/gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_MD> a rcxn:Metadata ;
     rcxn:annotator membr:Fuehrer ;
-    rcxn:creationDate "2025-12-19"^^xsd:date .
+    dcterm:created "2025-12-19"^^xsd:date .
 
 <http://example.org/cx/gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_Meaning> a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "local-concrete" .

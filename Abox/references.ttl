@@ -1,36 +1,36 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 
-<file:///home/meuhlodi/Travail/RCxn/instance/Submissions/Croft_2012> dc:creator "William Croft" ;
+<file:///C:/Users/User/Documents/RCxn/instance/Submissions/Croft_2012> dc:creator "William Croft" ;
     dc:date "2012" ;
     dc:publisher "Oxford University Press" ;
     dc:title "Constructions at Work" ;
     dc:type "Book" .
 
-<file:///home/meuhlodi/Travail/RCxn/instance/Submissions/Diem_2002> dc:creator "Werner Diem" ;
+<file:///C:/Users/User/Documents/RCxn/instance/Submissions/Diem_2002> dc:creator "Werner Diem" ;
     dc:date "2002" ;
     dc:publisher "Harrassowitz" ;
     dc:title "Translokative Verben im Arabischen" ;
     dc:type "Book" .
 
-<file:///home/meuhlodi/Travail/RCxn/instance/Submissions/Goldberg_1995> dc:creator "Adele E. Goldberg" ;
+<file:///C:/Users/User/Documents/RCxn/instance/Submissions/Goldberg_1995> dc:creator "Adele E. Goldberg" ;
     dc:date "1995" ;
     dc:publisher "University of Chicago Press" ;
     dc:title "Constructions: A Construction Grammar Approach to Argument Structure" ;
     dc:type "Book" .
 
-<file:///home/meuhlodi/Travail/RCxn/instance/Submissions/Goldberg_2006> dc:creator "Adele E. Goldberg" ;
+<file:///C:/Users/User/Documents/RCxn/instance/Submissions/Goldberg_2006> dc:creator "Adele E. Goldberg" ;
     dc:date "2006" ;
     dc:publisher "Oxford University Press" ;
     dc:title "Verbs: aspect and causal structure" ;
     dc:type "Book" .
 
-<file:///home/meuhlodi/Travail/RCxn/instance/Submissions/Herbst_2020> dc:creator "Thomas Herbst" ;
+<file:///C:/Users/User/Documents/RCxn/instance/Submissions/Herbst_2020> dc:creator "Thomas Herbst" ;
     dc:date "2020" ;
     dc:identifier "DOI 10.1075/cf.00035.her" ;
     dc:title "Constructions, generalizations, and the unpredictability of language: Moving towards colloconstruction grammar" ;
     dc:type "journalArticle" .
 
-<file:///home/meuhlodi/Travail/RCxn/instance/Submissions/Herbst_Hoffman_2024> dc:creator "Herbst, Thomas",
+<file:///C:/Users/User/Documents/RCxn/instance/Submissions/Herbst_Hoffman_2024> dc:creator "Herbst, Thomas",
         "Hoffmann, Thomas" ;
     dc:date "2024" ;
     dc:identifier "ISBN 978-90-272-4676-9" ;
@@ -39,31 +39,31 @@
     dc:title "A Construction Grammar of the English Language: CASA – a Constructionist Approach to Syntactic Analysis" ;
     dc:type "book" .
 
-<file:///home/meuhlodi/Travail/RCxn/instance/Submissions/La_lingua_del_Guicciardini> dc:creator "Nencioni, Giovanni" ;
+<file:///C:/Users/User/Documents/RCxn/instance/Submissions/La_lingua_del_Guicciardini> dc:creator "Nencioni, Giovanni" ;
     dc:date "1984" ;
     dc:publisher "Leo S. Olschki" ;
     dc:title "La lingua del Guicciardini" ;
     dc:type "bookSection" .
 
-<file:///home/meuhlodi/Travail/RCxn/instance/Submissions/Shuchun-2004> dc:creator "Chemla, Karine",
+<file:///C:/Users/User/Documents/RCxn/instance/Submissions/Shuchun-2004> dc:creator "Chemla, Karine",
         "Guo Shuchun 郭書春" ;
     dc:date "2004" ;
     dc:publisher "Dunod" ;
     dc:title "Les neuf chapitres: Le classique mathématique de la Chine ancienne et ses commentaires" ;
     dc:type "book" .
 
-<file:///home/meuhlodi/Travail/RCxn/instance/Submissions/Woidich_2006> dc:creator "Manfred Woidich" ;
+<file:///C:/Users/User/Documents/RCxn/instance/Submissions/Woidich_2006> dc:creator "Manfred Woidich" ;
     dc:date "2006" ;
     dc:publisher "Harrassowitz" ;
     dc:title "Das Kairensisch-Arabische. Eine Grammatik" ;
     dc:type "Book" .
 
-<file:///home/meuhlodi/Travail/RCxn/instance/Submissions/www.english-corpora.org/bnc/> dc:contributor "Davies, Mark" ;
+<file:///C:/Users/User/Documents/RCxn/instance/Submissions/www.english-corpora.org/bnc/> dc:contributor "Davies, Mark" ;
     dc:date "2024" ;
     dc:title "British National Corpus" ;
     dc:type "book" .
 
-<file:///home/meuhlodi/Travail/RCxn/instance/Submissions/www.english-corpora.org/coca/> dc:contributor "Davies, Mark" ;
+<file:///C:/Users/User/Documents/RCxn/instance/Submissions/www.english-corpora.org/coca/> dc:contributor "Davies, Mark" ;
     dc:title "The Corpus of Contemporary American English (COCA)" ;
     dc:type "book" .
 

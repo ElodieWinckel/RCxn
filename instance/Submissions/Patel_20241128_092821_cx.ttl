@@ -1,6 +1,7 @@
 @prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix cx: <http://example.org/cx/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterm: <http://purl.org/dc/terms/> .
 @prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
 @prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
 @prefix olia: <http://purl.org/olia/olia.owl#> .
@@ -121,7 +122,7 @@ cx:comePLUSnoisemannerofmovementVing_Ex_D a cx:Example ;
 
 cx:comePLUSnoisemannerofmovementVing_MD a rcxn:Metadata ;
     rcxn:annotator membr:Patel ;
-    rcxn:creationDate "2024-11-28"^^xsd:date ;
+    dcterm:created "2024-11-28"^^xsd:date ;
     cx:hasSources cx:comePLUSnoisemannerofmovementVing_Sources .
 
 cx:comePLUSnoisemannerofmovementVing_Meaning a rcxn:ConstructionMeaning ;

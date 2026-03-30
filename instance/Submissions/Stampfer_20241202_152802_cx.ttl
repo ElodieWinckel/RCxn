@@ -1,5 +1,6 @@
 @prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix cx: <http://example.org/cx/> .
+@prefix dcterm: <http://purl.org/dc/terms/> .
 @prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
 @prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
 @prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
@@ -48,7 +49,7 @@ cx:EvaluativeAttributionConstruction_5_Form a rcxn:SlotForm ;
 
 cx:EvaluativeAttributionConstruction_MD a rcxn:Metadata ;
     rcxn:annotator membr:Stampfer ;
-    rcxn:creationDate "2024-12-02"^^xsd:date .
+    dcterm:created "2024-12-02"^^xsd:date .
 
 cx:EvaluativeAttributionConstruction_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "[An ATTRIBUTOR]1 mentally assigns [ATTRIBUTE]5 to an [ATTRIBUTEE]3." .

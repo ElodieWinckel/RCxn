@@ -1,4 +1,5 @@
 @prefix cx: <http://example.org/cx/> .
+@prefix dcterm: <http://purl.org/dc/terms/> .
 @prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
 @prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#> .
 @prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
@@ -23,31 +24,31 @@
 
 <http://example.org/cx/NP[das+ADJ-eN]acc.sg.neut> a rcxn:Construction ;
     cx:annotator membr:Kligge ;
-    rcxn:creationDate "2024-12-02"^^xsd:date ;
+    dcterm:created "2024-12-02"^^xsd:date ;
     rcxn:hasTitle "NP[das + ADJ-e N]acc.sg.neut" ;
     lg:partOfLanguage lg:deu .
 
 <http://example.org/cx/NP[das+ADJ-eN]nom.sg.neut> a rcxn:Construction ;
     cx:annotator membr:Kligge ;
-    rcxn:creationDate "2024-12-02"^^xsd:date ;
+    dcterm:created "2024-12-02"^^xsd:date ;
     rcxn:hasTitle "NP[das + ADJ-e N]nom.sg.neut" ;
     lg:partOfLanguage lg:deu .
 
 <http://example.org/cx/NP[dem+ADJ-enN]dat.sg.masc> a rcxn:Construction ;
     cx:annotator membr:Kligge ;
-    rcxn:creationDate "2024-12-02"^^xsd:date ;
+    dcterm:created "2024-12-02"^^xsd:date ;
     rcxn:hasTitle "NP[dem + ADJ-en N]dat.sg.masc" ;
     lg:partOfLanguage lg:deu .
 
 <http://example.org/cx/NP[dem+ADJ-enN]dat.sg.neut> a rcxn:Construction ;
     cx:annotator membr:Kligge ;
-    rcxn:creationDate "2024-12-02"^^xsd:date ;
+    dcterm:created "2024-12-02"^^xsd:date ;
     rcxn:hasTitle "NP[dem + ADJ-en N]dat.sg.neut" ;
     lg:partOfLanguage lg:deu .
 
 <http://example.org/cx/NP[den+ADJ-enN]acc.sg.masc> a rcxn:Construction ;
     cx:annotator membr:Kligge ;
-    rcxn:creationDate "2024-12-02"^^xsd:date ;
+    dcterm:created "2024-12-02"^^xsd:date ;
     rcxn:hasTitle "NP[den+ ADJ-en N]acc.sg.masc" ;
     lg:partOfLanguage lg:deu .
 
@@ -61,7 +62,7 @@
 
 <http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_MD> a rcxn:Metadata ;
     rcxn:annotator membr:Kligge ;
-    rcxn:creationDate "2024-12-02"^^xsd:date .
+    dcterm:created "2024-12-02"^^xsd:date .
 
 <http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_Meaning> a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "NPs in German have obligatory grammatical marking specifying case, number, gender." .
@@ -73,13 +74,13 @@
 
 <http://example.org/cx/NP[die+ADJ-eN]nom.sg.fem> a rcxn:Construction ;
     cx:annotator membr:Kligge ;
-    rcxn:creationDate "2024-12-02"^^xsd:date ;
+    dcterm:created "2024-12-02"^^xsd:date ;
     rcxn:hasTitle "NP[die + ADJ-e N]nom.sg.fem" ;
     lg:partOfLanguage lg:deu .
 
 <http://example.org/cx/NPnom.sg.masc> a rcxn:Construction ;
     cx:annotator membr:Kligge ;
-    rcxn:creationDate "2024-12-02"^^xsd:date ;
+    dcterm:created "2024-12-02"^^xsd:date ;
     rcxn:hasTitle "NP nom.sg.masc" ;
     lg:partOfLanguage lg:deu .
 
