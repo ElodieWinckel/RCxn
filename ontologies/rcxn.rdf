@@ -198,6 +198,7 @@
         <rdfs:domain rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#Slot"/>
         <rdfs:range rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#SlotForm"/>
         <rdfs:comment xml:lang="en">Relates a construction element to its formal features.</rdfs:comment>
+        <rdfs:label xml:lang="en">Formal properties</rdfs:label>
     </owl:ObjectProperty>
     
 

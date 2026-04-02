@@ -149,6 +149,7 @@ The URI for the form of the construction element is the URI of the element follo
 | description | Relates a construction element to its formal features. |
 | domain (subject) | rcxn\#Slot |
 | range (object) | rcxn\#SlotForm |
+| label | Formal properties |
 
 | Property rcxn\#hasPhonology |  |
 | :---- | :---- |
