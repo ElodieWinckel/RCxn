@@ -124,6 +124,8 @@ def identify_construction_element_triples(slots_uri):
                     'property': "Colloprofile",
                     'object': "See colloprofile for " + element_number + " below",
                 })
+            elif str(predicate) == "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#hasSlotForm" and not isinstance(obj, Literal): # the value of hasSlotForm should only be kept if it is a literal object (this is specific for CASA entries)
+                pass
             elif str(predicate).startswith(
                     "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/compcon#"):  # deal with comparative concepts
                 compcon_label = get_label_or_iri(obj, g, ont)
@@ -147,7 +149,8 @@ def identify_construction_element_triples(slots_uri):
         # Step 4: Collect triples for form of each sequence member
         subject_slotform = URIRef(str(slot_uri) + "_Form")
         for predicate, obj in g.predicate_objects(subject=subject_slotform):
-            if str(predicate) == "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#hasSyntacticForm" or str(predicate) == "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#hasStem":  # special case for syntactic form that should be displayed as a link
+            print(subject_slotform, predicate)
+            if str(predicate) == "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#hasSyntacticForm" or str(predicate) == "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#hasStem":  # special case for values that should be displayed as a link
                 title = g.value(obj, rcxn.hasTitle)
                 elements.append({
                     'subject': element_number,
@@ -156,8 +159,6 @@ def identify_construction_element_triples(slots_uri):
                     'definition': get_definition(obj, g, ont),
                     'href': get_label_or_iri(obj, g, ont),
                 })
-            elif predicate == cx.hasSlotForm and not isinstance(obj, Literal):
-                pass
             else:
                 elements.append({
                     'subject': element_number,
@@ -176,7 +177,6 @@ def identify_construction_element_triples(slots_uri):
                 'object': get_label_or_iri(obj, g, ont),
             })
     elements[:] = [item for item in elements if item['property'] != "type"]
-    #elements[:] = [item for item in elements if item['property'] != "hasSlotForm"] --> We need to handle this differently for imports from CASA
     elements[:] = [item for item in elements if item['property'] != "hasIndex"]
     return elements, colloprofiles, list_of_nested
 
