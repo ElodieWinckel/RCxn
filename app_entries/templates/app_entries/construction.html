@@ -191,22 +191,10 @@ function createCrossTable(data) {
         let nested = `<table class="nested-table" style="border-collapse:collapse; margin-top:6px; width:100%;">`;
 
         // Header row: blank corner + child subjects — use color based on element number
-        nested += childSubjects.map(s => {
-    const vals = nestedTableData[prop][s] || [];
-    return `<td style="padding:4px 6px;">${
-        vals.map(v => {
-            const title = v.definition ? ` title="${v.definition}"` : '';
-            if (v.href_compcon) {
-                const compconUrl = `/app_compcon/comparative_concept_detail?uri=${encodeURIComponent(v.href_compcon)}`;
-                return `<a href="${compconUrl}" target="_blank"${title}>${v.object}</a>`;
-            } else if (v.href) {
-                return `<a href="${v.href}" target="_blank"${title}>${v.object}</a>`;
-            } else {
-                return `<span${title}>${v.object}</span>`;
-            }
-        }).join('<br>')
-    }</td>`;
-}).join('');
+        nested += `<tr><td></td>` + childSubjects.map((s, index) => {
+            const bg = colorForLabel(s, index);
+            return `<td style="padding:4px 6px; font-weight:bold; text-align:center; background-color:${bg};">${s}</td>`;
+        }).join('') + `</tr>`;
 
         // Rows: one per child property
         childProperties.forEach(prop => {
