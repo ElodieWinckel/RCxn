@@ -1,0 +1,143 @@
+@prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cx: <http://example.org/cx/> .
+@prefix dcterm: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
+@prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#> .
+@prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
+@prefix olia: <http://purl.org/olia/olia.owl#> .
+@prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+membr:Project_Winckel rsrch:hasResearchQuestion membr:Project_Winckel_2604130901 .
+
+<http://example.org/cx/Superlativ:ADJst_ADJ> a rcxn:Construction ;
+    links:inheritsFrom <http://example.org/cx/deu_Superlativ:ADJest> ;
+    rcxn:hasMetadata <http://example.org/cx/Superlativ:ADJst_ADJ_MD> ;
+    rcxn:hasTitle "Superlativ:ADJ-st_ADJ" .
+
+<http://example.org/cx/Superlativ:ADJst_ADJ_MD> a rcxn:Metadata ;
+    cx:annotator membr:Winckel ;
+    dcterm:created "2026-04-13"^^xsd:date .
+
+<http://example.org/cx/Superlativ:ART_ADJest> a rcxn:Construction ;
+    links:inheritsFrom <http://example.org/cx/deu_Superlativ:ADJest> ;
+    rcxn:hasMetadata <http://example.org/cx/Superlativ:ART_ADJest_MD> ;
+    rcxn:hasTitle "Superlativ:ART_ADJ-(e)st" .
+
+<http://example.org/cx/Superlativ:ART_ADJest_MD> a rcxn:Metadata ;
+    cx:annotator membr:Winckel ;
+    dcterm:created "2026-04-13"^^xsd:date .
+
+<http://example.org/cx/Superlativ:Xst> a rcxn:Construction ;
+    links:inheritedBy <http://example.org/cx/deu_Superlativ:ADJest> ;
+    rcxn:hasMetadata <http://example.org/cx/Superlativ:Xst_MD> ;
+    rcxn:hasTitle "Superlativ:X -st" .
+
+<http://example.org/cx/Superlativ:Xst_MD> a rcxn:Metadata ;
+    cx:annotator membr:Winckel ;
+    dcterm:created "2026-04-13"^^xsd:date .
+
+<http://example.org/cx/Superlativ:am_ADJsten> a rcxn:Construction ;
+    links:inheritsFrom <http://example.org/cx/deu_Superlativ:ADJest> ;
+    rcxn:hasMetadata <http://example.org/cx/Superlativ:am_ADJsten_MD> ;
+    rcxn:hasTitle "Superlativ:am_ADJ-sten" .
+
+<http://example.org/cx/Superlativ:am_ADJsten_MD> a rcxn:Metadata ;
+    cx:annotator membr:Winckel ;
+    dcterm:created "2026-04-13"^^xsd:date .
+
+cx:deu_Adjektivstamm a rcxn:Construction ;
+    lg:partOfLanguage lg:deu ;
+    rcxn:elementOf <http://example.org/cx/deu_Superlativ:ADJest> ;
+    rcxn:hasMetadata cx:deu_Adjektivstamm_MD ;
+    rcxn:hasTitle "Adjektivstamm" .
+
+cx:deu_Adjektivstamm_MD a rcxn:Metadata ;
+    cx:annotator membr:Winckel ;
+    dcterm:created "2026-04-13"^^xsd:date .
+
+<http://example.org/cx/deu_Superlativ:ADJest_1> a rcxn:SlotMandatory ;
+    olia:hasSemanticRole <Other> ;
+    RDFS:comment "Das KE-lex -(e)st wird durch das Superlativsuffix -(e)st, welches an den Adjektivstamm – die Dimension – angehängt wird, realisiert. Das Suffix -(e)st sorgt für die superlative Steigerung desjenigen Adjektivs, dessen Stamm durch die Dimension beschrieben wird." ;
+    rcxn:hasOtherSemanticContribution "Extremwert (Frame)" ;
+    rcxn:hasSlotForm <http://example.org/cx/deu_Superlativ:ADJest_1_Form> .
+
+<http://example.org/cx/deu_Superlativ:ADJest_1_Form> a rcxn:SlotForm ;
+    rcxn:hasSurfaceForm "st(e)" .
+
+<http://example.org/cx/deu_Superlativ:ADJest_2> a rcxn:SlotMandatory ;
+    olia:hasSemanticRole <Other> ;
+    RDFS:comment "Das interne Kern-KE Dimension wird durch den Adjektivstamm, an welches das Superlativsuffix -(e)st - das KE-lex - angehängt wird, realisiert. Die Dimension beschreibt den Stamm desjenigen Adjektivs, welches durch das Suffix -(e)st superlativ gesteigert wird." ;
+    rcxn:hasOtherSemanticContribution "Dimension, Gradierbare Attribute (Frame)" ;
+    rcxn:hasSlotForm <http://example.org/cx/deu_Superlativ:ADJest_2_Form> .
+
+<http://example.org/cx/deu_Superlativ:ADJest_2_Form> a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:deu_Adjektivstamm .
+
+<http://example.org/cx/deu_Superlativ:ADJest_Ex_A> a cx:Example ;
+    cx:hasAnnotatedText "Ganz im Interesse der Patienten liegt die erst an wenigen Kliniken für Hirnchirurgie eingeführte endoskopische Chirurgie. Diese ermöglicht Eingriffe durch [klein]1[st]2e Öffnungen von einem halben bis einem Zentimeter . Für den Chirurgen stiegen mit der «Knopfloch-Chirurgie» die Anforderungen, sagt Hildebrandt. «Ein solcher Eingriff ist komplexer als herkömmliche. Für die Patienten aber deutlich schonender.»" ;
+    cx:hasText "Ganz im Interesse der Patienten liegt die erst an wenigen Kliniken für Hirnchirurgie eingeführte endoskopische Chirurgie. Diese ermöglicht Eingriffe durch kleinste Öffnungen von einem halben bis einem Zentimeter . Für den Chirurgen stiegen mit der «Knopfloch-Chirurgie» die Anforderungen, sagt Hildebrandt. «Ein solcher Eingriff ist komplexer als herkömmliche. Für die Patienten aber deutlich schonender.»" ;
+    RDFS:comment "A10/JAN.00026 St. Galler Tagblatt, 04.01.2010, S. 21; Wenn Millimeter entscheiden" .
+
+<http://example.org/cx/deu_Superlativ:ADJest_Ex_B> a cx:Example ;
+    cx:hasAnnotatedText "Noch verrückter wird die Situation allerdings , wenn man bedenkt , dass für mich als Arzt wie für viele renommierte Ernährungswissenschafter weltweit eine gut geplante und abwechslungsreiche vegane ( tierproduktfreie ) Ernährung nicht nur klimafreundlich und tierfreundlich ist , sondern eindeutig die [gesünd]1[est]2e Ernährung darstellt ." ;
+    cx:hasText "Noch verrückter wird die Situation allerdings , wenn man bedenkt , dass für mich als Arzt wie für viele renommierte Ernährungswissenschafter weltweit eine gut geplante und abwechslungsreiche vegane ( tierproduktfreie ) Ernährung nicht nur klimafreundlich und tierfreundlich ist , sondern eindeutig die gesündeste Ernährung darstellt ." ;
+    RDFS:comment "A10/JAN.00025 St. Galler Tagblatt, 04.01.2010, S. 25; Beharrlich verschwiegen" .
+
+<http://example.org/cx/deu_Superlativ:ADJest_Ex_C> a cx:Example ;
+    cx:hasAnnotatedText "Als Cavelti 1994 als 27jähriger Jurist - gleich nach der Hochzeitsreise in Irland - in Trogen einen alt gedienten Polizisten ablöste , war er der [jüng]1[st]2e Kripochef im Land ." ;
+    cx:hasText "Als Cavelti 1994 als 27jähriger Jurist - gleich nach der Hochzeitsreise in Irland - in Trogen einen alt gedienten Polizisten ablöste , war er der jüngste Kripochef im Land ." ;
+    RDFS:comment "A10/JAN.00039 St. Galler Tagblatt, 04.01.2010, S. 23; Jüngster Kripochef wird Kommandant; Der Adjektivstamm wird in Folge der Komparation in einigen Fällen modifiziert." .
+
+<http://example.org/cx/deu_Superlativ:ADJest_Ex_D> a cx:Example ;
+    cx:hasAnnotatedText "Wahrlich keine einfache Aufgabe, zumal die Eulachstädter seit Jahren konstant zu den spielstärksten und [erfolgreich]1[st]2en Vereinen in der 1. Liga zählen . " ;
+    cx:hasText "Wahrlich keine einfache Aufgabe, zumal die Eulachstädter seit Jahren konstant zu den spielstärksten und erfolgreichsten Vereinen in der 1. Liga zählen . " ;
+    RDFS:comment "A10/JAN.00015 St. Galler Tagblatt, 04.01.2010, S. 37; SC Herisau: Mit Willensleistung zum Überraschungssieg" .
+
+<http://example.org/cx/deu_Superlativ:ADJest_MD> a rcxn:Metadata ;
+    cx:hasSources <http://example.org/cx/deu_Superlativ:ADJest_Sources> ;
+    dcterm:created "2026-04-13"^^xsd:date ;
+    rcxn:annotator membr:Winckel .
+
+<http://example.org/cx/deu_Superlativ:ADJest_Meaning> a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning """Die Konstruktion Superlativ:ADJ-(e)st konstituiert die Familie Superlativ:X -st und beschreibt die Superlativbildung des Adjektivs im Deutschen.\r
+Die Konstruktion besteht aus dem lexikalisch festen Kern-Konstruktionselement (KE-lex) [-(e)st]2 und dem internen Kern-KE [Dimension]1.\r
+""" .
+
+<http://example.org/cx/deu_Superlativ:ADJest_Sources> a cx:Collection ;
+    RDFS:seeAlso <https://framenet-constructicon.hhu.de/constructicon/construction?id=4357> .
+
+<http://example.org/cx/deu_Superlativ:ADJest_slots> a rdf:Seq ;
+    rdf:_1 <http://example.org/cx/deu_Superlativ:ADJest_1> ;
+    rdf:_2 <http://example.org/cx/deu_Superlativ:ADJest_2> .
+
+membr:Project_Winckel_2604130901_F2604130901 a rsrch:Finding ;
+    RDFS:label "" ;
+    rsrch:basedOn <http://example.org/cx/deu_Superlativ:ADJest> .
+
+membr:Project_Winckel_2604130901 a rsrch:Project ;
+    rsrch:hasFindings membr:Project_Winckel_2604130901_F2604130901 ;
+    rsrch:projectName "Entries of the FrameNet-Konstruktikon des Deutschen in the Research Constructicon" .
+
+<http://example.org/cx/deu_Superlativ:ADJest> a rcxn:Construction ;
+    cx:hasExample <http://example.org/cx/deu_Superlativ:ADJest_Ex_A>,
+        <http://example.org/cx/deu_Superlativ:ADJest_Ex_B>,
+        <http://example.org/cx/deu_Superlativ:ADJest_Ex_C>,
+        <http://example.org/cx/deu_Superlativ:ADJest_Ex_D> ;
+    RDFS:comment """Original entry by Benjamin Fischer: „Superlativ:ADJ-(e)st“, in: FrameNet-Konstruktikon des Deutschen, <https://framenet-constructicon.hhu.de/constructicon/construction?id=4357>, abgerufen am 13.04.2026.\r
+Imo, Wolfgang (2016): Grammatik. Eine Einführung, Stuttgart: J.B. Metzler.""" ;
+    lg:partOfLanguage lg:deu ;
+    links:inheritedBy <http://example.org/cx/Superlativ:ADJst_ADJ>,
+        <http://example.org/cx/Superlativ:ART_ADJest>,
+        <http://example.org/cx/Superlativ:am_ADJsten> ;
+    links:inheritsFrom <http://example.org/cx/Superlativ:Xst> ;
+    rcxn:hasConstructionMeaning <http://example.org/cx/deu_Superlativ:ADJest_Meaning> ;
+    rcxn:hasMetadata <http://example.org/cx/deu_Superlativ:ADJest_MD> ;
+    rcxn:hasSlots <http://example.org/cx/deu_Superlativ:ADJest_slots> ;
+    rcxn:hasTitle "Superlativ:ADJ-(e)st" .
+
+membr:Winckel foaf:currentProject membr:Project_Winckel_2604130901 .
+

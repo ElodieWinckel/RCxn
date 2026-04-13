@@ -243,7 +243,8 @@ membr:Weigelt a foaf:Person ;
 
 membr:Winckel a foaf:Person ;
     foaf:currentProject membr:Project_Winckel,
-        membr:Project_Winckel_2601131454 ;
+        membr:Project_Winckel_2601131454,
+        membr:Project_Winckel_2604130901 ;
     foaf:familyName "Winckel" ;
     foaf:givenName "Elodie" ;
     foaf:homepage <https://www.cxg.phil.fau.eu/person/elodie-winckel/> .
@@ -514,14 +515,20 @@ membr:Project_Weigelt a rsrch:Project ;
 
 membr:Project_Winckel a rsrch:Project ;
     rsrch:hasFindings membr:Project_Winckel_F2511281100 ;
-    rsrch:hasResearchQuestion membr:Project_Winckel_2601131454 ;
+    rsrch:hasResearchQuestion membr:Project_Winckel_2601131454,
+        membr:Project_Winckel_2604130901 ;
     rsrch:projectName "Building a Research Constructicon"@en .
 
 membr:Project_Winckel_2601131454_F2601131454 a rsrch:Finding ;
     rdfs:label "The relational database for CASA entries can be translated into the RDF format of the Research Constructicon." ;
     rsrch:basedOn cx:eng_AttributeConstruction,
         cx:eng_GenitiveNPConstruction,
-        cx:eng_ditransitive_construction_obj_np .
+        cx:eng_ditransitive_construction_obj_np,
+        cx:lat_Adjective .
+
+membr:Project_Winckel_2604130901_F2604130901 a rsrch:Finding ;
+    rdfs:label "A manual transfer from the FrameNet-Konstruktikon des Deutschen in RDF format seems necessary." ;
+    rsrch:basedOn cx:deu_SuperlativADJest .
 
 membr:Project_Winckel_F2511281100 a rsrch:Finding ;
     rdfs:label "Implement a lexical item in the research constructicon" ;
@@ -539,6 +546,10 @@ membr:Project_Wright a rsrch:Project ;
 membr:Project_Bayer_2602251146 a rsrch:Project ;
     rsrch:hasFindings membr:Project_Bayer_2602251146_F2602251146 ;
     rsrch:projectName "Recipient marking in Cairo Arabic" .
+
+membr:Project_Winckel_2604130901 a rsrch:Project ;
+    rsrch:hasFindings membr:Project_Winckel_2604130901_F2604130901 ;
+    rsrch:projectName "Entries of the FrameNet-Konstruktikon des Deutschen in the Research Constructicon" .
 
 membr:Project_Winckel_2601131454 a rsrch:Project ;
     rsrch:hasFindings membr:Project_Winckel_2601131454_F2601131454 ;

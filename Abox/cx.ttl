@@ -167,6 +167,13 @@ cx:eng_monotransitive_construction a rcxn:Construction ;
     rcxn:hasSlots cx:eng_monotransitive_construction_slots ;
     rcxn:hasTitle "Monotransitive Construction" .
 
+cx:lat_Adjective a rcxn:Construction ;
+    lg:partOfLanguage lg:lat ;
+    rcxn:hasConstructionMeaning cx:lat_Adjective_Meaning ;
+    rcxn:hasMetadata cx:lat_Adjective_MD ;
+    rcxn:hasSlots cx:lat_Adjective_slots ;
+    rcxn:hasTitle "Adjective" .
+
 cx:Active3ArgumentStructureConstruction a rcxn:Construction ;
     links:inheritedBy cx:eng_AttributeConstruction ;
     rcxn:hasMetadata cx:Active3ArgumentStructureConstruction_MD ;
@@ -1209,6 +1216,42 @@ cx:Spanishtransitiveconstruction_MD a rcxn:Metadata ;
     dcterms:created "2024-11-25"^^xsd:date ;
     rcxn:annotator membr:FernandezSantos .
 
+cx:SuperlativADJst_ADJ a rcxn:Construction ;
+    links:inheritsFrom cx:deu_SuperlativADJest ;
+    rcxn:hasMetadata cx:SuperlativADJst_ADJ_MD ;
+    rcxn:hasTitle "Superlativ:ADJ-st_ADJ" .
+
+cx:SuperlativADJst_ADJ_MD a rcxn:Metadata ;
+    cx:annotator membr:Winckel ;
+    dcterms:created "2026-04-13"^^xsd:date .
+
+cx:SuperlativART_ADJest a rcxn:Construction ;
+    links:inheritsFrom cx:deu_SuperlativADJest ;
+    rcxn:hasMetadata cx:SuperlativART_ADJest_MD ;
+    rcxn:hasTitle "Superlativ:ART_ADJ-(e)st" .
+
+cx:SuperlativART_ADJest_MD a rcxn:Metadata ;
+    cx:annotator membr:Winckel ;
+    dcterms:created "2026-04-13"^^xsd:date .
+
+cx:SuperlativXst a rcxn:Construction ;
+    links:inheritedBy cx:deu_SuperlativADJest ;
+    rcxn:hasMetadata cx:SuperlativXst_MD ;
+    rcxn:hasTitle "Superlativ:X -st" .
+
+cx:SuperlativXst_MD a rcxn:Metadata ;
+    cx:annotator membr:Winckel ;
+    dcterms:created "2026-04-13"^^xsd:date .
+
+cx:Superlativam_ADJsten a rcxn:Construction ;
+    links:inheritsFrom cx:deu_SuperlativADJest ;
+    rcxn:hasMetadata cx:Superlativam_ADJsten_MD ;
+    rcxn:hasTitle "Superlativ:am_ADJ-sten" .
+
+cx:Superlativam_ADJsten_MD a rcxn:Metadata ;
+    cx:annotator membr:Winckel ;
+    dcterms:created "2026-04-13"^^xsd:date .
+
 cx:TheEnglishGIVE-OUTVerbParticleConstruction._1 a rcxn:SlotOptional ;
     rcxn:hasOtherSemanticContribution "ÆFFECTOR" ;
     rcxn:hasSlotForm cx:TheEnglishGIVE-OUTVerbParticleConstruction._1_Form ;
@@ -1748,6 +1791,16 @@ cx:coolasemotionconstruction_Meaning a rcxn:ConstructionMeaning ;
 cx:coolasemotionconstruction_slots a rdf_ns:Seq ;
     rdf_ns:_1 cx:coolasemotionconstruction_1 .
 
+cx:deu_Adjektivstamm a rcxn:Construction ;
+    lg:partOfLanguage lg:deu ;
+    rcxn:elementOf cx:deu_SuperlativADJest ;
+    rcxn:hasMetadata cx:deu_Adjektivstamm_MD ;
+    rcxn:hasTitle "Adjektivstamm" .
+
+cx:deu_Adjektivstamm_MD a rcxn:Metadata ;
+    cx:annotator membr:Winckel ;
+    dcterms:created "2026-04-13"^^xsd:date .
+
 cx:deu_Adverb a rcxn:Construction ;
     lg:partOfLanguage lg:deu ;
     rcxn:elementOf <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]> ;
@@ -1772,6 +1825,60 @@ cx:deu_PrepositionalPhrase a rcxn:Construction ;
     lg:partOfLanguage lg:deu ;
     rcxn:elementOf cx:Idiomaticconstruction ;
     rcxn:hasTitle "Prepositional Phrase" .
+
+cx:deu_SuperlativADJest_1 a rcxn:SlotMandatory ;
+    rdfs:comment "Das interne Kern-KE Dimension wird durch den Adjektivstamm, an welches das Superlativsuffix -(e)st - das KE-lex - angehängt wird, realisiert. Die Dimension beschreibt den Stamm desjenigen Adjektivs, welches durch das Suffix -(e)st superlativ gesteigert wird." ;
+    rcxn:hasOtherSemanticContribution "Dimension",
+        "Gradierbare Attribute (Frame)" ;
+    rcxn:hasSlotForm cx:deu_SuperlativADJest_2_Form .
+
+cx:deu_SuperlativADJest_1_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:deu_Adjektivstamm .
+
+cx:deu_SuperlativADJest_2 a rcxn:SlotMandatory ;
+    rdfs:comment "Das KE-lex -(e)st wird durch das Superlativsuffix -(e)st, welches an den Adjektivstamm – die Dimension – angehängt wird, realisiert. Das Suffix -(e)st sorgt für die superlative Steigerung desjenigen Adjektivs, dessen Stamm durch die Dimension beschrieben wird." ;
+    rcxn:hasOtherSemanticContribution "Extremwert (Frame)" ;
+    rcxn:hasSlotForm cx:deu_SuperlativADJest_1_Form .
+
+cx:deu_SuperlativADJest_2_Form a rcxn:SlotForm ;
+    rcxn:hasSurfaceForm "st(e)" .
+
+cx:deu_SuperlativADJest_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "Ganz im Interesse der Patienten liegt die erst an wenigen Kliniken für Hirnchirurgie eingeführte endoskopische Chirurgie. Diese ermöglicht Eingriffe durch [klein]1[st]2e Öffnungen von einem halben bis einem Zentimeter . Für den Chirurgen stiegen mit der «Knopfloch-Chirurgie» die Anforderungen, sagt Hildebrandt. «Ein solcher Eingriff ist komplexer als herkömmliche. Für die Patienten aber deutlich schonender.»" ;
+    cx:hasText "Ganz im Interesse der Patienten liegt die erst an wenigen Kliniken für Hirnchirurgie eingeführte endoskopische Chirurgie. Diese ermöglicht Eingriffe durch kleinste Öffnungen von einem halben bis einem Zentimeter . Für den Chirurgen stiegen mit der «Knopfloch-Chirurgie» die Anforderungen, sagt Hildebrandt. «Ein solcher Eingriff ist komplexer als herkömmliche. Für die Patienten aber deutlich schonender.»" ;
+    rdfs:comment "A10/JAN.00026 St. Galler Tagblatt, 04.01.2010, S. 21; Wenn Millimeter entscheiden" .
+
+cx:deu_SuperlativADJest_Ex_B a cx:Example ;
+    cx:hasAnnotatedText "Noch verrückter wird die Situation allerdings , wenn man bedenkt , dass für mich als Arzt wie für viele renommierte Ernährungswissenschafter weltweit eine gut geplante und abwechslungsreiche vegane ( tierproduktfreie ) Ernährung nicht nur klimafreundlich und tierfreundlich ist , sondern eindeutig die [gesünd]1[est]2e Ernährung darstellt ." ;
+    cx:hasText "Noch verrückter wird die Situation allerdings , wenn man bedenkt , dass für mich als Arzt wie für viele renommierte Ernährungswissenschafter weltweit eine gut geplante und abwechslungsreiche vegane ( tierproduktfreie ) Ernährung nicht nur klimafreundlich und tierfreundlich ist , sondern eindeutig die gesündeste Ernährung darstellt ." ;
+    rdfs:comment "A10/JAN.00025 St. Galler Tagblatt, 04.01.2010, S. 25; Beharrlich verschwiegen" .
+
+cx:deu_SuperlativADJest_Ex_C a cx:Example ;
+    cx:hasAnnotatedText "Als Cavelti 1994 als 27jähriger Jurist - gleich nach der Hochzeitsreise in Irland - in Trogen einen alt gedienten Polizisten ablöste , war er der [jüng]1[st]2e Kripochef im Land ." ;
+    cx:hasText "Als Cavelti 1994 als 27jähriger Jurist - gleich nach der Hochzeitsreise in Irland - in Trogen einen alt gedienten Polizisten ablöste , war er der jüngste Kripochef im Land ." ;
+    rdfs:comment "A10/JAN.00039 St. Galler Tagblatt, 04.01.2010, S. 23; Jüngster Kripochef wird Kommandant; Der Adjektivstamm wird in Folge der Komparation in einigen Fällen modifiziert." .
+
+cx:deu_SuperlativADJest_Ex_D a cx:Example ;
+    cx:hasAnnotatedText "Wahrlich keine einfache Aufgabe, zumal die Eulachstädter seit Jahren konstant zu den spielstärksten und [erfolgreich]1[st]2en Vereinen in der 1. Liga zählen . " ;
+    cx:hasText "Wahrlich keine einfache Aufgabe, zumal die Eulachstädter seit Jahren konstant zu den spielstärksten und erfolgreichsten Vereinen in der 1. Liga zählen . " ;
+    rdfs:comment "A10/JAN.00015 St. Galler Tagblatt, 04.01.2010, S. 37; SC Herisau: Mit Willensleistung zum Überraschungssieg" .
+
+cx:deu_SuperlativADJest_MD a rcxn:Metadata ;
+    cx:hasSources cx:deu_SuperlativADJest_Sources ;
+    dcterms:created "2026-04-13"^^xsd:date ;
+    rcxn:annotator membr:Winckel .
+
+cx:deu_SuperlativADJest_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning """Die Konstruktion Superlativ:ADJ-(e)st konstituiert die Familie Superlativ:X -st und beschreibt die Superlativbildung des Adjektivs im Deutschen.\r
+Die Konstruktion besteht aus dem lexikalisch festen Kern-Konstruktionselement (KE-lex) [-(e)st]2 und dem internen Kern-KE [Dimension]1.\r
+""" .
+
+cx:deu_SuperlativADJest_Sources a cx:Collection ;
+    rdfs:seeAlso <https://framenet-constructicon.hhu.de/constructicon/construction?id=4357> .
+
+cx:deu_SuperlativADJest_slots a rdf_ns:Seq ;
+    rdf_ns:_1 cx:deu_SuperlativADJest_1 ;
+    rdf_ns:_2 cx:deu_SuperlativADJest_2 .
 
 cx:deu_schütteln a rcxn:Construction ;
     lg:partOfLanguage lg:deu ;
@@ -3028,6 +3135,17 @@ cx:ita_VerbPhrase a rcxn:Construction ;
     rcxn:elementOf cx:Relative-Topic-ShiftConstruction ;
     rcxn:hasTitle "Verb Phrase" .
 
+cx:lat_Adjective_1 a rcxn:SlotMandatory .
+
+cx:lat_Adjective_MD a rcxn:Metadata ;
+    dcterms:created "2026-03-30"^^xsd:date ;
+    rcxn:annotator membr:Winckel .
+
+cx:lat_Adjective_Meaning a rcxn:ConstructionMeaning .
+
+cx:lat_Adjective_slots a rdf_ns:Seq ;
+    rdf_ns:_1 cx:lat_Adjective_1 .
+
 cx:lidativeconstruction a rcxn:Construction ;
     lg:partOfLanguage lg:arzCai ;
     links:similarFormSimilarFunction cx:arzCai_Ditransitiveconstruction ;
@@ -3381,6 +3499,23 @@ cx:eng_cool a rcxn:Construction ;
         cx:coolasemotionconstruction,
         cx:eng_coolconstruction ;
     rcxn:hasTitle "cool" .
+
+cx:deu_SuperlativADJest a rcxn:Construction ;
+    cx:hasExample cx:deu_SuperlativADJest_Ex_A,
+        cx:deu_SuperlativADJest_Ex_B,
+        cx:deu_SuperlativADJest_Ex_C,
+        cx:deu_SuperlativADJest_Ex_D ;
+    rdfs:comment "Imo, Wolfgang (2016): Grammatik. Eine Einführung, Stuttgart: J.B. Metzler.",
+        "Original entry by Benjamin Fischer: „Superlativ:ADJ-(e)st“, in: FrameNet-Konstruktikon des Deutschen, https://framenet-constructicon.hhu.de/constructicon/construction?id=4357, abgerufen am 13.04.2026." ;
+    lg:partOfLanguage lg:deu ;
+    links:inheritedBy cx:SuperlativADJst_ADJ,
+        cx:SuperlativART_ADJest,
+        cx:Superlativam_ADJsten ;
+    links:inheritsFrom cx:SuperlativXst ;
+    rcxn:hasConstructionMeaning cx:deu_SuperlativADJest_Meaning ;
+    rcxn:hasMetadata cx:deu_SuperlativADJest_MD ;
+    rcxn:hasSlots cx:deu_SuperlativADJest_slots ;
+    rcxn:hasTitle "Superlativ:ADJ-(e)st" .
 
 cx:eng_Adjective a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
