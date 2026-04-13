@@ -88,7 +88,7 @@ cx:deu_Adjektivstamm_MD a rcxn:Metadata ;
 <http://example.org/cx/deu_SuperlativADJest_Ex_C> a cx:Example ;
     cx:hasAnnotatedText "Als Cavelti 1994 als 27jähriger Jurist - gleich nach der Hochzeitsreise in Irland - in Trogen einen alt gedienten Polizisten ablöste , war er der [jüng]1[st]2e Kripochef im Land ." ;
     cx:hasText "Als Cavelti 1994 als 27jähriger Jurist - gleich nach der Hochzeitsreise in Irland - in Trogen einen alt gedienten Polizisten ablöste , war er der jüngste Kripochef im Land ." ;
-    RDFS:comment "A10/JAN.00039 St. Galler Tagblatt, 04.01.2010, S. 23; Jüngster Kripochef wird Kommandant; Der Adjektivstamm wird in Folge der Komparation in einigen Fällen modifiziert." .
+    RDFS:comment "A10/JAN.00039 St. Galler Tagblatt, 04.01.2010, S. 23; Jüngster Kripochef wird Kommandant" , "Der Adjektivstamm wird in Folge der Komparation in einigen Fällen modifiziert." .
 
 <http://example.org/cx/deu_SuperlativADJest_Ex_D> a cx:Example ;
     cx:hasAnnotatedText "Wahrlich keine einfache Aufgabe, zumal die Eulachstädter seit Jahren konstant zu den spielstärksten und [erfolgreich]1[st]2en Vereinen in der 1. Liga zählen . " ;
