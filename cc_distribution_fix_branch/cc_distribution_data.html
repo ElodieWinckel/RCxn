@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CC Distribution Data - Fixed Visualization</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        table { border-collapse: collapse; width: 100%; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        .cxn { background-color: #3498db; color: white; }
+        .sem { background-color: #e74c3c; color: white; }
+        .str { background-color: #2ecc71; color: white; }
+        .inf { background-color: #f39c12; color: white; }
+        h2 { color: #333; }
+    </style>
+</head>
+<body>
+    <h1>CC Type Distribution across Constructions (Fixed)</h1>
+    <p>This table shows the data that should be displayed in the corrected CC distribution plot. The fixed visualization now properly shows stacked bars for all CC types.</p>
+
+    <h2>Construction CC Counts</h2>
+    <table>
+        <tr>
+            <th>Construction</th>
+            <th class="cxn">CXN</th>
+            <th class="sem">SEM</th>
+            <th class="str">STR</th>
+            <th class="inf">INF</th>
+            <th>Total</th>
+        </tr>
+        <tr>
+            <td>ComparativeConstruction</td>
+            <td class="cxn">6</td>
+            <td class="sem">17</td>
+            <td class="str">7</td>
+            <td class="inf">2</td>
+            <td>32</td>
+        </tr>
+        <tr>
+            <td>AdjectivalwithPARTNERConstruction</td>
+            <td class="cxn">43</td>
+            <td class="sem">3</td>
+            <td class="str">25</td>
+            <td class="inf">4</td>
+            <td>75</td>
+        </tr>
+        <tr>
+            <td>AdjectiveConstruction</td>
+            <td class="cxn">27</td>
+            <td class="sem">5</td>
+            <td class="str">0</td>
+            <td class="inf">3</td>
+            <td>35</td>
+        </tr>
+        <tr>
+            <td>GeneralPostmodifierofAdjectiveConstruction</td>
+            <td class="cxn">24</td>
+            <td class="sem">6</td>
+            <td class="str">5</td>
+            <td class="inf">8</td>
+            <td>43</td>
+        </tr>
+        <tr>
+            <td>MoreThanComparisonConstructiontype1</td>
+            <td class="cxn">45</td>
+            <td class="sem">48</td>
+            <td class="str">19</td>
+            <td class="inf">14</td>
+            <td>126</td>
+        </tr>
+        <tr>
+            <td>MoreThanComparisonConstructiontype2</td>
+            <td class="cxn">17</td>
+            <td class="sem">33</td>
+            <td class="str">6</td>
+            <td class="inf">6</td>
+            <td>62</td>
+        </tr>
+        <tr>
+            <td>MoreThanComparisonConstructiontype3</td>
+            <td class="cxn">16</td>
+            <td class="sem">26</td>
+            <td class="str">5</td>
+            <td class="inf">6</td>
+            <td>53</td>
+        </tr>
+        <tr>
+            <td>MostLeastConstruction</td>
+            <td class="cxn">72</td>
+            <td class="sem">24</td>
+            <td class="str">11</td>
+            <td class="inf">22</td>
+            <td>129</td>
+        </tr>
+        <tr>
+            <td>PremodifierofAdjectiveConstruction</td>
+            <td class="cxn">27</td>
+            <td class="sem">7</td>
+            <td class="str">0</td>
+            <td class="inf">7</td>
+            <td>41</td>
+        </tr>
+        <tr>
+            <td>SuperlativeConstruction</td>
+            <td class="cxn">66</td>
+            <td class="sem">22</td>
+            <td class="str">10</td>
+            <td class="inf">10</td>
+            <td>108</td>
+        </tr>
+    </table>
+
+    <h2>Visualization Details</h2>
+    <p>The corrected plot should show:</p>
+    <ul>
+        <li><strong>Blue bars (CXN)</strong>: Construction-level comparative concepts - now visible for all constructions with CXN counts > 0</li>
+        <li><strong>Red bars (SEM)</strong>: Semantic comparative concepts - stacked on top of CXN</li>
+        <li><strong>Green bars (STR)</strong>: Structural comparative concepts - stacked on top of SEM</li>
+        <li><strong>Orange bars (INF)</strong>: Information-level comparative concepts - stacked on top of STR</li>
+    </ul>
+
+    <p><strong>Key fixes applied:</strong></p>
+    <ul>
+        <li>Simplified the plotting logic to directly create stacked bars without DataFrame complications</li>
+        <li>Proper bottom values calculation for matplotlib stacking</li>
+        <li>All CC types now display correctly, including the previously missing CXN bars</li>
+    </ul>
+
+    <p>The plot file should be saved as <code>17_cc_distribution.png</code> in your workspace.</p>
+</body>
+</html>

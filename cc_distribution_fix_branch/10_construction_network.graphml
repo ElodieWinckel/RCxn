@@ -1,0 +1,249 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d8" for="edge" attr.name="confidence" attr.type="string"/>
+<key id="d7" for="edge" attr.name="weight" attr.type="float"/>
+<key id="d6" for="node" attr.name="type_profile_inf" attr.type="long"/>
+<key id="d5" for="node" attr.name="type_profile_str" attr.type="long"/>
+<key id="d4" for="node" attr.name="type_profile_sem" attr.type="long"/>
+<key id="d3" for="node" attr.name="type_profile_cxn" attr.type="long"/>
+<key id="d2" for="node" attr.name="avg_ccs_per_slot" attr.type="double"/>
+<key id="d1" for="node" attr.name="cc_count" attr.type="long"/>
+<key id="d0" for="node" attr.name="slot_count" attr.type="long"/>
+<graph edgedefault="undirected"><node id="engLME_AdjectivalwithPARTNERConstruction">
+  <data key="d0">4</data>
+  <data key="d1">75</data>
+  <data key="d2">18.75</data>
+  <data key="d3">43</data>
+  <data key="d4">3</data>
+  <data key="d5">25</data>
+  <data key="d6">4</data>
+</node>
+<node id="engLME_AdjectiveConstruction">
+  <data key="d0">3</data>
+  <data key="d1">35</data>
+  <data key="d2">11.666666666666666</data>
+  <data key="d3">27</data>
+  <data key="d4">5</data>
+  <data key="d5">0</data>
+  <data key="d6">3</data>
+</node>
+<node id="engLME_ComparativeConstruction">
+  <data key="d0">5</data>
+  <data key="d1">32</data>
+  <data key="d2">6.4</data>
+  <data key="d3">6</data>
+  <data key="d4">17</data>
+  <data key="d5">7</data>
+  <data key="d6">2</data>
+</node>
+<node id="engLME_GeneralPostmodifierofAdjectiveConstruction">
+  <data key="d0">3</data>
+  <data key="d1">43</data>
+  <data key="d2">14.333333333333334</data>
+  <data key="d3">24</data>
+  <data key="d4">6</data>
+  <data key="d5">5</data>
+  <data key="d6">8</data>
+</node>
+<node id="engLME_MoreThanComparisonConstructiontype1">
+  <data key="d0">6</data>
+  <data key="d1">126</data>
+  <data key="d2">21.0</data>
+  <data key="d3">45</data>
+  <data key="d4">48</data>
+  <data key="d5">19</data>
+  <data key="d6">14</data>
+</node>
+<node id="engLME_MoreThanComparisonConstructiontype2">
+  <data key="d0">5</data>
+  <data key="d1">62</data>
+  <data key="d2">12.4</data>
+  <data key="d3">17</data>
+  <data key="d4">33</data>
+  <data key="d5">6</data>
+  <data key="d6">6</data>
+</node>
+<node id="engLME_MoreThanComparisonConstructiontype3">
+  <data key="d0">5</data>
+  <data key="d1">53</data>
+  <data key="d2">10.6</data>
+  <data key="d3">16</data>
+  <data key="d4">26</data>
+  <data key="d5">5</data>
+  <data key="d6">6</data>
+</node>
+<node id="engLME_MostLeastConstruction">
+  <data key="d0">3</data>
+  <data key="d1">129</data>
+  <data key="d2">43.0</data>
+  <data key="d3">72</data>
+  <data key="d4">24</data>
+  <data key="d5">11</data>
+  <data key="d6">22</data>
+</node>
+<node id="engLME_PremodifierofAdjectiveConstruction">
+  <data key="d0">3</data>
+  <data key="d1">41</data>
+  <data key="d2">13.666666666666666</data>
+  <data key="d3">27</data>
+  <data key="d4">7</data>
+  <data key="d5">0</data>
+  <data key="d6">7</data>
+</node>
+<node id="engLME_SuperlativeConstruction">
+  <data key="d0">3</data>
+  <data key="d1">108</data>
+  <data key="d2">36.0</data>
+  <data key="d3">66</data>
+  <data key="d4">22</data>
+  <data key="d5">10</data>
+  <data key="d6">10</data>
+</node>
+<edge source="engLME_AdjectivalwithPARTNERConstruction" target="engLME_AdjectiveConstruction">
+  <data key="d7">0.7605262715393369</data>
+  <data key="d8">high</data>
+</edge>
+<edge source="engLME_AdjectivalwithPARTNERConstruction" target="engLME_GeneralPostmodifierofAdjectiveConstruction">
+  <data key="d7">0.6102371424428811</data>
+  <data key="d8">medium</data>
+</edge>
+<edge source="engLME_AdjectivalwithPARTNERConstruction" target="engLME_MoreThanComparisonConstructiontype1">
+  <data key="d7">0.41552457380447255</data>
+  <data key="d8">low</data>
+</edge>
+<edge source="engLME_AdjectivalwithPARTNERConstruction" target="engLME_MostLeastConstruction">
+  <data key="d7">0.5922678388551766</data>
+  <data key="d8">medium</data>
+</edge>
+<edge source="engLME_AdjectivalwithPARTNERConstruction" target="engLME_PremodifierofAdjectiveConstruction">
+  <data key="d7">0.5304379825122831</data>
+  <data key="d8">medium</data>
+</edge>
+<edge source="engLME_AdjectivalwithPARTNERConstruction" target="engLME_SuperlativeConstruction">
+  <data key="d7">0.6165429469398404</data>
+  <data key="d8">medium</data>
+</edge>
+<edge source="engLME_AdjectiveConstruction" target="engLME_GeneralPostmodifierofAdjectiveConstruction">
+  <data key="d7">0.5829683381853462</data>
+  <data key="d8">medium</data>
+</edge>
+<edge source="engLME_AdjectiveConstruction" target="engLME_MoreThanComparisonConstructiontype1">
+  <data key="d7">0.43152784459122806</data>
+  <data key="d8">low</data>
+</edge>
+<edge source="engLME_AdjectiveConstruction" target="engLME_MoreThanComparisonConstructiontype2">
+  <data key="d7">0.31592458432771187</data>
+  <data key="d8">low</data>
+</edge>
+<edge source="engLME_AdjectiveConstruction" target="engLME_MoreThanComparisonConstructiontype3">
+  <data key="d7">0.33992674321906396</data>
+  <data key="d8">low</data>
+</edge>
+<edge source="engLME_AdjectiveConstruction" target="engLME_MostLeastConstruction">
+  <data key="d7">0.6998727314281225</data>
+  <data key="d8">medium</data>
+</edge>
+<edge source="engLME_AdjectiveConstruction" target="engLME_PremodifierofAdjectiveConstruction">
+  <data key="d7">0.6276405189981422</data>
+  <data key="d8">medium</data>
+</edge>
+<edge source="engLME_AdjectiveConstruction" target="engLME_SuperlativeConstruction">
+  <data key="d7">0.7397913470844871</data>
+  <data key="d8">high</data>
+</edge>
+<edge source="engLME_ComparativeConstruction" target="engLME_MoreThanComparisonConstructiontype1">
+  <data key="d7">0.6700419984748308</data>
+  <data key="d8">medium</data>
+</edge>
+<edge source="engLME_ComparativeConstruction" target="engLME_MoreThanComparisonConstructiontype2">
+  <data key="d7">0.6792467700921296</data>
+  <data key="d8">medium</data>
+</edge>
+<edge source="engLME_ComparativeConstruction" target="engLME_MoreThanComparisonConstructiontype3">
+  <data key="d7">0.6924339013860094</data>
+  <data key="d8">medium</data>
+</edge>
+<edge source="engLME_GeneralPostmodifierofAdjectiveConstruction" target="engLME_MoreThanComparisonConstructiontype1">
+  <data key="d7">0.5483948233498428</data>
+  <data key="d8">medium</data>
+</edge>
+<edge source="engLME_GeneralPostmodifierofAdjectiveConstruction" target="engLME_MoreThanComparisonConstructiontype2">
+  <data key="d7">0.3772418873621364</data>
+  <data key="d8">low</data>
+</edge>
+<edge source="engLME_GeneralPostmodifierofAdjectiveConstruction" target="engLME_MoreThanComparisonConstructiontype3">
+  <data key="d7">0.38194159530261285</data>
+  <data key="d8">low</data>
+</edge>
+<edge source="engLME_GeneralPostmodifierofAdjectiveConstruction" target="engLME_MostLeastConstruction">
+  <data key="d7">0.5687579954756453</data>
+  <data key="d8">medium</data>
+</edge>
+<edge source="engLME_GeneralPostmodifierofAdjectiveConstruction" target="engLME_PremodifierofAdjectiveConstruction">
+  <data key="d7">0.9103700614317697</data>
+  <data key="d8">high</data>
+</edge>
+<edge source="engLME_GeneralPostmodifierofAdjectiveConstruction" target="engLME_SuperlativeConstruction">
+  <data key="d7">0.5299546877449722</data>
+  <data key="d8">medium</data>
+</edge>
+<edge source="engLME_MoreThanComparisonConstructiontype1" target="engLME_MoreThanComparisonConstructiontype2">
+  <data key="d7">0.7935494979187007</data>
+  <data key="d8">high</data>
+</edge>
+<edge source="engLME_MoreThanComparisonConstructiontype1" target="engLME_MoreThanComparisonConstructiontype3">
+  <data key="d7">0.7760559260864124</data>
+  <data key="d8">high</data>
+</edge>
+<edge source="engLME_MoreThanComparisonConstructiontype1" target="engLME_MostLeastConstruction">
+  <data key="d7">0.5219728452218545</data>
+  <data key="d8">medium</data>
+</edge>
+<edge source="engLME_MoreThanComparisonConstructiontype1" target="engLME_PremodifierofAdjectiveConstruction">
+  <data key="d7">0.5372537620122689</data>
+  <data key="d8">medium</data>
+</edge>
+<edge source="engLME_MoreThanComparisonConstructiontype1" target="engLME_SuperlativeConstruction">
+  <data key="d7">0.4798482017976798</data>
+  <data key="d8">low</data>
+</edge>
+<edge source="engLME_MoreThanComparisonConstructiontype2" target="engLME_MoreThanComparisonConstructiontype3">
+  <data key="d7">0.9626961700565847</data>
+  <data key="d8">high</data>
+</edge>
+<edge source="engLME_MoreThanComparisonConstructiontype2" target="engLME_MostLeastConstruction">
+  <data key="d7">0.3764682112380305</data>
+  <data key="d8">low</data>
+</edge>
+<edge source="engLME_MoreThanComparisonConstructiontype2" target="engLME_PremodifierofAdjectiveConstruction">
+  <data key="d7">0.3804385586982133</data>
+  <data key="d8">low</data>
+</edge>
+<edge source="engLME_MoreThanComparisonConstructiontype2" target="engLME_SuperlativeConstruction">
+  <data key="d7">0.3818074754770741</data>
+  <data key="d8">low</data>
+</edge>
+<edge source="engLME_MoreThanComparisonConstructiontype3" target="engLME_MostLeastConstruction">
+  <data key="d7">0.3988295416461501</data>
+  <data key="d8">low</data>
+</edge>
+<edge source="engLME_MoreThanComparisonConstructiontype3" target="engLME_PremodifierofAdjectiveConstruction">
+  <data key="d7">0.3850843663809258</data>
+  <data key="d8">low</data>
+</edge>
+<edge source="engLME_MoreThanComparisonConstructiontype3" target="engLME_SuperlativeConstruction">
+  <data key="d7">0.40348782759414165</data>
+  <data key="d8">low</data>
+</edge>
+<edge source="engLME_MostLeastConstruction" target="engLME_PremodifierofAdjectiveConstruction">
+  <data key="d7">0.5826089731067168</data>
+  <data key="d8">medium</data>
+</edge>
+<edge source="engLME_MostLeastConstruction" target="engLME_SuperlativeConstruction">
+  <data key="d7">0.8792741360584362</data>
+  <data key="d8">high</data>
+</edge>
+<edge source="engLME_PremodifierofAdjectiveConstruction" target="engLME_SuperlativeConstruction">
+  <data key="d7">0.545311053695826</data>
+  <data key="d8">medium</data>
+</edge>
+</graph></graphml>

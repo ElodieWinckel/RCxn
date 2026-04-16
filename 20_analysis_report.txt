@@ -1,0 +1,46 @@
+================================================================================
+COMPARATIVE CONCEPTS ANALYSIS REPORT
+================================================================================
+
+OVERALL STATISTICS
+----------------------------------------
+Number of constructions: 10
+Total slots: 40
+Total CCs: 704
+Network nodes: 10
+Network edges: 37
+Network density: 0.822
+
+TOP 10 MOST CENTRAL NODES
+----------------------------------------
+engLME_MoreThanComparisonConstructiontype2: 0.250
+engLME_AdjectiveConstruction: 0.083
+engLME_PremodifierofAdjectiveConstruction: 0.056
+engLME_MoreThanComparisonConstructiontype1: 0.028
+engLME_AdjectivalwithPARTNERConstruction: 0.000
+engLME_GeneralPostmodifierofAdjectiveConstruction: 0.000
+engLME_ComparativeConstruction: 0.000
+engLME_MoreThanComparisonConstructiontype3: 0.000
+engLME_MostLeastConstruction: 0.000
+engLME_SuperlativeConstruction: 0.000
+
+CC TYPE DISTRIBUTION
+----------------------------------------
+  CXN: 343 (48.7%)
+  SEM: 191 (27.1%)
+  STR: 88 (12.5%)
+  INF: 82 (11.6%)
+
+CONSTRUCTION SIMILARITY INFORMATION
+----------------------------------------
+Top 10 most similar construction pairs:
+  engLME_MoreThanComparisonConstructiontype2 <-> engLME_MoreThanComparisonConstructiontype3: 0.963
+  engLME_GeneralPostmodifierofAdjectiveConstruction <-> engLME_PremodifierofAdjectiveConstruction: 0.910
+  engLME_MostLeastConstruction <-> engLME_SuperlativeConstruction: 0.879
+  engLME_MoreThanComparisonConstructiontype1 <-> engLME_MoreThanComparisonConstructiontype2: 0.794
+  engLME_MoreThanComparisonConstructiontype1 <-> engLME_MoreThanComparisonConstructiontype3: 0.776
+  engLME_AdjectivalwithPARTNERConstruction <-> engLME_AdjectiveConstruction: 0.761
+  engLME_AdjectiveConstruction <-> engLME_SuperlativeConstruction: 0.740
+  engLME_AdjectiveConstruction <-> engLME_MostLeastConstruction: 0.700
+  engLME_ComparativeConstruction <-> engLME_MoreThanComparisonConstructiontype3: 0.692
+  engLME_ComparativeConstruction <-> engLME_MoreThanComparisonConstructiontype2: 0.679

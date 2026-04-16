@@ -1,0 +1,1197 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "construction": "engLME_AdjectivalwithPARTNERConstruction",
+      "slot_id": "engLME_AdjectivalwithPARTNERConstruction_3",
+      "cc_count": 49,
+      "type_profile": {
+        "cxn": 28,
+        "sem": 0,
+        "str": 21,
+        "inf": 0
+      },
+      "id": "engLME_AdjectivalwithPARTNERConstruction#engLME_AdjectivalwithPARTNERConstruction_3"
+    },
+    {
+      "construction": "engLME_AdjectivalwithPARTNERConstruction",
+      "slot_id": "engLME_AdjectivalwithPARTNERConstruction",
+      "cc_count": 16,
+      "type_profile": {
+        "cxn": 8,
+        "sem": 0,
+        "str": 4,
+        "inf": 4
+      },
+      "id": "engLME_AdjectivalwithPARTNERConstruction#engLME_AdjectivalwithPARTNERConstruction"
+    },
+    {
+      "construction": "engLME_AdjectivalwithPARTNERConstruction",
+      "slot_id": "engLME_AdjectivalwithPARTNERConstruction_1",
+      "cc_count": 1,
+      "type_profile": {
+        "cxn": 1,
+        "sem": 0,
+        "str": 0,
+        "inf": 0
+      },
+      "id": "engLME_AdjectivalwithPARTNERConstruction#engLME_AdjectivalwithPARTNERConstruction_1"
+    },
+    {
+      "construction": "engLME_AdjectivalwithPARTNERConstruction",
+      "slot_id": "engLME_AdjectivalwithPARTNERConstruction_2",
+      "cc_count": 9,
+      "type_profile": {
+        "cxn": 6,
+        "sem": 3,
+        "str": 0,
+        "inf": 0
+      },
+      "id": "engLME_AdjectivalwithPARTNERConstruction#engLME_AdjectivalwithPARTNERConstruction_2"
+    },
+    {
+      "construction": "engLME_AdjectiveConstruction",
+      "slot_id": "engLME_AdjectiveConstruction_1",
+      "cc_count": 25,
+      "type_profile": {
+        "cxn": 20,
+        "sem": 5,
+        "str": 0,
+        "inf": 0
+      },
+      "id": "engLME_AdjectiveConstruction#engLME_AdjectiveConstruction_1"
+    },
+    {
+      "construction": "engLME_AdjectiveConstruction",
+      "slot_id": "engLME_AdjectiveConstruction",
+      "cc_count": 9,
+      "type_profile": {
+        "cxn": 6,
+        "sem": 0,
+        "str": 0,
+        "inf": 3
+      },
+      "id": "engLME_AdjectiveConstruction#engLME_AdjectiveConstruction"
+    },
+    {
+      "construction": "engLME_AdjectiveConstruction",
+      "slot_id": "engLME_AdjectiveConstruction_2",
+      "cc_count": 1,
+      "type_profile": {
+        "cxn": 1,
+        "sem": 0,
+        "str": 0,
+        "inf": 0
+      },
+      "id": "engLME_AdjectiveConstruction#engLME_AdjectiveConstruction_2"
+    },
+    {
+      "construction": "engLME_ComparativeConstruction",
+      "slot_id": "engLME_ComparativeConstruction_1",
+      "cc_count": 9,
+      "type_profile": {
+        "cxn": 3,
+        "sem": 3,
+        "str": 3,
+        "inf": 0
+      },
+      "id": "engLME_ComparativeConstruction#engLME_ComparativeConstruction_1"
+    },
+    {
+      "construction": "engLME_ComparativeConstruction",
+      "slot_id": "engLME_ComparativeConstruction_3",
+      "cc_count": 1,
+      "type_profile": {
+        "cxn": 0,
+        "sem": 0,
+        "str": 1,
+        "inf": 0
+      },
+      "id": "engLME_ComparativeConstruction#engLME_ComparativeConstruction_3"
+    },
+    {
+      "construction": "engLME_ComparativeConstruction",
+      "slot_id": "engLME_ComparativeConstruction",
+      "cc_count": 9,
+      "type_profile": {
+        "cxn": 3,
+        "sem": 3,
+        "str": 3,
+        "inf": 0
+      },
+      "id": "engLME_ComparativeConstruction#engLME_ComparativeConstruction"
+    },
+    {
+      "construction": "engLME_ComparativeConstruction",
+      "slot_id": "engLME_ComparativeConstruction_2",
+      "cc_count": 9,
+      "type_profile": {
+        "cxn": 0,
+        "sem": 9,
+        "str": 0,
+        "inf": 0
+      },
+      "id": "engLME_ComparativeConstruction#engLME_ComparativeConstruction_2"
+    },
+    {
+      "construction": "engLME_ComparativeConstruction",
+      "slot_id": "engLME_ComparativeConstruction_4",
+      "cc_count": 4,
+      "type_profile": {
+        "cxn": 0,
+        "sem": 2,
+        "str": 0,
+        "inf": 2
+      },
+      "id": "engLME_ComparativeConstruction#engLME_ComparativeConstruction_4"
+    },
+    {
+      "construction": "engLME_GeneralPostmodifierofAdjectiveConstruction",
+      "slot_id": "engLME_GeneralPostmodifierofAdjectiveConstruction_2",
+      "cc_count": 9,
+      "type_profile": {
+        "cxn": 3,
+        "sem": 3,
+        "str": 0,
+        "inf": 3
+      },
+      "id": "engLME_GeneralPostmodifierofAdjectiveConstruction#engLME_GeneralPostmodifierofAdjectiveConstruction_2"
+    },
+    {
+      "construction": "engLME_GeneralPostmodifierofAdjectiveConstruction",
+      "slot_id": "engLME_GeneralPostmodifierofAdjectiveConstruction",
+      "cc_count": 25,
+      "type_profile": {
+        "cxn": 15,
+        "sem": 0,
+        "str": 5,
+        "inf": 5
+      },
+      "id": "engLME_GeneralPostmodifierofAdjectiveConstruction#engLME_GeneralPostmodifierofAdjectiveConstruction"
+    },
+    {
+      "construction": "engLME_GeneralPostmodifierofAdjectiveConstruction",
+      "slot_id": "engLME_GeneralPostmodifierofAdjectiveConstruction_1",
+      "cc_count": 9,
+      "type_profile": {
+        "cxn": 6,
+        "sem": 3,
+        "str": 0,
+        "inf": 0
+      },
+      "id": "engLME_GeneralPostmodifierofAdjectiveConstruction#engLME_GeneralPostmodifierofAdjectiveConstruction_1"
+    },
+    {
+      "construction": "engLME_MoreThanComparisonConstructiontype1",
+      "slot_id": "engLME_MoreThanComparisonConstructiontype1_1",
+      "cc_count": 64,
+      "type_profile": {
+        "cxn": 32,
+        "sem": 16,
+        "str": 8,
+        "inf": 8
+      },
+      "id": "engLME_MoreThanComparisonConstructiontype1#engLME_MoreThanComparisonConstructiontype1_1"
+    },
+    {
+      "construction": "engLME_MoreThanComparisonConstructiontype1",
+      "slot_id": "engLME_MoreThanComparisonConstructiontype1_2",
+      "cc_count": 16,
+      "type_profile": {
+        "cxn": 8,
+        "sem": 4,
+        "str": 0,
+        "inf": 4
+      },
+      "id": "engLME_MoreThanComparisonConstructiontype1#engLME_MoreThanComparisonConstructiontype1_2"
+    },
+    {
+      "construction": "engLME_MoreThanComparisonConstructiontype1",
+      "slot_id": "engLME_MoreThanComparisonConstructiontype1",
+      "cc_count": 25,
+      "type_profile": {
+        "cxn": 5,
+        "sem": 10,
+        "str": 10,
+        "inf": 0
+      },
+      "id": "engLME_MoreThanComparisonConstructiontype1#engLME_MoreThanComparisonConstructiontype1"
+    },
+    {
+      "construction": "engLME_MoreThanComparisonConstructiontype1",
+      "slot_id": "engLME_MoreThanComparisonConstructiontype1_3",
+      "cc_count": 16,
+      "type_profile": {
+        "cxn": 0,
+        "sem": 16,
+        "str": 0,
+        "inf": 0
+      },
+      "id": "engLME_MoreThanComparisonConstructiontype1#engLME_MoreThanComparisonConstructiontype1_3"
+    },
+    {
+      "construction": "engLME_MoreThanComparisonConstructiontype1",
+      "slot_id": "engLME_MoreThanComparisonConstructiontype1_4",
+      "cc_count": 1,
+      "type_profile": {
+        "cxn": 0,
+        "sem": 0,
+        "str": 1,
+        "inf": 0
+      },
+      "id": "engLME_MoreThanComparisonConstructiontype1#engLME_MoreThanComparisonConstructiontype1_4"
+    },
+    {
+      "construction": "engLME_MoreThanComparisonConstructiontype1",
+      "slot_id": "engLME_MoreThanComparisonConstructiontype1_5",
+      "cc_count": 4,
+      "type_profile": {
+        "cxn": 0,
+        "sem": 2,
+        "str": 0,
+        "inf": 2
+      },
+      "id": "engLME_MoreThanComparisonConstructiontype1#engLME_MoreThanComparisonConstructiontype1_5"
+    },
+    {
+      "construction": "engLME_MoreThanComparisonConstructiontype2",
+      "slot_id": "engLME_MoreThanComparisonConstructiontype2_1",
+      "cc_count": 16,
+      "type_profile": {
+        "cxn": 12,
+        "sem": 0,
+        "str": 0,
+        "inf": 4
+      },
+      "id": "engLME_MoreThanComparisonConstructiontype2#engLME_MoreThanComparisonConstructiontype2_1"
+    },
+    {
+      "construction": "engLME_MoreThanComparisonConstructiontype2",
+      "slot_id": "engLME_MoreThanComparisonConstructiontype2_4",
+      "cc_count": 4,
+      "type_profile": {
+        "cxn": 0,
+        "sem": 2,
+        "str": 0,
+        "inf": 2
+      },
+      "id": "engLME_MoreThanComparisonConstructiontype2#engLME_MoreThanComparisonConstructiontype2_4"
+    },
+    {
+      "construction": "engLME_MoreThanComparisonConstructiontype2",
+      "slot_id": "engLME_MoreThanComparisonConstructiontype2_2",
+      "cc_count": 16,
+      "type_profile": {
+        "cxn": 0,
+        "sem": 16,
+        "str": 0,
+        "inf": 0
+      },
+      "id": "engLME_MoreThanComparisonConstructiontype2#engLME_MoreThanComparisonConstructiontype2_2"
+    },
+    {
+      "construction": "engLME_MoreThanComparisonConstructiontype2",
+      "slot_id": "engLME_MoreThanComparisonConstructiontype2",
+      "cc_count": 25,
+      "type_profile": {
+        "cxn": 5,
+        "sem": 15,
+        "str": 5,
+        "inf": 0
+      },
+      "id": "engLME_MoreThanComparisonConstructiontype2#engLME_MoreThanComparisonConstructiontype2"
+    },
+    {
+      "construction": "engLME_MoreThanComparisonConstructiontype2",
+      "slot_id": "engLME_MoreThanComparisonConstructiontype2_3",
+      "cc_count": 1,
+      "type_profile": {
+        "cxn": 0,
+        "sem": 0,
+        "str": 1,
+        "inf": 0
+      },
+      "id": "engLME_MoreThanComparisonConstructiontype2#engLME_MoreThanComparisonConstructiontype2_3"
+    },
+    {
+      "construction": "engLME_MoreThanComparisonConstructiontype3",
+      "slot_id": "engLME_MoreThanComparisonConstructiontype3_1",
+      "cc_count": 16,
+      "type_profile": {
+        "cxn": 12,
+        "sem": 0,
+        "str": 0,
+        "inf": 4
+      },
+      "id": "engLME_MoreThanComparisonConstructiontype3#engLME_MoreThanComparisonConstructiontype3_1"
+    },
+    {
+      "construction": "engLME_MoreThanComparisonConstructiontype3",
+      "slot_id": "engLME_MoreThanComparisonConstructiontype3",
+      "cc_count": 16,
+      "type_profile": {
+        "cxn": 4,
+        "sem": 8,
+        "str": 4,
+        "inf": 0
+      },
+      "id": "engLME_MoreThanComparisonConstructiontype3#engLME_MoreThanComparisonConstructiontype3"
+    },
+    {
+      "construction": "engLME_MoreThanComparisonConstructiontype3",
+      "slot_id": "engLME_MoreThanComparisonConstructiontype3_2",
+      "cc_count": 16,
+      "type_profile": {
+        "cxn": 0,
+        "sem": 16,
+        "str": 0,
+        "inf": 0
+      },
+      "id": "engLME_MoreThanComparisonConstructiontype3#engLME_MoreThanComparisonConstructiontype3_2"
+    },
+    {
+      "construction": "engLME_MoreThanComparisonConstructiontype3",
+      "slot_id": "engLME_MoreThanComparisonConstructiontype3_3",
+      "cc_count": 1,
+      "type_profile": {
+        "cxn": 0,
+        "sem": 0,
+        "str": 1,
+        "inf": 0
+      },
+      "id": "engLME_MoreThanComparisonConstructiontype3#engLME_MoreThanComparisonConstructiontype3_3"
+    },
+    {
+      "construction": "engLME_MoreThanComparisonConstructiontype3",
+      "slot_id": "engLME_MoreThanComparisonConstructiontype3_4",
+      "cc_count": 4,
+      "type_profile": {
+        "cxn": 0,
+        "sem": 2,
+        "str": 0,
+        "inf": 2
+      },
+      "id": "engLME_MoreThanComparisonConstructiontype3#engLME_MoreThanComparisonConstructiontype3_4"
+    },
+    {
+      "construction": "engLME_MostLeastConstruction",
+      "slot_id": "engLME_MostLeastConstruction_1",
+      "cc_count": 121,
+      "type_profile": {
+        "cxn": 66,
+        "sem": 22,
+        "str": 11,
+        "inf": 22
+      },
+      "id": "engLME_MostLeastConstruction#engLME_MostLeastConstruction_1"
+    },
+    {
+      "construction": "engLME_MostLeastConstruction",
+      "slot_id": "engLME_MostLeastConstruction",
+      "cc_count": 4,
+      "type_profile": {
+        "cxn": 4,
+        "sem": 0,
+        "str": 0,
+        "inf": 0
+      },
+      "id": "engLME_MostLeastConstruction#engLME_MostLeastConstruction"
+    },
+    {
+      "construction": "engLME_MostLeastConstruction",
+      "slot_id": "engLME_MostLeastConstruction_2",
+      "cc_count": 4,
+      "type_profile": {
+        "cxn": 2,
+        "sem": 2,
+        "str": 0,
+        "inf": 0
+      },
+      "id": "engLME_MostLeastConstruction#engLME_MostLeastConstruction_2"
+    },
+    {
+      "construction": "engLME_PremodifierofAdjectiveConstruction",
+      "slot_id": "engLME_PremodifierofAdjectiveConstruction_2",
+      "cc_count": 16,
+      "type_profile": {
+        "cxn": 12,
+        "sem": 4,
+        "str": 0,
+        "inf": 0
+      },
+      "id": "engLME_PremodifierofAdjectiveConstruction#engLME_PremodifierofAdjectiveConstruction_2"
+    },
+    {
+      "construction": "engLME_PremodifierofAdjectiveConstruction",
+      "slot_id": "engLME_PremodifierofAdjectiveConstruction_1",
+      "cc_count": 9,
+      "type_profile": {
+        "cxn": 3,
+        "sem": 3,
+        "str": 0,
+        "inf": 3
+      },
+      "id": "engLME_PremodifierofAdjectiveConstruction#engLME_PremodifierofAdjectiveConstruction_1"
+    },
+    {
+      "construction": "engLME_PremodifierofAdjectiveConstruction",
+      "slot_id": "engLME_PremodifierofAdjectiveConstruction",
+      "cc_count": 16,
+      "type_profile": {
+        "cxn": 12,
+        "sem": 0,
+        "str": 0,
+        "inf": 4
+      },
+      "id": "engLME_PremodifierofAdjectiveConstruction#engLME_PremodifierofAdjectiveConstruction"
+    },
+    {
+      "construction": "engLME_SuperlativeConstruction",
+      "slot_id": "engLME_SuperlativeConstruction",
+      "cc_count": 4,
+      "type_profile": {
+        "cxn": 4,
+        "sem": 0,
+        "str": 0,
+        "inf": 0
+      },
+      "id": "engLME_SuperlativeConstruction#engLME_SuperlativeConstruction"
+    },
+    {
+      "construction": "engLME_SuperlativeConstruction",
+      "slot_id": "engLME_SuperlativeConstruction_1",
+      "cc_count": 100,
+      "type_profile": {
+        "cxn": 60,
+        "sem": 20,
+        "str": 10,
+        "inf": 10
+      },
+      "id": "engLME_SuperlativeConstruction#engLME_SuperlativeConstruction_1"
+    },
+    {
+      "construction": "engLME_SuperlativeConstruction",
+      "slot_id": "engLME_SuperlativeConstruction_2",
+      "cc_count": 4,
+      "type_profile": {
+        "cxn": 2,
+        "sem": 2,
+        "str": 0,
+        "inf": 0
+      },
+      "id": "engLME_SuperlativeConstruction#engLME_SuperlativeConstruction_2"
+    }
+  ],
+  "edges": [
+    {
+      "weight": 0.3287160000290664,
+      "confidence": "low",
+      "source": "engLME_AdjectivalwithPARTNERConstruction#engLME_AdjectivalwithPARTNERConstruction_3",
+      "target": "engLME_AdjectiveConstruction#engLME_AdjectiveConstruction_1"
+    },
+    {
+      "weight": 0.3608210084333227,
+      "confidence": "low",
+      "source": "engLME_AdjectivalwithPARTNERConstruction#engLME_AdjectivalwithPARTNERConstruction_3",
+      "target": "engLME_GeneralPostmodifierofAdjectiveConstruction#engLME_GeneralPostmodifierofAdjectiveConstruction"
+    },
+    {
+      "weight": 0.31357409157124094,
+      "confidence": "low",
+      "source": "engLME_AdjectivalwithPARTNERConstruction#engLME_AdjectivalwithPARTNERConstruction_3",
+      "target": "engLME_MoreThanComparisonConstructiontype1#engLME_MoreThanComparisonConstructiontype1_1"
+    },
+    {
+      "weight": 0.32774835551653553,
+      "confidence": "low",
+      "source": "engLME_AdjectivalwithPARTNERConstruction#engLME_AdjectivalwithPARTNERConstruction_3",
+      "target": "engLME_PremodifierofAdjectiveConstruction#engLME_PremodifierofAdjectiveConstruction"
+    },
+    {
+      "weight": 0.7250927322938193,
+      "confidence": "high",
+      "source": "engLME_AdjectivalwithPARTNERConstruction#engLME_AdjectivalwithPARTNERConstruction",
+      "target": "engLME_AdjectiveConstruction#engLME_AdjectiveConstruction"
+    },
+    {
+      "weight": 0.44531718109286456,
+      "confidence": "low",
+      "source": "engLME_AdjectivalwithPARTNERConstruction#engLME_AdjectivalwithPARTNERConstruction",
+      "target": "engLME_GeneralPostmodifierofAdjectiveConstruction#engLME_GeneralPostmodifierofAdjectiveConstruction"
+    },
+    {
+      "weight": 0.3154761904761905,
+      "confidence": "low",
+      "source": "engLME_AdjectivalwithPARTNERConstruction#engLME_AdjectivalwithPARTNERConstruction",
+      "target": "engLME_MoreThanComparisonConstructiontype1#engLME_MoreThanComparisonConstructiontype1_2"
+    },
+    {
+      "weight": 0.3330668856716231,
+      "confidence": "low",
+      "source": "engLME_AdjectivalwithPARTNERConstruction#engLME_AdjectivalwithPARTNERConstruction",
+      "target": "engLME_MoreThanComparisonConstructiontype2#engLME_MoreThanComparisonConstructiontype2_1"
+    },
+    {
+      "weight": 0.3330668856716231,
+      "confidence": "low",
+      "source": "engLME_AdjectivalwithPARTNERConstruction#engLME_AdjectivalwithPARTNERConstruction",
+      "target": "engLME_MoreThanComparisonConstructiontype3#engLME_MoreThanComparisonConstructiontype3_1"
+    },
+    {
+      "weight": 0.49162414523193154,
+      "confidence": "low",
+      "source": "engLME_AdjectivalwithPARTNERConstruction#engLME_AdjectivalwithPARTNERConstruction",
+      "target": "engLME_MostLeastConstruction#engLME_MostLeastConstruction"
+    },
+    {
+      "weight": 0.3330668856716231,
+      "confidence": "low",
+      "source": "engLME_AdjectivalwithPARTNERConstruction#engLME_AdjectivalwithPARTNERConstruction",
+      "target": "engLME_PremodifierofAdjectiveConstruction#engLME_PremodifierofAdjectiveConstruction"
+    },
+    {
+      "weight": 0.49162414523193154,
+      "confidence": "low",
+      "source": "engLME_AdjectivalwithPARTNERConstruction#engLME_AdjectivalwithPARTNERConstruction",
+      "target": "engLME_SuperlativeConstruction#engLME_SuperlativeConstruction"
+    },
+    {
+      "weight": 0.31307186851464186,
+      "confidence": "low",
+      "source": "engLME_AdjectivalwithPARTNERConstruction#engLME_AdjectivalwithPARTNERConstruction",
+      "target": "engLME_SuperlativeConstruction#engLME_SuperlativeConstruction_1"
+    },
+    {
+      "weight": 1.0,
+      "confidence": "high",
+      "source": "engLME_AdjectivalwithPARTNERConstruction#engLME_AdjectivalwithPARTNERConstruction_1",
+      "target": "engLME_AdjectiveConstruction#engLME_AdjectiveConstruction_2"
+    },
+    {
+      "weight": 0.46427669529663684,
+      "confidence": "low",
+      "source": "engLME_AdjectivalwithPARTNERConstruction#engLME_AdjectivalwithPARTNERConstruction_1",
+      "target": "engLME_MostLeastConstruction#engLME_MostLeastConstruction_2"
+    },
+    {
+      "weight": 0.46427669529663684,
+      "confidence": "low",
+      "source": "engLME_AdjectivalwithPARTNERConstruction#engLME_AdjectivalwithPARTNERConstruction_1",
+      "target": "engLME_SuperlativeConstruction#engLME_SuperlativeConstruction_2"
+    },
+    {
+      "weight": 0.6100467650459882,
+      "confidence": "medium",
+      "source": "engLME_AdjectivalwithPARTNERConstruction#engLME_AdjectivalwithPARTNERConstruction_2",
+      "target": "engLME_AdjectiveConstruction#engLME_AdjectiveConstruction_1"
+    },
+    {
+      "weight": 1.0,
+      "confidence": "high",
+      "source": "engLME_AdjectivalwithPARTNERConstruction#engLME_AdjectivalwithPARTNERConstruction_2",
+      "target": "engLME_GeneralPostmodifierofAdjectiveConstruction#engLME_GeneralPostmodifierofAdjectiveConstruction_1"
+    },
+    {
+      "weight": 0.7250927322938193,
+      "confidence": "high",
+      "source": "engLME_AdjectivalwithPARTNERConstruction#engLME_AdjectivalwithPARTNERConstruction_2",
+      "target": "engLME_MoreThanComparisonConstructiontype1#engLME_MoreThanComparisonConstructiontype1_2"
+    },
+    {
+      "weight": 0.32652597374990366,
+      "confidence": "low",
+      "source": "engLME_AdjectivalwithPARTNERConstruction#engLME_AdjectivalwithPARTNERConstruction_2",
+      "target": "engLME_MoreThanComparisonConstructiontype2#engLME_MoreThanComparisonConstructiontype2_1"
+    },
+    {
+      "weight": 0.32652597374990366,
+      "confidence": "low",
+      "source": "engLME_AdjectivalwithPARTNERConstruction#engLME_AdjectivalwithPARTNERConstruction_2",
+      "target": "engLME_MoreThanComparisonConstructiontype3#engLME_MoreThanComparisonConstructiontype3_1"
+    },
+    {
+      "weight": 0.36845730027548207,
+      "confidence": "low",
+      "source": "engLME_AdjectivalwithPARTNERConstruction#engLME_AdjectivalwithPARTNERConstruction_2",
+      "target": "engLME_MostLeastConstruction#engLME_MostLeastConstruction_1"
+    },
+    {
+      "weight": 0.7443623734152918,
+      "confidence": "high",
+      "source": "engLME_AdjectivalwithPARTNERConstruction#engLME_AdjectivalwithPARTNERConstruction_2",
+      "target": "engLME_PremodifierofAdjectiveConstruction#engLME_PremodifierofAdjectiveConstruction_2"
+    },
+    {
+      "weight": 0.393022945769824,
+      "confidence": "low",
+      "source": "engLME_AdjectivalwithPARTNERConstruction#engLME_AdjectivalwithPARTNERConstruction_2",
+      "target": "engLME_SuperlativeConstruction#engLME_SuperlativeConstruction_1"
+    },
+    {
+      "weight": 0.4068817272381392,
+      "confidence": "low",
+      "source": "engLME_AdjectiveConstruction#engLME_AdjectiveConstruction_1",
+      "target": "engLME_GeneralPostmodifierofAdjectiveConstruction#engLME_GeneralPostmodifierofAdjectiveConstruction"
+    },
+    {
+      "weight": 0.6100467650459882,
+      "confidence": "medium",
+      "source": "engLME_AdjectiveConstruction#engLME_AdjectiveConstruction_1",
+      "target": "engLME_GeneralPostmodifierofAdjectiveConstruction#engLME_GeneralPostmodifierofAdjectiveConstruction_1"
+    },
+    {
+      "weight": 0.3497205306933857,
+      "confidence": "low",
+      "source": "engLME_AdjectiveConstruction#engLME_AdjectiveConstruction_1",
+      "target": "engLME_MoreThanComparisonConstructiontype1#engLME_MoreThanComparisonConstructiontype1_1"
+    },
+    {
+      "weight": 0.5676107833766484,
+      "confidence": "medium",
+      "source": "engLME_AdjectiveConstruction#engLME_AdjectiveConstruction_1",
+      "target": "engLME_MoreThanComparisonConstructiontype1#engLME_MoreThanComparisonConstructiontype1_2"
+    },
+    {
+      "weight": 0.42922369578841024,
+      "confidence": "low",
+      "source": "engLME_AdjectiveConstruction#engLME_AdjectiveConstruction_1",
+      "target": "engLME_MoreThanComparisonConstructiontype2#engLME_MoreThanComparisonConstructiontype2_1"
+    },
+    {
+      "weight": 0.42922369578841024,
+      "confidence": "low",
+      "source": "engLME_AdjectiveConstruction#engLME_AdjectiveConstruction_1",
+      "target": "engLME_MoreThanComparisonConstructiontype3#engLME_MoreThanComparisonConstructiontype3_1"
+    },
+    {
+      "weight": 0.4891402273751695,
+      "confidence": "low",
+      "source": "engLME_AdjectiveConstruction#engLME_AdjectiveConstruction_1",
+      "target": "engLME_MostLeastConstruction#engLME_MostLeastConstruction_1"
+    },
+    {
+      "weight": 0.42922369578841024,
+      "confidence": "low",
+      "source": "engLME_AdjectiveConstruction#engLME_AdjectiveConstruction_1",
+      "target": "engLME_PremodifierofAdjectiveConstruction#engLME_PremodifierofAdjectiveConstruction"
+    },
+    {
+      "weight": 0.7932636213753954,
+      "confidence": "high",
+      "source": "engLME_AdjectiveConstruction#engLME_AdjectiveConstruction_1",
+      "target": "engLME_PremodifierofAdjectiveConstruction#engLME_PremodifierofAdjectiveConstruction_2"
+    },
+    {
+      "weight": 0.530756386283664,
+      "confidence": "medium",
+      "source": "engLME_AdjectiveConstruction#engLME_AdjectiveConstruction_1",
+      "target": "engLME_SuperlativeConstruction#engLME_SuperlativeConstruction_1"
+    },
+    {
+      "weight": 0.32698377674692736,
+      "confidence": "low",
+      "source": "engLME_AdjectiveConstruction#engLME_AdjectiveConstruction",
+      "target": "engLME_GeneralPostmodifierofAdjectiveConstruction#engLME_GeneralPostmodifierofAdjectiveConstruction"
+    },
+    {
+      "weight": 0.34261167168775863,
+      "confidence": "low",
+      "source": "engLME_AdjectiveConstruction#engLME_AdjectiveConstruction",
+      "target": "engLME_MoreThanComparisonConstructiontype1#engLME_MoreThanComparisonConstructiontype1_2"
+    },
+    {
+      "weight": 0.361881312809231,
+      "confidence": "low",
+      "source": "engLME_AdjectiveConstruction#engLME_AdjectiveConstruction",
+      "target": "engLME_MoreThanComparisonConstructiontype2#engLME_MoreThanComparisonConstructiontype2_1"
+    },
+    {
+      "weight": 0.361881312809231,
+      "confidence": "low",
+      "source": "engLME_AdjectiveConstruction#engLME_AdjectiveConstruction",
+      "target": "engLME_MoreThanComparisonConstructiontype3#engLME_MoreThanComparisonConstructiontype3_1"
+    },
+    {
+      "weight": 0.6458290199722011,
+      "confidence": "medium",
+      "source": "engLME_AdjectiveConstruction#engLME_AdjectiveConstruction",
+      "target": "engLME_MostLeastConstruction#engLME_MostLeastConstruction"
+    },
+    {
+      "weight": 0.361881312809231,
+      "confidence": "low",
+      "source": "engLME_AdjectiveConstruction#engLME_AdjectiveConstruction",
+      "target": "engLME_PremodifierofAdjectiveConstruction#engLME_PremodifierofAdjectiveConstruction"
+    },
+    {
+      "weight": 0.6458290199722011,
+      "confidence": "medium",
+      "source": "engLME_AdjectiveConstruction#engLME_AdjectiveConstruction",
+      "target": "engLME_SuperlativeConstruction#engLME_SuperlativeConstruction"
+    },
+    {
+      "weight": 0.31738692902810095,
+      "confidence": "low",
+      "source": "engLME_AdjectiveConstruction#engLME_AdjectiveConstruction",
+      "target": "engLME_SuperlativeConstruction#engLME_SuperlativeConstruction_1"
+    },
+    {
+      "weight": 0.46427669529663684,
+      "confidence": "low",
+      "source": "engLME_AdjectiveConstruction#engLME_AdjectiveConstruction_2",
+      "target": "engLME_MostLeastConstruction#engLME_MostLeastConstruction_2"
+    },
+    {
+      "weight": 0.46427669529663684,
+      "confidence": "low",
+      "source": "engLME_AdjectiveConstruction#engLME_AdjectiveConstruction_2",
+      "target": "engLME_SuperlativeConstruction#engLME_SuperlativeConstruction_2"
+    },
+    {
+      "weight": 0.3356422816848107,
+      "confidence": "low",
+      "source": "engLME_ComparativeConstruction#engLME_ComparativeConstruction_1",
+      "target": "engLME_MoreThanComparisonConstructiontype1#engLME_MoreThanComparisonConstructiontype1_1"
+    },
+    {
+      "weight": 1.0,
+      "confidence": "high",
+      "source": "engLME_ComparativeConstruction#engLME_ComparativeConstruction_3",
+      "target": "engLME_MoreThanComparisonConstructiontype1#engLME_MoreThanComparisonConstructiontype1_4"
+    },
+    {
+      "weight": 1.0,
+      "confidence": "high",
+      "source": "engLME_ComparativeConstruction#engLME_ComparativeConstruction_3",
+      "target": "engLME_MoreThanComparisonConstructiontype2#engLME_MoreThanComparisonConstructiontype2_3"
+    },
+    {
+      "weight": 1.0,
+      "confidence": "high",
+      "source": "engLME_ComparativeConstruction#engLME_ComparativeConstruction_3",
+      "target": "engLME_MoreThanComparisonConstructiontype3#engLME_MoreThanComparisonConstructiontype3_3"
+    },
+    {
+      "weight": 0.606562612162344,
+      "confidence": "medium",
+      "source": "engLME_ComparativeConstruction#engLME_ComparativeConstruction",
+      "target": "engLME_MoreThanComparisonConstructiontype1#engLME_MoreThanComparisonConstructiontype1"
+    },
+    {
+      "weight": 0.5835970699446222,
+      "confidence": "medium",
+      "source": "engLME_ComparativeConstruction#engLME_ComparativeConstruction",
+      "target": "engLME_MoreThanComparisonConstructiontype2#engLME_MoreThanComparisonConstructiontype2"
+    },
+    {
+      "weight": 0.732577260395516,
+      "confidence": "high",
+      "source": "engLME_ComparativeConstruction#engLME_ComparativeConstruction",
+      "target": "engLME_MoreThanComparisonConstructiontype3#engLME_MoreThanComparisonConstructiontype3"
+    },
+    {
+      "weight": 0.5205263157894737,
+      "confidence": "medium",
+      "source": "engLME_ComparativeConstruction#engLME_ComparativeConstruction_2",
+      "target": "engLME_MoreThanComparisonConstructiontype1#engLME_MoreThanComparisonConstructiontype1_3"
+    },
+    {
+      "weight": 0.5205263157894737,
+      "confidence": "medium",
+      "source": "engLME_ComparativeConstruction#engLME_ComparativeConstruction_2",
+      "target": "engLME_MoreThanComparisonConstructiontype2#engLME_MoreThanComparisonConstructiontype2_2"
+    },
+    {
+      "weight": 0.5205263157894737,
+      "confidence": "medium",
+      "source": "engLME_ComparativeConstruction#engLME_ComparativeConstruction_2",
+      "target": "engLME_MoreThanComparisonConstructiontype3#engLME_MoreThanComparisonConstructiontype3_2"
+    },
+    {
+      "weight": 1.0,
+      "confidence": "high",
+      "source": "engLME_ComparativeConstruction#engLME_ComparativeConstruction_4",
+      "target": "engLME_MoreThanComparisonConstructiontype1#engLME_MoreThanComparisonConstructiontype1_5"
+    },
+    {
+      "weight": 1.0,
+      "confidence": "high",
+      "source": "engLME_ComparativeConstruction#engLME_ComparativeConstruction_4",
+      "target": "engLME_MoreThanComparisonConstructiontype2#engLME_MoreThanComparisonConstructiontype2_4"
+    },
+    {
+      "weight": 1.0,
+      "confidence": "high",
+      "source": "engLME_ComparativeConstruction#engLME_ComparativeConstruction_4",
+      "target": "engLME_MoreThanComparisonConstructiontype3#engLME_MoreThanComparisonConstructiontype3_4"
+    },
+    {
+      "weight": 0.4146288592138323,
+      "confidence": "low",
+      "source": "engLME_GeneralPostmodifierofAdjectiveConstruction#engLME_GeneralPostmodifierofAdjectiveConstruction_2",
+      "target": "engLME_MoreThanComparisonConstructiontype1#engLME_MoreThanComparisonConstructiontype1_1"
+    },
+    {
+      "weight": 1.0,
+      "confidence": "high",
+      "source": "engLME_GeneralPostmodifierofAdjectiveConstruction#engLME_GeneralPostmodifierofAdjectiveConstruction_2",
+      "target": "engLME_PremodifierofAdjectiveConstruction#engLME_PremodifierofAdjectiveConstruction_1"
+    },
+    {
+      "weight": 0.3420195914822559,
+      "confidence": "low",
+      "source": "engLME_GeneralPostmodifierofAdjectiveConstruction#engLME_GeneralPostmodifierofAdjectiveConstruction",
+      "target": "engLME_MoreThanComparisonConstructiontype1#engLME_MoreThanComparisonConstructiontype1_1"
+    },
+    {
+      "weight": 0.30324794705167013,
+      "confidence": "low",
+      "source": "engLME_GeneralPostmodifierofAdjectiveConstruction#engLME_GeneralPostmodifierofAdjectiveConstruction",
+      "target": "engLME_MoreThanComparisonConstructiontype1#engLME_MoreThanComparisonConstructiontype1_2"
+    },
+    {
+      "weight": 0.43749984644559714,
+      "confidence": "low",
+      "source": "engLME_GeneralPostmodifierofAdjectiveConstruction#engLME_GeneralPostmodifierofAdjectiveConstruction",
+      "target": "engLME_MoreThanComparisonConstructiontype2#engLME_MoreThanComparisonConstructiontype2_1"
+    },
+    {
+      "weight": 0.43749984644559714,
+      "confidence": "low",
+      "source": "engLME_GeneralPostmodifierofAdjectiveConstruction#engLME_GeneralPostmodifierofAdjectiveConstruction",
+      "target": "engLME_MoreThanComparisonConstructiontype3#engLME_MoreThanComparisonConstructiontype3_1"
+    },
+    {
+      "weight": 0.3683539800476896,
+      "confidence": "low",
+      "source": "engLME_GeneralPostmodifierofAdjectiveConstruction#engLME_GeneralPostmodifierofAdjectiveConstruction",
+      "target": "engLME_MostLeastConstruction#engLME_MostLeastConstruction_1"
+    },
+    {
+      "weight": 0.782365647311398,
+      "confidence": "high",
+      "source": "engLME_GeneralPostmodifierofAdjectiveConstruction#engLME_GeneralPostmodifierofAdjectiveConstruction",
+      "target": "engLME_PremodifierofAdjectiveConstruction#engLME_PremodifierofAdjectiveConstruction"
+    },
+    {
+      "weight": 0.3023669204180961,
+      "confidence": "low",
+      "source": "engLME_GeneralPostmodifierofAdjectiveConstruction#engLME_GeneralPostmodifierofAdjectiveConstruction",
+      "target": "engLME_PremodifierofAdjectiveConstruction#engLME_PremodifierofAdjectiveConstruction_2"
+    },
+    {
+      "weight": 0.38034832532689045,
+      "confidence": "low",
+      "source": "engLME_GeneralPostmodifierofAdjectiveConstruction#engLME_GeneralPostmodifierofAdjectiveConstruction",
+      "target": "engLME_SuperlativeConstruction#engLME_SuperlativeConstruction_1"
+    },
+    {
+      "weight": 0.7250927322938193,
+      "confidence": "high",
+      "source": "engLME_GeneralPostmodifierofAdjectiveConstruction#engLME_GeneralPostmodifierofAdjectiveConstruction_1",
+      "target": "engLME_MoreThanComparisonConstructiontype1#engLME_MoreThanComparisonConstructiontype1_2"
+    },
+    {
+      "weight": 0.32652597374990366,
+      "confidence": "low",
+      "source": "engLME_GeneralPostmodifierofAdjectiveConstruction#engLME_GeneralPostmodifierofAdjectiveConstruction_1",
+      "target": "engLME_MoreThanComparisonConstructiontype2#engLME_MoreThanComparisonConstructiontype2_1"
+    },
+    {
+      "weight": 0.32652597374990366,
+      "confidence": "low",
+      "source": "engLME_GeneralPostmodifierofAdjectiveConstruction#engLME_GeneralPostmodifierofAdjectiveConstruction_1",
+      "target": "engLME_MoreThanComparisonConstructiontype3#engLME_MoreThanComparisonConstructiontype3_1"
+    },
+    {
+      "weight": 0.36845730027548207,
+      "confidence": "low",
+      "source": "engLME_GeneralPostmodifierofAdjectiveConstruction#engLME_GeneralPostmodifierofAdjectiveConstruction_1",
+      "target": "engLME_MostLeastConstruction#engLME_MostLeastConstruction_1"
+    },
+    {
+      "weight": 0.7443623734152918,
+      "confidence": "high",
+      "source": "engLME_GeneralPostmodifierofAdjectiveConstruction#engLME_GeneralPostmodifierofAdjectiveConstruction_1",
+      "target": "engLME_PremodifierofAdjectiveConstruction#engLME_PremodifierofAdjectiveConstruction_2"
+    },
+    {
+      "weight": 0.393022945769824,
+      "confidence": "low",
+      "source": "engLME_GeneralPostmodifierofAdjectiveConstruction#engLME_GeneralPostmodifierofAdjectiveConstruction_1",
+      "target": "engLME_SuperlativeConstruction#engLME_SuperlativeConstruction_1"
+    },
+    {
+      "weight": 0.48572003588351853,
+      "confidence": "low",
+      "source": "engLME_MoreThanComparisonConstructiontype1#engLME_MoreThanComparisonConstructiontype1_1",
+      "target": "engLME_MostLeastConstruction#engLME_MostLeastConstruction_1"
+    },
+    {
+      "weight": 0.3380038441894425,
+      "confidence": "low",
+      "source": "engLME_MoreThanComparisonConstructiontype1#engLME_MoreThanComparisonConstructiontype1_1",
+      "target": "engLME_PremodifierofAdjectiveConstruction#engLME_PremodifierofAdjectiveConstruction"
+    },
+    {
+      "weight": 0.4146288592138323,
+      "confidence": "low",
+      "source": "engLME_MoreThanComparisonConstructiontype1#engLME_MoreThanComparisonConstructiontype1_1",
+      "target": "engLME_PremodifierofAdjectiveConstruction#engLME_PremodifierofAdjectiveConstruction_1"
+    },
+    {
+      "weight": 0.3345697234477512,
+      "confidence": "low",
+      "source": "engLME_MoreThanComparisonConstructiontype1#engLME_MoreThanComparisonConstructiontype1_1",
+      "target": "engLME_SuperlativeConstruction#engLME_SuperlativeConstruction_1"
+    },
+    {
+      "weight": 0.47592402852876603,
+      "confidence": "low",
+      "source": "engLME_MoreThanComparisonConstructiontype1#engLME_MoreThanComparisonConstructiontype1_2",
+      "target": "engLME_MoreThanComparisonConstructiontype2#engLME_MoreThanComparisonConstructiontype2_1"
+    },
+    {
+      "weight": 0.47592402852876603,
+      "confidence": "low",
+      "source": "engLME_MoreThanComparisonConstructiontype1#engLME_MoreThanComparisonConstructiontype1_2",
+      "target": "engLME_MoreThanComparisonConstructiontype3#engLME_MoreThanComparisonConstructiontype3_1"
+    },
+    {
+      "weight": 0.4351677849701565,
+      "confidence": "low",
+      "source": "engLME_MoreThanComparisonConstructiontype1#engLME_MoreThanComparisonConstructiontype1_2",
+      "target": "engLME_MostLeastConstruction#engLME_MostLeastConstruction_1"
+    },
+    {
+      "weight": 0.3330668856716231,
+      "confidence": "low",
+      "source": "engLME_MoreThanComparisonConstructiontype1#engLME_MoreThanComparisonConstructiontype1_2",
+      "target": "engLME_PremodifierofAdjectiveConstruction#engLME_PremodifierofAdjectiveConstruction"
+    },
+    {
+      "weight": 0.675924028528766,
+      "confidence": "medium",
+      "source": "engLME_MoreThanComparisonConstructiontype1#engLME_MoreThanComparisonConstructiontype1_2",
+      "target": "engLME_PremodifierofAdjectiveConstruction#engLME_PremodifierofAdjectiveConstruction_2"
+    },
+    {
+      "weight": 0.4522277956307671,
+      "confidence": "low",
+      "source": "engLME_MoreThanComparisonConstructiontype1#engLME_MoreThanComparisonConstructiontype1_2",
+      "target": "engLME_SuperlativeConstruction#engLME_SuperlativeConstruction_1"
+    },
+    {
+      "weight": 0.7261335084333227,
+      "confidence": "high",
+      "source": "engLME_MoreThanComparisonConstructiontype1#engLME_MoreThanComparisonConstructiontype1",
+      "target": "engLME_MoreThanComparisonConstructiontype2#engLME_MoreThanComparisonConstructiontype2"
+    },
+    {
+      "weight": 0.5829724223108167,
+      "confidence": "medium",
+      "source": "engLME_MoreThanComparisonConstructiontype1#engLME_MoreThanComparisonConstructiontype1",
+      "target": "engLME_MoreThanComparisonConstructiontype3#engLME_MoreThanComparisonConstructiontype3"
+    },
+    {
+      "weight": 0.3139713462711605,
+      "confidence": "low",
+      "source": "engLME_MoreThanComparisonConstructiontype1#engLME_MoreThanComparisonConstructiontype1_3",
+      "target": "engLME_MoreThanComparisonConstructiontype2#engLME_MoreThanComparisonConstructiontype2"
+    },
+    {
+      "weight": 1.0,
+      "confidence": "high",
+      "source": "engLME_MoreThanComparisonConstructiontype1#engLME_MoreThanComparisonConstructiontype1_3",
+      "target": "engLME_MoreThanComparisonConstructiontype2#engLME_MoreThanComparisonConstructiontype2_2"
+    },
+    {
+      "weight": 0.31126700237478866,
+      "confidence": "low",
+      "source": "engLME_MoreThanComparisonConstructiontype1#engLME_MoreThanComparisonConstructiontype1_3",
+      "target": "engLME_MoreThanComparisonConstructiontype3#engLME_MoreThanComparisonConstructiontype3"
+    },
+    {
+      "weight": 1.0,
+      "confidence": "high",
+      "source": "engLME_MoreThanComparisonConstructiontype1#engLME_MoreThanComparisonConstructiontype1_3",
+      "target": "engLME_MoreThanComparisonConstructiontype3#engLME_MoreThanComparisonConstructiontype3_2"
+    },
+    {
+      "weight": 1.0,
+      "confidence": "high",
+      "source": "engLME_MoreThanComparisonConstructiontype1#engLME_MoreThanComparisonConstructiontype1_4",
+      "target": "engLME_MoreThanComparisonConstructiontype2#engLME_MoreThanComparisonConstructiontype2_3"
+    },
+    {
+      "weight": 1.0,
+      "confidence": "high",
+      "source": "engLME_MoreThanComparisonConstructiontype1#engLME_MoreThanComparisonConstructiontype1_4",
+      "target": "engLME_MoreThanComparisonConstructiontype3#engLME_MoreThanComparisonConstructiontype3_3"
+    },
+    {
+      "weight": 1.0,
+      "confidence": "high",
+      "source": "engLME_MoreThanComparisonConstructiontype1#engLME_MoreThanComparisonConstructiontype1_5",
+      "target": "engLME_MoreThanComparisonConstructiontype2#engLME_MoreThanComparisonConstructiontype2_4"
+    },
+    {
+      "weight": 1.0,
+      "confidence": "high",
+      "source": "engLME_MoreThanComparisonConstructiontype1#engLME_MoreThanComparisonConstructiontype1_5",
+      "target": "engLME_MoreThanComparisonConstructiontype3#engLME_MoreThanComparisonConstructiontype3_4"
+    },
+    {
+      "weight": 1.0,
+      "confidence": "high",
+      "source": "engLME_MoreThanComparisonConstructiontype2#engLME_MoreThanComparisonConstructiontype2_1",
+      "target": "engLME_MoreThanComparisonConstructiontype3#engLME_MoreThanComparisonConstructiontype3_1"
+    },
+    {
+      "weight": 0.36930226039551584,
+      "confidence": "low",
+      "source": "engLME_MoreThanComparisonConstructiontype2#engLME_MoreThanComparisonConstructiontype2_1",
+      "target": "engLME_MostLeastConstruction#engLME_MostLeastConstruction_1"
+    },
+    {
+      "weight": 0.5,
+      "confidence": "medium",
+      "source": "engLME_MoreThanComparisonConstructiontype2#engLME_MoreThanComparisonConstructiontype2_1",
+      "target": "engLME_PremodifierofAdjectiveConstruction#engLME_PremodifierofAdjectiveConstruction"
+    },
+    {
+      "weight": 0.475,
+      "confidence": "low",
+      "source": "engLME_MoreThanComparisonConstructiontype2#engLME_MoreThanComparisonConstructiontype2_1",
+      "target": "engLME_PremodifierofAdjectiveConstruction#engLME_PremodifierofAdjectiveConstruction_2"
+    },
+    {
+      "weight": 0.3812517918008011,
+      "confidence": "low",
+      "source": "engLME_MoreThanComparisonConstructiontype2#engLME_MoreThanComparisonConstructiontype2_1",
+      "target": "engLME_SuperlativeConstruction#engLME_SuperlativeConstruction_1"
+    },
+    {
+      "weight": 1.0,
+      "confidence": "high",
+      "source": "engLME_MoreThanComparisonConstructiontype2#engLME_MoreThanComparisonConstructiontype2_4",
+      "target": "engLME_MoreThanComparisonConstructiontype3#engLME_MoreThanComparisonConstructiontype3_4"
+    },
+    {
+      "weight": 0.3139713462711605,
+      "confidence": "low",
+      "source": "engLME_MoreThanComparisonConstructiontype2#engLME_MoreThanComparisonConstructiontype2_2",
+      "target": "engLME_MoreThanComparisonConstructiontype2#engLME_MoreThanComparisonConstructiontype2"
+    },
+    {
+      "weight": 0.31126700237478866,
+      "confidence": "low",
+      "source": "engLME_MoreThanComparisonConstructiontype2#engLME_MoreThanComparisonConstructiontype2_2",
+      "target": "engLME_MoreThanComparisonConstructiontype3#engLME_MoreThanComparisonConstructiontype3"
+    },
+    {
+      "weight": 1.0,
+      "confidence": "high",
+      "source": "engLME_MoreThanComparisonConstructiontype2#engLME_MoreThanComparisonConstructiontype2_2",
+      "target": "engLME_MoreThanComparisonConstructiontype3#engLME_MoreThanComparisonConstructiontype3_2"
+    },
+    {
+      "weight": 0.7901829819586654,
+      "confidence": "high",
+      "source": "engLME_MoreThanComparisonConstructiontype2#engLME_MoreThanComparisonConstructiontype2",
+      "target": "engLME_MoreThanComparisonConstructiontype3#engLME_MoreThanComparisonConstructiontype3"
+    },
+    {
+      "weight": 0.3139713462711605,
+      "confidence": "low",
+      "source": "engLME_MoreThanComparisonConstructiontype2#engLME_MoreThanComparisonConstructiontype2",
+      "target": "engLME_MoreThanComparisonConstructiontype3#engLME_MoreThanComparisonConstructiontype3_2"
+    },
+    {
+      "weight": 1.0,
+      "confidence": "high",
+      "source": "engLME_MoreThanComparisonConstructiontype2#engLME_MoreThanComparisonConstructiontype2_3",
+      "target": "engLME_MoreThanComparisonConstructiontype3#engLME_MoreThanComparisonConstructiontype3_3"
+    },
+    {
+      "weight": 0.36930226039551584,
+      "confidence": "low",
+      "source": "engLME_MoreThanComparisonConstructiontype3#engLME_MoreThanComparisonConstructiontype3_1",
+      "target": "engLME_MostLeastConstruction#engLME_MostLeastConstruction_1"
+    },
+    {
+      "weight": 0.5,
+      "confidence": "medium",
+      "source": "engLME_MoreThanComparisonConstructiontype3#engLME_MoreThanComparisonConstructiontype3_1",
+      "target": "engLME_PremodifierofAdjectiveConstruction#engLME_PremodifierofAdjectiveConstruction"
+    },
+    {
+      "weight": 0.475,
+      "confidence": "low",
+      "source": "engLME_MoreThanComparisonConstructiontype3#engLME_MoreThanComparisonConstructiontype3_1",
+      "target": "engLME_PremodifierofAdjectiveConstruction#engLME_PremodifierofAdjectiveConstruction_2"
+    },
+    {
+      "weight": 0.3812517918008011,
+      "confidence": "low",
+      "source": "engLME_MoreThanComparisonConstructiontype3#engLME_MoreThanComparisonConstructiontype3_1",
+      "target": "engLME_SuperlativeConstruction#engLME_SuperlativeConstruction_1"
+    },
+    {
+      "weight": 0.31126700237478866,
+      "confidence": "low",
+      "source": "engLME_MoreThanComparisonConstructiontype3#engLME_MoreThanComparisonConstructiontype3",
+      "target": "engLME_MoreThanComparisonConstructiontype3#engLME_MoreThanComparisonConstructiontype3_2"
+    },
+    {
+      "weight": 0.36930226039551584,
+      "confidence": "low",
+      "source": "engLME_MostLeastConstruction#engLME_MostLeastConstruction_1",
+      "target": "engLME_PremodifierofAdjectiveConstruction#engLME_PremodifierofAdjectiveConstruction"
+    },
+    {
+      "weight": 0.4274377975855985,
+      "confidence": "low",
+      "source": "engLME_MostLeastConstruction#engLME_MostLeastConstruction_1",
+      "target": "engLME_PremodifierofAdjectiveConstruction#engLME_PremodifierofAdjectiveConstruction_2"
+    },
+    {
+      "weight": 0.6920088985352111,
+      "confidence": "medium",
+      "source": "engLME_MostLeastConstruction#engLME_MostLeastConstruction_1",
+      "target": "engLME_SuperlativeConstruction#engLME_SuperlativeConstruction_1"
+    },
+    {
+      "weight": 1.0,
+      "confidence": "high",
+      "source": "engLME_MostLeastConstruction#engLME_MostLeastConstruction",
+      "target": "engLME_SuperlativeConstruction#engLME_SuperlativeConstruction"
+    },
+    {
+      "weight": 1.0,
+      "confidence": "high",
+      "source": "engLME_MostLeastConstruction#engLME_MostLeastConstruction_2",
+      "target": "engLME_SuperlativeConstruction#engLME_SuperlativeConstruction_2"
+    },
+    {
+      "weight": 0.33214285714285713,
+      "confidence": "low",
+      "source": "engLME_PremodifierofAdjectiveConstruction#engLME_PremodifierofAdjectiveConstruction_2",
+      "target": "engLME_PremodifierofAdjectiveConstruction#engLME_PremodifierofAdjectiveConstruction"
+    },
+    {
+      "weight": 0.4599750182371333,
+      "confidence": "low",
+      "source": "engLME_PremodifierofAdjectiveConstruction#engLME_PremodifierofAdjectiveConstruction_2",
+      "target": "engLME_SuperlativeConstruction#engLME_SuperlativeConstruction_1"
+    },
+    {
+      "weight": 0.3812517918008011,
+      "confidence": "low",
+      "source": "engLME_PremodifierofAdjectiveConstruction#engLME_PremodifierofAdjectiveConstruction",
+      "target": "engLME_SuperlativeConstruction#engLME_SuperlativeConstruction_1"
+    }
+  ]
+}

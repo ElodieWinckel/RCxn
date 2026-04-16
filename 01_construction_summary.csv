@@ -1,0 +1,11 @@
+construction,slot_count,total_ccs,avg_ccs_per_slot,cxn_count,sem_count,str_count,inf_count
+engLME_AdjectivalwithPARTNERConstruction,4,75,18.75,43,3,25,4
+engLME_AdjectiveConstruction,3,35,11.666666666666666,27,5,0,3
+engLME_ComparativeConstruction,5,32,6.4,6,17,7,2
+engLME_GeneralPostmodifierofAdjectiveConstruction,3,43,14.333333333333334,24,6,5,8
+engLME_MoreThanComparisonConstructiontype1,6,126,21.0,45,48,19,14
+engLME_MoreThanComparisonConstructiontype2,5,62,12.4,17,33,6,6
+engLME_MoreThanComparisonConstructiontype3,5,53,10.6,16,26,5,6
+engLME_MostLeastConstruction,3,129,43.0,72,24,11,22
+engLME_PremodifierofAdjectiveConstruction,3,41,13.666666666666666,27,7,0,7
+engLME_SuperlativeConstruction,3,108,36.0,66,22,10,10

@@ -1,0 +1,28 @@
+# Core dependencies for Comparative Concepts Analysis
+
+# RDF/Linked Data processing
+rdflib>=6.0.0
+
+# Data analysis and manipulation
+pandas>=1.3.0
+numpy>=1.21.0
+
+# Network analysis and graph algorithms
+networkx>=2.6.0
+
+# Scientific computing and metrics
+scipy>=1.7.0
+scikit-learn>=1.0.0
+
+# Visualization - Static
+matplotlib>=3.4.0
+seaborn>=0.11.0
+
+# Visualization - Interactive (optional but recommended)
+plotly>=5.0.0
+
+# Graph export formats
+lxml>=4.9.0  # For GraphML export
+
+# Optional: Community detection improvements
+python-louvain>=0.15  # For more robust community detection
