@@ -80,6 +80,11 @@ The app will start locally, typically at `http://127.0.0.1:5000/`.
 ## Support
 For questions or support, contact the editor via email.
 
+## License
+This project is licensed under the **Creative Commons Attribution 4.0 International (CC BY 4.0)** license.
+You may use, share, and adapt the material as long as appropriate credit is given.
+If you reuse the data or code, please cite the project and its authors accordingly.
+
 ## Citation
 Please cite as:
 

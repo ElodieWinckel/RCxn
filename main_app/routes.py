@@ -7,3 +7,7 @@ main_blueprint = Blueprint('main', __name__, template_folder='../templates')
 @main_blueprint.route("/")
 def home():
     return render_template("index.html")
+
+@main_blueprint.route("/impressum")
+def impressum():
+    return render_template("impressum.html")
