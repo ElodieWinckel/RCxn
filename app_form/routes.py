@@ -203,6 +203,7 @@ def clean_name(name):
     clean = clean.replace("?", "")
     clean = clean.replace("!", "")
     clean = clean.replace(".", "")
+    clean = clean.replace(":", "")
     clean = clean.replace(",", "")
     clean = clean.replace("-", "")
     clean = clean.replace("[", "")
