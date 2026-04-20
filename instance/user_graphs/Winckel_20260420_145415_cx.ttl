@@ -1,0 +1,30 @@
+@prefix cx: <http://example.org/cx/> .
+@prefix dcterm: <http://purl.org/dc/terms/> .
+@prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
+@prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
+@prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+membr:Project_Winckel_2601131454_F2601131454 rsrch:basedOn cx:eng_AdjectivePhrase .
+
+cx:eng_AdjectivePhrase a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    rcxn:hasConstructionMeaning cx:eng_AdjectivePhrase_Meaning ;
+    rcxn:hasMetadata cx:eng_AdjectivePhrase_MD ;
+    rcxn:hasSlots cx:eng_AdjectivePhrase_slots ;
+    rcxn:hasTitle "Adjective Phrase" .
+
+cx:eng_AdjectivePhrase_1 a rcxn:SlotMandatory ;
+    rcxn:hasOtherSemanticContribution "Intensivierung (Frame)" .
+
+cx:eng_AdjectivePhrase_MD a rcxn:Metadata ;
+    dcterm:created "2026-04-20"^^xsd:date ;
+    rcxn:annotator membr:Winckel .
+
+cx:eng_AdjectivePhrase_Meaning a rcxn:ConstructionMeaning .
+
+cx:eng_AdjectivePhrase_slots a rdf:Seq ;
+    rdf:_1 cx:eng_AdjectivePhrase_1 .
+

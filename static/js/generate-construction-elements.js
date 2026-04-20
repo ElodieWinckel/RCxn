@@ -255,7 +255,7 @@ function generateFields() {
         });
         // Add "Other" option to the dropdown
         const semanticContributionOtherOption = document.createElement('option');
-        semanticContributionOtherOption.value = 'Other';
+        semanticContributionOtherOption.value = '';
         semanticContributionOtherOption.textContent = 'Other';
         semanticContributionSelect.appendChild(semanticContributionOtherOption);
         // Append the label and dropdown to the container
@@ -272,7 +272,7 @@ function generateFields() {
         elementDetails.appendChild(semanticContributionOtherInput);
         // Event listener for showing/hiding the "Other" input field based on selection
         semanticContributionSelect.addEventListener('change', function() {
-            if (semanticContributionSelect.value === 'Other') {
+            if (semanticContributionSelect.selectedIndex === semanticContributionSelect.options.length - 1) {
                 semanticContributionOtherInput.style.display = 'inline';  // Show the input field
             } else {
                 semanticContributionOtherInput.style.display = 'none';  // Hide the input field
