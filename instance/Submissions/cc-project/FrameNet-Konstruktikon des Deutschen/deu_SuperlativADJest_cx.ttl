@@ -13,14 +13,10 @@
 
 membr:Project_Winckel rsrch:hasResearchQuestion membr:Project_Winckel_2604130901 .
 
-<http://example.org/cx/SuperlativADJst_ADJ> a rcxn:Construction ;
+<http://example.org/cx/deu_SuperlativADJst_ADJ> a rcxn:Construction ;
     links:inheritsFrom <http://example.org/cx/deu_SuperlativADJest> ;
-    rcxn:hasMetadata <http://example.org/cx/SuperlativADJst_ADJ_MD> ;
+    rcxn:hasMetadata <http://example.org/cx/deu_SuperlativADJst_ADJ_MD> ;
     rcxn:hasTitle "Superlativ:ADJ-st_ADJ" .
-
-<http://example.org/cx/SuperlativADJst_ADJ_MD> a rcxn:Metadata ;
-    cx:annotator membr:Winckel ;
-    dcterm:created "2026-04-13"^^xsd:date .
 
 <http://example.org/cx/SuperlativART_ADJest> a rcxn:Construction ;
     links:inheritsFrom <http://example.org/cx/deu_SuperlativADJest> ;
@@ -128,7 +124,7 @@ membr:Project_Winckel_2604130901 a rsrch:Project ;
     RDFS:comment """Original entry by Benjamin Fischer: „Superlativ:ADJ-(e)st“, in: FrameNet-Konstruktikon des Deutschen, https://framenet-constructicon.hhu.de/constructicon/construction?id=4357, abgerufen am 13.04.2026.""" ,
     """Imo, Wolfgang (2016): Grammatik. Eine Einführung, Stuttgart: J.B. Metzler.""" ;
     lg:partOfLanguage lg:deu ;
-    links:inheritedBy <http://example.org/cx/SuperlativADJst_ADJ>,
+    links:inheritedBy <http://example.org/cx/deu_SuperlativADJst_ADJ>,
         <http://example.org/cx/SuperlativART_ADJest>,
         <http://example.org/cx/Superlativam_ADJsten> ;
     links:inheritsFrom <http://example.org/cx/SuperlativXst> ;

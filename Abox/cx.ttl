@@ -1216,15 +1216,6 @@ cx:Spanishtransitiveconstruction_MD a rcxn:Metadata ;
     dcterms:created "2024-11-25"^^xsd:date ;
     rcxn:annotator membr:FernandezSantos .
 
-cx:SuperlativADJst_ADJ a rcxn:Construction ;
-    links:inheritsFrom cx:deu_SuperlativADJest ;
-    rcxn:hasMetadata cx:SuperlativADJst_ADJ_MD ;
-    rcxn:hasTitle "Superlativ:ADJ-st_ADJ" .
-
-cx:SuperlativADJst_ADJ_MD a rcxn:Metadata ;
-    cx:annotator membr:Winckel ;
-    dcterms:created "2026-04-13"^^xsd:date .
-
 cx:SuperlativART_ADJest a rcxn:Construction ;
     links:inheritsFrom cx:deu_SuperlativADJest ;
     rcxn:hasMetadata cx:SuperlativART_ADJest_MD ;
@@ -1242,6 +1233,10 @@ cx:SuperlativXst a rcxn:Construction ;
 cx:SuperlativXst_MD a rcxn:Metadata ;
     cx:annotator membr:Winckel ;
     dcterms:created "2026-04-13"^^xsd:date .
+
+cx:Superlativ_KompositionADJstEINHEIT_MD a rcxn:Metadata ;
+    cx:annotator membr:Winckel ;
+    dcterms:created "2026-04-20"^^xsd:date .
 
 cx:Superlativam_ADJsten a rcxn:Construction ;
     links:inheritsFrom cx:deu_SuperlativADJest ;
@@ -1801,11 +1796,6 @@ cx:deu_Adjektivstamm_MD a rcxn:Metadata ;
     cx:annotator membr:Winckel ;
     dcterms:created "2026-04-13"^^xsd:date .
 
-cx:deu_Adverb a rcxn:Construction ;
-    lg:partOfLanguage lg:deu ;
-    rcxn:elementOf <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]> ;
-    rcxn:hasTitle "Adverb" .
-
 cx:deu_DefiniteArticle a rcxn:Construction ;
     lg:partOfLanguage lg:deu ;
     rcxn:elementOf cx:Idiomaticconstruction ;
@@ -1880,6 +1870,101 @@ cx:deu_SuperlativADJest_Sources a cx:Collection ;
 cx:deu_SuperlativADJest_slots a rdf_ns:Seq ;
     rdf_ns:_1 cx:deu_SuperlativADJest_1 ;
     rdf_ns:_2 cx:deu_SuperlativADJest_2 .
+
+cx:deu_SuperlativADJst_ADJ_1 a rcxn:SlotMandatory ;
+    rcxn:hasSlots cx:deu_SuperlativADJst_ADJ_1_slots .
+
+cx:deu_SuperlativADJst_ADJ_1_slots a rdf_ns:Seq ;
+    rdf_ns:_1 cx:deu_SuperlativADJst_ADJ_2 ;
+    rdf_ns:_2 cx:deu_SuperlativADJst_ADJ_3 .
+
+cx:deu_SuperlativADJst_ADJ_2 a rcxn:SlotMandatory ;
+    cx:WordOrder "Die Intensivierung wird stets vor der Dimension realisiert. " ;
+    rdfs:comment "Realisierbar sind steigerbare Adjektive in der Funktion einer Intensitätspartikel." ;
+    rcxn:hasOtherSemanticContribution "Intensivierung (Frame)" .
+
+cx:deu_SuperlativADJst_ADJ_3 a rcxn:SlotMandatory ;
+    cx:WordOrder "Das Suffix -st wird stets an die Intensivierung angehängt." ;
+    rcxn:hasOtherSemanticContribution "Extremwert (Frame)" ;
+    rcxn:hasSlotForm cx:deu_SuperlativADJst_ADJ_3_Form .
+
+cx:deu_SuperlativADJst_ADJ_3_Form a rcxn:SlotForm ;
+    rcxn:hasSurfaceForm "st" .
+
+cx:deu_SuperlativADJst_ADJ_4 a rcxn:SlotMandatory ;
+    rdfs:comment "Das Verglichene wird mit einer impliziten Vergleichsmenge hinsichtlich eines bestimmten Wertes einer durch die Dimension definierten Skala verglichen. Das Verglichene beschreibt stets die Entität / Handlung einer Entität, deren Eigenschaft im vollen Ausmaß zutrifft." ;
+    rcxn:hasOtherSemanticContribution "Entität (Frame)",
+        "Ereignis (Frame)" .
+
+cx:deu_SuperlativADJst_ADJ_5 a rcxn:SlotMandatory ;
+    rdfs:comment "Die Dimension beschreibt die Eigenschaft, die bezogen auf eine Entität / Handlung einer Entität in vollem Ausmaß zutrifft." ;
+    rcxn:hasOtherSemanticContribution "Gradierbare Attribute (Frame)" ;
+    rcxn:hasSlotForm cx:deu_SuperlativADJst_ADJ_5_Form .
+
+cx:deu_SuperlativADJst_ADJ_5_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:deu_Adjective,
+        cx:deu_Adverb .
+
+cx:deu_SuperlativADJst_ADJ_6 a rcxn:SlotOptional ;
+    rdfs:comment "Das Korrelierende Element so kann realisiert werden, um die Konstruktionsbedeutung zu verstärken bzw. hervorzuheben." ;
+    rcxn:hasOtherSemanticContribution "Intensivierung (Frame)" ;
+    rcxn:hasSlotForm cx:deu_SuperlativADJst_ADJ_6_Form .
+
+cx:deu_SuperlativADJst_ADJ_6_Form a rcxn:SlotForm ;
+    rcxn:hasSurfaceForm "so" .
+
+cx:deu_SuperlativADJst_ADJ_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "\" [Das]4 wird [übel]2[st]3 [geil]5 \", sagt Petra und schwenkt hinüber zu den Deos." ;
+    cx:hasText "\" Das wird übelst geil \", sagt Petra und schwenkt hinüber zu den Deos." ;
+    rdfs:comment "Berliner Zeitung, 08.07.2000" .
+
+cx:deu_SuperlativADJst_ADJ_Ex_B a cx:Example ;
+    cx:hasAnnotatedText "[Die Sitze, oder sagen wir besser Sessel]4, sind [extrem]2[st]3 [kommod]5." ;
+    cx:hasText "Die Sitze, oder sagen wir besser Sessel, sind extremst kommod." ;
+    rdfs:comment "Die Zeit, 06.10.2009, Nr. 41" .
+
+cx:deu_SuperlativADJst_ADJ_Ex_C a cx:Example ;
+    cx:hasAnnotatedText "[Die]4 waren [übel]2[st]3 [panisch]5..." ;
+    cx:hasText "Die waren übelst panisch..." ;
+    rdfs:comment "Die Zeit, 02.05.2002, Nr. 19" .
+
+cx:deu_SuperlativADJst_ADJ_Ex_D a cx:Example ;
+    cx:hasAnnotatedText "Seit 2015 sind sogar versuchter Besitz oder Erwerb von [höch]2[st]3 [bestimmt definiertem]5 [Posingmaterial]4 strafbar." ;
+    cx:hasText "Seit 2015 sind sogar versuchter Besitz oder Erwerb von höchst bestimmt definiertem Posingmaterial strafbar." ;
+    rdfs:comment "Die Zeit, 26.12.2017 (online)" .
+
+cx:deu_SuperlativADJst_ADJ_Ex_E a cx:Example ;
+    cx:hasAnnotatedText "Die Pferde jedenfalls spiegeln meine schlechte Laune deutlich: Sie verweigern die Mitarbeit. Oder [leisten]4 nur [äußer]2[st]3 [widerwillig]5 [Folge]4." ;
+    cx:hasText "Die Pferde jedenfalls spiegeln meine schlechte Laune deutlich: Sie verweigern die Mitarbeit. Oder leisten nur äußerst widerwillig Folge." ;
+    rdfs:comment "Die Zeit, 31.12.2017, Nr. 01" .
+
+cx:deu_SuperlativADJst_ADJ_Ex_F a cx:Example ;
+    cx:hasAnnotatedText "Warum muss die Moral [so]6 [extrem]2[st]3 [leicht]5 [sichtbar]4 sein?" ;
+    cx:hasText "Warum muss die Moral so extremst leicht sichtbar sein?" ;
+    rdfs:comment "Die Zeit, 14.06.2011 (online)" .
+
+cx:deu_SuperlativADJst_ADJ_MD a rcxn:Metadata ;
+    dcterms:created "2026-04-20"^^xsd:date ;
+    rcxn:annotator membr:Winckel .
+
+cx:deu_SuperlativADJst_ADJ_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning """Die Superlativ:ADJ-st_ADJ-Konstruktion gehört zu der Familie der Vergleichskonstruktionen und weist einem Wert die höchste Stufe auf einer Skala zu.\r
+\r
+Die Zuweisung erfolgt durch den Vergleich einer Entität / Handlung einer Entität mit einer impliziten Gesamtheit.\r
+\r
+Die Konstruktion besteht aus den internen Kern-Konstruktionselementen (Kern-KE) [Intensivierung]2 und [Dimension]5. Die [Dimension]5 gibt an, welche Eigenschaft in vollem Ausmaß vorliegt und benennt somit die Skala des Vergleichs, d.h. die Skala, auf der einem Wert die höchste Stufe zugewiesen wird. An die [Intensivierung]2 wird das Superlativmorphem [-st]3 angehangen. Die Eigenschaft, die im vollen Ausmaß vorliegt, wird selbst also nicht gesteigert. Stattdessen wird ein gesteigertes Adjektiv direkt vor der Eigenschaft realisiert und die superlative Bedeutung so auf die [Dimension]5 übertragen. Zusätzlich umfasst die Konstruktion das externe Kern-KE [Verglichenes]4 (die Entität oder Handlung einer Entität, der eine Eigenschaft in vollem Ausmaß zugewiesen wird).""" .
+
+cx:deu_SuperlativADJst_ADJ_slots a rdf_ns:Seq ;
+    rdf_ns:_1 cx:deu_SuperlativADJst_ADJ_1 ;
+    rdf_ns:_2 cx:deu_SuperlativADJst_ADJ_4 ;
+    rdf_ns:_3 cx:deu_SuperlativADJst_ADJ_5 ;
+    rdf_ns:_4 cx:deu_SuperlativADJst_ADJ_6 .
+
+cx:deu_Superlativ_KompositionADJstEINHEIT a rcxn:Construction ;
+    lg:partOfLanguage lg:deu ;
+    links:inheritsFrom cx:deu_SuperlativADJst_ADJ ;
+    rcxn:hasMetadata cx:Superlativ_KompositionADJstEINHEIT_MD ;
+    rcxn:hasTitle "Superlativ_Komposition:ADJ-st-EINHEIT" .
 
 cx:deu_schütteln a rcxn:Construction ;
     lg:partOfLanguage lg:deu ;
@@ -3229,11 +3314,11 @@ cx:Noun a rcxn:Construction ;
     rcxn:hasMetadata cx:Noun_MD ;
     rcxn:hasTitle "Noun" .
 
-cx:deu_Adjective a rcxn:Construction ;
+cx:deu_Adverb a rcxn:Construction ;
     lg:partOfLanguage lg:deu ;
-    rcxn:elementOf <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]>,
-        <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]> ;
-    rcxn:hasTitle "Adjective" .
+    rcxn:elementOf <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]>,
+        cx:deu_SuperlativADJst_ADJ ;
+    rcxn:hasTitle "Adverb" .
 
 cx:deu_Verb a rcxn:Construction ;
     lg:partOfLanguage lg:deu ;
@@ -3363,6 +3448,13 @@ cx:coolascolourconstruction a rcxn:Construction ;
     rcxn:hasSlots cx:coolascolourconstruction_slots ;
     rcxn:hasTitle "cool as colour construction" .
 
+cx:deu_Adjective a rcxn:Construction ;
+    lg:partOfLanguage lg:deu ;
+    rcxn:elementOf <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]>,
+        <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]>,
+        cx:deu_SuperlativADJst_ADJ ;
+    rcxn:hasTitle "Adjective" .
+
 cx:deu_Noun a rcxn:Construction ;
     lg:partOfLanguage lg:deu ;
     rcxn:elementOf cx:Idiomaticconstruction,
@@ -3484,6 +3576,23 @@ cx:coolasemotionconstruction a rcxn:Construction ;
     rcxn:hasSlots cx:coolasemotionconstruction_slots ;
     rcxn:hasTitle "cool as emotion construction" .
 
+cx:deu_SuperlativADJst_ADJ a rcxn:Construction ;
+    cx:hasExample cx:deu_SuperlativADJst_ADJ_Ex_A,
+        cx:deu_SuperlativADJst_ADJ_Ex_B,
+        cx:deu_SuperlativADJst_ADJ_Ex_C,
+        cx:deu_SuperlativADJst_ADJ_Ex_D,
+        cx:deu_SuperlativADJst_ADJ_Ex_E,
+        cx:deu_SuperlativADJst_ADJ_Ex_F ;
+    rdfs:comment "Die Konstruktion wird in der Literatur bzw. in Grammatiken auch thematisiert unter: 2. Steigerung, Absoluter Superlativ, Elativ, Komparation.",
+        "Original entry by Nina Böbel: „Superlativ:ADJ-st_ADJ“, in: FrameNet-Konstruktikon des Deutschen, https://framenet-constructicon.hhu.de/constructicon/construction?id=631, abgerufen am 20.04.2026." ;
+    lg:partOfLanguage lg:deu ;
+    links:inheritedBy cx:deu_Superlativ_KompositionADJstEINHEIT ;
+    links:inheritsFrom cx:deu_SuperlativADJest ;
+    rcxn:hasConstructionMeaning cx:deu_SuperlativADJst_ADJ_Meaning ;
+    rcxn:hasMetadata cx:deu_SuperlativADJst_ADJ_MD ;
+    rcxn:hasSlots cx:deu_SuperlativADJst_ADJ_slots ;
+    rcxn:hasTitle "Superlativ:ADJ-st_ADJ" .
+
 cx:eng_ThisclosetoVingconstruction a rcxn:Construction ;
     cx:hasExample cx:eng_ThisclosetoVingconstruction_Ex_A ;
     cx:usesGesture cx:SmallQuantityGestureConstruction ;
@@ -3509,9 +3618,9 @@ cx:deu_SuperlativADJest a rcxn:Construction ;
     rdfs:comment "Imo, Wolfgang (2016): Grammatik. Eine Einführung, Stuttgart: J.B. Metzler.",
         "Original entry by Benjamin Fischer: „Superlativ:ADJ-(e)st“, in: FrameNet-Konstruktikon des Deutschen, https://framenet-constructicon.hhu.de/constructicon/construction?id=4357, abgerufen am 13.04.2026." ;
     lg:partOfLanguage lg:deu ;
-    links:inheritedBy cx:SuperlativADJst_ADJ,
-        cx:SuperlativART_ADJest,
-        cx:Superlativam_ADJsten ;
+    links:inheritedBy cx:SuperlativART_ADJest,
+        cx:Superlativam_ADJsten,
+        cx:deu_SuperlativADJst_ADJ ;
     links:inheritsFrom cx:SuperlativXst ;
     rcxn:hasConstructionMeaning cx:deu_SuperlativADJest_Meaning ;
     rcxn:hasMetadata cx:deu_SuperlativADJest_MD ;
