@@ -769,9 +769,10 @@ def form_submit():
             )
         else: # Users can also enter the name of a construction that has not been implemented yet
             # When this happens, create a new construction entry, with title, annotator and creation date
-            cleaned_inherit_construction = clean_name(inherit_construction)
+            cleaned_inherit_construction = str(metalanguage_code) + "_" + clean_name(inherit_construction)
             metadata_inherit_construction = f"{cleaned_inherit_construction}_MD"
             g.add((cx[cleaned_inherit_construction], RDF.type, rcxn.Construction))
+            g.add((cx[cleaned_inherit_construction], lg.partOfLanguage, metalanguage_uri))
             g.add((cx[cleaned_inherit_construction], rcxn.hasMetadata, cx[metadata_inherit_construction]))
             g.add((cx[metadata_inherit_construction], RDF.type, rcxn.Metadata))
             g.add((cx[metadata_inherit_construction], cx.annotator, membr[user_name]))
@@ -794,9 +795,10 @@ def form_submit():
             )
         else:  # Users can also enter the name of a construction that has not been implemented yet
             # When this happens, create a new construction entry, with title, annotator and creation date
-            cleaned_inherit_construction = clean_name(inherit_construction)
+            cleaned_inherit_construction = str(metalanguage_code) + "_" + clean_name(inherit_construction)
             metadata_inherit_construction = f"{cleaned_inherit_construction}_MD"
             g.add((cx[cleaned_inherit_construction], RDF.type, rcxn.Construction))
+            g.add((cx[cleaned_inherit_construction], lg.partOfLanguage, metalanguage_uri))
             g.add((cx[cleaned_inherit_construction], rcxn.hasMetadata, cx[metadata_inherit_construction]))
             g.add((cx[metadata_inherit_construction], RDF.type, rcxn.Metadata))
             g.add((cx[metadata_inherit_construction], cx.annotator, membr[user_name]))
