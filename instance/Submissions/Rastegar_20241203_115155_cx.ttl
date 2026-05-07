@@ -9,89 +9,89 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-cx:Idiomaticconstructions a rcxn:Construction ;
+cx:engLME_Burnonesbridgesconstruction a rcxn:Construction ;
     rcxn:hasTitle "Burn one's bridges construction" ;
-    rcxn:hasConstructionMeaning cx:Idiomaticconstructions_Meaning ;
-    cx:hasExample cx:Idiomaticconstructions_Ex_A,
-        cx:Idiomaticconstructions_Ex_B ;
-    rcxn:hasMetadata cx:Idiomaticconstructions_MD ;
-    rcxn:hasSlots cx:Idiomaticconstructions_slots ;
+    rcxn:hasConstructionMeaning cx:engLME_Burnonesbridgesconstruction_Meaning ;
+    cx:hasExample cx:engLME_Burnonesbridgesconstruction_Ex_A,
+        cx:engLME_Burnonesbridgesconstruction_Ex_B ;
+    rcxn:hasMetadata cx:engLME_Burnonesbridgesconstruction_MD ;
+    rcxn:hasSlots cx:engLME_Burnonesbridgesconstruction_slots ;
     lg:partOfLanguage lg:eng .
 
-cx:Idiomaticconstructions_1 a rcxn:SlotMandatory ;
+cx:engLME_Burnonesbridgesconstruction_1 a rcxn:SlotMandatory ;
     cx:WordOrder "Initial position" ;
-    rcxn:hasSlotForm cx:Idiomaticconstructions_1_Form ;
+    rcxn:hasSlotForm cx:engLME_Burnonesbridgesconstruction_1_Form ;
     rcxn:hasSyntacticFunction "Subject" ;
-    cx:hasIndex cx:Idiomaticconstructions_1_Index ;
+    cx:hasIndex cx:engLME_Burnonesbridgesconstruction_1_Index ;
     olia:hasSemanticRole olia:ActorMacroRole .
 
-cx:Idiomaticconstructions_1_Form a rcxn:SlotForm ;
+cx:engLME_Burnonesbridgesconstruction_1_Form a rcxn:SlotForm ;
     cx:hasSyntacticForm cx:eng_Pronoun .
 
-cx:Idiomaticconstructions_1_Index a cx:Individual ;
+cx:engLME_Burnonesbridgesconstruction_1_Index a cx:Individual ;
     olia:hasAnimacy olia:Animate .
 
-cx:Idiomaticconstructions_2 a rcxn:SlotMandatory ;
+cx:engLME_Burnonesbridgesconstruction_2 a rcxn:SlotMandatory ;
     cx:WordOrder "Follows Element 1, precedes Element 3" ;
-    rcxn:hasSlotForm cx:Idiomaticconstructions_2_Form ;
-    cx:hasIndex cx:Idiomaticconstructions_2_Index .
+    rcxn:hasSlotForm cx:engLME_Burnonesbridgesconstruction_2_Form ;
+    cx:hasIndex cx:engLME_Burnonesbridgesconstruction_2_Index .
 
-cx:Idiomaticconstructions_2_Form a rcxn:SlotForm ;
+cx:engLME_Burnonesbridgesconstruction_2_Form a rcxn:SlotForm ;
     cx:hasSyntacticForm cx:eng_VerbPhrase ;
     rcxn:hasStem cx:eng_burn .
 
-cx:Idiomaticconstructions_2_Index a cx:Event ;
+cx:engLME_Burnonesbridgesconstruction_2_Index a cx:Event ;
     olia:hasModality olia:IndicativeVerb ;
     olia:hasVoice olia:ActiveVoice .
 
-cx:Idiomaticconstructions_3 a rcxn:SlotMandatory ;
+cx:engLME_Burnonesbridgesconstruction_3 a rcxn:SlotMandatory ;
     cx:WordOrder "Precedes Element 4" ;
-    rcxn:hasSlotForm cx:Idiomaticconstructions_3_Form ;
+    rcxn:hasSlotForm cx:engLME_Burnonesbridgesconstruction_3_Form ;
     rcxn:hasSyntacticFunction "Determiner/Possessive modifier" ;
-    cx:hasIndex cx:Idiomaticconstructions_3_Index ;
+    cx:hasIndex cx:engLME_Burnonesbridgesconstruction_3_Index ;
     olia:hasSemanticRole olia:PossessorRole .
 
-cx:Idiomaticconstructions_3_Form a rcxn:SlotForm ;
+cx:engLME_Burnonesbridgesconstruction_3_Form a rcxn:SlotForm ;
     cx:hasSyntacticForm cx:eng_PossessivePronoun .
 
-cx:Idiomaticconstructions_3_Index a cx:Individual ;
+cx:engLME_Burnonesbridgesconstruction_3_Index a cx:Individual ;
     olia:hasAnimacy olia:Animate .
 
-cx:Idiomaticconstructions_4 a rcxn:SlotMandatory ;
+cx:engLME_Burnonesbridgesconstruction_4 a rcxn:SlotMandatory ;
     cx:WordOrder "Final position" ;
-    rcxn:hasSlotForm cx:Idiomaticconstructions_4_Form ;
-    cx:hasIndex cx:Idiomaticconstructions_4_Index ;
+    rcxn:hasSlotForm cx:engLME_Burnonesbridgesconstruction_4_Form ;
+    cx:hasIndex cx:engLME_Burnonesbridgesconstruction_4_Index ;
     olia:hasSemanticRole olia:ThemeRole .
 
-cx:Idiomaticconstructions_4_Form a rcxn:SlotForm ;
+cx:engLME_Burnonesbridgesconstruction_4_Form a rcxn:SlotForm ;
     cx:hasSyntacticForm cx:eng_NounPhrase ;
     olia:hasCase olia:Accusative ;
     rcxn:hasSurfaceForm "bridges" .
 
-cx:Idiomaticconstructions_4_Index a cx:Individual ;
+cx:engLME_Burnonesbridgesconstruction_4_Index a cx:Individual ;
     olia:hasNumber olia:Paucal .
 
-cx:Idiomaticconstructions_Ex_A a cx:Example ;
+cx:engLME_Burnonesbridgesconstruction_Ex_A a cx:Example ;
     cx:hasAnnotatedText "[He]1 [had burned]2 [his]3 [bridges]4 in Hollywood and took off for the seclusion of Taos to hide away..." ;
     cx:hasText "He had burned his bridges in Hollywood and took off for the seclusion of Taos to hide away..." .
 
-cx:Idiomaticconstructions_Ex_B a cx:Example ;
+cx:engLME_Burnonesbridgesconstruction_Ex_B a cx:Example ;
     cx:hasAnnotatedText "[I]1 [had]2, quite deliberately, [burned]2 [my]3 [bridges]4 -- there was no returning to the closet for me." ;
     cx:hasText "I had, quite deliberately, burned my bridges -- there was no returning to the closet for me." .
 
-cx:Idiomaticconstructions_MD a rcxn:Metadata ;
+cx:engLME_Burnonesbridgesconstruction_MD a rcxn:Metadata ;
     rcxn:annotator membr:Rastegar ;
     dcterm:created "2024-12-03"^^xsd:date .
 
-cx:Idiomaticconstructions_Meaning a rcxn:ConstructionMeaning ;
+cx:engLME_Burnonesbridgesconstruction_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "[A person]1 ends relationships." ,
      "[Someone]1 commits oneself to a course from which there is no retreat." .
 
-cx:Idiomaticconstructions_slots a rdf:Seq ;
-    rdf:_1 cx:Idiomaticconstructions_1 ;
-    rdf:_2 cx:Idiomaticconstructions_2 ;
-    rdf:_3 cx:Idiomaticconstructions_3 ;
-    rdf:_4 cx:Idiomaticconstructions_4 .
+cx:engLME_Burnonesbridgesconstruction_slots a rdf:Seq ;
+    rdf:_1 cx:engLME_Burnonesbridgesconstruction_1 ;
+    rdf:_2 cx:engLME_Burnonesbridgesconstruction_2 ;
+    rdf:_3 cx:engLME_Burnonesbridgesconstruction_3 ;
+    rdf:_4 cx:engLME_Burnonesbridgesconstruction_4 .
 
 cx:eng_Pronoun a rcxn:Construction ;
     rcxn:hasTitle "Pronoun" ;

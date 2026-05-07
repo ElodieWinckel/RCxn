@@ -18,19 +18,19 @@
         <http://example.org/cx/NP[die+ADJ-e+N]nom.sg.fem>,
         <http://example.org/cx/etc.> ;
     lg:partOfLanguage lg:deu ;
-    links:similarFormSameFunction <http://example.org/cx/NP[ADJ-strong+ADJ-strong+N]>,
+    links:similarFormSameFunction cx:deu_NPADJstrongPLUSADJstrongPLUSN,
         <http://example.org/cx/NP[ADJ-strong+ADJ-weak+N]>,
         <http://example.org/cx/NP[def.DET-strong+N]>,
         <http://example.org/cx/NP[indef.DET-strong+ADJ-weak+N]>,
         <http://example.org/cx/NP[indef.DET-strong+N]>,
         <http://example.org/cx/NP[indef.DET-zero+N]> .
 
-<http://example.org/cx/NP[ADJ-strong+ADJ-strong+N]> a rcxn:Construction ;
-    rcxn:hasMetadata  <http://example.org/cx/NP[ADJ-strong+ADJ-strong+N]_MD> ;
+cx:deu_NPADJstrongPLUSADJstrongPLUSN a rcxn:Construction ;
+    rcxn:hasMetadata  cx:deu_NPADJstrongPLUSADJstrongPLUSN ;
     rcxn:hasTitle "NP [ADJ-strong + ADJ-strong + N]" ;
     lg:partOfLanguage lg:deu .
 
-<http://example.org/cx/NP[ADJ-strong+ADJ-strong+N]_MD> a rcxn:Metadata ;
+cx:deu_NPADJstrongPLUSADJstrongPLUSN a rcxn:Metadata ;
     rcxn:annotator membr:Kligge ;
     dcterm:created "2024-12-02"^^xsd:date .
 

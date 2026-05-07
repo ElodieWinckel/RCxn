@@ -12,67 +12,67 @@
 @prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-cx:Dooperationwithoperand1onoperand2construction a rcxn:Construction ;
+cx:lzh_Dooperationwithoperand1onoperand2construction a rcxn:Construction ;
     rcxn:hasTitle "Do operation with operand1 on operand2 construction" ;
-    rcxn:hasConstructionMeaning cx:Dooperationwithoperand1onoperand2construction_Meaning ;
-    cx:hasExample cx:Dooperationwithoperand1onoperand2construction_Ex_A ;
-    rcxn:hasMetadata cx:Dooperationwithoperand1onoperand2construction_MD ;
-    rcxn:hasSlots cx:Dooperationwithoperand1onoperand2construction_slots ;
+    rcxn:hasConstructionMeaning cx:lzh_Dooperationwithoperand1onoperand2construction_Meaning ;
+    cx:hasExample cx:lzh_Dooperationwithoperand1onoperand2construction_Ex_A ;
+    rcxn:hasMetadata cx:lzh_Dooperationwithoperand1onoperand2construction_MD ;
+    rcxn:hasSlots cx:lzh_Dooperationwithoperand1onoperand2construction_slots ;
     lg:partOfLanguage lg:lzh .
 
-cx:Dooperationwithoperand1onoperand2construction_1 a rcxn:SlotOptional ;
+cx:lzh_Dooperationwithoperand1onoperand2construction_1 a rcxn:SlotOptional ;
     cx:WordOrder "Immediately before Element 2" ;
-    rcxn:hasSlotForm cx:Dooperationwithoperand1onoperand2construction_1_Form ;
+    rcxn:hasSlotForm cx:lzh_Dooperationwithoperand1onoperand2construction_1_Form ;
     cx:hasTranslation "with" ;
     cx:hasTransliteration "yi" .
 
-cx:Dooperationwithoperand1onoperand2construction_1_Form a rcxn:SlotForm ;
+cx:lzh_Dooperationwithoperand1onoperand2construction_1_Form a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "以" ;
     rcxn:hasSyntacticForm cx:zho_Particle .
 
-cx:Dooperationwithoperand1onoperand2construction_2 a rcxn:SlotMandatory ;
+cx:lzh_Dooperationwithoperand1onoperand2construction_2 a rcxn:SlotMandatory ;
     cx:WordOrder "Immediately before Element 3" ;
-    rcxn:hasSlotForm cx:Dooperationwithoperand1onoperand2construction_2_Form ;
+    rcxn:hasSlotForm cx:lzh_Dooperationwithoperand1onoperand2construction_2_Form ;
     olia:hasSemanticRole olia:InstrumentRole ;
     rcxn:hasSemanticProperty "In case when the operation (Element 3) is \"subtraction\", this operand is the one that is being subtracted." ;
     RDFS:comment "Semantically, Element 2 is not optional. However, if it is the result of the directly preceding operation, what would normally be expressed by \"之\", the slot can be empty, as it is implied by 以." .
 
-cx:Dooperationwithoperand1onoperand2construction_2_Form a rcxn:SlotForm ;
+cx:lzh_Dooperationwithoperand1onoperand2construction_2_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:zho_NounPhrase .
 
-cx:Dooperationwithoperand1onoperand2construction_3 a rcxn:SlotMandatory ;
+cx:lzh_Dooperationwithoperand1onoperand2construction_3 a rcxn:SlotMandatory ;
     cx:WordOrder "Immediately after Element 2" ;
-    rcxn:hasSlotForm cx:Dooperationwithoperand1onoperand2construction_3_Form ;
+    rcxn:hasSlotForm cx:lzh_Dooperationwithoperand1onoperand2construction_3_Form ;
     RDFS:comment "colloprofile: 加 (frequent), 減 (frequent), 乘 (frequent), 除 (frequent)" .
 
-cx:Dooperationwithoperand1onoperand2construction_3_Form a rcxn:SlotForm ;
+cx:lzh_Dooperationwithoperand1onoperand2construction_3_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:zho_VerbPhrase .
 
-cx:Dooperationwithoperand1onoperand2construction_4 a rcxn:SlotMandatory ;
+cx:lzh_Dooperationwithoperand1onoperand2construction_4 a rcxn:SlotMandatory ;
     cx:WordOrder "Immediately after Element 3" ;
-    rcxn:hasSlotForm cx:Dooperationwithoperand1onoperand2construction_4_Form ;
+    rcxn:hasSlotForm cx:lzh_Dooperationwithoperand1onoperand2construction_4_Form ;
     olia:hasSemanticRole olia:UndergoerMacroRole ;
     rcxn:hasSemanticProperty "In contrast to Element 2, this Element is changed as result of the operation" .
 
-cx:Dooperationwithoperand1onoperand2construction_4_Form a rcxn:SlotForm ;
+cx:lzh_Dooperationwithoperand1onoperand2construction_4_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:zho_NounPhrase .
 
-cx:Dooperationwithoperand1onoperand2construction_Ex_A a cx:Example ;
+cx:lzh_Dooperationwithoperand1onoperand2construction_Ex_A a cx:Example ;
     cx:hasGlosses "with height multiply it " ;
     cx:hasText "以高乘之" ;
     cx:hasAnnotatedText "[以]1[高]2[乘]3[之]4" ;
     cx:hasTranslation "Multiply it by the height" ;
     cx:hasTransliteration "yi gao cheng zhi" .
 
-cx:Dooperationwithoperand1onoperand2construction_MD a rcxn:Metadata ;
+cx:lzh_Dooperationwithoperand1onoperand2construction_MD a rcxn:Metadata ;
     rcxn:annotator membr:Kessler ;
     dcterm:created "2024-12-01"^^xsd:date ;
-    cx:hasSources cx:Dooperationwithoperand1onoperand2construction_Sources .
+    cx:hasSources cx:lzh_Dooperationwithoperand1onoperand2construction_Sources .
 
-cx:Dooperationwithoperand1onoperand2construction_Meaning a rcxn:ConstructionMeaning ;
+cx:lzh_Dooperationwithoperand1onoperand2construction_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "Do [operation]3 with [operand 1]2 and [operand 2]4" .
 
-cx:Dooperationwithoperand1onoperand2construction_Sources a cx:Collection ;
+cx:lzh_Dooperationwithoperand1onoperand2construction_Sources a cx:Collection ;
     cx:basedOn <Shuchun-2004> ;
     cx:hasLiterature <Shuchun-2004> .
 
@@ -83,11 +83,11 @@ cx:Dooperationwithoperand1onoperand2construction_Sources a cx:Collection ;
             dc:title "Les neuf chapitres: Le classique mathématique de la Chine ancienne et ses commentaires" ;
             dc:type "book" .
 
-cx:Dooperationwithoperand1onoperand2construction_slots a rdf:Seq ;
-    rdf:_1 cx:Dooperationwithoperand1onoperand2construction_1 ;
-    rdf:_2 cx:Dooperationwithoperand1onoperand2construction_2 ;
-    rdf:_3 cx:Dooperationwithoperand1onoperand2construction_3 ;
-    rdf:_4 cx:Dooperationwithoperand1onoperand2construction_4 .
+cx:lzh_Dooperationwithoperand1onoperand2construction_slots a rdf:Seq ;
+    rdf:_1 cx:lzh_Dooperationwithoperand1onoperand2construction_1 ;
+    rdf:_2 cx:lzh_Dooperationwithoperand1onoperand2construction_2 ;
+    rdf:_3 cx:lzh_Dooperationwithoperand1onoperand2construction_3 ;
+    rdf:_4 cx:lzh_Dooperationwithoperand1onoperand2construction_4 .
 
 cx:zho_Particle a rcxn:Construction ;
     rcxn:hasTitle "Particle" ;
@@ -105,5 +105,5 @@ membr:Project_Kessler rsrch:hasFindings membr:Project_Kessler_F250218 .
 
 membr:Project_Kessler_F250218 a rsrch:Finding ;
     rdfs:label "There is remarkable stability in the use of the construction over a very long period of time" ;
-    rsrch:basedOn cx:Dooperationwithoperand1onoperand2construction .
+    rsrch:basedOn cx:lzh_Dooperationwithoperand1onoperand2construction .
 

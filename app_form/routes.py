@@ -211,11 +211,14 @@ def clean_name(name):
     clean = clean.replace("(", "")
     clean = clean.replace(")", "")
     clean = clean.replace("/", "")
+    clean = clean.replace("'","")
     clean = clean.replace("ß", "ss")
     clean = clean.replace("á", "a")
     clean = clean.replace("é", "e")
     clean = clean.replace("ü", "ue")
+    clean = clean.replace("Ä","AE")
     clean = clean.replace("+", "PLUS")
+    clean = clean.replace("&", "AND")
     return clean
 
 ###################################################

@@ -1,7 +1,6 @@
 @prefix cx: <http://example.org/cx/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
-@prefix ns1: <http://example.org/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
 
@@ -305,7 +304,7 @@ membr:Project_Fokashchuk_241210_F250218 a rsrch:Finding ;
     rdfs:label """(1) Most constructions across languages do not employ the same prepositions in terms of their spatial meaning, which challenges the assumption of uniform metaphorical and/or metonymic extensions. This indicates that when expressing similar scenes or relations between entities, different languages focus on distinct aspects of the relationship, or activate different "active zones" (Langacker 1991).\r\r
 (2) There are some cross-linguistic correspondences when auf and an are used spatially, as auf/an are often translated as "on" in the other 3 languages. However, in abstract meanings, the semantic network diverges significantly: auf sometimes retains a connection to spatial "on", while an does not.\r\r
 (3) Another parallelism: (a) an often corresponds to "of" in English and to the absence of a preposition but the object in genitive case in Polish and Ukrainian in NP1 + an + NP2 constructions. (b) Synonyms in English, Polish, and Ukrainian tend to govern the same prepositions, whereas this pattern is much less consistent in German.""" ;
-    rsrch:basedOn <http://example.org/cx/AllativeNP1+auf+NP2&NP1+an+NP2constructions> .
+    rsrch:basedOn cx:deuStdHigh_AllativeNP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions .
 
 membr:Project_Fuehrer a rsrch:Project ;
     rsrch:hasFindings membr:Project_Fuehrer_F2512191334,
@@ -369,7 +368,7 @@ membr:Project_Kessler a rsrch:Project ;
 
 membr:Project_Kessler_F250218 a rsrch:Finding ;
     rdfs:label "There is remarkable stability in the use of the construction over a very long period of time" ;
-    rsrch:basedOn cx:Dooperationwithoperand1onoperand2construction .
+    rsrch:basedOn cx:lzh_Dooperationwithoperand1onoperand2construction .
 
 membr:Project_Khanoub a rsrch:Project ;
     rsrch:projectName "Competition and change in Modern English quantifier constructions"@en .
@@ -390,7 +389,7 @@ membr:Project_Lee_241202 a rsrch:Project ;
 
 membr:Project_Lee_241202_F250218 a rsrch:Finding ;
     rdfs:label "Grammatically fixed with zero-realization, the \"vor-Augen construction\" displays a distinct collocational pattern closely tied to its meaning and contextual usage." ;
-    rsrch:basedOn <http://example.org/cx/[(sich)(NP)(ADJ)(ADV)[vorAugen](VP)]_MD> .
+    rsrch:basedOn cx:deuWrSt20_sichNPADJADVvorAugenVP_MD .
 
 membr:Project_Legoute a rsrch:Project ;
     membr:SubProject membr:Project_Legoute_241128 ;
@@ -471,17 +470,17 @@ membr:Project_Prela a rsrch:Project ;
     rsrch:projectName "Project Prela"@en .
 
 membr:Project_Ramezani a rsrch:Project ;
-    ns1:rsrchhasResearchQuestion membr:Project_Ramezani_250214 ;
+    rsrch:hasResearchQuestion membr:Project_Ramezani_250214 ;
     rsrch:projectName "Representation and processing of constructions in the brain"@en .
 
-membr:Project_Ramezani_250214 ns1:rsrchhasFindings membr:Project_Ramezani_250214_F250218 .
+membr:Project_Ramezani_250214 rsrch:hasFindings membr:Project_Ramezani_250214_F250218 .
 
-membr:Project_Ramezani_250214_F250218 a ns1:rsrchFinding ;
+membr:Project_Ramezani_250214_F250218 a rsrch:Finding ;
     rdfs:label "So far we have results from LLM analysis that can significantly recognize and differentiate between argument structure constructions." ;
-    ns1:rsrchbasedOn cx:Argumentstructureconstruction,
-        cx:EnglishDitransitiveconstruction,
-        cx:EnglishResultativeconstruction,
-        cx:EnglishTransitiveconstruction,
+    rsrch:basedOn cx:EnglishTransitiveconstruction,
+        cx:engLME_Argumentstructureconstruction,
+        cx:engLME_Ditransitiveconstruction,
+        cx:engLME_Resultativeconstruction,
         cx:eng_CauseMotionconstruction .
 
 membr:Project_Rastegar a rsrch:Project ;
@@ -521,7 +520,7 @@ membr:Project_Winckel a rsrch:Project ;
 
 membr:Project_Winckel_2601131454_F2601131454 a rsrch:Finding ;
     rdfs:label "The relational database for CASA entries can be translated into the RDF format of the Research Constructicon." ;
-    rsrch:basedOn cx:eng_AttributeConstruction,
+    rsrch:basedOn cx:engLME_AttributeConstructionAttrAdj,
         cx:eng_GenitiveNPConstruction,
         cx:eng_ditransitive_construction_obj_np,
         cx:lat_Adjective .

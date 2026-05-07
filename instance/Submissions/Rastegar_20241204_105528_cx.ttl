@@ -10,33 +10,33 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-cx:Idiomaticconstruction a rcxn:Construction ;
+cx:deu_AusdemAErmelschuettelnconstruction a rcxn:Construction ;
     rcxn:hasTitle "Aus dem Ärmel schütteln construction" ;
-    links:CL_differentFormSameFunction cx:EnglishPullsomethingoutofahat ;
-    links:CL_similarFormDifferentFunction cx:Englishrollupyoursleeves,
+    links:CL_differentFormSameFunction cx:engLME_Pullsomethingoutofahat ;
+    links:CL_similarFormDifferentFunction cx:engLME_Rollupyoursleeves,
         <http://example.org/cx/Farsibarāyekasiāstinbālāzadan:torollupsleevesforsomething>,
         <http://example.org/cx/Farsimārāstin-exodparvarāndan:tonurtureasnakeinone'sbosom> ;
-    rcxn:hasConstructionMeaning cx:Idiomaticconstruction_Meaning ;
-    cx:hasExample cx:Idiomaticconstruction_Ex_A,
-        cx:Idiomaticconstruction_Ex_B ;
-    rcxn:hasMetadata cx:Idiomaticconstruction_MD ;
-    rcxn:hasSlots cx:Idiomaticconstruction_slots ;
+    rcxn:hasConstructionMeaning cx:deu_AusdemAErmelschuettelnconstruction_Meaning ;
+    cx:hasExample cx:deu_AusdemAErmelschuettelnconstruction_Ex_A,
+        cx:deu_AusdemAErmelschuettelnconstruction_Ex_B ;
+    rcxn:hasMetadata cx:deu_AusdemAErmelschuettelnconstruction_MD ;
+    rcxn:hasSlots cx:deu_AusdemAErmelschuettelnconstruction_slots ;
     lg:partOfLanguage lg:deu .
 
 cx:Definitearticle RDFS:label "Definite article" .
 
-cx:EnglishPullsomethingoutofahat a rcxn:Construction ;
+cx:engLME_Pullsomethingoutofahat a rcxn:Construction ;
     rcxn:annotator membr:Rastegar ;
     dcterm:created "2024-12-04"^^xsd:date ;
     rcxn:hasTitle "Pull something out of a hat" ;
     lg:partOfLanguage lg:eng .
 
-cx:Englishrollupyoursleeves a rcxn:Construction ;
-    rcxn:hasMetadata cx:Englishrollupyoursleeves_MD ;
+cx:engLME_Rollupyoursleeves a rcxn:Construction ;
+    rcxn:hasMetadata cx:engLME_Rollupyoursleeves_MD ;
     rcxn:hasTitle "Roll up your sleeves" ;
     lg:partOfLanguage lg:eng .
 
-cx:Englishrollupyoursleeves_MD a rcxn:Metadata ;
+cx:engLME_Rollupyoursleeves_MD a rcxn:Metadata ;
     rcxn:annotator membr:Rastegar ;
     dcterm:created "2024-12-04"^^xsd:date .
 
@@ -60,100 +60,100 @@ cx:Englishrollupyoursleeves_MD a rcxn:Metadata ;
     rcxn:hasTitle "mār āstin-e xod parvarāndan: to nurture a snake in one's bosom" ;
     lg:partOfLanguage lg:pes .
 
-cx:Idiomaticconstruction_1 a rcxn:SlotMandatory ;
-    rcxn:hasSlotForm cx:Idiomaticconstruction_1_Form ;
-    rcxn:hasSlots cx:Idiomaticconstruction_1_slots .
+cx:deu_AusdemAErmelschuettelnconstruction_1 a rcxn:SlotMandatory ;
+    rcxn:hasSlotForm cx:deu_AusdemAErmelschuettelnconstruction_1_Form ;
+    rcxn:hasSlots cx:deu_AusdemAErmelschuettelnconstruction_1_slots .
 
-cx:Idiomaticconstruction_1_Form a rcxn:SlotForm ;
+cx:deu_AusdemAErmelschuettelnconstruction_1_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:deu_PrepositionalPhrase .
 
-cx:Idiomaticconstruction_2 a rcxn:SlotMandatory ;
+cx:deu_AusdemAErmelschuettelnconstruction_2 a rcxn:SlotMandatory ;
     cx:WordOrder "Initial position in Element 1" ;
-    rcxn:hasSlotForm cx:Idiomaticconstruction_2_Form ;
+    rcxn:hasSlotForm cx:deu_AusdemAErmelschuettelnconstruction_2_Form ;
     cx:hasTranslation "out of" ;
     rcxn:hasSyntacticFunction "head of Element 1" ;
     rcxn:hasOtherSemanticContribution "source" .
 
-cx:Idiomaticconstruction_2_Form a rcxn:SlotForm ;
+cx:deu_AusdemAErmelschuettelnconstruction_2_Form a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "aus" ;
     rcxn:hasSyntacticForm cx:deu_Preposition .
 
-cx:Idiomaticconstruction_3 a rcxn:SlotMandatory ;
+cx:deu_AusdemAErmelschuettelnconstruction_3 a rcxn:SlotMandatory ;
     cx:WordOrder "follows Element 2, precedes Element 4" ;
-    rcxn:hasSlotForm cx:Idiomaticconstruction_3_Form ;
+    rcxn:hasSlotForm cx:deu_AusdemAErmelschuettelnconstruction_3_Form ;
     cx:hasTranslation "the" ;
     rcxn:hasSyntacticFunction "Determiner" ;
-    cx:hasIndex cx:Idiomaticconstruction_3_Index .
+    cx:hasIndex cx:deu_AusdemAErmelschuettelnconstruction_3_Index .
 
-cx:Idiomaticconstruction_3_Form a rcxn:SlotForm ;
+cx:deu_AusdemAErmelschuettelnconstruction_3_Form a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "dem" ;
     rcxn:hasSyntacticForm cx:deu_DefiniteArticle ;
     olia:hasCase olia:DativeCase .
 
-cx:Idiomaticconstruction_3_Index a cx:Individual ;
+cx:deu_AusdemAErmelschuettelnconstruction_3_Index a cx:Individual ;
     olia:hasGender olia:Masculine ;
     olia:hasNumber olia:Singular .
 
-cx:Idiomaticconstruction_4 a rcxn:SlotMandatory ;
+cx:deu_AusdemAErmelschuettelnconstruction_4 a rcxn:SlotMandatory ;
     cx:WordOrder "Follows Element 3" ;
-    rcxn:hasSlotForm cx:Idiomaticconstruction_4_Form ;
+    rcxn:hasSlotForm cx:deu_AusdemAErmelschuettelnconstruction_4_Form ;
     cx:hasTranslation "sleeve" ;
-    cx:hasIndex cx:Idiomaticconstruction_4_Index ;
+    cx:hasIndex cx:deu_AusdemAErmelschuettelnconstruction_4_Index ;
     olia:hasSemanticRole olia:LocationRole .
 
-cx:Idiomaticconstruction_4_Form a rcxn:SlotForm ;
+cx:deu_AusdemAErmelschuettelnconstruction_4_Form a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "Ärmel" ;
     rcxn:hasSyntacticForm cx:deu_Noun ;
     olia:hasCase olia:DativeCase .
 
-cx:Idiomaticconstruction_4_Index a cx:Individual ;
+cx:deu_AusdemAErmelschuettelnconstruction_4_Index a cx:Individual ;
     olia:hasAnimacy olia:Inanimate ;
     olia:hasGender olia:Masculine ;
     olia:hasNumber olia:Singular .
 
-cx:Idiomaticconstruction_5 a rcxn:SlotMandatory ;
-    rcxn:hasSlotForm cx:Idiomaticconstruction_5_Form ;
+cx:deu_AusdemAErmelschuettelnconstruction_5 a rcxn:SlotMandatory ;
+    rcxn:hasSlotForm cx:deu_AusdemAErmelschuettelnconstruction_5_Form ;
     cx:hasTranslation "to shake" ;
-    cx:hasIndex cx:Idiomaticconstruction_5_Index ;
+    cx:hasIndex cx:deu_AusdemAErmelschuettelnconstruction_5_Index ;
     rcxn:hasOtherSemanticContribution "Action" .
 
-cx:Idiomaticconstruction_5_Form a rcxn:SlotForm ;
+cx:deu_AusdemAErmelschuettelnconstruction_5_Form a rcxn:SlotForm ;
     rcxn:hasStem cx:deu_schütteln ;
     rcxn:hasSyntacticForm cx:deu_Verb .
 
-cx:Idiomaticconstruction_5_Index a cx:Event ;
+cx:deu_AusdemAErmelschuettelnconstruction_5_Index a cx:Event ;
     olia:hasModality olia:IndicativeVerb ;
     olia:hasVoice olia:ActiveVoice .
 
-cx:Idiomaticconstruction_Ex_A a cx:Example ;
+cx:deu_AusdemAErmelschuettelnconstruction_Ex_A a cx:Example ;
     cx:hasGlosses "a daycare-spot(ACC) can one not just.like.that out the sleeve shake" ;
     cx:hasAnnotatedText "Ein KitaPlatz kann man nicht einfach [aus]1 [dem]2 [Ärmel]3 [schütteln]4. [Saarbrücker Zeitung, 09.02.2022]" ;
     cx:hasText "Ein KitaPlatz kann man nicht einfach aus dem Ärmel schütteln. [Saarbrücker Zeitung, 09.02.2022]" ;
     cx:hasTranslation "One cannot simply pull a daycare spot out of thin air. / One cannot simply conjure a daycare spot." ;
     RDFS:comment "Used in negative context with modal verb (kann) and generalized subject (man) ; includes \"einfac so\" emphasizing imposition" .
 
-cx:Idiomaticconstruction_Ex_B a cx:Example ;
+cx:deu_AusdemAErmelschuettelnconstruction_Ex_B a cx:Example ;
     cx:hasGlosses "since this sum(NOM) not simply out the sleeve to shake is needed it an investor(ACC)" ;
     cx:hasAnnotatedText "Da diese Summe nicht einfach [aus]1 [dem]2 [Ärmel]3 [zu schütteln]4 ist, brauche es einen Investor. [Dresdner Neueste Nachrichter]" ;
     cx:hasText "Da diese Summe nicht einfach aus dem Ärmel zu schütteln ist, brauche es einen Investor. [Dresdner Neueste Nachrichter]" ;
     cx:hasTranslation "Since the sum cannot be simply pulled out of thin air, an investor was needed." ;
     RDFS:comment "Shows the construction in zu-infinitive form with sein ; again in negative context." .
 
-cx:Idiomaticconstruction_MD a rcxn:Metadata ;
+cx:deu_AusdemAErmelschuettelnconstruction_MD a rcxn:Metadata ;
     rcxn:annotator membr:Rastegar ;
     dcterm:created "2024-12-04"^^xsd:date .
 
-cx:Idiomaticconstruction_Meaning a rcxn:ConstructionMeaning ;
+cx:deu_AusdemAErmelschuettelnconstruction_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "done with ease" .
 
-cx:Idiomaticconstruction_slots a rdf:Seq ;
-    rdf:_1 cx:Idiomaticconstruction_1 ;
-    rdf:_2 cx:Idiomaticconstruction_5 .
+cx:deu_AusdemAErmelschuettelnconstruction_slots a rdf:Seq ;
+    rdf:_1 cx:deu_AusdemAErmelschuettelnconstruction_1 ;
+    rdf:_2 cx:deu_AusdemAErmelschuettelnconstruction_5 .
 
-cx:Idiomaticconstruction_1_slots a rdf:Seq ;
-    rdf:_1 cx:Idiomaticconstruction_2 ;
-    rdf:_2 cx:Idiomaticconstruction_3 ;
-    rdf:_3 cx:Idiomaticconstruction_4 .
+cx:deu_AusdemAErmelschuettelnconstruction_1_slots a rdf:Seq ;
+    rdf:_1 cx:deu_AusdemAErmelschuettelnconstruction_2 ;
+    rdf:_2 cx:deu_AusdemAErmelschuettelnconstruction_3 ;
+    rdf:_3 cx:deu_AusdemAErmelschuettelnconstruction_4 .
 
 cx:deu_DefiniteArticle a rcxn:Construction ;
     rcxn:hasTitle "Definite Article" ;

@@ -33,18 +33,18 @@ cx:eng_Adjective_MD a rcxn:Metadata ;
 
 
 
-cx:coolascolourconstruction a rcxn:Construction ;
-    cx:hasExample cx:coolascolourconstruction_Ex_A ,
-                  cx:coolascolourconstruction_Ex_B ;
+cx:engLME_coolascolourconstruction a rcxn:Construction ;
+    cx:hasExample cx:engLME_coolascolourconstruction_Ex_A ,
+                  cx:engLME_coolascolourconstruction_Ex_B ;
     RDFS:comment "first attested: 1758, cf. OED" ;
     lg:partOfLanguage lg:eng ;
     links:isMetaphoricalExtensionOf cx:eng_coolconstruction ;
-    rcxn:hasConstructionMeaning cx:coolascolourconstruction_Meaning ;
-    rcxn:hasMetadata cx:coolascolourconstruction_MD ;
-    rcxn:hasSlots cx:coolascolourconstruction_slots ;
+    rcxn:hasConstructionMeaning cx:engLME_coolascolourconstruction_Meaning ;
+    rcxn:hasMetadata cx:engLME_coolascolourconstruction_MD ;
+    rcxn:hasSlots cx:engLME_coolascolourconstruction_slots ;
     rcxn:hasTitle "cool as colour construction" .
 
-cx:coolascolourconstruction_MD a rcxn:Metadata ;
+cx:engLME_coolascolourconstruction_MD a rcxn:Metadata ;
     rcxn:annotator membr:Winckel ;
     rcxn:annotator membr:Boos ;
     rcxn:annotator membr:Weigelt ;
@@ -52,27 +52,27 @@ cx:coolascolourconstruction_MD a rcxn:Metadata ;
     cx:hasSources cx:eng_coolconstruction_Sources ;
     dcterm:created "2025-11-28"^^xsd:date .
 
-cx:coolascolourconstruction_slots a rdf:Seq ;
-    rdf:_1 cx:coolascolourconstruction_1 .
+cx:engLME_coolascolourconstruction_slots a rdf:Seq ;
+    rdf:_1 cx:engLME_coolascolourconstruction_1 .
 
-cx:coolascolourconstruction_1 a rcxn:SlotMandatory ;
+cx:engLME_coolascolourconstruction_1 a rcxn:SlotMandatory ;
     rcxn:hasPhonology "/kuːl/" ;
-    rcxn:hasSlotForm cx:coolascolourconstruction_1_Form .
+    rcxn:hasSlotForm cx:engLME_coolascolourconstruction_1_Form .
 
-cx:coolascolourconstruction_1_Form a rcxn:SlotForm ;
+cx:engLME_coolascolourconstruction_1_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_Adjective ;
     rcxn:hasStem cx:eng_cool .
 
-cx:coolascolourconstruction_Ex_A a cx:Example ;
+cx:engLME_coolascolourconstruction_Ex_A a cx:Example ;
     cx:hasAnnotatedText "The [cool]1 palette consists of French ultramarine, Prussian green, lamp black and titanium white." ;
     cx:hasText "The cool palette consists of French ultramarine, Prussian green, lamp black and titanium white." ;
     RDFS:comment "OED, 1991" .
 
-cx:coolascolourconstruction_Ex_B a cx:Example ;
+cx:engLME_coolascolourconstruction_Ex_B a cx:Example ;
     cx:hasAnnotatedText "a [cool]1 shade of grey" ;
     cx:hasText "a cool shade of grey" .
 
-cx:coolascolourconstruction_Meaning a rcxn:ConstructionMeaning ;
+cx:engLME_coolascolourconstruction_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "(for a colour) containing green, blue, indigo, violet, purple" .
 
 
@@ -84,19 +84,19 @@ cx:coolascolourconstruction_Meaning a rcxn:ConstructionMeaning ;
 
 
 
-cx:coolasemotionconstruction a rcxn:Construction ;
-    cx:hasExample cx:coolasemotionconstruction_Ex_A ,
-                  cx:coolasemotionconstruction_Ex_B ;
+cx:engLME_coolasemotionconstruction a rcxn:Construction ;
+    cx:hasExample cx:engLME_coolasemotionconstruction_Ex_A ,
+                  cx:engLME_coolasemotionconstruction_Ex_B ;
     RDFS:comment "first attested: Old English, Beowulf (Oxford English Dictionary)" ;
     lg:partOfLanguage lg:eng ;
     links:isMetaphoricalExtensionOf cx:eng_coolconstruction ;
     rcxn:elementOf cx:eng_Keepacoolheadconstruction ;
-    rcxn:hasConstructionMeaning cx:coolasemotionconstruction_Meaning ;
-    rcxn:hasMetadata cx:coolasemotionconstruction_MD ;
-    rcxn:hasSlots cx:coolasemotionconstruction_slots ;
+    rcxn:hasConstructionMeaning cx:engLME_coolasemotionconstruction_Meaning ;
+    rcxn:hasMetadata cx:engLME_coolasemotionconstruction_MD ;
+    rcxn:hasSlots cx:engLME_coolasemotionconstruction_slots ;
     rcxn:hasTitle "cool as emotion construction" .
 
-cx:coolasemotionconstruction_MD a rcxn:Metadata ;
+cx:engLME_coolasemotionconstruction_MD a rcxn:Metadata ;
     rcxn:annotator membr:Winckel ;
     rcxn:annotator membr:Boos ;
     rcxn:annotator membr:Weigelt ;
@@ -104,27 +104,27 @@ cx:coolasemotionconstruction_MD a rcxn:Metadata ;
     cx:hasSources cx:eng_coolconstruction_Sources ;
     dcterm:created "2025-11-28"^^xsd:date .
 
-cx:coolasemotionconstruction_slots a rdf:Seq ;
-    rdf:_1 cx:coolasemotionconstruction_1 .
+cx:engLME_coolasemotionconstruction_slots a rdf:Seq ;
+    rdf:_1 cx:engLME_coolasemotionconstruction_1 .
 
-cx:coolasemotionconstruction_1 a rcxn:SlotMandatory ;
+cx:engLME_coolasemotionconstruction_1 a rcxn:SlotMandatory ;
     rcxn:hasPhonology "/kuːl/" ;
-    rcxn:hasSlotForm cx:coolasemotionconstruction_1_Form .
+    rcxn:hasSlotForm cx:engLME_coolasemotionconstruction_1_Form .
 
-cx:coolasemotionconstruction_1_Form a rcxn:SlotForm ;
+cx:engLME_coolasemotionconstruction_1_Form a rcxn:SlotForm ;
     rcxn:hasStem cx:eng_cool ;
     rcxn:hasSyntacticForm cx:eng_Adjective .
 
-cx:coolasemotionconstruction_Ex_A a cx:Example ;
+cx:engLME_coolasemotionconstruction_Ex_A a cx:Example ;
     cx:hasAnnotatedText "However, the West's [cool]1 attitude towards the King over his pro-Iraqi stance was partly offset by Jordan's willingness to take in vast numbers of refugees from Iraq and Kuwait during August." ;
     cx:hasText "However, the West's cool attitude towards the King over his pro-Iraqi stance was partly offset by Jordan's willingness to take in vast numbers of refugees from Iraq and Kuwait during August." ;
     RDFS:comment "BNC: Keesings Contemporary Archives (1985-1994). 3238 s-units." .
 
-cx:coolasemotionconstruction_Ex_B a cx:Example ;
+cx:engLME_coolasemotionconstruction_Ex_B a cx:Example ;
     cx:hasAnnotatedText "He is staying [cool]1 under pressure." ;
     cx:hasText "He is staying cool under pressure." .
 
-cx:coolasemotionconstruction_Meaning a rcxn:ConstructionMeaning ;
+cx:engLME_coolasemotionconstruction_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "emotionless, without passion" .
 
 
@@ -135,19 +135,19 @@ cx:coolasemotionconstruction_Meaning a rcxn:ConstructionMeaning ;
 
 
 
-cx:coolasadmirableconstruction a rcxn:Construction ;
-    cx:hasExample cx:coolasadmirableconstruction_Ex_A ,
-                  cx:coolasadmirableconstruction_Ex_B ,
-                  cx:coolasadmirableconstruction_Ex_C ;
+cx:engInf_coolasadmirableconstruction a rcxn:Construction ;
+    cx:hasExample cx:engInf_coolasadmirableconstruction_Ex_A ,
+                  cx:engInf_coolasadmirableconstruction_Ex_B ,
+                  cx:engInf_coolasadmirableconstruction_Ex_C ;
     RDFS:comment "first attested: 1884, cf. OED" ;
     lg:partOfLanguage lg:engInf ;
     links:isMetaphoricalExtensionOf cx:eng_coolconstruction ;
-    rcxn:hasConstructionMeaning cx:coolasadmirableconstruction_Meaning ;
-    rcxn:hasMetadata cx:coolasadmirableconstruction_MD ;
-    rcxn:hasSlots cx:coolasadmirableconstruction_slots ;
+    rcxn:hasConstructionMeaning cx:engInf_coolasadmirableconstruction_Meaning ;
+    rcxn:hasMetadata cx:engInf_coolasadmirableconstruction_MD ;
+    rcxn:hasSlots cx:engInf_coolasadmirableconstruction_slots ;
     rcxn:hasTitle "cool as admirable construction" .
 
-cx:coolasadmirableconstruction_MD a rcxn:Metadata ;
+cx:engInf_coolasadmirableconstruction_MD a rcxn:Metadata ;
     rcxn:annotator membr:Winckel ;
     rcxn:annotator membr:Boos ;
     rcxn:annotator membr:Weigelt ;
@@ -155,31 +155,31 @@ cx:coolasadmirableconstruction_MD a rcxn:Metadata ;
     cx:hasSources cx:eng_coolconstruction_Sources ;
     dcterm:created "2025-11-28"^^xsd:date .
 
-cx:coolasadmirableconstruction_slots a rdf:Seq ;
-    rdf:_1 cx:coolasadmirableconstruction_1 .
+cx:engInf_coolasadmirableconstruction_slots a rdf:Seq ;
+    rdf:_1 cx:engInf_coolasadmirableconstruction_1 .
 
-cx:coolasadmirableconstruction_1 a rcxn:SlotMandatory ;
+cx:engInf_coolasadmirableconstruction_1 a rcxn:SlotMandatory ;
     rcxn:hasPhonology "/kuːl/" ;
-    rcxn:hasSlotForm cx:coolasadmirableconstruction_1_Form .
+    rcxn:hasSlotForm cx:engInf_coolasadmirableconstruction_1_Form .
 
-cx:coolasadmirableconstruction_1_Form a rcxn:SlotForm ;
+cx:engInf_coolasadmirableconstruction_1_Form a rcxn:SlotForm ;
     rcxn:hasStem cx:eng_cool ;
     rcxn:hasSyntacticForm cx:eng_Adjective .
 
-cx:coolasadmirableconstruction_Ex_A a cx:Example ;
+cx:engInf_coolasadmirableconstruction_Ex_A a cx:Example ;
     cx:hasAnnotatedText "For years, anything more than a slick of Vaseline or a brush of mascara was considered too try-hard to be [cool]1." ;
     cx:hasText "For years, anything more than a slick of Vaseline or a brush of mascara was considered too try-hard to be cool." ;
     RDFS:comment "BNC Newspaper, 1992" .
 
-cx:coolasadmirableconstruction_Ex_B a cx:Example ;
+cx:engInf_coolasadmirableconstruction_Ex_B a cx:Example ;
     cx:hasAnnotatedText "a [cool]1 outfit" ;
     cx:hasText "a cool outfit" .
 
-cx:coolasadmirableconstruction_Ex_C a cx:Example ;
+cx:engInf_coolasadmirableconstruction_Ex_C a cx:Example ;
     cx:hasAnnotatedText "The movie is [cool]1." ;
     cx:hasText "The movie is cool." .
 
-cx:coolasadmirableconstruction_Meaning a rcxn:ConstructionMeaning ;
+cx:engInf_coolasadmirableconstruction_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "positive evaluation: admirable, relaxed, stylish, sophisticated, fashionable" .
 
 
@@ -281,7 +281,7 @@ cx:eng_Keepacoolheadconstruction_3 a rcxn:SlotMandatory ;
     rcxn:hasSlotForm cx:eng_Keepacoolheadconstruction_3_Form .
 
 cx:eng_Keepacoolheadconstruction_3_Form a rcxn:SlotForm ;
-    rcxn:hasStem cx:coolasemotionconstruction ;
+    rcxn:hasStem cx:engLME_coolasemotionconstruction ;
     rcxn:hasSurfaceForm "cool" .
 
 cx:eng_Keepacoolheadconstruction_4 a rcxn:SlotMandatory ;
@@ -339,9 +339,9 @@ cx:eng_coolconstruction a rcxn:Construction ;
                   cx:eng_coolconstruction_Ex_D ;
     RDFS:comment "from Indo-european *gel(ə) (DWDS)" ;
     lg:partOfLanguage lg:eng ;
-    links:metaphoricalLink cx:coolascolourconstruction,
-        cx:coolasemotionconstruction,
-        cx:coolasadmirableconstruction ;
+    links:metaphoricalLink cx:engLME_coolascolourconstruction,
+        cx:engLME_coolasemotionconstruction,
+        cx:engInf_coolasadmirableconstruction ;
     rcxn:hasConstructionMeaning cx:eng_coolconstruction_Meaning ;
     rcxn:hasMetadata cx:eng_coolconstruction_MD ;
     rcxn:hasSlots cx:eng_coolconstruction_slots ;
