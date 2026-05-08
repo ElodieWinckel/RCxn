@@ -109,7 +109,7 @@ So far, Image-Schema is just plain text. It would be nice to create a collection
 | :---- | :---- |
 | description | Construction elements in the construction. They encompass both slot elements, which are positions where specific lexical items or phrases can be inserted, and lexically defined elements, which are fixed words or phrases that contribute to the construction's specific form and meaning. In constructicography, construction elements are linked together by "sequential" links. |
 
-| Class rcxn\#SlotMandatory |  |
+| Class rcxn\#SlotObligatory |  |
 | :---- | :---- |
 | description | Non-optional construction elements that need to be realized. |
 | subclass of | rcxn\#Slot |
@@ -298,11 +298,7 @@ Dublin Core (db) is the ontology typically used for RDF implementations of publi
 
 ### References (i.e., the publication that the construction is based on)
 
-I contacted Susanne and Emilia, who need to gather the bibliography of the RTG, to join forces. For the RTG-website, the university wants them to use CRIS. More about it later…
-
 ### Literature (i.e., relevant literature on the topic)
-
-Building a Zotero bibliography could be a way to gather these references. Export in db is possible (maybe even automatizable?). 
 
 ## Similar cxs in other Cxns \[o\]
 

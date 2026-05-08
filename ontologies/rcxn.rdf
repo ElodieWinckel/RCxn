@@ -414,9 +414,9 @@ Foci are classified here according to their discourse function (independently fr
     
 
 
-    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#SlotMandatory -->
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#SlotObligatory -->
 
-    <owl:Class rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#SlotMandatory">
+    <owl:Class rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#SlotObligatory">
         <rdfs:subClassOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#Slot"/>
         <owl:disjointWith rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#SlotOptional"/>
         <rdfs:comment xml:lang="en">Non-optional construction elements that need to be realized.</rdfs:comment>
