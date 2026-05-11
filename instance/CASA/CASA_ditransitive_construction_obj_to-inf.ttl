@@ -26,20 +26,20 @@ cx:eng_ditransitive_construction_obj_to_inf_1 a rcxn:SlotOptional ;
     rcxn:hasCasaSyntacticFunction "potential subject" .
 
 
-cx:eng_ditransitive_construction_obj_to_inf_2 a rcxn:SlotMandatory ;
+cx:eng_ditransitive_construction_obj_to_inf_2 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm "V" ;
     RDFS:comment "Source for collo-profile: Valency Dictionary of English, Patternbank,
         "colloprofile: advise  allow  ask  attract  beg  bid  charge  command  compel  convince  decide  determine  direct  drive  educate  elect  encourage  engage  forbid  force  free  get  guarantee  help  influence  instruct  invide  lead  order  permit  persuade  press  promise  prove  push  recommend  remind  request  require  signal  teach  tell  train  trouble  try  urge  warn  appoint  bind  clear  commit  consider  dare  declare  design  employ  find  hire  invest  judge  leave  make  pay  plan  send  shape  sign  suffer  trust  use" .
 
 
-cx:eng_ditransitive_construction_obj_to_inf_3 a rcxn:SlotMandatory ;
+cx:eng_ditransitive_construction_obj_to_inf_3 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm "NP" ;
     rcxn:hasOtherSemanticContribution "Recipient" ;
     rcxn:hasSyntacticFunction "unit in predicate" ;
     rcxn:hasCasaSyntacticFunction "Obj" .
 
 
-cx:eng_ditransitive_construction_obj_to_inf_4 a rcxn:SlotMandatory ;
+cx:eng_ditransitive_construction_obj_to_inf_4 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm "to-INF" ;
     rcxn:hasOtherSemanticContribution "Æffected-action" ;
     rcxn:hasSyntacticFunction "unit in predicate" ;

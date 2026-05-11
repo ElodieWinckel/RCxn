@@ -18,7 +18,7 @@ cx:eng_intransitive_construction_1 a rcxn:SlotOptional ;
     rcxn:hasSyntacticFunction "potential subject" .
 
 
-cx:eng_intransitive_construction_2 a rcxn:SlotMandatory ;
+cx:eng_intransitive_construction_2 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm "V" .
 
 

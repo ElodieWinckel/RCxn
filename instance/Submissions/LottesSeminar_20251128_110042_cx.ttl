@@ -55,7 +55,7 @@ cx:engLME_coolascolourconstruction_MD a rcxn:Metadata ;
 cx:engLME_coolascolourconstruction_slots a rdf:Seq ;
     rdf:_1 cx:engLME_coolascolourconstruction_1 .
 
-cx:engLME_coolascolourconstruction_1 a rcxn:SlotMandatory ;
+cx:engLME_coolascolourconstruction_1 a rcxn:SlotObligatory ;
     rcxn:hasPhonology "/kuːl/" ;
     rcxn:hasSlotForm cx:engLME_coolascolourconstruction_1_Form .
 
@@ -107,7 +107,7 @@ cx:engLME_coolasemotionconstruction_MD a rcxn:Metadata ;
 cx:engLME_coolasemotionconstruction_slots a rdf:Seq ;
     rdf:_1 cx:engLME_coolasemotionconstruction_1 .
 
-cx:engLME_coolasemotionconstruction_1 a rcxn:SlotMandatory ;
+cx:engLME_coolasemotionconstruction_1 a rcxn:SlotObligatory ;
     rcxn:hasPhonology "/kuːl/" ;
     rcxn:hasSlotForm cx:engLME_coolasemotionconstruction_1_Form .
 
@@ -158,7 +158,7 @@ cx:engInf_coolasadmirableconstruction_MD a rcxn:Metadata ;
 cx:engInf_coolasadmirableconstruction_slots a rdf:Seq ;
     rdf:_1 cx:engInf_coolasadmirableconstruction_1 .
 
-cx:engInf_coolasadmirableconstruction_1 a rcxn:SlotMandatory ;
+cx:engInf_coolasadmirableconstruction_1 a rcxn:SlotObligatory ;
     rcxn:hasPhonology "/kuːl/" ;
     rcxn:hasSlotForm cx:engInf_coolasadmirableconstruction_1_Form .
 
@@ -215,7 +215,7 @@ cx:eng_AdjectivePhrase_1 a rcxn:SlotOptional ;
 cx:eng_AdjectivePhrase_1_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:Adverb .
 
-cx:eng_AdjectivePhrase_2 a rcxn:SlotMandatory ;
+cx:eng_AdjectivePhrase_2 a rcxn:SlotObligatory ;
     rcxn:hasOtherSemanticContribution "Attribute" ;
     rcxn:hasSlotForm cx:eng_AdjectivePhrase_2_Form .
 
@@ -265,26 +265,26 @@ cx:eng_AdjectivePhrase a rcxn:Construction ;
 
 
 
-cx:eng_Keepacoolheadconstruction_1 a rcxn:SlotMandatory ;
+cx:eng_Keepacoolheadconstruction_1 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm cx:eng_Keepacoolheadconstruction_1_Form .
 
 cx:eng_Keepacoolheadconstruction_1_Form a rcxn:SlotForm ;
     rcxn:hasStem cx:eng_keep .
 
-cx:eng_Keepacoolheadconstruction_2 a rcxn:SlotMandatory ;
+cx:eng_Keepacoolheadconstruction_2 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm cx:eng_Keepacoolheadconstruction_2_Form .
 
 cx:eng_Keepacoolheadconstruction_2_Form a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "a" .
 
-cx:eng_Keepacoolheadconstruction_3 a rcxn:SlotMandatory ;
+cx:eng_Keepacoolheadconstruction_3 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm cx:eng_Keepacoolheadconstruction_3_Form .
 
 cx:eng_Keepacoolheadconstruction_3_Form a rcxn:SlotForm ;
     rcxn:hasStem cx:engLME_coolasemotionconstruction ;
     rcxn:hasSurfaceForm "cool" .
 
-cx:eng_Keepacoolheadconstruction_4 a rcxn:SlotMandatory ;
+cx:eng_Keepacoolheadconstruction_4 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm cx:eng_Keepacoolheadconstruction_4_Form .
 
 cx:eng_Keepacoolheadconstruction_4_Form a rcxn:SlotForm ;
@@ -347,7 +347,7 @@ cx:eng_coolconstruction a rcxn:Construction ;
     rcxn:hasSlots cx:eng_coolconstruction_slots ;
     rcxn:hasTitle "cool (temperature) construction" .
 
-cx:eng_coolconstruction_1 a rcxn:SlotMandatory ;
+cx:eng_coolconstruction_1 a rcxn:SlotObligatory ;
     rcxn:hasPhonology "/kuːl/" ;
     rcxn:hasSlotForm cx:eng_coolconstruction_1_Form .
 
@@ -429,13 +429,13 @@ cx:eng_AdjectiveAttributiveconstruction_1 a rcxn:SlotOptional ;
 cx:eng_AdjectiveAttributiveconstruction_1_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:Determiner .
 
-cx:eng_AdjectiveAttributiveconstruction_2 a rcxn:SlotMandatory ;
+cx:eng_AdjectiveAttributiveconstruction_2 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm cx:eng_AdjectiveAttributiveconstruction_2_Form .
 
 cx:eng_AdjectiveAttributiveconstruction_2_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_AdjectivePhrase .
 
-cx:eng_AdjectiveAttributiveconstruction_3 a rcxn:SlotMandatory ;
+cx:eng_AdjectiveAttributiveconstruction_3 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm cx:eng_AdjectiveAttributiveconstruction_3_Form .
 
 cx:eng_AdjectiveAttributiveconstruction_3_Form a rcxn:SlotForm ;
@@ -494,19 +494,19 @@ cx:Copula_MD a rcxn:Metadata ;
 
 cx:eng_AdjectivePhrase rcxn:elementOf cx:eng_AdjectivePredicativeconstruction .
 
-cx:eng_AdjectivePredicativeconstruction_1 a rcxn:SlotMandatory ;
+cx:eng_AdjectivePredicativeconstruction_1 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm cx:eng_AdjectivePredicativeconstruction_1_Form .
 
 cx:eng_AdjectivePredicativeconstruction_1_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_Phrase .
 
-cx:eng_AdjectivePredicativeconstruction_2 a rcxn:SlotMandatory ;
+cx:eng_AdjectivePredicativeconstruction_2 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm cx:eng_AdjectivePredicativeconstruction_2_Form .
 
 cx:eng_AdjectivePredicativeconstruction_2_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:Copula .
 
-cx:eng_AdjectivePredicativeconstruction_3 a rcxn:SlotMandatory ;
+cx:eng_AdjectivePredicativeconstruction_3 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm cx:eng_AdjectivePredicativeconstruction_3_Form .
 
 cx:eng_AdjectivePredicativeconstruction_3_Form a rcxn:SlotForm ;

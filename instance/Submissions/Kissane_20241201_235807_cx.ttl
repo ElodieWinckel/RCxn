@@ -23,7 +23,7 @@ cx:engLME_GIVEOUTVerbParticleConstruction_1 a rcxn:SlotOptional ;
 cx:engLME_GIVEOUTVerbParticleConstruction_1_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_NounPhrase .
 
-cx:engLME_GIVEOUTVerbParticleConstruction_2 a rcxn:SlotMandatory ;
+cx:engLME_GIVEOUTVerbParticleConstruction_2 a rcxn:SlotObligatory ;
     cx:WordOrder "Element 2 follows Element 1" ;
     rcxn:hasSlotForm cx:engLME_GIVEOUTVerbParticleConstruction_2_Form .
 
@@ -31,7 +31,7 @@ cx:engLME_GIVEOUTVerbParticleConstruction_2_Form a rcxn:SlotForm ;
     rcxn:hasStem cx:eng_give ;
     rcxn:hasSyntacticForm cx:eng_Verb .
 
-cx:engLME_GIVEOUTVerbParticleConstruction_3 a rcxn:SlotMandatory ;
+cx:engLME_GIVEOUTVerbParticleConstruction_3 a rcxn:SlotObligatory ;
     cx:WordOrder "Element 3 follows Element 2 but not necessarily directly" ;
     rcxn:hasSlotForm cx:engLME_GIVEOUTVerbParticleConstruction_3_Form .
 
@@ -39,7 +39,7 @@ cx:engLME_GIVEOUTVerbParticleConstruction_3_Form a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "out" ;
     rcxn:hasSyntacticForm cx:eng_Particle .
 
-cx:engLME_GIVEOUTVerbParticleConstruction_4 a rcxn:SlotMandatory ;
+cx:engLME_GIVEOUTVerbParticleConstruction_4 a rcxn:SlotObligatory ;
     cx:hasOtherSemanticContribution "AFFECTED ACTION" .
 
 cx:engLME_GIVEOUTVerbParticleConstruction_Ex_A a cx:Example ;

@@ -21,11 +21,11 @@ cx:eng_self_motion_construction_1 a rcxn:SlotOptional ;
     rcxn:hasCasaSyntacticFunction "potential subject" .
 
 
-cx:eng_self_motion_construction_2 a rcxn:SlotMandatory ;
+cx:eng_self_motion_construction_2 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm "V" .
 
 
-cx:eng_self_motion_construction_3 a rcxn:SlotMandatory ;
+cx:eng_self_motion_construction_3 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm "PP" ;
     rcxn:hasOtherSemanticContribution "Source / path / direction / goal" ;
     rcxn:hasSyntacticFunction "unit in predicate" ;

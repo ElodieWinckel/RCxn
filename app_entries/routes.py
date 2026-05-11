@@ -111,7 +111,7 @@ def identify_construction_element_triples(slots_uri):
             })
         # Gather triplets
         for predicate, obj in g.predicate_objects(subject=slot_uri):
-            if str(predicate) == "http://www.w3.org/1999/02/22-rdf-syntax-ns#type":  # special case for type mandatory/optional slot
+            if str(predicate) == "http://www.w3.org/1999/02/22-rdf-syntax-ns#type":  # special case for type obligatory/optional slot
                 elements.append({
                     'subject': element_number,
                     'property': "Optionality",

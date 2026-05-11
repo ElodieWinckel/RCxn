@@ -33,20 +33,20 @@ This is a similar publicly available dataset: https://github.com/SPOClab-ca/neur
 
 membr:Project_Ramezani rsrch:hasResearchQuestion membr:Project_Ramezani_250214 .
 
-cx:engLME_Argumentstructureconstruction_1 a rcxn:SlotMandatory ;
+cx:engLME_Argumentstructureconstruction_1 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm cx:engLME_Argumentstructureconstruction_1_Form ;
     rcxn:hasSyntacticFunction "Subject" .
 
 cx:engLME_Argumentstructureconstruction_1_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_Phrase .
 
-cx:engLME_Argumentstructureconstruction_2 a rcxn:SlotMandatory ;
+cx:engLME_Argumentstructureconstruction_2 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm cx:engLME_Argumentstructureconstruction_2_Form .
 
 cx:engLME_Argumentstructureconstruction_2_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_Verb .
 
-cx:engLME_Argumentstructureconstruction_3 a rcxn:SlotMandatory ;
+cx:engLME_Argumentstructureconstruction_3 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm cx:engLME_Argumentstructureconstruction_3_Form ;
     rcxn:hasSyntacticFunction "Complement(s)" .
 

@@ -30,7 +30,7 @@ cx:lzh_Dooperationwithoperand1onoperand2construction_1_Form a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "以" ;
     rcxn:hasSyntacticForm cx:zho_Particle .
 
-cx:lzh_Dooperationwithoperand1onoperand2construction_2 a rcxn:SlotMandatory ;
+cx:lzh_Dooperationwithoperand1onoperand2construction_2 a rcxn:SlotObligatory ;
     cx:WordOrder "Immediately before Element 3" ;
     rcxn:hasSlotForm cx:lzh_Dooperationwithoperand1onoperand2construction_2_Form ;
     olia:hasSemanticRole olia:InstrumentRole ;
@@ -40,7 +40,7 @@ cx:lzh_Dooperationwithoperand1onoperand2construction_2 a rcxn:SlotMandatory ;
 cx:lzh_Dooperationwithoperand1onoperand2construction_2_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:zho_NounPhrase .
 
-cx:lzh_Dooperationwithoperand1onoperand2construction_3 a rcxn:SlotMandatory ;
+cx:lzh_Dooperationwithoperand1onoperand2construction_3 a rcxn:SlotObligatory ;
     cx:WordOrder "Immediately after Element 2" ;
     rcxn:hasSlotForm cx:lzh_Dooperationwithoperand1onoperand2construction_3_Form ;
     RDFS:comment "colloprofile: 加 (frequent), 減 (frequent), 乘 (frequent), 除 (frequent)" .
@@ -48,7 +48,7 @@ cx:lzh_Dooperationwithoperand1onoperand2construction_3 a rcxn:SlotMandatory ;
 cx:lzh_Dooperationwithoperand1onoperand2construction_3_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:zho_VerbPhrase .
 
-cx:lzh_Dooperationwithoperand1onoperand2construction_4 a rcxn:SlotMandatory ;
+cx:lzh_Dooperationwithoperand1onoperand2construction_4 a rcxn:SlotObligatory ;
     cx:WordOrder "Immediately after Element 3" ;
     rcxn:hasSlotForm cx:lzh_Dooperationwithoperand1onoperand2construction_4_Form ;
     olia:hasSemanticRole olia:UndergoerMacroRole ;

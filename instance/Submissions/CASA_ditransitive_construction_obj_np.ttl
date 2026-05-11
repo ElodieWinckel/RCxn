@@ -27,20 +27,20 @@ cx:eng_ditransitive_construction_obj_np_1 a rcxn:SlotOptional ;
     rcxn:hasCasaSyntacticFunction "potential subject" .
 
 
-cx:eng_ditransitive_construction_obj_np_2 a rcxn:SlotMandatory ;
+cx:eng_ditransitive_construction_obj_np_2 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm "V" ;
     RDFS:comment "Source for collo-profile: Valency Dictionary of English, British National Corpus" ,
         "colloprofile: give  tell  bring  cost  offer  send  show  allow  ask  buy  cause  do  find  get  grant  hand  owe  lend  make  pay  save  take  wish  afford  answer  award  bid  build  call  concede  create  cut  deal  design  deny  draw  drop  earn  ensure  feed  fix  forbid  gain  guarantee  hire  insure  lead  lease  leave  lend  light  loose  make  mix  order  pack  pass  permit  pick  play  pour  prepare  promise  quote  read  refuse  rent  sell  serve  set  shoot  sing  slip  spare  strike  teach  throw  win  write  bet  excuse" .
 
 
-cx:eng_ditransitive_construction_obj_np_3 a rcxn:SlotMandatory ;
+cx:eng_ditransitive_construction_obj_np_3 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm "NP" ;
     rcxn:hasOtherSemanticContribution "Recipient" ;
     rcxn:hasSyntacticFunction "unit in predicate" ;
     rcxn:hasCasaSyntacticFunction "Obj" .
 
 
-cx:eng_ditransitive_construction_obj_np_4 a rcxn:SlotMandatory ;
+cx:eng_ditransitive_construction_obj_np_4 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm "NP" ;
     rcxn:hasOtherSemanticContribution "Æffected" ;
     rcxn:hasSyntacticFunction "unit in predicate" ;

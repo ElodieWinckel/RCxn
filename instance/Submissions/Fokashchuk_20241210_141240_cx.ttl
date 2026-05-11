@@ -18,7 +18,7 @@ cx:deuStdHigh_AllativeNP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions a rcxn:C
     rcxn:hasSlots cx:deuStdHigh_AllativeNP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_slots ;
     lg:partOfLanguage lg:deuStdHigh .
 
-cx:deuStdHigh_AllativeNP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_1 a rcxn:SlotMandatory ;
+cx:deuStdHigh_AllativeNP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_1 a rcxn:SlotObligatory ;
     rcxn:hasIS rcxn:Focus ;
     rcxn:hasSlotForm cx:deuStdHigh_AllativeNP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_1_Form ;
     cx:hasIndex cx:deuStdHigh_AllativeNP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_1_Index ;
@@ -31,7 +31,7 @@ cx:deuStdHigh_AllativeNP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_1_Form a
 cx:deuStdHigh_AllativeNP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_1_Index a cx:Individual ;
     olia:hasAnimacy olia:Inanimate .
 
-cx:deuStdHigh_AllativeNP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_2 a rcxn:SlotMandatory ;
+cx:deuStdHigh_AllativeNP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_2 a rcxn:SlotObligatory ;
     cx:WordOrder "follows Element 1" ;
     rcxn:hasSlotForm cx:deuStdHigh_AllativeNP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_2_Form ;
     rcxn:hasSlots cx:deuStdHigh_AllativeNP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_2_slots .
@@ -39,7 +39,7 @@ cx:deuStdHigh_AllativeNP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_2 a rcxn
 cx:deuStdHigh_AllativeNP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_2_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_PrepositionalPhrase .
 
-cx:deuStdHigh_AllativeNP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_3 a rcxn:SlotMandatory ;
+cx:deuStdHigh_AllativeNP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_3 a rcxn:SlotObligatory ;
     cx:WordOrder "first element of Element 2" ;
     rcxn:hasSlotForm cx:deuStdHigh_AllativeNP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_3_Form ;
     olia:hasSemanticRole olia:DirectionRole .
@@ -48,7 +48,7 @@ cx:deuStdHigh_AllativeNP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_3_Form a
     rcxn:hasSurfaceForm "auf" ;
     rcxn:hasSurfaceForm "an" .
 
-cx:deuStdHigh_AllativeNP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_4 a rcxn:SlotMandatory ;
+cx:deuStdHigh_AllativeNP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_4 a rcxn:SlotObligatory ;
     cx:WordOrder "follows Element 3" ;
     rcxn:hasIS rcxn:Background ;
     rcxn:hasSyntacticFunction "complement of Element 3" ;

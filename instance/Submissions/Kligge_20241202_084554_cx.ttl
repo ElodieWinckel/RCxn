@@ -52,13 +52,13 @@
     rcxn:hasTitle "NP[den+ ADJ-en N]acc.sg.masc" ;
     lg:partOfLanguage lg:deu .
 
-<http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_1> a rcxn:SlotMandatory ;
+<http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_1> a rcxn:SlotObligatory ;
     cx:WordOrder "Element 1 immediately before Element 2." .
 
-<http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_2> a rcxn:SlotMandatory ;
+<http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_2> a rcxn:SlotObligatory ;
     cx:WordOrder "Element 2 immediately before Element 3." .
 
-<http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_3> a rcxn:SlotMandatory .
+<http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_3> a rcxn:SlotObligatory .
 
 <http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_MD> a rcxn:Metadata ;
     rcxn:annotator membr:Kligge ;

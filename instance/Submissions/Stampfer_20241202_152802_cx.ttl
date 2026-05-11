@@ -21,13 +21,13 @@ cx:engUsUkWr_EvaluativeAttributionConstruction_1 a rcxn:SlotOptional ;
 cx:engUsUkWr_EvaluativeAttributionConstruction_1_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_NounPhrase .
 
-cx:engUsUkWr_EvaluativeAttributionConstruction_2 a rcxn:SlotMandatory ;
+cx:engUsUkWr_EvaluativeAttributionConstruction_2 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm cx:engUsUkWr_EvaluativeAttributionConstruction_2_Form .
 
 cx:engUsUkWr_EvaluativeAttributionConstruction_2_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_VerbPhrase .
 
-cx:engUsUkWr_EvaluativeAttributionConstruction_3 a rcxn:SlotMandatory ;
+cx:engUsUkWr_EvaluativeAttributionConstruction_3 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm cx:engUsUkWr_EvaluativeAttributionConstruction_3_Form ;
     rcxn:hasOtherSemanticContribution "Attributee" .
 
@@ -40,7 +40,7 @@ cx:engUsUkWr_EvaluativeAttributionConstruction_4 a rcxn:SlotOptional ;
 cx:engUsUkWr_EvaluativeAttributionConstruction_4_Form a rcxn:SlotForm ;
     rcxn:hasStem cx:eng_be .
 
-cx:engUsUkWr_EvaluativeAttributionConstruction_5 a rcxn:SlotMandatory ;
+cx:engUsUkWr_EvaluativeAttributionConstruction_5 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm cx:engUsUkWr_EvaluativeAttributionConstruction_5_Form ;
     rcxn:hasOtherSemanticContribution "Attribute" .
 

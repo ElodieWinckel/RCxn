@@ -81,7 +81,7 @@ cx:deuWrSt20_sichNPADJADVvorAugenVP_3 a rcxn:SlotOptional ;
 cx:deuWrSt20_sichNPADJADVvorAugenVP_3_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:deu_Adverb .
 
-cx:deuWrSt20_sichNPADJADVvorAugenVP_4 a rcxn:SlotMandatory ;
+cx:deuWrSt20_sichNPADJADVvorAugenVP_4 a rcxn:SlotObligatory ;
     cx:WordOrder "The preposition \"vor\" appears in direct syntactic proximity to the noun \"Augen\", forming a fixed prepositional phrase. " ;
     cx:hasIS cx:Background,
         cx:Comment ;
@@ -93,7 +93,7 @@ cx:deuWrSt20_sichNPADJADVvorAugenVP_4 a rcxn:SlotMandatory ;
 cx:deuWrSt20_sichNPADJADVvorAugenVP_4_Form a rcxn:SlotForm ;
     rcxn:hasStem cx:deu_vor .
 
-cx:deuWrSt20_sichNPADJADVvorAugenVP_5 a rcxn:SlotMandatory ;
+cx:deuWrSt20_sichNPADJADVvorAugenVP_5 a rcxn:SlotObligatory ;
     cx:WordOrder "The noun always directly follows the preposition \"vor\"." ;
     cx:hasIS cx:Background,
         cx:Comment ;

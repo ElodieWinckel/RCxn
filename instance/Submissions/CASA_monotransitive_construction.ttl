@@ -22,11 +22,11 @@ cx:eng_monotransitive_construction_1 a rcxn:SlotOptional ;
     rcxn:hasCasaSyntacticFunction "potential subject" .
 
 
-cx:eng_monotransitive_construction_2 a rcxn:SlotMandatory ;
+cx:eng_monotransitive_construction_2 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm "V" .
 
 
-cx:eng_monotransitive_construction_3 a rcxn:SlotMandatory ;
+cx:eng_monotransitive_construction_3 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm "NP" ;
     rcxn:hasOtherSemanticContribution "Æffected" ;
     rcxn:hasSyntacticFunction "unit in predicate" ;

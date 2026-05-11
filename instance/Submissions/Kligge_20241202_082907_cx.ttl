@@ -43,21 +43,21 @@ cx:deu_NPADJstrongPLUSADJstrongPLUSN a rcxn:Metadata ;
     rcxn:annotator membr:Kligge ;
     dcterm:created "2024-12-02"^^xsd:date .
 
-<http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_1> a rcxn:SlotMandatory ;
+<http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_1> a rcxn:SlotObligatory ;
     rcxn:hasSlotForm <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_1_Form> ;
     cx:WordOrder "element 1 immediately before element 2" .
 
 <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_1_Form> a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:deu_DefiniteDeterminer .
 
-<http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_2> a rcxn:SlotMandatory ;
+<http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_2> a rcxn:SlotObligatory ;
     rcxn:hasSlotForm <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_2_Form> ;
     cx:WordOrder "element 2 immediately before element 3".
 
 <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_2_Form> a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:deu_Adjective .
 
-<http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_3> a rcxn:SlotMandatory ;
+<http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_3> a rcxn:SlotObligatory ;
     rcxn:hasSlotForm <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_3_Form> .
 
 <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_3_Form> a rcxn:SlotForm ;

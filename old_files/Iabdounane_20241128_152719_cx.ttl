@@ -20,7 +20,7 @@ The gesture is sometimes used a few milliseconds before uttering "this" and is m
     lg:partOfLanguage lg:engUsSpo ;
     RDFS:comment "I would need to upload an Excel file with all the concordance lines and a link with all the video-snippets" .
 
-cx:ThisCloseToV-ing_1 a rcxn:SlotMandatory ;
+cx:ThisCloseToV-ing_1 a rcxn:SlotObligatory ;
     cx:WordOrder "Element 1 comes immediately before Element 2" ;
     rcxn:hasSlotForm cx:ThisCloseToV-ing_1_Form ;
     cx:hasIndex cx:ThisCloseToV-ing_1_Index .
@@ -31,14 +31,14 @@ cx:ThisCloseToV-ing_1_Form a rcxn:SlotForm ;
 cx:ThisCloseToV-ing_1_Index a cx:Event ;
     olia:hasVoice olia:ActiveVoice .
 
-cx:ThisCloseToV-ing_2 a rcxn:SlotMandatory ;
+cx:ThisCloseToV-ing_2 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm cx:ThisCloseToV-ing_2_Form ;
     cx:WordOrder "Element 2 comes immediately before Element 3" .
 
 cx:ThisCloseToV-ing_2_Form a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "this close to" .
 
-cx:ThisCloseToV-ing_3 a rcxn:SlotMandatory ;
+cx:ThisCloseToV-ing_3 a rcxn:SlotObligatory ;
     cx:WordOrder "Element 3 comes immediately before Element 4" ;
     rcxn:hasSlotForm cx:ThisCloseToV-ing_3_Form ;
     cx:colloprofile (
@@ -49,7 +49,7 @@ cx:ThisCloseToV-ing_3 a rcxn:SlotMandatory ;
 cx:ThisCloseToV-ing_3_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_VerbRoot .
 
-cx:ThisCloseToV-ing_4 a rcxn:SlotMandatory ;
+cx:ThisCloseToV-ing_4 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm cx:ThisCloseToV-ing_4_Form .
 
 cx:ThisCloseToV-ing_4_Form a rcxn:SlotForm ;

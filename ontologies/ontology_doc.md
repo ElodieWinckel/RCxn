@@ -119,7 +119,7 @@ So far, Image-Schema is just plain text. It would be nice to create a collection
 | :---- | :---- |
 | description | Optional construction elements; the meaning of the construction is not dependent on its realization. |
 | subclass of | rcxn\#Slot |
-| disjoint with | rcxn\#SlotMandatory |
+| disjoint with | rcxn\#SlotObligatory |
 
 The URI for elements is based on the URI of the construction, followed by a \_ and the number of the sot (1, 2, 3 etc.). We still need to integrate embedded elements into the system (i.e., element 1 consisting of element 1.1 and 1.2).
 

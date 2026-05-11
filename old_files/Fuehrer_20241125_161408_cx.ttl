@@ -75,7 +75,7 @@ cx:Transitivedurch-Präfixverbkonstruktion_1_Form a rcxn:SlotForm ;
 cx:Transitivedurch-Präfixverbkonstruktion_1_Index a cx:Individual ;
     olia:hasAnimacy olia:Animate .
 
-cx:Transitivedurch-Präfixverbkonstruktion_2 a rcxn:SlotMandatory ;
+cx:Transitivedurch-Präfixverbkonstruktion_2 a rcxn:SlotObligatory ;
     cx:WordOrder "2 vor 3" ;
     rcxn:hasSlotForm cx:Transitivedurch-Präfixverbkonstruktion_2_Form ;
     cx:hasTranslation "'durch'" ;
@@ -85,7 +85,7 @@ cx:Transitivedurch-Präfixverbkonstruktion_2_Form a rcxn:SlotForm ;
     rcxn:hasStem "durh" ;
     rcxn:hasSyntacticForm cx:gmh_Prefix .
 
-cx:Transitivedurch-Präfixverbkonstruktion_3 a rcxn:SlotMandatory ;
+cx:Transitivedurch-Präfixverbkonstruktion_3 a rcxn:SlotObligatory ;
     cx:WordOrder "3 nach 2" ;
     rcxn:hasSlotForm cx:Transitivedurch-Präfixverbkonstruktion_3_Form ;
     cx:hasIndex cx:Transitivedurch-Präfixverbkonstruktion_3_Index ;
@@ -107,7 +107,7 @@ cx:Transitivedurch-Präfixverbkonstruktion_3_Form a rcxn:SlotForm ;
 cx:Transitivedurch-Präfixverbkonstruktion_3_Index a cx:Event ;
     olia:hasVoice olia:ActiveVoice .
 
-cx:Transitivedurch-Präfixverbkonstruktion_4 a rcxn:SlotMandatory ;
+cx:Transitivedurch-Präfixverbkonstruktion_4 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm cx:Transitivedurch-Präfixverbkonstruktion_4_Form ;
     rcxn:hasOtherSemanticContribution "Location" ;
     rcxn:hasOtherSemanticContribution "Undergoer" ;

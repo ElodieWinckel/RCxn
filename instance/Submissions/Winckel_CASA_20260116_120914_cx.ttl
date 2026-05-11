@@ -30,7 +30,7 @@ cx:Noun_MD a rcxn:Metadata ;
     cx:annotator membr:Winckel ;
     dcterm:created "2026-01-16"^^xsd:date .
 
-cx:eng_GenitiveNPConstruction_1 a rcxn:SlotMandatory ;
+cx:eng_GenitiveNPConstruction_1 a rcxn:SlotObligatory ;
     rcxn:hasSlots cx:eng_GenitiveNPConstruction_1_slots ;
     olia:hasSemanticRole olia:PossessorRole ;
     RDFS:comment "[1] president’s state’s government’s week’s party’s court’s night’s ..." ,
@@ -40,14 +40,14 @@ cx:eng_GenitiveNPConstruction_1 a rcxn:SlotMandatory ;
         "[5] students' partners' teachers' ..." ,
         "colloprofile: his  my  her  your  their  our  its  one's  everyone's  everything's  everybody's  nobody's  each other's  " .
 
-cx:eng_GenitiveNPConstruction_2 a rcxn:SlotMandatory ;
+cx:eng_GenitiveNPConstruction_2 a rcxn:SlotObligatory ;
     rcxn:hasPhonology "[1] Nsg ending in voiceless consonant except /s, ʃ, tʃ/" ,
         "[2] Nsg ending in vowel or voiced consonant except /z, ʒ, ʤ/" ,
         "[3] Nsg ending in /s, z, ʃ, ʒ, tʃ, ʤ/ " ,
         "[4] Npl in <en> ",
         "[5] Npl in <s>	" .
 
-cx:eng_GenitiveNPConstruction_3 a rcxn:SlotMandatory ;
+cx:eng_GenitiveNPConstruction_3 a rcxn:SlotObligatory ;
     rcxn:hasPhonology "[1] /s/" ,
         "[2] /z/" ,
         "[3] /ɪz/" ,
@@ -56,7 +56,7 @@ cx:eng_GenitiveNPConstruction_3 a rcxn:SlotMandatory ;
     rcxn:hasSurfaceForm "[1, 2, 3, 4] <'s>" ,
         "[5] <'>" .
 
-cx:eng_GenitiveNPConstruction_4 a rcxn:SlotMandatory ;
+cx:eng_GenitiveNPConstruction_4 a rcxn:SlotObligatory ;
     rcxn:hasOtherSemanticContribution "Referent" ;
     rcxn:hasSlotForm cx:eng_GenitiveNPConstruction_4_Form .
 

@@ -559,10 +559,10 @@ def form_submit():
         other_element_specification = request.form[f'element_specification_{i}']
 
         # Define element/slot as belonging to a subclass of the "Slot" class,
-        # either by being a non-optional slot (SlotMandatory) or an optional slot (SlotOptional).
+        # either by being a non-optional slot (SlotObligatory) or an optional slot (SlotOptional).
         optionality = request.form[f'optionality_{i}']
         if optionality == "non-optional":
-            optionality_uri = "SlotMandatory"
+            optionality_uri = "SlotObligatory"
         else:
             optionality_uri = "SlotOptional"
         g.add((element_uri, RDF.type, rcxn[optionality_uri]))

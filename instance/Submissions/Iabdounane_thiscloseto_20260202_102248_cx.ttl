@@ -24,7 +24,7 @@ cx:eng_PrepositionalPhrasetoPLUSVing_MD a rcxn:Metadata ;
 cx:eng_ThisclosetoVingconstruction_1 a rcxn:SlotOptional ;
     rcxn:hasSyntacticFunction "Subject" .
 
-cx:eng_ThisclosetoVingconstruction_2 a rcxn:SlotMandatory ;
+cx:eng_ThisclosetoVingconstruction_2 a rcxn:SlotObligatory ;
     rcxn:hasSlots cx:eng_ThisclosetoVingconstruction_2_slots ;
     rcxn:hasOtherSemanticContribution "CLOSE" ;
     rcxn:hasSyntacticFunction "PREDICATOR" .
@@ -39,19 +39,19 @@ cx:eng_ThisclosetoVingconstruction_3 a rcxn:SlotOptional ;
 cx:eng_ThisclosetoVingconstruction_3_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_Verb .
 
-cx:eng_ThisclosetoVingconstruction_4 a rcxn:SlotMandatory ;
+cx:eng_ThisclosetoVingconstruction_4 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm cx:eng_ThisclosetoVingconstruction_4_Form .
 
 cx:eng_ThisclosetoVingconstruction_4_Form a rcxn:SlotForm ;
     rcxn:hasStem cx:eng_this .
 
-cx:eng_ThisclosetoVingconstruction_5 a rcxn:SlotMandatory ;
+cx:eng_ThisclosetoVingconstruction_5 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm cx:eng_ThisclosetoVingconstruction_5_Form .
 
 cx:eng_ThisclosetoVingconstruction_5_Form a rcxn:SlotForm ;
     rcxn:hasStem cx:eng_close .
 
-cx:eng_ThisclosetoVingconstruction_6 a rcxn:SlotMandatory ;
+cx:eng_ThisclosetoVingconstruction_6 a rcxn:SlotObligatory ;
     olia:hasSemanticRole olia:GoalRole ;
     rcxn:hasSlotForm cx:eng_ThisclosetoVingconstruction_6_Form ;
     rcxn:hasSyntacticFunction "Complement" ;

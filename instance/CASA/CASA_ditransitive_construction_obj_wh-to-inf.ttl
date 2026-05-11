@@ -22,20 +22,20 @@ cx:eng_ditransitive_construction_obj_wh_to_inf_1 a rcxn:SlotOptional ;
     rcxn:hasCasaSyntacticFunction "potential subject" .
 
 
-cx:eng_ditransitive_construction_obj_wh_to_inf_2 a rcxn:SlotMandatory ;
+cx:eng_ditransitive_construction_obj_wh_to_inf_2 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm "V" ;
     RDFS:comment "Source for collo-profile: Valency Dictionary of English, Patternbank,
         "colloprofile: advise  ask  instruct  remind  show  teach  tell" .
 
 
-cx:eng_ditransitive_construction_obj_wh_to_inf_3 a rcxn:SlotMandatory ;
+cx:eng_ditransitive_construction_obj_wh_to_inf_3 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm "NP" ;
     rcxn:hasOtherSemanticContribution "Recipient" ;
     rcxn:hasSyntacticFunction "unit in predicate" ;
     rcxn:hasCasaSyntacticFunction "Obj" .
 
 
-cx:eng_ditransitive_construction_obj_wh_to_inf_4 a rcxn:SlotMandatory ;
+cx:eng_ditransitive_construction_obj_wh_to_inf_4 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm "wh to_INF" ;
     rcxn:hasOtherSemanticContribution "Æffected" ;
     rcxn:hasSyntacticFunction "unit in predicate" ;

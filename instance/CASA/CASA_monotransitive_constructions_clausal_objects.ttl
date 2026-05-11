@@ -21,11 +21,11 @@ cx:eng_monotransitive_constructions_clausal_objects_1 a rcxn:SlotOptional ;
     rcxn:hasCasaSyntacticFunction "potential subject" .
 
 
-cx:eng_monotransitive_constructions_clausal_objects_2 a rcxn:SlotMandatory ;
+cx:eng_monotransitive_constructions_clausal_objects_2 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm "V" .
 
 
-cx:eng_monotransitive_constructions_clausal_objects_3 a rcxn:SlotMandatory ;
+cx:eng_monotransitive_constructions_clausal_objects_3 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm "V-ing-CL to_INF-CL that_CL wh-CL wh_to_inf-CL NP V-ing NP to_inf-CL NP inf-CL NP V-en-CL NP PP" ;
     rcxn:hasOtherSemanticContribution "Æffected" ;
     rcxn:hasSyntacticFunction "unit in predicate" ;

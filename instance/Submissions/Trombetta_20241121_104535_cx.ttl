@@ -78,7 +78,7 @@ cx:ItalianTemporalSubordinateClause_MD a rcxn:Metadata ;
     rcxn:annotator membr:Trombetta ;
     dcterm:created "2024-11-21"^^xsd:date .
 
-cx:Relative-Topic-ShiftConstruction_1 a rcxn:SlotMandatory ;
+cx:Relative-Topic-ShiftConstruction_1 a rcxn:SlotObligatory ;
     rcxn:hasSlots cx:Relative-Topic-ShiftConstruction_1_slots ;
     cx:WordOrder "Element 1 immediately before element 4" ;
     rcxn:hasSlotForm cx:Relative-Topic-ShiftConstruction_1_Form ;
@@ -88,7 +88,7 @@ cx:Relative-Topic-ShiftConstruction_1_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:ItalianConiunctioRelativa,
         cx:ita_NounPhrase .
 
-cx:Relative-Topic-ShiftConstruction_2 a rcxn:SlotMandatory ;
+cx:Relative-Topic-ShiftConstruction_2 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm cx:Relative-Topic-ShiftConstruction_1_Form .
 
 cx:Relative-Topic-ShiftConstruction_2_Form a rcxn:SlotForm ;
@@ -102,17 +102,17 @@ cx:Relative-Topic-ShiftConstruction_3 a rcxn:SlotOptional ;
 cx:Relative-Topic-ShiftConstruction_3_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:ita_Noun .
 
-cx:Relative-Topic-ShiftConstruction_4 a rcxn:SlotMandatory ;
+cx:Relative-Topic-ShiftConstruction_4 a rcxn:SlotObligatory ;
     rcxn:hasSlots cx:Relative-Topic-ShiftConstruction_4_slots .
 
-cx:Relative-Topic-ShiftConstruction_5 a rcxn:SlotMandatory ;
+cx:Relative-Topic-ShiftConstruction_5 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm cx:Relative-Topic-ShiftConstruction_5_Form ;
     cx:WordOrder "Element 5 immediately before Element 6" .
 
 cx:Relative-Topic-ShiftConstruction_5_Form a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "mentre che" .
 
-cx:Relative-Topic-ShiftConstruction_6 a rcxn:SlotMandatory ;
+cx:Relative-Topic-ShiftConstruction_6 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm cx:Relative-Topic-ShiftConstruction_6_Form ;
     RDFS:comment "The verb is often, though not exclusively, in the present tense. It frequently, but not exclusively, features a \"si passivante\" construction (formed by the particle 'si' combined with a transitive verb to convey a passive meaning). Additionally, the VP may have a more complex internal structure, incorporating various other elements. The verb appearing in the VP often anaphorically references an action or process already mentioned in the preceding co-text. This can occur either through direct repetition of the same verb or through synonyms" .
 

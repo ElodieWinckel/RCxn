@@ -60,14 +60,14 @@ cx:engLME_Rollupyoursleeves_MD a rcxn:Metadata ;
     rcxn:hasTitle "mār āstin-e xod parvarāndan: to nurture a snake in one's bosom" ;
     lg:partOfLanguage lg:pes .
 
-cx:deu_AusdemAErmelschuettelnconstruction_1 a rcxn:SlotMandatory ;
+cx:deu_AusdemAErmelschuettelnconstruction_1 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm cx:deu_AusdemAErmelschuettelnconstruction_1_Form ;
     rcxn:hasSlots cx:deu_AusdemAErmelschuettelnconstruction_1_slots .
 
 cx:deu_AusdemAErmelschuettelnconstruction_1_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:deu_PrepositionalPhrase .
 
-cx:deu_AusdemAErmelschuettelnconstruction_2 a rcxn:SlotMandatory ;
+cx:deu_AusdemAErmelschuettelnconstruction_2 a rcxn:SlotObligatory ;
     cx:WordOrder "Initial position in Element 1" ;
     rcxn:hasSlotForm cx:deu_AusdemAErmelschuettelnconstruction_2_Form ;
     cx:hasTranslation "out of" ;
@@ -78,7 +78,7 @@ cx:deu_AusdemAErmelschuettelnconstruction_2_Form a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "aus" ;
     rcxn:hasSyntacticForm cx:deu_Preposition .
 
-cx:deu_AusdemAErmelschuettelnconstruction_3 a rcxn:SlotMandatory ;
+cx:deu_AusdemAErmelschuettelnconstruction_3 a rcxn:SlotObligatory ;
     cx:WordOrder "follows Element 2, precedes Element 4" ;
     rcxn:hasSlotForm cx:deu_AusdemAErmelschuettelnconstruction_3_Form ;
     cx:hasTranslation "the" ;
@@ -94,7 +94,7 @@ cx:deu_AusdemAErmelschuettelnconstruction_3_Index a cx:Individual ;
     olia:hasGender olia:Masculine ;
     olia:hasNumber olia:Singular .
 
-cx:deu_AusdemAErmelschuettelnconstruction_4 a rcxn:SlotMandatory ;
+cx:deu_AusdemAErmelschuettelnconstruction_4 a rcxn:SlotObligatory ;
     cx:WordOrder "Follows Element 3" ;
     rcxn:hasSlotForm cx:deu_AusdemAErmelschuettelnconstruction_4_Form ;
     cx:hasTranslation "sleeve" ;
@@ -111,7 +111,7 @@ cx:deu_AusdemAErmelschuettelnconstruction_4_Index a cx:Individual ;
     olia:hasGender olia:Masculine ;
     olia:hasNumber olia:Singular .
 
-cx:deu_AusdemAErmelschuettelnconstruction_5 a rcxn:SlotMandatory ;
+cx:deu_AusdemAErmelschuettelnconstruction_5 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm cx:deu_AusdemAErmelschuettelnconstruction_5_Form ;
     cx:hasTranslation "to shake" ;
     cx:hasIndex cx:deu_AusdemAErmelschuettelnconstruction_5_Index ;

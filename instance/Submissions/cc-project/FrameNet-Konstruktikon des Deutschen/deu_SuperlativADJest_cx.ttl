@@ -55,7 +55,7 @@ cx:deu_Adjektivstamm_MD a rcxn:Metadata ;
     cx:annotator membr:Winckel ;
     dcterm:created "2026-04-13"^^xsd:date .
 
-<http://example.org/cx/deu_SuperlativADJest_2> a rcxn:SlotMandatory ;
+<http://example.org/cx/deu_SuperlativADJest_2> a rcxn:SlotObligatory ;
     RDFS:comment "Das KE-lex -(e)st wird durch das Superlativsuffix -(e)st, welches an den Adjektivstamm – die Dimension – angehängt wird, realisiert. Das Suffix -(e)st sorgt für die superlative Steigerung desjenigen Adjektivs, dessen Stamm durch die Dimension beschrieben wird." ;
     rcxn:hasOtherSemanticContribution "Extremwert (Frame)" ;
     rcxn:hasSlotForm <http://example.org/cx/deu_SuperlativADJest_1_Form> .
@@ -63,7 +63,7 @@ cx:deu_Adjektivstamm_MD a rcxn:Metadata ;
 <http://example.org/cx/deu_SuperlativADJest_2_Form> a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "st(e)" .
 
-<http://example.org/cx/deu_SuperlativADJest_1> a rcxn:SlotMandatory ;
+<http://example.org/cx/deu_SuperlativADJest_1> a rcxn:SlotObligatory ;
     RDFS:comment "Das interne Kern-KE Dimension wird durch den Adjektivstamm, an welches das Superlativsuffix -(e)st - das KE-lex - angehängt wird, realisiert. Die Dimension beschreibt den Stamm desjenigen Adjektivs, welches durch das Suffix -(e)st superlativ gesteigert wird." ;
     rcxn:hasOtherSemanticContribution "Dimension", "Gradierbare Attribute (Frame)" ;
     rcxn:hasSlotForm <http://example.org/cx/deu_SuperlativADJest_2_Form> .

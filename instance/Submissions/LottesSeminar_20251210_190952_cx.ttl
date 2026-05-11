@@ -26,7 +26,7 @@ cx:Adjectiveexclamativeconstruction_MD a rcxn:Metadata ;
 
 cx:engInf_coolasadmirableconstruction rcxn:elementOf cx:engInf_Coolexclamativeconstruction .
 
-cx:engInf_Coolexclamativeconstruction_1 a rcxn:SlotMandatory ;
+cx:engInf_Coolexclamativeconstruction_1 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm cx:engInf_Coolexclamativeconstruction_1_Form .
 
 cx:engInf_Coolexclamativeconstruction_1_Form a rcxn:SlotForm ;

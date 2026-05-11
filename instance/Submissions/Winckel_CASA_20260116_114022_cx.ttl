@@ -40,7 +40,7 @@ cx:CausedMotionConstrutionPPto_MD a rcxn:Metadata ;
 <http://example.org/cx/eng_ditransitive_construction_obj_np_1_Form> a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_NounPhrase .
 
-<http://example.org/cx/eng_ditransitive_construction_obj_np_2> a rcxn:SlotMandatory ;
+<http://example.org/cx/eng_ditransitive_construction_obj_np_2> a rcxn:SlotObligatory ;
     RDFS:comment "colloprofile: give  tell  bring  cost  offer  send  show  allow  ask  buy  cause  do  find  get  grant  hand  owe  lend  make  pay  save  take  wish  afford  answer  award  bid  build  call  concede  create  cut  deal  design  deny  draw  drop  earn  ensure  feed  fix  forbid  gain  guarantee  hire  insure  lead  lease  leave  lend  light  loose  make  mix  order  pack  pass  permit  pick  play  pour  prepare  promise  quote  read  refuse  rent  sell  serve  set  shoot  sing  slip  spare  strike  teach  throw  win  write  " ,
         "Sources for collo-profile: Valency Dictionary of English, British National Corpus" ,
         "Borderline cases: bet excuse (attendance)" ;
@@ -49,7 +49,7 @@ cx:CausedMotionConstrutionPPto_MD a rcxn:Metadata ;
 <http://example.org/cx/eng_ditransitive_construction_obj_np_2_Form> a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_Verb .
 
-<http://example.org/cx/eng_ditransitive_construction_obj_np_3> a rcxn:SlotMandatory ;
+<http://example.org/cx/eng_ditransitive_construction_obj_np_3> a rcxn:SlotObligatory ;
     rcxn:hasOtherSemanticContribution "Recipient" ;
     rcxn:hasSlotForm <http://example.org/cx/eng_ditransitive_construction_obj_np_3_Form> ;
     rcxn:hasSyntacticFunction "indirect object" ;
@@ -58,7 +58,7 @@ cx:CausedMotionConstrutionPPto_MD a rcxn:Metadata ;
 <http://example.org/cx/eng_ditransitive_construction_obj_np_3_Form> a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_NounPhrase .
 
-<http://example.org/cx/eng_ditransitive_construction_obj_np_4> a rcxn:SlotMandatory ;
+<http://example.org/cx/eng_ditransitive_construction_obj_np_4> a rcxn:SlotObligatory ;
     rcxn:hasOtherSemanticContribution "Æffected" ;
     rcxn:hasSlotForm <http://example.org/cx/eng_ditransitive_construction_obj_np_4_Form> ;
     rcxn:hasSyntacticFunction "direct object" ;

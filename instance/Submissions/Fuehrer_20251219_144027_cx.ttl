@@ -26,7 +26,7 @@ cx:gmh_NounPhrase rcxn:elementOf <http://example.org/cx/gmh12C_Präfixverbkonstr
 
 cx:gmh_Prefix rcxn:elementOf <http://example.org/cx/gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit> .
 
-<http://example.org/cx/gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_1> a rcxn:SlotMandatory ;
+<http://example.org/cx/gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_1> a rcxn:SlotObligatory ;
     cx:WordOrder "1st" ;
     olia:hasSemanticRole olia:ActorMacroRole ;
     rcxn:hasSlotForm <http://example.org/cx/gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_1_Form> ;
@@ -35,7 +35,7 @@ cx:gmh_Prefix rcxn:elementOf <http://example.org/cx/gmh12C_Präfixverbkonstrukti
 <http://example.org/cx/gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_1_Form> a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:gmh_NounPhrase .
 
-<http://example.org/cx/gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_2> a rcxn:SlotMandatory ;
+<http://example.org/cx/gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_2> a rcxn:SlotObligatory ;
     cx:WordOrder "2nd" ;
     cx:hasTranslation "dt. 'durch'", "eng. 'through'" ;
     rcxn:hasSlotForm <http://example.org/cx/gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_2_Form> ;
@@ -46,7 +46,7 @@ cx:gmh_Prefix rcxn:elementOf <http://example.org/cx/gmh12C_Präfixverbkonstrukti
     rcxn:hasSurfaceForm "durch" ;
     rcxn:hasSyntacticForm cx:gmh_Prefix .
 
-<http://example.org/cx/gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_3> a rcxn:SlotMandatory ;
+<http://example.org/cx/gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_3> a rcxn:SlotObligatory ;
     cx:WordOrder "3rd" ;
     cx:hasTranslation "'to break'", "'to drive'" ;
     rcxn:hasSlotForm <http://example.org/cx/gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_3_Form> ;
@@ -56,7 +56,7 @@ cx:gmh_Prefix rcxn:elementOf <http://example.org/cx/gmh12C_Präfixverbkonstrukti
     rcxn:hasStem cx:gmh_brëchen, cx:gmh_varn ;
     rcxn:hasSyntacticForm cx:gmh_Verb .
 
-<http://example.org/cx/gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_4> a rcxn:SlotMandatory ;
+<http://example.org/cx/gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_4> a rcxn:SlotObligatory ;
     cx:WordOrder "4th" ;
     cx:hasTranslation "'through fire and water'", "'into the earth'", "'into the fighting hordes'" ;
     olia:hasSemanticRole olia:DirectionRole ;

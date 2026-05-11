@@ -18,7 +18,7 @@ cx:engLME_Burnonesbridgesconstruction a rcxn:Construction ;
     rcxn:hasSlots cx:engLME_Burnonesbridgesconstruction_slots ;
     lg:partOfLanguage lg:eng .
 
-cx:engLME_Burnonesbridgesconstruction_1 a rcxn:SlotMandatory ;
+cx:engLME_Burnonesbridgesconstruction_1 a rcxn:SlotObligatory ;
     cx:WordOrder "Initial position" ;
     rcxn:hasSlotForm cx:engLME_Burnonesbridgesconstruction_1_Form ;
     rcxn:hasSyntacticFunction "Subject" ;
@@ -31,7 +31,7 @@ cx:engLME_Burnonesbridgesconstruction_1_Form a rcxn:SlotForm ;
 cx:engLME_Burnonesbridgesconstruction_1_Index a cx:Individual ;
     olia:hasAnimacy olia:Animate .
 
-cx:engLME_Burnonesbridgesconstruction_2 a rcxn:SlotMandatory ;
+cx:engLME_Burnonesbridgesconstruction_2 a rcxn:SlotObligatory ;
     cx:WordOrder "Follows Element 1, precedes Element 3" ;
     rcxn:hasSlotForm cx:engLME_Burnonesbridgesconstruction_2_Form ;
     cx:hasIndex cx:engLME_Burnonesbridgesconstruction_2_Index .
@@ -44,7 +44,7 @@ cx:engLME_Burnonesbridgesconstruction_2_Index a cx:Event ;
     olia:hasModality olia:IndicativeVerb ;
     olia:hasVoice olia:ActiveVoice .
 
-cx:engLME_Burnonesbridgesconstruction_3 a rcxn:SlotMandatory ;
+cx:engLME_Burnonesbridgesconstruction_3 a rcxn:SlotObligatory ;
     cx:WordOrder "Precedes Element 4" ;
     rcxn:hasSlotForm cx:engLME_Burnonesbridgesconstruction_3_Form ;
     rcxn:hasSyntacticFunction "Determiner/Possessive modifier" ;
@@ -57,7 +57,7 @@ cx:engLME_Burnonesbridgesconstruction_3_Form a rcxn:SlotForm ;
 cx:engLME_Burnonesbridgesconstruction_3_Index a cx:Individual ;
     olia:hasAnimacy olia:Animate .
 
-cx:engLME_Burnonesbridgesconstruction_4 a rcxn:SlotMandatory ;
+cx:engLME_Burnonesbridgesconstruction_4 a rcxn:SlotObligatory ;
     cx:WordOrder "Final position" ;
     rcxn:hasSlotForm cx:engLME_Burnonesbridgesconstruction_4_Form ;
     cx:hasIndex cx:engLME_Burnonesbridgesconstruction_4_Index ;

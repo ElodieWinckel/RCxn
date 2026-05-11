@@ -4,8 +4,8 @@
 @prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#> .
 @prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
 @prefix ns1: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/compcon#> .
-@prefix ns2: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/casa#> .
-@prefix ns3: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rdata#> .
+@prefix ns2: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rdata#> .
+@prefix ns3: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/casa#> .
 @prefix olia: <http://purl.org/olia/olia.owl#> .
 @prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
 @prefix rd: <http://example.org/rd/> .
@@ -268,12 +268,12 @@ cx:Determiner_MD a rcxn:Metadata ;
         membr:Weigelt,
         membr:Winckel .
 
-cx:EnglishTransitiveconstruction_1 a rcxn:SlotMandatory ;
+cx:EnglishTransitiveconstruction_1 a rcxn:SlotObligatory ;
     rcxn:hasSyntacticFunction "Subject" .
 
-cx:EnglishTransitiveconstruction_2 a rcxn:SlotMandatory .
+cx:EnglishTransitiveconstruction_2 a rcxn:SlotObligatory .
 
-cx:EnglishTransitiveconstruction_3 a rcxn:SlotMandatory ;
+cx:EnglishTransitiveconstruction_3 a rcxn:SlotObligatory ;
     rcxn:hasSyntacticFunction "Object" .
 
 cx:EnglishTransitiveconstruction_Ex_A a cx:Example ;
@@ -383,21 +383,21 @@ cx:ItalianTemporalSubordinateClause_MD a rcxn:Metadata ;
     dcterms:created "2024-12-02"^^xsd:date ;
     rcxn:annotator membr:Kligge .
 
-<http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_1> a rcxn:SlotMandatory ;
+<http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_1> a rcxn:SlotObligatory ;
     cx:WordOrder "element 1 immediately before element 2" ;
     rcxn:hasSlotForm <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_1_Form> .
 
 <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_1_Form> a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:deu_DefiniteDeterminer .
 
-<http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_2> a rcxn:SlotMandatory ;
+<http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_2> a rcxn:SlotObligatory ;
     cx:WordOrder "element 2 immediately before element 3" ;
     rcxn:hasSlotForm <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_2_Form> .
 
 <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_2_Form> a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:deu_Adjective .
 
-<http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_3> a rcxn:SlotMandatory ;
+<http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_3> a rcxn:SlotObligatory ;
     rcxn:hasSlotForm <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_3_Form> .
 
 <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_3_Form> a rcxn:SlotForm ;
@@ -489,13 +489,13 @@ cx:ItalianTemporalSubordinateClause_MD a rcxn:Metadata ;
     dcterms:created "2024-12-02"^^xsd:date ;
     rcxn:annotator membr:Kligge .
 
-<http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_1> a rcxn:SlotMandatory ;
+<http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_1> a rcxn:SlotObligatory ;
     cx:WordOrder "Element 1 immediately before Element 2." .
 
-<http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_2> a rcxn:SlotMandatory ;
+<http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_2> a rcxn:SlotObligatory ;
     cx:WordOrder "Element 2 immediately before Element 3." .
 
-<http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_3> a rcxn:SlotMandatory .
+<http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_3> a rcxn:SlotObligatory .
 
 <http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_MD> a rcxn:Metadata ;
     dcterms:created "2024-12-02"^^xsd:date ;
@@ -572,7 +572,7 @@ cx:Noun_MD a rcxn:Metadata ;
         membr:Weigelt,
         membr:Winckel .
 
-cx:POU-beneficiaryconstruction_1 a rcxn:SlotMandatory ;
+cx:POU-beneficiaryconstruction_1 a rcxn:SlotObligatory ;
     olia:hasSemanticRole olia:ThemeRole ;
     rdfs:comment "not always concrete" ;
     rcxn:hasSlotForm cx:POU-beneficiaryconstruction_1_Form .
@@ -580,7 +580,7 @@ cx:POU-beneficiaryconstruction_1 a rcxn:SlotMandatory ;
 cx:POU-beneficiaryconstruction_1_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:hat_Phrase .
 
-cx:POU-beneficiaryconstruction_2 a rcxn:SlotMandatory ;
+cx:POU-beneficiaryconstruction_2 a rcxn:SlotObligatory ;
     cx:WordOrder "Element 2 is always before Element 3" ;
     cx:hasTranslation "for" ;
     rcxn:hasSlotForm cx:POU-beneficiaryconstruction_2_Form .
@@ -589,7 +589,7 @@ cx:POU-beneficiaryconstruction_2_Form a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "POU" ;
     rcxn:hasSyntacticForm cx:hat_InvariableSyntacticMorpheme .
 
-cx:POU-beneficiaryconstruction_3 a rcxn:SlotMandatory ;
+cx:POU-beneficiaryconstruction_3 a rcxn:SlotObligatory ;
     cx:hasOtherSemanticContribution "Beneficiary" ;
     rcxn:hasSlotForm cx:POU-beneficiaryconstruction_3_Form .
 
@@ -626,7 +626,7 @@ cx:POU-purposeconstruction_MD a rcxn:Metadata ;
     dcterms:created "2024-11-28"^^xsd:date ;
     rcxn:annotator membr:Legoute .
 
-cx:Relative-Topic-ShiftConstruction_1 a rcxn:SlotMandatory ;
+cx:Relative-Topic-ShiftConstruction_1 a rcxn:SlotObligatory ;
     cx:WordOrder "Element 1 immediately before element 4" ;
     rdfs:comment "Element 1 is a \"coniunctio relativa\", i.e., a structure in which a relative pronoun (e.g., il quale, la quale) introduces a subordinate clause. The head noun can be omitted, remaining contextually recoverable. When this happens, the coniunctio relativa represents an elliptical noun phrase, with the relative pronoun standing in place of the implicit nominal head. Such an NP is anaphorically linked to the preceding co-text" ;
     rcxn:hasSlotForm cx:Relative-Topic-ShiftConstruction_1_Form ;
@@ -636,7 +636,7 @@ cx:Relative-Topic-ShiftConstruction_1_slots a rdf_ns:Seq ;
     rdf_ns:_2 cx:Relative-Topic-ShiftConstruction_2 ;
     rdf_ns:_3 cx:Relative-Topic-ShiftConstruction_3 .
 
-cx:Relative-Topic-ShiftConstruction_2 a rcxn:SlotMandatory ;
+cx:Relative-Topic-ShiftConstruction_2 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm cx:Relative-Topic-ShiftConstruction_1_Form .
 
 cx:Relative-Topic-ShiftConstruction_3 a rcxn:SlotOptional ;
@@ -644,21 +644,21 @@ cx:Relative-Topic-ShiftConstruction_3 a rcxn:SlotOptional ;
     rcxn:hasSemanticProperty "When the noun is expressed, it usually has a very generic meaning, e.g. \"cose\" ('things', 'issues')" ;
     rcxn:hasSlotForm cx:Relative-Topic-ShiftConstruction_1_Form .
 
-cx:Relative-Topic-ShiftConstruction_4 a rcxn:SlotMandatory ;
+cx:Relative-Topic-ShiftConstruction_4 a rcxn:SlotObligatory ;
     rcxn:hasSlots cx:Relative-Topic-ShiftConstruction_4_slots .
 
 cx:Relative-Topic-ShiftConstruction_4_slots a rdf_ns:Seq ;
     rdf_ns:_1 cx:Relative-Topic-ShiftConstruction_5 ;
     rdf_ns:_2 cx:Relative-Topic-ShiftConstruction_6 .
 
-cx:Relative-Topic-ShiftConstruction_5 a rcxn:SlotMandatory ;
+cx:Relative-Topic-ShiftConstruction_5 a rcxn:SlotObligatory ;
     cx:WordOrder "Element 5 immediately before Element 6" ;
     rcxn:hasSlotForm cx:Relative-Topic-ShiftConstruction_5_Form .
 
 cx:Relative-Topic-ShiftConstruction_5_Form a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "mentre che" .
 
-cx:Relative-Topic-ShiftConstruction_6 a rcxn:SlotMandatory ;
+cx:Relative-Topic-ShiftConstruction_6 a rcxn:SlotObligatory ;
     rdfs:comment "The verb is often, though not exclusively, in the present tense. It frequently, but not exclusively, features a \"si passivante\" construction (formed by the particle 'si' combined with a transitive verb to convey a passive meaning). Additionally, the VP may have a more complex internal structure, incorporating various other elements. The verb appearing in the VP often anaphorically references an action or process already mentioned in the preceding co-text. This can occur either through direct repetition of the same verb or through synonyms" ;
     rcxn:hasSlotForm cx:Relative-Topic-ShiftConstruction_6_Form .
 
@@ -687,7 +687,7 @@ cx:Relative-Topic-ShiftConstruction_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "Transition from one (discourse) topic to another" .
 
 cx:Relative-Topic-ShiftConstruction_Sources a cx:Collection ;
-    cx:hasLiterature <file:///C:/Users/User/Documents/RCxn/instance/Submissions/La_lingua_del_Guicciardini>,
+    cx:hasLiterature <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/La_lingua_del_Guicciardini>,
         <https://doi.org/10.1093/llc/fqw021>,
         <https://doi.org/10.1417/81352> .
 
@@ -778,7 +778,7 @@ cx:Superlativam_ADJsten_MD a rcxn:Metadata ;
     cx:annotator membr:Winckel ;
     dcterms:created "2026-04-13"^^xsd:date .
 
-cx:Transitiveobjectrelativeclause_1 a rcxn:SlotMandatory ;
+cx:Transitiveobjectrelativeclause_1 a rcxn:SlotObligatory ;
     cx:hasIndex cx:Transitiveobjectrelativeclause_1_Index ;
     rcxn:hasSlotForm cx:Transitiveobjectrelativeclause_1_Form ;
     rcxn:hasSyntacticFunction "Object (within the clause)" .
@@ -801,7 +801,7 @@ cx:Transitiveobjectrelativeclause_2_Form a rcxn:SlotForm ;
     rcxn:hasStem "a + article" ;
     rcxn:hasSyntacticForm cx:spa_PrepositionalPhrase .
 
-cx:Transitiveobjectrelativeclause_3 a rcxn:SlotMandatory ;
+cx:Transitiveobjectrelativeclause_3 a rcxn:SlotObligatory ;
     cx:WordOrder "immediately after Element 1 (if Element 2 not present), or immediately after Element 2 if present" ;
     cx:hasTranslation "that" ;
     rcxn:hasSlotForm cx:Transitiveobjectrelativeclause_3_Form .
@@ -810,7 +810,7 @@ cx:Transitiveobjectrelativeclause_3_Form a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "que" ;
     rcxn:hasSyntacticForm cx:spa_Relativizer .
 
-cx:Transitiveobjectrelativeclause_4 a rcxn:SlotMandatory ;
+cx:Transitiveobjectrelativeclause_4 a rcxn:SlotObligatory ;
     cx:WordOrder "Immediately after Element 3" ;
     cx:hasIndex cx:Transitiveobjectrelativeclause_4_Index ;
     rcxn:hasSlotForm cx:Transitiveobjectrelativeclause_4_Form ;
@@ -824,7 +824,7 @@ cx:Transitiveobjectrelativeclause_4_Index a cx:Individual ;
     olia:hasGender "[1]" ;
     olia:hasNumber olia:Singular .
 
-cx:Transitiveobjectrelativeclause_5 a rcxn:SlotMandatory ;
+cx:Transitiveobjectrelativeclause_5 a rcxn:SlotObligatory ;
     cx:WordOrder "immediately after Element 4" ;
     cx:hasIndex cx:Transitiveobjectrelativeclause_5_Index ;
     rdfs:comment "1st conjugation verb" ;
@@ -906,13 +906,13 @@ cx:arzCai_Ditransitiveconstruction_1 a rcxn:SlotOptional ;
 cx:arzCai_Ditransitiveconstruction_1_Index a cx:Individual ;
     olia:hasAnimacy olia:Animate .
 
-cx:arzCai_Ditransitiveconstruction_2 a rcxn:SlotMandatory ;
+cx:arzCai_Ditransitiveconstruction_2 a rcxn:SlotObligatory ;
     cx:WordOrder "After Element 1, before Elements 3 and 4" ;
     rdfs:comment "colloprofile: idda; ʿallim; nāwil; massik; sallif; labbis; sallim; ḥammil; darris; šammim; fahhim; ḥaffaẓ; nassa; ballaġ; saʾal; fahhim; malla; warra; ḫassaṛ; ġaṛṛam; ʾallaʿ" ;
     rcxn:hasSemanticProperty "Verbs of the four following groups: \"to give\", \"to provide s.o. with sth.\", \"to tell\", \"to withdraw\"" ;
     rcxn:hasSyntacticFunction "Verb" .
 
-cx:arzCai_Ditransitiveconstruction_3 a rcxn:SlotMandatory ;
+cx:arzCai_Ditransitiveconstruction_3 a rcxn:SlotObligatory ;
     cx:WordOrder "After Element 2, before or after Element 4" ;
     cx:hasIndex cx:arzCai_Ditransitiveconstruction_3_Index ;
     olia:hasSemanticRole olia:RecipientRole ;
@@ -922,7 +922,7 @@ cx:arzCai_Ditransitiveconstruction_3 a rcxn:SlotMandatory ;
 cx:arzCai_Ditransitiveconstruction_3_Index a cx:Individual ;
     olia:hasAnimacy olia:Animate .
 
-cx:arzCai_Ditransitiveconstruction_4 a rcxn:SlotMandatory ;
+cx:arzCai_Ditransitiveconstruction_4 a rcxn:SlotObligatory ;
     cx:WordOrder "After Element 2, before or after Element 3" ;
     olia:hasSemanticRole olia:ThemeRole ;
     rcxn:hasSyntacticFunction "Object" .
@@ -954,8 +954,8 @@ cx:arzCai_Ditransitiveconstruction_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "[ÆFFECTOR]1 makes [RECIPIENT]3 receive or lose [ÆFFECTED]4" .
 
 cx:arzCai_Ditransitiveconstruction_Sources a cx:Collection ;
-    cx:hasLiterature <file:///C:/Users/User/Documents/RCxn/instance/Submissions/Diem_2002>,
-        <file:///C:/Users/User/Documents/RCxn/instance/Submissions/Woidich_2006> .
+    cx:hasLiterature <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Diem_2002>,
+        <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Woidich_2006> .
 
 cx:arzCai_Ditransitiveconstruction_slots a rdf_ns:Seq ;
     rdf_ns:_1 cx:arzCai_Ditransitiveconstruction_1 ;
@@ -971,7 +971,7 @@ cx:comePLUSnoisemannerofmovementVing_1 a rcxn:SlotOptional ;
 cx:comePLUSnoisemannerofmovementVing_1_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_NounPhrase .
 
-cx:comePLUSnoisemannerofmovementVing_2 a rcxn:SlotMandatory ;
+cx:comePLUSnoisemannerofmovementVing_2 a rcxn:SlotObligatory ;
     cx:WordOrder "Element 2 immediately before element 3" ;
     rdfs:comment "perspective may imply subjective perception, enhanced expressivity, or inevitability of the action decribed by element 3" ;
     rcxn:hasSlotForm cx:comePLUSnoisemannerofmovementVing_2_Form .
@@ -980,7 +980,7 @@ cx:comePLUSnoisemannerofmovementVing_2_Form a rcxn:SlotForm ;
     rcxn:hasStem cx:eng_come ;
     rcxn:hasSyntacticForm cx:eng_Verb .
 
-cx:comePLUSnoisemannerofmovementVing_3 a rcxn:SlotMandatory ;
+cx:comePLUSnoisemannerofmovementVing_3 a rcxn:SlotObligatory ;
     cx:colloprofile ( [ cx:frequency 36 ;
                 cx:word "tumbling" ] [ cx:frequency 22 ;
                 cx:word "hurrying" ] [ cx:frequency 11 ;
@@ -1071,7 +1071,7 @@ cx:comePLUSnoisemannerofmovementVing_slots a rdf_ns:Seq ;
     rdf_ns:_5 cx:comePLUSnoisemannerofmovementVing_5 ;
     rdf_ns:_6 cx:comePLUSnoisemannerofmovementVing_6 .
 
-cx:deuStdHigh_AllativeNP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_1 a rcxn:SlotMandatory ;
+cx:deuStdHigh_AllativeNP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_1 a rcxn:SlotObligatory ;
     cx:hasIndex cx:deuStdHigh_AllativeNP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_1_Index ;
     rdfs:comment "usually the nominative case" ;
     rcxn:hasIS rcxn:Focus ;
@@ -1084,7 +1084,7 @@ cx:deuStdHigh_AllativeNP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_1_Form a
 cx:deuStdHigh_AllativeNP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_1_Index a cx:Individual ;
     olia:hasAnimacy olia:Inanimate .
 
-cx:deuStdHigh_AllativeNP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_2 a rcxn:SlotMandatory ;
+cx:deuStdHigh_AllativeNP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_2 a rcxn:SlotObligatory ;
     cx:WordOrder "follows Element 1" ;
     rcxn:hasSlotForm cx:deuStdHigh_AllativeNP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_2_Form ;
     rcxn:hasSlots cx:deuStdHigh_AllativeNP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_2_slots .
@@ -1096,7 +1096,7 @@ cx:deuStdHigh_AllativeNP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_2_slots 
     rdf_ns:_1 cx:deuStdHigh_AllativeNP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_3 ;
     rdf_ns:_2 cx:deuStdHigh_AllativeNP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_4 .
 
-cx:deuStdHigh_AllativeNP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_3 a rcxn:SlotMandatory ;
+cx:deuStdHigh_AllativeNP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_3 a rcxn:SlotObligatory ;
     cx:WordOrder "first element of Element 2" ;
     olia:hasSemanticRole olia:DirectionRole ;
     rcxn:hasSlotForm cx:deuStdHigh_AllativeNP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_3_Form .
@@ -1105,7 +1105,7 @@ cx:deuStdHigh_AllativeNP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_3_Form a
     rcxn:hasSurfaceForm "an",
         "auf" .
 
-cx:deuStdHigh_AllativeNP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_4 a rcxn:SlotMandatory ;
+cx:deuStdHigh_AllativeNP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_4 a rcxn:SlotObligatory ;
     cx:WordOrder "follows Element 3" ;
     olia:hasSemanticRole olia:ThemeRole ;
     rcxn:hasIS rcxn:Background ;
@@ -1172,7 +1172,7 @@ cx:deuWrSt20_sichNPADJADVvorAugenVP_3 a rcxn:SlotOptional ;
 cx:deuWrSt20_sichNPADJADVvorAugenVP_3_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:deu_Adverb .
 
-cx:deuWrSt20_sichNPADJADVvorAugenVP_4 a rcxn:SlotMandatory ;
+cx:deuWrSt20_sichNPADJADVvorAugenVP_4 a rcxn:SlotObligatory ;
     cx:WordOrder "The preposition \"vor\" appears in direct syntactic proximity to the noun \"Augen\", forming a fixed prepositional phrase. " ;
     cx:hasIS cx:Background,
         cx:Comment ;
@@ -1184,7 +1184,7 @@ cx:deuWrSt20_sichNPADJADVvorAugenVP_4 a rcxn:SlotMandatory ;
 cx:deuWrSt20_sichNPADJADVvorAugenVP_4_Form a rcxn:SlotForm ;
     rcxn:hasStem cx:deu_vor .
 
-cx:deuWrSt20_sichNPADJADVvorAugenVP_5 a rcxn:SlotMandatory ;
+cx:deuWrSt20_sichNPADJADVvorAugenVP_5 a rcxn:SlotObligatory ;
     cx:WordOrder "The noun always directly follows the preposition \"vor\"." ;
     cx:hasIS cx:Background,
         cx:Comment ;
@@ -1238,7 +1238,7 @@ cx:deu_Adjektivstamm_MD a rcxn:Metadata ;
     cx:annotator membr:Winckel ;
     dcterms:created "2026-04-13"^^xsd:date .
 
-cx:deu_AusdemAErmelschuettelnconstruction_1 a rcxn:SlotMandatory ;
+cx:deu_AusdemAErmelschuettelnconstruction_1 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm cx:deu_AusdemAErmelschuettelnconstruction_1_Form ;
     rcxn:hasSlots cx:deu_AusdemAErmelschuettelnconstruction_1_slots .
 
@@ -1250,7 +1250,7 @@ cx:deu_AusdemAErmelschuettelnconstruction_1_slots a rdf_ns:Seq ;
     rdf_ns:_2 cx:deu_AusdemAErmelschuettelnconstruction_3 ;
     rdf_ns:_3 cx:deu_AusdemAErmelschuettelnconstruction_4 .
 
-cx:deu_AusdemAErmelschuettelnconstruction_2 a rcxn:SlotMandatory ;
+cx:deu_AusdemAErmelschuettelnconstruction_2 a rcxn:SlotObligatory ;
     cx:WordOrder "Initial position in Element 1" ;
     cx:hasTranslation "out of" ;
     rcxn:hasOtherSemanticContribution "source" ;
@@ -1261,7 +1261,7 @@ cx:deu_AusdemAErmelschuettelnconstruction_2_Form a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "aus" ;
     rcxn:hasSyntacticForm cx:deu_Preposition .
 
-cx:deu_AusdemAErmelschuettelnconstruction_3 a rcxn:SlotMandatory ;
+cx:deu_AusdemAErmelschuettelnconstruction_3 a rcxn:SlotObligatory ;
     cx:WordOrder "follows Element 2, precedes Element 4" ;
     cx:hasIndex cx:deu_AusdemAErmelschuettelnconstruction_3_Index ;
     cx:hasTranslation "the" ;
@@ -1277,7 +1277,7 @@ cx:deu_AusdemAErmelschuettelnconstruction_3_Index a cx:Individual ;
     olia:hasGender olia:Masculine ;
     olia:hasNumber olia:Singular .
 
-cx:deu_AusdemAErmelschuettelnconstruction_4 a rcxn:SlotMandatory ;
+cx:deu_AusdemAErmelschuettelnconstruction_4 a rcxn:SlotObligatory ;
     cx:WordOrder "Follows Element 3" ;
     cx:hasIndex cx:deu_AusdemAErmelschuettelnconstruction_4_Index ;
     cx:hasTranslation "sleeve" ;
@@ -1294,7 +1294,7 @@ cx:deu_AusdemAErmelschuettelnconstruction_4_Index a cx:Individual ;
     olia:hasGender olia:Masculine ;
     olia:hasNumber olia:Singular .
 
-cx:deu_AusdemAErmelschuettelnconstruction_5 a rcxn:SlotMandatory ;
+cx:deu_AusdemAErmelschuettelnconstruction_5 a rcxn:SlotObligatory ;
     cx:hasIndex cx:deu_AusdemAErmelschuettelnconstruction_5_Index ;
     cx:hasTranslation "to shake" ;
     rcxn:hasOtherSemanticContribution "Action" ;
@@ -1363,7 +1363,7 @@ cx:deu_PrepositionalPhrase a rcxn:Construction ;
     rcxn:elementOf cx:deu_AusdemAErmelschuettelnconstruction ;
     rcxn:hasTitle "Prepositional Phrase" .
 
-cx:deu_SuperlativADJest_1 a rcxn:SlotMandatory ;
+cx:deu_SuperlativADJest_1 a rcxn:SlotObligatory ;
     rdfs:comment "Das interne Kern-KE Dimension wird durch den Adjektivstamm, an welches das Superlativsuffix -(e)st - das KE-lex - angehängt wird, realisiert. Die Dimension beschreibt den Stamm desjenigen Adjektivs, welches durch das Suffix -(e)st superlativ gesteigert wird." ;
     rcxn:hasOtherSemanticContribution "Dimension",
         "Gradierbare Attribute (Frame)" ;
@@ -1372,7 +1372,7 @@ cx:deu_SuperlativADJest_1 a rcxn:SlotMandatory ;
 cx:deu_SuperlativADJest_1_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:deu_Adjektivstamm .
 
-cx:deu_SuperlativADJest_2 a rcxn:SlotMandatory ;
+cx:deu_SuperlativADJest_2 a rcxn:SlotObligatory ;
     rdfs:comment "Das KE-lex -(e)st wird durch das Superlativsuffix -(e)st, welches an den Adjektivstamm – die Dimension – angehängt wird, realisiert. Das Suffix -(e)st sorgt für die superlative Steigerung desjenigen Adjektivs, dessen Stamm durch die Dimension beschrieben wird." ;
     rcxn:hasOtherSemanticContribution "Extremwert (Frame)" ;
     rcxn:hasSlotForm cx:deu_SuperlativADJest_1_Form .
@@ -1407,8 +1407,8 @@ cx:deu_SuperlativADJest_MD a rcxn:Metadata ;
     rcxn:annotator membr:Winckel .
 
 cx:deu_SuperlativADJest_Meaning a rcxn:ConstructionMeaning ;
-    rcxn:hasMeaning """Die Konstruktion Superlativ:ADJ-(e)st konstituiert die Familie Superlativ:X -st und beschreibt die Superlativbildung des Adjektivs im Deutschen.\r
-Die Konstruktion besteht aus dem lexikalisch festen Kern-Konstruktionselement (KE-lex) [-(e)st]2 und dem internen Kern-KE [Dimension]1.\r
+    rcxn:hasMeaning """Die Konstruktion Superlativ:ADJ-(e)st konstituiert die Familie Superlativ:X -st und beschreibt die Superlativbildung des Adjektivs im Deutschen.\r\r
+Die Konstruktion besteht aus dem lexikalisch festen Kern-Konstruktionselement (KE-lex) [-(e)st]2 und dem internen Kern-KE [Dimension]1.\r\r
 """ .
 
 cx:deu_SuperlativADJest_Sources a cx:Collection ;
@@ -1418,19 +1418,19 @@ cx:deu_SuperlativADJest_slots a rdf_ns:Seq ;
     rdf_ns:_1 cx:deu_SuperlativADJest_1 ;
     rdf_ns:_2 cx:deu_SuperlativADJest_2 .
 
-cx:deu_SuperlativADJst_ADJ_1 a rcxn:SlotMandatory ;
+cx:deu_SuperlativADJst_ADJ_1 a rcxn:SlotObligatory ;
     rcxn:hasSlots cx:deu_SuperlativADJst_ADJ_1_slots .
 
 cx:deu_SuperlativADJst_ADJ_1_slots a rdf_ns:Seq ;
     rdf_ns:_1 cx:deu_SuperlativADJst_ADJ_2 ;
     rdf_ns:_2 cx:deu_SuperlativADJst_ADJ_3 .
 
-cx:deu_SuperlativADJst_ADJ_2 a rcxn:SlotMandatory ;
+cx:deu_SuperlativADJst_ADJ_2 a rcxn:SlotObligatory ;
     cx:WordOrder "Die Intensivierung wird stets vor der Dimension realisiert. " ;
     rdfs:comment "Realisierbar sind steigerbare Adjektive in der Funktion einer Intensitätspartikel." ;
     rcxn:hasOtherSemanticContribution "Intensivierung (Frame)" .
 
-cx:deu_SuperlativADJst_ADJ_3 a rcxn:SlotMandatory ;
+cx:deu_SuperlativADJst_ADJ_3 a rcxn:SlotObligatory ;
     cx:WordOrder "Das Suffix -st wird stets an die Intensivierung angehängt." ;
     rcxn:hasOtherSemanticContribution "Extremwert (Frame)" ;
     rcxn:hasSlotForm cx:deu_SuperlativADJst_ADJ_3_Form .
@@ -1438,12 +1438,12 @@ cx:deu_SuperlativADJst_ADJ_3 a rcxn:SlotMandatory ;
 cx:deu_SuperlativADJst_ADJ_3_Form a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "st" .
 
-cx:deu_SuperlativADJst_ADJ_4 a rcxn:SlotMandatory ;
+cx:deu_SuperlativADJst_ADJ_4 a rcxn:SlotObligatory ;
     rdfs:comment "Das Verglichene wird mit einer impliziten Vergleichsmenge hinsichtlich eines bestimmten Wertes einer durch die Dimension definierten Skala verglichen. Das Verglichene beschreibt stets die Entität / Handlung einer Entität, deren Eigenschaft im vollen Ausmaß zutrifft." ;
     rcxn:hasOtherSemanticContribution "Entität (Frame)",
         "Ereignis (Frame)" .
 
-cx:deu_SuperlativADJst_ADJ_5 a rcxn:SlotMandatory ;
+cx:deu_SuperlativADJst_ADJ_5 a rcxn:SlotObligatory ;
     rdfs:comment "Die Dimension beschreibt die Eigenschaft, die bezogen auf eine Entität / Handlung einer Entität in vollem Ausmaß zutrifft." ;
     rcxn:hasOtherSemanticContribution "Gradierbare Attribute (Frame)" ;
     rcxn:hasSlotForm cx:deu_SuperlativADJst_ADJ_5_Form .
@@ -1495,10 +1495,10 @@ cx:deu_SuperlativADJst_ADJ_MD a rcxn:Metadata ;
     rcxn:annotator membr:Winckel .
 
 cx:deu_SuperlativADJst_ADJ_Meaning a rcxn:ConstructionMeaning ;
-    rcxn:hasMeaning """Die Superlativ:ADJ-st_ADJ-Konstruktion gehört zu der Familie der Vergleichskonstruktionen und weist einem Wert die höchste Stufe auf einer Skala zu.\r
-\r
-Die Zuweisung erfolgt durch den Vergleich einer Entität / Handlung einer Entität mit einer impliziten Gesamtheit.\r
-\r
+    rcxn:hasMeaning """Die Superlativ:ADJ-st_ADJ-Konstruktion gehört zu der Familie der Vergleichskonstruktionen und weist einem Wert die höchste Stufe auf einer Skala zu.\r\r
+\r\r
+Die Zuweisung erfolgt durch den Vergleich einer Entität / Handlung einer Entität mit einer impliziten Gesamtheit.\r\r
+\r\r
 Die Konstruktion besteht aus den internen Kern-Konstruktionselementen (Kern-KE) [Intensivierung]2 und [Dimension]5. Die [Dimension]5 gibt an, welche Eigenschaft in vollem Ausmaß vorliegt und benennt somit die Skala des Vergleichs, d.h. die Skala, auf der einem Wert die höchste Stufe zugewiesen wird. An die [Intensivierung]2 wird das Superlativmorphem [-st]3 angehangen. Die Eigenschaft, die im vollen Ausmaß vorliegt, wird selbst also nicht gesteigert. Stattdessen wird ein gesteigertes Adjektiv direkt vor der Eigenschaft realisiert und die superlative Bedeutung so auf die [Dimension]5 übertragen. Zusätzlich umfasst die Konstruktion das externe Kern-KE [Verglichenes]4 (die Entität oder Handlung einer Entität, der eine Eigenschaft in vollem Ausmaß zugewiesen wird).""" .
 
 cx:deu_SuperlativADJst_ADJ_slots a rdf_ns:Seq ;
@@ -1531,7 +1531,7 @@ cx:deu_vor a rcxn:Construction ;
 cx:deu_vor_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "in front of" .
 
-cx:engInf_Coolexclamativeconstruction_1 a rcxn:SlotMandatory ;
+cx:engInf_Coolexclamativeconstruction_1 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm cx:engInf_Coolexclamativeconstruction_1_Form .
 
 cx:engInf_Coolexclamativeconstruction_1_Form a rcxn:SlotForm ;
@@ -1559,7 +1559,7 @@ cx:engInf_Coolexclamativeconstruction_slots a rdf_ns:Seq ;
     rdf_ns:_1 cx:engInf_Coolexclamativeconstruction_1 ;
     rdf_ns:_2 cx:engInf_Coolexclamativeconstruction_2 .
 
-cx:engInf_coolasadmirableconstruction_1 a rcxn:SlotMandatory ;
+cx:engInf_coolasadmirableconstruction_1 a rcxn:SlotObligatory ;
     rcxn:hasPhonology "/kuːl/" ;
     rcxn:hasSlotForm cx:engInf_coolasadmirableconstruction_1_Form .
 
@@ -1594,15 +1594,15 @@ cx:engInf_coolasadmirableconstruction_Meaning a rcxn:ConstructionMeaning ;
 cx:engInf_coolasadmirableconstruction_slots a rdf_ns:Seq ;
     rdf_ns:_1 cx:engInf_coolasadmirableconstruction_1 .
 
-cx:engLME_AdjectivalwithPARTNERConstruction_1 a rcxn:SlotMandatory ;
+cx:engLME_AdjectivalwithPARTNERConstruction_1 a rcxn:SlotObligatory ;
     ns1:hasCompCon ns1:cxn_referent-expression .
 
-cx:engLME_AdjectivalwithPARTNERConstruction_2 a rcxn:SlotMandatory ;
+cx:engLME_AdjectivalwithPARTNERConstruction_2 a rcxn:SlotObligatory ;
     ns1:hasCompCon ns1:cxn_adjective,
         ns1:cxn_modifier,
         ns1:sem_property-concept .
 
-cx:engLME_AdjectivalwithPARTNERConstruction_3 a rcxn:SlotMandatory ;
+cx:engLME_AdjectivalwithPARTNERConstruction_3 a rcxn:SlotObligatory ;
     ns1:hasCompCon ns1:cxn_adjectival-phrase,
         ns1:cxn_attributive-phrase,
         ns1:cxn_head,
@@ -1622,14 +1622,14 @@ cx:engLME_AdjectivalwithPARTNERConstruction_slots a rdf_ns:Seq ;
     rdf_ns:_2 cx:engLME_AdjectivalwithPARTNERConstruction_2 ;
     rdf_ns:_3 cx:engLME_AdjectivalwithPARTNERConstruction_3 .
 
-cx:engLME_AdjectiveConstruction_1 a rcxn:SlotMandatory ;
+cx:engLME_AdjectiveConstruction_1 a rcxn:SlotObligatory ;
     ns1:hasCompCon ns1:cxn_adjectival-phrase,
         ns1:cxn_adjective,
         ns1:cxn_attributive-phrase,
         ns1:cxn_modifier,
         ns1:sem_property-concept .
 
-cx:engLME_AdjectiveConstruction_2 a rcxn:SlotMandatory ;
+cx:engLME_AdjectiveConstruction_2 a rcxn:SlotObligatory ;
     ns1:hasCompCon ns1:cxn_referent-expression .
 
 cx:engLME_AdjectiveConstruction_MD a rcxn:Metadata ;
@@ -1642,20 +1642,20 @@ cx:engLME_AdjectiveConstruction_slots a rdf_ns:Seq ;
     rdf_ns:_1 cx:engLME_AdjectiveConstruction_1 ;
     rdf_ns:_2 cx:engLME_AdjectiveConstruction_2 .
 
-cx:engLME_Argumentstructureconstruction_1 a rcxn:SlotMandatory ;
+cx:engLME_Argumentstructureconstruction_1 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm cx:engLME_Argumentstructureconstruction_1_Form ;
     rcxn:hasSyntacticFunction "Subject" .
 
 cx:engLME_Argumentstructureconstruction_1_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_Phrase .
 
-cx:engLME_Argumentstructureconstruction_2 a rcxn:SlotMandatory ;
+cx:engLME_Argumentstructureconstruction_2 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm cx:engLME_Argumentstructureconstruction_2_Form .
 
 cx:engLME_Argumentstructureconstruction_2_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_Verb .
 
-cx:engLME_Argumentstructureconstruction_3 a rcxn:SlotMandatory ;
+cx:engLME_Argumentstructureconstruction_3 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm cx:engLME_Argumentstructureconstruction_3_Form ;
     rcxn:hasSyntacticFunction "Complement(s)" .
 
@@ -1673,7 +1673,7 @@ cx:engLME_Argumentstructureconstruction_Meaning a rcxn:ConstructionMeaning ;
 
 cx:engLME_Argumentstructureconstruction_Sources a cx:Collection ;
     cx:basedOn <https://doi.org/10.3389/frai.2025.1477246> ;
-    cx:hasLiterature <file:///C:/Users/User/Documents/RCxn/instance/Submissions/Goldberg_1995>,
+    cx:hasLiterature <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Goldberg_1995>,
         <https://doi.org/10.3389/frai.2025.1477246> .
 
 cx:engLME_Argumentstructureconstruction_slots a rdf_ns:Seq ;
@@ -1682,7 +1682,7 @@ cx:engLME_Argumentstructureconstruction_slots a rdf_ns:Seq ;
     rdf_ns:_3 cx:engLME_Argumentstructureconstruction_3 .
 
 cx:engLME_AttributeConstructionAttrAdj_1 a rcxn:SlotOptional ;
-    ns2:hasCasaSyntacticFunction "potential subject" ;
+    ns3:hasCasaSyntacticFunction "potential subject" ;
     rcxn:hasOtherSemanticContribution "Æffector" ;
     rcxn:hasSlotForm cx:engLME_AttributeConstructionAttrAdj_1_Form ;
     rcxn:hasSyntacticFunction "potential subject" .
@@ -1690,7 +1690,7 @@ cx:engLME_AttributeConstructionAttrAdj_1 a rcxn:SlotOptional ;
 cx:engLME_AttributeConstructionAttrAdj_1_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_NounPhrase .
 
-cx:engLME_AttributeConstructionAttrAdj_2 a rcxn:SlotMandatory ;
+cx:engLME_AttributeConstructionAttrAdj_2 a rcxn:SlotObligatory ;
     rdfs:comment "Borderline cases: buy sell (something cheap) ",
         "Source for collo-profile: Valency Dictionary of English, Patternbank",
         "colloprofile: account  assume  beat  believe  consider  discover  dream  find  guarantee  judge  label  lay  mark  pass  present  show  think  worry  " ;
@@ -1699,8 +1699,8 @@ cx:engLME_AttributeConstructionAttrAdj_2 a rcxn:SlotMandatory ;
 cx:engLME_AttributeConstructionAttrAdj_2_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_Verb .
 
-cx:engLME_AttributeConstructionAttrAdj_3 a rcxn:SlotMandatory ;
-    ns2:hasCasaSyntacticFunction "Obj" ;
+cx:engLME_AttributeConstructionAttrAdj_3 a rcxn:SlotObligatory ;
+    ns3:hasCasaSyntacticFunction "Obj" ;
     rcxn:hasOtherSemanticContribution "Æffected-Attributee" ;
     rcxn:hasSlotForm cx:engLME_AttributeConstructionAttrAdj_3_Form ;
     rcxn:hasSyntacticFunction "direct object" .
@@ -1708,8 +1708,8 @@ cx:engLME_AttributeConstructionAttrAdj_3 a rcxn:SlotMandatory ;
 cx:engLME_AttributeConstructionAttrAdj_3_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_NounPhrase .
 
-cx:engLME_AttributeConstructionAttrAdj_4 a rcxn:SlotMandatory ;
-    ns2:hasCasaSyntacticFunction "Attr" ;
+cx:engLME_AttributeConstructionAttrAdj_4 a rcxn:SlotObligatory ;
+    ns3:hasCasaSyntacticFunction "Attr" ;
     rcxn:hasOtherSemanticContribution "Attribute" ;
     rcxn:hasSlotForm cx:engLME_AttributeConstructionAttrAdj_4_Form ;
     rcxn:hasSyntacticFunction "object complement" .
@@ -1748,7 +1748,7 @@ cx:engLME_Burnonesbridgesconstruction a rcxn:Construction ;
     rcxn:hasSlots cx:engLME_Burnonesbridgesconstruction_slots ;
     rcxn:hasTitle "Burn one's bridges construction" .
 
-cx:engLME_Burnonesbridgesconstruction_1 a rcxn:SlotMandatory ;
+cx:engLME_Burnonesbridgesconstruction_1 a rcxn:SlotObligatory ;
     cx:WordOrder "Initial position" ;
     cx:hasIndex cx:engLME_Burnonesbridgesconstruction_1_Index ;
     olia:hasSemanticRole olia:ActorMacroRole ;
@@ -1761,7 +1761,7 @@ cx:engLME_Burnonesbridgesconstruction_1_Form a rcxn:SlotForm ;
 cx:engLME_Burnonesbridgesconstruction_1_Index a cx:Individual ;
     olia:hasAnimacy olia:Animate .
 
-cx:engLME_Burnonesbridgesconstruction_2 a rcxn:SlotMandatory ;
+cx:engLME_Burnonesbridgesconstruction_2 a rcxn:SlotObligatory ;
     cx:WordOrder "Follows Element 1, precedes Element 3" ;
     cx:hasIndex cx:engLME_Burnonesbridgesconstruction_2_Index ;
     rcxn:hasSlotForm cx:engLME_Burnonesbridgesconstruction_2_Form .
@@ -1774,7 +1774,7 @@ cx:engLME_Burnonesbridgesconstruction_2_Index a cx:Event ;
     olia:hasModality olia:IndicativeVerb ;
     olia:hasVoice olia:ActiveVoice .
 
-cx:engLME_Burnonesbridgesconstruction_3 a rcxn:SlotMandatory ;
+cx:engLME_Burnonesbridgesconstruction_3 a rcxn:SlotObligatory ;
     cx:WordOrder "Precedes Element 4" ;
     cx:hasIndex cx:engLME_Burnonesbridgesconstruction_3_Index ;
     olia:hasSemanticRole olia:PossessorRole ;
@@ -1787,7 +1787,7 @@ cx:engLME_Burnonesbridgesconstruction_3_Form a rcxn:SlotForm ;
 cx:engLME_Burnonesbridgesconstruction_3_Index a cx:Individual ;
     olia:hasAnimacy olia:Animate .
 
-cx:engLME_Burnonesbridgesconstruction_4 a rcxn:SlotMandatory ;
+cx:engLME_Burnonesbridgesconstruction_4 a rcxn:SlotObligatory ;
     cx:WordOrder "Final position" ;
     cx:hasIndex cx:engLME_Burnonesbridgesconstruction_4_Index ;
     olia:hasSemanticRole olia:ThemeRole ;
@@ -1823,20 +1823,20 @@ cx:engLME_Burnonesbridgesconstruction_slots a rdf_ns:Seq ;
     rdf_ns:_3 cx:engLME_Burnonesbridgesconstruction_3 ;
     rdf_ns:_4 cx:engLME_Burnonesbridgesconstruction_4 .
 
-cx:engLME_ComparativeConstruction_1 a rcxn:SlotMandatory ;
+cx:engLME_ComparativeConstruction_1 a rcxn:SlotObligatory ;
     ns1:hasCompCon ns1:cxn_comparative-form,
         ns1:sem_comparative-degree,
         ns1:str_degree-marker .
 
-cx:engLME_ComparativeConstruction_2 a rcxn:SlotMandatory ;
+cx:engLME_ComparativeConstruction_2 a rcxn:SlotObligatory ;
     ns1:hasCompCon ns1:sem_comparee,
         ns1:sem_entity,
         ns1:sem_event .
 
-cx:engLME_ComparativeConstruction_3 a rcxn:SlotMandatory ;
+cx:engLME_ComparativeConstruction_3 a rcxn:SlotObligatory ;
     ns1:hasCompCon ns1:str_conjunction .
 
-cx:engLME_ComparativeConstruction_4 a rcxn:SlotMandatory ;
+cx:engLME_ComparativeConstruction_4 a rcxn:SlotObligatory ;
     ns1:hasCompCon ns1:inf_reference,
         ns1:sem_standard .
 
@@ -1852,15 +1852,15 @@ cx:engLME_ComparativeConstruction_slots a rdf_ns:Seq ;
     rdf_ns:_3 cx:engLME_ComparativeConstruction_3 ;
     rdf_ns:_4 cx:engLME_ComparativeConstruction_4 .
 
-cx:engLME_Ditransitiveconstruction_1 a rcxn:SlotMandatory ;
+cx:engLME_Ditransitiveconstruction_1 a rcxn:SlotObligatory ;
     rcxn:hasSyntacticFunction "Subject" .
 
-cx:engLME_Ditransitiveconstruction_2 a rcxn:SlotMandatory .
+cx:engLME_Ditransitiveconstruction_2 a rcxn:SlotObligatory .
 
-cx:engLME_Ditransitiveconstruction_3 a rcxn:SlotMandatory ;
+cx:engLME_Ditransitiveconstruction_3 a rcxn:SlotObligatory ;
     rcxn:hasSyntacticFunction "Object" .
 
-cx:engLME_Ditransitiveconstruction_4 a rcxn:SlotMandatory ;
+cx:engLME_Ditransitiveconstruction_4 a rcxn:SlotObligatory ;
     rcxn:hasSyntacticFunction "Object" .
 
 cx:engLME_Ditransitiveconstruction_Ex_A a cx:Example ;
@@ -1888,7 +1888,7 @@ cx:engLME_GIVEOUTVerbParticleConstruction_1 a rcxn:SlotOptional ;
 cx:engLME_GIVEOUTVerbParticleConstruction_1_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_NounPhrase .
 
-cx:engLME_GIVEOUTVerbParticleConstruction_2 a rcxn:SlotMandatory ;
+cx:engLME_GIVEOUTVerbParticleConstruction_2 a rcxn:SlotObligatory ;
     cx:WordOrder "Element 2 follows Element 1" ;
     rcxn:hasSlotForm cx:engLME_GIVEOUTVerbParticleConstruction_2_Form .
 
@@ -1896,7 +1896,7 @@ cx:engLME_GIVEOUTVerbParticleConstruction_2_Form a rcxn:SlotForm ;
     rcxn:hasStem cx:eng_give ;
     rcxn:hasSyntacticForm cx:eng_Verb .
 
-cx:engLME_GIVEOUTVerbParticleConstruction_3 a rcxn:SlotMandatory ;
+cx:engLME_GIVEOUTVerbParticleConstruction_3 a rcxn:SlotObligatory ;
     cx:WordOrder "Element 3 follows Element 2 but not necessarily directly" ;
     rcxn:hasSlotForm cx:engLME_GIVEOUTVerbParticleConstruction_3_Form .
 
@@ -1904,7 +1904,7 @@ cx:engLME_GIVEOUTVerbParticleConstruction_3_Form a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "out" ;
     rcxn:hasSyntacticForm cx:eng_Particle .
 
-cx:engLME_GIVEOUTVerbParticleConstruction_4 a rcxn:SlotMandatory ;
+cx:engLME_GIVEOUTVerbParticleConstruction_4 a rcxn:SlotObligatory ;
     cx:hasOtherSemanticContribution "AFFECTED ACTION" .
 
 cx:engLME_GIVEOUTVerbParticleConstruction_Ex_A a cx:Example ;
@@ -1924,12 +1924,12 @@ cx:engLME_GIVEOUTVerbParticleConstruction_slots a rdf_ns:Seq ;
     rdf_ns:_3 cx:engLME_GIVEOUTVerbParticleConstruction_3,
         cx:engLME_GIVEOUTVerbParticleConstruction_4 .
 
-cx:engLME_GeneralPostmodifierofAdjectiveConstruction_1 a rcxn:SlotMandatory ;
+cx:engLME_GeneralPostmodifierofAdjectiveConstruction_1 a rcxn:SlotObligatory ;
     ns1:hasCompCon ns1:cxn_adjective,
         ns1:cxn_modifier,
         ns1:sem_property-concept .
 
-cx:engLME_GeneralPostmodifierofAdjectiveConstruction_2 a rcxn:SlotMandatory ;
+cx:engLME_GeneralPostmodifierofAdjectiveConstruction_2 a rcxn:SlotObligatory ;
     ns1:hasCompCon ns1:cxn_admodifier,
         ns1:inf_admodification,
         ns1:sem_degree .
@@ -1944,7 +1944,7 @@ cx:engLME_GeneralPostmodifierofAdjectiveConstruction_slots a rdf_ns:Seq ;
     rdf_ns:_1 cx:engLME_GeneralPostmodifierofAdjectiveConstruction_1 ;
     rdf_ns:_2 cx:engLME_GeneralPostmodifierofAdjectiveConstruction_2 .
 
-cx:engLME_MoreThanComparisonConstructiontype1_1 a rcxn:SlotMandatory ;
+cx:engLME_MoreThanComparisonConstructiontype1_1 a rcxn:SlotObligatory ;
     ns1:hasCompCon ns1:cxn_adjectival-phrase,
         ns1:cxn_admodifier,
         ns1:cxn_attributive-phrase,
@@ -1954,22 +1954,22 @@ cx:engLME_MoreThanComparisonConstructiontype1_1 a rcxn:SlotMandatory ;
         ns1:sem_degree,
         ns1:str_degree-modifier .
 
-cx:engLME_MoreThanComparisonConstructiontype1_2 a rcxn:SlotMandatory ;
+cx:engLME_MoreThanComparisonConstructiontype1_2 a rcxn:SlotObligatory ;
     ns1:hasCompCon ns1:cxn_adjective,
         ns1:cxn_modifier,
         ns1:inf_modification,
         ns1:sem_property-concept .
 
-cx:engLME_MoreThanComparisonConstructiontype1_3 a rcxn:SlotMandatory ;
+cx:engLME_MoreThanComparisonConstructiontype1_3 a rcxn:SlotObligatory ;
     ns1:hasCompCon ns1:sem_comparee,
         ns1:sem_entity,
         ns1:sem_gradable-predicative-scale,
         ns1:sem_object-concept .
 
-cx:engLME_MoreThanComparisonConstructiontype1_4 a rcxn:SlotMandatory ;
+cx:engLME_MoreThanComparisonConstructiontype1_4 a rcxn:SlotObligatory ;
     ns1:hasCompCon ns1:str_conjunction .
 
-cx:engLME_MoreThanComparisonConstructiontype1_5 a rcxn:SlotMandatory ;
+cx:engLME_MoreThanComparisonConstructiontype1_5 a rcxn:SlotObligatory ;
     ns1:hasCompCon ns1:inf_reference,
         ns1:sem_standard .
 
@@ -1986,22 +1986,22 @@ cx:engLME_MoreThanComparisonConstructiontype1_slots a rdf_ns:Seq ;
     rdf_ns:_4 cx:engLME_MoreThanComparisonConstructiontype1_4 ;
     rdf_ns:_5 cx:engLME_MoreThanComparisonConstructiontype1_5 .
 
-cx:engLME_MoreThanComparisonConstructiontype2_1 a rcxn:SlotMandatory ;
+cx:engLME_MoreThanComparisonConstructiontype2_1 a rcxn:SlotObligatory ;
     ns1:hasCompCon ns1:cxn_attributive-phrase,
         ns1:cxn_modifier,
         ns1:cxn_quantifier-term,
         ns1:inf_modification .
 
-cx:engLME_MoreThanComparisonConstructiontype2_2 a rcxn:SlotMandatory ;
+cx:engLME_MoreThanComparisonConstructiontype2_2 a rcxn:SlotObligatory ;
     ns1:hasCompCon ns1:sem_comparee,
         ns1:sem_entity,
         ns1:sem_gradable-predicative-scale,
         ns1:sem_object-concept .
 
-cx:engLME_MoreThanComparisonConstructiontype2_3 a rcxn:SlotMandatory ;
+cx:engLME_MoreThanComparisonConstructiontype2_3 a rcxn:SlotObligatory ;
     ns1:hasCompCon ns1:str_conjunction .
 
-cx:engLME_MoreThanComparisonConstructiontype2_4 a rcxn:SlotMandatory ;
+cx:engLME_MoreThanComparisonConstructiontype2_4 a rcxn:SlotObligatory ;
     ns1:hasCompCon ns1:inf_reference,
         ns1:sem_standard .
 
@@ -2017,22 +2017,22 @@ cx:engLME_MoreThanComparisonConstructiontype2_slots a rdf_ns:Seq ;
     rdf_ns:_3 cx:engLME_MoreThanComparisonConstructiontype2_3 ;
     rdf_ns:_4 cx:engLME_MoreThanComparisonConstructiontype2_4 .
 
-cx:engLME_MoreThanComparisonConstructiontype3_1 a rcxn:SlotMandatory ;
+cx:engLME_MoreThanComparisonConstructiontype3_1 a rcxn:SlotObligatory ;
     ns1:hasCompCon ns1:cxn_attributive-phrase,
         ns1:cxn_modifier,
         ns1:cxn_quantifier-term,
         ns1:inf_modification .
 
-cx:engLME_MoreThanComparisonConstructiontype3_2 a rcxn:SlotMandatory ;
+cx:engLME_MoreThanComparisonConstructiontype3_2 a rcxn:SlotObligatory ;
     ns1:hasCompCon ns1:sem_comparee,
         ns1:sem_entity,
         ns1:sem_gradable-predicative-scale,
         ns1:sem_object-concept .
 
-cx:engLME_MoreThanComparisonConstructiontype3_3 a rcxn:SlotMandatory ;
+cx:engLME_MoreThanComparisonConstructiontype3_3 a rcxn:SlotObligatory ;
     ns1:hasCompCon ns1:str_conjunction .
 
-cx:engLME_MoreThanComparisonConstructiontype3_4 a rcxn:SlotMandatory ;
+cx:engLME_MoreThanComparisonConstructiontype3_4 a rcxn:SlotObligatory ;
     ns1:hasCompCon ns1:inf_reference,
         ns1:sem_standard .
 
@@ -2048,7 +2048,7 @@ cx:engLME_MoreThanComparisonConstructiontype3_slots a rdf_ns:Seq ;
     rdf_ns:_3 cx:engLME_MoreThanComparisonConstructiontype3_3 ;
     rdf_ns:_4 cx:engLME_MoreThanComparisonConstructiontype3_4 .
 
-cx:engLME_MostLeastConstruction_1 a rcxn:SlotMandatory ;
+cx:engLME_MostLeastConstruction_1 a rcxn:SlotObligatory ;
     ns1:hasCompCon ns1:cxn_adjectival-phrase,
         ns1:cxn_adjective,
         ns1:cxn_admodifier,
@@ -2061,7 +2061,7 @@ cx:engLME_MostLeastConstruction_1 a rcxn:SlotMandatory ;
         ns1:sem_superlative-degree,
         ns1:str_degree-modifier .
 
-cx:engLME_MostLeastConstruction_2 a rcxn:SlotMandatory ;
+cx:engLME_MostLeastConstruction_2 a rcxn:SlotObligatory ;
     ns1:hasCompCon ns1:cxn_referent-expression,
         ns1:sem_object-concept .
 
@@ -2075,12 +2075,12 @@ cx:engLME_MostLeastConstruction_slots a rdf_ns:Seq ;
     rdf_ns:_1 cx:engLME_MostLeastConstruction_1 ;
     rdf_ns:_2 cx:engLME_MostLeastConstruction_2 .
 
-cx:engLME_PremodifierofAdjectiveConstruction_1 a rcxn:SlotMandatory ;
+cx:engLME_PremodifierofAdjectiveConstruction_1 a rcxn:SlotObligatory ;
     ns1:hasCompCon ns1:cxn_admodifier,
         ns1:inf_admodification,
         ns1:sem_degree .
 
-cx:engLME_PremodifierofAdjectiveConstruction_2 a rcxn:SlotMandatory ;
+cx:engLME_PremodifierofAdjectiveConstruction_2 a rcxn:SlotObligatory ;
     ns1:hasCompCon ns1:cxn_adjective,
         ns1:cxn_attributive-phrase,
         ns1:cxn_modifier,
@@ -2103,15 +2103,15 @@ cx:engLME_Pullsomethingoutofahat a rcxn:Construction ;
     rcxn:annotator membr:Rastegar ;
     rcxn:hasTitle "Pull something out of a hat" .
 
-cx:engLME_Resultativeconstruction_1 a rcxn:SlotMandatory ;
+cx:engLME_Resultativeconstruction_1 a rcxn:SlotObligatory ;
     rcxn:hasSyntacticFunction "Subject" .
 
-cx:engLME_Resultativeconstruction_2 a rcxn:SlotMandatory .
+cx:engLME_Resultativeconstruction_2 a rcxn:SlotObligatory .
 
-cx:engLME_Resultativeconstruction_3 a rcxn:SlotMandatory ;
+cx:engLME_Resultativeconstruction_3 a rcxn:SlotObligatory ;
     rcxn:hasSyntacticFunction "Object" .
 
-cx:engLME_Resultativeconstruction_4 a rcxn:SlotMandatory ;
+cx:engLME_Resultativeconstruction_4 a rcxn:SlotObligatory ;
     rcxn:hasOtherSemanticContribution "State" .
 
 cx:engLME_Resultativeconstruction_Ex_A a cx:Example ;
@@ -2141,7 +2141,7 @@ cx:engLME_Rollupyoursleeves_MD a rcxn:Metadata ;
     dcterms:created "2024-12-04"^^xsd:date ;
     rcxn:annotator membr:Rastegar .
 
-cx:engLME_SuperlativeConstruction_1 a rcxn:SlotMandatory ;
+cx:engLME_SuperlativeConstruction_1 a rcxn:SlotObligatory ;
     ns1:hasCompCon ns1:cxn_adjectival-phrase,
         ns1:cxn_adjective,
         ns1:cxn_attributive-phrase,
@@ -2153,7 +2153,7 @@ cx:engLME_SuperlativeConstruction_1 a rcxn:SlotMandatory ;
         ns1:sem_superlative-degree,
         ns1:str_degree-marker .
 
-cx:engLME_SuperlativeConstruction_2 a rcxn:SlotMandatory ;
+cx:engLME_SuperlativeConstruction_2 a rcxn:SlotObligatory ;
     ns1:hasCompCon ns1:cxn_referent-expression,
         ns1:sem_object-concept .
 
@@ -2167,7 +2167,7 @@ cx:engLME_SuperlativeConstruction_slots a rdf_ns:Seq ;
     rdf_ns:_1 cx:engLME_SuperlativeConstruction_1 ;
     rdf_ns:_2 cx:engLME_SuperlativeConstruction_2 .
 
-cx:engLME_coolascolourconstruction_1 a rcxn:SlotMandatory ;
+cx:engLME_coolascolourconstruction_1 a rcxn:SlotObligatory ;
     rcxn:hasPhonology "/kuːl/" ;
     rcxn:hasSlotForm cx:engLME_coolascolourconstruction_1_Form .
 
@@ -2198,7 +2198,7 @@ cx:engLME_coolascolourconstruction_Meaning a rcxn:ConstructionMeaning ;
 cx:engLME_coolascolourconstruction_slots a rdf_ns:Seq ;
     rdf_ns:_1 cx:engLME_coolascolourconstruction_1 .
 
-cx:engLME_coolasemotionconstruction_1 a rcxn:SlotMandatory ;
+cx:engLME_coolasemotionconstruction_1 a rcxn:SlotObligatory ;
     rcxn:hasPhonology "/kuːl/" ;
     rcxn:hasSlotForm cx:engLME_coolasemotionconstruction_1_Form .
 
@@ -2236,13 +2236,13 @@ cx:engUsUkWr_EvaluativeAttributionConstruction_1 a rcxn:SlotOptional ;
 cx:engUsUkWr_EvaluativeAttributionConstruction_1_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_NounPhrase .
 
-cx:engUsUkWr_EvaluativeAttributionConstruction_2 a rcxn:SlotMandatory ;
+cx:engUsUkWr_EvaluativeAttributionConstruction_2 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm cx:engUsUkWr_EvaluativeAttributionConstruction_2_Form .
 
 cx:engUsUkWr_EvaluativeAttributionConstruction_2_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_VerbPhrase .
 
-cx:engUsUkWr_EvaluativeAttributionConstruction_3 a rcxn:SlotMandatory ;
+cx:engUsUkWr_EvaluativeAttributionConstruction_3 a rcxn:SlotObligatory ;
     rcxn:hasOtherSemanticContribution "Attributee" ;
     rcxn:hasSlotForm cx:engUsUkWr_EvaluativeAttributionConstruction_3_Form .
 
@@ -2256,7 +2256,7 @@ cx:engUsUkWr_EvaluativeAttributionConstruction_4 a rcxn:SlotOptional ;
 cx:engUsUkWr_EvaluativeAttributionConstruction_4_Form a rcxn:SlotForm ;
     rcxn:hasStem cx:eng_be .
 
-cx:engUsUkWr_EvaluativeAttributionConstruction_5 a rcxn:SlotMandatory ;
+cx:engUsUkWr_EvaluativeAttributionConstruction_5 a rcxn:SlotObligatory ;
     rcxn:hasOtherSemanticContribution "Attribute" ;
     rcxn:hasSlotForm cx:engUsUkWr_EvaluativeAttributionConstruction_5_Form .
 
@@ -2287,13 +2287,13 @@ cx:eng_AdjectiveAttributiveconstruction_1 a rcxn:SlotOptional ;
 cx:eng_AdjectiveAttributiveconstruction_1_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:Determiner .
 
-cx:eng_AdjectiveAttributiveconstruction_2 a rcxn:SlotMandatory ;
+cx:eng_AdjectiveAttributiveconstruction_2 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm cx:eng_AdjectiveAttributiveconstruction_2_Form .
 
 cx:eng_AdjectiveAttributiveconstruction_2_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_AdjectivePhrase .
 
-cx:eng_AdjectiveAttributiveconstruction_3 a rcxn:SlotMandatory ;
+cx:eng_AdjectiveAttributiveconstruction_3 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm cx:eng_AdjectiveAttributiveconstruction_3_Form .
 
 cx:eng_AdjectiveAttributiveconstruction_3_Form a rcxn:SlotForm ;
@@ -2321,7 +2321,7 @@ cx:eng_AdjectivePhrase_1 a rcxn:SlotOptional ;
 cx:eng_AdjectivePhrase_1_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:Adverb .
 
-cx:eng_AdjectivePhrase_2 a rcxn:SlotMandatory ;
+cx:eng_AdjectivePhrase_2 a rcxn:SlotObligatory ;
     rcxn:hasOtherSemanticContribution "Attribute" ;
     rcxn:hasSlotForm cx:eng_AdjectivePhrase_2_Form .
 
@@ -2350,19 +2350,19 @@ cx:eng_AdjectivePhrase_slots a rdf_ns:Seq ;
     rdf_ns:_2 cx:eng_AdjectivePhrase_2 ;
     rdf_ns:_3 cx:eng_AdjectivePhrase_3 .
 
-cx:eng_AdjectivePredicativeconstruction_1 a rcxn:SlotMandatory ;
+cx:eng_AdjectivePredicativeconstruction_1 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm cx:eng_AdjectivePredicativeconstruction_1_Form .
 
 cx:eng_AdjectivePredicativeconstruction_1_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_Phrase .
 
-cx:eng_AdjectivePredicativeconstruction_2 a rcxn:SlotMandatory ;
+cx:eng_AdjectivePredicativeconstruction_2 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm cx:eng_AdjectivePredicativeconstruction_2_Form .
 
 cx:eng_AdjectivePredicativeconstruction_2_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:Copula .
 
-cx:eng_AdjectivePredicativeconstruction_3 a rcxn:SlotMandatory ;
+cx:eng_AdjectivePredicativeconstruction_3 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm cx:eng_AdjectivePredicativeconstruction_3_Form .
 
 cx:eng_AdjectivePredicativeconstruction_3_Form a rcxn:SlotForm ;
@@ -2390,15 +2390,15 @@ cx:eng_Adjective_MD a rcxn:Metadata ;
         membr:Weigelt,
         membr:Winckel .
 
-cx:eng_CauseMotionconstruction_1 a rcxn:SlotMandatory ;
+cx:eng_CauseMotionconstruction_1 a rcxn:SlotObligatory ;
     rcxn:hasSyntacticFunction "Subject" .
 
-cx:eng_CauseMotionconstruction_2 a rcxn:SlotMandatory .
+cx:eng_CauseMotionconstruction_2 a rcxn:SlotObligatory .
 
-cx:eng_CauseMotionconstruction_3 a rcxn:SlotMandatory ;
+cx:eng_CauseMotionconstruction_3 a rcxn:SlotObligatory ;
     rcxn:hasSyntacticFunction "Object" .
 
-cx:eng_CauseMotionconstruction_4 a rcxn:SlotMandatory ;
+cx:eng_CauseMotionconstruction_4 a rcxn:SlotObligatory ;
     rcxn:hasOtherSemanticContribution "Path" .
 
 cx:eng_CauseMotionconstruction_Ex_A a cx:Example ;
@@ -2418,7 +2418,7 @@ cx:eng_CauseMotionconstruction_slots a rdf_ns:Seq ;
     rdf_ns:_3 cx:eng_CauseMotionconstruction_3 ;
     rdf_ns:_4 cx:eng_CauseMotionconstruction_4 .
 
-cx:eng_GenitiveNPConstruction_1 a rcxn:SlotMandatory ;
+cx:eng_GenitiveNPConstruction_1 a rcxn:SlotObligatory ;
     olia:hasSemanticRole olia:PossessorRole ;
     rdfs:comment "[1] president’s state’s government’s week’s party’s court’s night’s ...",
         "[2] world’s people’s year’s mother’s man’s nation’s father’s company’s city’s country’s ...",
@@ -2432,14 +2432,14 @@ cx:eng_GenitiveNPConstruction_1_slots a rdf_ns:Seq ;
     rdf_ns:_1 cx:eng_GenitiveNPConstruction_2 ;
     rdf_ns:_2 cx:eng_GenitiveNPConstruction_3 .
 
-cx:eng_GenitiveNPConstruction_2 a rcxn:SlotMandatory ;
+cx:eng_GenitiveNPConstruction_2 a rcxn:SlotObligatory ;
     rcxn:hasPhonology "[1] Nsg ending in voiceless consonant except /s, ʃ, tʃ/",
         "[2] Nsg ending in vowel or voiced consonant except /z, ʒ, ʤ/",
         "[3] Nsg ending in /s, z, ʃ, ʒ, tʃ, ʤ/ ",
         "[4] Npl in <en> ",
         "[5] Npl in <s>	" .
 
-cx:eng_GenitiveNPConstruction_3 a rcxn:SlotMandatory ;
+cx:eng_GenitiveNPConstruction_3 a rcxn:SlotObligatory ;
     rcxn:hasPhonology "[1] /s/",
         "[2] /z/",
         "[3] /ɪz/",
@@ -2448,7 +2448,7 @@ cx:eng_GenitiveNPConstruction_3 a rcxn:SlotMandatory ;
     rcxn:hasSurfaceForm "[1, 2, 3, 4] <'s>",
         "[5] <'>" .
 
-cx:eng_GenitiveNPConstruction_4 a rcxn:SlotMandatory ;
+cx:eng_GenitiveNPConstruction_4 a rcxn:SlotObligatory ;
     rcxn:hasOtherSemanticContribution "Referent" ;
     rcxn:hasSlotForm cx:eng_GenitiveNPConstruction_4_Form .
 
@@ -2466,26 +2466,26 @@ cx:eng_GenitiveNPConstruction_slots a rdf_ns:Seq ;
     rdf_ns:_1 cx:eng_GenitiveNPConstruction_1 ;
     rdf_ns:_2 cx:eng_GenitiveNPConstruction_4 .
 
-cx:eng_Keepacoolheadconstruction_1 a rcxn:SlotMandatory ;
+cx:eng_Keepacoolheadconstruction_1 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm cx:eng_Keepacoolheadconstruction_1_Form .
 
 cx:eng_Keepacoolheadconstruction_1_Form a rcxn:SlotForm ;
     rcxn:hasStem cx:eng_keep .
 
-cx:eng_Keepacoolheadconstruction_2 a rcxn:SlotMandatory ;
+cx:eng_Keepacoolheadconstruction_2 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm cx:eng_Keepacoolheadconstruction_2_Form .
 
 cx:eng_Keepacoolheadconstruction_2_Form a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "a" .
 
-cx:eng_Keepacoolheadconstruction_3 a rcxn:SlotMandatory ;
+cx:eng_Keepacoolheadconstruction_3 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm cx:eng_Keepacoolheadconstruction_3_Form .
 
 cx:eng_Keepacoolheadconstruction_3_Form a rcxn:SlotForm ;
     rcxn:hasStem cx:engLME_coolasemotionconstruction ;
     rcxn:hasSurfaceForm "cool" .
 
-cx:eng_Keepacoolheadconstruction_4 a rcxn:SlotMandatory ;
+cx:eng_Keepacoolheadconstruction_4 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm cx:eng_Keepacoolheadconstruction_4_Form .
 
 cx:eng_Keepacoolheadconstruction_4_Form a rcxn:SlotForm ;
@@ -2531,7 +2531,7 @@ cx:eng_Pronoun a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
     rcxn:hasTitle "Pronoun" .
 
-cx:eng_ThisclosetoVingconstruction_2 a rcxn:SlotMandatory ;
+cx:eng_ThisclosetoVingconstruction_2 a rcxn:SlotObligatory ;
     rcxn:hasOtherSemanticContribution "CLOSE" ;
     rcxn:hasSlots cx:eng_ThisclosetoVingconstruction_2_slots ;
     rcxn:hasSyntacticFunction "PREDICATOR" .
@@ -2551,13 +2551,13 @@ cx:eng_ThisclosetoVingconstruction_3 a rcxn:SlotOptional ;
 cx:eng_ThisclosetoVingconstruction_3_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_Verb .
 
-cx:eng_ThisclosetoVingconstruction_4 a rcxn:SlotMandatory ;
+cx:eng_ThisclosetoVingconstruction_4 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm cx:eng_ThisclosetoVingconstruction_4_Form .
 
 cx:eng_ThisclosetoVingconstruction_4_Form a rcxn:SlotForm ;
     rcxn:hasStem cx:eng_this .
 
-cx:eng_ThisclosetoVingconstruction_5 a rcxn:SlotMandatory ;
+cx:eng_ThisclosetoVingconstruction_5 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm cx:eng_ThisclosetoVingconstruction_5_Form .
 
 cx:eng_ThisclosetoVingconstruction_5_Form a rcxn:SlotForm ;
@@ -2619,7 +2619,7 @@ cx:eng_come a rcxn:Construction ;
     rcxn:elementOf cx:comePLUSnoisemannerofmovementVing ;
     rcxn:hasTitle "come" .
 
-cx:eng_coolconstruction_1 a rcxn:SlotMandatory ;
+cx:eng_coolconstruction_1 a rcxn:SlotObligatory ;
     rcxn:hasPhonology "/kuːl/" ;
     rcxn:hasSlotForm cx:eng_coolconstruction_1_Form .
 
@@ -2664,18 +2664,18 @@ cx:eng_ditransitive_construction_obj_inf_1 a rcxn:SlotOptional ;
     rcxn:hasSlotForm "NP" ;
     rcxn:hasSyntacticFunction "potential subject" .
 
-cx:eng_ditransitive_construction_obj_inf_2 a rcxn:SlotMandatory ;
+cx:eng_ditransitive_construction_obj_inf_2 a rcxn:SlotObligatory ;
     rdfs:comment "Source for collo-profile: Valency Dictionary of English, Patternbank",
         "colloprofile: bid  help  let  make" ;
     rcxn:hasSlotForm "V" .
 
-cx:eng_ditransitive_construction_obj_inf_3 a rcxn:SlotMandatory ;
+cx:eng_ditransitive_construction_obj_inf_3 a rcxn:SlotObligatory ;
     rcxn:hasCasaSyntacticFunction "Obj" ;
     rcxn:hasOtherSemanticContribution "Recipient" ;
     rcxn:hasSlotForm "NP" ;
     rcxn:hasSyntacticFunction "unit in predicate" .
 
-cx:eng_ditransitive_construction_obj_inf_4 a rcxn:SlotMandatory ;
+cx:eng_ditransitive_construction_obj_inf_4 a rcxn:SlotObligatory ;
     rcxn:hasCasaSyntacticFunction "Obj" ;
     rcxn:hasOtherSemanticContribution "Æffected-action" ;
     rcxn:hasSlotForm "INF" ;
@@ -2695,7 +2695,7 @@ cx:eng_ditransitive_construction_obj_inf_slots a rdf_ns:Seq ;
     rdf_ns:_4 cx:eng_ditransitive_construction_obj_inf_4 .
 
 cx:eng_ditransitive_construction_obj_np_1 a rcxn:SlotOptional ;
-    ns2:hasCasaSyntacticFunction "potential subject" ;
+    ns3:hasCasaSyntacticFunction "potential subject" ;
     rcxn:hasCasaSyntacticFunction "potential subject" ;
     rcxn:hasOtherSemanticContribution "Æffector" ;
     rcxn:hasSlotForm cx:eng_ditransitive_construction_obj_np_1_Form,
@@ -2705,7 +2705,7 @@ cx:eng_ditransitive_construction_obj_np_1 a rcxn:SlotOptional ;
 cx:eng_ditransitive_construction_obj_np_1_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_NounPhrase .
 
-cx:eng_ditransitive_construction_obj_np_2 a rcxn:SlotMandatory ;
+cx:eng_ditransitive_construction_obj_np_2 a rcxn:SlotObligatory ;
     rdfs:comment "Borderline cases: bet excuse (attendance)",
         "Source for collo-profile: Valency Dictionary of English, British National Corpus",
         "Sources for collo-profile: Valency Dictionary of English, British National Corpus",
@@ -2717,8 +2717,8 @@ cx:eng_ditransitive_construction_obj_np_2 a rcxn:SlotMandatory ;
 cx:eng_ditransitive_construction_obj_np_2_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_Verb .
 
-cx:eng_ditransitive_construction_obj_np_3 a rcxn:SlotMandatory ;
-    ns2:hasCasaSyntacticFunction "Obj" ;
+cx:eng_ditransitive_construction_obj_np_3 a rcxn:SlotObligatory ;
+    ns3:hasCasaSyntacticFunction "Obj" ;
     rcxn:hasCasaSyntacticFunction "Obj" ;
     rcxn:hasOtherSemanticContribution "Recipient" ;
     rcxn:hasSlotForm cx:eng_ditransitive_construction_obj_np_3_Form,
@@ -2729,8 +2729,8 @@ cx:eng_ditransitive_construction_obj_np_3 a rcxn:SlotMandatory ;
 cx:eng_ditransitive_construction_obj_np_3_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_NounPhrase .
 
-cx:eng_ditransitive_construction_obj_np_4 a rcxn:SlotMandatory ;
-    ns2:hasCasaSyntacticFunction "Obj" ;
+cx:eng_ditransitive_construction_obj_np_4 a rcxn:SlotObligatory ;
+    ns3:hasCasaSyntacticFunction "Obj" ;
     rcxn:hasCasaSyntacticFunction "Obj" ;
     rcxn:hasOtherSemanticContribution "Æffected" ;
     rcxn:hasSlotForm cx:eng_ditransitive_construction_obj_np_4_Form,
@@ -2756,11 +2756,11 @@ cx:eng_ditransitive_construction_obj_np_Meaning a rcxn:ConstructionMeaning ;
         "ÆFFECTOR makes RECIPIENT receive ÆFFECTED." .
 
 cx:eng_ditransitive_construction_obj_np_Sources a cx:Collection ;
-    cx:hasLiterature <file:///C:/Users/User/Documents/RCxn/instance/Submissions/Croft_2012>,
-        <file:///C:/Users/User/Documents/RCxn/instance/Submissions/Goldberg_1995>,
-        <file:///C:/Users/User/Documents/RCxn/instance/Submissions/Goldberg_2006>,
-        <file:///C:/Users/User/Documents/RCxn/instance/Submissions/Herbst_2020>,
-        <file:///C:/Users/User/Documents/RCxn/instance/Submissions/Herbst_Hoffman_2024> ;
+    cx:hasLiterature <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Croft_2012>,
+        <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Goldberg_1995>,
+        <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Goldberg_2006>,
+        <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Herbst_2020>,
+        <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Herbst_Hoffman_2024> ;
     rdfs:seeAlso <https://constructicon.de/constructions/5> .
 
 cx:eng_ditransitive_construction_obj_np_slots a rdf_ns:Seq ;
@@ -2785,10 +2785,10 @@ cx:eng_monotransitive_construction_1 a rcxn:SlotOptional ;
     rcxn:hasSlotForm "NP" ;
     rcxn:hasSyntacticFunction "potential subject" .
 
-cx:eng_monotransitive_construction_2 a rcxn:SlotMandatory ;
+cx:eng_monotransitive_construction_2 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm "V" .
 
-cx:eng_monotransitive_construction_3 a rcxn:SlotMandatory ;
+cx:eng_monotransitive_construction_3 a rcxn:SlotObligatory ;
     rcxn:hasCasaSyntacticFunction "Obj" ;
     rcxn:hasOtherSemanticContribution "Æffected" ;
     rcxn:hasSlotForm "NP" ;
@@ -2835,7 +2835,7 @@ cx:gmh12C_PräfixverbkonstruktionHandlung_1 a rcxn:SlotOptional ;
 cx:gmh12C_PräfixverbkonstruktionHandlung_1_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:gmh_NounPhrase .
 
-cx:gmh12C_PräfixverbkonstruktionHandlung_2 a rcxn:SlotMandatory ;
+cx:gmh12C_PräfixverbkonstruktionHandlung_2 a rcxn:SlotObligatory ;
     cx:WordOrder "2nd" ;
     cx:hasTranslation "dt. 'durch'",
         "eng. 'through'" ;
@@ -2850,7 +2850,7 @@ cx:gmh12C_PräfixverbkonstruktionHandlung_2_Form a rcxn:SlotForm ;
         "thurh" ;
     rcxn:hasSyntacticForm cx:gmh_Prefix .
 
-cx:gmh12C_PräfixverbkonstruktionHandlung_3 a rcxn:SlotMandatory ;
+cx:gmh12C_PräfixverbkonstruktionHandlung_3 a rcxn:SlotObligatory ;
     cx:WordOrder "3rd" ;
     rcxn:hasSlotForm cx:gmh12C_PräfixverbkonstruktionHandlung_3_Form ;
     rcxn:hasSyntacticFunction "Verb" .
@@ -2866,7 +2866,7 @@ cx:gmh12C_PräfixverbkonstruktionHandlung_3_Form a rcxn:SlotForm ;
         cx:gmh_varn,
         cx:gmh_æhten .
 
-cx:gmh12C_PräfixverbkonstruktionHandlung_4 a rcxn:SlotMandatory ;
+cx:gmh12C_PräfixverbkonstruktionHandlung_4 a rcxn:SlotObligatory ;
     olia:hasCase olia:Accusative ;
     olia:hasSemanticRole olia:Location,
         olia:UndergoerMacro ;
@@ -2912,7 +2912,7 @@ cx:gmh12C_PräfixverbkonstruktionHandlung_slots a rdf_ns:Seq ;
     rdf_ns:_3 cx:gmh12C_PräfixverbkonstruktionHandlung_3 ;
     rdf_ns:_4 cx:gmh12C_PräfixverbkonstruktionHandlung_4 .
 
-cx:gmh12C_PräfixverbkonstruktionTätigkeit_1 a rcxn:SlotMandatory ;
+cx:gmh12C_PräfixverbkonstruktionTätigkeit_1 a rcxn:SlotObligatory ;
     cx:WordOrder "1st" ;
     cx:hasIndex cx:gmh12C_PräfixverbkonstruktionTätigkeit_1_Index ;
     cx:hasTranslation "'I'" ;
@@ -2928,7 +2928,7 @@ cx:gmh12C_PräfixverbkonstruktionTätigkeit_1_Index a cx:Individual ;
     olia:hasAnimacy olia:Animate ;
     olia:hasNumber olia:Singular .
 
-cx:gmh12C_PräfixverbkonstruktionTätigkeit_2 a rcxn:SlotMandatory ;
+cx:gmh12C_PräfixverbkonstruktionTätigkeit_2 a rcxn:SlotObligatory ;
     cx:WordOrder "2nd" ;
     cx:hasTranslation "dt. 'durch'",
         "eng. 'through'" ;
@@ -2938,7 +2938,7 @@ cx:gmh12C_PräfixverbkonstruktionTätigkeit_2 a rcxn:SlotMandatory ;
 cx:gmh12C_PräfixverbkonstruktionTätigkeit_2_Form a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "durc" .
 
-cx:gmh12C_PräfixverbkonstruktionTätigkeit_3 a rcxn:SlotMandatory ;
+cx:gmh12C_PräfixverbkonstruktionTätigkeit_3 a rcxn:SlotObligatory ;
     cx:WordOrder "3rd" ;
     cx:hasIndex cx:gmh12C_PräfixverbkonstruktionTätigkeit_3_Index ;
     cx:hasTranslation "'to go'" ;
@@ -2980,7 +2980,7 @@ cx:gmh12C_Präfixverbkonstruktion_MD a rcxn:Metadata ;
     cx:annotator membr:Fuehrer ;
     dcterms:created "2025-12-19"^^xsd:date .
 
-cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_1 a rcxn:SlotMandatory ;
+cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_1 a rcxn:SlotObligatory ;
     cx:WordOrder "1st" ;
     olia:hasSemanticRole olia:ActorMacroRole ;
     rcxn:hasSlotForm cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_1_Form ;
@@ -2989,7 +2989,7 @@ cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_1 a rcxn:SlotMandatory 
 cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_1_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:gmh_NounPhrase .
 
-cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_2 a rcxn:SlotMandatory ;
+cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_2 a rcxn:SlotObligatory ;
     cx:WordOrder "2nd" ;
     cx:hasTranslation "dt. 'durch'",
         "eng. 'through'" ;
@@ -3001,7 +3001,7 @@ cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_2_Form a rcxn:SlotForm 
     rcxn:hasSurfaceForm "durch" ;
     rcxn:hasSyntacticForm cx:gmh_Prefix .
 
-cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_3 a rcxn:SlotMandatory ;
+cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_3 a rcxn:SlotObligatory ;
     cx:WordOrder "3rd" ;
     cx:hasTranslation "'to break'",
         "'to drive'" ;
@@ -3013,7 +3013,7 @@ cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_3_Form a rcxn:SlotForm 
         cx:gmh_varn ;
     rcxn:hasSyntacticForm cx:gmh_Verb .
 
-cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_4 a rcxn:SlotMandatory ;
+cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_4 a rcxn:SlotObligatory ;
     cx:WordOrder "4th" ;
     cx:hasTranslation "'into the earth'",
         "'into the fighting hordes'",
@@ -3157,7 +3157,7 @@ cx:ita_VerbPhrase a rcxn:Construction ;
     rcxn:elementOf cx:Relative-Topic-ShiftConstruction ;
     rcxn:hasTitle "Verb Phrase" .
 
-cx:lat_Adjective_1 a rcxn:SlotMandatory .
+cx:lat_Adjective_1 a rcxn:SlotObligatory .
 
 cx:lat_Adjective_MD a rcxn:Metadata ;
     dcterms:created "2026-03-30"^^xsd:date ;
@@ -3188,7 +3188,7 @@ cx:lzh_Dooperationwithoperand1onoperand2construction_1_Form a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "以" ;
     rcxn:hasSyntacticForm cx:zho_Particle .
 
-cx:lzh_Dooperationwithoperand1onoperand2construction_2 a rcxn:SlotMandatory ;
+cx:lzh_Dooperationwithoperand1onoperand2construction_2 a rcxn:SlotObligatory ;
     cx:WordOrder "Immediately before Element 3" ;
     olia:hasSemanticRole olia:InstrumentRole ;
     rdfs:comment "Semantically, Element 2 is not optional. However, if it is the result of the directly preceding operation, what would normally be expressed by \"之\", the slot can be empty, as it is implied by 以." ;
@@ -3198,7 +3198,7 @@ cx:lzh_Dooperationwithoperand1onoperand2construction_2 a rcxn:SlotMandatory ;
 cx:lzh_Dooperationwithoperand1onoperand2construction_2_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:zho_NounPhrase .
 
-cx:lzh_Dooperationwithoperand1onoperand2construction_3 a rcxn:SlotMandatory ;
+cx:lzh_Dooperationwithoperand1onoperand2construction_3 a rcxn:SlotObligatory ;
     cx:WordOrder "Immediately after Element 2" ;
     rdfs:comment "colloprofile: 加 (frequent), 減 (frequent), 乘 (frequent), 除 (frequent)" ;
     rcxn:hasSlotForm cx:lzh_Dooperationwithoperand1onoperand2construction_3_Form .
@@ -3206,7 +3206,7 @@ cx:lzh_Dooperationwithoperand1onoperand2construction_3 a rcxn:SlotMandatory ;
 cx:lzh_Dooperationwithoperand1onoperand2construction_3_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:zho_VerbPhrase .
 
-cx:lzh_Dooperationwithoperand1onoperand2construction_4 a rcxn:SlotMandatory ;
+cx:lzh_Dooperationwithoperand1onoperand2construction_4 a rcxn:SlotObligatory ;
     cx:WordOrder "Immediately after Element 3" ;
     olia:hasSemanticRole olia:UndergoerMacroRole ;
     rcxn:hasSemanticProperty "In contrast to Element 2, this Element is changed as result of the operation" ;
@@ -3231,8 +3231,8 @@ cx:lzh_Dooperationwithoperand1onoperand2construction_Meaning a rcxn:Construction
     rcxn:hasMeaning "Do [operation]3 with [operand 1]2 and [operand 2]4" .
 
 cx:lzh_Dooperationwithoperand1onoperand2construction_Sources a cx:Collection ;
-    cx:basedOn <file:///C:/Users/User/Documents/RCxn/instance/Submissions/Shuchun-2004> ;
-    cx:hasLiterature <file:///C:/Users/User/Documents/RCxn/instance/Submissions/Shuchun-2004> .
+    cx:basedOn <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Shuchun-2004> ;
+    cx:hasLiterature <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Shuchun-2004> .
 
 cx:lzh_Dooperationwithoperand1onoperand2construction_slots a rdf_ns:Seq ;
     rdf_ns:_1 cx:lzh_Dooperationwithoperand1onoperand2construction_1 ;
@@ -3274,12 +3274,12 @@ cx:zho_VerbPhrase a rcxn:Construction ;
     rcxn:elementOf cx:lzh_Dooperationwithoperand1onoperand2construction ;
     rcxn:hasTitle "Verb Phrase" .
 
-rd:FernandezSantos_20260130_629471 a ns3:Study ;
-    ns3:Summary "Participants' accuracy on subject relative clauses is at ceiling only when the verb follows the relativizer. Accuracy decreases when the verb is in a clause-final position. Object relative clauses are not at ceiling, but are misinterpreted as subject relative clauses over 90% of the time when there is no object marker and the verb follows the relativizer. The presence of an object marker does not impact accuracy when the verb is clause-final." ;
-    ns3:dataRepository "https://osf.io/4x6pz/files/osfstorage" ;
-    ns3:publishedIn "Llompart, Fernández Santos & Dąbrowska (2024-10-10). Comprehension of object relatives in Spanish: the role of frequency and transparency in acquisition and adult grammar. 10.1515/cog-2024-0016" ;
-    ns3:relevantFor cx:Transitiveobjectrelativeclause ;
-    ns3:studyType ns3:behavioralExperiment .
+rd:FernandezSantos_20260130_629471 a ns2:Study ;
+    ns2:Summary "Participants' accuracy on subject relative clauses is at ceiling only when the verb follows the relativizer. Accuracy decreases when the verb is in a clause-final position. Object relative clauses are not at ceiling, but are misinterpreted as subject relative clauses over 90% of the time when there is no object marker and the verb follows the relativizer. The presence of an object marker does not impact accuracy when the verb is clause-final." ;
+    ns2:dataRepository "https://osf.io/4x6pz/files/osfstorage" ;
+    ns2:publishedIn "Llompart, Fernández Santos & Dąbrowska (2024-10-10). Comprehension of object relatives in Spanish: the role of frequency and transparency in acquisition and adult grammar. 10.1515/cog-2024-0016" ;
+    ns2:relevantFor cx:Transitiveobjectrelativeclause ;
+    ns2:studyType ns2:behavioralExperiment .
 
 cx:EnglishTransitiveconstruction a rcxn:Construction ;
     cx:hasExample cx:EnglishTransitiveconstruction_Ex_A ;
@@ -3370,7 +3370,7 @@ cx:eng_Keepacoolheadconstruction a rcxn:Construction ;
 cx:eng_ThisclosetoVingconstruction_1 a rcxn:SlotOptional ;
     rcxn:hasSyntacticFunction "Subject" .
 
-cx:eng_ThisclosetoVingconstruction_6 a rcxn:SlotMandatory ;
+cx:eng_ThisclosetoVingconstruction_6 a rcxn:SlotObligatory ;
     cx:colloprofile ( [ cx:frequency 150 ;
                 cx:word "being" ] [ cx:frequency 129 ;
                 cx:word "getting" ] [ cx:frequency 57 ;
@@ -3700,8 +3700,8 @@ cx:engUsUkWr_EvaluativeAttributionConstruction a rcxn:Construction ;
     rcxn:hasTitle "Evaluative Attribution Construction" .
 
 cx:eng_coolconstruction_Sources a cx:Collection ;
-    cx:hasLiterature <file:///C:/Users/User/Documents/RCxn/instance/Submissions/www.english-corpora.org/bnc/>,
-        <file:///C:/Users/User/Documents/RCxn/instance/Submissions/www.english-corpora.org/coca/>,
+    cx:hasLiterature <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/www.english-corpora.org/bnc/>,
+        <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/www.english-corpora.org/coca/>,
         <https://www.dwds.de/wb/cool>,
         <https://www.oed.com/dictionary/cool_adj?tl=true> .
 
@@ -3777,7 +3777,7 @@ cx:Transitiveobjectrelativeclause a rcxn:Construction ;
     rcxn:hasMetadata cx:Transitiveobjectrelativeclause_MD ;
     rcxn:hasSlots cx:Transitiveobjectrelativeclause_slots ;
     rcxn:hasTitle "Potentially ambiguous object relative clause" ;
-    ns3:basedOnStudy rd:FernandezSantos_20260130_629471 .
+    ns2:basedOnStudy rd:FernandezSantos_20260130_629471 .
 
 cx:deuWrSt20_sichNPADJADVvorAugenVP a rcxn:Construction ;
     lg:partOfLanguage lg:deuWrSt20 ;

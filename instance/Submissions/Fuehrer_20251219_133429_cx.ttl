@@ -33,7 +33,7 @@ cx:gmh_Prefix rcxn:elementOf <http://example.org/cx/gmh12C_Präfixverbkonstrukti
 <http://example.org/cx/gmh12C_PräfixverbkonstruktionHandlung_1_Form> a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:gmh_NounPhrase .
 
-<http://example.org/cx/gmh12C_PräfixverbkonstruktionHandlung_2> a rcxn:SlotMandatory ;
+<http://example.org/cx/gmh12C_PräfixverbkonstruktionHandlung_2> a rcxn:SlotObligatory ;
     cx:WordOrder "2nd" ;
     cx:hasTranslation "dt. 'durch'", "eng. 'through'" ;
     rcxn:hasSlotForm <http://example.org/cx/gmh12C_PräfixverbkonstruktionHandlung_2_Form> ;
@@ -44,7 +44,7 @@ cx:gmh_Prefix rcxn:elementOf <http://example.org/cx/gmh12C_Präfixverbkonstrukti
     rcxn:hasSurfaceForm "durch", "durh", "dur", "thurh" ;
     rcxn:hasSyntacticForm cx:gmh_Prefix .
 
-<http://example.org/cx/gmh12C_PräfixverbkonstruktionHandlung_3> a rcxn:SlotMandatory ;
+<http://example.org/cx/gmh12C_PräfixverbkonstruktionHandlung_3> a rcxn:SlotObligatory ;
     cx:WordOrder "3rd" ;
     rcxn:hasSlotForm <http://example.org/cx/gmh12C_PräfixverbkonstruktionHandlung_3_Form> ;
     rcxn:hasSyntacticFunction "Verb" .
@@ -52,7 +52,7 @@ cx:gmh_Prefix rcxn:elementOf <http://example.org/cx/gmh12C_Präfixverbkonstrukti
 <http://example.org/cx/gmh12C_PräfixverbkonstruktionHandlung_3_Form> a rcxn:SlotForm ;
     rcxn:hasStem cx:gmh_æhten, cx:gmh_bîzen, cx:gmh_dringen, cx:gmh_gân, cx:gmh_houwen, cx:gmh_leiten, cx:gmh_rîten, cx:gmh_stëchen, cx:gmh_varn .
 
-<http://example.org/cx/gmh12C_PräfixverbkonstruktionHandlung_4> a rcxn:SlotMandatory ;
+<http://example.org/cx/gmh12C_PräfixverbkonstruktionHandlung_4> a rcxn:SlotObligatory ;
     olia:hasCase olia:Accusative ;
     olia:hasSemanticRole olia:Location, olia:UndergoerMacro ;
     rcxn:hasSlotForm <http://example.org/cx/gmh12C_PräfixverbkonstruktionHandlung_4_Form> ;

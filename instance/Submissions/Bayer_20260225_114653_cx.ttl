@@ -24,13 +24,13 @@ cx:arzCai_Ditransitiveconstruction_1 a rcxn:SlotOptional ;
 cx:arzCai_Ditransitiveconstruction_1_Index a cx:Individual ;
     olia:hasAnimacy olia:Animate .
 
-cx:arzCai_Ditransitiveconstruction_2 a rcxn:SlotMandatory ;
+cx:arzCai_Ditransitiveconstruction_2 a rcxn:SlotObligatory ;
     cx:WordOrder "After Element 1, before Elements 3 and 4" ;
     RDFS:comment "colloprofile: idda; ʿallim; nāwil; massik; sallif; labbis; sallim; ḥammil; darris; šammim; fahhim; ḥaffaẓ; nassa; ballaġ; saʾal; fahhim; malla; warra; ḫassaṛ; ġaṛṛam; ʾallaʿ" ;
     rcxn:hasSemanticProperty "Verbs of the four following groups: \"to give\", \"to provide s.o. with sth.\", \"to tell\", \"to withdraw\"" ;
     rcxn:hasSyntacticFunction "Verb" .
 
-cx:arzCai_Ditransitiveconstruction_3 a rcxn:SlotMandatory ;
+cx:arzCai_Ditransitiveconstruction_3 a rcxn:SlotObligatory ;
     cx:WordOrder "After Element 2, before or after Element 4" ;
     cx:hasIndex cx:arzCai_Ditransitiveconstruction_3_Index ;
     olia:hasSemanticRole olia:RecipientRole ;
@@ -40,7 +40,7 @@ cx:arzCai_Ditransitiveconstruction_3 a rcxn:SlotMandatory ;
 cx:arzCai_Ditransitiveconstruction_3_Index a cx:Individual ;
     olia:hasAnimacy olia:Animate .
 
-cx:arzCai_Ditransitiveconstruction_4 a rcxn:SlotMandatory ;
+cx:arzCai_Ditransitiveconstruction_4 a rcxn:SlotObligatory ;
     cx:WordOrder "After Element 2, before or after Element 3" ;
     olia:hasSemanticRole olia:ThemeRole ;
     rcxn:hasSyntacticFunction "Object" .

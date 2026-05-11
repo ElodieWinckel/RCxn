@@ -16,7 +16,7 @@ cx:lat_Adjective a rcxn:Construction ;
     rcxn:hasSlots cx:lat_Adjective_slots ;
     rcxn:hasTitle "Adjective" .
 
-cx:lat_Adjective_1 a rcxn:SlotMandatory .
+cx:lat_Adjective_1 a rcxn:SlotObligatory .
 
 cx:lat_Adjective_MD a rcxn:Metadata ;
     dcterm:created "2026-03-30"^^xsd:date ;

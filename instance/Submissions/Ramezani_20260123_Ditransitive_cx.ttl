@@ -22,18 +22,18 @@ cx:engLME_Ditransitiveconstruction_slots a rdf:Seq ;
     rdf:_3 cx:engLME_Ditransitiveconstruction_3 ;
     rdf:_4 cx:engLME_Ditransitiveconstruction_4 .
 
-cx:engLME_Ditransitiveconstruction_1 a rcxn:SlotMandatory ;
+cx:engLME_Ditransitiveconstruction_1 a rcxn:SlotObligatory ;
     rcxn:hasSyntacticFunction "Subject" .
 
-cx:engLME_Ditransitiveconstruction_2 a rcxn:SlotMandatory .
+cx:engLME_Ditransitiveconstruction_2 a rcxn:SlotObligatory .
 
 cx:engLME_Ditransitiveconstruction_2_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_Verb .
 
-cx:engLME_Ditransitiveconstruction_3 a rcxn:SlotMandatory ;
+cx:engLME_Ditransitiveconstruction_3 a rcxn:SlotObligatory ;
     rcxn:hasSyntacticFunction "Object" .
 
-cx:engLME_Ditransitiveconstruction_4 a rcxn:SlotMandatory ;
+cx:engLME_Ditransitiveconstruction_4 a rcxn:SlotObligatory ;
     rcxn:hasSyntacticFunction "Object" .
 
 cx:engLME_Ditransitiveconstruction_Meaning a rcxn:ConstructionMeaning ;

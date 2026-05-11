@@ -33,7 +33,7 @@ cx:engLME_AttributeConstructionAttrAdj_1 a rcxn:SlotOptional ;
 cx:engLME_AttributeConstructionAttrAdj_1_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_NounPhrase .
 
-cx:engLME_AttributeConstructionAttrAdj_2 a rcxn:SlotMandatory ;
+cx:engLME_AttributeConstructionAttrAdj_2 a rcxn:SlotObligatory ;
     RDFS:comment "colloprofile: account  assume  beat  believe  consider  discover  dream  find  guarantee  judge  label  lay  mark  pass  present  show  think  worry  " ,
         "Source for collo-profile: Valency Dictionary of English, Patternbank" ,
         "Borderline cases: buy sell (something cheap) ";
@@ -42,7 +42,7 @@ cx:engLME_AttributeConstructionAttrAdj_2 a rcxn:SlotMandatory ;
 cx:engLME_AttributeConstructionAttrAdj_2_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_Verb .
 
-cx:engLME_AttributeConstructionAttrAdj_3 a rcxn:SlotMandatory ;
+cx:engLME_AttributeConstructionAttrAdj_3 a rcxn:SlotObligatory ;
     rcxn:hasOtherSemanticContribution "Æffected-Attributee" ;
     rcxn:hasSlotForm cx:engLME_AttributeConstructionAttrAdj_3_Form ;
     rcxn:hasSyntacticFunction "direct object" ;
@@ -51,7 +51,7 @@ cx:engLME_AttributeConstructionAttrAdj_3 a rcxn:SlotMandatory ;
 cx:engLME_AttributeConstructionAttrAdj_3_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_NounPhrase .
 
-cx:engLME_AttributeConstructionAttrAdj_4 a rcxn:SlotMandatory ;
+cx:engLME_AttributeConstructionAttrAdj_4 a rcxn:SlotObligatory ;
     rcxn:hasOtherSemanticContribution "Attribute" ;
     rcxn:hasSlotForm cx:engLME_AttributeConstructionAttrAdj_4_Form ;
     rcxn:hasSyntacticFunction "object complement" ;

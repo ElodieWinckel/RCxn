@@ -26,19 +26,19 @@ cx:deu_Adjective rcxn:elementOf cx:deu_SuperlativADJst_ADJ .
 
 cx:deu_Adverb rcxn:elementOf cx:deu_SuperlativADJst_ADJ .
 
-cx:deu_SuperlativADJst_ADJ_1 a rcxn:SlotMandatory ;
+cx:deu_SuperlativADJst_ADJ_1 a rcxn:SlotObligatory ;
     rcxn:hasSlots cx:deu_SuperlativADJst_ADJ_1_slots .
 
 cx:deu_SuperlativADJst_ADJ_1_slots a rdf:Seq ;
     rdf:_1 cx:deu_SuperlativADJst_ADJ_2 ;
     rdf:_2 cx:deu_SuperlativADJst_ADJ_3 .
 
-cx:deu_SuperlativADJst_ADJ_2 a rcxn:SlotMandatory ;
+cx:deu_SuperlativADJst_ADJ_2 a rcxn:SlotObligatory ;
     cx:WordOrder "Die Intensivierung wird stets vor der Dimension realisiert. " ;
     RDFS:comment "Realisierbar sind steigerbare Adjektive in der Funktion einer Intensitätspartikel." ;
     rcxn:hasOtherSemanticContribution "Intensivierung (Frame)" .
 
-cx:deu_SuperlativADJst_ADJ_3 a rcxn:SlotMandatory ;
+cx:deu_SuperlativADJst_ADJ_3 a rcxn:SlotObligatory ;
     cx:WordOrder "Das Suffix -st wird stets an die Intensivierung angehängt." ;
     rcxn:hasOtherSemanticContribution "Extremwert (Frame)" ;
     rcxn:hasSlotForm cx:deu_SuperlativADJst_ADJ_3_Form .
@@ -46,11 +46,11 @@ cx:deu_SuperlativADJst_ADJ_3 a rcxn:SlotMandatory ;
 cx:deu_SuperlativADJst_ADJ_3_Form a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "st" .
 
-cx:deu_SuperlativADJst_ADJ_4 a rcxn:SlotMandatory ;
+cx:deu_SuperlativADJst_ADJ_4 a rcxn:SlotObligatory ;
     RDFS:comment "Das Verglichene wird mit einer impliziten Vergleichsmenge hinsichtlich eines bestimmten Wertes einer durch die Dimension definierten Skala verglichen. Das Verglichene beschreibt stets die Entität / Handlung einer Entität, deren Eigenschaft im vollen Ausmaß zutrifft." ;
     rcxn:hasOtherSemanticContribution "Entität (Frame)", "Ereignis (Frame)" .
 
-cx:deu_SuperlativADJst_ADJ_5 a rcxn:SlotMandatory ;
+cx:deu_SuperlativADJst_ADJ_5 a rcxn:SlotObligatory ;
     RDFS:comment "Die Dimension beschreibt die Eigenschaft, die bezogen auf eine Entität / Handlung einer Entität in vollem Ausmaß zutrifft." ;
     rcxn:hasOtherSemanticContribution "Gradierbare Attribute (Frame)" ;
     rcxn:hasSlotForm cx:deu_SuperlativADJst_ADJ_5_Form .

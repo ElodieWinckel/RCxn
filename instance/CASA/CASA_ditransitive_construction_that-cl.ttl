@@ -22,20 +22,20 @@ cx:eng_ditransitive_construction_that_cl_1 a rcxn:SlotOptional ;
     rcxn:hasCasaSyntacticFunction "potential subject" .
 
 
-cx:eng_ditransitive_construction_that_cl_2 a rcxn:SlotMandatory ;
+cx:eng_ditransitive_construction_that_cl_2 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm "V" ;
     RDFS:comment "Source for collo-profile: Valency Dictionary of English, Patternbank,
         "colloprofile: advise  answer  bet  convince  decide  educate  guarantee  inform  instruct  persuade  promise  remind  satisfy  show  signal  teach  tell  thank  trust  warn  pray" .
 
 
-cx:eng_ditransitive_construction_that_cl_3 a rcxn:SlotMandatory ;
+cx:eng_ditransitive_construction_that_cl_3 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm "NP" ;
     rcxn:hasOtherSemanticContribution "Recipient" ;
     rcxn:hasSyntacticFunction "unit in predicate" ;
     rcxn:hasCasaSyntacticFunction "Obj" .
 
 
-cx:eng_ditransitive_construction_that_cl_4 a rcxn:SlotMandatory ;
+cx:eng_ditransitive_construction_that_cl_4 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm "(that)-CLfin" ;
     rcxn:hasOtherSemanticContribution "Æffected" ;
     rcxn:hasSyntacticFunction "unit in predicate" ;

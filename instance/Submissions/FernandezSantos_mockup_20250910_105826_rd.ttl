@@ -69,7 +69,7 @@ cx:Spanishtransitiveconstruction_MD a rcxn:Metadata ;
     rcxn:annotator membr:FernandezSantos ;
     dcterm:created "2024-11-25"^^xsd:date .
 
-cx:Transitiveobjectrelativeclause_1 a rcxn:SlotMandatory ;
+cx:Transitiveobjectrelativeclause_1 a rcxn:SlotObligatory ;
     cx:hasIndex cx:Transitiveobjectrelativeclause_1_Index ;
     rcxn:hasSlotForm cx:Transitiveobjectrelativeclause_1_Form ;
     rcxn:hasSyntacticFunction "Object (within the clause)" .
@@ -92,7 +92,7 @@ cx:Transitiveobjectrelativeclause_2_Form a rcxn:SlotForm ;
     rcxn:hasStem "a + article" ;
     rcxn:hasSyntacticForm cx:spa_PrepositionalPhrase .
 
-cx:Transitiveobjectrelativeclause_3 a rcxn:SlotMandatory ;
+cx:Transitiveobjectrelativeclause_3 a rcxn:SlotObligatory ;
     cx:WordOrder "immediately after Element 1 (if Element 2 not present), or immediately after Element 2 if present" ;
     cx:hasTranslation "that" ;
     rcxn:hasSlotForm cx:Transitiveobjectrelativeclause_3_Form .
@@ -101,7 +101,7 @@ cx:Transitiveobjectrelativeclause_3_Form a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "que" ;
     rcxn:hasSyntacticForm cx:spa_Relativizer .
 
-cx:Transitiveobjectrelativeclause_4 a rcxn:SlotMandatory ;
+cx:Transitiveobjectrelativeclause_4 a rcxn:SlotObligatory ;
     cx:WordOrder "Immediately after Element 3" ;
     cx:hasIndex cx:Transitiveobjectrelativeclause_4_Index ;
     rcxn:hasSlotForm cx:Transitiveobjectrelativeclause_4_Form ;
@@ -115,7 +115,7 @@ cx:Transitiveobjectrelativeclause_4_Index a cx:Individual ;
     olia:hasGender "[1]" ;
     olia:hasNumber olia:Singular .
 
-cx:Transitiveobjectrelativeclause_5 a rcxn:SlotMandatory ;
+cx:Transitiveobjectrelativeclause_5 a rcxn:SlotObligatory ;
     cx:WordOrder "immediately after Element 4" ;
     cx:hasIndex cx:Transitiveobjectrelativeclause_5_Index ;
     rdfs:comment "1st conjugation verb" ;

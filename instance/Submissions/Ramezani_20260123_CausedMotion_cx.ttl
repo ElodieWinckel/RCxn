@@ -22,18 +22,18 @@ cx:eng_CauseMotionconstruction_slots a rdf:Seq ;
     rdf:_3 cx:eng_CauseMotionconstruction_3 ;
     rdf:_4 cx:eng_CauseMotionconstruction_4 .
 
-cx:eng_CauseMotionconstruction_1 a rcxn:SlotMandatory ;
+cx:eng_CauseMotionconstruction_1 a rcxn:SlotObligatory ;
     rcxn:hasSyntacticFunction "Subject" .
 
-cx:eng_CauseMotionconstruction_2 a rcxn:SlotMandatory .
+cx:eng_CauseMotionconstruction_2 a rcxn:SlotObligatory .
 
 cx:eng_CauseMotionconstruction_2_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_Verb .
 
-cx:eng_CauseMotionconstruction_3 a rcxn:SlotMandatory ;
+cx:eng_CauseMotionconstruction_3 a rcxn:SlotObligatory ;
     rcxn:hasSyntacticFunction "Object" .
 
-cx:eng_CauseMotionconstruction_4 a rcxn:SlotMandatory ;
+cx:eng_CauseMotionconstruction_4 a rcxn:SlotObligatory ;
     rcxn:hasOtherSemanticContribution "Path" .
 
 cx:eng_CauseMotionconstruction_Meaning a rcxn:ConstructionMeaning ;

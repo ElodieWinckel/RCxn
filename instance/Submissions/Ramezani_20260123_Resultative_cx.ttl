@@ -22,18 +22,18 @@ cx:engLME_Resultativeconstruction_slots a rdf:Seq ;
     rdf:_3 cx:engLME_Resultativeconstruction_3 ;
     rdf:_4 cx:engLME_Resultativeconstruction_4 .
 
-cx:engLME_Resultativeconstruction_1 a rcxn:SlotMandatory ;
+cx:engLME_Resultativeconstruction_1 a rcxn:SlotObligatory ;
     rcxn:hasSyntacticFunction "Subject" .
 
-cx:engLME_Resultativeconstruction_2 a rcxn:SlotMandatory .
+cx:engLME_Resultativeconstruction_2 a rcxn:SlotObligatory .
 
 cx:engLME_Resultativeconstruction_2_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_Verb .
 
-cx:engLME_Resultativeconstruction_3 a rcxn:SlotMandatory ;
+cx:engLME_Resultativeconstruction_3 a rcxn:SlotObligatory ;
     rcxn:hasSyntacticFunction "Object" .
 
-cx:engLME_Resultativeconstruction_4 a rcxn:SlotMandatory ;
+cx:engLME_Resultativeconstruction_4 a rcxn:SlotObligatory ;
     rcxn:hasOtherSemanticContribution "State" .
 
 cx:engLME_Resultativeconstruction_Meaning a rcxn:ConstructionMeaning ;
