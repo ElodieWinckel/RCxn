@@ -38,7 +38,7 @@
 
 [MODULE Comparative concepts](#module-comparative-concepts)
 
-# MODULE Constructicon (rcxn) {#module-constructicon-(rcxn)}
+# MODULE Constructicon (rcxn)
 
 This module uses Dublin Core (dc; description), RDF Schema (rdfs; label), Schema Datatype (xsd; date), Olia (olia; DiscourseFeature & oliatop; SemanticRole) and the research module (rsrch; Project).
 
@@ -46,7 +46,7 @@ This module uses Dublin Core (dc; description), RDF Schema (rdfs; label), Schema
 | :---- | :---- |
 | description | Construction; linguistic sign with a form component and a meaning component. A network of constructions builds a Constructicon. |
 
-## Title {#title}
+## Title
 
 | Property rcxn\#hasTitle |  |
 | :---- | :---- |
@@ -55,7 +55,7 @@ This module uses Dublin Core (dc; description), RDF Schema (rdfs; label), Schema
 | range (object) | Literal |
 | label | Title (en) |
 
-## Semantic function of the construction {#semantic-function-of-the-construction}
+## Semantic function of the construction
 
 | Class rcxn\#ConstructionMeaning |  |
 | :---- | :---- |
@@ -81,7 +81,7 @@ This module uses Dublin Core (dc; description), RDF Schema (rdfs; label), Schema
 | range (object) | Literal |
 | label | Image-Schema |
 
-## Slots {#slots}
+## Slots
 
 | Class rcxn\#Slot |  |
 | :---- | :---- |
@@ -241,7 +241,7 @@ To describe information structure, the current ontology is very simple. The onto
 | range (object) | rcxn\#informationStructure |
 | label | Information Structure |
 
-## Metadata {#metadata}
+## Metadata
 
 | Class rcxn\#Metadata |  |
 | :---- | :---- |
@@ -262,11 +262,11 @@ To describe information structure, the current ontology is very simple. The onto
 
 Note that we use dcterm:created in the database to store the date of creation of the construction entry.
 
-## Similar cxs in other Cxns \[o\] {#similar-cxs-in-other-cxns-[o]}
+## Similar cxs in other Cxns
 
 To date, links to URLs of other reference constructicons are stored via the property RDFS:seeAlso. We might, however, change this is the future.
 
-# MODULE Casa (casa) {#module-casa-(casa)}
+# MODULE Casa (casa)
 
 Because the Research Constructicon project is tightly linked to the CASA Project ([https://constructicon.de/](https://constructicon.de/)), and because the entries of CASA are imported in the Research Constructicon, we needed to adopt some of their terminology.
 
@@ -277,7 +277,7 @@ Because the Research Constructicon project is tightly linked to the CASA Project
 | range (object) | Literal |
 | label | Syntactic function (CASA terminology) (en) |
 
-# MODULE Research (rsrch) {#module-research-(rsrch)}
+# MODULE Research (rsrch)
 
 This module uses Dublin Core (dc; description), RDF Schema (rdfs; label) and Friend-of-a-friend (foaf; Person, Project).
 
@@ -304,7 +304,7 @@ This module uses Dublin Core (dc; description), RDF Schema (rdfs; label) and Fri
 | subclass of | rcxn\#Member |
 | disjoint with | Researcher |
 
-## Research Question {#research-question}
+## Research Question
 
 | Class rsrch\#Project |  |
 | :---- | :---- |
@@ -324,7 +324,7 @@ This module uses Dublin Core (dc; description), RDF Schema (rdfs; label) and Fri
 | domain (subject) | rsrch\#Project |
 | range (object) | Literal |
 
-## Findings {#findings}
+## Findings
 
 Research questions lead to findings. Findings are based on research data on the one hand and constructions on the other hand.
 
@@ -350,7 +350,7 @@ Research questions lead to findings. Findings are based on research data on the 
 | range (object) | cx\#Construction |
 | Characteristics | Asymmetric |
 
-# MODULE Language {#module-language}
+# MODULE Language
 
 We make here a distinction between “Macrolanguages” and “Language Variety”.
 
@@ -397,11 +397,11 @@ Our hierarchy of languages is implemented as individuals directly in the ontolog
 | \<\!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg\#deu \--\>     \<owl:NamedIndividual rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg\#deu"\>         \<rdf:type rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg\#macrolanguage"/\>         \<rdfs:label xml:lang="en"\>German\</rdfs:label\>     \</owl:NamedIndividual\> |
 | :---- |
 
-# MODULE Text {#module-text}
+# MODULE Text
 
 This ontology is work in progress. It should deal with translation, transliteration, transcription, and glosses. Possibly, we could also add a property that links an example to the source of the example.
 
-# MODULE Links {#module-links}
+# MODULE Links
 
 The ontology for links is presented in the following publication:   
 Winckel, Elodie. 2025\. Defining relationships in the constructional network: A Semantic Web ontology for Construction Grammar. *Lexicographica* 41(1). 299–317. [https://doi.org/10.1515/lex-2025-0012](https://doi.org/10.1515/lex-2025-0012).
@@ -414,12 +414,12 @@ Since this first version 1.0, I added this property (which is therefore part of 
 | subproperty of | links\#LanguageInternalLink |
 | label | is a metaphorical extension of |
 
-# MODULE Evidence {#module-evidence}
+# MODULE Evidence
 
 The ontology does not exist yet, but should comprise definition of resources to deal with colloprofiles, refer to repositories with data and/or analyses.
 
 This ontology also include a way to link to bibliographical references. This part will be based on Dublin Core (db).
 
-# MODULE Comparative concepts {#module-comparative-concepts}
+# MODULE Comparative concepts
 
 The ontology exists, but was not really defined by us. Description is work-in-progress.
