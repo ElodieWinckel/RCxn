@@ -6,7 +6,7 @@
 
 <div class="container">
 <form action="{{ url_for('app_form.form_submit') }}" method="POST">
-  <h1>Metadata</h1>
+
   <div>
     <label for="uri">Select your name:</label>
       <select id="uri" name="uri" onchange="generateProjectName(this.value)" required>
@@ -56,18 +56,6 @@
   <div id="treeDropdown"></div>
   <input type="hidden" id="language" name="language" required/>
   <input type="hidden" id="language_label" name="language_label"/>
-
-  <h3>Construction Status</h3>
-  <div>
-    <label for="construction_status">Is this a construction?</label>
-    <select id="construction_status" name="construction_status">
-      <option value="none" selected></option> <!-- Default value for no selection -->
-      <option value="yes">Yes</option>
-      <option value="not_known">Not known</option>
-      <option value="no">No</option>
-    </select>
-    <label for="construction_status">(recommended field)</label>
-  </div>
 
   <h1>Meaning of the construction</h1>
   <h3>Meaning</h3>
