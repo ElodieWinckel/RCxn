@@ -12,18 +12,18 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-cx:Transitiveobjectrelativeclause a rcxn:Construction ;
+cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause a rcxn:Construction ;
     rcxn:hasTitle "Potentially ambiguous object relative clause" ;
-    rcxn:hasConstructionMeaning cx:Transitiveobjectrelativeclause_Meaning ;
-    cx:hasExample cx:Transitiveobjectrelativeclause_Ex_A,
-        cx:Transitiveobjectrelativeclause_Ex_B,
-        cx:Transitiveobjectrelativeclause_Ex_C,
-        cx:Transitiveobjectrelativeclause_Ex_D ;
-    rcxn:hasMetadata cx:Transitiveobjectrelativeclause_MD ;
-    rcxn:hasSlots cx:Transitiveobjectrelativeclause_slots ;
-    links:inheritsFrom cx:Spanishobjectrelativeclause,
-        cx:Spanishrelativeclause,
-        cx:Spanishtransitiveconstruction ;
+    rcxn:hasConstructionMeaning cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_Meaning ;
+    cx:hasExample cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_Ex_A,
+        cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_Ex_B,
+        cx:Trcx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_Ex_C,
+        cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_Ex_D ;
+    rcxn:hasMetadata cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_MD ;
+    rcxn:hasSlots cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_slots ;
+    links:inheritsFrom cx:spa_objectrelativeclause,
+        cx:spa_relativeclause,
+        cx:spa_transitiveconstruction ;
     lg:partOfLanguage lg:spaSpoPen ;
     rdfs:comment "2 graphs (PDF- accuracy and reaction time). Tables with model output - if relevant (CSV or docx)" .
 
@@ -53,140 +53,140 @@ cx:Transitiveobjectrelativeclause a rcxn:Construction ;
     dc:title "Intervention and amelioration effects in the acquisition of Spanish object relative clauses: the role of word order and DOM" ;
     dc:type "journalArticle" .
 
-cx:Spanishobjectrelativeclause a rcxn:Construction ;
-    rcxn:hasMetadata cx:Spanishobjectrelativeclause_MD ;
-    rcxn:hasTitle "Spanish object relative clause" ;
+cx:spa_objectrelativeclause a rcxn:Construction ;
+    rcxn:hasMetadata cx:spa_objectrelativeclause_MD ;
+    rcxn:hasTitle "Object relative clause" ;
     lg:partOfLanguage lg:spa.
 
-cx:Spanishobjectrelativeclause_MD a rcxn:Metadata ;
+cx:spa_objectrelativeclause_MD a rcxn:Metadata ;
     rcxn:annotator membr:FernandezSantos ;
     dcterm:created "2024-11-25"^^xsd:date ;
     lg:partOfLanguage lg:spa.
 
-cx:Spanishrelativeclause a rcxn:Construction ;
-    rcxn:hasMetadata cx:Spanishrelativeclause_MD ;
-    rcxn:hasTitle "Spanish relative clause" ;
+cx:spa_relativeclause a rcxn:Construction ;
+    rcxn:hasMetadata cx:spa_relativeclause_MD ;
+    rcxn:hasTitle "Relative clause" ;
     lg:partOfLanguage lg:spa.
 
-cx:Spanishrelativeclause_MD a rcxn:Metadata ;
+cx:spa_relativeclause_MD a rcxn:Metadata ;
     rcxn:annotator membr:FernandezSantos ;
     dcterm:created "2024-11-25"^^xsd:date .
 
-cx:Spanishtransitiveconstruction a rcxn:Construction ;
-    rcxn:hasMetadata cx:Spanishtransitiveconstruction_MD ;
-    rcxn:hasTitle "Spanish transitive construction" ;
+cx:spa_transitiveconstruction a rcxn:Construction ;
+    rcxn:hasMetadata cx:spa_transitiveconstruction_MD ;
+    rcxn:hasTitle "Transitive construction" ;
     lg:partOfLanguage lg:spa.
 
-cx:Spanishtransitiveconstruction_MD a rcxn:Metadata ;
+cx:spa_transitiveconstruction_MD a rcxn:Metadata ;
     rcxn:annotator membr:FernandezSantos ;
     dcterm:created "2024-11-25"^^xsd:date .
 
-cx:Transitiveobjectrelativeclause_1 a rcxn:SlotObligatory ;
-    rcxn:hasSlotForm cx:Transitiveobjectrelativeclause_1_Form ;
+cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_1 a rcxn:SlotObligatory ;
+    rcxn:hasSlotForm cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_1_Form ;
     rcxn:hasSyntacticFunction "Object (within the clause)" ;
-    cx:hasIndex cx:Transitiveobjectrelativeclause_1_Index .
+    cx:hasIndex cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_1_Index .
 
-cx:Transitiveobjectrelativeclause_1_Form a rcxn:SlotForm ;
+cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_1_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:spa_NounPhrase .
 
-cx:Transitiveobjectrelativeclause_1_Index a cx:Individual ;
+cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_1_Index a cx:Individual ;
     olia:hasAnimacy olia:Animate ;
     olia:hasNumber olia:Singular ;
     olia:hasGender "[1]" .
 
-cx:Transitiveobjectrelativeclause_2 a rcxn:SlotOptional ;
+cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_2 a rcxn:SlotOptional ;
     cx:WordOrder "If present, Element 2 immediately after Element 1" ;
-    rcxn:hasSlotForm cx:Transitiveobjectrelativeclause_2_Form ;
+    rcxn:hasSlotForm cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_2_Form ;
     cx:hasTranslation "to:the" ;
     rcxn:hasSyntacticFunction "direct object marker" .
 
-cx:Transitiveobjectrelativeclause_2_Form a rcxn:SlotForm ;
+cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_2_Form a rcxn:SlotForm ;
     rcxn:hasStem "a + article" ;
     rcxn:hasSyntacticForm cx:spa_PrepositionalPhrase .
 
-cx:Transitiveobjectrelativeclause_3 a rcxn:SlotObligatory ;
+cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_3 a rcxn:SlotObligatory ;
     cx:WordOrder "immediately after Element 1 (if Element 2 not present), or immediately after Element 2 if present" ;
-    rcxn:hasSlotForm cx:Transitiveobjectrelativeclause_3_Form ;
+    rcxn:hasSlotForm cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_3_Form ;
     cx:hasTranslation "that" .
 
-cx:Transitiveobjectrelativeclause_3_Form a rcxn:SlotForm ;
+cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_3_Form a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "que" ;
     rcxn:hasSyntacticForm cx:spa_Relativizer .
 
-cx:Transitiveobjectrelativeclause_4 a rcxn:SlotObligatory ;
+cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_4 a rcxn:SlotObligatory ;
     cx:WordOrder "Immediately after Element 3" ;
-    rcxn:hasSlotForm cx:Transitiveobjectrelativeclause_4_Form ;
+    rcxn:hasSlotForm cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_4_Form ;
     rcxn:hasSyntacticFunction "subject (within the clause)" ;
-    cx:hasIndex cx:Transitiveobjectrelativeclause_4_Index .
+    cx:hasIndex cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_4_Index .
 
-cx:Transitiveobjectrelativeclause_4_Form a rcxn:SlotForm ;
+cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_4_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:spa_NounPhrase .
 
-cx:Transitiveobjectrelativeclause_4_Index a cx:Individual ;
+cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_4_Index a cx:Individual ;
     olia:hasAnimacy olia:Animate ;
     olia:hasNumber olia:Singular ;
     olia:hasGender "[1]" .
 
-cx:Transitiveobjectrelativeclause_5 a rcxn:SlotObligatory ;
+cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_5 a rcxn:SlotObligatory ;
     cx:WordOrder "immediately after Element 4" ;
-    rcxn:hasSlotForm cx:Transitiveobjectrelativeclause_5_Form ;
-    cx:hasIndex cx:Transitiveobjectrelativeclause_5_Index ;
+    rcxn:hasSlotForm cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_5_Form ;
+    cx:hasIndex cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_5_Index ;
     rdfs:comment "1st conjugation verb" .
 
-cx:Transitiveobjectrelativeclause_5_Form a rcxn:SlotForm ;
+cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_5_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:spa_Verb .
 
-cx:Transitiveobjectrelativeclause_5_Index a cx:Event ;
+cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_5_Index a cx:Event ;
     olia:hasTense olia:Present ;
     olia:hasVoice olia:ActiveVoice .
 
-cx:Transitiveobjectrelativeclause_Ex_A a cx:Example ;
+cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_Ex_A a cx:Example ;
     cx:hasGlosses "The grandpa to:the that the kid hugs" ;
     cx:hasAnnotatedText "[El abuelo]1 [al]2 [que]3 [el niño]4 [abraza]5" ;
     cx:hasText "El abuelo al que el niño abraza" ;
     cx:hasTranslation "The grandpa that is being hugged by the kid" ;
     rdfs:comment "a-variant verb-final" .
 
-cx:Transitiveobjectrelativeclause_Ex_B a cx:Example ;
+cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_Ex_B a cx:Example ;
     cx:hasGlosses "The grandpa that the kid hugs" ;
     cx:hasText "El abuelo que el niño abraza" ;
     cx:hasAnnotatedText "[El abuelo]1 [que]3 [el niño]4 [abraza]5" ;
     cx:hasTranslation "The grandpa that is being hugged by the kid" ;
     rdfs:comment "plain-variant verb-final" .
 
-cx:Transitiveobjectrelativeclause_Ex_C a cx:Example ;
+cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_Ex_C a cx:Example ;
     cx:hasGlosses "The grandpa to:the that hugs the kid" ;
     cx:hasText "El abuelo al que abraza el niño" ;
     cx:hasAnnotatedText "[El abuelo]1 [al]2 [que]3 [abraza]5 [el niño]4" ;
     cx:hasTranslation "The grandpa that is being hugged by the kid" ;
     rdfs:comment "a-variant verb-medial" .
 
-cx:Transitiveobjectrelativeclause_Ex_D a cx:Example ;
+cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_Ex_D a cx:Example ;
     cx:hasGlosses "The grandpa that hugs the kid" ;
     cx:hasText "El abuelo que abraza el niño" ;
     cx:hasAnnotatedText "[El abuelo]1 [que]3 [abraza]5 [el niño]4" ;
     cx:hasTranslation "The grandpa that is being hugged by the kid" ;
     rdfs:comment "plain-variant verb-medial" .
 
-cx:Transitiveobjectrelativeclause_MD a rcxn:Metadata ;
+cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_MD a rcxn:Metadata ;
     rcxn:annotator membr:FernandezSantos ;
     cx:creationDate "2024-11-25"^^xsd:date ;
-    cx:hasSources cx:Transitiveobjectrelativeclause_Sources .
+    cx:hasSources cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_Sources .
 
-cx:Transitiveobjectrelativeclause_Meaning a rcxn:ConstructionMeaning ;
+cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "Identificatory NP: [Someone]4 carries out a [transitive action]5 that affects [someone else]1. The function of the object relative clause is to identify the [affected]1." .
 
-cx:Transitiveobjectrelativeclause_Sources a cx:Collection ;
+cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_Sources a cx:Collection ;
     cx:basedOn <https://www.degruyter.com/document/doi/10.1515/cog-2024-0016/html> ;
     cx:hasLiterature <https://onlinelibrary.wiley.com/doi/10.1111/lang.12066> ,
         <https://www.degruyter.com/document/doi/10.1515/cog-2024-0016/html> .
 
-cx:Transitiveobjectrelativeclause_slots a rdf:Seq ;
-    rdf:_1 cx:Transitiveobjectrelativeclause_1 ;
-    rdf:_2 cx:Transitiveobjectrelativeclause_2 ;
-    rdf:_3 cx:Transitiveobjectrelativeclause_3 ;
-    rdf:_4 cx:Transitiveobjectrelativeclause_4 ;
-    rdf:_5 cx:Transitiveobjectrelativeclause_5 .
+cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_slots a rdf:Seq ;
+    rdf:_1 cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_1 ;
+    rdf:_2 cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_2 ;
+    rdf:_3 cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_3 ;
+    rdf:_4 cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_4 ;
+    rdf:_5 cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_5 .
 
 <https://onlinelibrary.wiley.com/doi/10.1111/lang.12066> dc:creator "Reali, Florencia" ;
     dc:date "2014" ;
@@ -227,7 +227,7 @@ membr:Project_FernandezSantos_241125 a rsrch:Project ;
 
 membr:Project_FernandezSantos_241125_F250218 a rsrch:Finding ;
     rdfs:label "The late disambiguation of verb-medial plain-variant (no a + article) object relative can lead to shallow processing. This in combination with high phonetic similarity with a canonical SR could lead to predictive processing overriding perceptual information (at the point of the last NP an object is expected so it’s more likely to hear \"al\" rather than \"el\"). In more general terms, expectations of canonical linguistic input in locally ambiguous structures can override acoustic perception." ;
-    rsrch:basedOn cx:Transitiveobjectrelativeclause .
+    rsrch:basedOn cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause .
 
 membr:Project_FernandezSantos rsrch:hasResearchQuestion membr:Project_FernandezSantos_241125 .
 

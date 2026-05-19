@@ -7,23 +7,23 @@
 @prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]> a rcxn:Construction ;
+cx:deu_NPDefDetstrongPLUSADJweakPLUSN a rcxn:Construction ;
     rcxn:hasTitle "NP [Def.Det-strong + ADJ-weak + N]" ;
-    rcxn:hasConstructionMeaning <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_Meaning> ;
-    rcxn:hasMetadata <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_MD> ;
-    rcxn:hasSlots <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_slots> ;
-    links:inheritedBy <http://example.org/cx/NP[das+ADJ-e+N]nom.sg.neut>,
-        <http://example.org/cx/NP[dem+ADJ-en+N]dat.sg.masc/neut>,
-        <http://example.org/cx/NP[der+ADJ-e+N]nom.sg.masc>,
-        <http://example.org/cx/NP[die+ADJ-e+N]nom.sg.fem>,
+    rcxn:hasConstructionMeaning cx:deu_NPDefDetstrongPLUSADJweakPLUSN_Meaning ;
+    rcxn:hasMetadata cx:deu_NPDefDetstrongPLUSADJweakPLUSN_MD ;
+    rcxn:hasSlots cx:deu_NPDefDetstrongPLUSADJweakPLUSN_slots ;
+    links:inheritedBy cx:deu_NPdasPLUSADJePLUSNnomsgneut,
+        cx:deu_NPdemPLUSADJenPLUSNdatsgmascSLASHneut,
+        cx:deu_NPderPLUSADJePLUSNnomsgmasc,
+        cx:deu_NPdiePLUSADJePLUSNnomsgfem,
         <http://example.org/cx/etc.> ;
     lg:partOfLanguage lg:deu ;
     links:similarFormSameFunction cx:deu_NPADJstrongPLUSADJstrongPLUSN,
-        <http://example.org/cx/NP[ADJ-strong+ADJ-weak+N]>,
-        <http://example.org/cx/NP[def.DET-strong+N]>,
-        <http://example.org/cx/NP[indef.DET-strong+ADJ-weak+N]>,
-        <http://example.org/cx/NP[indef.DET-strong+N]>,
-        <http://example.org/cx/NP[indef.DET-zero+N]> .
+        cx:deu_ADJstrongPLUSADJweakPLUSN,
+        cx:deu_NPdefDETstrongPLUSN,
+        cx:deu_NPindefDETstrongPLUSADJweakPLUSN,
+        cx:deu_NPindefDETstrongPLUSN,
+        cx:deu_NPindefDETzeroPLUSN .
 
 cx:deu_NPADJstrongPLUSADJstrongPLUSN a rcxn:Construction ;
     rcxn:hasMetadata  cx:deu_NPADJstrongPLUSADJstrongPLUSN ;
@@ -34,115 +34,115 @@ cx:deu_NPADJstrongPLUSADJstrongPLUSN a rcxn:Metadata ;
     rcxn:annotator membr:Kligge ;
     dcterm:created "2024-12-02"^^xsd:date .
 
-<http://example.org/cx/NP[ADJ-strong+ADJ-weak+N]> a rcxn:Construction ;
-    rcxn:hasMetadata <http://example.org/cx/NP[ADJ-strong+ADJ-weak+N]_MD> ;
+cx:deu_ADJstrongPLUSADJweakPLUSN a rcxn:Construction ;
+    rcxn:hasMetadata cx:deu_ADJstrongPLUSADJweakPLUSN_MD ;
     rcxn:hasTitle "NP [ADJ-strong + ADJ-weak+ N]" ;
     lg:partOfLanguage lg:deu .
 
-<http://example.org/cx/NP[ADJ-strong+ADJ-weak+N]_MD> a rcxn:Metadata ;
+cx:deu_ADJstrongPLUSADJweakPLUSN_MD a rcxn:Metadata ;
     rcxn:annotator membr:Kligge ;
     dcterm:created "2024-12-02"^^xsd:date .
 
-<http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_1> a rcxn:SlotObligatory ;
-    rcxn:hasSlotForm <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_1_Form> ;
+cx:deu_NPDefDetstrongPLUSADJweakPLUSN_1 a rcxn:SlotObligatory ;
+    rcxn:hasSlotForm cx:deu_NPDefDetstrongPLUSADJweakPLUSN_1_Form ;
     cx:WordOrder "element 1 immediately before element 2" .
 
-<http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_1_Form> a rcxn:SlotForm ;
+cx:deu_NPDefDetstrongPLUSADJweakPLUSN_1_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:deu_DefiniteDeterminer .
 
-<http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_2> a rcxn:SlotObligatory ;
-    rcxn:hasSlotForm <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_2_Form> ;
+cx:deu_NPDefDetstrongPLUSADJweakPLUSN_2 a rcxn:SlotObligatory ;
+    rcxn:hasSlotForm cx:deu_NPDefDetstrongPLUSADJweakPLUSN_2_Form ;
     cx:WordOrder "element 2 immediately before element 3".
 
-<http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_2_Form> a rcxn:SlotForm ;
+cx:deu_NPDefDetstrongPLUSADJweakPLUSN_2_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:deu_Adjective .
 
-<http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_3> a rcxn:SlotObligatory ;
-    rcxn:hasSlotForm <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_3_Form> .
+cx:deu_NPDefDetstrongPLUSADJweakPLUSN_3 a rcxn:SlotObligatory ;
+    rcxn:hasSlotForm cx:deu_NPDefDetstrongPLUSADJweakPLUSN_3_Form .
 
-<http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_3_Form> a rcxn:SlotForm ;
+cx:deu_NPDefDetstrongPLUSADJweakPLUSN_3_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:deu_Noun .
 
-<http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_MD> a rcxn:Metadata ;
+cx:deu_NPDefDetstrongPLUSADJweakPLUSN_MD a rcxn:Metadata ;
     rcxn:annotator membr:Kligge ;
     dcterm:created "2024-12-02"^^xsd:date .
 
-<http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_Meaning> a rcxn:ConstructionMeaning .
+cx:deu_NPDefDetstrongPLUSADJweakPLUSN_Meaning a rcxn:ConstructionMeaning .
 
-<http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_slots> a rdf:Seq ;
-    rdf:_1 <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_1> ;
-    rdf:_2 <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_2> ;
-    rdf:_2 <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]_3> .
+cx:deu_NPDefDetstrongPLUSADJweakPLUSN_slots a rdf:Seq ;
+    rdf:_1 cx:deu_NPDefDetstrongPLUSADJweakPLUSN_1 ;
+    rdf:_2 cx:deu_NPDefDetstrongPLUSADJweakPLUSN_2 ;
+    rdf:_2 cx:deu_NPDefDetstrongPLUSADJweakPLUSN_3 .
 
-<http://example.org/cx/NP[das+ADJ-e+N]nom.sg.neut> a rcxn:Construction ;
-    rcxn:hasMetadata <http://example.org/cx/NP[das+ADJ-e+N]nom.sg.neut_MD> ;
+cx:deu_NPdasPLUSADJePLUSNnomsgneut a rcxn:Construction ;
+    rcxn:hasMetadata cx:deu_NPdasPLUSADJePLUSNnomsgneut_MD ;
     rcxn:hasTitle "NP [das+ ADJ-e+ N]nom.sg.neut" ;
     lg:partOfLanguage lg:deu .
 
-<http://example.org/cx/NP[das+ADJ-e+N]nom.sg.neut_MD> a rcxn:Metadata ;
+cx:deu_NPdasPLUSADJePLUSNnomsgneut_MD a rcxn:Metadata ;
     rcxn:annotator membr:Kligge ;
     dcterm:created "2024-12-02"^^xsd:date .
 
-<http://example.org/cx/NP[def.DET-strong+N]> a rcxn:Construction ;
-    rcxn:hasMetadata <http://example.org/cx/NP[def.DET-strong+N]_MD> ;
+cx:deu_NPdefDETstrongPLUSN a rcxn:Construction ;
+    rcxn:hasMetadata cx:deu_NPdefDETstrongPLUSN_MD ;
     rcxn:hasTitle "NP [def.DET-strong + N]" ;
     lg:partOfLanguage lg:deu .
 
-<http://example.org/cx/NP[def.DET-strong+N]_MD> a rcxn:Metadata ;
+cx:deu_NPdefDETstrongPLUSN_MD a rcxn:Metadata ;
     rcxn:annotator membr:Kligge ;
     dcterm:created "2024-12-02"^^xsd:date .
 
-<http://example.org/cx/NP[dem+ADJ-en+N]dat.sg.masc/neut> a rcxn:Construction ;
-    rcxn:hasMetadata <http://example.org/cx/NP[dem+ADJ-en+N]dat.sg.masc/neut_MD> ;
+cx:deu_NPdemPLUSADJenPLUSNdatsgmascSLASHneut a rcxn:Construction ;
+    rcxn:hasMetadata cx:deu_NPdemPLUSADJenPLUSNdatsgmascSLASHneut_MD ;
     rcxn:hasTitle "NP [dem + ADJ-en+ N]dat.sg.masc/neut" ;
     lg:partOfLanguage lg:deu .
 
-<http://example.org/cx/NP[dem+ADJ-en+N]dat.sg.masc/neut_MD> a rcxn:Metadata ;
+cx:deu_NPdemPLUSADJenPLUSNdatsgmascSLASHneut_MD a rcxn:Metadata ;
     rcxn:annotator membr:Kligge ;
     dcterm:created "2024-12-02"^^xsd:date .
 
-<http://example.org/cx/NP[der+ADJ-e+N]nom.sg.masc> a rcxn:Construction ;
-    rcxn:hasMetadata <http://example.org/cx/NP[der+ADJ-e+N]nom.sg.masc_MD> ;
+cx:deu_NPderPLUSADJePLUSNnomsgmasc a rcxn:Construction ;
+    rcxn:hasMetadata cx:deu_NPderPLUSADJePLUSNnomsgmasc_MD ;
     rcxn:hasTitle "NP [der+ ADJ-e+ N]nom.sg.masc" ;
     lg:partOfLanguage lg:deu .
 
-<http://example.org/cx/NP[der+ADJ-e+N]nom.sg.masc_MD> a rcxn:Metadata ;
+cx:deu_NPderPLUSADJePLUSNnomsgmasc_MD a rcxn:Metadata ;
     rcxn:annotator membr:Kligge ;
     dcterm:created "2024-12-02"^^xsd:date .
 
-<http://example.org/cx/NP[die+ADJ-e+N]nom.sg.fem> a rcxn:Construction ;
-    rcxn:hasMetadata <http://example.org/cx/NP[die+ADJ-e+N]nom.sg.fem_MD> ;
+cx:deu_NPdiePLUSADJePLUSNnomsgfem a rcxn:Construction ;
+    rcxn:hasMetadata cx:deu_NPdiePLUSADJePLUSNnomsgfem_MD ;
     rcxn:hasTitle "NP [die + ADJ-e+ N]nom.sg.fem" ;
     lg:partOfLanguage lg:deu .
 
-<http://example.org/cx/NP[die+ADJ-e+N]nom.sg.fem_MD> a rcxn:Metadata ;
+cx:deu_NPdiePLUSADJePLUSNnomsgfem_MD a rcxn:Metadata ;
     rcxn:annotator membr:Kligge ;
     dcterm:created "2024-12-02"^^xsd:date .
 
-<http://example.org/cx/NP[indef.DET-strong+ADJ-weak+N]> a rcxn:Construction ;
-    rcxn:hasMetadata <http://example.org/cx/NP[indef.DET-strong+ADJ-weak+N]_MD> ;
+cx:deu_NPindefDETstrongPLUSADJweakPLUSN a rcxn:Construction ;
+    rcxn:hasMetadata cx:deu_NPindefDETstrongPLUSADJweakPLUSN_MD ;
     rcxn:hasTitle "NP [indef.DET-strong + ADJ-weak + N]" ;
     lg:partOfLanguage lg:deu .
 
-<http://example.org/cx/NP[indef.DET-strong+ADJ-weak+N]_MD> a rcxn:Metadata ;
+cx:deu_NPindefDETstrongPLUSADJweakPLUSN_MD a rcxn:Metadata ;
     rcxn:annotator membr:Kligge ;
     dcterm:created "2024-12-02"^^xsd:date .
 
-<http://example.org/cx/NP[indef.DET-strong+N]> a rcxn:Construction ;
-    rcxn:hasMetadata <http://example.org/cx/NP[indef.DET-strong+N]_MD> ;
+cx:deu_NPindefDETstrongPLUSN a rcxn:Construction ;
+    rcxn:hasMetadata cx:deu_NPindefDETstrongPLUSN_MD ;
     rcxn:hasTitle "NP [indef.DET-strong + N]" ;
     lg:partOfLanguage lg:deu .
 
-<http://example.org/cx/NP[indef.DET-strong+N]_MD> a rcxn:Metadata ;
+cx:deu_NPindefDETstrongPLUSN_MD a rcxn:Metadata ;
     rcxn:annotator membr:Kligge ;
     dcterm:created "2024-12-02"^^xsd:date .
 
-<http://example.org/cx/NP[indef.DET-zero+N]> a rcxn:Construction ;
-    rcxn:hasMetadata <http://example.org/cx/NP[indef.DET-zero+N]_MD> ;
+cx:deu_NPindefDETzeroPLUSN a rcxn:Construction ;
+    rcxn:hasMetadata cx:deu_NPindefDETzeroPLUSN_MD ;
     rcxn:hasTitle "NP [indef.DET-zero + N]" ;
     lg:partOfLanguage lg:deu .
 
-<http://example.org/cx/NP[indef.DET-zero+N]_MD> a rcxn:Metadata ;
+cx:deu_NPindefDETzeroPLUSN_MD a rcxn:Metadata ;
     rcxn:annotator membr:Kligge ;
     dcterm:created "2024-12-02"^^xsd:date .
 

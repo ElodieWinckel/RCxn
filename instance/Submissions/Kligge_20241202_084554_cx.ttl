@@ -7,78 +7,78 @@
 @prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc> a rcxn:Construction ;
+cx:deu_NPderPLUSADJeNnomsgmasc a rcxn:Construction ;
     rcxn:hasTitle "NP[der+ ADJ-e N]nom.sg.masc" ;
-    links:similarFormSimilarFunction <http://example.org/cx/NP[das+ADJ-eN]acc.sg.neut>,
-        <http://example.org/cx/NP[das+ADJ-eN]nom.sg.neut>,
-        <http://example.org/cx/NP[dem+ADJ-enN]dat.sg.masc>,
-        <http://example.org/cx/NP[dem+ADJ-enN]dat.sg.neut>,
-        <http://example.org/cx/NP[den+ADJ-enN]acc.sg.masc>,
-        <http://example.org/cx/NP[die+ADJ-eN]nom.sg.fem> ;
-    links:inheritsFrom <http://example.org/cx/NP[Def.Det-strong+ADJ-weak+N]> ;
-    links:inheritsFrom <http://example.org/cx/NPnom.sg.masc> ;
-    rcxn:hasConstructionMeaning <http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_Meaning> ;
-    rcxn:hasMetadata <http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_MD> ;
-    rcxn:hasSlots <http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_slots> ;
+    links:similarFormSimilarFunction cx:deu_NPdasPLUSADJeNaccsgneut,
+        cx:deu_NPdasPLUSADJeNnomsgneut,
+        cx:deu_NPdemPLUSADJenNdatsgmasc,
+        cx:deu_NPdemPLUSADJenNdatsgneut,
+        cx:deu_NPdenPLUSADJenNaccsgmasc,
+        cx:deu_NPdiePLUSADJeNnomsgfem ;
+    links:inheritsFrom cx:deu_NPDefDetstrongPLUSADJweakPLUSN ;
+    links:inheritsFrom cx:deu_NPnomsgmasc ;
+    rcxn:hasConstructionMeaning cx:deu_NPderPLUSADJeNnomsgmasc_Meaning ;
+    rcxn:hasMetadata cx:deu_NPderPLUSADJeNnomsgmasc_MD ;
+    rcxn:hasSlots cx:deu_NPderPLUSADJeNnomsgmasc_slots ;
     lg:partOfLanguage lg:deu .
 
-<http://example.org/cx/NP[das+ADJ-eN]acc.sg.neut> a rcxn:Construction ;
+cx:deu_NPdasPLUSADJeNaccsgneut a rcxn:Construction ;
     cx:annotator membr:Kligge ;
     dcterm:created "2024-12-02"^^xsd:date ;
     rcxn:hasTitle "NP[das + ADJ-e N]acc.sg.neut" ;
     lg:partOfLanguage lg:deu .
 
-<http://example.org/cx/NP[das+ADJ-eN]nom.sg.neut> a rcxn:Construction ;
+cx:deu_NPdasPLUSADJeNnomsgneut a rcxn:Construction ;
     cx:annotator membr:Kligge ;
     dcterm:created "2024-12-02"^^xsd:date ;
     rcxn:hasTitle "NP[das + ADJ-e N]nom.sg.neut" ;
     lg:partOfLanguage lg:deu .
 
-<http://example.org/cx/NP[dem+ADJ-enN]dat.sg.masc> a rcxn:Construction ;
+cx:deu_NPdemPLUSADJenNdatsgmasc a rcxn:Construction ;
     cx:annotator membr:Kligge ;
     dcterm:created "2024-12-02"^^xsd:date ;
     rcxn:hasTitle "NP[dem + ADJ-en N]dat.sg.masc" ;
     lg:partOfLanguage lg:deu .
 
-<http://example.org/cx/NP[dem+ADJ-enN]dat.sg.neut> a rcxn:Construction ;
+cx:deu_NPdemPLUSADJenNdatsgneut a rcxn:Construction ;
     cx:annotator membr:Kligge ;
     dcterm:created "2024-12-02"^^xsd:date ;
     rcxn:hasTitle "NP[dem + ADJ-en N]dat.sg.neut" ;
     lg:partOfLanguage lg:deu .
 
-<http://example.org/cx/NP[den+ADJ-enN]acc.sg.masc> a rcxn:Construction ;
+cx:deu_NPdenPLUSADJenNaccsgmasc a rcxn:Construction ;
     cx:annotator membr:Kligge ;
     dcterm:created "2024-12-02"^^xsd:date ;
     rcxn:hasTitle "NP[den+ ADJ-en N]acc.sg.masc" ;
     lg:partOfLanguage lg:deu .
 
-<http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_1> a rcxn:SlotObligatory ;
+cx:deu_NPderPLUSADJeNnomsgmasc_1 a rcxn:SlotObligatory ;
     cx:WordOrder "Element 1 immediately before Element 2." .
 
-<http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_2> a rcxn:SlotObligatory ;
+cx:deu_NPderPLUSADJeNnomsgmasc_2 a rcxn:SlotObligatory ;
     cx:WordOrder "Element 2 immediately before Element 3." .
 
-<http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_3> a rcxn:SlotObligatory .
+cx:deu_NPderPLUSADJeNnomsgmasc_3 a rcxn:SlotObligatory .
 
-<http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_MD> a rcxn:Metadata ;
+cx:deu_NPderPLUSADJeNnomsgmasc_MD a rcxn:Metadata ;
     rcxn:annotator membr:Kligge ;
     dcterm:created "2024-12-02"^^xsd:date .
 
-<http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_Meaning> a rcxn:ConstructionMeaning ;
+cx:deu_NPderPLUSADJeNnomsgmasc_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "NPs in German have obligatory grammatical marking specifying case, number, gender." .
 
-<http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_slots> a rdf:Seq ;
-    rdf:_1 <http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_1> ;
-    rdf:_2 <http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_2> ;
-    rdf:_3 <http://example.org/cx/NP[der+ADJ-eN]nom.sg.masc_3> .
+cx:deu_NPderPLUSADJeNnomsgmasc_slots a rdf:Seq ;
+    rdf:_1 cx:deu_NPderPLUSADJeNnomsgmasc_1 ;
+    rdf:_2 cx:deu_NPderPLUSADJeNnomsgmasc_2 ;
+    rdf:_3 cx:deu_NPderPLUSADJeNnomsgmasc_3 .
 
-<http://example.org/cx/NP[die+ADJ-eN]nom.sg.fem> a rcxn:Construction ;
+cx:deu_NPdiePLUSADJeNnomsgfem a rcxn:Construction ;
     cx:annotator membr:Kligge ;
     dcterm:created "2024-12-02"^^xsd:date ;
     rcxn:hasTitle "NP[die + ADJ-e N]nom.sg.fem" ;
     lg:partOfLanguage lg:deu .
 
-<http://example.org/cx/NPnom.sg.masc> a rcxn:Construction ;
+cx:deu_NPnomsgmasc a rcxn:Construction ;
     cx:annotator membr:Kligge ;
     dcterm:created "2024-12-02"^^xsd:date ;
     rcxn:hasTitle "NP nom.sg.masc" ;

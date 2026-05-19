@@ -53,7 +53,7 @@ cx:gmh_Prefix rcxn:elementOf <http://example.org/cx/gmh12C_Präfixverbkonstrukti
     rcxn:hasSyntacticFunction "Verb" .
 
 <http://example.org/cx/gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_3_Form> a rcxn:SlotForm ;
-    rcxn:hasStem cx:gmh_brëchen, cx:gmh_varn ;
+    rcxn:hasStem cx:gmh_brechen, cx:gmh_varn ;
     rcxn:hasSyntacticForm cx:gmh_Verb .
 
 <http://example.org/cx/gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_4> a rcxn:SlotObligatory ;
@@ -119,10 +119,10 @@ membr:Project_Fuehrer_F2512191440 a rsrch:Finding ;
     rcxn:hasSlots <http://example.org/cx/gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_slots> ;
     rcxn:hasTitle "Präfixverbkonstruktion (lokalistische Tätigkeit)" .
 
-cx:gmh_brëchen a rcxn:Construction ;
+cx:gmh_brechen a rcxn:Construction ;
     rcxn:hasTitle "brëchen" ;
-    rcxn:hasConstructionMeaning cx:gmh_brëchen_Meaning ;
+    rcxn:hasConstructionMeaning cx:gmh_brechen_Meaning ;
     lg:partOfLanguage lg:gmh.
 
-cx:gmh_brëchen_Meaning a rcxn:ConstructionMeaning ;
+cx:gmh_brechen_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "to break" .

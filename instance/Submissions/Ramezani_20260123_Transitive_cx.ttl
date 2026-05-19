@@ -12,32 +12,32 @@
 @prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-cx:EnglishTransitiveconstruction rcxn:hasConstructionMeaning cx:EnglishTransitiveconstruction_Meaning ;
-    rcxn:hasSlots cx:EnglishTransitiveconstruction_slots ;
-    cx:hasExample cx:EnglishTransitiveconstruction_Ex_A .
+cx:engLME_Transitiveconstruction rcxn:hasConstructionMeaning cx:engLME_Transitiveconstruction_Meaning ;
+    rcxn:hasSlots cx:engLME_Transitiveconstruction_slots ;
+    cx:hasExample cx:engLME_Transitiveconstruction_Ex_A .
 
-cx:EnglishTransitiveconstruction_slots a rdf:Seq ;
-    rdf:_1 cx:EnglishTransitiveconstruction_1 ;
-    rdf:_2 cx:EnglishTransitiveconstruction_2 ;
-    rdf:_3 cx:EnglishTransitiveconstruction_3 .
+cx:engLME_Transitiveconstruction_slots a rdf:Seq ;
+    rdf:_1 cx:engLME_Transitiveconstruction_1 ;
+    rdf:_2 cx:engLME_Transitiveconstruction_2 ;
+    rdf:_3 cx:engLME_Transitiveconstruction_3 .
 
-cx:EnglishTransitiveconstruction_1 a rcxn:SlotObligatory ;
+cx:engLME_Transitiveconstruction_1 a rcxn:SlotObligatory ;
     rcxn:hasSyntacticFunction "Subject" .
 
-cx:EnglishTransitiveconstruction_2 a rcxn:SlotObligatory .
+cx:engLME_Transitiveconstruction_2 a rcxn:SlotObligatory .
 
-cx:EnglishTransitiveconstruction_2_Form a rcxn:SlotForm ;
+cx:engLME_Transitiveconstruction_2_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_Verb .
 
-cx:EnglishTransitiveconstruction_3 a rcxn:SlotObligatory ;
+cx:engLME_Transitiveconstruction_3 a rcxn:SlotObligatory ;
     rcxn:hasSyntacticFunction "Object" .
 
-cx:EnglishTransitiveconstruction_Meaning a rcxn:ConstructionMeaning ;
+cx:engLME_Transitiveconstruction_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning """A [subject]1 performs [an action]2 on [a direct object]3.""" .
 
-cx:EnglishTransitiveconstruction_Ex_A a cx:Example ;
+cx:engLME_Transitiveconstruction_Ex_A a cx:Example ;
     cx:hasText "The baker baked a cake." ;
     cx:hasAnnotatedText "[The baker]1 [baked]2 [a cake]3." .
 
-membr:Project_Ramezani_250214_F250218 rsrch:basedOn cx:EnglishTransitiveconstruction .
+membr:Project_Ramezani_250214_F250218 rsrch:basedOn cx:engLME_Transitiveconstruction .
 

@@ -8,7 +8,7 @@
 
 cx:FernandezSantos_20250910_629471 a rdata:Study .
 
-cx:Transitiveobjectrelativeclause rdata:basedOnStudy rd:FernandezSantos_20250910_629471 .
+cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause rdata:basedOnStudy rd:FernandezSantos_20250910_629471 .
 
 rd:FernandezSantos_20250910_629471_Sources a cx:Collection ;
     cx:hasLiterature <doi.org/10.1017/langcog.2025.10015> .
@@ -35,6 +35,6 @@ rd:FernandezSantos_20250910_629471 a rdata:Study ;
     rdata:dataRepository "https://osf.io/4x6pz/files/osfstorage" ;
     rdata:hasTitle "Predictive processing can override perceptual information: evidence from Spanish object relative clauses [Study 1]" ;
     rdata:publishedIn rd:FernandezSantos_20250910_629471_Sources ;
-    rdata:relevantFor cx:Transitiveobjectrelativeclause ;
+    rdata:relevantFor cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause ;
     rdata:studyType rdata:behavioral .
 

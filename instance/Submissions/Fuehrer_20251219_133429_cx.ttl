@@ -50,7 +50,7 @@ cx:gmh_Prefix rcxn:elementOf <http://example.org/cx/gmh12C_Präfixverbkonstrukti
     rcxn:hasSyntacticFunction "Verb" .
 
 <http://example.org/cx/gmh12C_PräfixverbkonstruktionHandlung_3_Form> a rcxn:SlotForm ;
-    rcxn:hasStem cx:gmh_æhten, cx:gmh_bîzen, cx:gmh_dringen, cx:gmh_gân, cx:gmh_houwen, cx:gmh_leiten, cx:gmh_rîten, cx:gmh_stëchen, cx:gmh_varn .
+    rcxn:hasStem cx:gmh_æhten, cx:gmh_bizen, cx:gmh_dringen, cx:gmh_gan, cx:gmh_houwen, cx:gmh_leiten, cx:gmh_riten, cx:gmh_stechen, cx:gmh_varn .
 
 <http://example.org/cx/gmh12C_PräfixverbkonstruktionHandlung_4> a rcxn:SlotObligatory ;
     olia:hasCase olia:Accusative ;
@@ -118,13 +118,13 @@ Intensifying function occurs when there's already a directional element present 
 cx:gmh_æhten a rcxn:Construction ;
     rcxn:hasTitle "æhten" ;
     lg:partOfLanguage lg:gmh.
-cx:gmh_bîzen a rcxn:Construction ;
+cx:gmh_bizen a rcxn:Construction ;
     rcxn:hasTitle "bîzen" ;
     lg:partOfLanguage lg:gmh.
 cx:gmh_dringen a rcxn:Construction ;
     rcxn:hasTitle "dringen" ;
     lg:partOfLanguage lg:gmh.
-cx:gmh_gân a rcxn:Construction ;
+cx:gmh_gan a rcxn:Construction ;
     rcxn:hasTitle "gân" ;
     lg:partOfLanguage lg:gmh.
 cx:gmh_houwen a rcxn:Construction ;
@@ -133,10 +133,10 @@ cx:gmh_houwen a rcxn:Construction ;
 cx:gmh_leiten a rcxn:Construction ;
     rcxn:hasTitle "leiten" ;
     lg:partOfLanguage lg:gmh.
-cx:gmh_rîten a rcxn:Construction ;
+cx:gmh_riten a rcxn:Construction ;
     rcxn:hasTitle "rîten" ;
     lg:partOfLanguage lg:gmh.
-cx:gmh_stëchen a rcxn:Construction ;
+cx:gmh_stechen a rcxn:Construction ;
     rcxn:hasTitle "stëchen" ;
     lg:partOfLanguage lg:gmh.
 cx:gmh_varn a rcxn:Construction ;

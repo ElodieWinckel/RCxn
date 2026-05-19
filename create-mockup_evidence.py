@@ -26,8 +26,8 @@ summary = "Participants' accuracy on subject relative clauses is at ceiling only
 
 g.add((rd[study], RDF.type, rdata.Study))
 g.add((rd[study], rdata.studyType, rdata.behavioralExperiment))
-g.add((rd[study], rdata.relevantFor, cx.Transitiveobjectrelativeclause))
-g.add((cx.Transitiveobjectrelativeclause, rdata.basedOnStudy, rd[study]))
+g.add((rd[study], rdata.relevantFor, cx.spaSpoPen_Potentiallyambiguousobjectrelativeclause))
+g.add((cx.spaSpoPen_Potentiallyambiguousobjectrelativeclause, rdata.basedOnStudy, rd[study]))
 g.add((rd[study], rdata.dataRepository, Literal("https://osf.io/4x6pz/files/osfstorage")))
 g.add((rd[study], rdata.publishedIn, Literal("Llompart, Fernández Santos & Dąbrowska (2024-10-10). Comprehension of object relatives in Spanish: the role of frequency and transparency in acquisition and adult grammar. 10.1515/cog-2024-0016"))) # TODO: real bibliography
 g.add((rd[study], rdata.Summary, Literal(summary)))

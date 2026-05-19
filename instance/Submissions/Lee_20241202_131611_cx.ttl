@@ -18,7 +18,7 @@ cx:deuWrSt20_sichNPADJADVvorAugenVP a rcxn:Construction ;
     rcxn:hasMetadata cx:deuWrSt20_sichNPADJADVvorAugenVP_MD ;
     rcxn:hasSlots cx:deuWrSt20_sichNPADJADVvorAugenVP_slots ;
     links:inheritsFrom cx:deu_Generalprepositionalconstructions,
-        <http://example.org/cx/vor+bodypartconstructions> ;
+        cx:deu_vorPLUSbodypartconstructions ;
     lg:partOfLanguage lg:deuWrSt20 .
 
 cx:deuWrSt20_sichNPADJADVvorAugenVP_5_Index olia:hasNumber olia:Plural .
@@ -137,12 +137,12 @@ cx:deuWrSt20_sichNPADJADVvorAugenVP_slots a rdf:Seq ;
     rdf:_5 cx:deuWrSt20_sichNPADJADVvorAugenVP_5 ;
     rdf:_6 cx:deuWrSt20_sichNPADJADVvorAugenVP_6 .
 
-<http://example.org/cx/vor+bodypartconstructions> a rcxn:Construction ;
-    rcxn:hasMetadata <http://example.org/cx/vor+bodypartconstructions_MD> ;
+cx:deu_vorPLUSbodypartconstructions a rcxn:Construction ;
+    rcxn:hasMetadata cx:deu_vorPLUSbodypartconstructions_MD ;
     rcxn:hasTitle "vor + body part constructions" ;
     lg:partOfLanguage lg:deu .
 
-<http://example.org/cx/vor+bodypartconstructions> a rcxn:Metadata ;
+cx:deu_vorPLUSbodypartconstructions_MD a rcxn:Metadata ;
     rcxn:annotator membr:Lee ;
     dcterm:created "2024-12-02"^^xsd:date .
 

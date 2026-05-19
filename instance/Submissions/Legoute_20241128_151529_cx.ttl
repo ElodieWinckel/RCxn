@@ -12,65 +12,65 @@
 @prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-cx:POU-beneficiaryconstruction a rcxn:Construction ;
+cx:hat_POUbeneficiaryconstruction a rcxn:Construction ;
     rcxn:hasTitle "POU-beneficiary construction" ;
-    rcxn:hasConstructionMeaning cx:POU-beneficiaryconstruction_Meaning ;
-    cx:hasExample cx:POU-beneficiaryconstruction_Ex_A ;
-    rcxn:hasMetadata cx:POU-beneficiaryconstruction_MD ;
-    rcxn:hasSlots cx:POU-beneficiaryconstruction_slots ;
+    rcxn:hasConstructionMeaning cx:hat_POUbeneficiaryconstruction_Meaning ;
+    cx:hasExample cx:hat_POUbeneficiaryconstruction_Ex_A ;
+    rcxn:hasMetadata cx:hat_POUbeneficiaryconstruction_MD ;
+    rcxn:hasSlots cx:hat_POUbeneficiaryconstruction_slots ;
     lg:partOfLanguage lg:hat ;
-    links:similarFormDifferentFunction cx:POU-purposeconstruction .
+    links:similarFormDifferentFunction cx:hat_POUpurposeconstruction .
 
-cx:POU-beneficiaryconstruction_1 a rcxn:SlotObligatory ;
-    rcxn:hasSlotForm cx:POU-beneficiaryconstruction_1_Form ;
+cx:hat_POUbeneficiaryconstruction_1 a rcxn:SlotObligatory ;
+    rcxn:hasSlotForm cx:hat_POUbeneficiaryconstruction_1_Form ;
     RDFS:comment "not always concrete" ;
     olia:hasSemanticRole olia:ThemeRole .
 
-cx:POU-beneficiaryconstruction_1_Form a rcxn:SlotForm ;
+cx:hat_POUbeneficiaryconstruction_1_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:hat_Phrase .
 
-cx:POU-beneficiaryconstruction_2 a rcxn:SlotObligatory ;
+cx:hat_POUbeneficiaryconstruction_2 a rcxn:SlotObligatory ;
     cx:WordOrder "Element 2 is always before Element 3" ;
-    rcxn:hasSlotForm cx:POU-beneficiaryconstruction_2_Form ;
+    rcxn:hasSlotForm cx:hat_POUbeneficiaryconstruction_2_Form ;
     cx:hasTranslation "for" .
 
-cx:POU-beneficiaryconstruction_2_Form a rcxn:SlotForm ;
+cx:hat_POUbeneficiaryconstruction_2_Form a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "POU" ;
     rcxn:hasSyntacticForm cx:hat_InvariableSyntacticMorpheme .
 
-cx:POU-beneficiaryconstruction_3 a rcxn:SlotObligatory ;
-    rcxn:hasSlotForm cx:POU-beneficiaryconstruction_3_Form ;
+cx:hat_POUbeneficiaryconstruction_3 a rcxn:SlotObligatory ;
+    rcxn:hasSlotForm cx:hat_POUbeneficiaryconstruction_3_Form ;
     cx:hasOtherSemanticContribution "Beneficiary" .
 
-cx:POU-beneficiaryconstruction_3_Form a rcxn:SlotForm ;
+cx:hat_POUbeneficiaryconstruction_3_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:hat_NounPhrase .
 
-cx:POU-beneficiaryconstruction_Ex_A a cx:Example ;
+cx:hat_POUbeneficiaryconstruction_Ex_A a cx:Example ;
     cx:hasGlosses "3SG   ANT  make/do   mass  pou   2PL" ;
     cx:hasText "Yo      te           fè          mès    pou   nou." ;
     cx:hasAnnotatedText "Yo      te           fè          [mès]1    [pou]2   [nou]3." ;
     cx:hasTranslation "They made a mass in our name" ;
     RDFS:comment "Text 1, #27" .
 
-cx:POU-beneficiaryconstruction_MD a rcxn:Metadata ;
+cx:hat_POUbeneficiaryconstruction_MD a rcxn:Metadata ;
     rcxn:annotator membr:Legoute ;
     dcterm:created "2024-11-28"^^xsd:date .
 
-cx:POU-beneficiaryconstruction_Meaning a rcxn:ConstructionMeaning ;
+cx:hat_POUbeneficiaryconstruction_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "Refers to [a beneficiary]3" ;
     rcxn:hasMeaning "[A beneficiary]3 benefits from [a theme]1" .
 
-cx:POU-beneficiaryconstruction_slots a rdf:Seq ;
-    rdf:_1 cx:POU-beneficiaryconstruction_1 ;
-    rdf:_2 cx:POU-beneficiaryconstruction_2 ;
-    rdf:_3 cx:POU-beneficiaryconstruction_3 .
+cx:hat_POUbeneficiaryconstruction_slots a rdf:Seq ;
+    rdf:_1 cx:hat_POUbeneficiaryconstruction_1 ;
+    rdf:_2 cx:hat_POUbeneficiaryconstruction_2 ;
+    rdf:_3 cx:hat_POUbeneficiaryconstruction_3 .
 
-cx:POU-purposeconstruction a rcxn:Construction ;
-    rcxn:hasMetadata cx:POU-purposeconstruction_MD ;
+cx:hat_POUpurposeconstruction a rcxn:Construction ;
+    rcxn:hasMetadata cx:hat_POUpurposeconstruction_MD ;
     rcxn:hasTitle "POU-purpose construction" ;
     lg:partOfLanguage lg:hat .
 
-cx:POU-purposeconstruction_MD a rcxn:Metadata ;
+cx:hat_POUpurposeconstruction_MD a rcxn:Metadata ;
     rcxn:annotator membr:Legoute ;
     dcterm:created "2024-11-28"^^xsd:date .
 
@@ -94,5 +94,5 @@ membr:Project_Legoute_241128 a rsrch:Project ;
 
 membr:Project_Legoute_241128_F250218 a rsrch:Finding ;
     rdfs:label "POU provokes a NP to become a beneficiary" ;
-    rsrch:basedOn cx:POU-beneficiaryconstruction .
+    rsrch:basedOn cx:hat_POUbeneficiaryconstruction .
 

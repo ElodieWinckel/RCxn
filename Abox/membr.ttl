@@ -290,7 +290,7 @@ membr:Project_FernandezSantos_241125 a rsrch:Project ;
 
 membr:Project_FernandezSantos_241125_F250218 a rsrch:Finding ;
     rdfs:label "The late disambiguation of verb-medial plain-variant (no a + article) object relative can lead to shallow processing. This in combination with high phonetic similarity with a canonical SR could lead to predictive processing overriding perceptual information (at the point of the last NP an object is expected so it’s more likely to hear \"al\" rather than \"el\"). In more general terms, expectations of canonical linguistic input in locally ambiguous structures can override acoustic perception." ;
-    rsrch:basedOn cx:Transitiveobjectrelativeclause .
+    rsrch:basedOn cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause .
 
 membr:Project_Fokashchuk a rsrch:Project ;
     rsrch:hasResearchQuestion membr:Project_Fokashchuk_241210 ;
@@ -401,7 +401,7 @@ membr:Project_Legoute_241128 a rsrch:Project ;
 
 membr:Project_Legoute_241128_F250218 a rsrch:Finding ;
     rdfs:label "POU provokes a NP to become a beneficiary" ;
-    rsrch:basedOn cx:POU-beneficiaryconstruction .
+    rsrch:basedOn cx:hat_POUbeneficiaryconstruction .
 
 membr:Project_Makhanina a rsrch:Project ;
     rsrch:projectName "Representation and acquisition of idiomatic constructions in L1 and L2 learners"@en .
@@ -477,10 +477,10 @@ membr:Project_Ramezani_250214 rsrch:hasFindings membr:Project_Ramezani_250214_F2
 
 membr:Project_Ramezani_250214_F250218 a rsrch:Finding ;
     rdfs:label "So far we have results from LLM analysis that can significantly recognize and differentiate between argument structure constructions." ;
-    rsrch:basedOn cx:EnglishTransitiveconstruction,
-        cx:engLME_Argumentstructureconstruction,
+    rsrch:basedOn cx:engLME_Argumentstructureconstruction,
         cx:engLME_Ditransitiveconstruction,
         cx:engLME_Resultativeconstruction,
+        cx:engLME_Transitiveconstruction,
         cx:eng_CauseMotionconstruction .
 
 membr:Project_Rastegar a rsrch:Project ;
@@ -504,7 +504,7 @@ membr:Project_Trombetta a rsrch:Project ;
 
 membr:Project_Trombetta_F250218 a rsrch:Finding ;
     rdfs:label "The text reveals various types of text-level constructions, i.e., constructions capable of structuring and organizing the text. These structures, while formally appearing as sentences or phrases, operate at the textual level." ;
-    rsrch:basedOn cx:Relative-Topic-ShiftConstruction .
+    rsrch:basedOn cx:itaStoria_RelativeTopicShiftConstruction .
 
 membr:Project_Tzimas a rsrch:Project ;
     rsrch:projectName "Subject-inversion throughout Early Modern English: changing relations in individual and communal constructions"@en .

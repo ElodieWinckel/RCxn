@@ -214,11 +214,20 @@ def clean_name(name):
     clean = clean.replace("'","")
     clean = clean.replace("ß", "ss")
     clean = clean.replace("á", "a")
+    clean = clean.replace("â", "a")
     clean = clean.replace("é", "e")
+    clean = clean.replace("ë", "e")
+    clean = clean.replace("î", "i")
+    clean = clean.replace("ä", "ae")
+    clean = clean.replace("ö", "oe")
     clean = clean.replace("ü", "ue")
     clean = clean.replace("Ä","AE")
+    clean = clean.replace("Ö", "OE")
+    clean = clean.replace("Ü", "UE")
+    clean = clean.replace("ā", "aa")
     clean = clean.replace("+", "PLUS")
     clean = clean.replace("&", "AND")
+    clean = clean.replace("/", "SLASH")
     return clean
 
 ###################################################

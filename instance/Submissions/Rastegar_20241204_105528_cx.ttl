@@ -14,8 +14,8 @@ cx:deu_AusdemAErmelschuettelnconstruction a rcxn:Construction ;
     rcxn:hasTitle "Aus dem Ärmel schütteln construction" ;
     links:CL_differentFormSameFunction cx:engLME_Pullsomethingoutofahat ;
     links:CL_similarFormDifferentFunction cx:engLME_Rollupyoursleeves,
-        <http://example.org/cx/Farsibarāyekasiāstinbālāzadan:torollupsleevesforsomething>,
-        <http://example.org/cx/Farsimārāstin-exodparvarāndan:tonurtureasnakeinone'sbosom> ;
+        cx:pes_baraayekasiaastinbaalaazadantorollupsleevesforsomething,
+        cx:pes_maaraastinexodparvaraandantonurtureasnakeinonesbosom ;
     rcxn:hasConstructionMeaning cx:deu_AusdemAErmelschuettelnconstruction_Meaning ;
     cx:hasExample cx:deu_AusdemAErmelschuettelnconstruction_Ex_A,
         cx:deu_AusdemAErmelschuettelnconstruction_Ex_B ;
@@ -40,21 +40,21 @@ cx:engLME_Rollupyoursleeves_MD a rcxn:Metadata ;
     rcxn:annotator membr:Rastegar ;
     dcterm:created "2024-12-04"^^xsd:date .
 
-<http://example.org/cx/Farsibarāyekasiāstinbālāzadan:torollupsleevesforsomething> a rcxn:Construction ;
-    rcxn:hasMetadata <http://example.org/cx/Farsibarāyekasiāstinbālāzadan:torollupsleevesforsomething_MD> ;
+cx:pes_baraayekasiaastinbaalaazadantorollupsleevesforsomething a rcxn:Construction ;
+    rcxn:hasMetadata cx:pes_baraayekasiaastinbaalaazadantorollupsleevesforsomething_MD ;
     rcxn:hasTitle "barāye kasi āstin bālā zadan: to roll up sleeves for something" ;
     lg:partOfLanguage lg:pes .
 
-<http://example.org/cx/Farsibarāyekasiāstinbālāzadan:torollupsleevesforsomething_MD> a rcxn:Metadata ;
+cx:pes_baraayekasiaastinbaalaazadantorollupsleevesforsomething_MD a rcxn:Metadata ;
     rcxn:annotator membr:Rastegar ;
     dcterm:created "2024-12-04"^^xsd:date .
 
-<http://example.org/cx/Farsimārāstin-exodparvarāndan:tonurtureasnakeinone'sbosom> a rcxn:Construction ;
-    rcxn:hasMetadata <http://example.org/cx/Farsimārāstin-exodparvarāndan:tonurtureasnakeinone'sbosom_MD> ;
+cx:pes_maaraastinexodparvaraandantonurtureasnakeinonesbosom a rcxn:Construction ;
+    rcxn:hasMetadata cx:pes_maaraastinexodparvaraandantonurtureasnakeinonesbosom_MD ;
     rcxn:hasTitle "mār āstin-e xod parvarāndan: to nurture a snake in one's bosom" ;
     lg:partOfLanguage lg:pes .
 
-<http://example.org/cx/Farsimārāstin-exodparvarāndan:tonurtureasnakeinone'sbosom_MD> a rcxn:Metadata ;
+cx:pes_maaraastinexodparvaraandantonurtureasnakeinonesbosom_MD a rcxn:Metadata ;
     rcxn:annotator membr:Rastegar ;
     dcterm:created "2024-12-04"^^xsd:date ;
     rcxn:hasTitle "mār āstin-e xod parvarāndan: to nurture a snake in one's bosom" ;
@@ -118,7 +118,7 @@ cx:deu_AusdemAErmelschuettelnconstruction_5 a rcxn:SlotObligatory ;
     rcxn:hasOtherSemanticContribution "Action" .
 
 cx:deu_AusdemAErmelschuettelnconstruction_5_Form a rcxn:SlotForm ;
-    rcxn:hasStem cx:deu_schütteln ;
+    rcxn:hasStem cx:deu_schuetteln ;
     rcxn:hasSyntacticForm cx:deu_Verb .
 
 cx:deu_AusdemAErmelschuettelnconstruction_5_Index a cx:Event ;
@@ -163,10 +163,10 @@ cx:deu_PrepositionalPhrase a rcxn:Construction ;
     rcxn:hasTitle "Prepositional Phrase" ;
     lg:partOfLanguage lg:deu .
 
-cx:deu_schütteln a rcxn:Construction ;
+cx:deu_schuetteln a rcxn:Construction ;
     rcxn:hasTitle "schütteln" ;
-    rcxn:hasConstructionMeaning cx:deu_schütteln_Meaning ;
+    rcxn:hasConstructionMeaning cx:deu_schuetteln_Meaning ;
     lg:partOfLanguage lg:deu .
 
-cx:deu_schütteln_Meaning a rcxn:ConstructionMeaning ;
+cx:deu_schuetteln_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "to shake" .

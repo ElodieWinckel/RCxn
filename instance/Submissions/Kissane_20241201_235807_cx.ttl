@@ -7,7 +7,7 @@
 @prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://example.org/cx/TheEnglishGIVE-OUTVerbParticleConstruction.> a rcxn:Construction ;
+cx:engLME_GIVEOUTVerbParticleConstruction a rcxn:Construction ;
     rcxn:hasTitle "GIVE-OUT Verb Particle Construction" ;
     rcxn:hasConstructionMeaning cx:engLME_GIVEOUTVerbParticleConstruction_Meaning ;
     cx:hasExample cx:engLME_GIVEOUTVerbParticleConstruction_Ex_A ;
