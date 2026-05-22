@@ -71,11 +71,11 @@ The app will start locally, typically at `http://127.0.0.1:5000/`.
 
 2. **Editor**:
    - The editor checks the [ISO 639-3 standard](https://iso639-3.sil.org/sites/iso639-3/files/downloads/iso-639-3_Name_Index.tab).
-   - If the language exists, use the ISO label and code. If not, identify the closest metalanguage/variety and create a new code (e.g., `engUsSpo` for "Spoken American English").
+   - If the language exists, use the ISO label and code. If not, identify the closest macrolanguage/variety and create a new code (e.g., `engUsSpo` for "Spoken American English").
    - Add the language to:
      - `ontologies/lg.rdf`
      - `static/data/language_tree.json`
-   - Always include both the metalanguage and variety.
+   - Always include both the macrolanguage and variety.
 
 ## Support
 For questions or support, contact the editor via email.

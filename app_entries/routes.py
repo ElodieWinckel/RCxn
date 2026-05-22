@@ -9,17 +9,17 @@ import os
 ### FUNCTIONS
 ###################################################
 
-def get_metalanguage(lang_uri, graph, is_variety_of):
+def get_macrolanguage(lang_uri, graph, is_variety_of):
     """
     Walks up the isVarietyOf chain until it finds
-    the top-level 'metalanguage' (no parent).
+    the top-level 'macrolanguage' (no parent).
     """
     current = lang_uri
     visited = set()  # to avoid infinite loops if bad data
     while True:
         parents = list(graph.objects(subject=current, predicate=is_variety_of))
         if not parents:
-            # no further parent, return current as the metalanguage
+            # no further parent, return current as the macrolanguage
             return current
         parent = parents[0]
         if parent in visited:
@@ -269,21 +269,21 @@ def list_view():
         title = str(row.title)
         variety_uri = row.language
         variety = str(next(ont.objects(subject=variety_uri, predicate=RDFS.label), ""))
-        metalanguage_uri = get_metalanguage(variety_uri, ont, lg.isVarietyOf)
-        metalanguage_label = str(next(ont.objects(subject=metalanguage_uri, predicate=RDFS.label), ""))
+        macrolanguage_uri = get_macrolanguage(variety_uri, ont, lg.isVarietyOf)
+        macrolanguage_label = str(next(ont.objects(subject=macrolanguage_uri, predicate=RDFS.label), ""))
 
         # Append construction details as dictionary
         constructions.append({
             'uri': construction_uri,
             'title': title,
             'variety': variety,
-            'metalanguage': metalanguage_label
+            'macrolanguage': macrolanguage_label
         })
 
     # Sorting in alphabetical order
     constructions = sorted(
         constructions,
-        key=lambda x: (x['metalanguage'].lower(), x['title'].lower())
+        key=lambda x: (x['macrolanguage'].lower(), x['title'].lower())
     )
 
     return render_template("app_entries/list.html", constructions=constructions)

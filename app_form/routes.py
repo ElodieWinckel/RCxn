@@ -170,10 +170,10 @@ def load_existing_constructions(file_path):
         })
     return constructions
 
-def get_metalanguage(lang_uri):
+def get_macrolanguage(lang_uri):
     """
     Walks up the isVarietyOf chain until it finds
-    the top-level 'metalanguage' (no parent).
+    the top-level 'macrolanguage' (no parent).
     """
     ontology_lg = Graph() # Create graph
     ontology_lg.parse("ontologies/lg.rdf", format="xml") # Load the ontology for languages into the graph
@@ -184,7 +184,7 @@ def get_metalanguage(lang_uri):
     while True:
         parents = list(ontology_lg.objects(subject=current, predicate=lg.isVarietyOf))
         if not parents:
-            # no further parent, return current as the metalanguage
+            # no further parent, return current as the macrolanguage
             return current
         parent = parents[0]
         if parent in visited:
@@ -481,8 +481,8 @@ def form_submit():
 ###################################################
 
     g.add((cx[construction_name_cleaned], lg.partOfLanguage, lg[construction_language_uri]))
-    metalanguage_uri = get_metalanguage(lg[construction_language_uri]) # full URI of metalanguage associated with this language
-    metalanguage_code = str(metalanguage_uri).replace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#", "")
+    macrolanguage_uri = get_macrolanguage(lg[construction_language_uri]) # full URI of macrolanguage associated with this language
+    macrolanguage_code = str(macrolanguage_uri).replace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#", "")
 
     ###################################################
 ### IMPLEMENT CONSTRUCTION MEANING
@@ -682,10 +682,10 @@ def form_submit():
                     )
                 else:  # Users can also enter the name of a stem that has not been implemented yet
                     # When this happens, create a new construction entry, with title, language, annotator and creation date
-                    cleaned_stem_construction = str(metalanguage_code) + "_" + clean_name(stem)
+                    cleaned_stem_construction = str(macrolanguage_code) + "_" + clean_name(stem)
                     metadata_stem_construction = f"{cleaned_stem_construction}_MD"
                     g.add((cx[cleaned_stem_construction], RDF.type, rcxn.Construction))
-                    g.add((cx[cleaned_stem_construction], lg.partOfLanguage, metalanguage_uri))  # A metaphorical extension belong automatically to the same (meta-)language
+                    g.add((cx[cleaned_stem_construction], lg.partOfLanguage, macrolanguage_uri))  # A metaphorical extension belong automatically to the same (meta-)language
                     g.add((cx[cleaned_stem_construction], rcxn.hasMetadata, cx[metadata_stem_construction]))
                     g.add((cx[metadata_stem_construction], RDF.type, rcxn.Metadata))
                     g.add((cx[metadata_stem_construction], cx.annotator, membr[user_name]))
@@ -718,10 +718,10 @@ def form_submit():
                     )
                 else:  # Users can also enter the name of a construction that has not been implemented yet
                     # When this happens, create a new construction entry, with title, annotator and creation date
-                    cleaned_morphosyn_construction = str(metalanguage_code) + "_" + clean_name(morphosyn)
+                    cleaned_morphosyn_construction = str(macrolanguage_code) + "_" + clean_name(morphosyn)
                     metadata_morphosyn_construction = f"{cleaned_morphosyn_construction}_MD"
                     g.add((cx[cleaned_morphosyn_construction], RDF.type, rcxn.Construction))
-                    g.add((cx[cleaned_morphosyn_construction], lg.partOfLanguage, metalanguage_uri))  # A metaphorical extension belong automatically to the same (meta-)language
+                    g.add((cx[cleaned_morphosyn_construction], lg.partOfLanguage, macrolanguage_uri))  # A metaphorical extension belong automatically to the same (meta-)language
                     g.add((cx[cleaned_morphosyn_construction], rcxn.hasMetadata, cx[metadata_morphosyn_construction]))
                     g.add((cx[metadata_morphosyn_construction], RDF.type, rcxn.Metadata))
                     g.add((cx[metadata_morphosyn_construction], cx.annotator, membr[user_name]))
@@ -781,10 +781,10 @@ def form_submit():
             )
         else: # Users can also enter the name of a construction that has not been implemented yet
             # When this happens, create a new construction entry, with title, annotator and creation date
-            cleaned_inherit_construction = str(metalanguage_code) + "_" + clean_name(inherit_construction)
+            cleaned_inherit_construction = str(macrolanguage_code) + "_" + clean_name(inherit_construction)
             metadata_inherit_construction = f"{cleaned_inherit_construction}_MD"
             g.add((cx[cleaned_inherit_construction], RDF.type, rcxn.Construction))
-            g.add((cx[cleaned_inherit_construction], lg.partOfLanguage, metalanguage_uri))
+            g.add((cx[cleaned_inherit_construction], lg.partOfLanguage, macrolanguage_uri))
             g.add((cx[cleaned_inherit_construction], rcxn.hasMetadata, cx[metadata_inherit_construction]))
             g.add((cx[metadata_inherit_construction], RDF.type, rcxn.Metadata))
             g.add((cx[metadata_inherit_construction], cx.annotator, membr[user_name]))
@@ -807,10 +807,10 @@ def form_submit():
             )
         else:  # Users can also enter the name of a construction that has not been implemented yet
             # When this happens, create a new construction entry, with title, annotator and creation date
-            cleaned_inherit_construction = str(metalanguage_code) + "_" + clean_name(inherit_construction)
+            cleaned_inherit_construction = str(macrolanguage_code) + "_" + clean_name(inherit_construction)
             metadata_inherit_construction = f"{cleaned_inherit_construction}_MD"
             g.add((cx[cleaned_inherit_construction], RDF.type, rcxn.Construction))
-            g.add((cx[cleaned_inherit_construction], lg.partOfLanguage, metalanguage_uri))
+            g.add((cx[cleaned_inherit_construction], lg.partOfLanguage, macrolanguage_uri))
             g.add((cx[cleaned_inherit_construction], rcxn.hasMetadata, cx[metadata_inherit_construction]))
             g.add((cx[metadata_inherit_construction], RDF.type, rcxn.Metadata))
             g.add((cx[metadata_inherit_construction], cx.annotator, membr[user_name]))
@@ -833,11 +833,11 @@ def form_submit():
             )
         else:  # Users can also enter the name of a construction that has not been implemented yet
             # When this happens, create a new construction entry, with title, annotator and creation date
-            cleaned_inherit_construction = str(metalanguage_code) + "_" + clean_name(inherit_construction)
+            cleaned_inherit_construction = str(macrolanguage_code) + "_" + clean_name(inherit_construction)
             metadata_inherit_construction = f"{cleaned_inherit_construction}_MD"
             g.add((cx[cleaned_inherit_construction], RDF.type, rcxn.Construction))
             g.add((cx[cleaned_inherit_construction], rcxn.hasMetadata, cx[metadata_inherit_construction]))
-            g.add((cx[cleaned_inherit_construction], lg.partOfLanguage, metalanguage_uri)) # A metaphorical extension belong automatically to the same (meta-)language
+            g.add((cx[cleaned_inherit_construction], lg.partOfLanguage, macrolanguage_uri)) # A metaphorical extension belong automatically to the same (meta-)language
             g.add((cx[metadata_inherit_construction], RDF.type, rcxn.Metadata))
             g.add((cx[metadata_inherit_construction], cx.annotator, membr[user_name]))
             g.add((cx[metadata_inherit_construction], dcterm.created,
