@@ -683,6 +683,10 @@ cx:deu_Adjektivstamm_MD a rcxn:Metadata ;
     cx:annotator membr:Winckel ;
     dcterms:created "2026-04-13"^^xsd:date .
 
+cx:deu_Artikel_MD a rcxn:Metadata ;
+    cx:annotator membr:Winckel ;
+    dcterms:created "2026-05-22"^^xsd:date .
+
 cx:deu_AusdemAErmelschuettelnconstruction_1 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm cx:deu_AusdemAErmelschuettelnconstruction_1_Form ;
     rcxn:hasSlots cx:deu_AusdemAErmelschuettelnconstruction_1_slots .
@@ -1131,6 +1135,236 @@ cx:deu_SuperlativADJst_ADJ_slots a rdf_ns:Seq ;
     rdf_ns:_2 cx:deu_SuperlativADJst_ADJ_4 ;
     rdf_ns:_3 cx:deu_SuperlativADJst_ADJ_5 ;
     rdf_ns:_4 cx:deu_SuperlativADJst_ADJ_6 .
+
+cx:deu_SuperlativART_ADJest_1 a rcxn:SlotObligatory ;
+    cx:WordOrder "Das Nicht-Kern-KE Annäherung steht – falls realisiert – direkt vor dem Determinierer und relativiert die superlative Lesart." ;
+    rcxn:hasOtherSemanticContribution "Annäherung",
+        "Proportionale Quantität (Frame)",
+        "Relativierung (Frame)" .
+
+cx:deu_SuperlativART_ADJest_2 a rcxn:SlotObligatory ;
+    cx:WordOrder "Der Determinierer ist der Artikel, der stets vor der Dimension realisiert wird." ;
+    rdfs:comment "colloprofile: der, die, das" ;
+    rcxn:hasOtherSemanticContribution "Entität (Frame)" ;
+    rcxn:hasSlotForm cx:deu_SuperlativART_ADJest_2_Form ;
+    rcxn:hasSyntacticFunction "Determinierer" .
+
+cx:deu_SuperlativART_ADJest_2_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:deu_Artikel .
+
+cx:deu_SuperlativART_ADJest_3 a rcxn:SlotObligatory ;
+    cx:WordOrder "Das Nicht-Kern-KE Quantifizierung – meist als Präfix aller vor der Dimension – verstärkt die superlative Lesart." ;
+    rcxn:hasOtherSemanticContribution "Quantifizierte Menge (Frame)",
+        "Quantifizierung" .
+
+cx:deu_SuperlativART_ADJest_4 a rcxn:SlotObligatory ;
+    rcxn:hasSlots cx:deu_SuperlativART_ADJest_4_slots .
+
+cx:deu_SuperlativART_ADJest_4_slots a rdf_ns:Seq ;
+    rdf_ns:_1 cx:deu_SuperlativART_ADJest_5 ;
+    rdf_ns:_2 cx:deu_SuperlativART_ADJest_6 .
+
+cx:deu_SuperlativART_ADJest_5 a rcxn:SlotObligatory ;
+    rdfs:comment "Die Dimension beschreibt die Eigenschaft, die bezogen auf eine Entität in vollem Ausmaß zutrifft. Realisierbar sind undeklinierbare Adjektive und steigerbare Adverbien." ;
+    rcxn:hasOtherSemanticContribution "Dimension",
+        "Gradierbare Attribute (Frame)" .
+
+cx:deu_SuperlativART_ADJest_6 a rcxn:SlotObligatory ;
+    cx:WordOrder "Das Suffix -(e)st wird stets an die Dimension angehängt." ;
+    rcxn:hasOtherSemanticContribution "Extremwert (Frame)" ;
+    rcxn:hasSlotForm cx:deu_SuperlativART_ADJest_6_Form .
+
+cx:deu_SuperlativART_ADJest_6_Form a rcxn:SlotForm ;
+    rcxn:hasSurfaceForm "est",
+        "st" .
+
+cx:deu_SuperlativART_ADJest_7 a rcxn:SlotObligatory ;
+    rdfs:comment "Das Verglichene wird mit der Vergleichsmenge hinsichtlich eines bestimmten Wertes einer durch die Dimension definierten Skala verglichen. Das Verglichene beschreibt stets die Entität, deren Eigenschaft im vollen Ausmaß zutrifft." ;
+    rcxn:hasOtherSemanticContribution "Entität (Frame)",
+        "Verglichenes" .
+
+cx:deu_SuperlativART_ADJest_8 a rcxn:SlotObligatory ;
+    rdfs:comment "Die Vergleichsmenge wird herangezogen, um das Verglichene hinsichtlich eines bestimmten Wertes einer durch die Dimension definierten Skala polar einzuordnen. Die Vergleichsmenge wird häufig elliptisch realisiert, damit es nicht zu Wortwiederholungen innerhalb einer Phrase kommt." ;
+    rcxn:hasOtherSemanticContribution "Vergleichsmenge",
+        "Wert auf Skala (Frame)" .
+
+cx:deu_SuperlativART_ADJest_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "« Wir sind alle glücklich und freuen uns über [das]2 [schön]5[st]6e [Weihnachtsgeschenk]7 », schreibt Nena." ;
+    cx:hasText "« Wir sind alle glücklich und freuen uns über das schönste Weihnachtsgeschenk », schreibt Nena." ;
+    rdfs:comment "SOZ09/DEZ.05308 Die Südostschweiz, 31.12.2009" .
+
+cx:deu_SuperlativART_ADJest_Ex_B a cx:Example ;
+    cx:hasAnnotatedText "Ich wünsche mir vor allem Gesundheit für die gesamte Familie. [Das]7 ist einfach [das]2 [wichtig]5[st]6e [von allem]8." ;
+    cx:hasText "Ich wünsche mir vor allem Gesundheit für die gesamte Familie. Das ist einfach das wichtigste von allem." ;
+    rdfs:comment "SOZ09/DEZ.05244 Die Südostschweiz, 31.12.2009; «Gesundheit für die ganze Familie»" .
+
+cx:deu_SuperlativART_ADJest_Ex_C a cx:Example ;
+    cx:hasAnnotatedText "FU-Studenten können so mit dem Fahrrad zur Uni fahren. Allerdings sind [Zehlendorfer Mieten]7 [fast]1 [die]2 [teuer]5[st]6en." ;
+    cx:hasText "FU-Studenten können so mit dem Fahrrad zur Uni fahren. Allerdings sind Zehlendorfer Mieten fast die teuersten." ;
+    rdfs:comment "Der Tagesspiegel, 16.10.2000" .
+
+cx:deu_SuperlativART_ADJest_Ex_D a cx:Example ;
+    cx:hasAnnotatedText "Das auf [den]2 [neu]5[est]6en [Stand]7 gebrachte Werkverzeichnis mit Fundortangaben der Autografen und Verlagsangaben der Erstdrucke schliesst als Novum Bearbeitungen von fremden Komponisten ein, nennt aber die Bearbeitungen eigener Werke nicht. " ;
+    cx:hasText "Das auf den neuesten Stand gebrachte Werkverzeichnis mit Fundortangaben der Autografen und Verlagsangaben der Erstdrucke schliesst als Novum Bearbeitungen von fremden Komponisten ein, nennt aber die Bearbeitungen eigener Werke nicht. " ;
+    rdfs:comment "SOZ09/DEZ.05265 Die Südostschweiz, 31.12.2009; Ein Mendelssohn-Jahr, das noch lange zu hören gibt" .
+
+cx:deu_SuperlativART_ADJest_Ex_E a cx:Example ;
+    cx:hasAnnotatedText "Die Gesundheit ist schliesslich [das]2 [Wichtig]5[st]6e. " ;
+    cx:hasText "Die Gesundheit ist schliesslich das Wichtigste. " ;
+    rdfs:comment "SOZ09/DEZ.05286 Die Südostschweiz, 31.12.2009; «Ich nehme mir vor, keine Vorsätze zu fassen»" .
+
+cx:deu_SuperlativART_ADJest_Ex_F a cx:Example ;
+    cx:hasAnnotatedText "Über den Abstammungs- und Erbschaftskrimi der beiden prominenten Väter, der aus einem Walser-Roman stammen könnte, macht der überlebende Vater in diesem Buch nur Kürzestmitteilungen [der]2 [aller]3 [nüchtern]5[st]6en [Sorte]7." ;
+    cx:hasText "Über den Abstammungs- und Erbschaftskrimi der beiden prominenten Väter, der aus einem Walser-Roman stammen könnte, macht der überlebende Vater in diesem Buch nur Kürzestmitteilungen der aller nüchternsten Sorte." ;
+    rdfs:comment "Die Zeit, 24.11.2017, Nr. 48" .
+
+cx:deu_SuperlativART_ADJest_Ex_G a cx:Example ;
+    cx:hasAnnotatedText "Wo orten Sie [die]2 [grös]5[st]6en [Baustellen]7 im Schweizer Eishockey?" ;
+    cx:hasText "Wo orten Sie die grössten Baustellen im Schweizer Eishockey?" ;
+    rdfs:comment "SOZ09/DEZ.05296 Die Südostschweiz, 31.12.2009; «Was da abgeht, ist phänomenal»" .
+
+cx:deu_SuperlativART_ADJest_Ex_H a cx:Example ;
+    cx:hasAnnotatedText "[Die]2 [wichtig]5[st]6en [Szenen]7 [der ersten zwei Drittel]8 produzierte in erster Linie Denis Koschetkow." ;
+    cx:hasText "Die wichtigsten Szenen der ersten zwei Drittel produzierte in erster Linie Denis Koschetkow." ;
+    rdfs:comment "SOZ09/DEZ.05370 Die Südostschweiz, 31.12.2009; Dynamo Minsk stoppt Team Canada" .
+
+cx:deu_SuperlativART_ADJest_Ex_I a cx:Example ;
+    cx:hasAnnotatedText "[Eine]1 [der]2 [wichtig]5[st]6en [Neuerungen]7 [im Regelwerk des Etappenrennens]8 besagt , dass die Athleten ihre Zähler behalten, auch wenn sie nicht bis zum letzten Teilstück durchhalten." ;
+    cx:hasText "Eine der wichtigsten Neuerungen im Regelwerk des Etappenrennens besagt , dass die Athleten ihre Zähler behalten, auch wenn sie nicht bis zum letzten Teilstück durchhalten." ;
+    rdfs:comment "SOZ09/DEZ.05377 Die Südostschweiz, 31.12.2009; Petter Northug Favorit auf den Toursieg" .
+
+cx:deu_SuperlativART_ADJest_Ex_J a cx:Example ;
+    cx:hasAnnotatedText "Man muss detailversessen sein, sich um [die]2 [aller]3 [klein]5[st]6en [Dinge]7 kümmern und gleichzeitig den Blick für das große Ganze wahren." ;
+    cx:hasText "Man muss detailversessen sein, sich um die aller kleinsten Dinge kümmern und gleichzeitig den Blick für das große Ganze wahren." ;
+    rdfs:comment "Die Zeit, 08.01.2018, Nr. 02" .
+
+cx:deu_SuperlativART_ADJest_MD a rcxn:Metadata ;
+    dcterms:created "2026-05-22"^^xsd:date ;
+    rcxn:annotator membr:Winckel .
+
+cx:deu_SuperlativART_ADJest_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning """Die Superlativ:ART_ADJ-(e)st-Konstruktion gehört zu der Familie der Vergleichskonstruktionen und weist einem Wert die höchste Stufe auf einer Skala zu.
+    Die Zuweisung erfolgt durch den Vergleich einer Entität mit anderen Entitäten beziehungsweise einer (impliziten) Gesamtheit.
+    Der [Determinierer]2 steht stets vor der meist als Adjektiv realisierten [Dimension]5, an die das lexikalisch feste Kern-Konstruktionselement (KE-lex) [-(e)st]6 angehangen wird. Die [Dimension]5 benennt die Skala des Vergleichs, d.h. die Skala, auf der einem Wert die höchste Stufe zugewiesen wird. Neben dem [Determinierer]2, dem [KE-lex]6 und der [Dimension]5 besteht die Konstruktion aus zwei weiteren Kern-Konstruktionselementen (Kern-KE): dem [Verglichenen]7 (die Entität, der eine durch die [Dimension]5 ausgedrückte Eigenschaft in vollem Ausmaß zugewiesen wird) und der [Vergleichsmenge]8 (die Menge an Entitäten, die über die selbe Eigenschaft in geringerem Ausmaß verfügen).""" .
+
+cx:deu_SuperlativART_ADJest_slots a rdf_ns:Seq ;
+    rdf_ns:_1 cx:deu_SuperlativART_ADJest_1 ;
+    rdf_ns:_2 cx:deu_SuperlativART_ADJest_2 ;
+    rdf_ns:_3 cx:deu_SuperlativART_ADJest_3 ;
+    rdf_ns:_4 cx:deu_SuperlativART_ADJest_4 ;
+    rdf_ns:_5 cx:deu_SuperlativART_ADJest_7 ;
+    rdf_ns:_6 cx:deu_SuperlativART_ADJest_8 .
+
+cx:deu_SuperlativART_ADJste_wo_gibt_1 a rcxn:SlotOptional ;
+    cx:WordOrder "Das Nicht-Kern-KE Annäherung kann in Form eines unbestimmten Artikels direkt vor dem Determinierer realisiert werden. Es relativiert die superlative Lesart der Konstruktion und schwächt ihre Wirkung ab, indem dem Verglichenen die Einzigartigkeit abgesprochen wird." ;
+    rcxn:hasOtherSemanticContribution "Annäherung",
+        "Proportionale Quantität (Frame)",
+        "Relativierung (Frame)" ;
+    rcxn:hasSlotForm cx:deu_SuperlativART_ADJste_wo_gibt_1_Form .
+
+cx:deu_SuperlativART_ADJste_wo_gibt_1_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:deu_Artikel .
+
+cx:deu_SuperlativART_ADJste_wo_gibt_2 a rcxn:SlotObligatory ;
+    rcxn:hasSlots cx:deu_SuperlativART_ADJste_wo_gibt_2_slots .
+
+cx:deu_SuperlativART_ADJste_wo_gibt_2_slots a rdf_ns:Seq ;
+    rdf_ns:_1 cx:deu_SuperlativART_ADJste_wo_gibt_3 ;
+    rdf_ns:_2 cx:deu_SuperlativART_ADJste_wo_gibt_4 ;
+    rdf_ns:_3 cx:deu_SuperlativART_ADJste_wo_gibt_5 ;
+    rdf_ns:_4 cx:deu_SuperlativART_ADJste_wo_gibt_6 .
+
+cx:deu_SuperlativART_ADJste_wo_gibt_3 a rcxn:SlotOptional ;
+    cx:WordOrder "Das interne Kern-KE Determinierer wird in Form eines Artikels stets direkt vor der Dimension realisiert. Vor dem Determinierer kann das Nicht-Kern-KE Annäherung realisiert werden.  Aufgrund der konzeptionell mündlichen und informellen Natur der Konstruktion kann der Determinierer in Ausnahmefällen nullinstanziiert bleiben." ;
+    rdfs:comment "colloprofile: der, die, das" ;
+    rcxn:hasOtherSemanticContribution "Entität (Frame)",
+        "Ereignis (Frame)" ;
+    rcxn:hasSlotForm cx:deu_SuperlativART_ADJste_wo_gibt_3_Form ;
+    rcxn:hasSyntacticFunction "Determiner" .
+
+cx:deu_SuperlativART_ADJste_wo_gibt_3_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:deu_Artikel .
+
+cx:deu_SuperlativART_ADJste_wo_gibt_4 a rcxn:SlotOptional ;
+    cx:WordOrder "Das Nicht-Kern-KE Quantifizierung kann in Form des Präfixes aller- vor der Dimension realisiert werden. Es verstärkt die superlative Lesart der Konstruktion und die durch die Dimension ausgedrückte Eigenschaft." ;
+    rcxn:hasOtherSemanticContribution "Quantifizierte Menge (Frame)",
+        "Quantifizierung" .
+
+cx:deu_SuperlativART_ADJste_wo_gibt_5 a rcxn:SlotObligatory ;
+    rdfs:comment "Das interne Kern-KE Dimension wird in Form eines Adjektivs auf den Determinierer folgend und direkt vor dem KE-lex der Konstruktion realisiert, wobei das Suffix -(e)st(e)(n) des KE-lex an die Dimension angehängt und das durch die Dimension ausgedrückte Adjektiv somit superlativ gesteigert wird.  Die Dimension beschreibt diejenige Eigenschaft, die bezogen auf eine Entität oder einen Sachverhalt in vollem Ausmaß zutrifft." ;
+    rcxn:hasOtherSemanticContribution "Dimension",
+        "Gradierbare Attribute (Frame)" .
+
+cx:deu_SuperlativART_ADJste_wo_gibt_6 a rcxn:SlotObligatory ;
+    cx:WordOrder "Das KE-lex -ste_wo_gibt wird durch die Verbindung des Suffixes -(e)st(e)(n), des Adverbs wo und des flektierten Verbs gibt direkt auf die Dimension folgend realisiert, wobei das Suffix -(e)st(e)(n) an die Dimension angehängt und das durch die Dimension ausgedrückte Adjektiv somit superlativ gesteigert wird." ;
+    rcxn:hasOtherSemanticContribution "Extremwert (Frame)" ;
+    rcxn:hasSlotForm cx:deu_SuperlativART_ADJste_wo_gibt_6_Form .
+
+cx:deu_SuperlativART_ADJste_wo_gibt_6_Form a rcxn:SlotForm ;
+    rcxn:hasSurfaceForm "ste wo gibt" .
+
+cx:deu_SuperlativART_ADJste_wo_gibt_7 a rcxn:SlotObligatory ;
+    cx:WordOrder "Das externe Kern-KE Verglichenes wird in Form einer NP oder einer VP realisiert.  Das Verglichene wird mit der Vergleichsmenge hinsichtlich eines bestimmten Wertes einer durch die Dimension definierten Skala verglichen und beschreibt stets die Entität oder den Sachverhalt, deren/dessen Eigenschaft im vollen Ausmaß zutrifft." ;
+    rcxn:hasOtherSemanticContribution "Entität (Frame)",
+        "Ereignis (Frame)",
+        "Verglichenes" .
+
+cx:deu_SuperlativART_ADJste_wo_gibt_8 a rcxn:SlotOptional ;
+    cx:WordOrder "Das externe Kern-KE Vergleichsmenge wird in Form einer PP oder einer NP wie aller Zeiten direkt auf das KE-lex folgend oder innerhalb des KE-lex vor wo gibt realisiert, bleibt allerdings häufig nullinstanziiert." ;
+    rdfs:comment "Die Vergleichsmenge wird herangezogen, um das Verglichene hinsichtlich eines bestimmten Wertes einer durch die Dimension definierten Skala polar einzuordnen." ;
+    rcxn:hasOtherSemanticContribution "Vergleichsmenge",
+        "Wert auf Skala (Frame)" .
+
+cx:deu_SuperlativART_ADJste_wo_gibt_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "[Mars]7 ist [be]5[ste wo gibt]6, da ist immer was los." ;
+    cx:hasText "Mars ist beste wo gibt, da ist immer was los." ;
+    rdfs:comment "Destiny 2: Fantasy oder Nostalgie-Trip - Diese Orte mögt ihr am liebsten. Mein-MMO.de, 2020-02-09" .
+
+cx:deu_SuperlativART_ADJste_wo_gibt_Ex_B a cx:Example ;
+    cx:hasAnnotatedText "Das wurde vor ca. einem Jahr in der Presse öffentlich verbreitet, dass wir hier in dem Neubaugebiet [VDSL]7 bekommen – [das]3 [schnell]5[ste wo gibt]6." ;
+    cx:hasText "Das wurde vor ca. einem Jahr in der Presse öffentlich verbreitet, dass wir hier in dem Neubaugebiet VDSL bekommen – das schnellste wo gibt." ;
+    rdfs:comment "Wut!. ChiefJudy's, 2012-08-07" .
+
+cx:deu_SuperlativART_ADJste_wo_gibt_Ex_C a cx:Example ;
+    cx:hasAnnotatedText "Naja , eine nicht richtig festgezogene Lüsterklemme ( [Wago]7 ist eh [das]3 [be]5[ste wo gibt]6...), bzw. eine die im Laufe der Jahre locker geworden ist, da Kupfer nun mal kalt fließt (genau wie Glas, man sollte es kaum glauben !) ist auf jeden Fall ein Sicherheitrisiko." ;
+    cx:hasText "Naja , eine nicht richtig festgezogene Lüsterklemme ( Wago ist eh das beste wo gibt...), bzw. eine die im Laufe der Jahre locker geworden ist, da Kupfer nun mal kalt fließt (genau wie Glas, man sollte es kaum glauben !) ist auf jeden Fall ein Sicherheitrisiko." ;
+    rdfs:comment "Kabelbrandt in Verteilerdose Ersatzteilversand. forum.electronicwerkstatt.de, 2020-08-03" .
+
+cx:deu_SuperlativART_ADJste_wo_gibt_Ex_D a cx:Example ;
+    cx:hasAnnotatedText "lordi is einfach nur so schlecht .. mit ihrem disney metal .. denken [sie]7 wären [die]3 [härt]5[esten wo gibt]6." ;
+    cx:hasText "lordi is einfach nur so schlecht .. mit ihrem disney metal .. denken sie wären die härtesten wo gibt." ;
+    rdfs:comment "GROOOOOAAAAAAARRRRR* , Lordi. blog.beetlebum.de, 2006-05-21" .
+
+cx:deu_SuperlativART_ADJste_wo_gibt_Ex_E a cx:Example ;
+    cx:hasAnnotatedText "Der Song ist wack, keine Frage, aber auf die FooFighters lasse ich nichts kommen, immer noch [eine]1 [der]3 [geil]5[sten]6 [Live-Bands]7 [wo gibt]6 [auf Welt]8." ;
+    cx:hasText "Der Song ist wack, keine Frage, aber auf die FooFighters lasse ich nichts kommen, immer noch eine der geilsten Live-Bands wo gibt auf Welt." ;
+    rdfs:comment "There is no „Hochglanz“ in real Rock ‚N Roll. Call it a Day, 2011-02-14" .
+
+cx:deu_SuperlativART_ADJste_wo_gibt_Ex_F a cx:Example ;
+    cx:hasAnnotatedText "Diese Band, [eine]1 [der]3 [be]5[sten]6 [Livebands]7 [wo gibt]6, bringt also einen weiteren Song heraus." ;
+    cx:hasText "Diese Band, eine der besten Livebands wo gibt, bringt also einen weiteren Song heraus." ;
+    rdfs:comment "Fischers Fritz fisch frische Musik IV - Ein Quickie. Wasdaslebensobringt, 2012-02-22" .
+
+cx:deu_SuperlativART_ADJste_wo_gibt_Ex_G a cx:Example ;
+    cx:hasAnnotatedText "Und [das]7 finde ich auf Touchdevices [das]3 [aller]4[schlimm]5[ste wo gibt]6." ;
+    cx:hasText "Und das finde ich auf Touchdevices das allerschlimmste wo gibt." ;
+    rdfs:comment "Working Draft. workingdraft.de, 2012-07-29" .
+
+cx:deu_SuperlativART_ADJste_wo_gibt_MD a rcxn:Metadata ;
+    dcterms:created "2026-05-22"^^xsd:date ;
+    rcxn:annotator membr:Winckel .
+
+cx:deu_SuperlativART_ADJste_wo_gibt_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning """Die Konstruktion Superlativ:ART_ADJ-ste_wo_gibt gehört zu der Familie Superlativ:ART_ADJ-(e)st und weist einem Wert die höchste Stufe auf einer Skala zu, wobei diese Zuweisung durch den Vergleich einer Entität oder eines Sachverhalts mit anderen Entitäten oder Sachverhalten beziehungsweise einer (impliziten) Gesamtheit erfolgt.\r
+Aufgrund der höheren Frequenz der Konstruktion im DWDS-Webkorpus – im Gegensatz zu den Gegenwartskorpora – scheint es sich bei ihr um eine vor allem in konzeptionell mündlichen und informellen Kontexten genutzte Konstruktion zu handeln.\r
+Die Konstruktion besteht aus dem lexikalisch festen Kern-Konstruktionselement (KE-lex) [-ste_wo_gibt]6, den internen Kern-Konstruktionselementen (Kern-KE) [Dimension]5 und [Determinierer]3, den externen Kern-KE [Verglichenes]7 und [Vergleichsmenge]8 und den Nicht-Kern-KE [Annäherung]1 und [Quantifizierung]4.\r
+""" .
+
+cx:deu_SuperlativART_ADJste_wo_gibt_slots a rdf_ns:Seq ;
+    rdf_ns:_1 cx:deu_SuperlativART_ADJste_wo_gibt_1 ;
+    rdf_ns:_2 cx:deu_SuperlativART_ADJste_wo_gibt_2 ;
+    rdf_ns:_3 cx:deu_SuperlativART_ADJste_wo_gibt_7 ;
+    rdf_ns:_4 cx:deu_SuperlativART_ADJste_wo_gibt_8 .
 
 cx:deu_Superlativ_KompositionADJstEINHEIT a rcxn:Construction ;
     lg:partOfLanguage lg:deu ;
@@ -3302,6 +3536,23 @@ cx:deu_NPADJstrongPLUSADJstrongPLUSN a rcxn:Construction,
     rcxn:hasMetadata cx:deu_NPADJstrongPLUSADJstrongPLUSN ;
     rcxn:hasTitle "NP [ADJ-strong + ADJ-strong + N]" .
 
+cx:deu_SuperlativART_ADJste_wo_gibt a rcxn:Construction ;
+    cx:hasExample cx:deu_SuperlativART_ADJste_wo_gibt_Ex_A,
+        cx:deu_SuperlativART_ADJste_wo_gibt_Ex_B,
+        cx:deu_SuperlativART_ADJste_wo_gibt_Ex_C,
+        cx:deu_SuperlativART_ADJste_wo_gibt_Ex_D,
+        cx:deu_SuperlativART_ADJste_wo_gibt_Ex_E,
+        cx:deu_SuperlativART_ADJste_wo_gibt_Ex_F,
+        cx:deu_SuperlativART_ADJste_wo_gibt_Ex_G ;
+    rdfs:comment """Die Konstruktion wird in der Literatur bzw. in Grammatiken auch thematisiert unter: "2. Steigerung", "Elativ", "Komparation" & "Relativer Superlativ".\r
+Die Konstruktion Superlativ:ART_ADJ-ste_wo_gibt ähnelt der Konstruktion Superlativ:ART_ADJ-(e)st in vielen Aspekten, unterscheidet sich von ihr aber insbesondere durch die zusätzlich verstärkende Wortreihung wo gibt und die informellere Natur.""" ;
+    lg:partOfLanguage lg:deu ;
+    links:inheritsFrom cx:deu_SuperlativART_ADJest ;
+    rcxn:hasConstructionMeaning cx:deu_SuperlativART_ADJste_wo_gibt_Meaning ;
+    rcxn:hasMetadata cx:deu_SuperlativART_ADJste_wo_gibt_MD ;
+    rcxn:hasSlots cx:deu_SuperlativART_ADJste_wo_gibt_slots ;
+    rcxn:hasTitle "Superlativ:ART_ADJ-ste_wo_gibt" .
+
 cx:deu_Verb a rcxn:Construction ;
     lg:partOfLanguage lg:deu ;
     rcxn:elementOf cx:deuWrSt20_sichNPADJADVvorAugenVP,
@@ -3422,6 +3673,13 @@ cx:deu_Adjective a rcxn:Construction ;
         cx:deu_SuperlativADJst_ADJ ;
     rcxn:hasTitle "Adjective" .
 
+cx:deu_Artikel a rcxn:Construction ;
+    lg:partOfLanguage lg:deu ;
+    rcxn:elementOf cx:deu_SuperlativART_ADJest,
+        cx:deu_SuperlativART_ADJste_wo_gibt ;
+    rcxn:hasMetadata cx:deu_Artikel_MD ;
+    rcxn:hasTitle "Artikel" .
+
 cx:deu_Noun a rcxn:Construction ;
     lg:partOfLanguage lg:deu ;
     rcxn:elementOf cx:deuWrSt20_sichNPADJADVvorAugenVP,
@@ -3434,6 +3692,27 @@ cx:deu_NounPhrase a rcxn:Construction ;
     rcxn:elementOf cx:deuStdHigh_AllativeNP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions,
         cx:deuWrSt20_sichNPADJADVvorAugenVP ;
     rcxn:hasTitle "Noun Phrase" .
+
+cx:deu_SuperlativART_ADJest a rcxn:Construction ;
+    cx:hasExample cx:deu_SuperlativART_ADJest_Ex_A,
+        cx:deu_SuperlativART_ADJest_Ex_B,
+        cx:deu_SuperlativART_ADJest_Ex_C,
+        cx:deu_SuperlativART_ADJest_Ex_D,
+        cx:deu_SuperlativART_ADJest_Ex_E,
+        cx:deu_SuperlativART_ADJest_Ex_F,
+        cx:deu_SuperlativART_ADJest_Ex_G,
+        cx:deu_SuperlativART_ADJest_Ex_H,
+        cx:deu_SuperlativART_ADJest_Ex_I,
+        cx:deu_SuperlativART_ADJest_Ex_J ;
+    rdfs:comment "Die Konstruktion wird in der Literatur bzw. in Grammatiken auch thematisiert unter: \"2. Steigerung\", \"Komparation\" & \"Relativer Superlativ\".",
+        "Original entry by Nina Böbel: „Superlativ:ART_ADJ-(e)st“, in: FrameNet-Konstruktikon des Deutschen, https://framenet-constructicon.hhu.de/constructicon/construction?id=65, abgerufen am 22.05.2026." ;
+    lg:partOfLanguage lg:deu ;
+    links:inheritedBy cx:deu_SuperlativART_ADJste_wo_gibt ;
+    links:inheritsFrom cx:deu_SuperlativADJest ;
+    rcxn:hasConstructionMeaning cx:deu_SuperlativART_ADJest_Meaning ;
+    rcxn:hasMetadata cx:deu_SuperlativART_ADJest_MD ;
+    rcxn:hasSlots cx:deu_SuperlativART_ADJest_slots ;
+    rcxn:hasTitle "Superlativ:ART_ADJ-(e)st" .
 
 cx:engLME_Resultativeconstruction a rcxn:Construction ;
     cx:hasExample cx:engLME_Resultativeconstruction_Ex_A ;
@@ -3610,23 +3889,6 @@ cx:hat_POUbeneficiaryconstruction a rcxn:Construction ;
     rcxn:hasSlots cx:hat_POUbeneficiaryconstruction_slots ;
     rcxn:hasTitle "POU-beneficiary construction" .
 
-cx:deu_SuperlativADJest a rcxn:Construction ;
-    cx:hasExample cx:deu_SuperlativADJest_Ex_A,
-        cx:deu_SuperlativADJest_Ex_B,
-        cx:deu_SuperlativADJest_Ex_C,
-        cx:deu_SuperlativADJest_Ex_D ;
-    rdfs:comment "Imo, Wolfgang (2016): Grammatik. Eine Einführung, Stuttgart: J.B. Metzler.",
-        "Original entry by Benjamin Fischer: „Superlativ:ADJ-(e)st“, in: FrameNet-Konstruktikon des Deutschen, https://framenet-constructicon.hhu.de/constructicon/construction?id=4357, abgerufen am 13.04.2026." ;
-    lg:partOfLanguage lg:deu ;
-    links:inheritedBy cx:SuperlativART_ADJest,
-        cx:Superlativam_ADJsten,
-        cx:deu_SuperlativADJst_ADJ ;
-    links:inheritsFrom cx:SuperlativXst ;
-    rcxn:hasConstructionMeaning cx:deu_SuperlativADJest_Meaning ;
-    rcxn:hasMetadata cx:deu_SuperlativADJest_MD ;
-    rcxn:hasSlots cx:deu_SuperlativADJest_slots ;
-    rcxn:hasTitle "Superlativ:ADJ-(e)st" .
-
 cx:engLME_AttributeConstructionAttrAdj a rcxn:Construction ;
     cx:hasExample cx:engLME_AttributeConstructionAttrAdj_Ex_A ;
     lg:partOfLanguage lg:eng ;
@@ -3673,6 +3935,24 @@ cx:comePLUSnoisemannerofmovementVing a rcxn:Construction ;
     rcxn:hasMetadata cx:comePLUSnoisemannerofmovementVing_MD ;
     rcxn:hasSlots cx:comePLUSnoisemannerofmovementVing_slots ;
     rcxn:hasTitle "come + [noise/manner of movement] V-ing" .
+
+cx:deu_SuperlativADJest a rcxn:Construction ;
+    cx:hasExample cx:deu_SuperlativADJest_Ex_A,
+        cx:deu_SuperlativADJest_Ex_B,
+        cx:deu_SuperlativADJest_Ex_C,
+        cx:deu_SuperlativADJest_Ex_D ;
+    rdfs:comment "Imo, Wolfgang (2016): Grammatik. Eine Einführung, Stuttgart: J.B. Metzler.",
+        "Original entry by Benjamin Fischer: „Superlativ:ADJ-(e)st“, in: FrameNet-Konstruktikon des Deutschen, https://framenet-constructicon.hhu.de/constructicon/construction?id=4357, abgerufen am 13.04.2026." ;
+    lg:partOfLanguage lg:deu ;
+    links:inheritedBy cx:SuperlativART_ADJest,
+        cx:Superlativam_ADJsten,
+        cx:deu_SuperlativADJst_ADJ,
+        cx:deu_SuperlativART_ADJest ;
+    links:inheritsFrom cx:SuperlativXst ;
+    rcxn:hasConstructionMeaning cx:deu_SuperlativADJest_Meaning ;
+    rcxn:hasMetadata cx:deu_SuperlativADJest_MD ;
+    rcxn:hasSlots cx:deu_SuperlativADJest_slots ;
+    rcxn:hasTitle "Superlativ:ADJ-(e)st" .
 
 cx:engLME_Argumentstructureconstruction a rcxn:Construction ;
     rdfs:comment """The main data includes 2000 sentences that are generated by GPT-4, which is a text file.\r\r

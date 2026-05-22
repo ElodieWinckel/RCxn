@@ -528,7 +528,9 @@ membr:Project_Winckel_2601131454_F2601131454 a rsrch:Finding ;
 membr:Project_Winckel_2604130901_F2604130901 a rsrch:Finding ;
     rdfs:label "A manual transfer from the FrameNet-Konstruktikon des Deutschen in RDF format seems necessary." ;
     rsrch:basedOn cx:deu_SuperlativADJest,
-        cx:deu_SuperlativADJst_ADJ .
+        cx:deu_SuperlativADJst_ADJ,
+        cx:deu_SuperlativART_ADJest,
+        cx:deu_SuperlativART_ADJste_wo_gibt .
 
 membr:Project_Winckel_F2511281100 a rsrch:Finding ;
     rdfs:label "Implement a lexical item in the research constructicon" ;

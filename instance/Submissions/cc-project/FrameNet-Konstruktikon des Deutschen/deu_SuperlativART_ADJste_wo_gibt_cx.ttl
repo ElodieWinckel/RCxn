@@ -1,0 +1,134 @@
+@prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cx: <http://example.org/cx/> .
+@prefix dcterm: <http://purl.org/dc/terms/> .
+@prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
+@prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#> .
+@prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
+@prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+membr:Project_Winckel_2604130901_F2604130901 rsrch:basedOn cx:deu_SuperlativART_ADJste_wo_gibt .
+
+cx:deu_SuperlativART_ADJste_wo_gibt_1 a rcxn:SlotOptional ;
+    cx:WordOrder "Das Nicht-Kern-KE Annäherung kann in Form eines unbestimmten Artikels direkt vor dem Determinierer realisiert werden. Es relativiert die superlative Lesart der Konstruktion und schwächt ihre Wirkung ab, indem dem Verglichenen die Einzigartigkeit abgesprochen wird." ;
+    rcxn:hasOtherSemanticContribution "Annäherung" , "Proportionale Quantität (Frame)" , "Relativierung (Frame)" ;
+    rcxn:hasSlotForm cx:deu_SuperlativART_ADJste_wo_gibt_1_Form .
+
+cx:deu_SuperlativART_ADJste_wo_gibt_1_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:deu_Artikel .
+
+cx:deu_SuperlativART_ADJste_wo_gibt_2 a rcxn:SlotObligatory ;
+    rcxn:hasSlots cx:deu_SuperlativART_ADJste_wo_gibt_2_slots.
+
+cx:deu_SuperlativART_ADJste_wo_gibt_3 a rcxn:SlotOptional ;
+    cx:WordOrder "Das interne Kern-KE Determinierer wird in Form eines Artikels stets direkt vor der Dimension realisiert. Vor dem Determinierer kann das Nicht-Kern-KE Annäherung realisiert werden.  Aufgrund der konzeptionell mündlichen und informellen Natur der Konstruktion kann der Determinierer in Ausnahmefällen nullinstanziiert bleiben." ;
+    RDFS:comment "colloprofile: der, die, das" ;
+    rcxn:hasOtherSemanticContribution "Entität (Frame)" , "Ereignis (Frame)" ;
+    rcxn:hasSyntacticFunction "Determiner" ;
+    rcxn:hasSlotForm cx:deu_SuperlativART_ADJste_wo_gibt_3_Form .
+
+cx:deu_SuperlativART_ADJste_wo_gibt_3_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:deu_Artikel .
+
+cx:deu_SuperlativART_ADJste_wo_gibt_4 a rcxn:SlotOptional ;
+    cx:WordOrder "Das Nicht-Kern-KE Quantifizierung kann in Form des Präfixes aller- vor der Dimension realisiert werden. Es verstärkt die superlative Lesart der Konstruktion und die durch die Dimension ausgedrückte Eigenschaft." ;
+    rcxn:hasOtherSemanticContribution "Quantifizierung" , "Quantifizierte Menge (Frame)" .
+
+cx:deu_SuperlativART_ADJste_wo_gibt_5 a rcxn:SlotObligatory ;
+    RDFS:comment "Das interne Kern-KE Dimension wird in Form eines Adjektivs auf den Determinierer folgend und direkt vor dem KE-lex der Konstruktion realisiert, wobei das Suffix -(e)st(e)(n) des KE-lex an die Dimension angehängt und das durch die Dimension ausgedrückte Adjektiv somit superlativ gesteigert wird.  Die Dimension beschreibt diejenige Eigenschaft, die bezogen auf eine Entität oder einen Sachverhalt in vollem Ausmaß zutrifft." ;
+    rcxn:hasOtherSemanticContribution "Dimension" , "Gradierbare Attribute (Frame)" .
+
+cx:deu_SuperlativART_ADJste_wo_gibt_6 a rcxn:SlotObligatory ;
+    cx:WordOrder "Das KE-lex -ste_wo_gibt wird durch die Verbindung des Suffixes -(e)st(e)(n), des Adverbs wo und des flektierten Verbs gibt direkt auf die Dimension folgend realisiert, wobei das Suffix -(e)st(e)(n) an die Dimension angehängt und das durch die Dimension ausgedrückte Adjektiv somit superlativ gesteigert wird." ;
+    rcxn:hasOtherSemanticContribution "Extremwert (Frame)" ;
+    rcxn:hasSlotForm cx:deu_SuperlativART_ADJste_wo_gibt_6_Form .
+
+cx:deu_SuperlativART_ADJste_wo_gibt_6_Form a rcxn:SlotForm ;
+    rcxn:hasSurfaceForm "ste wo gibt" .
+
+cx:deu_SuperlativART_ADJste_wo_gibt_7 a rcxn:SlotObligatory ;
+    cx:WordOrder "Das externe Kern-KE Verglichenes wird in Form einer NP oder einer VP realisiert.  Das Verglichene wird mit der Vergleichsmenge hinsichtlich eines bestimmten Wertes einer durch die Dimension definierten Skala verglichen und beschreibt stets die Entität oder den Sachverhalt, deren/dessen Eigenschaft im vollen Ausmaß zutrifft." ;
+    rcxn:hasOtherSemanticContribution "Verglichenes" , "Entität (Frame)" , "Ereignis (Frame)" .
+
+cx:deu_SuperlativART_ADJste_wo_gibt_8 a rcxn:SlotOptional ;
+    cx:WordOrder "Das externe Kern-KE Vergleichsmenge wird in Form einer PP oder einer NP wie aller Zeiten direkt auf das KE-lex folgend oder innerhalb des KE-lex vor wo gibt realisiert, bleibt allerdings häufig nullinstanziiert." ;
+    RDFS:comment "Die Vergleichsmenge wird herangezogen, um das Verglichene hinsichtlich eines bestimmten Wertes einer durch die Dimension definierten Skala polar einzuordnen." ;
+    rcxn:hasOtherSemanticContribution "Vergleichsmenge" , "Wert auf Skala (Frame)" .
+
+cx:deu_SuperlativART_ADJste_wo_gibt_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "[Mars]7 ist [be]5[ste wo gibt]6, da ist immer was los." ;
+    cx:hasText "Mars ist beste wo gibt, da ist immer was los." ;
+    RDFS:comment "Destiny 2: Fantasy oder Nostalgie-Trip - Diese Orte mögt ihr am liebsten. Mein-MMO.de, 2020-02-09" .
+
+cx:deu_SuperlativART_ADJste_wo_gibt_Ex_B a cx:Example ;
+    cx:hasAnnotatedText "Das wurde vor ca. einem Jahr in der Presse öffentlich verbreitet, dass wir hier in dem Neubaugebiet [VDSL]7 bekommen – [das]3 [schnell]5[ste wo gibt]6." ;
+    cx:hasText "Das wurde vor ca. einem Jahr in der Presse öffentlich verbreitet, dass wir hier in dem Neubaugebiet VDSL bekommen – das schnellste wo gibt." ;
+    RDFS:comment "Wut!. ChiefJudy's, 2012-08-07" .
+
+cx:deu_SuperlativART_ADJste_wo_gibt_Ex_C a cx:Example ;
+    cx:hasAnnotatedText "Naja , eine nicht richtig festgezogene Lüsterklemme ( [Wago]7 ist eh [das]3 [be]5[ste wo gibt]6...), bzw. eine die im Laufe der Jahre locker geworden ist, da Kupfer nun mal kalt fließt (genau wie Glas, man sollte es kaum glauben !) ist auf jeden Fall ein Sicherheitrisiko." ;
+    cx:hasText "Naja , eine nicht richtig festgezogene Lüsterklemme ( Wago ist eh das beste wo gibt...), bzw. eine die im Laufe der Jahre locker geworden ist, da Kupfer nun mal kalt fließt (genau wie Glas, man sollte es kaum glauben !) ist auf jeden Fall ein Sicherheitrisiko." ;
+    RDFS:comment "Kabelbrandt in Verteilerdose Ersatzteilversand. forum.electronicwerkstatt.de, 2020-08-03" .
+
+cx:deu_SuperlativART_ADJste_wo_gibt_Ex_D a cx:Example ;
+    cx:hasAnnotatedText "lordi is einfach nur so schlecht .. mit ihrem disney metal .. denken [sie]7 wären [die]3 [härt]5[esten wo gibt]6." ;
+    cx:hasText "lordi is einfach nur so schlecht .. mit ihrem disney metal .. denken sie wären die härtesten wo gibt." ;
+    RDFS:comment "GROOOOOAAAAAAARRRRR* , Lordi. blog.beetlebum.de, 2006-05-21" .
+
+cx:deu_SuperlativART_ADJste_wo_gibt_Ex_E a cx:Example ;
+    cx:hasAnnotatedText "Der Song ist wack, keine Frage, aber auf die FooFighters lasse ich nichts kommen, immer noch [eine]1 [der]3 [geil]5[sten]6 [Live-Bands]7 [wo gibt]6 [auf Welt]8." ;
+    cx:hasText "Der Song ist wack, keine Frage, aber auf die FooFighters lasse ich nichts kommen, immer noch eine der geilsten Live-Bands wo gibt auf Welt." ;
+    RDFS:comment "There is no „Hochglanz“ in real Rock ‚N Roll. Call it a Day, 2011-02-14" .
+
+cx:deu_SuperlativART_ADJste_wo_gibt_Ex_F a cx:Example ;
+    cx:hasAnnotatedText "Diese Band, [eine]1 [der]3 [be]5[sten]6 [Livebands]7 [wo gibt]6, bringt also einen weiteren Song heraus." ;
+    cx:hasText "Diese Band, eine der besten Livebands wo gibt, bringt also einen weiteren Song heraus." ;
+    RDFS:comment "Fischers Fritz fisch frische Musik IV - Ein Quickie. Wasdaslebensobringt, 2012-02-22" .
+
+cx:deu_SuperlativART_ADJste_wo_gibt_Ex_G a cx:Example ;
+    cx:hasAnnotatedText "Und [das]7 finde ich auf Touchdevices [das]3 [aller]4[schlimm]5[ste wo gibt]6." ;
+    cx:hasText "Und das finde ich auf Touchdevices das allerschlimmste wo gibt." ;
+    RDFS:comment "Working Draft. workingdraft.de, 2012-07-29" .
+
+cx:deu_SuperlativART_ADJste_wo_gibt_MD a rcxn:Metadata ;
+    dcterm:created "2026-05-22"^^xsd:date ;
+    rcxn:annotator membr:Winckel .
+
+cx:deu_SuperlativART_ADJste_wo_gibt_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning """Die Konstruktion Superlativ:ART_ADJ-ste_wo_gibt gehört zu der Familie Superlativ:ART_ADJ-(e)st und weist einem Wert die höchste Stufe auf einer Skala zu, wobei diese Zuweisung durch den Vergleich einer Entität oder eines Sachverhalts mit anderen Entitäten oder Sachverhalten beziehungsweise einer (impliziten) Gesamtheit erfolgt.\r
+Aufgrund der höheren Frequenz der Konstruktion im DWDS-Webkorpus – im Gegensatz zu den Gegenwartskorpora – scheint es sich bei ihr um eine vor allem in konzeptionell mündlichen und informellen Kontexten genutzte Konstruktion zu handeln.\r
+Die Konstruktion besteht aus dem lexikalisch festen Kern-Konstruktionselement (KE-lex) [-ste_wo_gibt]6, den internen Kern-Konstruktionselementen (Kern-KE) [Dimension]5 und [Determinierer]3, den externen Kern-KE [Verglichenes]7 und [Vergleichsmenge]8 und den Nicht-Kern-KE [Annäherung]1 und [Quantifizierung]4.\r
+""" .
+
+cx:deu_SuperlativART_ADJste_wo_gibt_slots a rdf:Seq ;
+    rdf:_1 cx:deu_SuperlativART_ADJste_wo_gibt_1 ;
+    rdf:_2 cx:deu_SuperlativART_ADJste_wo_gibt_2 ;
+    rdf:_3 cx:deu_SuperlativART_ADJste_wo_gibt_7 ;
+    rdf:_4 cx:deu_SuperlativART_ADJste_wo_gibt_8 .
+
+cx:deu_SuperlativART_ADJste_wo_gibt_2_slots a rdf:Seq ;
+    rdf:_1 cx:deu_SuperlativART_ADJste_wo_gibt_3 ;
+    rdf:_2 cx:deu_SuperlativART_ADJste_wo_gibt_4 ;
+    rdf:_3 cx:deu_SuperlativART_ADJste_wo_gibt_5 ;
+    rdf:_4 cx:deu_SuperlativART_ADJste_wo_gibt_6 .
+
+cx:deu_SuperlativART_ADJste_wo_gibt a rcxn:Construction ;
+    cx:hasExample cx:deu_SuperlativART_ADJste_wo_gibt_Ex_A,
+        cx:deu_SuperlativART_ADJste_wo_gibt_Ex_B,
+        cx:deu_SuperlativART_ADJste_wo_gibt_Ex_C,
+        cx:deu_SuperlativART_ADJste_wo_gibt_Ex_D,
+        cx:deu_SuperlativART_ADJste_wo_gibt_Ex_E,
+        cx:deu_SuperlativART_ADJste_wo_gibt_Ex_F,
+        cx:deu_SuperlativART_ADJste_wo_gibt_Ex_G ;
+    RDFS:comment """Original entry by Benjamin Fischer: „Superlativ:ART_ADJ-ste_wo_gibt“, in: FrameNet-Konstruktikon des Deutschen, https://framenet-constructicon.hhu.de/constructicon/construction?id=2640, abgerufen am 22.05.2026.""" ,
+        """Die Konstruktion wird in der Literatur bzw. in Grammatiken auch thematisiert unter: "2. Steigerung", "Elativ", "Komparation" & "Relativer Superlativ".""" ,
+        """Die Konstruktion Superlativ:ART_ADJ-ste_wo_gibt ähnelt der Konstruktion Superlativ:ART_ADJ-(e)st in vielen Aspekten, unterscheidet sich von ihr aber insbesondere durch die zusätzlich verstärkende Wortreihung wo gibt und die informellere Natur.""" ;
+    lg:partOfLanguage lg:deu ;
+    links:inheritsFrom cx:deu_SuperlativART_ADJest ;
+    rcxn:hasConstructionMeaning cx:deu_SuperlativART_ADJste_wo_gibt_Meaning ;
+    rcxn:hasMetadata cx:deu_SuperlativART_ADJste_wo_gibt_MD ;
+    rcxn:hasSlots cx:deu_SuperlativART_ADJste_wo_gibt_slots ;
+    rcxn:hasTitle "Superlativ:ART_ADJ-ste_wo_gibt" .
+
