@@ -389,8 +389,8 @@ cx:arzCai_Ditransitiveconstruction_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "[ÆFFECTOR]1 makes [RECIPIENT]3 receive or lose [ÆFFECTED]4" .
 
 cx:arzCai_Ditransitiveconstruction_Sources a cx:Collection ;
-    cx:hasLiterature <file:///C:/Users/User/Documents/RCxn/instance/Submissions/Diem_2002>,
-        <file:///C:/Users/User/Documents/RCxn/instance/Submissions/Woidich_2006> .
+    cx:hasLiterature <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Diem_2002>,
+        <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Woidich_2006> .
 
 cx:arzCai_Ditransitiveconstruction_slots a rdf_ns:Seq ;
     rdf_ns:_1 cx:arzCai_Ditransitiveconstruction_1 ;
@@ -483,8 +483,8 @@ cx:comePLUSnoisemannerofmovementVing_Ex_C a cx:Example ;
     cx:hasText "People came running with lanterns and torches, and soon hundreds of people were hurrying to the house ." .
 
 cx:comePLUSnoisemannerofmovementVing_Ex_D a cx:Example ;
-    cx:hasAnnotatedText "A second or two later , [everything]1 [came]2 [crashing]3 [down]6 in a big heap on the railway line below ." ;
-    cx:hasText "A second or two later , everything came crashing down in a big heap on the railway line below ." .
+    cx:hasAnnotatedText "A second or two later, [everything]1 [came]2 [crashing]3 [down]6 in a big heap on the railway line below ." ;
+    cx:hasText "A second or two later, everything came crashing down in a big heap on the railway line below ." .
 
 cx:comePLUSnoisemannerofmovementVing_MD a rcxn:Metadata ;
     cx:hasSources cx:comePLUSnoisemannerofmovementVing_Sources ;
@@ -1243,8 +1243,8 @@ cx:deu_SuperlativART_ADJest_MD a rcxn:Metadata ;
     rcxn:annotator membr:Winckel .
 
 cx:deu_SuperlativART_ADJest_Meaning a rcxn:ConstructionMeaning ;
-    rcxn:hasMeaning """Die Superlativ:ART_ADJ-(e)st-Konstruktion gehört zu der Familie der Vergleichskonstruktionen und weist einem Wert die höchste Stufe auf einer Skala zu.
-    Die Zuweisung erfolgt durch den Vergleich einer Entität mit anderen Entitäten beziehungsweise einer (impliziten) Gesamtheit.
+    rcxn:hasMeaning """Die Superlativ:ART_ADJ-(e)st-Konstruktion gehört zu der Familie der Vergleichskonstruktionen und weist einem Wert die höchste Stufe auf einer Skala zu.\r
+    Die Zuweisung erfolgt durch den Vergleich einer Entität mit anderen Entitäten beziehungsweise einer (impliziten) Gesamtheit.\r
     Der [Determinierer]2 steht stets vor der meist als Adjektiv realisierten [Dimension]5, an die das lexikalisch feste Kern-Konstruktionselement (KE-lex) [-(e)st]6 angehangen wird. Die [Dimension]5 benennt die Skala des Vergleichs, d.h. die Skala, auf der einem Wert die höchste Stufe zugewiesen wird. Neben dem [Determinierer]2, dem [KE-lex]6 und der [Dimension]5 besteht die Konstruktion aus zwei weiteren Kern-Konstruktionselementen (Kern-KE): dem [Verglichenen]7 (die Entität, der eine durch die [Dimension]5 ausgedrückte Eigenschaft in vollem Ausmaß zugewiesen wird) und der [Vergleichsmenge]8 (die Menge an Entitäten, die über die selbe Eigenschaft in geringerem Ausmaß verfügen).""" .
 
 cx:deu_SuperlativART_ADJest_slots a rdf_ns:Seq ;
@@ -1355,9 +1355,9 @@ cx:deu_SuperlativART_ADJste_wo_gibt_MD a rcxn:Metadata ;
     rcxn:annotator membr:Winckel .
 
 cx:deu_SuperlativART_ADJste_wo_gibt_Meaning a rcxn:ConstructionMeaning ;
-    rcxn:hasMeaning """Die Konstruktion Superlativ:ART_ADJ-ste_wo_gibt gehört zu der Familie Superlativ:ART_ADJ-(e)st und weist einem Wert die höchste Stufe auf einer Skala zu, wobei diese Zuweisung durch den Vergleich einer Entität oder eines Sachverhalts mit anderen Entitäten oder Sachverhalten beziehungsweise einer (impliziten) Gesamtheit erfolgt.\r
-Aufgrund der höheren Frequenz der Konstruktion im DWDS-Webkorpus – im Gegensatz zu den Gegenwartskorpora – scheint es sich bei ihr um eine vor allem in konzeptionell mündlichen und informellen Kontexten genutzte Konstruktion zu handeln.\r
-Die Konstruktion besteht aus dem lexikalisch festen Kern-Konstruktionselement (KE-lex) [-ste_wo_gibt]6, den internen Kern-Konstruktionselementen (Kern-KE) [Dimension]5 und [Determinierer]3, den externen Kern-KE [Verglichenes]7 und [Vergleichsmenge]8 und den Nicht-Kern-KE [Annäherung]1 und [Quantifizierung]4.\r
+    rcxn:hasMeaning """Die Konstruktion Superlativ:ART_ADJ-ste_wo_gibt gehört zu der Familie Superlativ:ART_ADJ-(e)st und weist einem Wert die höchste Stufe auf einer Skala zu, wobei diese Zuweisung durch den Vergleich einer Entität oder eines Sachverhalts mit anderen Entitäten oder Sachverhalten beziehungsweise einer (impliziten) Gesamtheit erfolgt.\r\r
+Aufgrund der höheren Frequenz der Konstruktion im DWDS-Webkorpus – im Gegensatz zu den Gegenwartskorpora – scheint es sich bei ihr um eine vor allem in konzeptionell mündlichen und informellen Kontexten genutzte Konstruktion zu handeln.\r\r
+Die Konstruktion besteht aus dem lexikalisch festen Kern-Konstruktionselement (KE-lex) [-ste_wo_gibt]6, den internen Kern-Konstruktionselementen (Kern-KE) [Dimension]5 und [Determinierer]3, den externen Kern-KE [Verglichenes]7 und [Vergleichsmenge]8 und den Nicht-Kern-KE [Annäherung]1 und [Quantifizierung]4.\r\r
 """ .
 
 cx:deu_SuperlativART_ADJste_wo_gibt_slots a rdf_ns:Seq ;
@@ -1542,7 +1542,7 @@ cx:engLME_Argumentstructureconstruction_Meaning a rcxn:ConstructionMeaning ;
 
 cx:engLME_Argumentstructureconstruction_Sources a cx:Collection ;
     cx:basedOn <https://doi.org/10.3389/frai.2025.1477246> ;
-    cx:hasLiterature <file:///C:/Users/User/Documents/RCxn/instance/Submissions/Goldberg_1995>,
+    cx:hasLiterature <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Goldberg_1995>,
         <https://doi.org/10.3389/frai.2025.1477246> .
 
 cx:engLME_Argumentstructureconstruction_slots a rdf_ns:Seq ;
@@ -2649,11 +2649,11 @@ cx:eng_ditransitive_construction_obj_np_Meaning a rcxn:ConstructionMeaning ;
         "ÆFFECTOR makes RECIPIENT receive ÆFFECTED." .
 
 cx:eng_ditransitive_construction_obj_np_Sources a cx:Collection ;
-    cx:hasLiterature <file:///C:/Users/User/Documents/RCxn/instance/Submissions/Croft_2012>,
-        <file:///C:/Users/User/Documents/RCxn/instance/Submissions/Goldberg_1995>,
-        <file:///C:/Users/User/Documents/RCxn/instance/Submissions/Goldberg_2006>,
-        <file:///C:/Users/User/Documents/RCxn/instance/Submissions/Herbst_2020>,
-        <file:///C:/Users/User/Documents/RCxn/instance/Submissions/Herbst_Hoffman_2024> ;
+    cx:hasLiterature <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Croft_2012>,
+        <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Goldberg_1995>,
+        <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Goldberg_2006>,
+        <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Herbst_2020>,
+        <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Herbst_Hoffman_2024> ;
     rdfs:seeAlso <https://constructicon.de/constructions/5> .
 
 cx:eng_ditransitive_construction_obj_np_slots a rdf_ns:Seq ;
@@ -3150,7 +3150,7 @@ cx:itaStoria_RelativeTopicShiftConstruction_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "Transition from one (discourse) topic to another" .
 
 cx:itaStoria_RelativeTopicShiftConstruction_Sources a cx:Collection ;
-    cx:hasLiterature <file:///C:/Users/User/Documents/RCxn/instance/Submissions/La_lingua_del_Guicciardini>,
+    cx:hasLiterature <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/La_lingua_del_Guicciardini>,
         <https://doi.org/10.1093/llc/fqw021>,
         <https://doi.org/10.1417/81352> .
 
@@ -3307,8 +3307,8 @@ cx:lzh_Dooperationwithoperand1onoperand2construction_Meaning a rcxn:Construction
     rcxn:hasMeaning "Do [operation]3 with [operand 1]2 and [operand 2]4" .
 
 cx:lzh_Dooperationwithoperand1onoperand2construction_Sources a cx:Collection ;
-    cx:basedOn <file:///C:/Users/User/Documents/RCxn/instance/Submissions/Shuchun-2004> ;
-    cx:hasLiterature <file:///C:/Users/User/Documents/RCxn/instance/Submissions/Shuchun-2004> .
+    cx:basedOn <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Shuchun-2004> ;
+    cx:hasLiterature <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Shuchun-2004> .
 
 cx:lzh_Dooperationwithoperand1onoperand2construction_slots a rdf_ns:Seq ;
     rdf_ns:_1 cx:lzh_Dooperationwithoperand1onoperand2construction_1 ;
@@ -3544,8 +3544,9 @@ cx:deu_SuperlativART_ADJste_wo_gibt a rcxn:Construction ;
         cx:deu_SuperlativART_ADJste_wo_gibt_Ex_E,
         cx:deu_SuperlativART_ADJste_wo_gibt_Ex_F,
         cx:deu_SuperlativART_ADJste_wo_gibt_Ex_G ;
-    rdfs:comment """Die Konstruktion wird in der Literatur bzw. in Grammatiken auch thematisiert unter: "2. Steigerung", "Elativ", "Komparation" & "Relativer Superlativ".\r
-Die Konstruktion Superlativ:ART_ADJ-ste_wo_gibt ähnelt der Konstruktion Superlativ:ART_ADJ-(e)st in vielen Aspekten, unterscheidet sich von ihr aber insbesondere durch die zusätzlich verstärkende Wortreihung wo gibt und die informellere Natur.""" ;
+    rdfs:comment "Die Konstruktion Superlativ:ART_ADJ-ste_wo_gibt ähnelt der Konstruktion Superlativ:ART_ADJ-(e)st in vielen Aspekten, unterscheidet sich von ihr aber insbesondere durch die zusätzlich verstärkende Wortreihung wo gibt und die informellere Natur.",
+        "Die Konstruktion wird in der Literatur bzw. in Grammatiken auch thematisiert unter: \"2. Steigerung\", \"Elativ\", \"Komparation\" & \"Relativer Superlativ\".",
+        "Original entry by Benjamin Fischer: „Superlativ:ART_ADJ-ste_wo_gibt“, in: FrameNet-Konstruktikon des Deutschen, https://framenet-constructicon.hhu.de/constructicon/construction?id=2640, abgerufen am 22.05.2026." ;
     lg:partOfLanguage lg:deu ;
     links:inheritsFrom cx:deu_SuperlativART_ADJest ;
     rcxn:hasConstructionMeaning cx:deu_SuperlativART_ADJste_wo_gibt_Meaning ;
@@ -3981,8 +3982,8 @@ cx:engUsUkWr_EvaluativeAttributionConstruction a rcxn:Construction ;
     rcxn:hasTitle "Evaluative Attribution Construction" .
 
 cx:eng_coolconstruction_Sources a cx:Collection ;
-    cx:hasLiterature <file:///C:/Users/User/Documents/RCxn/instance/Submissions/www.english-corpora.org/bnc/>,
-        <file:///C:/Users/User/Documents/RCxn/instance/Submissions/www.english-corpora.org/coca/>,
+    cx:hasLiterature <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/www.english-corpora.org/bnc/>,
+        <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/www.english-corpora.org/coca/>,
         <https://www.dwds.de/wb/cool>,
         <https://www.oed.com/dictionary/cool_adj?tl=true> .
 

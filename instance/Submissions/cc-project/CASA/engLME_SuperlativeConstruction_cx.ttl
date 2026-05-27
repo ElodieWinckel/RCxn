@@ -9,8 +9,6 @@
 @prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-membr:Project_Petrenko rsrch:hasFindings membr:Project_Petrenko_F2603061516 .
-
 cx:engLME_SuperlativeConstruction a rcxn:Construction ;
     lg:partOfLanguage lg:engLME ;
     rcxn:hasConstructionMeaning cx:engLME_SuperlativeConstruction_Meaning ;
@@ -32,7 +30,6 @@ cx:engLME_SuperlativeConstruction_slots a rdf:Seq ;
     rdf:_1 cx:engLME_SuperlativeConstruction_1 ;
     rdf:_2 cx:engLME_SuperlativeConstruction_2 .
 
-membr:Project_Petrenko_F2603061516 a rsrch:Finding ;
-    RDFS:label "Comparative concepts can partially be applied to CASA Constructicon." ;
+membr:Project_Petrenko_F2603061532 a rsrch:Finding ;
     rsrch:basedOn cx:engLME_SuperlativeConstruction .
 

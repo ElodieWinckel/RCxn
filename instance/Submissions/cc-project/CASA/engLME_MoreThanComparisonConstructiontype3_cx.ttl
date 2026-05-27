@@ -10,8 +10,6 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix compcon: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/compcon#> .
 
-membr:Project_Petrenko rsrch:hasFindings membr:Project_Petrenko_F2603061559 .
-
 cx:engLME_MoreThanComparisonConstructiontype3 a rcxn:Construction ;
     lg:partOfLanguage lg:engLME ;
     rcxn:hasConstructionMeaning cx:engLME_MoreThanComparisonConstructiontype3_Meaning ;
@@ -39,7 +37,6 @@ cx:engLME_MoreThanComparisonConstructiontype3_slots a rdf:Seq ;
     rdf:_3 cx:engLME_MoreThanComparisonConstructiontype3_3 ;
     rdf:_4 cx:engLME_MoreThanComparisonConstructiontype3_4 .
 
-membr:Project_Petrenko_F2603061559 a rsrch:Finding ;
-    RDFS:label "Comparative concepts can partially be applied to CASA Constructicon." ;
+membr:Project_Petrenko_F2603061532 a rsrch:Finding ;
     rsrch:basedOn cx:engLME_MoreThanComparisonConstructiontype3 .
 
