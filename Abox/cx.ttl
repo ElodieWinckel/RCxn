@@ -1,11 +1,11 @@
+@prefix casa: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/casa#> .
+@prefix compcon: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/compcon#> .
 @prefix cx: <http://example.org/cx/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
 @prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#> .
 @prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
-@prefix ns1: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/compcon#> .
-@prefix ns2: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rdata#> .
-@prefix ns3: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/casa#> .
+@prefix ns1: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rdata#> .
 @prefix olia: <http://purl.org/olia/olia.owl#> .
 @prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
 @prefix rd: <http://example.org/rd/> .
@@ -32,10 +32,10 @@ cx:deuStdHigh_AllativeNP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_4_Form a
 cx:deuWrSt20_sichNPADJADVvorAugenVP_5_Index olia:hasNumber olia:Plural .
 
 cx:engLME_AdjectivalwithPARTNERConstruction a rcxn:Construction ;
-    ns1:hasCompCon ns1:cxn_modification-construction,
-        ns1:cxn_referring-phrase,
-        ns1:inf_modification,
-        ns1:str_word-order ;
+    compcon:hasCompCon compcon:cxn_modification-construction,
+        compcon:cxn_referring-phrase,
+        compcon:inf_modification,
+        compcon:str_word-order ;
     lg:partOfLanguage lg:engLME ;
     rcxn:hasConstructionMeaning cx:engLME_AdjectivalwithPARTNERConstruction_Meaning ;
     rcxn:hasMetadata cx:engLME_AdjectivalwithPARTNERConstruction_MD ;
@@ -43,9 +43,9 @@ cx:engLME_AdjectivalwithPARTNERConstruction a rcxn:Construction ;
     rcxn:hasTitle "Adjectival-with-PARTNER Construction" .
 
 cx:engLME_AdjectiveConstruction a rcxn:Construction ;
-    ns1:hasCompCon ns1:cxn_modification-construction,
-        ns1:cxn_referring-phrase,
-        ns1:inf_modification ;
+    compcon:hasCompCon compcon:cxn_modification-construction,
+        compcon:cxn_referring-phrase,
+        compcon:inf_modification ;
     lg:partOfLanguage lg:engLME ;
     rcxn:hasConstructionMeaning cx:engLME_AdjectiveConstruction_Meaning ;
     rcxn:hasMetadata cx:engLME_AdjectiveConstruction_MD ;
@@ -53,9 +53,9 @@ cx:engLME_AdjectiveConstruction a rcxn:Construction ;
     rcxn:hasTitle "Adjective Construction" .
 
 cx:engLME_ComparativeConstruction a rcxn:Construction ;
-    ns1:hasCompCon ns1:cxn_comparative-construction,
-        ns1:sem_comparative-relation,
-        ns1:str_particle-comparative ;
+    compcon:hasCompCon compcon:cxn_comparative-construction,
+        compcon:sem_comparative-relation,
+        compcon:str_particle-comparative ;
     lg:partOfLanguage lg:engLME ;
     rcxn:hasConstructionMeaning cx:engLME_ComparativeConstruction_Meaning ;
     rcxn:hasMetadata cx:engLME_ComparativeConstruction_MD ;
@@ -66,11 +66,11 @@ cx:engLME_Ditransitiveconstruction_2_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_Verb .
 
 cx:engLME_GeneralPostmodifierofAdjectiveConstruction a rcxn:Construction ;
-    ns1:hasCompCon ns1:cxn_adjectival-phrase,
-        ns1:cxn_adjective-modification-construction,
-        ns1:cxn_attributive-phrase,
-        ns1:inf_modification,
-        ns1:str_word-order ;
+    compcon:hasCompCon compcon:cxn_adjectival-phrase,
+        compcon:cxn_adjective-modification-construction,
+        compcon:cxn_attributive-phrase,
+        compcon:inf_modification,
+        compcon:str_word-order ;
     lg:partOfLanguage lg:engLME ;
     rcxn:hasConstructionMeaning cx:engLME_GeneralPostmodifierofAdjectiveConstruction_Meaning ;
     rcxn:hasMetadata cx:engLME_GeneralPostmodifierofAdjectiveConstruction_MD ;
@@ -78,11 +78,11 @@ cx:engLME_GeneralPostmodifierofAdjectiveConstruction a rcxn:Construction ;
     rcxn:hasTitle "General Postmodifier-of-Adjective Construction" .
 
 cx:engLME_MoreThanComparisonConstructiontype1 a rcxn:Construction ;
-    ns1:hasCompCon ns1:cxn_comparative-construction,
-        ns1:sem_comparative-relation,
-        ns1:sem_degree,
-        ns1:str_independent-strategy,
-        ns1:str_particle-comparative ;
+    compcon:hasCompCon compcon:cxn_comparative-construction,
+        compcon:sem_comparative-relation,
+        compcon:sem_degree,
+        compcon:str_independent-strategy,
+        compcon:str_particle-comparative ;
     lg:partOfLanguage lg:engLME ;
     rcxn:hasConstructionMeaning cx:engLME_MoreThanComparisonConstructiontype1_Meaning ;
     rcxn:hasMetadata cx:engLME_MoreThanComparisonConstructiontype1_MD ;
@@ -90,11 +90,11 @@ cx:engLME_MoreThanComparisonConstructiontype1 a rcxn:Construction ;
     rcxn:hasTitle "More-Than-Comparison Construction (type 1)" .
 
 cx:engLME_MoreThanComparisonConstructiontype2 a rcxn:Construction ;
-    ns1:hasCompCon ns1:cxn_comparative-construction,
-        ns1:sem_comparative-relation,
-        ns1:sem_degree,
-        ns1:sem_gradable-predicative-scale,
-        ns1:str_particle-comparative ;
+    compcon:hasCompCon compcon:cxn_comparative-construction,
+        compcon:sem_comparative-relation,
+        compcon:sem_degree,
+        compcon:sem_gradable-predicative-scale,
+        compcon:str_particle-comparative ;
     lg:partOfLanguage lg:engLME ;
     rcxn:hasConstructionMeaning cx:engLME_MoreThanComparisonConstructiontype2_Meaning ;
     rcxn:hasMetadata cx:engLME_MoreThanComparisonConstructiontype2_MD ;
@@ -102,10 +102,10 @@ cx:engLME_MoreThanComparisonConstructiontype2 a rcxn:Construction ;
     rcxn:hasTitle "More-Than-Comparison Construction (type 2)" .
 
 cx:engLME_MoreThanComparisonConstructiontype3 a rcxn:Construction ;
-    ns1:hasCompCon ns1:cxn_comparative-construction,
-        ns1:sem_comparative-relation,
-        ns1:sem_gradable-predicative-scale,
-        ns1:str_particle-comparative ;
+    compcon:hasCompCon compcon:cxn_comparative-construction,
+        compcon:sem_comparative-relation,
+        compcon:sem_gradable-predicative-scale,
+        compcon:str_particle-comparative ;
     lg:partOfLanguage lg:engLME ;
     rcxn:hasConstructionMeaning cx:engLME_MoreThanComparisonConstructiontype3_Meaning ;
     rcxn:hasMetadata cx:engLME_MoreThanComparisonConstructiontype3_MD ;
@@ -113,8 +113,8 @@ cx:engLME_MoreThanComparisonConstructiontype3 a rcxn:Construction ;
     rcxn:hasTitle "More-Than-Comparison Construction (type 3)" .
 
 cx:engLME_MostLeastConstruction a rcxn:Construction ;
-    ns1:hasCompCon ns1:cxn_modification-construction,
-        ns1:cxn_referring-phrase ;
+    compcon:hasCompCon compcon:cxn_modification-construction,
+        compcon:cxn_referring-phrase ;
     lg:partOfLanguage lg:engLME ;
     rcxn:hasConstructionMeaning cx:engLME_MostLeastConstruction_Meaning ;
     rcxn:hasMetadata cx:engLME_MostLeastConstruction_MD ;
@@ -122,10 +122,10 @@ cx:engLME_MostLeastConstruction a rcxn:Construction ;
     rcxn:hasTitle "Most-/Least-Construction" .
 
 cx:engLME_PremodifierofAdjectiveConstruction a rcxn:Construction ;
-    ns1:hasCompCon ns1:cxn_adjectival-phrase,
-        ns1:cxn_adjective-modification-construction,
-        ns1:cxn_attributive-phrase,
-        ns1:inf_modification ;
+    compcon:hasCompCon compcon:cxn_adjectival-phrase,
+        compcon:cxn_adjective-modification-construction,
+        compcon:cxn_attributive-phrase,
+        compcon:inf_modification ;
     lg:partOfLanguage lg:engLME ;
     rcxn:hasConstructionMeaning cx:engLME_PremodifierofAdjectiveConstruction_Meaning ;
     rcxn:hasMetadata cx:engLME_PremodifierofAdjectiveConstruction_MD ;
@@ -136,8 +136,8 @@ cx:engLME_Resultativeconstruction_2_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_Verb .
 
 cx:engLME_SuperlativeConstruction a rcxn:Construction ;
-    ns1:hasCompCon ns1:cxn_modification-construction,
-        ns1:cxn_referring-phrase ;
+    compcon:hasCompCon compcon:cxn_modification-construction,
+        compcon:cxn_referring-phrase ;
     lg:partOfLanguage lg:engLME ;
     rcxn:hasConstructionMeaning cx:engLME_SuperlativeConstruction_Meaning ;
     rcxn:hasMetadata cx:engLME_SuperlativeConstruction_MD ;
@@ -389,8 +389,8 @@ cx:arzCai_Ditransitiveconstruction_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "[ÆFFECTOR]1 makes [RECIPIENT]3 receive or lose [ÆFFECTED]4" .
 
 cx:arzCai_Ditransitiveconstruction_Sources a cx:Collection ;
-    cx:hasLiterature <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Diem_2002>,
-        <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Woidich_2006> .
+    cx:hasLiterature <file:///C:/Users/User/Documents/RCxn/instance/Submissions/Diem_2002>,
+        <file:///C:/Users/User/Documents/RCxn/instance/Submissions/Woidich_2006> .
 
 cx:arzCai_Ditransitiveconstruction_slots a rdf_ns:Seq ;
     rdf_ns:_1 cx:arzCai_Ditransitiveconstruction_1 ;
@@ -1243,8 +1243,8 @@ cx:deu_SuperlativART_ADJest_MD a rcxn:Metadata ;
     rcxn:annotator membr:Winckel .
 
 cx:deu_SuperlativART_ADJest_Meaning a rcxn:ConstructionMeaning ;
-    rcxn:hasMeaning """Die Superlativ:ART_ADJ-(e)st-Konstruktion gehört zu der Familie der Vergleichskonstruktionen und weist einem Wert die höchste Stufe auf einer Skala zu.\r
-    Die Zuweisung erfolgt durch den Vergleich einer Entität mit anderen Entitäten beziehungsweise einer (impliziten) Gesamtheit.\r
+    rcxn:hasMeaning """Die Superlativ:ART_ADJ-(e)st-Konstruktion gehört zu der Familie der Vergleichskonstruktionen und weist einem Wert die höchste Stufe auf einer Skala zu.
+    Die Zuweisung erfolgt durch den Vergleich einer Entität mit anderen Entitäten beziehungsweise einer (impliziten) Gesamtheit.
     Der [Determinierer]2 steht stets vor der meist als Adjektiv realisierten [Dimension]5, an die das lexikalisch feste Kern-Konstruktionselement (KE-lex) [-(e)st]6 angehangen wird. Die [Dimension]5 benennt die Skala des Vergleichs, d.h. die Skala, auf der einem Wert die höchste Stufe zugewiesen wird. Neben dem [Determinierer]2, dem [KE-lex]6 und der [Dimension]5 besteht die Konstruktion aus zwei weiteren Kern-Konstruktionselementen (Kern-KE): dem [Verglichenen]7 (die Entität, der eine durch die [Dimension]5 ausgedrückte Eigenschaft in vollem Ausmaß zugewiesen wird) und der [Vergleichsmenge]8 (die Menge an Entitäten, die über die selbe Eigenschaft in geringerem Ausmaß verfügen).""" .
 
 cx:deu_SuperlativART_ADJest_slots a rdf_ns:Seq ;
@@ -1355,9 +1355,9 @@ cx:deu_SuperlativART_ADJste_wo_gibt_MD a rcxn:Metadata ;
     rcxn:annotator membr:Winckel .
 
 cx:deu_SuperlativART_ADJste_wo_gibt_Meaning a rcxn:ConstructionMeaning ;
-    rcxn:hasMeaning """Die Konstruktion Superlativ:ART_ADJ-ste_wo_gibt gehört zu der Familie Superlativ:ART_ADJ-(e)st und weist einem Wert die höchste Stufe auf einer Skala zu, wobei diese Zuweisung durch den Vergleich einer Entität oder eines Sachverhalts mit anderen Entitäten oder Sachverhalten beziehungsweise einer (impliziten) Gesamtheit erfolgt.\r\r
-Aufgrund der höheren Frequenz der Konstruktion im DWDS-Webkorpus – im Gegensatz zu den Gegenwartskorpora – scheint es sich bei ihr um eine vor allem in konzeptionell mündlichen und informellen Kontexten genutzte Konstruktion zu handeln.\r\r
-Die Konstruktion besteht aus dem lexikalisch festen Kern-Konstruktionselement (KE-lex) [-ste_wo_gibt]6, den internen Kern-Konstruktionselementen (Kern-KE) [Dimension]5 und [Determinierer]3, den externen Kern-KE [Verglichenes]7 und [Vergleichsmenge]8 und den Nicht-Kern-KE [Annäherung]1 und [Quantifizierung]4.\r\r
+    rcxn:hasMeaning """Die Konstruktion Superlativ:ART_ADJ-ste_wo_gibt gehört zu der Familie Superlativ:ART_ADJ-(e)st und weist einem Wert die höchste Stufe auf einer Skala zu, wobei diese Zuweisung durch den Vergleich einer Entität oder eines Sachverhalts mit anderen Entitäten oder Sachverhalten beziehungsweise einer (impliziten) Gesamtheit erfolgt.\r
+Aufgrund der höheren Frequenz der Konstruktion im DWDS-Webkorpus – im Gegensatz zu den Gegenwartskorpora – scheint es sich bei ihr um eine vor allem in konzeptionell mündlichen und informellen Kontexten genutzte Konstruktion zu handeln.\r
+Die Konstruktion besteht aus dem lexikalisch festen Kern-Konstruktionselement (KE-lex) [-ste_wo_gibt]6, den internen Kern-Konstruktionselementen (Kern-KE) [Dimension]5 und [Determinierer]3, den externen Kern-KE [Verglichenes]7 und [Vergleichsmenge]8 und den Nicht-Kern-KE [Annäherung]1 und [Quantifizierung]4.\r
 """ .
 
 cx:deu_SuperlativART_ADJste_wo_gibt_slots a rdf_ns:Seq ;
@@ -1464,21 +1464,21 @@ cx:engInf_coolasadmirableconstruction_slots a rdf_ns:Seq ;
     rdf_ns:_1 cx:engInf_coolasadmirableconstruction_1 .
 
 cx:engLME_AdjectivalwithPARTNERConstruction_1 a rcxn:SlotObligatory ;
-    ns1:hasCompCon ns1:cxn_referent-expression .
+    compcon:hasCompCon compcon:cxn_referent-expression .
 
 cx:engLME_AdjectivalwithPARTNERConstruction_2 a rcxn:SlotObligatory ;
-    ns1:hasCompCon ns1:cxn_adjective,
-        ns1:cxn_modifier,
-        ns1:sem_property-concept .
+    compcon:hasCompCon compcon:cxn_adjective,
+        compcon:cxn_modifier,
+        compcon:sem_property-concept .
 
 cx:engLME_AdjectivalwithPARTNERConstruction_3 a rcxn:SlotObligatory ;
-    ns1:hasCompCon ns1:cxn_adjectival-phrase,
-        ns1:cxn_attributive-phrase,
-        ns1:cxn_head,
-        ns1:cxn_referring-phrase,
-        ns1:str_adposition,
-        ns1:str_flagging,
-        ns1:str_preposition .
+    compcon:hasCompCon compcon:cxn_adjectival-phrase,
+        compcon:cxn_attributive-phrase,
+        compcon:cxn_head,
+        compcon:cxn_referring-phrase,
+        compcon:str_adposition,
+        compcon:str_flagging,
+        compcon:str_preposition .
 
 cx:engLME_AdjectivalwithPARTNERConstruction_MD a rcxn:Metadata ;
     dcterms:created "2026-03-06"^^xsd:date ;
@@ -1492,14 +1492,14 @@ cx:engLME_AdjectivalwithPARTNERConstruction_slots a rdf_ns:Seq ;
     rdf_ns:_3 cx:engLME_AdjectivalwithPARTNERConstruction_3 .
 
 cx:engLME_AdjectiveConstruction_1 a rcxn:SlotObligatory ;
-    ns1:hasCompCon ns1:cxn_adjectival-phrase,
-        ns1:cxn_adjective,
-        ns1:cxn_attributive-phrase,
-        ns1:cxn_modifier,
-        ns1:sem_property-concept .
+    compcon:hasCompCon compcon:cxn_adjectival-phrase,
+        compcon:cxn_adjective,
+        compcon:cxn_attributive-phrase,
+        compcon:cxn_modifier,
+        compcon:sem_property-concept .
 
 cx:engLME_AdjectiveConstruction_2 a rcxn:SlotObligatory ;
-    ns1:hasCompCon ns1:cxn_referent-expression .
+    compcon:hasCompCon compcon:cxn_referent-expression .
 
 cx:engLME_AdjectiveConstruction_MD a rcxn:Metadata ;
     dcterms:created "2026-03-06"^^xsd:date ;
@@ -1542,7 +1542,7 @@ cx:engLME_Argumentstructureconstruction_Meaning a rcxn:ConstructionMeaning ;
 
 cx:engLME_Argumentstructureconstruction_Sources a cx:Collection ;
     cx:basedOn <https://doi.org/10.3389/frai.2025.1477246> ;
-    cx:hasLiterature <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Goldberg_1995>,
+    cx:hasLiterature <file:///C:/Users/User/Documents/RCxn/instance/Submissions/Goldberg_1995>,
         <https://doi.org/10.3389/frai.2025.1477246> .
 
 cx:engLME_Argumentstructureconstruction_slots a rdf_ns:Seq ;
@@ -1551,7 +1551,7 @@ cx:engLME_Argumentstructureconstruction_slots a rdf_ns:Seq ;
     rdf_ns:_3 cx:engLME_Argumentstructureconstruction_3 .
 
 cx:engLME_AttributeConstructionAttrAdj_1 a rcxn:SlotOptional ;
-    ns3:hasCasaSyntacticFunction "potential subject" ;
+    casa:hasCasaSyntacticFunction "potential subject" ;
     rcxn:hasOtherSemanticContribution "Æffector" ;
     rcxn:hasSlotForm cx:engLME_AttributeConstructionAttrAdj_1_Form ;
     rcxn:hasSyntacticFunction "potential subject" .
@@ -1569,7 +1569,7 @@ cx:engLME_AttributeConstructionAttrAdj_2_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_Verb .
 
 cx:engLME_AttributeConstructionAttrAdj_3 a rcxn:SlotObligatory ;
-    ns3:hasCasaSyntacticFunction "Obj" ;
+    casa:hasCasaSyntacticFunction "Obj" ;
     rcxn:hasOtherSemanticContribution "Æffected-Attributee" ;
     rcxn:hasSlotForm cx:engLME_AttributeConstructionAttrAdj_3_Form ;
     rcxn:hasSyntacticFunction "direct object" .
@@ -1578,7 +1578,7 @@ cx:engLME_AttributeConstructionAttrAdj_3_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_NounPhrase .
 
 cx:engLME_AttributeConstructionAttrAdj_4 a rcxn:SlotObligatory ;
-    ns3:hasCasaSyntacticFunction "Attr" ;
+    casa:hasCasaSyntacticFunction "Attr" ;
     rcxn:hasOtherSemanticContribution "Attribute" ;
     rcxn:hasSlotForm cx:engLME_AttributeConstructionAttrAdj_4_Form ;
     rcxn:hasSyntacticFunction "object complement" .
@@ -1693,21 +1693,21 @@ cx:engLME_Burnonesbridgesconstruction_slots a rdf_ns:Seq ;
     rdf_ns:_4 cx:engLME_Burnonesbridgesconstruction_4 .
 
 cx:engLME_ComparativeConstruction_1 a rcxn:SlotObligatory ;
-    ns1:hasCompCon ns1:cxn_comparative-form,
-        ns1:sem_comparative-degree,
-        ns1:str_degree-marker .
+    compcon:hasCompCon compcon:cxn_comparative-form,
+        compcon:sem_comparative-degree,
+        compcon:str_degree-marker .
 
 cx:engLME_ComparativeConstruction_2 a rcxn:SlotObligatory ;
-    ns1:hasCompCon ns1:sem_comparee,
-        ns1:sem_entity,
-        ns1:sem_event .
+    compcon:hasCompCon compcon:sem_comparee,
+        compcon:sem_entity,
+        compcon:sem_event .
 
 cx:engLME_ComparativeConstruction_3 a rcxn:SlotObligatory ;
-    ns1:hasCompCon ns1:str_conjunction .
+    compcon:hasCompCon compcon:str_conjunction .
 
 cx:engLME_ComparativeConstruction_4 a rcxn:SlotObligatory ;
-    ns1:hasCompCon ns1:inf_reference,
-        ns1:sem_standard .
+    compcon:hasCompCon compcon:inf_reference,
+        compcon:sem_standard .
 
 cx:engLME_ComparativeConstruction_MD a rcxn:Metadata ;
     dcterms:created "2026-03-06"^^xsd:date ;
@@ -1794,14 +1794,14 @@ cx:engLME_GIVEOUTVerbParticleConstruction_slots a rdf_ns:Seq ;
         cx:engLME_GIVEOUTVerbParticleConstruction_4 .
 
 cx:engLME_GeneralPostmodifierofAdjectiveConstruction_1 a rcxn:SlotObligatory ;
-    ns1:hasCompCon ns1:cxn_adjective,
-        ns1:cxn_modifier,
-        ns1:sem_property-concept .
+    compcon:hasCompCon compcon:cxn_adjective,
+        compcon:cxn_modifier,
+        compcon:sem_property-concept .
 
 cx:engLME_GeneralPostmodifierofAdjectiveConstruction_2 a rcxn:SlotObligatory ;
-    ns1:hasCompCon ns1:cxn_admodifier,
-        ns1:inf_admodification,
-        ns1:sem_degree .
+    compcon:hasCompCon compcon:cxn_admodifier,
+        compcon:inf_admodification,
+        compcon:sem_degree .
 
 cx:engLME_GeneralPostmodifierofAdjectiveConstruction_MD a rcxn:Metadata ;
     dcterms:created "2026-02-25"^^xsd:date ;
@@ -1814,33 +1814,33 @@ cx:engLME_GeneralPostmodifierofAdjectiveConstruction_slots a rdf_ns:Seq ;
     rdf_ns:_2 cx:engLME_GeneralPostmodifierofAdjectiveConstruction_2 .
 
 cx:engLME_MoreThanComparisonConstructiontype1_1 a rcxn:SlotObligatory ;
-    ns1:hasCompCon ns1:cxn_adjectival-phrase,
-        ns1:cxn_admodifier,
-        ns1:cxn_attributive-phrase,
-        ns1:cxn_comparative-form,
-        ns1:inf_admodification,
-        ns1:sem_comparative-degree,
-        ns1:sem_degree,
-        ns1:str_degree-modifier .
+    compcon:hasCompCon compcon:cxn_adjectival-phrase,
+        compcon:cxn_admodifier,
+        compcon:cxn_attributive-phrase,
+        compcon:cxn_comparative-form,
+        compcon:inf_admodification,
+        compcon:sem_comparative-degree,
+        compcon:sem_degree,
+        compcon:str_degree-modifier .
 
 cx:engLME_MoreThanComparisonConstructiontype1_2 a rcxn:SlotObligatory ;
-    ns1:hasCompCon ns1:cxn_adjective,
-        ns1:cxn_modifier,
-        ns1:inf_modification,
-        ns1:sem_property-concept .
+    compcon:hasCompCon compcon:cxn_adjective,
+        compcon:cxn_modifier,
+        compcon:inf_modification,
+        compcon:sem_property-concept .
 
 cx:engLME_MoreThanComparisonConstructiontype1_3 a rcxn:SlotObligatory ;
-    ns1:hasCompCon ns1:sem_comparee,
-        ns1:sem_entity,
-        ns1:sem_gradable-predicative-scale,
-        ns1:sem_object-concept .
+    compcon:hasCompCon compcon:sem_comparee,
+        compcon:sem_entity,
+        compcon:sem_gradable-predicative-scale,
+        compcon:sem_object-concept .
 
 cx:engLME_MoreThanComparisonConstructiontype1_4 a rcxn:SlotObligatory ;
-    ns1:hasCompCon ns1:str_conjunction .
+    compcon:hasCompCon compcon:str_conjunction .
 
 cx:engLME_MoreThanComparisonConstructiontype1_5 a rcxn:SlotObligatory ;
-    ns1:hasCompCon ns1:inf_reference,
-        ns1:sem_standard .
+    compcon:hasCompCon compcon:inf_reference,
+        compcon:sem_standard .
 
 cx:engLME_MoreThanComparisonConstructiontype1_MD a rcxn:Metadata ;
     dcterms:created "2026-03-06"^^xsd:date ;
@@ -1856,23 +1856,23 @@ cx:engLME_MoreThanComparisonConstructiontype1_slots a rdf_ns:Seq ;
     rdf_ns:_5 cx:engLME_MoreThanComparisonConstructiontype1_5 .
 
 cx:engLME_MoreThanComparisonConstructiontype2_1 a rcxn:SlotObligatory ;
-    ns1:hasCompCon ns1:cxn_attributive-phrase,
-        ns1:cxn_modifier,
-        ns1:cxn_quantifier-term,
-        ns1:inf_modification .
+    compcon:hasCompCon compcon:cxn_attributive-phrase,
+        compcon:cxn_modifier,
+        compcon:cxn_quantifier-term,
+        compcon:inf_modification .
 
 cx:engLME_MoreThanComparisonConstructiontype2_2 a rcxn:SlotObligatory ;
-    ns1:hasCompCon ns1:sem_comparee,
-        ns1:sem_entity,
-        ns1:sem_gradable-predicative-scale,
-        ns1:sem_object-concept .
+    compcon:hasCompCon compcon:sem_comparee,
+        compcon:sem_entity,
+        compcon:sem_gradable-predicative-scale,
+        compcon:sem_object-concept .
 
 cx:engLME_MoreThanComparisonConstructiontype2_3 a rcxn:SlotObligatory ;
-    ns1:hasCompCon ns1:str_conjunction .
+    compcon:hasCompCon compcon:str_conjunction .
 
 cx:engLME_MoreThanComparisonConstructiontype2_4 a rcxn:SlotObligatory ;
-    ns1:hasCompCon ns1:inf_reference,
-        ns1:sem_standard .
+    compcon:hasCompCon compcon:inf_reference,
+        compcon:sem_standard .
 
 cx:engLME_MoreThanComparisonConstructiontype2_MD a rcxn:Metadata ;
     dcterms:created "2026-03-06"^^xsd:date ;
@@ -1887,23 +1887,23 @@ cx:engLME_MoreThanComparisonConstructiontype2_slots a rdf_ns:Seq ;
     rdf_ns:_4 cx:engLME_MoreThanComparisonConstructiontype2_4 .
 
 cx:engLME_MoreThanComparisonConstructiontype3_1 a rcxn:SlotObligatory ;
-    ns1:hasCompCon ns1:cxn_attributive-phrase,
-        ns1:cxn_modifier,
-        ns1:cxn_quantifier-term,
-        ns1:inf_modification .
+    compcon:hasCompCon compcon:cxn_attributive-phrase,
+        compcon:cxn_modifier,
+        compcon:cxn_quantifier-term,
+        compcon:inf_modification .
 
 cx:engLME_MoreThanComparisonConstructiontype3_2 a rcxn:SlotObligatory ;
-    ns1:hasCompCon ns1:sem_comparee,
-        ns1:sem_entity,
-        ns1:sem_gradable-predicative-scale,
-        ns1:sem_object-concept .
+    compcon:hasCompCon compcon:sem_comparee,
+        compcon:sem_entity,
+        compcon:sem_gradable-predicative-scale,
+        compcon:sem_object-concept .
 
 cx:engLME_MoreThanComparisonConstructiontype3_3 a rcxn:SlotObligatory ;
-    ns1:hasCompCon ns1:str_conjunction .
+    compcon:hasCompCon compcon:str_conjunction .
 
 cx:engLME_MoreThanComparisonConstructiontype3_4 a rcxn:SlotObligatory ;
-    ns1:hasCompCon ns1:inf_reference,
-        ns1:sem_standard .
+    compcon:hasCompCon compcon:inf_reference,
+        compcon:sem_standard .
 
 cx:engLME_MoreThanComparisonConstructiontype3_MD a rcxn:Metadata ;
     dcterms:created "2026-03-06"^^xsd:date ;
@@ -1918,21 +1918,21 @@ cx:engLME_MoreThanComparisonConstructiontype3_slots a rdf_ns:Seq ;
     rdf_ns:_4 cx:engLME_MoreThanComparisonConstructiontype3_4 .
 
 cx:engLME_MostLeastConstruction_1 a rcxn:SlotObligatory ;
-    ns1:hasCompCon ns1:cxn_adjectival-phrase,
-        ns1:cxn_adjective,
-        ns1:cxn_admodifier,
-        ns1:cxn_attributive-phrase,
-        ns1:cxn_modifier,
-        ns1:cxn_superlative-form,
-        ns1:inf_admodification,
-        ns1:inf_modification,
-        ns1:sem_property-concept,
-        ns1:sem_superlative-degree,
-        ns1:str_degree-modifier .
+    compcon:hasCompCon compcon:cxn_adjectival-phrase,
+        compcon:cxn_adjective,
+        compcon:cxn_admodifier,
+        compcon:cxn_attributive-phrase,
+        compcon:cxn_modifier,
+        compcon:cxn_superlative-form,
+        compcon:inf_admodification,
+        compcon:inf_modification,
+        compcon:sem_property-concept,
+        compcon:sem_superlative-degree,
+        compcon:str_degree-modifier .
 
 cx:engLME_MostLeastConstruction_2 a rcxn:SlotObligatory ;
-    ns1:hasCompCon ns1:cxn_referent-expression,
-        ns1:sem_object-concept .
+    compcon:hasCompCon compcon:cxn_referent-expression,
+        compcon:sem_object-concept .
 
 cx:engLME_MostLeastConstruction_MD a rcxn:Metadata ;
     dcterms:created "2026-03-06"^^xsd:date ;
@@ -1945,15 +1945,15 @@ cx:engLME_MostLeastConstruction_slots a rdf_ns:Seq ;
     rdf_ns:_2 cx:engLME_MostLeastConstruction_2 .
 
 cx:engLME_PremodifierofAdjectiveConstruction_1 a rcxn:SlotObligatory ;
-    ns1:hasCompCon ns1:cxn_admodifier,
-        ns1:inf_admodification,
-        ns1:sem_degree .
+    compcon:hasCompCon compcon:cxn_admodifier,
+        compcon:inf_admodification,
+        compcon:sem_degree .
 
 cx:engLME_PremodifierofAdjectiveConstruction_2 a rcxn:SlotObligatory ;
-    ns1:hasCompCon ns1:cxn_adjective,
-        ns1:cxn_attributive-phrase,
-        ns1:cxn_modifier,
-        ns1:sem_property-concept .
+    compcon:hasCompCon compcon:cxn_adjective,
+        compcon:cxn_attributive-phrase,
+        compcon:cxn_modifier,
+        compcon:sem_property-concept .
 
 cx:engLME_PremodifierofAdjectiveConstruction_MD a rcxn:Metadata ;
     dcterms:created "2026-03-06"^^xsd:date ;
@@ -2011,20 +2011,20 @@ cx:engLME_Rollupyoursleeves_MD a rcxn:Metadata ;
     rcxn:annotator membr:Rastegar .
 
 cx:engLME_SuperlativeConstruction_1 a rcxn:SlotObligatory ;
-    ns1:hasCompCon ns1:cxn_adjectival-phrase,
-        ns1:cxn_adjective,
-        ns1:cxn_attributive-phrase,
-        ns1:cxn_modification-construction,
-        ns1:cxn_modifier,
-        ns1:cxn_superlative-form,
-        ns1:inf_modification,
-        ns1:sem_property-concept,
-        ns1:sem_superlative-degree,
-        ns1:str_degree-marker .
+    compcon:hasCompCon compcon:cxn_adjectival-phrase,
+        compcon:cxn_adjective,
+        compcon:cxn_attributive-phrase,
+        compcon:cxn_modification-construction,
+        compcon:cxn_modifier,
+        compcon:cxn_superlative-form,
+        compcon:inf_modification,
+        compcon:sem_property-concept,
+        compcon:sem_superlative-degree,
+        compcon:str_degree-marker .
 
 cx:engLME_SuperlativeConstruction_2 a rcxn:SlotObligatory ;
-    ns1:hasCompCon ns1:cxn_referent-expression,
-        ns1:sem_object-concept .
+    compcon:hasCompCon compcon:cxn_referent-expression,
+        compcon:sem_object-concept .
 
 cx:engLME_SuperlativeConstruction_MD a rcxn:Metadata ;
     dcterms:created "2026-03-06"^^xsd:date ;
@@ -2588,7 +2588,7 @@ cx:eng_ditransitive_construction_obj_inf_slots a rdf_ns:Seq ;
     rdf_ns:_4 cx:eng_ditransitive_construction_obj_inf_4 .
 
 cx:eng_ditransitive_construction_obj_np_1 a rcxn:SlotOptional ;
-    ns3:hasCasaSyntacticFunction "potential subject" ;
+    casa:hasCasaSyntacticFunction "potential subject" ;
     rcxn:hasCasaSyntacticFunction "potential subject" ;
     rcxn:hasOtherSemanticContribution "Æffector" ;
     rcxn:hasSlotForm cx:eng_ditransitive_construction_obj_np_1_Form,
@@ -2611,7 +2611,7 @@ cx:eng_ditransitive_construction_obj_np_2_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_Verb .
 
 cx:eng_ditransitive_construction_obj_np_3 a rcxn:SlotObligatory ;
-    ns3:hasCasaSyntacticFunction "Obj" ;
+    casa:hasCasaSyntacticFunction "Obj" ;
     rcxn:hasCasaSyntacticFunction "Obj" ;
     rcxn:hasOtherSemanticContribution "Recipient" ;
     rcxn:hasSlotForm cx:eng_ditransitive_construction_obj_np_3_Form,
@@ -2623,7 +2623,7 @@ cx:eng_ditransitive_construction_obj_np_3_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_NounPhrase .
 
 cx:eng_ditransitive_construction_obj_np_4 a rcxn:SlotObligatory ;
-    ns3:hasCasaSyntacticFunction "Obj" ;
+    casa:hasCasaSyntacticFunction "Obj" ;
     rcxn:hasCasaSyntacticFunction "Obj" ;
     rcxn:hasOtherSemanticContribution "Æffected" ;
     rcxn:hasSlotForm cx:eng_ditransitive_construction_obj_np_4_Form,
@@ -2649,11 +2649,11 @@ cx:eng_ditransitive_construction_obj_np_Meaning a rcxn:ConstructionMeaning ;
         "ÆFFECTOR makes RECIPIENT receive ÆFFECTED." .
 
 cx:eng_ditransitive_construction_obj_np_Sources a cx:Collection ;
-    cx:hasLiterature <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Croft_2012>,
-        <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Goldberg_1995>,
-        <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Goldberg_2006>,
-        <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Herbst_2020>,
-        <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Herbst_Hoffman_2024> ;
+    cx:hasLiterature <file:///C:/Users/User/Documents/RCxn/instance/Submissions/Croft_2012>,
+        <file:///C:/Users/User/Documents/RCxn/instance/Submissions/Goldberg_1995>,
+        <file:///C:/Users/User/Documents/RCxn/instance/Submissions/Goldberg_2006>,
+        <file:///C:/Users/User/Documents/RCxn/instance/Submissions/Herbst_2020>,
+        <file:///C:/Users/User/Documents/RCxn/instance/Submissions/Herbst_Hoffman_2024> ;
     rdfs:seeAlso <https://constructicon.de/constructions/5> .
 
 cx:eng_ditransitive_construction_obj_np_slots a rdf_ns:Seq ;
@@ -3150,7 +3150,7 @@ cx:itaStoria_RelativeTopicShiftConstruction_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "Transition from one (discourse) topic to another" .
 
 cx:itaStoria_RelativeTopicShiftConstruction_Sources a cx:Collection ;
-    cx:hasLiterature <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/La_lingua_del_Guicciardini>,
+    cx:hasLiterature <file:///C:/Users/User/Documents/RCxn/instance/Submissions/La_lingua_del_Guicciardini>,
         <https://doi.org/10.1093/llc/fqw021>,
         <https://doi.org/10.1417/81352> .
 
@@ -3307,8 +3307,8 @@ cx:lzh_Dooperationwithoperand1onoperand2construction_Meaning a rcxn:Construction
     rcxn:hasMeaning "Do [operation]3 with [operand 1]2 and [operand 2]4" .
 
 cx:lzh_Dooperationwithoperand1onoperand2construction_Sources a cx:Collection ;
-    cx:basedOn <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Shuchun-2004> ;
-    cx:hasLiterature <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Shuchun-2004> .
+    cx:basedOn <file:///C:/Users/User/Documents/RCxn/instance/Submissions/Shuchun-2004> ;
+    cx:hasLiterature <file:///C:/Users/User/Documents/RCxn/instance/Submissions/Shuchun-2004> .
 
 cx:lzh_Dooperationwithoperand1onoperand2construction_slots a rdf_ns:Seq ;
     rdf_ns:_1 cx:lzh_Dooperationwithoperand1onoperand2construction_1 ;
@@ -3501,12 +3501,12 @@ cx:zho_VerbPhrase a rcxn:Construction ;
     rcxn:elementOf cx:lzh_Dooperationwithoperand1onoperand2construction ;
     rcxn:hasTitle "Verb Phrase" .
 
-rd:FernandezSantos_20260130_629471 a ns2:Study ;
-    ns2:Summary "Participants' accuracy on subject relative clauses is at ceiling only when the verb follows the relativizer. Accuracy decreases when the verb is in a clause-final position. Object relative clauses are not at ceiling, but are misinterpreted as subject relative clauses over 90% of the time when there is no object marker and the verb follows the relativizer. The presence of an object marker does not impact accuracy when the verb is clause-final." ;
-    ns2:dataRepository "https://osf.io/4x6pz/files/osfstorage" ;
-    ns2:publishedIn "Llompart, Fernández Santos & Dąbrowska (2024-10-10). Comprehension of object relatives in Spanish: the role of frequency and transparency in acquisition and adult grammar. 10.1515/cog-2024-0016" ;
-    ns2:relevantFor cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause ;
-    ns2:studyType ns2:behavioralExperiment .
+rd:FernandezSantos_20260130_629471 a ns1:Study ;
+    ns1:Summary "Participants' accuracy on subject relative clauses is at ceiling only when the verb follows the relativizer. Accuracy decreases when the verb is in a clause-final position. Object relative clauses are not at ceiling, but are misinterpreted as subject relative clauses over 90% of the time when there is no object marker and the verb follows the relativizer. The presence of an object marker does not impact accuracy when the verb is clause-final." ;
+    ns1:dataRepository "https://osf.io/4x6pz/files/osfstorage" ;
+    ns1:publishedIn "Llompart, Fernández Santos & Dąbrowska (2024-10-10). Comprehension of object relatives in Spanish: the role of frequency and transparency in acquisition and adult grammar. 10.1515/cog-2024-0016" ;
+    ns1:relevantFor cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause ;
+    ns1:studyType ns1:behavioralExperiment .
 
 cx:Noun a rcxn:Construction ;
     rcxn:elementOf cx:eng_AdjectiveAttributiveconstruction,
@@ -3982,8 +3982,8 @@ cx:engUsUkWr_EvaluativeAttributionConstruction a rcxn:Construction ;
     rcxn:hasTitle "Evaluative Attribution Construction" .
 
 cx:eng_coolconstruction_Sources a cx:Collection ;
-    cx:hasLiterature <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/www.english-corpora.org/bnc/>,
-        <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/www.english-corpora.org/coca/>,
+    cx:hasLiterature <file:///C:/Users/User/Documents/RCxn/instance/Submissions/www.english-corpora.org/bnc/>,
+        <file:///C:/Users/User/Documents/RCxn/instance/Submissions/www.english-corpora.org/coca/>,
         <https://www.dwds.de/wb/cool>,
         <https://www.oed.com/dictionary/cool_adj?tl=true> .
 
@@ -4069,7 +4069,7 @@ cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause a rcxn:Construction ;
     rcxn:hasMetadata cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_MD ;
     rcxn:hasSlots cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_slots ;
     rcxn:hasTitle "Potentially ambiguous object relative clause" ;
-    ns2:basedOnStudy rd:FernandezSantos_20260130_629471 .
+    ns1:basedOnStudy rd:FernandezSantos_20260130_629471 .
 
 cx:itaStoria_RelativeTopicShiftConstruction a rcxn:Construction ;
     cx:hasExample cx:itaStoria_RelativeTopicShiftConstruction_Ex_A,

@@ -19,35 +19,36 @@ for ttl_file in glob.glob("instance/Submissions/**/*.ttl", recursive=True):
     g.parse(ttl_file, format="turtle")
 
 # Namespaces
+
+casa = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/casa#")
+g.bind("casa", casa)
+graph_cx.bind("casa", casa)
+graph_membr.bind("casa", casa)
+
 cx = Namespace("http://example.org/cx/")
 g.bind("cx", cx)
 graph_cx.bind("cx", cx)
 graph_membr.bind("cx", cx)
 
-rd = Namespace("http://example.org/rd/")
-g.bind("rd", rd)
-graph_cx.bind("rd", rd)
-graph_membr.bind("rd", rd)
+compcon = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/compcon#")
+g.bind("compcon", compcon)
+graph_cx.bind("compcon", compcon)
+graph_membr.bind("compcon", compcon)
 
-membr = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#")
-g.bind("membr", membr)
-graph_cx.bind("membr", membr)
-graph_membr.bind("membr", membr)
-
-rcxn = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#")
-g.bind("rcxn", rcxn)
-graph_cx.bind("rcxn", rcxn)
-graph_membr.bind("rcxn", rcxn)
-
-rsrch = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#")
-g.bind("rsrch", rsrch)
-graph_cx.bind("rsrch", rsrch)
-graph_membr.bind("rsrch", rsrch)
+lg = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#")
+g.bind("lg", lg)
+graph_cx.bind("lg", lg)
+graph_membr.bind("lg", lg)
 
 links = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#")
 g.bind("links", links)
 graph_cx.bind("links", links)
 graph_membr.bind("links", links)
+
+membr = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#")
+g.bind("membr", membr)
+graph_cx.bind("membr", membr)
+graph_membr.bind("membr", membr)
 
 olia = Namespace("http://purl.org/olia/olia.owl#")
 g.bind("olia", olia)
@@ -59,20 +60,30 @@ g.bind("oliatop", oliatop)
 graph_cx.bind("oliatop", oliatop)
 graph_membr.bind("oliatop", oliatop)
 
-rdfs = Namespace("http://www.w3.org/2000/01/rdf-schema#")
-g.bind("rdfs", rdfs)
-graph_cx.bind("rdfs", rdfs)
-graph_membr.bind("rdfs", rdfs)
+rcxn = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#")
+g.bind("rcxn", rcxn)
+graph_cx.bind("rcxn", rcxn)
+graph_membr.bind("rcxn", rcxn)
 
-lg = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#")
-g.bind("lg", lg)
-graph_cx.bind("lg", lg)
-graph_membr.bind("lg", lg)
+rd = Namespace("http://example.org/rd/")
+g.bind("rd", rd)
+graph_cx.bind("rd", rd)
+graph_membr.bind("rd", rd)
 
 rdf_ns = Namespace("http://www.w3.org/1999/02/22-rdf-syntax-ns#")
 g.bind("rdf_ns", rdf_ns)
 graph_cx.bind("rdf_ns", rdf_ns)
 graph_membr.bind("rdf_ns", rdf_ns)
+
+rdfs = Namespace("http://www.w3.org/2000/01/rdf-schema#")
+g.bind("rdfs", rdfs)
+graph_cx.bind("rdfs", rdfs)
+graph_membr.bind("rdfs", rdfs)
+
+rsrch = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#")
+g.bind("rsrch", rsrch)
+graph_cx.bind("rsrch", rsrch)
+graph_membr.bind("rsrch", rsrch)
 
 # Function to add a user to the graph
 def add_user(last_name, first_name, project_name, homepage):
