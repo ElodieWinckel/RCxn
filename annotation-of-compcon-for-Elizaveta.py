@@ -61,6 +61,7 @@ def parse_input(iri, text):
 
         if line.startswith("CE"):
             ce_index = line.replace("CE", "").strip()
+            ce_index = ce_index.replace(" ", "")
             current_subject = CX[f"{iri}_{ce_index}"]
             continue
 
