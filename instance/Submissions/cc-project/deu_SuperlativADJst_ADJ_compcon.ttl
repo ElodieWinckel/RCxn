@@ -7,19 +7,19 @@ cx:deu_SuperlativADJst_ADJ compcon:hasCompCon compcon:cxn_adjectival-phrase,
 
 cx:deu_SuperlativADJst_ADJ_1 compcon:hasCompCon compcon:inf_admodification .
 
-cx:deu_SuperlativADJst_ADJ_2ADJadjectivestem compcon:hasCompCon compcon:cxn_adjective,
+cx:deu_SuperlativADJst_ADJ_2 compcon:hasCompCon compcon:cxn_adjective,
         compcon:cxn_modifier,
         compcon:inf_subcategorizing,
         compcon:sem_property-concept .
 
-cx:deu_SuperlativADJst_ADJ_3\(e\)st compcon:hasCompCon compcon:cxn_admodifier,
+cx:deu_SuperlativADJst_ADJ_3 compcon:hasCompCon compcon:cxn_admodifier,
         compcon:cxn_superlative-form,
         compcon:inf_admodification,
         compcon:sem_superlative-degree,
         compcon:str_degree-affix,
         compcon:str_degree-marker .
 
-cx:deu_SuperlativADJst_ADJ_5ADJ compcon:hasCompCon compcon:cxn_adjective,
+cx:deu_SuperlativADJst_ADJ_5 compcon:hasCompCon compcon:cxn_adjective,
         compcon:cxn_modifier,
         compcon:inf_subcategorizing,
         compcon:sem_property-concept .
