@@ -334,7 +334,7 @@ cx:arzCai_Ditransitiveconstruction a rcxn:Construction ;
 cx:arzCai_Ditransitiveconstruction_1 a rcxn:SlotOptional ;
     cx:WordOrder "Before Element 2" ;
     cx:hasIndex cx:arzCai_Ditransitiveconstruction_1_Index ;
-    olia:hasSemanticRole olia:PositionerRole ;
+    olia:hasSemanticRole olia:AgentRole ;
     rdfs:comment "Pronominal subjects are only expressed if emphasized" ;
     rcxn:hasSyntacticFunction "subject" .
 
