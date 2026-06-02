@@ -1,0 +1,15 @@
+@prefix compcon: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/compcon#> .
+@prefix cx: <http://example.org/cx/> .
+
+cx:deu_SuperlativADJest compcon:hasCompCon compcon:cxn_attributive-phrase .
+
+cx:deu_SuperlativADJest_1 compcon:hasCompCon compcon:cxn_adjective,
+        compcon:cxn_modifier,
+        compcon:inf_subcategorizing,
+        compcon:sem_property-concept,
+        compcon:sem_scale .
+
+cx:deu_SuperlativADJest_2 compcon:hasCompCon compcon:cxn_admodifier,
+        compcon:cxn_superlative-form,
+        compcon:inf_admodification .
+
