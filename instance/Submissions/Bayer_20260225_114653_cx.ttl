@@ -17,7 +17,7 @@ membr:Project_Bayer rsrch:hasResearchQuestion membr:Project_Bayer_2602251146 .
 cx:arzCai_Ditransitiveconstruction_1 a rcxn:SlotOptional ;
     cx:WordOrder "Before Element 2" ;
     cx:hasIndex cx:arzCai_Ditransitiveconstruction_1_Index ;
-    olia:hasSemanticRole olia:PositionerRole ;
+    olia:hasSemanticRole olia:AgentRole ;
     RDFS:comment "Pronominal subjects are only expressed if emphasized" ;
     rcxn:hasSyntacticFunction "subject" .
 
