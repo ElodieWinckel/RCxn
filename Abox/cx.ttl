@@ -994,6 +994,11 @@ cx:deu_PrepositionalPhrase a rcxn:Construction ;
 
 cx:deu_SuperlativADJest_1 a rcxn:SlotObligatory ;
     rdfs:comment "Das interne Kern-KE Dimension wird durch den Adjektivstamm, an welches das Superlativsuffix -(e)st - das KE-lex - angehängt wird, realisiert. Die Dimension beschreibt den Stamm desjenigen Adjektivs, welches durch das Suffix -(e)st superlativ gesteigert wird." ;
+    compcon:hasCompCon compcon:cxn_adjective,
+        compcon:cxn_modifier,
+        compcon:inf_subcategorizing,
+        compcon:sem_property-concept,
+        compcon:sem_scale ;
     rcxn:hasOtherSemanticContribution "Dimension",
         "Gradierbare Attribute (Frame)" ;
     rcxn:hasSlotForm cx:deu_SuperlativADJest_2_Form .
@@ -1003,6 +1008,9 @@ cx:deu_SuperlativADJest_1_Form a rcxn:SlotForm ;
 
 cx:deu_SuperlativADJest_2 a rcxn:SlotObligatory ;
     rdfs:comment "Das KE-lex -(e)st wird durch das Superlativsuffix -(e)st, welches an den Adjektivstamm – die Dimension – angehängt wird, realisiert. Das Suffix -(e)st sorgt für die superlative Steigerung desjenigen Adjektivs, dessen Stamm durch die Dimension beschrieben wird." ;
+    compcon:hasCompCon compcon:cxn_admodifier,
+        compcon:cxn_superlative-form,
+        compcon:inf_admodification ;
     rcxn:hasOtherSemanticContribution "Extremwert (Frame)" ;
     rcxn:hasSlotForm cx:deu_SuperlativADJest_1_Form .
 
@@ -1048,6 +1056,7 @@ cx:deu_SuperlativADJest_slots a rdf_ns:Seq ;
     rdf_ns:_2 cx:deu_SuperlativADJest_2 .
 
 cx:deu_SuperlativADJst_ADJ_1 a rcxn:SlotObligatory ;
+    compcon:hasCompCon compcon:inf_admodification ;
     rcxn:hasSlots cx:deu_SuperlativADJst_ADJ_1_slots .
 
 cx:deu_SuperlativADJst_ADJ_1_slots a rdf_ns:Seq ;
@@ -1057,10 +1066,20 @@ cx:deu_SuperlativADJst_ADJ_1_slots a rdf_ns:Seq ;
 cx:deu_SuperlativADJst_ADJ_2 a rcxn:SlotObligatory ;
     cx:WordOrder "Die Intensivierung wird stets vor der Dimension realisiert. " ;
     rdfs:comment "Realisierbar sind steigerbare Adjektive in der Funktion einer Intensitätspartikel." ;
+    compcon:hasCompCon compcon:cxn_adjective,
+        compcon:cxn_modifier,
+        compcon:inf_subcategorizing,
+        compcon:sem_property-concept ;
     rcxn:hasOtherSemanticContribution "Intensivierung (Frame)" .
 
 cx:deu_SuperlativADJst_ADJ_3 a rcxn:SlotObligatory ;
     cx:WordOrder "Das Suffix -st wird stets an die Intensivierung angehängt." ;
+    compcon:hasCompCon compcon:cxn_admodifier,
+        compcon:cxn_superlative-form,
+        compcon:inf_admodification,
+        compcon:sem_superlative-degree,
+        compcon:str_degree-affix,
+        compcon:str_degree-marker ;
     rcxn:hasOtherSemanticContribution "Extremwert (Frame)" ;
     rcxn:hasSlotForm cx:deu_SuperlativADJst_ADJ_3_Form .
 
@@ -1074,6 +1093,10 @@ cx:deu_SuperlativADJst_ADJ_4 a rcxn:SlotObligatory ;
 
 cx:deu_SuperlativADJst_ADJ_5 a rcxn:SlotObligatory ;
     rdfs:comment "Die Dimension beschreibt die Eigenschaft, die bezogen auf eine Entität / Handlung einer Entität in vollem Ausmaß zutrifft." ;
+    compcon:hasCompCon compcon:cxn_adjective,
+        compcon:cxn_modifier,
+        compcon:inf_subcategorizing,
+        compcon:sem_property-concept ;
     rcxn:hasOtherSemanticContribution "Gradierbare Attribute (Frame)" ;
     rcxn:hasSlotForm cx:deu_SuperlativADJst_ADJ_5_Form .
 
@@ -1145,6 +1168,8 @@ cx:deu_SuperlativART_ADJest_1 a rcxn:SlotObligatory ;
 cx:deu_SuperlativART_ADJest_2 a rcxn:SlotObligatory ;
     cx:WordOrder "Der Determinierer ist der Artikel, der stets vor der Dimension realisiert wird." ;
     rdfs:comment "colloprofile: der, die, das" ;
+    compcon:hasCompCon compcon:cxn_definite-article,
+        compcon:str_definite-article-strategy ;
     rcxn:hasOtherSemanticContribution "Entität (Frame)" ;
     rcxn:hasSlotForm cx:deu_SuperlativART_ADJest_2_Form ;
     rcxn:hasSyntacticFunction "Determinierer" .
@@ -1158,6 +1183,9 @@ cx:deu_SuperlativART_ADJest_3 a rcxn:SlotObligatory ;
         "Quantifizierung" .
 
 cx:deu_SuperlativART_ADJest_4 a rcxn:SlotObligatory ;
+    compcon:hasCompCon compcon:cxn_adjective,
+        compcon:cxn_modifier,
+        compcon:sem_scale ;
     rcxn:hasSlots cx:deu_SuperlativART_ADJest_4_slots .
 
 cx:deu_SuperlativART_ADJest_4_slots a rdf_ns:Seq ;
@@ -1166,11 +1194,19 @@ cx:deu_SuperlativART_ADJest_4_slots a rdf_ns:Seq ;
 
 cx:deu_SuperlativART_ADJest_5 a rcxn:SlotObligatory ;
     rdfs:comment "Die Dimension beschreibt die Eigenschaft, die bezogen auf eine Entität in vollem Ausmaß zutrifft. Realisierbar sind undeklinierbare Adjektive und steigerbare Adverbien." ;
+    compcon:hasCompCon compcon:inf_subcategorizing,
+        compcon:sem_property-concept ;
     rcxn:hasOtherSemanticContribution "Dimension",
         "Gradierbare Attribute (Frame)" .
 
 cx:deu_SuperlativART_ADJest_6 a rcxn:SlotObligatory ;
     cx:WordOrder "Das Suffix -(e)st wird stets an die Dimension angehängt." ;
+    compcon:hasCompCon compcon:cxn_admodifier,
+        compcon:cxn_superlative-form,
+        compcon:inf_admodification,
+        compcon:sem_superlative-degree,
+        compcon:str_degree-affix,
+        compcon:str_degree-marker ;
     rcxn:hasOtherSemanticContribution "Extremwert (Frame)" ;
     rcxn:hasSlotForm cx:deu_SuperlativART_ADJest_6_Form .
 
@@ -1180,6 +1216,10 @@ cx:deu_SuperlativART_ADJest_6_Form a rcxn:SlotForm ;
 
 cx:deu_SuperlativART_ADJest_7 a rcxn:SlotObligatory ;
     rdfs:comment "Das Verglichene wird mit der Vergleichsmenge hinsichtlich eines bestimmten Wertes einer durch die Dimension definierten Skala verglichen. Das Verglichene beschreibt stets die Entität, deren Eigenschaft im vollen Ausmaß zutrifft." ;
+    compcon:hasCompCon compcon:cxn_referent-expression,
+        compcon:inf_high-accessibility,
+        compcon:inf_information-status,
+        compcon:inf_reference ;
     rcxn:hasOtherSemanticContribution "Entität (Frame)",
         "Verglichenes" .
 
@@ -1243,8 +1283,8 @@ cx:deu_SuperlativART_ADJest_MD a rcxn:Metadata ;
     rcxn:annotator membr:Winckel .
 
 cx:deu_SuperlativART_ADJest_Meaning a rcxn:ConstructionMeaning ;
-    rcxn:hasMeaning """Die Superlativ:ART_ADJ-(e)st-Konstruktion gehört zu der Familie der Vergleichskonstruktionen und weist einem Wert die höchste Stufe auf einer Skala zu.
-    Die Zuweisung erfolgt durch den Vergleich einer Entität mit anderen Entitäten beziehungsweise einer (impliziten) Gesamtheit.
+    rcxn:hasMeaning """Die Superlativ:ART_ADJ-(e)st-Konstruktion gehört zu der Familie der Vergleichskonstruktionen und weist einem Wert die höchste Stufe auf einer Skala zu.\r
+    Die Zuweisung erfolgt durch den Vergleich einer Entität mit anderen Entitäten beziehungsweise einer (impliziten) Gesamtheit.\r
     Der [Determinierer]2 steht stets vor der meist als Adjektiv realisierten [Dimension]5, an die das lexikalisch feste Kern-Konstruktionselement (KE-lex) [-(e)st]6 angehangen wird. Die [Dimension]5 benennt die Skala des Vergleichs, d.h. die Skala, auf der einem Wert die höchste Stufe zugewiesen wird. Neben dem [Determinierer]2, dem [KE-lex]6 und der [Dimension]5 besteht die Konstruktion aus zwei weiteren Kern-Konstruktionselementen (Kern-KE): dem [Verglichenen]7 (die Entität, der eine durch die [Dimension]5 ausgedrückte Eigenschaft in vollem Ausmaß zugewiesen wird) und der [Vergleichsmenge]8 (die Menge an Entitäten, die über die selbe Eigenschaft in geringerem Ausmaß verfügen).""" .
 
 cx:deu_SuperlativART_ADJest_slots a rdf_ns:Seq ;
@@ -1355,9 +1395,9 @@ cx:deu_SuperlativART_ADJste_wo_gibt_MD a rcxn:Metadata ;
     rcxn:annotator membr:Winckel .
 
 cx:deu_SuperlativART_ADJste_wo_gibt_Meaning a rcxn:ConstructionMeaning ;
-    rcxn:hasMeaning """Die Konstruktion Superlativ:ART_ADJ-ste_wo_gibt gehört zu der Familie Superlativ:ART_ADJ-(e)st und weist einem Wert die höchste Stufe auf einer Skala zu, wobei diese Zuweisung durch den Vergleich einer Entität oder eines Sachverhalts mit anderen Entitäten oder Sachverhalten beziehungsweise einer (impliziten) Gesamtheit erfolgt.\r
-Aufgrund der höheren Frequenz der Konstruktion im DWDS-Webkorpus – im Gegensatz zu den Gegenwartskorpora – scheint es sich bei ihr um eine vor allem in konzeptionell mündlichen und informellen Kontexten genutzte Konstruktion zu handeln.\r
-Die Konstruktion besteht aus dem lexikalisch festen Kern-Konstruktionselement (KE-lex) [-ste_wo_gibt]6, den internen Kern-Konstruktionselementen (Kern-KE) [Dimension]5 und [Determinierer]3, den externen Kern-KE [Verglichenes]7 und [Vergleichsmenge]8 und den Nicht-Kern-KE [Annäherung]1 und [Quantifizierung]4.\r
+    rcxn:hasMeaning """Die Konstruktion Superlativ:ART_ADJ-ste_wo_gibt gehört zu der Familie Superlativ:ART_ADJ-(e)st und weist einem Wert die höchste Stufe auf einer Skala zu, wobei diese Zuweisung durch den Vergleich einer Entität oder eines Sachverhalts mit anderen Entitäten oder Sachverhalten beziehungsweise einer (impliziten) Gesamtheit erfolgt.\r\r
+Aufgrund der höheren Frequenz der Konstruktion im DWDS-Webkorpus – im Gegensatz zu den Gegenwartskorpora – scheint es sich bei ihr um eine vor allem in konzeptionell mündlichen und informellen Kontexten genutzte Konstruktion zu handeln.\r\r
+Die Konstruktion besteht aus dem lexikalisch festen Kern-Konstruktionselement (KE-lex) [-ste_wo_gibt]6, den internen Kern-Konstruktionselementen (Kern-KE) [Dimension]5 und [Determinierer]3, den externen Kern-KE [Verglichenes]7 und [Vergleichsmenge]8 und den Nicht-Kern-KE [Annäherung]1 und [Quantifizierung]4.\r\r
 """ .
 
 cx:deu_SuperlativART_ADJste_wo_gibt_slots a rdf_ns:Seq ;
@@ -3823,6 +3863,9 @@ cx:deu_SuperlativADJst_ADJ a rcxn:Construction ;
         cx:deu_SuperlativADJst_ADJ_Ex_F ;
     rdfs:comment "Die Konstruktion wird in der Literatur bzw. in Grammatiken auch thematisiert unter: 2. Steigerung, Absoluter Superlativ, Elativ, Komparation.",
         "Original entry by Nina Böbel: „Superlativ:ADJ-st_ADJ“, in: FrameNet-Konstruktikon des Deutschen, https://framenet-constructicon.hhu.de/constructicon/construction?id=631, abgerufen am 20.04.2026." ;
+    compcon:hasCompCon compcon:cxn_adjectival-phrase,
+        compcon:cxn_attributive-phrase,
+        compcon:inf_modification ;
     lg:partOfLanguage lg:deu ;
     links:inheritedBy cx:deu_Superlativ_KompositionADJstEINHEIT ;
     links:inheritsFrom cx:deu_SuperlativADJest ;
@@ -3944,6 +3987,7 @@ cx:deu_SuperlativADJest a rcxn:Construction ;
         cx:deu_SuperlativADJest_Ex_D ;
     rdfs:comment "Imo, Wolfgang (2016): Grammatik. Eine Einführung, Stuttgart: J.B. Metzler.",
         "Original entry by Benjamin Fischer: „Superlativ:ADJ-(e)st“, in: FrameNet-Konstruktikon des Deutschen, https://framenet-constructicon.hhu.de/constructicon/construction?id=4357, abgerufen am 13.04.2026." ;
+    compcon:hasCompCon compcon:cxn_attributive-phrase ;
     lg:partOfLanguage lg:deu ;
     links:inheritedBy cx:SuperlativART_ADJest,
         cx:Superlativam_ADJsten,

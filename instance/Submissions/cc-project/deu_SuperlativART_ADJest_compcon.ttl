@@ -1,24 +1,24 @@
 @prefix compcon: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/compcon#> .
 @prefix cx: <http://example.org/cx/> .
 
-cx:deu_SuperlativART_ADJest_2ART compcon:hasCompCon compcon:cxn_definite-article,
+cx:deu_SuperlativART_ADJest_2 compcon:hasCompCon compcon:cxn_definite-article,
         compcon:str_definite-article-strategy .
 
 cx:deu_SuperlativART_ADJest_4 compcon:hasCompCon compcon:cxn_adjective,
         compcon:cxn_modifier,
         compcon:sem_scale .
 
-cx:deu_SuperlativART_ADJest_5adjectivestem compcon:hasCompCon compcon:inf_subcategorizing,
+cx:deu_SuperlativART_ADJest_5 compcon:hasCompCon compcon:inf_subcategorizing,
         compcon:sem_property-concept .
 
-cx:deu_SuperlativART_ADJest_6\(e\)st compcon:hasCompCon compcon:cxn_admodifier,
+cx:deu_SuperlativART_ADJest_6 compcon:hasCompCon compcon:cxn_admodifier,
         compcon:cxn_superlative-form,
         compcon:inf_admodification,
         compcon:sem_superlative-degree,
         compcon:str_degree-affix,
         compcon:str_degree-marker .
 
-cx:deu_SuperlativART_ADJest_7NP compcon:hasCompCon compcon:cxn_referent-expression,
+cx:deu_SuperlativART_ADJest_7 compcon:hasCompCon compcon:cxn_referent-expression,
         compcon:inf_high-accessibility,
         compcon:inf_information-status,
         compcon:inf_reference .
