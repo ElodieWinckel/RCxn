@@ -60,8 +60,8 @@ def parse_input(iri, text):
             continue
 
         if line.startswith("CE"):
-            ce_index = line.replace("CE", "").strip()
-            ce_index = ce_index.replace(" ", "")
+            ce_text = re.match(r"^CE\s*(\d+)", line)
+            ce_index = ce_text.group(1)
             current_subject = CX[f"{iri}_{ce_index}"]
             continue
 
