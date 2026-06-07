@@ -13,7 +13,7 @@
 
 
 cx:engLME_SuperlativeConstruction compcon:hasCompCon compcon:cxn_referring-phrase , compcon:cxn_modification-construction .
-cx:engLME_SuperlativeConstruction_1 compcon:hasCompCon compcon:cxn_modifier , compcon:inf_modification , compcon:cxn_modification-construction , 
+cx:engLME_SuperlativeConstruction_1 compcon:hasCompCon compcon:cxn_modifier , compcon:inf_modification , 
         compcon:cxn_attributive-phrase , compcon:cxn_adjectival-phrase , compcon:cxn_adjective , compcon:sem_property-concept , 
-        compcon:cxn_superlative-form , compcon:sem_superlative-degree , compcon:str_degree-marker .
+        compcon:cxn_superlative-form , compcon:sem_superlative-degree , compcon:str_degree-marker , str:degree-affix.
 cx:engLME_SuperlativeConstruction_2 compcon:hasCompCon compcon:cxn_referent-expression , compcon:sem_object-concept .
