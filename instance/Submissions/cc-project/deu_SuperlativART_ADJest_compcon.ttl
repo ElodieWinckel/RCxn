@@ -1,6 +1,10 @@
 @prefix compcon: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/compcon#> .
 @prefix cx: <http://example.org/cx/> .
 
+
+cx:deu_SuperlativART_ADJest compcon:hasCompCon compcon:cxn_referring-phrase,
+        compcon:cxn_modification-construction , compcon:inf_modification, compcon:cxn_adjective-modification-construction .
+
 cx:deu_SuperlativART_ADJest_2 compcon:hasCompCon compcon:cxn_definite-article,
         compcon:str_definite-article-strategy .
 
