@@ -53,6 +53,7 @@ prefixes = ("http://example.org/cx/|"
             "http://www.w3.org/2000/01/rdf-schema#|"
             "http://www.w3.org/1999/02/22-rdf-syntax-ns#|"
             "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#|"
+            "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/gest#|"
             "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rdata#|"
             "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/compcon#|"
             "http://purl.org/dc/terms/")
