@@ -538,6 +538,51 @@ def construction_detail(uri):
                            gesture_title=gesture_title,
                            gesture=gesture)
 
+###################################################
+### CREATE GESTURE CONSTRUCTION ENTRIES
+###################################################
+
+@app_entries_blueprint.route('/gest_construction/<path:uri>', endpoint='gesture_construction_detail')
+def gesture_construction_detail(uri):
+
+    # Rebuild the full URI for the construction
+    gesture_uri = URIRef("http://example.org/cx/" + uri)
+    # Rebuild the full IRI for the form of the gesture
+    gesture_form_uri = gesture_uri + "_Form"
+    # Rebuilt the full URI for the meaning of the gesture
+    gesture_meaning_uri = gesture_uri + "_Meaning"
+    # Rebuilt the full URI for metadata
+    metadata_uri = gesture_uri + "_MD"
+
+    # Collect all triples where entry_uri is the subject
+    gesture = []
+    for pred, obj in g.predicate_objects(subject=gesture_form_uri):
+        gesture.append({
+            'synsem': "syn",
+            'property': get_label_or_iri(pred, g, ont),
+            'object': get_label_or_iri(obj, g, ont),
+        })
+    for pred, obj in g.predicate_objects(subject=gesture_meaning_uri):
+        gesture.append({
+            'synsem': "sem",
+            'property': get_label_or_iri(pred, g, ont),
+            'object': get_label_or_iri(obj, g, ont),
+        })
+    print(gesture)
+
+    # Fetch the title to display
+    title = g.value(gesture_uri, rcxn.hasTitle)
+
+    return render_template("app_entries/gest_construction.html",
+                            title=title,
+                            gesture=gesture)
+
+
+
+###################################################
+### CONSTRUCTION ENTRIES: DOWNLOAD RDF GRAPH
+###################################################
+
 @app_entries_blueprint.route('/construction/<path:uri>/submit', methods=['POST'])
 def download_subgraph(uri):
     # Rebuild the full URI for the construction

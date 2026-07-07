@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Construction Details - {{ title }}{% endblock %}
+
+{% block content %}
+
+    <h1>{{ title }}</h1>
+<table>
+    <tbody style="border: 3px double black; border-collapse: collapse; width: 100%;">
+    {% for row in gesture if row.synsem == "syn" %}
+        <tr>
+            <th>{{ row.property }}</th>
+            <td>{{ row.object }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+    <tbody style="border: 3px double black; border-collapse: collapse; width: 100%;">
+    {% for row in gesture if row.synsem == "sem" %}
+        <tr>
+            <th>{{ row.property }}</th>
+            <td>{{ row.object }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+    <p>
+    <a href="{{ url_for('app_entries.list_view') }}">Back to Constructions List</a>
+    </p>
+
+</body>
+{% endblock %}
