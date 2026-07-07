@@ -2,6 +2,7 @@ from . import app_entries_blueprint
 import re
 from flask import render_template, Response
 from rdflib import Graph, URIRef, Literal, Namespace, RDF, RDFS, FOAF, SKOS
+from collections import defaultdict
 
 # Load the graphs and namespaces defined in graph_loader.py
 from .graph_loader import (
@@ -192,6 +193,49 @@ def identify_construction_element_triples(slots_uri):
     elements[:] = [item for item in elements if item['property'] != "type"]
     elements[:] = [item for item in elements if item['property'] != "hasIndex"]
     return elements, colloprofiles, list_of_nested
+
+def identify_phase_triples(slots_uri):
+    # Step 1: Extract the elements of the sequence
+    unique_slot_uri = []
+    for predicate, obj in g.predicate_objects(subject=slots_uri):
+        if predicate.startswith(str(RDF)) and predicate[len(str(RDF))] == "_":
+            unique_slot_uri.append(obj)
+
+    # Step 2: Collect triples
+    elements = []
+
+    for slot_uri in unique_slot_uri:
+        phase_number = "Phase " + slot_uri[-1]
+        print(phase_number)
+
+        for predicate, obj in g.predicate_objects(subject=slot_uri):
+            print(predicate)
+            elements.append({
+                "phase": phase_number,
+                "property": get_label_or_iri(predicate, g, ont),
+                "definition": get_definition(obj, g, ont),
+                "object": get_label_or_iri(obj, g, ont),
+            })
+
+    # Step 3: Pivot the table
+    table = defaultdict(lambda: defaultdict(list))
+
+    for row in elements:
+        table[row["property"]][row["phase"]].append(row["object"])
+
+    # Convert to ordinary dicts
+    table = {
+        prop: dict(phases)
+        for prop, phases in table.items()
+    }
+
+    # Keep phases in order
+    phase_names = sorted(
+        {row["phase"] for row in elements},
+        key=lambda p: int(p.split()[1])
+    )
+
+    return phase_names, table
 
 def find_compcon_uri_by_label(label_compcon) -> str:
     uri_compcon = ont.value(predicate=RDFS.label, object=Literal(label_compcon))
@@ -541,12 +585,21 @@ def gesture_construction_detail(uri):
 
     # Collect all triples where entry_uri is the subject
     gesture = []
+
+    phase_names, phase_table = identify_phase_triples(gesture_form_uri)
+    print(phase_names)
+
     for pred, obj in g.predicate_objects(subject=gesture_form_uri):
-        gesture.append({
-            'synsem': "syn",
-            'property': get_label_or_iri(pred, g, ont),
-            'object': get_label_or_iri(obj, g, ont),
-        })
+        if pred.startswith(str(RDF)) and pred[len(str(RDF))] == "_":  # Check for rdf:_n
+            pass
+        else:
+            gesture.append({
+                'synsem': "syn",
+                'property': get_label_or_iri(pred, g, ont),
+                'object': get_label_or_iri(obj, g, ont),
+            })
+    gesture[:] = [item for item in gesture if item['property'] != "type"]
+
     for pred, obj in g.predicate_objects(subject=gesture_meaning_uri):
         gesture.append({
             'synsem': "sem",
@@ -558,8 +611,10 @@ def gesture_construction_detail(uri):
     title = g.value(gesture_uri, rcxn.hasTitle)
 
     return render_template("app_entries/gest_construction.html",
-                            title=title,
-                            gesture=gesture)
+                           title=title,
+                           gesture=gesture,
+                           phase_names=phase_names,
+                           phase_table=phase_table)
 
 
 

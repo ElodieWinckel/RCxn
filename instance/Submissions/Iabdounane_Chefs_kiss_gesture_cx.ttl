@@ -1,0 +1,37 @@
+@prefix cx: <http://example.org/cx/> .
+@prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
+@prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
+@prefix gest: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/gest#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+cx:eng_ChefskissGesturalConstruction a gest:GestureConstruction ;
+    gest:hasForm cx:eng_ThroatCutGesture_Form ;
+    rcxn:hasMeaning cx:eng_ChefskissGesturalConstruction_Meaning ;
+    lg:partOfLanguage lg:eng ;
+    rcxn:hasTitle "Chef’s Kiss as a Gestural Construction" .
+
+cx:eng_ChefskissGesturalConstruction_Form a rdf:Seq ;
+    gest:timing "Usually no longer than 1 second." ;
+    gest:handedness gest:OneHand ;
+    gest:sound "Kissing sound" ;
+    gest:position "Central space at mouth level." ;
+    rdf:_1 cx:eng_ChefskissGesturalConstruction_1 ;
+    rdf:_2 cx:eng_ChefskissGesturalConstruction_2 ;
+    rdf:_3 cx:eng_ChefskissGesturalConstruction_3 .
+
+cx:eng_ChefskissGesturalConstruction_1  a gest:Phase ;
+    gest:handshape "All fingers are extended, touching at their tips." ;
+    gest:movement "Bringing fingers together." ;
+    gest:orientation "Palm is lateral." , "Fingers oriented upwards." .
+
+cx:eng_ChefskissGesturalConstruction_2  a gest:Phase ;
+    gest:handshape "All fingers are extended, touching at their tips." ;
+    gest:movement "Kissing the tips of the fingers." ;
+    gest:orientation "Palm is vertical." , "Fingers oriented towards the speaker’s mouth." .
+
+cx:eng_ChefskissGesturalConstruction_3  a gest:Phase ;
+    gest:handshape "All fingers are extended, and their tips are brought away from each other." ;
+    gest:movement "Releasing the fingers away from mouth." ;
+    gest:orientation "Palm is lateral." , "Fingers oriented upwards." .
+
+cx:eng_ChefskissGesturalConstruction_Meaning gest:semanticProperty "Something or someone is perfect or excellent." .

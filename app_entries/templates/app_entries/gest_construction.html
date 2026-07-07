@@ -6,23 +6,61 @@
 
     <h1>{{ title }}</h1>
 <table>
-    <tbody style="border: 3px double black; border-collapse: collapse; width: 100%;">
+<tbody style="border: 3px double black; border-collapse: collapse; width: 100%;">
+
+    <!-- Syntactic properties -->
     {% for row in gesture if row.synsem == "syn" %}
-        <tr>
-            <th>{{ row.property }}</th>
-            <td>{{ row.object }}</td>
-        </tr>
+    <tr>
+        <th>{{ row.property }}</th>
+        <td colspan="{{ phase_names|length }}">
+            {{ row.object }}
+        </td>
+    </tr>
     {% endfor %}
-    </tbody>
+
+    <!-- Phase header -->
+    {% if phase_names %} <!-- Do not display for gesture constructions that do not have phases -->
+    <tr>
+        <th> </th>
+        {% for phase in phase_names %}
+            <th>{{ phase }}</th>
+        {% endfor %}
+    </tr>
+
+    <!-- Phase data -->
+    {% for property, values in phase_table.items() %}
+    <tr>
+        <th>{{ property }}</th>
+
+        {% for phase in phase_names %}
+        <td>
+            {% for value in values.get(phase, []) %}
+                {{ value }}<br>
+            {% endfor %}
+        </td>
+        {% endfor %}
+
+    </tr>
+    {% endfor %}
+    {% endif %}
+
+</tbody>
+
     <tbody style="border: 3px double black; border-collapse: collapse; width: 100%;">
+
+    <!-- Semantic properties -->
     {% for row in gesture if row.synsem == "sem" %}
-        <tr>
-            <th>{{ row.property }}</th>
-            <td>{{ row.object }}</td>
-        </tr>
+    <tr>
+        <th>{{ row.property }}</th>
+        <td colspan="{{ phase_names|length }}">
+            {{ row.object }}
+        </td>
+    </tr>
     {% endfor %}
     </tbody>
 </table>
+
+
 
     <p>
     <a href="{{ url_for('app_entries.list_view') }}">Back to Constructions List</a>
