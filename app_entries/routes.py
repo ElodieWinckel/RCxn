@@ -364,26 +364,11 @@ def construction_detail(uri):
         })
         colloprofiles = colloprofiles + nested_colloprofiles
 
-    # Collect triples for gesture
-    gesture = []
+    # Collect gesture constructions used
     gesture_title = ""
     for gesture_uri in g.objects(subject=entry_uri, predicate=cx.usesGesture):
         for title in g.objects(subject=gesture_uri, predicate=rcxn.hasTitle):
             gesture_title = str(title)
-        gesture_form_uri = gesture_uri + "_Form"
-        gesture_meaning_uri = gesture_uri + "_Meaning"
-        for pred, obj in g.predicate_objects(subject=gesture_form_uri):
-            gesture.append({
-                'synsem': "syn",
-                'property': get_label_or_iri(pred, g, ont),
-                'object': get_label_or_iri(obj, g, ont),
-            })
-        for pred, obj in g.predicate_objects(subject=gesture_meaning_uri):
-            gesture.append({
-                'synsem': "sem",
-                'property': get_label_or_iri(pred, g, ont),
-                'object': get_label_or_iri(obj, g, ont),
-            })
     triples[:] = [item for item in triples if item['property'] != "usesGesture"]
 
     # Collect triples for examples
@@ -535,8 +520,7 @@ def construction_detail(uri):
                            research_data=research_data,
                            references=references,
                            colloprofiles=colloprofiles,
-                           gesture_title=gesture_title,
-                           gesture=gesture)
+                           gesture_title=gesture_title)
 
 ###################################################
 ### CREATE GESTURE CONSTRUCTION ENTRIES
@@ -568,7 +552,6 @@ def gesture_construction_detail(uri):
             'property': get_label_or_iri(pred, g, ont),
             'object': get_label_or_iri(obj, g, ont),
         })
-    print(gesture)
 
     # Fetch the title to display
     title = g.value(gesture_uri, rcxn.hasTitle)
