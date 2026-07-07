@@ -5,7 +5,8 @@
 @prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
 @prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#> .
 @prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
-@prefix ns1: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rdata#> .
+@prefix ns1: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/gest#> .
+@prefix ns2: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rdata#> .
 @prefix olia: <http://purl.org/olia/olia.owl#> .
 @prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
 @prefix rd: <http://example.org/rd/> .
@@ -150,6 +151,13 @@ cx:engLME_Transitiveconstruction_2_Form a rcxn:SlotForm ;
 cx:eng_CauseMotionconstruction_2_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_Verb .
 
+cx:eng_PhysicalHeight a ns1:GestureConstruction ;
+    ns1:hasForm cx:eng_PhysicalHeight_Form ;
+    ns1:hasPhases "1" ;
+    lg:partOfLanguage lg:eng ;
+    rcxn:hasMeaning cx:eng_PhysicalHeight_Meaning ;
+    rcxn:hasTitle "Physical Height Gesture Construction" .
+
 cx:eng_caused_motion_construction_ppto links:sameFunctionDifferentForm cx:eng_ditransitive_construction_obj_np .
 
 cx:eng_monotransitive_construction a rcxn:Construction ;
@@ -268,22 +276,22 @@ cx:Noun_MD a rcxn:Metadata ;
         membr:Weigelt,
         membr:Winckel .
 
-cx:SmallQuantityGestureConstruction a cx:GestureConstruction ;
+cx:SmallQuantityGestureConstruction a ns1:GestureConstruction ;
     cx:endsOnSlot cx:eng_ThisclosetoVingconstruction_6 ;
     cx:hasForm cx:SmallQuantityGestureConstruction_Form ;
-    cx:hasPhases "1" ;
     cx:stratsOnSlot cx:eng_ThisclosetoVingconstruction_1 ;
+    ns1:hasPhases "1" ;
     lg:partOfLanguage lg:eng ;
     rcxn:hasMeaning cx:SmallQuantityGestureConstruction_Meaning ;
     rcxn:hasTitle "Small Quantity Gesture Construction" .
 
-cx:SmallQuantityGestureConstruction_Form cx:duration "Usually for the entire duration of the co-occurring verbal construction." ;
-    cx:handedness cx:oneHand ;
+cx:SmallQuantityGestureConstruction_Form cx:handedness cx:OneHand ;
     cx:handshape "Middle, right, and little fingers retracted toward the palm.",
         "Thumb and index extended or crooked and parallel to each other." ;
     cx:movement "Static hold or beat." ;
     cx:orientation "Palm Lateral." ;
-    cx:position "Central space or at face level." .
+    cx:position "Central space or at face level." ;
+    cx:timing "Usually for the entire duration of the co-occurring verbal construction." .
 
 cx:SmallQuantityGestureConstruction_Meaning cx:pragmaticProperty "Affective/evaluative framing.",
         "Foregrounding the small quantity of the referent." ;
@@ -389,8 +397,8 @@ cx:arzCai_Ditransitiveconstruction_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "[ÆFFECTOR]1 makes [RECIPIENT]3 receive or lose [ÆFFECTED]4" .
 
 cx:arzCai_Ditransitiveconstruction_Sources a cx:Collection ;
-    cx:hasLiterature <file:///C:/Users/User/Documents/RCxn/instance/Submissions/Diem_2002>,
-        <file:///C:/Users/User/Documents/RCxn/instance/Submissions/Woidich_2006> .
+    cx:hasLiterature <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Diem_2002>,
+        <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Woidich_2006> .
 
 cx:arzCai_Ditransitiveconstruction_slots a rdf_ns:Seq ;
     rdf_ns:_1 cx:arzCai_Ditransitiveconstruction_1 ;
@@ -1582,7 +1590,7 @@ cx:engLME_Argumentstructureconstruction_Meaning a rcxn:ConstructionMeaning ;
 
 cx:engLME_Argumentstructureconstruction_Sources a cx:Collection ;
     cx:basedOn <https://doi.org/10.3389/frai.2025.1477246> ;
-    cx:hasLiterature <file:///C:/Users/User/Documents/RCxn/instance/Submissions/Goldberg_1995>,
+    cx:hasLiterature <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Goldberg_1995>,
         <https://doi.org/10.3389/frai.2025.1477246> .
 
 cx:engLME_Argumentstructureconstruction_slots a rdf_ns:Seq ;
@@ -2162,6 +2170,88 @@ cx:engLME_coolasemotionconstruction_Meaning a rcxn:ConstructionMeaning ;
 cx:engLME_coolasemotionconstruction_slots a rdf_ns:Seq ;
     rdf_ns:_1 cx:engLME_coolasemotionconstruction_1 .
 
+cx:engUsSpo_Hadituptoherewith_1 a rcxn:SlotObligatory ;
+    olia:hasSemanticRole olia:ExperiencerRole ;
+    rcxn:hasSlotForm cx:engUsSpo_Hadituptoherewith_1_Form ;
+    rcxn:hasSyntacticFunction "Subject" .
+
+cx:engUsSpo_Hadituptoherewith_1_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:eng_NounPhrase .
+
+cx:engUsSpo_Hadituptoherewith_2 a rcxn:SlotObligatory ;
+    rcxn:hasOtherSemanticContribution "Enough" ;
+    rcxn:hasSlotForm cx:engUsSpo_Hadituptoherewith_2_Form ;
+    rcxn:hasSyntacticFunction "Predicator" .
+
+cx:engUsSpo_Hadituptoherewith_2_Form a rcxn:SlotForm ;
+    rcxn:hasSurfaceForm "had it up to here" .
+
+cx:engUsSpo_Hadituptoherewith_3 a rcxn:SlotOptional ;
+    olia:hasSemanticRole olia:CauseRole ;
+    rcxn:hasSlotForm cx:engUsSpo_Hadituptoherewith_3_Form ;
+    rcxn:hasSyntacticFunction "Oblique complement" .
+
+cx:engUsSpo_Hadituptoherewith_3_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:eng_PrepositionalPhrasewithPLUSNP .
+
+cx:engUsSpo_Hadituptoherewith_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "All you do is turn away and sulk and [I]1 have [had it up to here]2 [with that behavior]3." ;
+    cx:hasText "All you do is turn away and sulk and I have had it up to here with that behavior." ;
+    rdfs:comment "https://gallo.case.edu/go/yas/0055/2015-06-02_1800_US_KNBC_Access_Hollywood_Live_1509-1515.mp4" .
+
+cx:engUsSpo_Hadituptoherewith_MD a rcxn:Metadata ;
+    dcterms:created "2026-07-07"^^xsd:date ;
+    rcxn:annotator membr:Iabdounane .
+
+cx:engUsSpo_Hadituptoherewith_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "[An experiencer]1 has reached their maximum tolerance level of [a negative stimulus]3 and cannot take more of it." .
+
+cx:engUsSpo_Hadituptoherewith_slots a rdf_ns:Seq ;
+    rdf_ns:_1 cx:engUsSpo_Hadituptoherewith_1 ;
+    rdf_ns:_2 cx:engUsSpo_Hadituptoherewith_2 ;
+    rdf_ns:_3 cx:engUsSpo_Hadituptoherewith_3 .
+
+cx:engUsSpo_Hadituptoherewithmesoconstruction_1 a rcxn:SlotObligatory ;
+    olia:hasSemanticRole olia:ExperiencerRole ;
+    rcxn:hasSlotForm cx:engUsSpo_Hadituptoherewithmesoconstruction_1_Form ;
+    rcxn:hasSyntacticFunction "Subject" .
+
+cx:engUsSpo_Hadituptoherewithmesoconstruction_1_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:eng_NounPhrase .
+
+cx:engUsSpo_Hadituptoherewithmesoconstruction_2 a rcxn:SlotObligatory ;
+    rcxn:hasOtherSemanticContribution "Enough" ;
+    rcxn:hasSlotForm cx:engUsSpo_Hadituptoherewithmesoconstruction_2_Form ;
+    rcxn:hasSyntacticFunction "Predicator" .
+
+cx:engUsSpo_Hadituptoherewithmesoconstruction_2_Form a rcxn:SlotForm ;
+    rcxn:hasSurfaceForm "had it up to here" .
+
+cx:engUsSpo_Hadituptoherewithmesoconstruction_3 a rcxn:SlotOptional ;
+    olia:hasSemanticRole olia:CauseRole ;
+    rcxn:hasSlotForm cx:engUsSpo_Hadituptoherewithmesoconstruction_3_Form ;
+    rcxn:hasSyntacticFunction "Oblique complement" .
+
+cx:engUsSpo_Hadituptoherewithmesoconstruction_3_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:eng_PrepositionalPhrasewithPLUSNP .
+
+cx:engUsSpo_Hadituptoherewithmesoconstruction_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "Some people tell me [we]1 have [had it up to here]2 [with typical politicians]3." ;
+    cx:hasText "Some people tell me we have had it up to here with typical politicians." ;
+    rdfs:comment "http://go.redhenlab.org/yas/0054" .
+
+cx:engUsSpo_Hadituptoherewithmesoconstruction_MD a rcxn:Metadata ;
+    dcterms:created "2026-07-07"^^xsd:date ;
+    rcxn:annotator membr:Iabdounane .
+
+cx:engUsSpo_Hadituptoherewithmesoconstruction_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "An [experiencer]1 has reached their maximum tolerance level of [a negative stimulus]3 and cannot take more of it." .
+
+cx:engUsSpo_Hadituptoherewithmesoconstruction_slots a rdf_ns:Seq ;
+    rdf_ns:_1 cx:engUsSpo_Hadituptoherewithmesoconstruction_1 ;
+    rdf_ns:_2 cx:engUsSpo_Hadituptoherewithmesoconstruction_2 ;
+    rdf_ns:_3 cx:engUsSpo_Hadituptoherewithmesoconstruction_3 .
+
 cx:engUsUkWr_EvaluativeAttributionConstruction_1 a rcxn:SlotOptional ;
     rcxn:hasOtherSemanticContribution "Attributor" ;
     rcxn:hasSlotForm cx:engUsUkWr_EvaluativeAttributionConstruction_1_Form .
@@ -2446,6 +2536,18 @@ cx:eng_Keepacoolheadconstruction_slots a rdf_ns:Seq ;
     rdf_ns:_3 cx:eng_Keepacoolheadconstruction_3 ;
     rdf_ns:_4 cx:eng_Keepacoolheadconstruction_4 .
 
+cx:eng_PhysicalHeight_Form ns1:handedness ns1:OneHand ;
+    ns1:handshape "The index, middle, ring and little fingers are fully extended and together.",
+        "The thumb is either tucked or relaxed alongside the hand." ;
+    ns1:movement "Upward movement until the resting position." ;
+    ns1:orientation "Fingers oriented toward the speaker's center line.",
+        "Palm is vertical." ;
+    ns1:position "Position schema (context-dependent)." ;
+    ns1:timing "Usually for the entire duration of the co-occurring verbal pattern." .
+
+cx:eng_PhysicalHeight_Meaning ns1:semanticProperty "Vertical physical dimension of the referent relative to the ground.",
+        "visual representation of the height or size of the referent." .
+
 cx:eng_PossessivePronoun a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
     rcxn:hasTitle "Possessive Pronoun" .
@@ -2459,6 +2561,10 @@ cx:eng_PrepositionalPhrasetoPLUSVing a rcxn:Construction ;
 cx:eng_PrepositionalPhrasetoPLUSVing_MD a rcxn:Metadata ;
     cx:annotator membr:Iabdounane ;
     dcterms:created "2026-02-02"^^xsd:date .
+
+cx:eng_PrepositionalPhrasewithPLUSNP_MD a rcxn:Metadata ;
+    cx:annotator membr:Iabdounane ;
+    dcterms:created "2026-07-07"^^xsd:date .
 
 cx:eng_Pronoun a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
@@ -2515,6 +2621,26 @@ cx:eng_ThisclosetoVingconstruction_slots a rdf_ns:Seq ;
     rdf_ns:_1 cx:eng_ThisclosetoVingconstruction_1 ;
     rdf_ns:_2 cx:eng_ThisclosetoVingconstruction_2 ;
     rdf_ns:_3 cx:eng_ThisclosetoVingconstruction_6 .
+
+cx:eng_ThroatCutGesture a ns1:GestureConstruction ;
+    ns1:hasForm cx:eng_ThroatCutGesture_Form ;
+    ns1:hasPhases "1" ;
+    lg:partOfLanguage lg:eng ;
+    rcxn:hasMeaning cx:eng_ThroatCutGesture_Meaning ;
+    rcxn:hasTitle "Throat Cut Gesture Construction" .
+
+cx:eng_ThroatCutGesture_Form ns1:handedness ns1:OneHand ;
+    ns1:handshape "The index, middle, ring and little fingers are fully extended and together.",
+        "The thumb is either tucked or relaxed alongside the hand." ;
+    ns1:movement "Horizontal side-to-side motion." ;
+    ns1:orientation "Fingers oriented toward the speaker's neck.",
+        "Palm is vertical." ;
+    ns1:position "At the neck level." ;
+    ns1:timing "Context-dependent." .
+
+cx:eng_ThroatCutGesture_Meaning ns1:discourseFunctionalProperty "Turn management" ;
+    ns1:pragmaticProperty "Directive, request, warning, or, framing." ;
+    ns1:semanticProperty "Putting an end to something" .
 
 cx:eng_VerbING a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
@@ -2689,11 +2815,11 @@ cx:eng_ditransitive_construction_obj_np_Meaning a rcxn:ConstructionMeaning ;
         "ÆFFECTOR makes RECIPIENT receive ÆFFECTED." .
 
 cx:eng_ditransitive_construction_obj_np_Sources a cx:Collection ;
-    cx:hasLiterature <file:///C:/Users/User/Documents/RCxn/instance/Submissions/Croft_2012>,
-        <file:///C:/Users/User/Documents/RCxn/instance/Submissions/Goldberg_1995>,
-        <file:///C:/Users/User/Documents/RCxn/instance/Submissions/Goldberg_2006>,
-        <file:///C:/Users/User/Documents/RCxn/instance/Submissions/Herbst_2020>,
-        <file:///C:/Users/User/Documents/RCxn/instance/Submissions/Herbst_Hoffman_2024> ;
+    cx:hasLiterature <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Croft_2012>,
+        <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Goldberg_1995>,
+        <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Goldberg_2006>,
+        <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Herbst_2020>,
+        <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Herbst_Hoffman_2024> ;
     rdfs:seeAlso <https://constructicon.de/constructions/5> .
 
 cx:eng_ditransitive_construction_obj_np_slots a rdf_ns:Seq ;
@@ -3190,7 +3316,7 @@ cx:itaStoria_RelativeTopicShiftConstruction_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "Transition from one (discourse) topic to another" .
 
 cx:itaStoria_RelativeTopicShiftConstruction_Sources a cx:Collection ;
-    cx:hasLiterature <file:///C:/Users/User/Documents/RCxn/instance/Submissions/La_lingua_del_Guicciardini>,
+    cx:hasLiterature <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/La_lingua_del_Guicciardini>,
         <https://doi.org/10.1093/llc/fqw021>,
         <https://doi.org/10.1417/81352> .
 
@@ -3347,8 +3473,8 @@ cx:lzh_Dooperationwithoperand1onoperand2construction_Meaning a rcxn:Construction
     rcxn:hasMeaning "Do [operation]3 with [operand 1]2 and [operand 2]4" .
 
 cx:lzh_Dooperationwithoperand1onoperand2construction_Sources a cx:Collection ;
-    cx:basedOn <file:///C:/Users/User/Documents/RCxn/instance/Submissions/Shuchun-2004> ;
-    cx:hasLiterature <file:///C:/Users/User/Documents/RCxn/instance/Submissions/Shuchun-2004> .
+    cx:basedOn <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Shuchun-2004> ;
+    cx:hasLiterature <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Shuchun-2004> .
 
 cx:lzh_Dooperationwithoperand1onoperand2construction_slots a rdf_ns:Seq ;
     rdf_ns:_1 cx:lzh_Dooperationwithoperand1onoperand2construction_1 ;
@@ -3541,12 +3667,12 @@ cx:zho_VerbPhrase a rcxn:Construction ;
     rcxn:elementOf cx:lzh_Dooperationwithoperand1onoperand2construction ;
     rcxn:hasTitle "Verb Phrase" .
 
-rd:FernandezSantos_20260130_629471 a ns1:Study ;
-    ns1:Summary "Participants' accuracy on subject relative clauses is at ceiling only when the verb follows the relativizer. Accuracy decreases when the verb is in a clause-final position. Object relative clauses are not at ceiling, but are misinterpreted as subject relative clauses over 90% of the time when there is no object marker and the verb follows the relativizer. The presence of an object marker does not impact accuracy when the verb is clause-final." ;
-    ns1:dataRepository "https://osf.io/4x6pz/files/osfstorage" ;
-    ns1:publishedIn "Llompart, Fernández Santos & Dąbrowska (2024-10-10). Comprehension of object relatives in Spanish: the role of frequency and transparency in acquisition and adult grammar. 10.1515/cog-2024-0016" ;
-    ns1:relevantFor cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause ;
-    ns1:studyType ns1:behavioralExperiment .
+rd:FernandezSantos_20260130_629471 a ns2:Study ;
+    ns2:Summary "Participants' accuracy on subject relative clauses is at ceiling only when the verb follows the relativizer. Accuracy decreases when the verb is in a clause-final position. Object relative clauses are not at ceiling, but are misinterpreted as subject relative clauses over 90% of the time when there is no object marker and the verb follows the relativizer. The presence of an object marker does not impact accuracy when the verb is clause-final." ;
+    ns2:dataRepository "https://osf.io/4x6pz/files/osfstorage" ;
+    ns2:publishedIn "Llompart, Fernández Santos & Dąbrowska (2024-10-10). Comprehension of object relatives in Spanish: the role of frequency and transparency in acquisition and adult grammar. 10.1515/cog-2024-0016" ;
+    ns2:relevantFor cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause ;
+    ns2:studyType ns2:behavioralExperiment .
 
 cx:Noun a rcxn:Construction ;
     rcxn:elementOf cx:eng_AdjectiveAttributiveconstruction,
@@ -3651,6 +3777,13 @@ cx:eng_Keepacoolheadconstruction a rcxn:Construction ;
     rcxn:hasMetadata cx:eng_Keepacoolheadconstruction_MD ;
     rcxn:hasSlots cx:eng_Keepacoolheadconstruction_slots ;
     rcxn:hasTitle "Keep a cool head construction" .
+
+cx:eng_PrepositionalPhrasewithPLUSNP a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    rcxn:elementOf cx:engUsSpo_Hadituptoherewith,
+        cx:engUsSpo_Hadituptoherewithmesoconstruction ;
+    rcxn:hasMetadata cx:eng_PrepositionalPhrasewithPLUSNP_MD ;
+    rcxn:hasTitle "Prepositional Phrase (with + NP)" .
 
 cx:eng_ThisclosetoVingconstruction_1 a rcxn:SlotOptional ;
     rcxn:hasSyntacticFunction "Subject" .
@@ -3775,6 +3908,26 @@ cx:engLME_coolascolourconstruction a rcxn:Construction ;
     rcxn:hasMetadata cx:engLME_coolascolourconstruction_MD ;
     rcxn:hasSlots cx:engLME_coolascolourconstruction_slots ;
     rcxn:hasTitle "cool as colour construction" .
+
+cx:engUsSpo_Hadituptoherewith a rcxn:Construction ;
+    cx:hasExample cx:engUsSpo_Hadituptoherewith_Ex_A ;
+    cx:usesGesture cx:eng_ThroatCutGesture ;
+    rdfs:comment "The Throat Cut Gesture Positioned at the Head Level" ;
+    lg:partOfLanguage lg:engUsSpo ;
+    links:inheritsFrom cx:engUsSpo_Hadituptoherewithmesoconstruction ;
+    rcxn:hasConstructionMeaning cx:engUsSpo_Hadituptoherewith_Meaning ;
+    rcxn:hasMetadata cx:engUsSpo_Hadituptoherewith_MD ;
+    rcxn:hasSlots cx:engUsSpo_Hadituptoherewith_slots ;
+    rcxn:hasTitle "Had it up to here with" .
+
+cx:engUsSpo_Hadituptoherewithmesoconstruction a rcxn:Construction ;
+    cx:hasExample cx:engUsSpo_Hadituptoherewithmesoconstruction_Ex_A ;
+    lg:partOfLanguage lg:engUsSpo ;
+    links:inheritedBy cx:engUsSpo_Hadituptoherewith ;
+    rcxn:hasConstructionMeaning cx:engUsSpo_Hadituptoherewithmesoconstruction_Meaning ;
+    rcxn:hasMetadata cx:engUsSpo_Hadituptoherewithmesoconstruction_MD ;
+    rcxn:hasSlots cx:engUsSpo_Hadituptoherewithmesoconstruction_slots ;
+    rcxn:hasTitle "Had it up to here with (meso-construction)" .
 
 cx:eng_AdjectiveAttributiveconstruction a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
@@ -4026,8 +4179,8 @@ cx:engUsUkWr_EvaluativeAttributionConstruction a rcxn:Construction ;
     rcxn:hasTitle "Evaluative Attribution Construction" .
 
 cx:eng_coolconstruction_Sources a cx:Collection ;
-    cx:hasLiterature <file:///C:/Users/User/Documents/RCxn/instance/Submissions/www.english-corpora.org/bnc/>,
-        <file:///C:/Users/User/Documents/RCxn/instance/Submissions/www.english-corpora.org/coca/>,
+    cx:hasLiterature <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/www.english-corpora.org/bnc/>,
+        <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/www.english-corpora.org/coca/>,
         <https://www.dwds.de/wb/cool>,
         <https://www.oed.com/dictionary/cool_adj?tl=true> .
 
@@ -4113,7 +4266,7 @@ cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause a rcxn:Construction ;
     rcxn:hasMetadata cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_MD ;
     rcxn:hasSlots cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_slots ;
     rcxn:hasTitle "Potentially ambiguous object relative clause" ;
-    ns1:basedOnStudy rd:FernandezSantos_20260130_629471 .
+    ns2:basedOnStudy rd:FernandezSantos_20260130_629471 .
 
 cx:itaStoria_RelativeTopicShiftConstruction a rcxn:Construction ;
     cx:hasExample cx:itaStoria_RelativeTopicShiftConstruction_Ex_A,
@@ -4160,6 +4313,8 @@ cx:eng_NounPhrase a rcxn:Construction ;
     rcxn:elementOf cx:comePLUSnoisemannerofmovementVing,
         cx:engLME_AttributeConstructionAttrAdj,
         cx:engLME_GIVEOUTVerbParticleConstruction,
+        cx:engUsSpo_Hadituptoherewith,
+        cx:engUsSpo_Hadituptoherewithmesoconstruction,
         cx:engUsUkWr_EvaluativeAttributionConstruction,
         cx:eng_ditransitive_construction_obj_np ;
     rcxn:hasTitle "Noun Phrase" .

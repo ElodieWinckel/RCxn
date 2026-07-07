@@ -1,0 +1,67 @@
+@prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cx: <http://example.org/cx/> .
+@prefix dcterm: <http://purl.org/dc/terms/> .
+@prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
+@prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
+@prefix olia: <http://purl.org/olia/olia.owl#> .
+@prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+membr:Project_Iabdounane_F250218 rsrch:basedOn cx:engUsSpo_Hadituptoherewith .
+
+cx:engUsSpo_Hadituptoherewith_1 a rcxn:SlotObligatory ;
+    olia:hasSemanticRole olia:ExperiencerRole ;
+    rcxn:hasSlotForm cx:engUsSpo_Hadituptoherewith_1_Form ;
+    rcxn:hasSyntacticFunction "Subject" .
+
+cx:engUsSpo_Hadituptoherewith_1_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:eng_NounPhrase .
+
+cx:engUsSpo_Hadituptoherewith_2 a rcxn:SlotObligatory ;
+    rcxn:hasOtherSemanticContribution "Enough" ;
+    rcxn:hasSlotForm cx:engUsSpo_Hadituptoherewith_2_Form ;
+    rcxn:hasSyntacticFunction "Predicator" .
+
+cx:engUsSpo_Hadituptoherewith_2_Form a rcxn:SlotForm ;
+    rcxn:hasSurfaceForm "had it up to here" .
+
+cx:engUsSpo_Hadituptoherewith_3 a rcxn:SlotOptional ;
+    olia:hasSemanticRole olia:CauseRole ;
+    rcxn:hasSlotForm cx:engUsSpo_Hadituptoherewith_3_Form ;
+    rcxn:hasSyntacticFunction "Oblique complement" .
+
+cx:engUsSpo_Hadituptoherewith_3_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:eng_PrepositionalPhrasewithPLUSNP .
+
+cx:engUsSpo_Hadituptoherewith_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "All you do is turn away and sulk and [I]1 have [had it up to here]2 [with that behavior]3." ;
+    cx:hasText "All you do is turn away and sulk and I have had it up to here with that behavior." ;
+    RDFS:comment "https://gallo.case.edu/go/yas/0055/2015-06-02_1800_US_KNBC_Access_Hollywood_Live_1509-1515.mp4" .
+
+cx:engUsSpo_Hadituptoherewith_MD a rcxn:Metadata ;
+    dcterm:created "2026-07-07"^^xsd:date ;
+    rcxn:annotator membr:Iabdounane .
+
+cx:engUsSpo_Hadituptoherewith_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "[An experiencer]1 has reached their maximum tolerance level of [a negative stimulus]3 and cannot take more of it." .
+
+cx:engUsSpo_Hadituptoherewith_slots a rdf:Seq ;
+    rdf:_1 cx:engUsSpo_Hadituptoherewith_1 ;
+    rdf:_2 cx:engUsSpo_Hadituptoherewith_2 ;
+    rdf:_3 cx:engUsSpo_Hadituptoherewith_3 .
+
+cx:eng_NounPhrase rcxn:elementOf cx:engUsSpo_Hadituptoherewith .
+
+cx:eng_PrepositionalPhrasewithPLUSNP rcxn:elementOf cx:engUsSpo_Hadituptoherewith .
+
+cx:engUsSpo_Hadituptoherewith a rcxn:Construction ;
+    cx:hasExample cx:engUsSpo_Hadituptoherewith_Ex_A ;
+    RDFS:comment "The Throat Cut Gesture Positioned at the Head Level" ;
+    lg:partOfLanguage lg:engUsSpo ;
+    rcxn:hasConstructionMeaning cx:engUsSpo_Hadituptoherewith_Meaning ;
+    rcxn:hasMetadata cx:engUsSpo_Hadituptoherewith_MD ;
+    rcxn:hasSlots cx:engUsSpo_Hadituptoherewith_slots ;
+    rcxn:hasTitle "Had it up to here with" .
+
