@@ -5,7 +5,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 
 cx:eng_ChefskissGesturalConstruction a gest:GestureConstruction ;
-    gest:hasForm cx:eng_ThroatCutGesture_Form ;
+    gest:hasForm cx:eng_ChefskissGesturalConstruction_Form ;
     rcxn:hasMeaning cx:eng_ChefskissGesturalConstruction_Meaning ;
     lg:partOfLanguage lg:eng ;
     rcxn:hasTitle "Chef’s Kiss as a Gestural Construction" .

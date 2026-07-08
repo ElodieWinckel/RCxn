@@ -44,6 +44,8 @@ rsrch = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#")
 g.bind("rsrch", rsrch)
 lg = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#")
 g.bind("lg", lg)
+links = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#")
+g.bind("links", links)
 rd = Namespace("http://example.org/rd/") #TODO: is this really the name?
 g.bind("rd", rd)
 rdata = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rdata#") #TODO: is this really the name? create ontology

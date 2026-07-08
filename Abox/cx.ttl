@@ -2,11 +2,11 @@
 @prefix compcon: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/compcon#> .
 @prefix cx: <http://example.org/cx/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix gest: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/gest#> .
 @prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
 @prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#> .
 @prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
-@prefix ns1: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/gest#> .
-@prefix ns2: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rdata#> .
+@prefix ns1: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rdata#> .
 @prefix olia: <http://purl.org/olia/olia.owl#> .
 @prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
 @prefix rd: <http://example.org/rd/> .
@@ -151,9 +151,15 @@ cx:engLME_Transitiveconstruction_2_Form a rcxn:SlotForm ;
 cx:eng_CauseMotionconstruction_2_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_Verb .
 
-cx:eng_PhysicalHeight a ns1:GestureConstruction ;
-    ns1:hasForm cx:eng_PhysicalHeight_Form ;
-    ns1:hasPhases "1" ;
+cx:eng_ChefskissGesturalConstruction a gest:GestureConstruction ;
+    gest:hasForm cx:eng_ChefskissGesturalConstruction_Form ;
+    lg:partOfLanguage lg:eng ;
+    rcxn:hasMeaning cx:eng_ChefskissGesturalConstruction_Meaning ;
+    rcxn:hasTitle "Chef’s Kiss as a Gestural Construction" .
+
+cx:eng_PhysicalHeight a gest:GestureConstruction ;
+    gest:hasForm cx:eng_PhysicalHeight_Form ;
+    gest:hasPhases "1" ;
     lg:partOfLanguage lg:eng ;
     rcxn:hasMeaning cx:eng_PhysicalHeight_Meaning ;
     rcxn:hasTitle "Physical Height Gesture Construction" .
@@ -276,11 +282,11 @@ cx:Noun_MD a rcxn:Metadata ;
         membr:Weigelt,
         membr:Winckel .
 
-cx:SmallQuantityGestureConstruction a ns1:GestureConstruction ;
+cx:SmallQuantityGestureConstruction a gest:GestureConstruction ;
     cx:endsOnSlot cx:eng_ThisclosetoVingconstruction_6 ;
     cx:hasForm cx:SmallQuantityGestureConstruction_Form ;
     cx:stratsOnSlot cx:eng_ThisclosetoVingconstruction_1 ;
-    ns1:hasPhases "1" ;
+    gest:hasPhases "1" ;
     lg:partOfLanguage lg:eng ;
     rcxn:hasMeaning cx:SmallQuantityGestureConstruction_Meaning ;
     rcxn:hasTitle "Small Quantity Gesture Construction" .
@@ -2441,6 +2447,35 @@ cx:eng_CauseMotionconstruction_slots a rdf_ns:Seq ;
     rdf_ns:_3 cx:eng_CauseMotionconstruction_3 ;
     rdf_ns:_4 cx:eng_CauseMotionconstruction_4 .
 
+cx:eng_ChefskissGesturalConstruction_1 a gest:Phase ;
+    gest:handshape "All fingers are extended, touching at their tips." ;
+    gest:movement "Bringing fingers together." ;
+    gest:orientation "Fingers oriented upwards.",
+        "Palm is lateral." .
+
+cx:eng_ChefskissGesturalConstruction_2 a gest:Phase ;
+    gest:handshape "All fingers are extended, touching at their tips." ;
+    gest:movement "Kissing the tips of the fingers." ;
+    gest:orientation "Fingers oriented towards the speaker’s mouth.",
+        "Palm is vertical." .
+
+cx:eng_ChefskissGesturalConstruction_3 a gest:Phase ;
+    gest:handshape "All fingers are extended, and their tips are brought away from each other." ;
+    gest:movement "Releasing the fingers away from mouth." ;
+    gest:orientation "Fingers oriented upwards.",
+        "Palm is lateral." .
+
+cx:eng_ChefskissGesturalConstruction_Form a rdf_ns:Seq ;
+    rdf_ns:_1 cx:eng_ChefskissGesturalConstruction_1 ;
+    rdf_ns:_2 cx:eng_ChefskissGesturalConstruction_2 ;
+    rdf_ns:_3 cx:eng_ChefskissGesturalConstruction_3 ;
+    gest:handedness gest:OneHand ;
+    gest:position "Central space at mouth level." ;
+    gest:sound "Kissing sound" ;
+    gest:timing "Usually no longer than 1 second." .
+
+cx:eng_ChefskissGesturalConstruction_Meaning gest:semanticProperty "Something or someone is perfect or excellent." .
+
 cx:eng_GenitiveNPConstruction_1 a rcxn:SlotObligatory ;
     olia:hasSemanticRole olia:PossessorRole ;
     rdfs:comment "[1] president’s state’s government’s week’s party’s court’s night’s ...",
@@ -2536,16 +2571,16 @@ cx:eng_Keepacoolheadconstruction_slots a rdf_ns:Seq ;
     rdf_ns:_3 cx:eng_Keepacoolheadconstruction_3 ;
     rdf_ns:_4 cx:eng_Keepacoolheadconstruction_4 .
 
-cx:eng_PhysicalHeight_Form ns1:handedness ns1:OneHand ;
-    ns1:handshape "The index, middle, ring and little fingers are fully extended and together.",
+cx:eng_PhysicalHeight_Form gest:handedness gest:OneHand ;
+    gest:handshape "The index, middle, ring and little fingers are fully extended and together.",
         "The thumb is either tucked or relaxed alongside the hand." ;
-    ns1:movement "Upward movement until the resting position." ;
-    ns1:orientation "Fingers oriented toward the speaker's center line.",
+    gest:movement "Upward movement until the resting position." ;
+    gest:orientation "Fingers oriented toward the speaker's center line.",
         "Palm is vertical." ;
-    ns1:position "Position schema (context-dependent)." ;
-    ns1:timing "Usually for the entire duration of the co-occurring verbal pattern." .
+    gest:position "Position schema (context-dependent)." ;
+    gest:timing "Usually for the entire duration of the co-occurring verbal pattern." .
 
-cx:eng_PhysicalHeight_Meaning ns1:semanticProperty "Vertical physical dimension of the referent relative to the ground.",
+cx:eng_PhysicalHeight_Meaning gest:semanticProperty "Vertical physical dimension of the referent relative to the ground.",
         "visual representation of the height or size of the referent." .
 
 cx:eng_PossessivePronoun a rcxn:Construction ;
@@ -2622,25 +2657,26 @@ cx:eng_ThisclosetoVingconstruction_slots a rdf_ns:Seq ;
     rdf_ns:_2 cx:eng_ThisclosetoVingconstruction_2 ;
     rdf_ns:_3 cx:eng_ThisclosetoVingconstruction_6 .
 
-cx:eng_ThroatCutGesture a ns1:GestureConstruction ;
-    ns1:hasForm cx:eng_ThroatCutGesture_Form ;
-    ns1:hasPhases "1" ;
+cx:eng_ThroatCutGesture a gest:GestureConstruction ;
+    gest:hasForm cx:eng_ThroatCutGesture_Form ;
+    gest:hasPhases "1" ;
     lg:partOfLanguage lg:eng ;
+    links:elementOf cx:engUsSpo_Hadituptoherewith ;
     rcxn:hasMeaning cx:eng_ThroatCutGesture_Meaning ;
     rcxn:hasTitle "Throat Cut Gesture Construction" .
 
-cx:eng_ThroatCutGesture_Form ns1:handedness ns1:OneHand ;
-    ns1:handshape "The index, middle, ring and little fingers are fully extended and together.",
+cx:eng_ThroatCutGesture_Form gest:handedness gest:OneHand ;
+    gest:handshape "The index, middle, ring and little fingers are fully extended and together.",
         "The thumb is either tucked or relaxed alongside the hand." ;
-    ns1:movement "Horizontal side-to-side motion." ;
-    ns1:orientation "Fingers oriented toward the speaker's neck.",
+    gest:movement "Horizontal side-to-side motion." ;
+    gest:orientation "Fingers oriented toward the speaker's neck.",
         "Palm is vertical." ;
-    ns1:position "At the neck level." ;
-    ns1:timing "Context-dependent." .
+    gest:position "At the neck level." ;
+    gest:timing "Context-dependent." .
 
-cx:eng_ThroatCutGesture_Meaning ns1:discourseFunctionalProperty "Turn management" ;
-    ns1:pragmaticProperty "Directive, request, warning, or, framing." ;
-    ns1:semanticProperty "Putting an end to something" .
+cx:eng_ThroatCutGesture_Meaning gest:discourseFunctionalProperty "Turn management" ;
+    gest:pragmaticProperty "Directive, request, warning, or, framing." ;
+    gest:semanticProperty "Putting an end to something" .
 
 cx:eng_VerbING a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
@@ -3667,12 +3703,12 @@ cx:zho_VerbPhrase a rcxn:Construction ;
     rcxn:elementOf cx:lzh_Dooperationwithoperand1onoperand2construction ;
     rcxn:hasTitle "Verb Phrase" .
 
-rd:FernandezSantos_20260130_629471 a ns2:Study ;
-    ns2:Summary "Participants' accuracy on subject relative clauses is at ceiling only when the verb follows the relativizer. Accuracy decreases when the verb is in a clause-final position. Object relative clauses are not at ceiling, but are misinterpreted as subject relative clauses over 90% of the time when there is no object marker and the verb follows the relativizer. The presence of an object marker does not impact accuracy when the verb is clause-final." ;
-    ns2:dataRepository "https://osf.io/4x6pz/files/osfstorage" ;
-    ns2:publishedIn "Llompart, Fernández Santos & Dąbrowska (2024-10-10). Comprehension of object relatives in Spanish: the role of frequency and transparency in acquisition and adult grammar. 10.1515/cog-2024-0016" ;
-    ns2:relevantFor cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause ;
-    ns2:studyType ns2:behavioralExperiment .
+rd:FernandezSantos_20260130_629471 a ns1:Study ;
+    ns1:Summary "Participants' accuracy on subject relative clauses is at ceiling only when the verb follows the relativizer. Accuracy decreases when the verb is in a clause-final position. Object relative clauses are not at ceiling, but are misinterpreted as subject relative clauses over 90% of the time when there is no object marker and the verb follows the relativizer. The presence of an object marker does not impact accuracy when the verb is clause-final." ;
+    ns1:dataRepository "https://osf.io/4x6pz/files/osfstorage" ;
+    ns1:publishedIn "Llompart, Fernández Santos & Dąbrowska (2024-10-10). Comprehension of object relatives in Spanish: the role of frequency and transparency in acquisition and adult grammar. 10.1515/cog-2024-0016" ;
+    ns1:relevantFor cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause ;
+    ns1:studyType ns1:behavioralExperiment .
 
 cx:Noun a rcxn:Construction ;
     rcxn:elementOf cx:eng_AdjectiveAttributiveconstruction,
@@ -3909,17 +3945,6 @@ cx:engLME_coolascolourconstruction a rcxn:Construction ;
     rcxn:hasSlots cx:engLME_coolascolourconstruction_slots ;
     rcxn:hasTitle "cool as colour construction" .
 
-cx:engUsSpo_Hadituptoherewith a rcxn:Construction ;
-    cx:hasExample cx:engUsSpo_Hadituptoherewith_Ex_A ;
-    cx:usesGesture cx:eng_ThroatCutGesture ;
-    rdfs:comment "The Throat Cut Gesture Positioned at the Head Level" ;
-    lg:partOfLanguage lg:engUsSpo ;
-    links:inheritsFrom cx:engUsSpo_Hadituptoherewithmesoconstruction ;
-    rcxn:hasConstructionMeaning cx:engUsSpo_Hadituptoherewith_Meaning ;
-    rcxn:hasMetadata cx:engUsSpo_Hadituptoherewith_MD ;
-    rcxn:hasSlots cx:engUsSpo_Hadituptoherewith_slots ;
-    rcxn:hasTitle "Had it up to here with" .
-
 cx:engUsSpo_Hadituptoherewithmesoconstruction a rcxn:Construction ;
     cx:hasExample cx:engUsSpo_Hadituptoherewithmesoconstruction_Ex_A ;
     lg:partOfLanguage lg:engUsSpo ;
@@ -4059,6 +4084,17 @@ cx:engLME_coolasemotionconstruction a rcxn:Construction ;
     rcxn:hasMetadata cx:engLME_coolasemotionconstruction_MD ;
     rcxn:hasSlots cx:engLME_coolasemotionconstruction_slots ;
     rcxn:hasTitle "cool as emotion construction" .
+
+cx:engUsSpo_Hadituptoherewith a rcxn:Construction ;
+    cx:hasExample cx:engUsSpo_Hadituptoherewith_Ex_A ;
+    rdfs:comment "The Throat Cut Gesture Positioned at the Head Level" ;
+    gest:usesGesture cx:eng_ThroatCutGesture ;
+    lg:partOfLanguage lg:engUsSpo ;
+    links:inheritsFrom cx:engUsSpo_Hadituptoherewithmesoconstruction ;
+    rcxn:hasConstructionMeaning cx:engUsSpo_Hadituptoherewith_Meaning ;
+    rcxn:hasMetadata cx:engUsSpo_Hadituptoherewith_MD ;
+    rcxn:hasSlots cx:engUsSpo_Hadituptoherewith_slots ;
+    rcxn:hasTitle "Had it up to here with" .
 
 cx:eng_ThisclosetoVingconstruction a rcxn:Construction ;
     cx:hasExample cx:eng_ThisclosetoVingconstruction_Ex_A ;
@@ -4266,7 +4302,7 @@ cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause a rcxn:Construction ;
     rcxn:hasMetadata cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_MD ;
     rcxn:hasSlots cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_slots ;
     rcxn:hasTitle "Potentially ambiguous object relative clause" ;
-    ns2:basedOnStudy rd:FernandezSantos_20260130_629471 .
+    ns1:basedOnStudy rd:FernandezSantos_20260130_629471 .
 
 cx:itaStoria_RelativeTopicShiftConstruction a rcxn:Construction ;
     cx:hasExample cx:itaStoria_RelativeTopicShiftConstruction_Ex_A,

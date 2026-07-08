@@ -35,6 +35,11 @@ g.bind("compcon", compcon)
 graph_cx.bind("compcon", compcon)
 graph_membr.bind("compcon", compcon)
 
+gest = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/gest#")
+g.bind("gest", gest)
+graph_cx.bind("gest", gest)
+graph_membr.bind("gest", gest)
+
 lg = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#")
 g.bind("lg", lg)
 graph_cx.bind("lg", lg)
@@ -317,6 +322,10 @@ for prop in properties_to_mirror:
 # If construction A has a metaphorical extension B, then B is a metaphorical extension of A
 for subj, obj in g.subject_objects(links.metaphoricalLink):
         g.add((obj, links.isMetaphoricalExtensionOf, subj))
+
+# If construction A uses the gesture construction B, then B is an element of A
+for subj, obj in g.subject_objects(gest.usesGesture):
+        g.add((obj, links.elementOf, subj))
 ###############################################################################
 # We now distinguish between the IRI that belong to cx.ttl, membr.ttl and references.ttl
 ###############################################################################

@@ -1,6 +1,7 @@
 @prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix cx: <http://example.org/cx/> .
 @prefix dcterm: <http://purl.org/dc/terms/> .
+@prefix gest: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/gest#> .
 @prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
 @prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#> .
 @prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
@@ -65,6 +66,6 @@ cx:engUsSpo_Hadituptoherewith a rcxn:Construction ;
     rcxn:hasMetadata cx:engUsSpo_Hadituptoherewith_MD ;
     rcxn:hasSlots cx:engUsSpo_Hadituptoherewith_slots ;
     rcxn:hasTitle "Had it up to here with" ;
-    cx:usesGesture cx:eng_ThroatCutGesture ;
+    gest:usesGesture cx:eng_ThroatCutGesture ;
     links:inheritsFrom cx:engUsSpo_Hadituptoherewithmesoconstruction .
 

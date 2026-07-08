@@ -60,7 +60,26 @@
     </tbody>
 </table>
 
-
+    {% if links %}
+    <h2>Links</h2>
+    <table border="1">
+        {% for triple in links %}
+            <tr>
+                <td>{{ triple.property }}</td>
+                <td>
+                    {% if triple.href %}
+                        <a href="{{ url_for('app_entries.construction_detail', uri=triple.href) }}" target="_blank">
+                            {{triple.object}}
+                        </a>
+                    {% else %}
+                        {{ triple.object }}
+                    {% endif %}
+                </td>
+                <td>{{ triple.lang }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
 
     <p>
     <a href="{{ url_for('app_entries.list_view') }}">Back to Constructions List</a>

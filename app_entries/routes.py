@@ -11,6 +11,7 @@ from .graph_loader import (
     cx,
     dc,
     dcterm,
+    links,
     olia,
     rcxn,
     rsrch,
@@ -206,10 +207,8 @@ def identify_phase_triples(slots_uri):
 
     for slot_uri in unique_slot_uri:
         phase_number = "Phase " + slot_uri[-1]
-        print(phase_number)
 
         for predicate, obj in g.predicate_objects(subject=slot_uri):
-            print(predicate)
             elements.append({
                 "phase": phase_number,
                 "property": get_label_or_iri(predicate, g, ont),
@@ -410,10 +409,14 @@ def construction_detail(uri):
         colloprofiles = colloprofiles + nested_colloprofiles
 
     # Collect gesture constructions used
-    gesture_title = ""
+    gesture_title = []
     for gesture_uri in g.objects(subject=entry_uri, predicate=cx.usesGesture):
-        for title in g.objects(subject=gesture_uri, predicate=rcxn.hasTitle):
-            gesture_title = str(title)
+        for obj in g.objects(subject=gesture_uri, predicate=rcxn.hasTitle):
+            gesture_title.append({
+                'title': str(obj),
+                'uri': re.sub(prefixes, "", str(gesture_uri)),
+            })
+
     triples[:] = [item for item in triples if item['property'] != "usesGesture"]
 
     # Collect triples for examples
@@ -587,7 +590,6 @@ def gesture_construction_detail(uri):
     gesture = []
 
     phase_names, phase_table = identify_phase_triples(gesture_form_uri)
-    print(phase_names)
 
     for pred, obj in g.predicate_objects(subject=gesture_form_uri):
         if pred.startswith(str(RDF)) and pred[len(str(RDF))] == "_":  # Check for rdf:_n
@@ -607,12 +609,26 @@ def gesture_construction_detail(uri):
             'object': get_label_or_iri(obj, g, ont),
         })
 
+    # Collect links (elementOf)
+    list_of_links = []
+    for uri in g.objects(subject=gesture_uri, predicate=links.elementOf):
+        object_value = get_label_or_iri(uri, g, ont)
+        for title in g.objects(subject=uri, predicate=rcxn.hasTitle):
+            lang_uri = g.value(subject=uri, predicate=lg.partOfLanguage)
+            list_of_links.append({
+                'property': get_label_or_iri(links.elementOf, g, ont),
+                'object': get_label_or_iri(title, g, ont),
+                'href': object_value,
+                'lang': get_label_or_iri(lang_uri, g, ont),
+            })
+
     # Fetch the title to display
     title = g.value(gesture_uri, rcxn.hasTitle)
 
     return render_template("app_entries/gest_construction.html",
                            title=title,
                            gesture=gesture,
+                           links = list_of_links,
                            phase_names=phase_names,
                            phase_table=phase_table)
 

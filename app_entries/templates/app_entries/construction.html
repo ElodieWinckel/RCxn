@@ -30,11 +30,17 @@
 
 <!-- Display an arrow with a gesture -->
 {% if gesture_title %}
+{% for gesture in gesture_title %}
     <div id="arrow-container" style="width: 100%; position: relative; margin-top: 10px; height: 40px;">
         <div id="arrow-line" style="height: 2px; background-color: #000; position: absolute; top: 50%; left: 15%; right: 0;"></div>
         <div id="arrow-head" style="width: 0; height: 0; border-top: 8px solid transparent; border-bottom: 8px solid transparent; border-left: 12px solid #000; position: absolute; top: 50%; right: 0; transform: translateY(-50%);"></div>
-        <div id="arrow-text" style="position: absolute; top: 70%; left: 50%; transform: translateX(-50%); text-align: center; width: 85%; font-weight: bold;">{{gesture_title}}</div>
+        <div id="arrow-text" style="position: absolute; top: 70%; left: 50%; transform: translateX(-50%); text-align: center; width: 85%; font-weight: bold;">
+            <a href="{{ url_for('app_entries.gesture_construction_detail', uri=gesture.uri) }}" target="_blank">
+                {{gesture.title}}
+            </a>
+        </div>
     </div>
+{% endfor %}
 {% endif %}
 
 <script>
