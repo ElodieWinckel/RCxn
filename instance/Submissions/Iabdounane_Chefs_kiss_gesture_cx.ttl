@@ -1,14 +1,18 @@
 @prefix cx: <http://example.org/cx/> .
+@prefix dcterm: <http://purl.org/dc/terms/> .
 @prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
 @prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
 @prefix gest: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/gest#> .
+@prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 cx:eng_ChefskissGesturalConstruction a gest:GestureConstruction ;
     gest:hasForm cx:eng_ChefskissGesturalConstruction_Form ;
     rcxn:hasMeaning cx:eng_ChefskissGesturalConstruction_Meaning ;
     lg:partOfLanguage lg:eng ;
-    rcxn:hasTitle "Chef’s Kiss as a Gestural Construction" .
+    rcxn:hasTitle "Chef’s Kiss as a Gestural Construction" ;
+    rcxn:hasMetadata cx:eng_ChefskissGesturalConstruction_MD .
 
 cx:eng_ChefskissGesturalConstruction_Form a rdf:Seq ;
     gest:timing "Usually no longer than 1 second." ;
@@ -35,3 +39,7 @@ cx:eng_ChefskissGesturalConstruction_3  a gest:Phase ;
     gest:orientation "Palm is lateral." , "Fingers oriented upwards." .
 
 cx:eng_ChefskissGesturalConstruction_Meaning gest:semanticProperty "Something or someone is perfect or excellent." .
+
+cx:eng_ChefskissGesturalConstruction_MD a rcxn:Metadata ;
+    cx:annotator membr:Iabdounane ;
+    dcterm:created "2026-07-07"^^xsd:date .

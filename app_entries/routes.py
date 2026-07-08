@@ -622,6 +622,26 @@ def gesture_construction_detail(uri):
                 'lang': get_label_or_iri(lang_uri, g, ont),
             })
 
+    # Collect triples for metadata
+    metadata = []
+    for predicate, obj in g.predicate_objects(subject=metadata_uri):
+        if str(predicate) == "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#annotator":
+            given = g.value(subject=obj, predicate=FOAF.givenName)
+            family = g.value(subject=obj, predicate=FOAF.familyName)
+            homepage = g.value(subject=obj, predicate=FOAF.homepage)
+            metadata.append({
+                'property': get_label_or_iri(predicate, g, ont),
+                'given': get_label_or_iri(given, g, ont),
+                'family': get_label_or_iri(family, g, ont),
+                'homepage': get_label_or_iri(homepage, g, ont),
+            })
+        elif str(predicate) != "http://www.w3.org/1999/02/22-rdf-syntax-ns#type":
+            metadata.append({
+                'property': get_label_or_iri(predicate, g, ont),
+                'object': get_label_or_iri(obj, g, ont),
+            })
+    metadata[:] = [item for item in metadata if item['property'] != "hasSources"]  # resources are delt with separately (see below "collect references")
+
     # Fetch the title to display
     title = g.value(gesture_uri, rcxn.hasTitle)
 
@@ -630,7 +650,8 @@ def gesture_construction_detail(uri):
                            gesture=gesture,
                            links = list_of_links,
                            phase_names=phase_names,
-                           phase_table=phase_table)
+                           phase_table=phase_table,
+                           metadata=metadata)
 
 
 

@@ -81,6 +81,31 @@
     </table>
     {% endif %}
 
+    <h2>Metadata</h2>
+    <table border="1">
+        {% for triple in metadata %}
+            <tr>
+                <th>{{ triple.property }}</th>
+                <td>{% if triple.homepage %}<a href="{{ triple.homepage }}" target="_blank">{{ triple.given }} {{ triple.family }}</a> {% endif %}
+                    {% if triple.url %}<a href="{{ triple.url }}" target="_blank">{{ triple.url }}</a> {% endif %}
+                    {% if not triple.homepage %} {{ triple.object }} {% endif %}
+                </td>
+            </tr>
+        {% endfor %}
+        {% for ref in references %}
+            <tr>
+                <th>References</th>
+                <td class="reference">
+                    {{ ref.authors }}
+                    {% if not ref.authors %} {{ ref.editors }} {% if not ref.editors %} {{ ref.source }} {% endif %} {% endif %}
+                    {% if ref.year %} ({{ ref.year }}). {% endif %}
+                    <i>{{ ref.title }}</i>.
+                    {% if ref.doi %}<a href="{{ ref.doi_href }}" target="_blank">{{ ref.doi }}</a> {% endif %}
+                </td>
+            </tr>
+    {% endfor %}
+    </table>
+
     <p>
     <a href="{{ url_for('app_entries.list_view') }}">Back to Constructions List</a>
     </p>

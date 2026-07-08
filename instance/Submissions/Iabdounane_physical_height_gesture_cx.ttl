@@ -1,14 +1,19 @@
 @prefix cx: <http://example.org/cx/> .
+@prefix dcterm: <http://purl.org/dc/terms/> .
 @prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
 @prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
 @prefix gest: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/gest#> .
+@prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 cx:eng_PhysicalHeight a gest:GestureConstruction ;
     gest:hasForm cx:eng_PhysicalHeight_Form ;
     gest:hasPhases "1" ;
     lg:partOfLanguage lg:eng ;
     rcxn:hasMeaning cx:eng_PhysicalHeight_Meaning ;
-    rcxn:hasTitle "Physical Height Gesture Construction" .
+    rcxn:hasTitle "Physical Height Gesture Construction" ;
+    rcxn:hasMetadata cx:eng_PhysicalHeight_MD .
 
 cx:eng_PhysicalHeight_Form gest:timing "Usually for the entire duration of the co-occurring verbal pattern." ;
     gest:handedness gest:OneHand ;
@@ -21,3 +26,6 @@ cx:eng_PhysicalHeight_Form gest:timing "Usually for the entire duration of the c
 cx:eng_PhysicalHeight_Meaning gest:semanticProperty "Vertical physical dimension of the referent relative to the ground." ,
         "visual representation of the height or size of the referent." .
 
+cx:eng_PhysicalHeight_MD a rcxn:Metadata ;
+    cx:annotator membr:Iabdounane ;
+    dcterm:created "2026-07-07"^^xsd:date .

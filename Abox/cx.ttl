@@ -155,6 +155,7 @@ cx:eng_ChefskissGesturalConstruction a gest:GestureConstruction ;
     gest:hasForm cx:eng_ChefskissGesturalConstruction_Form ;
     lg:partOfLanguage lg:eng ;
     rcxn:hasMeaning cx:eng_ChefskissGesturalConstruction_Meaning ;
+    rcxn:hasMetadata cx:eng_ChefskissGesturalConstruction_MD ;
     rcxn:hasTitle "Chef’s Kiss as a Gestural Construction" .
 
 cx:eng_PhysicalHeight a gest:GestureConstruction ;
@@ -162,6 +163,7 @@ cx:eng_PhysicalHeight a gest:GestureConstruction ;
     gest:hasPhases "1" ;
     lg:partOfLanguage lg:eng ;
     rcxn:hasMeaning cx:eng_PhysicalHeight_Meaning ;
+    rcxn:hasMetadata cx:eng_PhysicalHeight_MD ;
     rcxn:hasTitle "Physical Height Gesture Construction" .
 
 cx:eng_caused_motion_construction_ppto links:sameFunctionDifferentForm cx:eng_ditransitive_construction_obj_np .
@@ -289,6 +291,7 @@ cx:SmallQuantityGestureConstruction a gest:GestureConstruction ;
     gest:hasPhases "1" ;
     lg:partOfLanguage lg:eng ;
     rcxn:hasMeaning cx:SmallQuantityGestureConstruction_Meaning ;
+    rcxn:hasMetadata cx:SmallQuantityGestureConstruction_MD ;
     rcxn:hasTitle "Small Quantity Gesture Construction" .
 
 cx:SmallQuantityGestureConstruction_Form cx:handedness cx:OneHand ;
@@ -298,6 +301,10 @@ cx:SmallQuantityGestureConstruction_Form cx:handedness cx:OneHand ;
     cx:orientation "Palm Lateral." ;
     cx:position "Central space or at face level." ;
     cx:timing "Usually for the entire duration of the co-occurring verbal construction." .
+
+cx:SmallQuantityGestureConstruction_MD a rcxn:Metadata ;
+    cx:annotator membr:Iabdounane ;
+    dcterms:created "2026-07-07"^^xsd:date .
 
 cx:SmallQuantityGestureConstruction_Meaning cx:pragmaticProperty "Affective/evaluative framing.",
         "Foregrounding the small quantity of the referent." ;
@@ -2474,6 +2481,10 @@ cx:eng_ChefskissGesturalConstruction_Form a rdf_ns:Seq ;
     gest:sound "Kissing sound" ;
     gest:timing "Usually no longer than 1 second." .
 
+cx:eng_ChefskissGesturalConstruction_MD a rcxn:Metadata ;
+    cx:annotator membr:Iabdounane ;
+    dcterms:created "2026-07-07"^^xsd:date .
+
 cx:eng_ChefskissGesturalConstruction_Meaning gest:semanticProperty "Something or someone is perfect or excellent." .
 
 cx:eng_GenitiveNPConstruction_1 a rcxn:SlotObligatory ;
@@ -2580,6 +2591,10 @@ cx:eng_PhysicalHeight_Form gest:handedness gest:OneHand ;
     gest:position "Position schema (context-dependent)." ;
     gest:timing "Usually for the entire duration of the co-occurring verbal pattern." .
 
+cx:eng_PhysicalHeight_MD a rcxn:Metadata ;
+    cx:annotator membr:Iabdounane ;
+    dcterms:created "2026-07-07"^^xsd:date .
+
 cx:eng_PhysicalHeight_Meaning gest:semanticProperty "Vertical physical dimension of the referent relative to the ground.",
         "visual representation of the height or size of the referent." .
 
@@ -2663,6 +2678,7 @@ cx:eng_ThroatCutGesture a gest:GestureConstruction ;
     lg:partOfLanguage lg:eng ;
     links:elementOf cx:engUsSpo_Hadituptoherewith ;
     rcxn:hasMeaning cx:eng_ThroatCutGesture_Meaning ;
+    rcxn:hasMetadata cx:eng_ThroatCutGesture_MD ;
     rcxn:hasTitle "Throat Cut Gesture Construction" .
 
 cx:eng_ThroatCutGesture_Form gest:handedness gest:OneHand ;
@@ -2673,6 +2689,10 @@ cx:eng_ThroatCutGesture_Form gest:handedness gest:OneHand ;
         "Palm is vertical." ;
     gest:position "At the neck level." ;
     gest:timing "Context-dependent." .
+
+cx:eng_ThroatCutGesture_MD a rcxn:Metadata ;
+    cx:annotator membr:Iabdounane ;
+    dcterms:created "2026-07-07"^^xsd:date .
 
 cx:eng_ThroatCutGesture_Meaning gest:discourseFunctionalProperty "Turn management" ;
     gest:pragmaticProperty "Directive, request, warning, or, framing." ;
