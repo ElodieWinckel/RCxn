@@ -348,9 +348,13 @@ membr:Project_Iabdounane a rsrch:Project ;
 
 membr:Project_Iabdounane_F250218 a rsrch:Finding ;
     rdfs:label "The verbal form “this close to V-ing” and the close index finger - thumb gesture co-occur 93% of the time. The two forms are likely entrenched together as a single unit, thus making it one formal multimodal unit.\r The construction is multimodal." ;
-    rsrch:basedOn cx:engUsSpo_Hadituptoherewith,
+    rsrch:basedOn cx:SmallQuantityGestureConstruction,
+        cx:engUsSpo_Hadituptoherewith,
         cx:engUsSpo_Hadituptoherewithmesoconstruction,
-        cx:eng_ThisclosetoVingconstruction .
+        cx:eng_ChefskissGesturalConstruction,
+        cx:eng_PhysicalHeight,
+        cx:eng_ThisclosetoVingconstruction,
+        cx:eng_ThroatCutGesture .
 
 membr:Project_Immertreu a rsrch:Project ;
     rsrch:projectName "Multimodal cognitive maps for cross-domain constructional networks"@en .

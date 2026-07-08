@@ -5,6 +5,7 @@
 @prefix gest: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/gest#> .
 @prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 cx:eng_ThroatCutGesture a gest:GestureConstruction ;
@@ -30,3 +31,5 @@ cx:eng_ThroatCutGesture_Meaning gest:semanticProperty "Putting an end to somethi
 cx:eng_ThroatCutGesture_MD a rcxn:Metadata ;
     cx:annotator membr:Iabdounane ;
     dcterm:created "2026-07-07"^^xsd:date .
+
+membr:Project_Iabdounane_F250218 rsrch:basedOn cx:eng_ThroatCutGesture .

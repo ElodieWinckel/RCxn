@@ -5,6 +5,7 @@
 @prefix gest: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/gest#> .
 @prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 cx:eng_ThisclosetoVingconstruction cx:usesGesture cx:SmallQuantityGestureConstruction .
@@ -34,3 +35,5 @@ cx:SmallQuantityGestureConstruction_Meaning cx:pragmaticProperty "Affective/eval
 cx:SmallQuantityGestureConstruction_MD a rcxn:Metadata ;
     cx:annotator membr:Iabdounane ;
     dcterm:created "2026-07-07"^^xsd:date .
+
+membr:Project_Iabdounane_F250218 rsrch:basedOn cx:SmallQuantityGestureConstruction .
