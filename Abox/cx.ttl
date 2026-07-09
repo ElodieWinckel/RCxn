@@ -290,6 +290,7 @@ cx:SmallQuantityGestureConstruction a gest:GestureConstruction ;
     cx:stratsOnSlot cx:eng_ThisclosetoVingconstruction_1 ;
     gest:hasPhases "1" ;
     lg:partOfLanguage lg:eng ;
+    links:elementOf cx:eng_ThisclosetoVingconstruction ;
     rcxn:hasMeaning cx:SmallQuantityGestureConstruction_Meaning ;
     rcxn:hasMetadata cx:SmallQuantityGestureConstruction_MD ;
     rcxn:hasTitle "Small Quantity Gesture Construction" .
@@ -2678,7 +2679,6 @@ cx:eng_ThroatCutGesture a gest:GestureConstruction ;
     gest:hasForm cx:eng_ThroatCutGesture_Form ;
     gest:hasPhases "1" ;
     lg:partOfLanguage lg:eng ;
-    links:elementOf cx:engUsSpo_Hadituptoherewith ;
     rcxn:hasMeaning cx:eng_ThroatCutGesture_Meaning ;
     rcxn:hasMetadata cx:eng_ThroatCutGesture_MD ;
     rcxn:hasTitle "Throat Cut Gesture Construction" .
@@ -3957,6 +3957,17 @@ cx:engLME_coolascolourconstruction a rcxn:Construction ;
     rcxn:hasSlots cx:engLME_coolascolourconstruction_slots ;
     rcxn:hasTitle "cool as colour construction" .
 
+cx:engUsSpo_Hadituptoherewith a rcxn:Construction ;
+    cx:hasExample cx:engUsSpo_Hadituptoherewith_Ex_A ;
+    rdfs:comment "The Throat Cut Gesture Positioned at the Head Level" ;
+    gest:usesGesture cx:eng_ThroatCutGesture ;
+    lg:partOfLanguage lg:engUsSpo ;
+    links:inheritsFrom cx:engUsSpo_Hadituptoherewithmesoconstruction ;
+    rcxn:hasConstructionMeaning cx:engUsSpo_Hadituptoherewith_Meaning ;
+    rcxn:hasMetadata cx:engUsSpo_Hadituptoherewith_MD ;
+    rcxn:hasSlots cx:engUsSpo_Hadituptoherewith_slots ;
+    rcxn:hasTitle "Had it up to here with" .
+
 cx:engUsSpo_Hadituptoherewithmesoconstruction a rcxn:Construction ;
     cx:hasExample cx:engUsSpo_Hadituptoherewithmesoconstruction_Ex_A ;
     lg:partOfLanguage lg:engUsSpo ;
@@ -4110,26 +4121,6 @@ cx:engLME_coolasemotionconstruction a rcxn:Construction ;
     rcxn:hasSlots cx:engLME_coolasemotionconstruction_slots ;
     rcxn:hasTitle "cool as emotion construction" .
 
-cx:engUsSpo_Hadituptoherewith a rcxn:Construction ;
-    cx:hasExample cx:engUsSpo_Hadituptoherewith_Ex_A ;
-    rdfs:comment "The Throat Cut Gesture Positioned at the Head Level" ;
-    gest:usesGesture cx:eng_ThroatCutGesture ;
-    lg:partOfLanguage lg:engUsSpo ;
-    links:inheritsFrom cx:engUsSpo_Hadituptoherewithmesoconstruction ;
-    rcxn:hasConstructionMeaning cx:engUsSpo_Hadituptoherewith_Meaning ;
-    rcxn:hasMetadata cx:engUsSpo_Hadituptoherewith_MD ;
-    rcxn:hasSlots cx:engUsSpo_Hadituptoherewith_slots ;
-    rcxn:hasTitle "Had it up to here with" .
-
-cx:eng_ThisclosetoVingconstruction a rcxn:Construction ;
-    cx:hasExample cx:eng_ThisclosetoVingconstruction_Ex_A ;
-    gest:hasGesture cx:eng_ThisclosetoVingconstruction_Gest ;
-    lg:partOfLanguage lg:engUsSpo ;
-    rcxn:hasConstructionMeaning cx:eng_ThisclosetoVingconstruction_Meaning ;
-    rcxn:hasMetadata cx:eng_ThisclosetoVingconstruction_MD ;
-    rcxn:hasSlots cx:eng_ThisclosetoVingconstruction_slots ;
-    rcxn:hasTitle "This close to V-ing construction" .
-
 cx:eng_cool a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
     rcxn:elementOf cx:engInf_coolasadmirableconstruction,
@@ -4166,6 +4157,15 @@ cx:eng_Adjective a rcxn:Construction ;
         cx:eng_coolconstruction ;
     rcxn:hasMetadata cx:eng_Adjective_MD ;
     rcxn:hasTitle "Adjective" .
+
+cx:eng_ThisclosetoVingconstruction a rcxn:Construction ;
+    cx:hasExample cx:eng_ThisclosetoVingconstruction_Ex_A ;
+    gest:hasGesture cx:eng_ThisclosetoVingconstruction_Gest ;
+    lg:partOfLanguage lg:engUsSpo ;
+    rcxn:hasConstructionMeaning cx:eng_ThisclosetoVingconstruction_Meaning ;
+    rcxn:hasMetadata cx:eng_ThisclosetoVingconstruction_MD ;
+    rcxn:hasSlots cx:eng_ThisclosetoVingconstruction_slots ;
+    rcxn:hasTitle "This close to V-ing construction" .
 
 cx:eng_coolconstruction a rcxn:Construction ;
     cx:hasExample cx:eng_coolconstruction_Ex_A,

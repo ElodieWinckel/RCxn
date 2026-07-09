@@ -324,7 +324,8 @@ for subj, obj in g.subject_objects(links.metaphoricalLink):
         g.add((obj, links.isMetaphoricalExtensionOf, subj))
 
 # If construction A uses the gesture construction B, then B is an element of A
-for subj, obj in g.subject_objects(gest.usesGesture):
+for subj, iri in g.subject_objects(gest.hasGesture):
+        obj = g.value(subject=iri, predicate=gest.uses)
         g.add((obj, links.elementOf, subj))
 ###############################################################################
 # We now distinguish between the IRI that belong to cx.ttl, membr.ttl and references.ttl
