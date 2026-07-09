@@ -442,12 +442,18 @@ def construction_detail(uri):
     gesture_title = []
     for gesture_usage_uri in g.objects(subject=entry_uri, predicate=gest.hasGesture):
         gesture_uri = g.value(subject=gesture_usage_uri, predicate=gest.uses)
-        start_of_gesture = g.value(subject=gesture_usage_uri, predicate=gest.uses)
-        end_of_gesture = g.value(subject=gesture_usage_uri, predicate=gest.uses)
+        # Identify the start of the gesture
+        start_of_gesture_iri = g.value(subject=gesture_usage_uri, predicate=gest.starts)
+        start_of_gesture_number = start_of_gesture_iri.split("_")[-1]
+        # Identify end of the gesture
+        end_of_gesture_iri = g.value(subject=gesture_usage_uri, predicate=gest.ends)
+        end_of_gesture_number = end_of_gesture_iri.split("_")[-1]
         for obj in g.objects(subject=gesture_uri, predicate=rcxn.hasTitle):
             gesture_title.append({
                 'title': str(obj),
                 'uri': re.sub(prefixes, "", str(gesture_uri)),
+                'start_element': "Element " + start_of_gesture_number,
+                'end_element': "Element " + end_of_gesture_number
             })
 
     triples[:] = [item for item in triples if item['property'] != "usesGesture"]

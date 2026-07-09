@@ -2620,6 +2620,11 @@ cx:eng_Pronoun a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
     rcxn:hasTitle "Pronoun" .
 
+cx:eng_ThisclosetoVingconstruction_2 a rcxn:SlotObligatory ;
+    rcxn:hasOtherSemanticContribution "CLOSE" ;
+    rcxn:hasSlots cx:eng_ThisclosetoVingconstruction_2_slots ;
+    rcxn:hasSyntacticFunction "PREDICATOR" .
+
 cx:eng_ThisclosetoVingconstruction_2_slots a rdf_ns:Seq ;
     rdf_ns:_1 cx:eng_ThisclosetoVingconstruction_3 ;
     rdf_ns:_2 cx:eng_ThisclosetoVingconstruction_4 ;
@@ -2634,9 +2639,6 @@ cx:eng_ThisclosetoVingconstruction_3 a rcxn:SlotOptional ;
 
 cx:eng_ThisclosetoVingconstruction_3_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_Verb .
-
-cx:eng_ThisclosetoVingconstruction_4 a rcxn:SlotObligatory ;
-    rcxn:hasSlotForm cx:eng_ThisclosetoVingconstruction_4_Form .
 
 cx:eng_ThisclosetoVingconstruction_4_Form a rcxn:SlotForm ;
     rcxn:hasStem cx:eng_this .
@@ -2657,7 +2659,7 @@ cx:eng_ThisclosetoVingconstruction_Ex_A a cx:Example ;
 
 cx:eng_ThisclosetoVingconstruction_Gest a gest:GestureUsage ;
     gest:ends cx:eng_ThisclosetoVingconstruction_6 ;
-    gest:starts cx:eng_ThisclosetoVingconstruction_2 ;
+    gest:starts cx:eng_ThisclosetoVingconstruction_4 ;
     gest:uses cx:SmallQuantityGestureConstruction .
 
 cx:eng_ThisclosetoVingconstruction_MD a rcxn:Metadata ;
@@ -3844,10 +3846,8 @@ cx:eng_PrepositionalPhrasewithPLUSNP a rcxn:Construction ;
 cx:eng_ThisclosetoVingconstruction_1 a rcxn:SlotOptional ;
     rcxn:hasSyntacticFunction "Subject" .
 
-cx:eng_ThisclosetoVingconstruction_2 a rcxn:SlotObligatory ;
-    rcxn:hasOtherSemanticContribution "CLOSE" ;
-    rcxn:hasSlots cx:eng_ThisclosetoVingconstruction_2_slots ;
-    rcxn:hasSyntacticFunction "PREDICATOR" .
+cx:eng_ThisclosetoVingconstruction_4 a rcxn:SlotObligatory ;
+    rcxn:hasSlotForm cx:eng_ThisclosetoVingconstruction_4_Form .
 
 cx:eng_active_3_argument_structure_construction links:inheritedBy cx:eng_ditransitive_construction_obj_inf,
         cx:eng_ditransitive_construction_obj_np .

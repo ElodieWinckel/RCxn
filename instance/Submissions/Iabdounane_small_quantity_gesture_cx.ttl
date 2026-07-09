@@ -42,5 +42,5 @@ cx:eng_ThisclosetoVingconstruction gest:hasGesture cx:eng_ThisclosetoVingconstru
 
 cx:eng_ThisclosetoVingconstruction_Gest a gest:GestureUsage ;
     gest:uses cx:SmallQuantityGestureConstruction ;
-    gest:starts cx:eng_ThisclosetoVingconstruction_2 ;
+    gest:starts cx:eng_ThisclosetoVingconstruction_4 ;
     gest:ends cx:eng_ThisclosetoVingconstruction_6 .

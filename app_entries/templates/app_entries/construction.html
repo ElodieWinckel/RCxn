@@ -30,22 +30,23 @@
 
 <!-- Display an arrow with a gesture -->
 {% if gesture_title %}
-{% for gesture in gesture_title %}
-    <div id="arrow-container" style="width: 100%; position: relative; margin-top: 10px; height: 40px;">
-        <div id="arrow-line" style="height: 2px; background-color: #000; position: absolute; top: 50%; left: 15%; right: 0;"></div>
-        <div id="arrow-head" style="width: 0; height: 0; border-top: 8px solid transparent; border-bottom: 8px solid transparent; border-left: 12px solid #000; position: absolute; top: 50%; right: 0; transform: translateY(-50%);"></div>
-        <div id="arrow-text" style="position: absolute; top: 70%; left: 50%; transform: translateX(-50%); text-align: center; width: 85%; font-weight: bold;">
-            <a href="{{ url_for('app_entries.gesture_construction_detail', uri=gesture.uri) }}" target="_blank">
-                {{gesture.title}}
-            </a>
+    {% for gesture in gesture_title %}
+        <div class="arrow-container" style="width: 100%; position: relative; margin-top: 10px; height: 40px;">
+            <div class="arrow-line" style="height: 2px; background-color: #000; position: absolute; top: 50%; left: 15%; right: 0;"></div>
+            <div class="arrow-head" style="width: 0; height: 0; border-top: 8px solid transparent; border-bottom: 8px solid transparent; border-left: 12px solid #000; position: absolute; top: 50%; right: 0; transform: translateY(-50%);"></div>
+            <div class="arrow-text" style="position: absolute; top: 70%; left: 50%; transform: translateX(-50%); text-align: center; width: 85%; font-weight: bold;">
+                <a href="{{ url_for('app_entries.gesture_construction_detail', uri=gesture.uri) }}" target="_blank">
+                    {{gesture.title}}
+                </a>
+            </div>
         </div>
-    </div>
-{% endfor %}
+    {% endfor %}
 {% endif %}
 
 <script>
 // Accessing elements sent by Flask
 const rawElements = {{ elements | tojson }};
+const gestureInfo = {{ gesture_title | tojson }}; // Now includes start_element and end_element
 
 //---------------------------------------------
 // 0. Helper: extract numeric index from label "Element N"
@@ -73,7 +74,7 @@ const childrenMap = buildChildrenMap(rawElements);
 
 //---------------------------------------------
 // 2. Extract only top-level property entries
-//    (we keep children in childrenMap; do not flatten)
+//    (we keep children in childrenMap)
 //---------------------------------------------
 function extractTopLevel(entries) {
     const result = [];
@@ -106,18 +107,17 @@ function createCrossTable(data) {
 
     // Populate with object + href + definition
     data.forEach(({ subject, property, object, href, href_compcon, definition }) => {
-    tableData[property][subject].push({ object, href, href_compcon, definition });
-});
-
+        tableData[property][subject].push({ object, href, href_compcon, definition });
+    });
 
     const desiredOrder = [
         'Optionality', 'WordOrder',
-        'Phonology', 'Formal properties' , 'Surface form', 'Root', 'Stem / Lemma', 'hasTransliteration',
+        'Phonology', 'Formal properties', 'Surface form', 'Root', 'Stem / Lemma', 'hasTransliteration',
         'hasTranslation', 'Syntactic form',
         'Syntactic function', 'Syntactic function (CASA terminology)', 'Semantic contribution',
         'Semantic property', 'has semantic role', 'has animacy', 'has gender', 'has number',
         'hasPerson', 'has case', 'has tense', 'has modality',
-        'has voice', 'Information Structure' , 'type', 'Colloprofile', 'comment',
+        'has voice', 'Information Structure', 'type', 'Colloprofile', 'comment',
         'Comparative Concept (cxn)', 'Comparative Concept (sem)', 'Comparative Concept (inf)', 'Comparative Concept (str)'
     ];
 
@@ -129,7 +129,7 @@ function createCrossTable(data) {
     ];
 
     //---------------------------------------------
-    // Helper: get color for a subject label using its element number
+    // Function: get color for a subject label using its element number
     // If no number found, fallback to using the column index (fallbackIndex)
     //---------------------------------------------
     function colorForLabel(label, fallbackIndex = 0) {
@@ -142,26 +142,26 @@ function createCrossTable(data) {
     }
 
     //---------------------------------------------
-    // Helper: render only top-level values for a cell
+    // Function: render only top-level values for a cell
     //---------------------------------------------
     function renderTopLevelValues(values) {
-    return values.map(v => {
-        const title = v.definition ? ` title="${v.definition}"` : '';
-        if (v.href_compcon) {
-            // Use the blueprint URL for href_compcon
-            const compconUrl = `/app_compcon/entry/${encodeURIComponent(v.href_compcon)}`;
-            return `<a href="${compconUrl}" target="_blank"${title}>${v.object}</a>`;
-        } else if (v.href) {
-            // Use the original href if no href_compcon
-            return `<a href="${v.href}" target="_blank"${title}>${v.object}</a>`;
-        } else {
-            return `<span${title}>${v.object}</span>`;
-        }
-    }).join('<br>');
-}
+        return values.map(v => {
+            const title = v.definition ? ` title="${v.definition}"` : '';
+            if (v.href_compcon) {
+                // Use the blueprint URL for href_compcon
+                const compconUrl = `/app_compcon/entry/${encodeURIComponent(v.href_compcon)}`;
+                return `<a href="${compconUrl}" target="_blank"${title}>${v.object}</a>`;
+            } else if (v.href) {
+                // Use the original href if no href_compcon
+                return `<a href="${v.href}" target="_blank"${title}>${v.object}</a>`;
+            } else {
+                return `<span${title}>${v.object}</span>`;
+            }
+        }).join('<br>');
+    }
 
     //---------------------------------------------
-    // Helper: build nested table HTML for a subject (once)
+    // Function: build nested table HTML for a subject (once)
     //---------------------------------------------
     function buildNestedTableFor(subject) {
         const children = childrenMap[subject];
@@ -183,7 +183,6 @@ function createCrossTable(data) {
             if (ib === -1) return -1;                                  // b after a
             return ia - ib;                                            // both inside desiredOrder → compare index
         });
-
 
         // group child data by property and subject
         const nestedTableData = {};
@@ -274,14 +273,87 @@ function createCrossTable(data) {
     tbody.appendChild(nestedRow);
 
     table.appendChild(tbody);
+
+    // ✅ Append table to DOM
+    const container = document.getElementById('table-container');
+    container.appendChild(table);
+
+    // ✅ Delay arrow positioning until the browser has rendered the table
+    requestAnimationFrame(() => {
+        if (!gestureInfo || !Array.isArray(gestureInfo)) return;
+
+        gestureInfo.forEach(gesture => {
+            const startLabel = gesture.start_element;
+            const endLabel = gesture.end_element;
+
+            if (!startLabel || !endLabel) return;
+
+            const startNum = extractElementNumber(startLabel);
+            const endNum = extractElementNumber(endLabel);
+
+            if (startNum === null || endNum === null) return;
+
+            // Find the <td> elements in the header row
+            const headerCells = table.querySelectorAll('tr:first-child td');
+            let startCell = null;
+            let endCell = null;
+
+            headerCells.forEach((cell, index) => {
+                const label = cell.textContent.trim();
+                if (label === startLabel) startCell = cell;
+                if (label === endLabel) endCell = cell;
+            });
+
+            if (!startCell || !endCell) return;
+
+            // ✅ Wait for layout to be fully computed
+            requestAnimationFrame(() => {
+                const startRect = startCell.getBoundingClientRect();
+                const endRect = endCell.getBoundingClientRect();
+                const containerRect = table.getBoundingClientRect();
+
+                // Calculate positions relative to the table container
+                const left = startRect.left - containerRect.left;
+                const right = containerRect.right - endRect.right;
+
+                // ✅ Find the correct arrow container by index
+                const arrowContainers = document.querySelectorAll('.arrow-container');
+                const arrowContainer = arrowContainers[gestureInfo.indexOf(gesture)];
+                if (!arrowContainer) return;
+
+                const arrowLine = arrowContainer.querySelector('.arrow-line');
+                const arrowHead = arrowContainer.querySelector('.arrow-head');
+                const arrowText = arrowContainer.querySelector('.arrow-text');
+
+                if (arrowLine) {
+                    arrowLine.style.left = `${left}px`;
+                    arrowLine.style.right = `${right}px`;
+                }
+
+                if (arrowHead) {
+                    arrowHead.style.right = `${right}px`;
+                    arrowHead.style.left = 'auto';
+                }
+
+                if (arrowText) {
+                    // Center the text along the arrow
+                    const arrowCenter = left + (arrowLine.offsetWidth / 2);
+                    arrowText.style.left = `${arrowCenter}px`;
+                    arrowText.style.transform = 'translateX(-50%)';
+                }
+            });
+        });
+    });
+
     return table;
 }
 
 // Render the table
 const container = document.getElementById('table-container');
-container.appendChild(createCrossTable(elements));
-</script>
+const table = createCrossTable(elements);
+container.appendChild(table);
 
+</script>
 
 {% endif %}
 
