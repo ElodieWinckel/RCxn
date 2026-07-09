@@ -410,6 +410,7 @@ def construction_detail(uri):
     triples[:] = [item for item in triples if item['property'] != "hasMetadata"]
     triples[:] = [item for item in triples if item['property'] != "Title"]
     triples[:] = [item for item in triples if item['property'] != "basedOnStudy"]
+    triples[:] = [item for item in triples if item['property'] != "hasGesture"]
 
     # Sort the list triples
     def custom_sort_key_for_triples(triple):

@@ -2192,18 +2192,8 @@ cx:engUsSpo_Hadituptoherewith_1 a rcxn:SlotObligatory ;
 cx:engUsSpo_Hadituptoherewith_1_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_NounPhrase .
 
-cx:engUsSpo_Hadituptoherewith_2 a rcxn:SlotObligatory ;
-    rcxn:hasOtherSemanticContribution "Enough" ;
-    rcxn:hasSlotForm cx:engUsSpo_Hadituptoherewith_2_Form ;
-    rcxn:hasSyntacticFunction "Predicator" .
-
 cx:engUsSpo_Hadituptoherewith_2_Form a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "had it up to here" .
-
-cx:engUsSpo_Hadituptoherewith_3 a rcxn:SlotOptional ;
-    olia:hasSemanticRole olia:CauseRole ;
-    rcxn:hasSlotForm cx:engUsSpo_Hadituptoherewith_3_Form ;
-    rcxn:hasSyntacticFunction "Oblique complement" .
 
 cx:engUsSpo_Hadituptoherewith_3_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_PrepositionalPhrasewithPLUSNP .
@@ -2212,6 +2202,11 @@ cx:engUsSpo_Hadituptoherewith_Ex_A a cx:Example ;
     cx:hasAnnotatedText "All you do is turn away and sulk and [I]1 have [had it up to here]2 [with that behavior]3." ;
     cx:hasText "All you do is turn away and sulk and I have had it up to here with that behavior." ;
     rdfs:comment "https://gallo.case.edu/go/yas/0055/2015-06-02_1800_US_KNBC_Access_Hollywood_Live_1509-1515.mp4" .
+
+cx:engUsSpo_Hadituptoherewith_Gest a gest:GestureUsage ;
+    gest:ends cx:engUsSpo_Hadituptoherewith_3 ;
+    gest:starts cx:engUsSpo_Hadituptoherewith_2 ;
+    gest:uses cx:eng_ThroatCutGesture .
 
 cx:engUsSpo_Hadituptoherewith_MD a rcxn:Metadata ;
     dcterms:created "2026-07-07"^^xsd:date ;
@@ -2679,6 +2674,7 @@ cx:eng_ThroatCutGesture a gest:GestureConstruction ;
     gest:hasForm cx:eng_ThroatCutGesture_Form ;
     gest:hasPhases "1" ;
     lg:partOfLanguage lg:eng ;
+    links:elementOf cx:engUsSpo_Hadituptoherewith ;
     rcxn:hasMeaning cx:eng_ThroatCutGesture_Meaning ;
     rcxn:hasMetadata cx:eng_ThroatCutGesture_MD ;
     rcxn:hasTitle "Throat Cut Gesture Construction" .
@@ -3810,6 +3806,16 @@ cx:engLME_Transitiveconstruction a rcxn:Construction ;
     rcxn:hasSlots cx:engLME_Transitiveconstruction_slots ;
     rcxn:hasTitle "Transitive construction" .
 
+cx:engUsSpo_Hadituptoherewith_2 a rcxn:SlotObligatory ;
+    rcxn:hasOtherSemanticContribution "Enough" ;
+    rcxn:hasSlotForm cx:engUsSpo_Hadituptoherewith_2_Form ;
+    rcxn:hasSyntacticFunction "Predicator" .
+
+cx:engUsSpo_Hadituptoherewith_3 a rcxn:SlotOptional ;
+    olia:hasSemanticRole olia:CauseRole ;
+    rcxn:hasSlotForm cx:engUsSpo_Hadituptoherewith_3_Form ;
+    rcxn:hasSyntacticFunction "Oblique complement" .
+
 cx:eng_CauseMotionconstruction a rcxn:Construction ;
     cx:hasExample cx:eng_CauseMotionconstruction_Ex_A ;
     lg:partOfLanguage lg:eng ;
@@ -3956,17 +3962,6 @@ cx:engLME_coolascolourconstruction a rcxn:Construction ;
     rcxn:hasMetadata cx:engLME_coolascolourconstruction_MD ;
     rcxn:hasSlots cx:engLME_coolascolourconstruction_slots ;
     rcxn:hasTitle "cool as colour construction" .
-
-cx:engUsSpo_Hadituptoherewith a rcxn:Construction ;
-    cx:hasExample cx:engUsSpo_Hadituptoherewith_Ex_A ;
-    rdfs:comment "The Throat Cut Gesture Positioned at the Head Level" ;
-    gest:usesGesture cx:eng_ThroatCutGesture ;
-    lg:partOfLanguage lg:engUsSpo ;
-    links:inheritsFrom cx:engUsSpo_Hadituptoherewithmesoconstruction ;
-    rcxn:hasConstructionMeaning cx:engUsSpo_Hadituptoherewith_Meaning ;
-    rcxn:hasMetadata cx:engUsSpo_Hadituptoherewith_MD ;
-    rcxn:hasSlots cx:engUsSpo_Hadituptoherewith_slots ;
-    rcxn:hasTitle "Had it up to here with" .
 
 cx:engUsSpo_Hadituptoherewithmesoconstruction a rcxn:Construction ;
     cx:hasExample cx:engUsSpo_Hadituptoherewithmesoconstruction_Ex_A ;
@@ -4120,6 +4115,17 @@ cx:engLME_coolasemotionconstruction a rcxn:Construction ;
     rcxn:hasMetadata cx:engLME_coolasemotionconstruction_MD ;
     rcxn:hasSlots cx:engLME_coolasemotionconstruction_slots ;
     rcxn:hasTitle "cool as emotion construction" .
+
+cx:engUsSpo_Hadituptoherewith a rcxn:Construction ;
+    cx:hasExample cx:engUsSpo_Hadituptoherewith_Ex_A ;
+    rdfs:comment "The Throat Cut Gesture Positioned at the Head Level" ;
+    gest:hasGesture cx:engUsSpo_Hadituptoherewith_Gest ;
+    lg:partOfLanguage lg:engUsSpo ;
+    links:inheritsFrom cx:engUsSpo_Hadituptoherewithmesoconstruction ;
+    rcxn:hasConstructionMeaning cx:engUsSpo_Hadituptoherewith_Meaning ;
+    rcxn:hasMetadata cx:engUsSpo_Hadituptoherewith_MD ;
+    rcxn:hasSlots cx:engUsSpo_Hadituptoherewith_slots ;
+    rcxn:hasTitle "Had it up to here with" .
 
 cx:eng_cool a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
