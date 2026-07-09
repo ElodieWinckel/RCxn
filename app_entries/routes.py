@@ -251,8 +251,8 @@ def find_compcon_uri_by_label(label_compcon) -> str:
 def list_view():
     constructions = []
 
-    # SPARQL query to get the title for each construction
-    query = """
+    # SPARQL queries to get the title for each construction
+    query_nongesture = """
     PREFIX rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#>
     PREFIX lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#>
     SELECT ?construction ?title ?language
@@ -263,11 +263,23 @@ def list_view():
     }
     """
 
-    # Execute the SPARQL query
-    results = g.query(query)
+    query_gesture = """
+        PREFIX rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#>
+        PREFIX lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#>
+        SELECT ?construction ?title ?language
+        WHERE {
+            ?construction a gest:GestureConstruction .
+            ?construction rcxn:hasTitle ?title .
+            ?construction lg:partOfLanguage ?language .
+        }
+        """
 
-    # Process query results
-    for row in results:
+    # Execute the SPARQL queries
+    results_nongesture = g.query(query_nongesture)
+    results_gesture = g.query(query_gesture)
+
+    # Prepare list of constructions to pass to html
+    for row in results_nongesture:
         construction_uri = str(row.construction)
         title = str(row.title)
         variety_uri = row.language
@@ -280,7 +292,24 @@ def list_view():
             'uri': construction_uri,
             'title': title,
             'variety': variety,
-            'macrolanguage': macrolanguage_label
+            'macrolanguage': macrolanguage_label,
+            'type': "nongesture"
+        })
+    for row in results_gesture:
+        construction_uri = str(row.construction)
+        title = str(row.title)
+        variety_uri = row.language
+        variety = str(next(ont.objects(subject=variety_uri, predicate=RDFS.label), ""))
+        macrolanguage_uri = get_macrolanguage(variety_uri, ont, lg.isVarietyOf)
+        macrolanguage_label = str(next(ont.objects(subject=macrolanguage_uri, predicate=RDFS.label), ""))
+
+        # Append construction details as dictionary
+        constructions.append({
+            'uri': construction_uri,
+            'title': title,
+            'variety': variety,
+            'macrolanguage': macrolanguage_label,
+            'type': "gesture"
         })
 
     # Sorting in alphabetical order
