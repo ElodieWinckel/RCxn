@@ -24,6 +24,10 @@ for ttl_file in base_path.rglob("*.ttl"):
         continue
     g.parse(ttl_file, format="turtle")
 
+# Once we can use everything, the following lines can be used
+#for ttl_file in glob.glob("instance/Submissions/**/*.ttl", recursive=True):
+#    g.parse(ttl_file, format="turtle")
+
 # Namespaces
 
 casa = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/casa#")
