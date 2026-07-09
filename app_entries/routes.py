@@ -11,14 +11,15 @@ from .graph_loader import (
     cx,
     dc,
     dcterm,
+    compcon,
+    gest,
+    lg,
     links,
     olia,
     rcxn,
-    rsrch,
-    lg,
     rd,
     rdata,
-    compcon,
+    rsrch,
 )
 
 ###################################################
@@ -439,7 +440,10 @@ def construction_detail(uri):
 
     # Collect gesture constructions used
     gesture_title = []
-    for gesture_uri in g.objects(subject=entry_uri, predicate=cx.usesGesture):
+    for gesture_usage_uri in g.objects(subject=entry_uri, predicate=gest.hasGesture):
+        gesture_uri = g.value(subject=gesture_usage_uri, predicate=gest.uses)
+        start_of_gesture = g.value(subject=gesture_usage_uri, predicate=gest.uses)
+        end_of_gesture = g.value(subject=gesture_usage_uri, predicate=gest.uses)
         for obj in g.objects(subject=gesture_uri, predicate=rcxn.hasTitle):
             gesture_title.append({
                 'title': str(obj),

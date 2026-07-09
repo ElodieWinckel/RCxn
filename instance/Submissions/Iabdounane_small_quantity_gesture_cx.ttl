@@ -8,8 +8,6 @@
 @prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-cx:eng_ThisclosetoVingconstruction cx:usesGesture cx:SmallQuantityGestureConstruction .
-
 cx:SmallQuantityGestureConstruction a gest:GestureConstruction ;
     cx:endsOnSlot cx:eng_ThisclosetoVingconstruction_6 ;
     cx:hasForm cx:SmallQuantityGestureConstruction_Form ;
@@ -37,3 +35,12 @@ cx:SmallQuantityGestureConstruction_MD a rcxn:Metadata ;
     dcterm:created "2026-07-07"^^xsd:date .
 
 membr:Project_Iabdounane_F250218 rsrch:basedOn cx:SmallQuantityGestureConstruction .
+
+# The following illustrates how the "This close to being construction" uses this gesture
+
+cx:eng_ThisclosetoVingconstruction gest:hasGesture cx:eng_ThisclosetoVingconstruction_Gest .
+
+cx:eng_ThisclosetoVingconstruction_Gest a gest:GestureUsage ;
+    gest:uses cx:SmallQuantityGestureConstruction ;
+    gest:starts cx:eng_ThisclosetoVingconstruction_2 ;
+    gest:ends cx:eng_ThisclosetoVingconstruction_6 .

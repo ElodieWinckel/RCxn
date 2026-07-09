@@ -2620,11 +2620,6 @@ cx:eng_Pronoun a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
     rcxn:hasTitle "Pronoun" .
 
-cx:eng_ThisclosetoVingconstruction_2 a rcxn:SlotObligatory ;
-    rcxn:hasOtherSemanticContribution "CLOSE" ;
-    rcxn:hasSlots cx:eng_ThisclosetoVingconstruction_2_slots ;
-    rcxn:hasSyntacticFunction "PREDICATOR" .
-
 cx:eng_ThisclosetoVingconstruction_2_slots a rdf_ns:Seq ;
     rdf_ns:_1 cx:eng_ThisclosetoVingconstruction_3 ;
     rdf_ns:_2 cx:eng_ThisclosetoVingconstruction_4 ;
@@ -2659,6 +2654,11 @@ cx:eng_ThisclosetoVingconstruction_Ex_A a cx:Example ;
     cx:hasAnnotatedText "[It]1 [was this close]2 [to happening]6, right? [This close]2 [to happening]6! " ;
     cx:hasText "It was this close to happening, right? This close to happening! " ;
     rdfs:comment "http://go.redhenlab.org/yas/0117" .
+
+cx:eng_ThisclosetoVingconstruction_Gest a gest:GestureUsage ;
+    gest:ends cx:eng_ThisclosetoVingconstruction_6 ;
+    gest:starts cx:eng_ThisclosetoVingconstruction_2 ;
+    gest:uses cx:SmallQuantityGestureConstruction .
 
 cx:eng_ThisclosetoVingconstruction_MD a rcxn:Metadata ;
     dcterms:created "2026-02-02"^^xsd:date ;
@@ -3844,18 +3844,10 @@ cx:eng_PrepositionalPhrasewithPLUSNP a rcxn:Construction ;
 cx:eng_ThisclosetoVingconstruction_1 a rcxn:SlotOptional ;
     rcxn:hasSyntacticFunction "Subject" .
 
-cx:eng_ThisclosetoVingconstruction_6 a rcxn:SlotObligatory ;
-    cx:colloprofile ( [ cx:frequency 150 ;
-                cx:word "being" ] [ cx:frequency 129 ;
-                cx:word "getting" ] [ cx:frequency 57 ;
-                cx:word "having" ] [ cx:frequency 27 ;
-                cx:word "losing" ] [ cx:frequency 27 ;
-                cx:word "winning" ] [ cx:frequency 24 ;
-                cx:word "saying" ] ) ;
-    olia:hasSemanticRole olia:GoalRole ;
-    rdfs:comment "List of Collocations for this close to x-ing as obtained from AntConc 4.2.4" ;
-    rcxn:hasSlotForm cx:eng_ThisclosetoVingconstruction_6_Form ;
-    rcxn:hasSyntacticFunction "Complement" .
+cx:eng_ThisclosetoVingconstruction_2 a rcxn:SlotObligatory ;
+    rcxn:hasOtherSemanticContribution "CLOSE" ;
+    rcxn:hasSlots cx:eng_ThisclosetoVingconstruction_2_slots ;
+    rcxn:hasSyntacticFunction "PREDICATOR" .
 
 cx:eng_active_3_argument_structure_construction links:inheritedBy cx:eng_ditransitive_construction_obj_inf,
         cx:eng_ditransitive_construction_obj_np .
@@ -4000,6 +3992,19 @@ cx:eng_Phrase a rcxn:Construction ;
         cx:eng_AdjectivePredicativeconstruction ;
     rcxn:hasTitle "Phrase" .
 
+cx:eng_ThisclosetoVingconstruction_6 a rcxn:SlotObligatory ;
+    cx:colloprofile ( [ cx:frequency 150 ;
+                cx:word "being" ] [ cx:frequency 129 ;
+                cx:word "getting" ] [ cx:frequency 57 ;
+                cx:word "having" ] [ cx:frequency 27 ;
+                cx:word "losing" ] [ cx:frequency 27 ;
+                cx:word "winning" ] [ cx:frequency 24 ;
+                cx:word "saying" ] ) ;
+    olia:hasSemanticRole olia:GoalRole ;
+    rdfs:comment "List of Collocations for this close to x-ing as obtained from AntConc 4.2.4" ;
+    rcxn:hasSlotForm cx:eng_ThisclosetoVingconstruction_6_Form ;
+    rcxn:hasSyntacticFunction "Complement" .
+
 cx:eng_VerbPhrase a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
     rcxn:elementOf cx:engUsUkWr_EvaluativeAttributionConstruction ;
@@ -4118,7 +4123,7 @@ cx:engUsSpo_Hadituptoherewith a rcxn:Construction ;
 
 cx:eng_ThisclosetoVingconstruction a rcxn:Construction ;
     cx:hasExample cx:eng_ThisclosetoVingconstruction_Ex_A ;
-    cx:usesGesture cx:SmallQuantityGestureConstruction ;
+    gest:hasGesture cx:eng_ThisclosetoVingconstruction_Gest ;
     lg:partOfLanguage lg:engUsSpo ;
     rcxn:hasConstructionMeaning cx:eng_ThisclosetoVingconstruction_Meaning ;
     rcxn:hasMetadata cx:eng_ThisclosetoVingconstruction_MD ;
