@@ -153,16 +153,15 @@ cx:eng_CauseMotionconstruction_2_Form a rcxn:SlotForm ;
 
 cx:eng_ChefskissGesturalConstruction a gest:GestureConstruction ;
     gest:hasForm cx:eng_ChefskissGesturalConstruction_Form ;
+    gest:hasMeaning cx:eng_ChefskissGesturalConstruction_Meaning ;
     lg:partOfLanguage lg:eng ;
-    rcxn:hasMeaning cx:eng_ChefskissGesturalConstruction_Meaning ;
     rcxn:hasMetadata cx:eng_ChefskissGesturalConstruction_MD ;
     rcxn:hasTitle "Chef’s Kiss as a Gestural Construction" .
 
 cx:eng_PhysicalHeight a gest:GestureConstruction ;
     gest:hasForm cx:eng_PhysicalHeight_Form ;
-    gest:hasPhases "1" ;
+    gest:hasMeaning cx:eng_PhysicalHeight_Meaning ;
     lg:partOfLanguage lg:eng ;
-    rcxn:hasMeaning cx:eng_PhysicalHeight_Meaning ;
     rcxn:hasMetadata cx:eng_PhysicalHeight_MD ;
     rcxn:hasTitle "Physical Height Gesture Construction" .
 
@@ -285,31 +284,30 @@ cx:Noun_MD a rcxn:Metadata ;
         membr:Winckel .
 
 cx:SmallQuantityGestureConstruction a gest:GestureConstruction ;
-    cx:endsOnSlot cx:eng_ThisclosetoVingconstruction_6 ;
-    cx:hasForm cx:SmallQuantityGestureConstruction_Form ;
-    cx:stratsOnSlot cx:eng_ThisclosetoVingconstruction_1 ;
-    gest:hasPhases "1" ;
+    gest:hasForm cx:SmallQuantityGestureConstruction_Form ;
+    gest:hasMeaning cx:SmallQuantityGestureConstruction_Meaning ;
     lg:partOfLanguage lg:eng ;
-    links:elementOf cx:eng_ThisclosetoVingconstruction ;
-    rcxn:hasMeaning cx:SmallQuantityGestureConstruction_Meaning ;
+    rcxn:elementOf cx:eng_ThisclosetoVingconstruction ;
     rcxn:hasMetadata cx:SmallQuantityGestureConstruction_MD ;
     rcxn:hasTitle "Small Quantity Gesture Construction" .
 
-cx:SmallQuantityGestureConstruction_Form cx:handedness cx:OneHand ;
-    cx:handshape "Middle, right, and little fingers retracted toward the palm.",
+cx:SmallQuantityGestureConstruction_Form a gest:GestureForm ;
+    gest:handedness gest:OneHand ;
+    gest:handshape "Middle, right, and little fingers retracted toward the palm.",
         "Thumb and index extended or crooked and parallel to each other." ;
-    cx:movement "Static hold or beat." ;
-    cx:orientation "Palm Lateral." ;
-    cx:position "Central space or at face level." ;
-    cx:timing "Usually for the entire duration of the co-occurring verbal construction." .
+    gest:movement "Static hold or beat." ;
+    gest:orientation "Palm Lateral." ;
+    gest:position "Central space or at face level." ;
+    gest:timing "Usually for the entire duration of the co-occurring verbal construction." .
 
 cx:SmallQuantityGestureConstruction_MD a rcxn:Metadata ;
     cx:annotator membr:Iabdounane ;
     dcterms:created "2026-07-07"^^xsd:date .
 
-cx:SmallQuantityGestureConstruction_Meaning cx:pragmaticProperty "Affective/evaluative framing.",
+cx:SmallQuantityGestureConstruction_Meaning a gest:GestureMeaning ;
+    gest:pragmaticProperty "Affective/evaluative framing.",
         "Foregrounding the small quantity of the referent." ;
-    cx:semanticProperty "Small quantity." .
+    gest:semanticProperty "Small quantity." .
 
 cx:arzCai_Ditransitiveconstruction a rcxn:Construction ;
     cx:hasExample cx:arzCai_Ditransitiveconstruction_Ex_A,
@@ -2008,7 +2006,8 @@ cx:eng_ChefskissGesturalConstruction_3 a gest:Phase ;
     gest:orientation "Fingers oriented upwards.",
         "Palm is lateral." .
 
-cx:eng_ChefskissGesturalConstruction_Form a rdf_ns:Seq ;
+cx:eng_ChefskissGesturalConstruction_Form a rdf_ns:Seq,
+        gest:GestureForm ;
     rdf_ns:_1 cx:eng_ChefskissGesturalConstruction_1 ;
     rdf_ns:_2 cx:eng_ChefskissGesturalConstruction_2 ;
     rdf_ns:_3 cx:eng_ChefskissGesturalConstruction_3 ;
@@ -2021,7 +2020,8 @@ cx:eng_ChefskissGesturalConstruction_MD a rcxn:Metadata ;
     cx:annotator membr:Iabdounane ;
     dcterms:created "2026-07-07"^^xsd:date .
 
-cx:eng_ChefskissGesturalConstruction_Meaning gest:semanticProperty "Something or someone is perfect or excellent." .
+cx:eng_ChefskissGesturalConstruction_Meaning a gest:GestureMeaning ;
+    gest:semanticProperty "Something or someone is perfect or excellent." .
 
 cx:eng_GenitiveNPConstruction_1 a rcxn:SlotObligatory ;
     olia:hasSemanticRole olia:PossessorRole ;
@@ -2118,7 +2118,8 @@ cx:eng_Keepacoolheadconstruction_slots a rdf_ns:Seq ;
     rdf_ns:_3 cx:eng_Keepacoolheadconstruction_3 ;
     rdf_ns:_4 cx:eng_Keepacoolheadconstruction_4 .
 
-cx:eng_PhysicalHeight_Form gest:handedness gest:OneHand ;
+cx:eng_PhysicalHeight_Form a gest:GestureForm ;
+    gest:handedness gest:OneHand ;
     gest:handshape "The index, middle, ring and little fingers are fully extended and together.",
         "The thumb is either tucked or relaxed alongside the hand." ;
     gest:movement "Upward movement until the resting position." ;
@@ -2131,7 +2132,8 @@ cx:eng_PhysicalHeight_MD a rcxn:Metadata ;
     cx:annotator membr:Iabdounane ;
     dcterms:created "2026-07-07"^^xsd:date .
 
-cx:eng_PhysicalHeight_Meaning gest:semanticProperty "Vertical physical dimension of the referent relative to the ground.",
+cx:eng_PhysicalHeight_Meaning a gest:GestureMeaning ;
+    gest:semanticProperty "Vertical physical dimension of the referent relative to the ground.",
         "visual representation of the height or size of the referent." .
 
 cx:eng_PossessivePronoun a rcxn:Construction ;
@@ -2155,6 +2157,9 @@ cx:eng_PrepositionalPhrasewithPLUSNP_MD a rcxn:Metadata ;
 cx:eng_Pronoun a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
     rcxn:hasTitle "Pronoun" .
+
+cx:eng_ThisclosetoVingconstruction_1 a rcxn:SlotOptional ;
+    rcxn:hasSyntacticFunction "Subject" .
 
 cx:eng_ThisclosetoVingconstruction_2 a rcxn:SlotObligatory ;
     rcxn:hasOtherSemanticContribution "CLOSE" ;
@@ -2212,10 +2217,9 @@ cx:eng_ThisclosetoVingconstruction_slots a rdf_ns:Seq ;
 
 cx:eng_ThroatCutGesture a gest:GestureConstruction ;
     gest:hasForm cx:eng_ThroatCutGesture_Form ;
-    gest:hasPhases "1" ;
+    gest:hasMeaning cx:eng_ThroatCutGesture_Meaning ;
     lg:partOfLanguage lg:eng ;
-    links:elementOf cx:engUsSpo_Hadituptoherewith ;
-    rcxn:hasMeaning cx:eng_ThroatCutGesture_Meaning ;
+    rcxn:elementOf cx:engUsSpo_Hadituptoherewith ;
     rcxn:hasMetadata cx:eng_ThroatCutGesture_MD ;
     rcxn:hasTitle "Throat Cut Gesture Construction" .
 
@@ -2232,7 +2236,8 @@ cx:eng_ThroatCutGesture_MD a rcxn:Metadata ;
     cx:annotator membr:Iabdounane ;
     dcterms:created "2026-07-07"^^xsd:date .
 
-cx:eng_ThroatCutGesture_Meaning gest:discourseFunctionalProperty "Turn management" ;
+cx:eng_ThroatCutGesture_Meaning a gest:GestureMeaning ;
+    gest:discourseFunctionalProperty "Turn management" ;
     gest:pragmaticProperty "Directive, request, warning, or, framing." ;
     gest:semanticProperty "Putting an end to something" .
 
@@ -3371,11 +3376,21 @@ cx:eng_PrepositionalPhrasewithPLUSNP a rcxn:Construction ;
     rcxn:hasMetadata cx:eng_PrepositionalPhrasewithPLUSNP_MD ;
     rcxn:hasTitle "Prepositional Phrase (with + NP)" .
 
-cx:eng_ThisclosetoVingconstruction_1 a rcxn:SlotOptional ;
-    rcxn:hasSyntacticFunction "Subject" .
-
 cx:eng_ThisclosetoVingconstruction_4 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm cx:eng_ThisclosetoVingconstruction_4_Form .
+
+cx:eng_ThisclosetoVingconstruction_6 a rcxn:SlotObligatory ;
+    cx:colloprofile ( [ cx:frequency 150 ;
+                cx:word "being" ] [ cx:frequency 129 ;
+                cx:word "getting" ] [ cx:frequency 57 ;
+                cx:word "having" ] [ cx:frequency 27 ;
+                cx:word "losing" ] [ cx:frequency 27 ;
+                cx:word "winning" ] [ cx:frequency 24 ;
+                cx:word "saying" ] ) ;
+    olia:hasSemanticRole olia:GoalRole ;
+    rdfs:comment "List of Collocations for this close to x-ing as obtained from AntConc 4.2.4" ;
+    rcxn:hasSlotForm cx:eng_ThisclosetoVingconstruction_6_Form ;
+    rcxn:hasSyntacticFunction "Complement" .
 
 cx:eng_active_3_argument_structure_construction links:inheritedBy cx:eng_ditransitive_construction_obj_inf,
         cx:eng_ditransitive_construction_obj_np .
@@ -3484,19 +3499,6 @@ cx:eng_Phrase a rcxn:Construction ;
     rcxn:elementOf cx:engLME_Argumentstructureconstruction,
         cx:eng_AdjectivePredicativeconstruction ;
     rcxn:hasTitle "Phrase" .
-
-cx:eng_ThisclosetoVingconstruction_6 a rcxn:SlotObligatory ;
-    cx:colloprofile ( [ cx:frequency 150 ;
-                cx:word "being" ] [ cx:frequency 129 ;
-                cx:word "getting" ] [ cx:frequency 57 ;
-                cx:word "having" ] [ cx:frequency 27 ;
-                cx:word "losing" ] [ cx:frequency 27 ;
-                cx:word "winning" ] [ cx:frequency 24 ;
-                cx:word "saying" ] ) ;
-    olia:hasSemanticRole olia:GoalRole ;
-    rdfs:comment "List of Collocations for this close to x-ing as obtained from AntConc 4.2.4" ;
-    rcxn:hasSlotForm cx:eng_ThisclosetoVingconstruction_6_Form ;
-    rcxn:hasSyntacticFunction "Complement" .
 
 cx:eng_VerbPhrase a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;

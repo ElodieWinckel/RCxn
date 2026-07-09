@@ -640,7 +640,6 @@ def gesture_construction_detail(uri):
                 'property': get_label_or_iri(pred, g, ont),
                 'object': get_label_or_iri(obj, g, ont),
             })
-    gesture[:] = [item for item in gesture if item['property'] != "type"]
 
     for pred, obj in g.predicate_objects(subject=gesture_meaning_uri):
         gesture.append({
@@ -648,15 +647,16 @@ def gesture_construction_detail(uri):
             'property': get_label_or_iri(pred, g, ont),
             'object': get_label_or_iri(obj, g, ont),
         })
+    gesture[:] = [item for item in gesture if item['property'] != "type"]
 
     # Collect links (elementOf)
     list_of_links = []
-    for uri in g.objects(subject=gesture_uri, predicate=links.elementOf):
+    for uri in g.objects(subject=gesture_uri, predicate=rcxn.elementOf):
         object_value = get_label_or_iri(uri, g, ont)
         for title in g.objects(subject=uri, predicate=rcxn.hasTitle):
             lang_uri = g.value(subject=uri, predicate=lg.partOfLanguage)
             list_of_links.append({
-                'property': get_label_or_iri(links.elementOf, g, ont),
+                'property': get_label_or_iri(rcxn.elementOf, g, ont),
                 'object': get_label_or_iri(title, g, ont),
                 'href': object_value,
                 'lang': get_label_or_iri(lang_uri, g, ont),

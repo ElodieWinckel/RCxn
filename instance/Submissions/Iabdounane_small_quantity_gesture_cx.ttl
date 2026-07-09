@@ -9,26 +9,25 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 cx:SmallQuantityGestureConstruction a gest:GestureConstruction ;
-    cx:endsOnSlot cx:eng_ThisclosetoVingconstruction_6 ;
-    cx:hasForm cx:SmallQuantityGestureConstruction_Form ;
-    gest:hasPhases "1" ;
-    cx:stratsOnSlot cx:eng_ThisclosetoVingconstruction_1 ;
+    gest:hasForm cx:SmallQuantityGestureConstruction_Form ;
     lg:partOfLanguage lg:eng ;
-    rcxn:hasMeaning cx:SmallQuantityGestureConstruction_Meaning ;
+    gest:hasMeaning cx:SmallQuantityGestureConstruction_Meaning ;
     rcxn:hasTitle "Small Quantity Gesture Construction" ;
     rcxn:hasMetadata cx:SmallQuantityGestureConstruction_MD .
 
-cx:SmallQuantityGestureConstruction_Form cx:timing "Usually for the entire duration of the co-occurring verbal construction." ;
-    cx:handedness cx:OneHand ;
-    cx:handshape "Middle, right, and little fingers retracted toward the palm.",
+cx:SmallQuantityGestureConstruction_Form a gest:GestureForm ;
+    gest:timing "Usually for the entire duration of the co-occurring verbal construction." ;
+    gest:handedness gest:OneHand ;
+    gest:handshape "Middle, right, and little fingers retracted toward the palm.",
         "Thumb and index extended or crooked and parallel to each other." ;
-    cx:movement "Static hold or beat." ;
-    cx:orientation "Palm Lateral." ;
-    cx:position "Central space or at face level." .
+    gest:movement "Static hold or beat." ;
+    gest:orientation "Palm Lateral." ;
+    gest:position "Central space or at face level." .
 
-cx:SmallQuantityGestureConstruction_Meaning cx:pragmaticProperty "Affective/evaluative framing.",
+cx:SmallQuantityGestureConstruction_Meaning a gest:GestureMeaning ;
+    gest:pragmaticProperty "Affective/evaluative framing.",
         "Foregrounding the small quantity of the referent." ;
-    cx:semanticProperty "Small quantity." .
+    gest:semanticProperty "Small quantity." .
 
 cx:SmallQuantityGestureConstruction_MD a rcxn:Metadata ;
     cx:annotator membr:Iabdounane ;

@@ -10,9 +10,8 @@
 
 cx:eng_ThroatCutGesture a gest:GestureConstruction ;
     gest:hasForm cx:eng_ThroatCutGesture_Form ;
-    gest:hasPhases "1" ;
     lg:partOfLanguage lg:eng ;
-    rcxn:hasMeaning cx:eng_ThroatCutGesture_Meaning ;
+    gest:hasMeaning cx:eng_ThroatCutGesture_Meaning ;
     rcxn:hasTitle "Throat Cut Gesture Construction" ;
     rcxn:hasMetadata cx:eng_ThroatCutGesture_MD .
 
@@ -24,7 +23,8 @@ cx:eng_ThroatCutGesture_Form gest:timing "Context-dependent." ;
     gest:orientation "Palm is vertical." , "Fingers oriented toward the speaker's neck." ;
     gest:position "At the neck level." .
 
-cx:eng_ThroatCutGesture_Meaning gest:semanticProperty "Putting an end to something" ;
+cx:eng_ThroatCutGesture_Meaning a gest:GestureMeaning ;
+    gest:semanticProperty "Putting an end to something" ;
     gest:pragmaticProperty "Directive, request, warning, or, framing." ;
     gest:discourseFunctionalProperty "Turn management" .
 

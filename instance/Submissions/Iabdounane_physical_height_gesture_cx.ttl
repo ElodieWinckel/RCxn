@@ -10,13 +10,13 @@
 
 cx:eng_PhysicalHeight a gest:GestureConstruction ;
     gest:hasForm cx:eng_PhysicalHeight_Form ;
-    gest:hasPhases "1" ;
     lg:partOfLanguage lg:eng ;
-    rcxn:hasMeaning cx:eng_PhysicalHeight_Meaning ;
+    gest:hasMeaning cx:eng_PhysicalHeight_Meaning ;
     rcxn:hasTitle "Physical Height Gesture Construction" ;
     rcxn:hasMetadata cx:eng_PhysicalHeight_MD .
 
-cx:eng_PhysicalHeight_Form gest:timing "Usually for the entire duration of the co-occurring verbal pattern." ;
+cx:eng_PhysicalHeight_Form a gest:GestureForm ;
+    gest:timing "Usually for the entire duration of the co-occurring verbal pattern." ;
     gest:handedness gest:OneHand ;
     gest:handshape "The index, middle, ring and little fingers are fully extended and together.",
         "The thumb is either tucked or relaxed alongside the hand." ;
@@ -24,7 +24,8 @@ cx:eng_PhysicalHeight_Form gest:timing "Usually for the entire duration of the c
     gest:orientation "Palm is vertical." , "Fingers oriented toward the speaker's center line." ;
     gest:position "Position schema (context-dependent)." .
 
-cx:eng_PhysicalHeight_Meaning gest:semanticProperty "Vertical physical dimension of the referent relative to the ground." ,
+cx:eng_PhysicalHeight_Meaning a gest:GestureMeaning ;
+    gest:semanticProperty "Vertical physical dimension of the referent relative to the ground." ,
         "visual representation of the height or size of the referent." .
 
 cx:eng_PhysicalHeight_MD a rcxn:Metadata ;

@@ -10,12 +10,13 @@
 
 cx:eng_ChefskissGesturalConstruction a gest:GestureConstruction ;
     gest:hasForm cx:eng_ChefskissGesturalConstruction_Form ;
-    rcxn:hasMeaning cx:eng_ChefskissGesturalConstruction_Meaning ;
+    gest:hasMeaning cx:eng_ChefskissGesturalConstruction_Meaning ;
     lg:partOfLanguage lg:eng ;
     rcxn:hasTitle "Chef’s Kiss as a Gestural Construction" ;
     rcxn:hasMetadata cx:eng_ChefskissGesturalConstruction_MD .
 
-cx:eng_ChefskissGesturalConstruction_Form a rdf:Seq ;
+cx:eng_ChefskissGesturalConstruction_Form a gest:GestureForm ;
+    a rdf:Seq ;
     gest:timing "Usually no longer than 1 second." ;
     gest:handedness gest:OneHand ;
     gest:sound "Kissing sound" ;
@@ -39,7 +40,8 @@ cx:eng_ChefskissGesturalConstruction_3  a gest:Phase ;
     gest:movement "Releasing the fingers away from mouth." ;
     gest:orientation "Palm is lateral." , "Fingers oriented upwards." .
 
-cx:eng_ChefskissGesturalConstruction_Meaning gest:semanticProperty "Something or someone is perfect or excellent." .
+cx:eng_ChefskissGesturalConstruction_Meaning a gest:GestureMeaning ;
+    gest:semanticProperty "Something or someone is perfect or excellent." .
 
 cx:eng_ChefskissGesturalConstruction_MD a rcxn:Metadata ;
     cx:annotator membr:Iabdounane ;
