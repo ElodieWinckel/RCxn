@@ -91,6 +91,7 @@
     <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/gest#hasGesture">
         <rdfs:domain rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#Construction"/>
         <rdfs:range rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/gest#GestureUsage"/>
+        <rdfs:comment xml:lang="en">Relates a multimodal construction to its usage of a gesture construction.</rdfs:comment>
         <rdfs:label xml:lang="en">has gesture</rdfs:label>
     </owl:ObjectProperty>
     
@@ -255,8 +256,8 @@
 
     <owl:Class rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/gest#GestureForm">
         <rdfs:subClassOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/gest#GestureFormalComponent"/>
-        <rdfs:comment xml:lang="en">The description of the full manifestation of a gesture.</rdfs:comment>
-        <rdfs:label>Form of the gesture</rdfs:label>
+        <rdfs:comment xml:lang="en">The description of the full manifestation of a gesture (rather than its phases).</rdfs:comment>
+        <rdfs:label xml:lang="en">Form of the gesture</rdfs:label>
     </owl:Class>
     
 
