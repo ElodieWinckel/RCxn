@@ -626,11 +626,14 @@ def gesture_construction_detail(uri):
     # Rebuilt the full URI for metadata
     metadata_uri = gesture_uri + "_MD"
 
-    # Collect all triples where entry_uri is the subject
-    gesture = []
+    # Identify language
+    language = get_label_or_iri(g.value(gesture_uri, lg.partOfLanguage), g, ont)
 
+    # Check if the gesture construction contains phases
     phase_names, phase_table = identify_phase_triples(gesture_form_uri)
 
+    # Identify triples for form
+    gesture = []
     for pred, obj in g.predicate_objects(subject=gesture_form_uri):
         if pred.startswith(str(RDF)) and pred[len(str(RDF))] == "_":  # Check for rdf:_n
             pass
@@ -641,6 +644,7 @@ def gesture_construction_detail(uri):
                 'object': get_label_or_iri(obj, g, ont),
             })
 
+    # Identify triples for meaning/function
     for pred, obj in g.predicate_objects(subject=gesture_meaning_uri):
         gesture.append({
             'synsem': "sem",
@@ -706,6 +710,7 @@ def gesture_construction_detail(uri):
 
     return render_template("app_entries/gest_construction.html",
                            title=title,
+                           language=language,
                            gesture=gesture,
                            links = list_of_links,
                            phase_names=phase_names,
