@@ -216,6 +216,7 @@ def identify_phase_triples(slots_uri):
                 "definition": get_definition(obj, g, ont),
                 "object": get_label_or_iri(obj, g, ont),
             })
+    elements[:] = [item for item in elements if item['property'] != "type"]
 
     # Step 3: Pivot the table
     table = defaultdict(lambda: defaultdict(list))
@@ -629,9 +630,6 @@ def gesture_construction_detail(uri):
     # Identify language
     language = get_label_or_iri(g.value(gesture_uri, lg.partOfLanguage), g, ont)
 
-    # Check if the gesture construction contains phases
-    phase_names, phase_table = identify_phase_triples(gesture_form_uri)
-
     # Identify triples for form
     gesture = []
     for pred, obj in g.predicate_objects(subject=gesture_form_uri):
@@ -652,6 +650,9 @@ def gesture_construction_detail(uri):
             'object': get_label_or_iri(obj, g, ont),
         })
     gesture[:] = [item for item in gesture if item['property'] != "type"]
+
+    # Check if the gesture construction contains phases & collect the triples
+    phase_names, phase_table = identify_phase_triples(gesture_form_uri)
 
     # Collect links (elementOf)
     list_of_links = []
@@ -682,8 +683,6 @@ def gesture_construction_detail(uri):
                     research.append({'property': 'Research Question', 'object': str(project_name)})
     # Sorting the list so that 'Research Question' comes before 'Findings'
     research.sort(key=lambda x: x['property'], reverse=True)
-
-
 
     # Collect triples for metadata
     metadata = []
