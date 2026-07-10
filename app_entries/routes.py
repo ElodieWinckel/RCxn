@@ -458,7 +458,7 @@ def construction_detail(uri):
                 'end_element': "Element " + end_of_gesture_number
             })
 
-    triples[:] = [item for item in triples if item['property'] != "usesGesture"]
+    triples[:] = [item for item in triples if item['property'] != "has gesture"]
 
     # Collect triples for examples
     # Step 1: Extract the examples
