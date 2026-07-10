@@ -29,7 +29,7 @@ cx:eng_PhysicalHeight_Meaning a gest:GestureMeaning ;
         "visual representation of the height or size of the referent." .
 
 cx:eng_PhysicalHeight_MD a rcxn:Metadata ;
-    cx:annotator membr:Iabdounane ;
+    rcxn:annotator membr:Iabdounane ;
     dcterm:created "2026-07-07"^^xsd:date .
 
 membr:Project_Iabdounane_F250218 rsrch:basedOn cx:eng_PhysicalHeight .

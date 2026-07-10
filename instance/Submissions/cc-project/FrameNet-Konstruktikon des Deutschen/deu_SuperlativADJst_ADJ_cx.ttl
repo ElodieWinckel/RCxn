@@ -19,7 +19,7 @@ cx:deu_Superlativ_KompositionADJstEINHEIT a rcxn:Construction ;
     rcxn:hasTitle "Superlativ_Komposition:ADJ-st-EINHEIT" .
 
 cx:Superlativ_KompositionADJstEINHEIT_MD a rcxn:Metadata ;
-    cx:annotator membr:Winckel ;
+    rcxn:annotator membr:Winckel ;
     dcterm:created "2026-04-20"^^xsd:date .
 
 cx:deu_Adjective rcxn:elementOf cx:deu_SuperlativADJst_ADJ .

@@ -18,7 +18,7 @@ cx:deu_Artikel a rcxn:Construction ;
     rcxn:hasTitle "Artikel" .
 
 cx:deu_Artikel_MD a rcxn:Metadata ;
-    cx:annotator membr:Winckel ;
+    rcxn:annotator membr:Winckel ;
     dcterm:created "2026-05-22"^^xsd:date .
 
 cx:deu_SuperlativART_ADJest_1 a rcxn:SlotObligatory ;

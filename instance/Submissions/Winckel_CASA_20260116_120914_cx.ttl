@@ -18,7 +18,7 @@ cx:GenitiveConstruction a rcxn:Construction ;
     rcxn:hasTitle "Genitive Construction" .
 
 cx:GenitiveConstruction_MD a rcxn:Metadata ;
-    cx:annotator membr:Winckel ;
+    rcxn:annotator membr:Winckel ;
     dcterm:created "2026-01-16"^^xsd:date .
 
 cx:Noun a rcxn:Construction ;
@@ -27,7 +27,7 @@ cx:Noun a rcxn:Construction ;
     rcxn:hasTitle "Noun" .
 
 cx:Noun_MD a rcxn:Metadata ;
-    cx:annotator membr:Winckel ;
+    rcxn:annotator membr:Winckel ;
     dcterm:created "2026-01-16"^^xsd:date .
 
 cx:eng_GenitiveNPConstruction_1 a rcxn:SlotObligatory ;

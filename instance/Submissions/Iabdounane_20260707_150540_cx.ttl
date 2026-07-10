@@ -62,7 +62,7 @@ cx:eng_PrepositionalPhrasewithPLUSNP a rcxn:Construction ;
     rcxn:hasTitle "Prepositional Phrase (with + NP)" .
 
 cx:eng_PrepositionalPhrasewithPLUSNP_MD a rcxn:Metadata ;
-    cx:annotator membr:Iabdounane ;
+    rcxn:annotator membr:Iabdounane ;
     dcterm:created "2026-07-07"^^xsd:date .
 
 cx:engUsSpo_Hadituptoherewithmesoconstruction a rcxn:Construction ;

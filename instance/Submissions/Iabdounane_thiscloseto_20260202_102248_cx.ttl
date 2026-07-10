@@ -18,7 +18,7 @@ cx:eng_PrepositionalPhrasetoPLUSVing a rcxn:Construction ;
     rcxn:hasTitle "Prepositional Phrase (to + V-ing)" .
 
 cx:eng_PrepositionalPhrasetoPLUSVing_MD a rcxn:Metadata ;
-    cx:annotator membr:Iabdounane ;
+    rcxn:annotator membr:Iabdounane ;
     dcterm:created "2026-02-02"^^xsd:date .
 
 cx:eng_ThisclosetoVingconstruction_1 a rcxn:SlotOptional ;
@@ -93,7 +93,7 @@ cx:eng_close a rcxn:Construction ;
     rcxn:hasTitle "close" .
 
 cx:eng_close_MD a rcxn:Metadata ;
-    cx:annotator membr:Iabdounane ;
+    rcxn:annotator membr:Iabdounane ;
     dcterm:created "2026-02-02"^^xsd:date .
 
 cx:eng_this a rcxn:Construction ;
@@ -103,7 +103,7 @@ cx:eng_this a rcxn:Construction ;
     rcxn:hasTitle "this" .
 
 cx:eng_this_MD a rcxn:Metadata ;
-    cx:annotator membr:Iabdounane ;
+    rcxn:annotator membr:Iabdounane ;
     dcterm:created "2026-02-02"^^xsd:date .
 
 cx:eng_ThisclosetoVingconstruction a rcxn:Construction ;

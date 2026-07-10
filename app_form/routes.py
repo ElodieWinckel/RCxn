@@ -688,7 +688,7 @@ def form_submit():
                     g.add((cx[cleaned_stem_construction], lg.partOfLanguage, macrolanguage_uri))  # A metaphorical extension belong automatically to the same (meta-)language
                     g.add((cx[cleaned_stem_construction], rcxn.hasMetadata, cx[metadata_stem_construction]))
                     g.add((cx[metadata_stem_construction], RDF.type, rcxn.Metadata))
-                    g.add((cx[metadata_stem_construction], cx.annotator, membr[user_name]))
+                    g.add((cx[metadata_stem_construction], rcxn.annotator, membr[user_name]))
                     g.add((cx[metadata_stem_construction], dcterm.created, Literal(datetime.now().strftime('%Y-%m-%d'), datatype=XSD.date)))
                     g.add((cx[cleaned_stem_construction], rcxn.hasTitle, Literal(stem)))
                     # If the lemma has be translated, ass this translation as a meaning of the new construction
@@ -724,7 +724,7 @@ def form_submit():
                     g.add((cx[cleaned_morphosyn_construction], lg.partOfLanguage, macrolanguage_uri))  # A metaphorical extension belong automatically to the same (meta-)language
                     g.add((cx[cleaned_morphosyn_construction], rcxn.hasMetadata, cx[metadata_morphosyn_construction]))
                     g.add((cx[metadata_morphosyn_construction], RDF.type, rcxn.Metadata))
-                    g.add((cx[metadata_morphosyn_construction], cx.annotator, membr[user_name]))
+                    g.add((cx[metadata_morphosyn_construction], rcxn.annotator, membr[user_name]))
                     g.add((cx[metadata_morphosyn_construction], dcterm.created,
                            Literal(datetime.now().strftime('%Y-%m-%d'), datatype=XSD.date)))
                     g.add((cx[cleaned_morphosyn_construction], rcxn.hasTitle, Literal(morphosyn)))
@@ -787,7 +787,7 @@ def form_submit():
             g.add((cx[cleaned_inherit_construction], lg.partOfLanguage, macrolanguage_uri))
             g.add((cx[cleaned_inherit_construction], rcxn.hasMetadata, cx[metadata_inherit_construction]))
             g.add((cx[metadata_inherit_construction], RDF.type, rcxn.Metadata))
-            g.add((cx[metadata_inherit_construction], cx.annotator, membr[user_name]))
+            g.add((cx[metadata_inherit_construction], rcxn.annotator, membr[user_name]))
             g.add((cx[metadata_inherit_construction], dcterm.created,
                    Literal(datetime.now().strftime('%Y-%m-%d'), datatype=XSD.date)))
             g.add((cx[cleaned_inherit_construction], rcxn.hasTitle, Literal(inherit_construction)))
@@ -813,7 +813,7 @@ def form_submit():
             g.add((cx[cleaned_inherit_construction], lg.partOfLanguage, macrolanguage_uri))
             g.add((cx[cleaned_inherit_construction], rcxn.hasMetadata, cx[metadata_inherit_construction]))
             g.add((cx[metadata_inherit_construction], RDF.type, rcxn.Metadata))
-            g.add((cx[metadata_inherit_construction], cx.annotator, membr[user_name]))
+            g.add((cx[metadata_inherit_construction], rcxn.annotator, membr[user_name]))
             g.add((cx[metadata_inherit_construction], dcterm.created,
                    Literal(datetime.now().strftime('%Y-%m-%d'), datatype=XSD.date)))
             g.add((cx[cleaned_inherit_construction], rcxn.hasTitle, Literal(inherit_construction)))
@@ -839,7 +839,7 @@ def form_submit():
             g.add((cx[cleaned_inherit_construction], rcxn.hasMetadata, cx[metadata_inherit_construction]))
             g.add((cx[cleaned_inherit_construction], lg.partOfLanguage, macrolanguage_uri)) # A metaphorical extension belong automatically to the same (meta-)language
             g.add((cx[metadata_inherit_construction], RDF.type, rcxn.Metadata))
-            g.add((cx[metadata_inherit_construction], cx.annotator, membr[user_name]))
+            g.add((cx[metadata_inherit_construction], rcxn.annotator, membr[user_name]))
             g.add((cx[metadata_inherit_construction], dcterm.created,
                    Literal(datetime.now().strftime('%Y-%m-%d'), datatype=XSD.date)))
             g.add((cx[cleaned_inherit_construction], rcxn.hasTitle, Literal(inherit_construction)))
@@ -879,7 +879,7 @@ def form_submit():
                 g.add((cx[cleaned_inherit_construction], RDF.type, rcxn.Construction))
                 g.add((cx[cleaned_inherit_construction], rcxn.hasMetadata, cx[metadata_inherit_construction]))
                 g.add((cx[metadata_inherit_construction], RDF.type, rcxn.Metadata))
-                g.add((cx[metadata_inherit_construction], cx.annotator, membr[user_name]))
+                g.add((cx[metadata_inherit_construction], rcxn.annotator, membr[user_name]))
                 g.add((cx[metadata_inherit_construction], dcterm.created,
                        Literal(datetime.now().strftime('%Y-%m-%d'), datatype=XSD.date)))
                 g.add((cx[cleaned_inherit_construction], rcxn.hasTitle, Literal(similarity_link)))

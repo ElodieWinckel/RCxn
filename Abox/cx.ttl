@@ -195,8 +195,8 @@ cx:Active3ArgumentStructureConstruction a rcxn:Construction ;
     rcxn:hasTitle "Active 3 Argument Structure Construction" .
 
 cx:Active3ArgumentStructureConstruction_MD a rcxn:Metadata ;
-    cx:annotator membr:Winckel ;
-    dcterms:created "2026-01-13"^^xsd:date .
+    dcterms:created "2026-01-13"^^xsd:date ;
+    rcxn:annotator membr:Winckel .
 
 cx:Adjectiveexclamativeconstruction a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
@@ -229,8 +229,8 @@ cx:Adverb_MD a rcxn:Metadata ;
     rcxn:hasTitle "Attribute Construction (Obj: NP)" .
 
 <http://example.org/cx/AttributeConstructionObj:NP_MD> a rcxn:Metadata ;
-    cx:annotator membr:Winckel ;
-    dcterms:created "2026-01-16"^^xsd:date .
+    dcterms:created "2026-01-16"^^xsd:date ;
+    rcxn:annotator membr:Winckel .
 
 cx:CausedMotionConstrutionPPto a rcxn:Construction ;
     links:differentFormSimilarFunction cx:eng_ditransitive_construction_obj_np ;
@@ -238,8 +238,8 @@ cx:CausedMotionConstrutionPPto a rcxn:Construction ;
     rcxn:hasTitle "Caused-Motion Constrution (PPto)" .
 
 cx:CausedMotionConstrutionPPto_MD a rcxn:Metadata ;
-    cx:annotator membr:Winckel ;
-    dcterms:created "2026-01-16"^^xsd:date .
+    dcterms:created "2026-01-16"^^xsd:date ;
+    rcxn:annotator membr:Winckel .
 
 cx:Copula a rcxn:Construction ;
     rcxn:elementOf cx:eng_AdjectivePredicativeconstruction ;
@@ -271,11 +271,10 @@ cx:GenitiveConstruction a rcxn:Construction ;
     rcxn:hasTitle "Genitive Construction" .
 
 cx:GenitiveConstruction_MD a rcxn:Metadata ;
-    cx:annotator membr:Winckel ;
-    dcterms:created "2026-01-16"^^xsd:date .
+    dcterms:created "2026-01-16"^^xsd:date ;
+    rcxn:annotator membr:Winckel .
 
 cx:Noun_MD a rcxn:Metadata ;
-    cx:annotator membr:Winckel ;
     dcterms:created "2025-12-01"^^xsd:date,
         "2026-01-16"^^xsd:date ;
     rcxn:annotator membr:Boos,
@@ -301,8 +300,8 @@ cx:SmallQuantityGestureConstruction_Form a gest:GestureForm ;
     gest:timing "Usually for the entire duration of the co-occurring verbal construction." .
 
 cx:SmallQuantityGestureConstruction_MD a rcxn:Metadata ;
-    cx:annotator membr:Iabdounane ;
-    dcterms:created "2026-07-07"^^xsd:date .
+    dcterms:created "2026-07-07"^^xsd:date ;
+    rcxn:annotator membr:Iabdounane .
 
 cx:SmallQuantityGestureConstruction_Meaning a gest:GestureMeaning ;
     gest:pragmaticProperty "Affective/evaluative framing.",
@@ -814,17 +813,17 @@ cx:deu_NPDefDetstrongPLUSADJweakPLUSN_slots a rdf_ns:Seq ;
         cx:deu_NPDefDetstrongPLUSADJweakPLUSN_3 .
 
 cx:deu_NPdasPLUSADJeNaccsgneut a rcxn:Construction ;
-    cx:annotator membr:Kligge ;
     dcterms:created "2024-12-02"^^xsd:date ;
     lg:partOfLanguage lg:deu ;
     links:similarFormSimilarFunction cx:deu_NPderPLUSADJeNnomsgmasc ;
+    rcxn:annotator membr:Kligge ;
     rcxn:hasTitle "NP[das + ADJ-e N]acc.sg.neut" .
 
 cx:deu_NPdasPLUSADJeNnomsgneut a rcxn:Construction ;
-    cx:annotator membr:Kligge ;
     dcterms:created "2024-12-02"^^xsd:date ;
     lg:partOfLanguage lg:deu ;
     links:similarFormSimilarFunction cx:deu_NPderPLUSADJeNnomsgmasc ;
+    rcxn:annotator membr:Kligge ;
     rcxn:hasTitle "NP[das + ADJ-e N]nom.sg.neut" .
 
 cx:deu_NPdasPLUSADJePLUSNnomsgneut a rcxn:Construction ;
@@ -848,17 +847,17 @@ cx:deu_NPdefDETstrongPLUSN_MD a rcxn:Metadata ;
     rcxn:annotator membr:Kligge .
 
 cx:deu_NPdemPLUSADJenNdatsgmasc a rcxn:Construction ;
-    cx:annotator membr:Kligge ;
     dcterms:created "2024-12-02"^^xsd:date ;
     lg:partOfLanguage lg:deu ;
     links:similarFormSimilarFunction cx:deu_NPderPLUSADJeNnomsgmasc ;
+    rcxn:annotator membr:Kligge ;
     rcxn:hasTitle "NP[dem + ADJ-en N]dat.sg.masc" .
 
 cx:deu_NPdemPLUSADJenNdatsgneut a rcxn:Construction ;
-    cx:annotator membr:Kligge ;
     dcterms:created "2024-12-02"^^xsd:date ;
     lg:partOfLanguage lg:deu ;
     links:similarFormSimilarFunction cx:deu_NPderPLUSADJeNnomsgmasc ;
+    rcxn:annotator membr:Kligge ;
     rcxn:hasTitle "NP[dem + ADJ-en N]dat.sg.neut" .
 
 cx:deu_NPdemPLUSADJenPLUSNdatsgmascSLASHneut a rcxn:Construction ;
@@ -872,10 +871,10 @@ cx:deu_NPdemPLUSADJenPLUSNdatsgmascSLASHneut_MD a rcxn:Metadata ;
     rcxn:annotator membr:Kligge .
 
 cx:deu_NPdenPLUSADJenNaccsgmasc a rcxn:Construction ;
-    cx:annotator membr:Kligge ;
     dcterms:created "2024-12-02"^^xsd:date ;
     lg:partOfLanguage lg:deu ;
     links:similarFormSimilarFunction cx:deu_NPderPLUSADJeNnomsgmasc ;
+    rcxn:annotator membr:Kligge ;
     rcxn:hasTitle "NP[den+ ADJ-en N]acc.sg.masc" .
 
 cx:deu_NPderPLUSADJeNnomsgmasc_1 a rcxn:SlotObligatory ;
@@ -909,10 +908,10 @@ cx:deu_NPderPLUSADJePLUSNnomsgmasc_MD a rcxn:Metadata ;
     rcxn:annotator membr:Kligge .
 
 cx:deu_NPdiePLUSADJeNnomsgfem a rcxn:Construction ;
-    cx:annotator membr:Kligge ;
     dcterms:created "2024-12-02"^^xsd:date ;
     lg:partOfLanguage lg:deu ;
     links:similarFormSimilarFunction cx:deu_NPderPLUSADJeNnomsgmasc ;
+    rcxn:annotator membr:Kligge ;
     rcxn:hasTitle "NP[die + ADJ-e N]nom.sg.fem" .
 
 cx:deu_NPdiePLUSADJePLUSNnomsgfem a rcxn:Construction ;
@@ -956,10 +955,10 @@ cx:deu_NPindefDETzeroPLUSN_MD a rcxn:Metadata ;
     rcxn:annotator membr:Kligge .
 
 cx:deu_NPnomsgmasc a rcxn:Construction ;
-    cx:annotator membr:Kligge ;
     dcterms:created "2024-12-02"^^xsd:date ;
     lg:partOfLanguage lg:deu ;
     links:inheritedBy cx:deu_NPderPLUSADJeNnomsgmasc ;
+    rcxn:annotator membr:Kligge ;
     rcxn:hasTitle "NP nom.sg.masc" .
 
 cx:deu_Preposition a rcxn:Construction ;
@@ -2017,8 +2016,8 @@ cx:eng_ChefskissGesturalConstruction_Form a rdf_ns:Seq,
     gest:timing "Usually no longer than 1 second." .
 
 cx:eng_ChefskissGesturalConstruction_MD a rcxn:Metadata ;
-    cx:annotator membr:Iabdounane ;
-    dcterms:created "2026-07-07"^^xsd:date .
+    dcterms:created "2026-07-07"^^xsd:date ;
+    rcxn:annotator membr:Iabdounane .
 
 cx:eng_ChefskissGesturalConstruction_Meaning a gest:GestureMeaning ;
     gest:semanticProperty "Something or someone is perfect or excellent." .
@@ -2129,8 +2128,8 @@ cx:eng_PhysicalHeight_Form a gest:GestureForm ;
     gest:timing "Usually for the entire duration of the co-occurring verbal pattern." .
 
 cx:eng_PhysicalHeight_MD a rcxn:Metadata ;
-    cx:annotator membr:Iabdounane ;
-    dcterms:created "2026-07-07"^^xsd:date .
+    dcterms:created "2026-07-07"^^xsd:date ;
+    rcxn:annotator membr:Iabdounane .
 
 cx:eng_PhysicalHeight_Meaning a gest:GestureMeaning ;
     gest:semanticProperty "Vertical physical dimension of the referent relative to the ground.",
@@ -2147,12 +2146,12 @@ cx:eng_PrepositionalPhrasetoPLUSVing a rcxn:Construction ;
     rcxn:hasTitle "Prepositional Phrase (to + V-ing)" .
 
 cx:eng_PrepositionalPhrasetoPLUSVing_MD a rcxn:Metadata ;
-    cx:annotator membr:Iabdounane ;
-    dcterms:created "2026-02-02"^^xsd:date .
+    dcterms:created "2026-02-02"^^xsd:date ;
+    rcxn:annotator membr:Iabdounane .
 
 cx:eng_PrepositionalPhrasewithPLUSNP_MD a rcxn:Metadata ;
-    cx:annotator membr:Iabdounane ;
-    dcterms:created "2026-07-07"^^xsd:date .
+    dcterms:created "2026-07-07"^^xsd:date ;
+    rcxn:annotator membr:Iabdounane .
 
 cx:eng_Pronoun a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
@@ -2233,8 +2232,8 @@ cx:eng_ThroatCutGesture_Form gest:handedness gest:OneHand ;
     gest:timing "Context-dependent." .
 
 cx:eng_ThroatCutGesture_MD a rcxn:Metadata ;
-    cx:annotator membr:Iabdounane ;
-    dcterms:created "2026-07-07"^^xsd:date .
+    dcterms:created "2026-07-07"^^xsd:date ;
+    rcxn:annotator membr:Iabdounane .
 
 cx:eng_ThroatCutGesture_Meaning a gest:GestureMeaning ;
     gest:discourseFunctionalProperty "Turn management" ;
@@ -2269,8 +2268,8 @@ cx:eng_close a rcxn:Construction ;
     rcxn:hasTitle "close" .
 
 cx:eng_close_MD a rcxn:Metadata ;
-    cx:annotator membr:Iabdounane ;
-    dcterms:created "2026-02-02"^^xsd:date .
+    dcterms:created "2026-02-02"^^xsd:date ;
+    rcxn:annotator membr:Iabdounane .
 
 cx:eng_come a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
@@ -2479,8 +2478,8 @@ cx:eng_this a rcxn:Construction ;
     rcxn:hasTitle "this" .
 
 cx:eng_this_MD a rcxn:Metadata ;
-    cx:annotator membr:Iabdounane ;
-    dcterms:created "2026-02-02"^^xsd:date .
+    dcterms:created "2026-02-02"^^xsd:date ;
+    rcxn:annotator membr:Iabdounane .
 
 <http://example.org/cx/etc.> links:inheritsFrom cx:deu_NPDefDetstrongPLUSADJweakPLUSN .
 
@@ -2635,8 +2634,8 @@ cx:gmh12C_PräfixverbkonstruktionTätigkeit_slots a rdf_ns:Seq ;
     rdf_ns:_3 cx:gmh12C_PräfixverbkonstruktionTätigkeit_3 .
 
 cx:gmh12C_Präfixverbkonstruktion_MD a rcxn:Metadata ;
-    cx:annotator membr:Fuehrer ;
-    dcterms:created "2025-12-19"^^xsd:date .
+    dcterms:created "2025-12-19"^^xsd:date ;
+    rcxn:annotator membr:Fuehrer .
 
 cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_1 a rcxn:SlotObligatory ;
     cx:WordOrder "1st" ;
@@ -3016,8 +3015,8 @@ cx:lidativeconstruction a rcxn:Construction ;
     rcxn:hasTitle "li-dative construction" .
 
 cx:lidativeconstruction_MD a rcxn:Metadata ;
-    cx:annotator membr:Bayer ;
-    dcterms:created "2026-02-25"^^xsd:date .
+    dcterms:created "2026-02-25"^^xsd:date ;
+    rcxn:annotator membr:Bayer .
 
 cx:lzh_Dooperationwithoperand1onoperand2construction_1 a rcxn:SlotOptional ;
     cx:WordOrder "Immediately before Element 2" ;

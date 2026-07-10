@@ -84,7 +84,7 @@ cx:lidativeconstruction a rcxn:Construction ;
     rcxn:hasTitle "li-dative construction" .
 
 cx:lidativeconstruction_MD a rcxn:Metadata ;
-    cx:annotator membr:Bayer ;
+    rcxn:annotator membr:Bayer ;
     dcterm:created "2026-02-25"^^xsd:date .
 
 membr:Project_Bayer_2602251146_F2602251146 a rsrch:Finding ;

@@ -30,7 +30,7 @@ cx:SmallQuantityGestureConstruction_Meaning a gest:GestureMeaning ;
     gest:semanticProperty "Small quantity." .
 
 cx:SmallQuantityGestureConstruction_MD a rcxn:Metadata ;
-    cx:annotator membr:Iabdounane ;
+    rcxn:annotator membr:Iabdounane ;
     dcterm:created "2026-07-07"^^xsd:date .
 
 membr:Project_Iabdounane_F250218 rsrch:basedOn cx:SmallQuantityGestureConstruction .

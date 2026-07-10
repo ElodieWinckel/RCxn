@@ -17,7 +17,7 @@ cx:Active3ArgumentStructureConstruction a rcxn:Construction ;
     rcxn:hasTitle "Active 3 Argument Structure Construction" .
 
 cx:Active3ArgumentStructureConstruction_MD a rcxn:Metadata ;
-    cx:annotator membr:Winckel ;
+    rcxn:annotator membr:Winckel ;
     dcterm:created "2026-01-13"^^xsd:date .
 
 cx:engLME_Resultativeconstruction links:sameFormDifferentFunction cx:engLME_AttributeConstructionAttrAdj .

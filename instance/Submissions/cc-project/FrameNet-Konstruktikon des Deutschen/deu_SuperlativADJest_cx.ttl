@@ -24,7 +24,7 @@ membr:Project_Winckel rsrch:hasResearchQuestion membr:Project_Winckel_2604130901
     rcxn:hasTitle "Superlativ:ART_ADJ-(e)st" .
 
 <http://example.org/cx/SuperlativART_ADJest_MD> a rcxn:Metadata ;
-    cx:annotator membr:Winckel ;
+    rcxn:annotator membr:Winckel ;
     dcterm:created "2026-04-13"^^xsd:date .
 
 <http://example.org/cx/SuperlativXst> a rcxn:Construction ;
@@ -33,7 +33,7 @@ membr:Project_Winckel rsrch:hasResearchQuestion membr:Project_Winckel_2604130901
     rcxn:hasTitle "Superlativ:X -st" .
 
 <http://example.org/cx/SuperlativXst_MD> a rcxn:Metadata ;
-    cx:annotator membr:Winckel ;
+    rcxn:annotator membr:Winckel ;
     dcterm:created "2026-04-13"^^xsd:date .
 
 <http://example.org/cx/Superlativam_ADJsten> a rcxn:Construction ;
@@ -42,7 +42,7 @@ membr:Project_Winckel rsrch:hasResearchQuestion membr:Project_Winckel_2604130901
     rcxn:hasTitle "Superlativ:am_ADJ-sten" .
 
 <http://example.org/cx/Superlativam_ADJsten_MD> a rcxn:Metadata ;
-    cx:annotator membr:Winckel ;
+    rcxn:annotator membr:Winckel ;
     dcterm:created "2026-04-13"^^xsd:date .
 
 cx:deu_Adjektivstamm a rcxn:Construction ;
@@ -52,7 +52,7 @@ cx:deu_Adjektivstamm a rcxn:Construction ;
     rcxn:hasTitle "Adjektivstamm" .
 
 cx:deu_Adjektivstamm_MD a rcxn:Metadata ;
-    cx:annotator membr:Winckel ;
+    rcxn:annotator membr:Winckel ;
     dcterm:created "2026-04-13"^^xsd:date .
 
 <http://example.org/cx/deu_SuperlativADJest_2> a rcxn:SlotObligatory ;
