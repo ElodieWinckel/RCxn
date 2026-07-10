@@ -166,15 +166,6 @@ We are using sequences because the elements should be presented in a fixed order
 | range (object) | rcxn\#Construction |
 | label | Syntactic form (en) |
 
-As a corollary to hasSyntacticForm, it was necessary to add a link between construction that relates a construction back to all construction that use it (for example, the NP construction will potentially be used by many constructions):
-
-| Property rcxn\#elementOf |  |
-| :---- | :---- |
-| description | Relates a construction to the constructions that it is a part of. If the form of one construction element of A is identified as B (property hasSyntacticForm), then B is an element of B. |
-| domain (subject) | rcxn\#Construction |
-| range (object) | rcxn\#Construction |
-| label | Construction Element of (en) |
-
 | Property rcxn\#hasSyntacticFunction |  |
 | :---- | :---- |
 | description | Relates the construction element to its function. Typical functions are “subject”, “complement”, “modifier” etc. |
@@ -420,13 +411,21 @@ This ontology is work in progress. It should deal with translation, transliterat
 The ontology for links is presented in the following publication:   
 Winckel, Elodie. 2025\. Defining relationships in the constructional network: A Semantic Web ontology for Construction Grammar. *Lexicographica* 41(1). 299–317. [https://doi.org/10.1515/lex-2025-0012](https://doi.org/10.1515/lex-2025-0012).
 
-Since this first version 1.0, I added this property (which is therefore part of the 1.1 version):
+Since this first version 1.0, I added the following properties (which are therefore part of the 1.1 version):
 
 | Property links\#isMetaphoricalExtensionOf |  |
 | :---- | :---- |
 | description | Links back the metaphorical extension to the construction with literal meaning (see metaphorical link). |
 | subproperty of | links\#LanguageInternalLink |
 | label | is a metaphorical extension of |
+
+As a corollary to hasSyntacticForm, it was necessary to add the link \#elementOf that relates a construction back to all constructions that use it (for example, the NP construction will potentially be used by many constructions). 
+
+| Property links\#elementOf |  |
+| :---- | :---- |
+| description | Relates a construction to the constructions that it is a part of. If element A uses B, then B is an element of A. |
+| subproperty of | links\#LanguageInternalLink |
+| label | Element of (en) |
 
 # MODULE Evidence {#module-evidence}
 
@@ -443,8 +442,6 @@ The ontology exists, but was not really defined by us. Description is work-in-pr
 # MODULE Gesture constructions (gest) {#module-gesture-constructions-(gest)}
 
 Prefix (gest): [https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/gest\#](https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/gest#)
-
-![](.\ontology_gest.png)
 
 This module uses \#Construction and \#Slot from the rcxn module.
 
