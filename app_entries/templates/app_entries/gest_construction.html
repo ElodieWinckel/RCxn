@@ -14,9 +14,15 @@
     <!-- Syntactic properties -->
     {% for row in gesture if row.synsem == "syn" %}
     <tr>
-        <th>{{ row.property }}</th>
+        <th>
+            <span title="{{ row.property_definition }}">
+                {{ row.property }}
+            </span>
+        </th>
         <td colspan="{{ phase_names|length }}">
+            <span title="{{ row.object_definition }}">
             {{ row.object }}
+            </span>
         </td>
     </tr>
     {% endfor %}
@@ -33,7 +39,9 @@
     <!-- Phase data -->
     {% for property, values in phase_table.items() %}
     <tr>
-        <th>{{ property }}</th>
+        <th>
+            {{ property }}
+        </th>
 
         {% for phase in phase_names %}
         <td>
@@ -54,9 +62,15 @@
     <!-- Semantic properties -->
     {% for row in gesture if row.synsem == "sem" %}
     <tr>
-        <th>{{ row.property }}</th>
+        <th>
+            <span title="{{ row.property_definition }}">
+            {{ row.property }}
+            </span>
+        </th>
         <td colspan="{{ phase_names|length }}">
+            <span title="{{ row.object_definition }}">
             {{ row.object }}
+            </span>
         </td>
     </tr>
     {% endfor %}
@@ -68,7 +82,11 @@
     <table border="1">
         {% for triple in links %}
             <tr>
-                <td>{{ triple.property }}</td>
+                <td>
+                    <span title="{{ triple.property_definition }}">
+                    {{ triple.property }}
+                    </span>
+                </td>
                 <td>
                     {% if triple.href %}
                         <a href="{{ url_for('app_entries.construction_detail', uri=triple.href) }}" target="_blank">
@@ -88,8 +106,14 @@
     <table border="1">
         {% for triple in research %}
             <tr>
-                <th>{{ triple.property }}</th>
-                <td>{{ triple.object }}</td>
+                <th>
+                    <span title="{{ triple.property_definition }}">
+                    {{ triple.property }}
+                    </span>
+                </th>
+                <td>
+                    {{ triple.object }}
+                </td>
             </tr>
         {% endfor %}
     </table>
@@ -98,7 +122,11 @@
     <table border="1">
         {% for triple in metadata %}
             <tr>
-                <th>{{ triple.property }}</th>
+                <th>
+                    <span title="{{ triple.property_definition }}">
+                    {{ triple.property }}
+                    </span>
+                </th>
                 <td>{% if triple.homepage %}<a href="{{ triple.homepage }}" target="_blank">{{ triple.given }} {{ triple.family }}</a> {% endif %}
                     {% if triple.url %}<a href="{{ triple.url }}" target="_blank">{{ triple.url }}</a> {% endif %}
                     {% if not triple.homepage %} {{ triple.object }} {% endif %}

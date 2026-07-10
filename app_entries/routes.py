@@ -639,7 +639,9 @@ def gesture_construction_detail(uri):
             gesture.append({
                 'synsem': "syn",
                 'property': get_label_or_iri(pred, g, ont),
+                'property_definition': get_definition(pred, g, ont),
                 'object': get_label_or_iri(obj, g, ont),
+                'object_definition': get_definition(obj, g, ont),
             })
 
     # Identify triples for meaning/function
@@ -647,7 +649,9 @@ def gesture_construction_detail(uri):
         gesture.append({
             'synsem': "sem",
             'property': get_label_or_iri(pred, g, ont),
+            'property_definition': get_definition(pred, g, ont),
             'object': get_label_or_iri(obj, g, ont),
+            'object_definition': get_definition(obj, g, ont),
         })
     gesture[:] = [item for item in gesture if item['property'] != "type"]
 
@@ -662,6 +666,7 @@ def gesture_construction_detail(uri):
             lang_uri = g.value(subject=uri, predicate=lg.partOfLanguage)
             list_of_links.append({
                 'property': get_label_or_iri(rcxn.elementOf, g, ont),
+                'property_definition': get_definition(rcxn.elementOf, g, ont),
                 'object': get_label_or_iri(title, g, ont),
                 'href': object_value,
                 'lang': get_label_or_iri(lang_uri, g, ont),
@@ -675,12 +680,20 @@ def gesture_construction_detail(uri):
             # Get the rdfs:label for this finding
             finding_labels = g.objects(finding, RDFS.label)
             for finding_label in finding_labels:
-                research.append({'property': 'Findings', 'object': str(finding_label)})
+                research.append({
+                    'property': 'Findings',
+                    'property_definition': get_definition(rsrch.Finding, g, ont),
+                    'object': str(finding_label),
+                })
             # Next, query all URIs that correspond to this finding
             for project in g.subjects(rsrch.hasFindings, finding):
                 project_names = g.objects(project, rsrch.projectName)
                 for project_name in project_names:
-                    research.append({'property': 'Research Question', 'object': str(project_name)})
+                    research.append({
+                        'property': 'Research Question',
+                        'property_definition': get_definition(rsrch.Project, g, ont),
+                        'object': str(project_name)
+                    })
     # Sorting the list so that 'Research Question' comes before 'Findings'
     research.sort(key=lambda x: x['property'], reverse=True)
 
@@ -693,6 +706,7 @@ def gesture_construction_detail(uri):
             homepage = g.value(subject=obj, predicate=FOAF.homepage)
             metadata.append({
                 'property': get_label_or_iri(predicate, g, ont),
+                'property_definition': get_definition(predicate, g, ont),
                 'given': get_label_or_iri(given, g, ont),
                 'family': get_label_or_iri(family, g, ont),
                 'homepage': get_label_or_iri(homepage, g, ont),
@@ -700,6 +714,7 @@ def gesture_construction_detail(uri):
         elif str(predicate) != "http://www.w3.org/1999/02/22-rdf-syntax-ns#type":
             metadata.append({
                 'property': get_label_or_iri(predicate, g, ont),
+                'property_definition': get_definition(predicate, g, ont),
                 'object': get_label_or_iri(obj, g, ont),
             })
     metadata[:] = [item for item in metadata if item['property'] != "hasSources"]  # resources are delt with separately (see below "collect references")
