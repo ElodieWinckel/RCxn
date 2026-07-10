@@ -22,9 +22,9 @@ cx:Superlativ_KompositionADJstEINHEIT_MD a rcxn:Metadata ;
     rcxn:annotator membr:Winckel ;
     dcterm:created "2026-04-20"^^xsd:date .
 
-cx:deu_Adjective rcxn:elementOf cx:deu_SuperlativADJst_ADJ .
+cx:deu_Adjective links:elementOf cx:deu_SuperlativADJst_ADJ .
 
-cx:deu_Adverb rcxn:elementOf cx:deu_SuperlativADJst_ADJ .
+cx:deu_Adverb links:elementOf cx:deu_SuperlativADJst_ADJ .
 
 cx:deu_SuperlativADJst_ADJ_1 a rcxn:SlotObligatory ;
     rcxn:hasSlots cx:deu_SuperlativADJst_ADJ_1_slots .

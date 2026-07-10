@@ -660,13 +660,13 @@ def gesture_construction_detail(uri):
 
     # Collect links (elementOf)
     list_of_links = []
-    for uri in g.objects(subject=gesture_uri, predicate=rcxn.elementOf):
+    for uri in g.objects(subject=gesture_uri, predicate=links.elementOf):
         object_value = get_label_or_iri(uri, g, ont)
         for title in g.objects(subject=uri, predicate=rcxn.hasTitle):
             lang_uri = g.value(subject=uri, predicate=lg.partOfLanguage)
             list_of_links.append({
-                'property': get_label_or_iri(rcxn.elementOf, g, ont),
-                'property_definition': get_definition(rcxn.elementOf, g, ont),
+                'property': get_label_or_iri(links.elementOf, g, ont),
+                'property_definition': get_definition(links.elementOf, g, ont),
                 'object': get_label_or_iri(title, g, ont),
                 'href': object_value,
                 'lang': get_label_or_iri(lang_uri, g, ont),

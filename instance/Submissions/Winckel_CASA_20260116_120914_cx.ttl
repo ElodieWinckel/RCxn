@@ -22,7 +22,7 @@ cx:GenitiveConstruction_MD a rcxn:Metadata ;
     dcterm:created "2026-01-16"^^xsd:date .
 
 cx:Noun a rcxn:Construction ;
-    rcxn:elementOf cx:eng_GenitiveNPConstruction ;
+    links:elementOf cx:eng_GenitiveNPConstruction ;
     rcxn:hasMetadata cx:Noun_MD ;
     rcxn:hasTitle "Noun" .
 

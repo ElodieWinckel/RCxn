@@ -47,7 +47,7 @@ membr:Project_Winckel rsrch:hasResearchQuestion membr:Project_Winckel_2604130901
 
 cx:deu_Adjektivstamm a rcxn:Construction ;
     lg:partOfLanguage lg:deu ;
-    rcxn:elementOf <http://example.org/cx/deu_SuperlativADJest> ;
+    links:elementOf <http://example.org/cx/deu_SuperlativADJest> ;
     rcxn:hasMetadata cx:deu_Adjektivstamm_MD ;
     rcxn:hasTitle "Adjektivstamm" .
 

@@ -212,7 +212,7 @@ cx:Adjectiveexclamativeconstruction_MD a rcxn:Metadata ;
         membr:Winckel .
 
 cx:Adverb a rcxn:Construction ;
-    rcxn:elementOf cx:eng_AdjectivePhrase ;
+    links:elementOf cx:eng_AdjectivePhrase ;
     rcxn:hasMetadata cx:Adverb_MD ;
     rcxn:hasTitle "Adverb" .
 
@@ -242,7 +242,7 @@ cx:CausedMotionConstrutionPPto_MD a rcxn:Metadata ;
     rcxn:annotator membr:Winckel .
 
 cx:Copula a rcxn:Construction ;
-    rcxn:elementOf cx:eng_AdjectivePredicativeconstruction ;
+    links:elementOf cx:eng_AdjectivePredicativeconstruction ;
     rcxn:hasMetadata cx:Copula_MD ;
     rcxn:hasTitle "Copula" .
 
@@ -254,7 +254,7 @@ cx:Copula_MD a rcxn:Metadata ;
         membr:Winckel .
 
 cx:Determiner a rcxn:Construction ;
-    rcxn:elementOf cx:eng_AdjectiveAttributiveconstruction ;
+    links:elementOf cx:eng_AdjectiveAttributiveconstruction ;
     rcxn:hasMetadata cx:Determiner_MD ;
     rcxn:hasTitle "Determiner" .
 
@@ -286,7 +286,7 @@ cx:SmallQuantityGestureConstruction a gest:GestureConstruction ;
     gest:hasForm cx:SmallQuantityGestureConstruction_Form ;
     gest:hasMeaning cx:SmallQuantityGestureConstruction_Meaning ;
     lg:partOfLanguage lg:eng ;
-    rcxn:elementOf cx:eng_ThisclosetoVingconstruction ;
+    links:elementOf cx:eng_ThisclosetoVingconstruction ;
     rcxn:hasMetadata cx:SmallQuantityGestureConstruction_MD ;
     rcxn:hasTitle "Small Quantity Gesture Construction" .
 
@@ -663,7 +663,7 @@ cx:deu_ADJstrongPLUSADJweakPLUSN_MD a rcxn:Metadata ;
 
 cx:deu_Adverb a rcxn:Construction ;
     lg:partOfLanguage lg:deu ;
-    rcxn:elementOf cx:deuWrSt20_sichNPADJADVvorAugenVP ;
+    links:elementOf cx:deuWrSt20_sichNPADJADVvorAugenVP ;
     rcxn:hasTitle "Adverb" .
 
 cx:deu_AusdemAErmelschuettelnconstruction_1 a rcxn:SlotObligatory ;
@@ -763,12 +763,12 @@ cx:deu_AusdemAErmelschuettelnconstruction_slots a rdf_ns:Seq ;
 
 cx:deu_DefiniteArticle a rcxn:Construction ;
     lg:partOfLanguage lg:deu ;
-    rcxn:elementOf cx:deu_AusdemAErmelschuettelnconstruction ;
+    links:elementOf cx:deu_AusdemAErmelschuettelnconstruction ;
     rcxn:hasTitle "Definite Article" .
 
 cx:deu_DefiniteDeterminer a rcxn:Construction ;
     lg:partOfLanguage lg:deu ;
-    rcxn:elementOf cx:deu_NPDefDetstrongPLUSADJweakPLUSN ;
+    links:elementOf cx:deu_NPDefDetstrongPLUSADJweakPLUSN ;
     rcxn:hasTitle "Definite Determiner" .
 
 cx:deu_Generalprepositionalconstructions a rcxn:Construction ;
@@ -963,17 +963,17 @@ cx:deu_NPnomsgmasc a rcxn:Construction ;
 
 cx:deu_Preposition a rcxn:Construction ;
     lg:partOfLanguage lg:deu ;
-    rcxn:elementOf cx:deu_AusdemAErmelschuettelnconstruction ;
+    links:elementOf cx:deu_AusdemAErmelschuettelnconstruction ;
     rcxn:hasTitle "Preposition" .
 
 cx:deu_PrepositionalPhrase a rcxn:Construction ;
     lg:partOfLanguage lg:deu ;
-    rcxn:elementOf cx:deu_AusdemAErmelschuettelnconstruction ;
+    links:elementOf cx:deu_AusdemAErmelschuettelnconstruction ;
     rcxn:hasTitle "Prepositional Phrase" .
 
 cx:deu_schuetteln a rcxn:Construction ;
     lg:partOfLanguage lg:deu ;
-    rcxn:elementOf cx:deu_AusdemAErmelschuettelnconstruction ;
+    links:elementOf cx:deu_AusdemAErmelschuettelnconstruction ;
     rcxn:hasConstructionMeaning cx:deu_schuetteln_Meaning ;
     rcxn:hasTitle "schütteln" .
 
@@ -982,7 +982,7 @@ cx:deu_schuetteln_Meaning a rcxn:ConstructionMeaning ;
 
 cx:deu_vor a rcxn:Construction ;
     lg:partOfLanguage lg:deu ;
-    rcxn:elementOf cx:deuWrSt20_sichNPADJADVvorAugenVP ;
+    links:elementOf cx:deuWrSt20_sichNPADJADVvorAugenVP ;
     rcxn:hasConstructionMeaning cx:deu_vor_Meaning ;
     rcxn:hasTitle "vor" .
 
@@ -2141,7 +2141,7 @@ cx:eng_PossessivePronoun a rcxn:Construction ;
 
 cx:eng_PrepositionalPhrasetoPLUSVing a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
-    rcxn:elementOf cx:eng_ThisclosetoVingconstruction ;
+    links:elementOf cx:eng_ThisclosetoVingconstruction ;
     rcxn:hasMetadata cx:eng_PrepositionalPhrasetoPLUSVing_MD ;
     rcxn:hasTitle "Prepositional Phrase (to + V-ing)" .
 
@@ -2218,7 +2218,7 @@ cx:eng_ThroatCutGesture a gest:GestureConstruction ;
     gest:hasForm cx:eng_ThroatCutGesture_Form ;
     gest:hasMeaning cx:eng_ThroatCutGesture_Meaning ;
     lg:partOfLanguage lg:eng ;
-    rcxn:elementOf cx:engUsSpo_Hadituptoherewith ;
+    links:elementOf cx:engUsSpo_Hadituptoherewith ;
     rcxn:hasMetadata cx:eng_ThroatCutGesture_MD ;
     rcxn:hasTitle "Throat Cut Gesture Construction" .
 
@@ -2242,28 +2242,28 @@ cx:eng_ThroatCutGesture_Meaning a gest:GestureMeaning ;
 
 cx:eng_VerbING a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
-    rcxn:elementOf cx:comePLUSnoisemannerofmovementVing ;
+    links:elementOf cx:comePLUSnoisemannerofmovementVing ;
     rcxn:hasTitle "Verb + -ing" .
 
 cx:eng_attribute_construction_attr_to_inf links:sameFormDifferentFunction cx:eng_ditransitive_construction_obj_inf .
 
 cx:eng_attribute_construction_obj_np links:sameFormDifferentFunction cx:eng_ditransitive_construction_obj_np .
 
-cx:eng_be rcxn:elementOf cx:engUsUkWr_EvaluativeAttributionConstruction .
+cx:eng_be links:elementOf cx:engUsUkWr_EvaluativeAttributionConstruction .
 
 cx:eng_burn a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
-    rcxn:elementOf cx:engLME_Burnonesbridgesconstruction ;
+    links:elementOf cx:engLME_Burnonesbridgesconstruction ;
     rcxn:hasTitle "burn" .
 
 cx:eng_clause a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
-    rcxn:elementOf cx:engUsUkWr_EvaluativeAttributionConstruction ;
+    links:elementOf cx:engUsUkWr_EvaluativeAttributionConstruction ;
     rcxn:hasTitle "Clause" .
 
 cx:eng_close a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
-    rcxn:elementOf cx:eng_ThisclosetoVingconstruction ;
+    links:elementOf cx:eng_ThisclosetoVingconstruction ;
     rcxn:hasMetadata cx:eng_close_MD ;
     rcxn:hasTitle "close" .
 
@@ -2273,7 +2273,7 @@ cx:eng_close_MD a rcxn:Metadata ;
 
 cx:eng_come a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
-    rcxn:elementOf cx:comePLUSnoisemannerofmovementVing ;
+    links:elementOf cx:comePLUSnoisemannerofmovementVing ;
     rcxn:hasTitle "come" .
 
 cx:eng_coolconstruction_1 a rcxn:SlotObligatory ;
@@ -2428,12 +2428,12 @@ cx:eng_ditransitive_construction_obj_np_slots a rdf_ns:Seq ;
 
 cx:eng_give a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
-    rcxn:elementOf cx:engLME_GIVEOUTVerbParticleConstruction ;
+    links:elementOf cx:engLME_GIVEOUTVerbParticleConstruction ;
     rcxn:hasTitle "give" .
 
 cx:eng_keep a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
-    rcxn:elementOf cx:eng_Keepacoolheadconstruction ;
+    links:elementOf cx:eng_Keepacoolheadconstruction ;
     rcxn:hasTitle "keep" .
 
 cx:eng_monotransitive_construction_1 a rcxn:SlotOptional ;
@@ -2473,7 +2473,7 @@ cx:eng_resultative_construction_attr_to_inf links:sameFormDifferentFunction cx:e
 
 cx:eng_this a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
-    rcxn:elementOf cx:eng_ThisclosetoVingconstruction ;
+    links:elementOf cx:eng_ThisclosetoVingconstruction ;
     rcxn:hasMetadata cx:eng_this_MD ;
     rcxn:hasTitle "this" .
 
@@ -2721,17 +2721,17 @@ cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_slots a rdf_ns:Seq ;
 
 cx:gmh_Verb a rcxn:Construction ;
     lg:partOfLanguage lg:gmh ;
-    rcxn:elementOf cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit ;
+    links:elementOf cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit ;
     rcxn:hasTitle "Verb" .
 
 cx:gmh_bizen a rcxn:Construction ;
     lg:partOfLanguage lg:gmh ;
-    rcxn:elementOf cx:gmh12C_PräfixverbkonstruktionHandlung ;
+    links:elementOf cx:gmh12C_PräfixverbkonstruktionHandlung ;
     rcxn:hasTitle "bîzen" .
 
 cx:gmh_brechen a rcxn:Construction ;
     lg:partOfLanguage lg:gmh ;
-    rcxn:elementOf cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit ;
+    links:elementOf cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit ;
     rcxn:hasConstructionMeaning cx:gmh_brechen_Meaning ;
     rcxn:hasTitle "brëchen" .
 
@@ -2740,7 +2740,7 @@ cx:gmh_brechen_Meaning a rcxn:ConstructionMeaning ;
 
 cx:gmh_dringen a rcxn:Construction ;
     lg:partOfLanguage lg:gmh ;
-    rcxn:elementOf cx:gmh12C_PräfixverbkonstruktionHandlung ;
+    links:elementOf cx:gmh12C_PräfixverbkonstruktionHandlung ;
     rcxn:hasTitle "dringen" .
 
 cx:gmh_durh_Meaning a rcxn:ConstructionMeaning ;
@@ -2749,12 +2749,12 @@ cx:gmh_durh_Meaning a rcxn:ConstructionMeaning ;
 
 cx:gmh_houwen a rcxn:Construction ;
     lg:partOfLanguage lg:gmh ;
-    rcxn:elementOf cx:gmh12C_PräfixverbkonstruktionHandlung ;
+    links:elementOf cx:gmh12C_PräfixverbkonstruktionHandlung ;
     rcxn:hasTitle "houwen" .
 
 cx:gmh_ich a rcxn:Construction ;
     lg:partOfLanguage lg:gmh ;
-    rcxn:elementOf cx:gmh12C_PräfixverbkonstruktionTätigkeit ;
+    links:elementOf cx:gmh12C_PräfixverbkonstruktionTätigkeit ;
     rcxn:hasConstructionMeaning cx:gmh_ich_Meaning ;
     rcxn:hasTitle "ich" .
 
@@ -2763,17 +2763,17 @@ cx:gmh_ich_Meaning a rcxn:ConstructionMeaning ;
 
 cx:gmh_leiten a rcxn:Construction ;
     lg:partOfLanguage lg:gmh ;
-    rcxn:elementOf cx:gmh12C_PräfixverbkonstruktionHandlung ;
+    links:elementOf cx:gmh12C_PräfixverbkonstruktionHandlung ;
     rcxn:hasTitle "leiten" .
 
 cx:gmh_riten a rcxn:Construction ;
     lg:partOfLanguage lg:gmh ;
-    rcxn:elementOf cx:gmh12C_PräfixverbkonstruktionHandlung ;
+    links:elementOf cx:gmh12C_PräfixverbkonstruktionHandlung ;
     rcxn:hasTitle "rîten" .
 
 cx:gmh_stechen a rcxn:Construction ;
     lg:partOfLanguage lg:gmh ;
-    rcxn:elementOf cx:gmh12C_PräfixverbkonstruktionHandlung ;
+    links:elementOf cx:gmh12C_PräfixverbkonstruktionHandlung ;
     rcxn:hasTitle "stëchen" .
 
 cx:gmh_varn_Meaning a rcxn:ConstructionMeaning ;
@@ -2781,17 +2781,17 @@ cx:gmh_varn_Meaning a rcxn:ConstructionMeaning ;
 
 cx:gmh_æhten a rcxn:Construction ;
     lg:partOfLanguage lg:gmh ;
-    rcxn:elementOf cx:gmh12C_PräfixverbkonstruktionHandlung ;
+    links:elementOf cx:gmh12C_PräfixverbkonstruktionHandlung ;
     rcxn:hasTitle "æhten" .
 
 cx:hat_InvariableSyntacticMorpheme a rcxn:Construction ;
     lg:partOfLanguage lg:hat ;
-    rcxn:elementOf cx:hat_POUbeneficiaryconstruction ;
+    links:elementOf cx:hat_POUbeneficiaryconstruction ;
     rcxn:hasTitle "Invariable Syntactic Morpheme" .
 
 cx:hat_NounPhrase a rcxn:Construction ;
     lg:partOfLanguage lg:hat ;
-    rcxn:elementOf cx:hat_POUbeneficiaryconstruction ;
+    links:elementOf cx:hat_POUbeneficiaryconstruction ;
     rcxn:hasTitle "Noun Phrase" .
 
 cx:hat_POUbeneficiaryconstruction_1 a rcxn:SlotObligatory ;
@@ -2850,7 +2850,7 @@ cx:hat_POUpurposeconstruction_MD a rcxn:Metadata ;
 
 cx:hat_Phrase a rcxn:Construction ;
     lg:partOfLanguage lg:hat ;
-    rcxn:elementOf cx:hat_POUbeneficiaryconstruction ;
+    links:elementOf cx:hat_POUbeneficiaryconstruction ;
     rcxn:hasTitle "Phrase" .
 
 cx:itaStoria_RelativeTopicShiftConstruction_1 a rcxn:SlotObligatory ;
@@ -2924,7 +2924,7 @@ cx:itaStoria_RelativeTopicShiftConstruction_slots a rdf_ns:Seq ;
 
 cx:ita_ConiunctioRelativa a rcxn:Construction ;
     lg:partOfLanguage lg:ita ;
-    rcxn:elementOf cx:itaStoria_RelativeTopicShiftConstruction ;
+    links:elementOf cx:itaStoria_RelativeTopicShiftConstruction ;
     rcxn:hasMetadata cx:ita_ConiunctioRelativa_MD ;
     rcxn:hasTitle "Coniunctio Relativa" .
 
@@ -2944,12 +2944,12 @@ cx:ita_DemonstrativeTopicShiftConstruction_MD a rcxn:Metadata ;
 
 cx:ita_Noun a rcxn:Construction ;
     lg:partOfLanguage lg:ita ;
-    rcxn:elementOf cx:itaStoria_RelativeTopicShiftConstruction ;
+    links:elementOf cx:itaStoria_RelativeTopicShiftConstruction ;
     rcxn:hasTitle "Noun" .
 
 cx:ita_NounPhrase a rcxn:Construction ;
     lg:partOfLanguage lg:ita ;
-    rcxn:elementOf cx:itaStoria_RelativeTopicShiftConstruction ;
+    links:elementOf cx:itaStoria_RelativeTopicShiftConstruction ;
     rcxn:hasTitle "Noun Phrase" .
 
 cx:ita_RelativeClause a rcxn:Construction ;
@@ -2964,7 +2964,7 @@ cx:ita_RelativeClause_MD a rcxn:Metadata ;
 
 cx:ita_SiPassivante a rcxn:Construction ;
     lg:partOfLanguage lg:ita ;
-    rcxn:elementOf cx:itaStoria_RelativeTopicShiftConstruction ;
+    links:elementOf cx:itaStoria_RelativeTopicShiftConstruction ;
     rcxn:hasMetadata cx:ita_SiPassivante_MD ;
     rcxn:hasTitle "Si Passivante" .
 
@@ -2984,7 +2984,7 @@ cx:ita_TemporalSubordinateClause_MD a rcxn:Metadata ;
 
 cx:ita_VerbPhrase a rcxn:Construction ;
     lg:partOfLanguage lg:ita ;
-    rcxn:elementOf cx:itaStoria_RelativeTopicShiftConstruction ;
+    links:elementOf cx:itaStoria_RelativeTopicShiftConstruction ;
     rcxn:hasTitle "Verb Phrase" .
 
 cx:lat_Adjective_1 a rcxn:SlotObligatory .
@@ -3211,17 +3211,17 @@ cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_slots a rdf_ns:Seq ;
 
 cx:spa_PrepositionalPhrase a rcxn:Construction ;
     lg:partOfLanguage lg:spa ;
-    rcxn:elementOf cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause ;
+    links:elementOf cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause ;
     rcxn:hasTitle "Prepositional Phrase" .
 
 cx:spa_Relativizer a rcxn:Construction ;
     lg:partOfLanguage lg:spa ;
-    rcxn:elementOf cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause ;
+    links:elementOf cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause ;
     rcxn:hasTitle "Relativizer" .
 
 cx:spa_Verb a rcxn:Construction ;
     lg:partOfLanguage lg:spa ;
-    rcxn:elementOf cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause ;
+    links:elementOf cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause ;
     rcxn:hasTitle "Verb" .
 
 cx:spa_objectrelativeclause a rcxn:Construction ;
@@ -3257,12 +3257,12 @@ cx:spa_transitiveconstruction_MD a rcxn:Metadata ;
 
 cx:zho_Particle a rcxn:Construction ;
     lg:partOfLanguage lg:zho ;
-    rcxn:elementOf cx:lzh_Dooperationwithoperand1onoperand2construction ;
+    links:elementOf cx:lzh_Dooperationwithoperand1onoperand2construction ;
     rcxn:hasTitle "Particle" .
 
 cx:zho_VerbPhrase a rcxn:Construction ;
     lg:partOfLanguage lg:zho ;
-    rcxn:elementOf cx:lzh_Dooperationwithoperand1onoperand2construction ;
+    links:elementOf cx:lzh_Dooperationwithoperand1onoperand2construction ;
     rcxn:hasTitle "Verb Phrase" .
 
 rd:FernandezSantos_20260130_629471 a ns1:Study ;
@@ -3273,7 +3273,7 @@ rd:FernandezSantos_20260130_629471 a ns1:Study ;
     ns1:studyType ns1:behavioralExperiment .
 
 cx:Noun a rcxn:Construction ;
-    rcxn:elementOf cx:eng_AdjectiveAttributiveconstruction,
+    links:elementOf cx:eng_AdjectiveAttributiveconstruction,
         cx:eng_GenitiveNPConstruction ;
     rcxn:hasMetadata cx:Noun_MD ;
     rcxn:hasTitle "Noun" .
@@ -3287,7 +3287,7 @@ cx:deuStdHigh_AllativeNP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions a rcxn:C
 
 cx:deu_Adjective a rcxn:Construction ;
     lg:partOfLanguage lg:deu ;
-    rcxn:elementOf cx:deuWrSt20_sichNPADJADVvorAugenVP,
+    links:elementOf cx:deuWrSt20_sichNPADJADVvorAugenVP,
         cx:deu_NPDefDetstrongPLUSADJweakPLUSN ;
     rcxn:hasTitle "Adjective" .
 
@@ -3302,7 +3302,7 @@ cx:deu_NPADJstrongPLUSADJstrongPLUSN a rcxn:Construction,
 
 cx:deu_Verb a rcxn:Construction ;
     lg:partOfLanguage lg:deu ;
-    rcxn:elementOf cx:deuWrSt20_sichNPADJADVvorAugenVP,
+    links:elementOf cx:deuWrSt20_sichNPADJADVvorAugenVP,
         cx:deu_AusdemAErmelschuettelnconstruction ;
     rcxn:hasTitle "Verb" .
 
@@ -3370,7 +3370,7 @@ cx:eng_Keepacoolheadconstruction a rcxn:Construction ;
 
 cx:eng_PrepositionalPhrasewithPLUSNP a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
-    rcxn:elementOf cx:engUsSpo_Hadituptoherewith,
+    links:elementOf cx:engUsSpo_Hadituptoherewith,
         cx:engUsSpo_Hadituptoherewithmesoconstruction ;
     rcxn:hasMetadata cx:eng_PrepositionalPhrasewithPLUSNP_MD ;
     rcxn:hasTitle "Prepositional Phrase (with + NP)" .
@@ -3396,50 +3396,50 @@ cx:eng_active_3_argument_structure_construction links:inheritedBy cx:eng_ditrans
 
 cx:gmh_Prefix a rcxn:Construction ;
     lg:partOfLanguage lg:gmh ;
-    rcxn:elementOf cx:gmh12C_PräfixverbkonstruktionHandlung,
+    links:elementOf cx:gmh12C_PräfixverbkonstruktionHandlung,
         cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit ;
     rcxn:hasTitle "Prefix" .
 
 cx:gmh_durh a rcxn:Construction ;
     lg:partOfLanguage lg:gmh ;
-    rcxn:elementOf cx:gmh12C_PräfixverbkonstruktionHandlung,
+    links:elementOf cx:gmh12C_PräfixverbkonstruktionHandlung,
         cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit ;
     rcxn:hasConstructionMeaning cx:gmh_durh_Meaning ;
     rcxn:hasTitle "durh" .
 
 cx:gmh_gan a rcxn:Construction ;
     lg:partOfLanguage lg:gmh ;
-    rcxn:elementOf cx:gmh12C_PräfixverbkonstruktionHandlung,
+    links:elementOf cx:gmh12C_PräfixverbkonstruktionHandlung,
         cx:gmh12C_PräfixverbkonstruktionTätigkeit ;
     rcxn:hasTitle "gân" .
 
 cx:gmh_varn a rcxn:Construction ;
     lg:partOfLanguage lg:gmh ;
-    rcxn:elementOf cx:gmh12C_PräfixverbkonstruktionHandlung,
+    links:elementOf cx:gmh12C_PräfixverbkonstruktionHandlung,
         cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit ;
     rcxn:hasConstructionMeaning cx:gmh_varn_Meaning ;
     rcxn:hasTitle "varn" .
 
 cx:spa_NounPhrase a rcxn:Construction ;
     lg:partOfLanguage lg:spa ;
-    rcxn:elementOf cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause ;
+    links:elementOf cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause ;
     rcxn:hasTitle "Noun Phrase" .
 
 cx:zho_NounPhrase a rcxn:Construction ;
     lg:partOfLanguage lg:zho ;
-    rcxn:elementOf cx:lzh_Dooperationwithoperand1onoperand2construction ;
+    links:elementOf cx:lzh_Dooperationwithoperand1onoperand2construction ;
     rcxn:hasTitle "Noun Phrase" .
 
 cx:deu_Noun a rcxn:Construction ;
     lg:partOfLanguage lg:deu ;
-    rcxn:elementOf cx:deuWrSt20_sichNPADJADVvorAugenVP,
+    links:elementOf cx:deuWrSt20_sichNPADJADVvorAugenVP,
         cx:deu_AusdemAErmelschuettelnconstruction,
         cx:deu_NPDefDetstrongPLUSADJweakPLUSN ;
     rcxn:hasTitle "Noun" .
 
 cx:deu_NounPhrase a rcxn:Construction ;
     lg:partOfLanguage lg:deu ;
-    rcxn:elementOf cx:deuStdHigh_AllativeNP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions,
+    links:elementOf cx:deuStdHigh_AllativeNP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions,
         cx:deuWrSt20_sichNPADJADVvorAugenVP ;
     rcxn:hasTitle "Noun Phrase" .
 
@@ -3489,19 +3489,19 @@ cx:eng_AdjectivePredicativeconstruction a rcxn:Construction ;
 
 cx:eng_Particle a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
-    rcxn:elementOf cx:comePLUSnoisemannerofmovementVing,
+    links:elementOf cx:comePLUSnoisemannerofmovementVing,
         cx:engLME_GIVEOUTVerbParticleConstruction ;
     rcxn:hasTitle "Particle" .
 
 cx:eng_Phrase a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
-    rcxn:elementOf cx:engLME_Argumentstructureconstruction,
+    links:elementOf cx:engLME_Argumentstructureconstruction,
         cx:eng_AdjectivePredicativeconstruction ;
     rcxn:hasTitle "Phrase" .
 
 cx:eng_VerbPhrase a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
-    rcxn:elementOf cx:engUsUkWr_EvaluativeAttributionConstruction ;
+    links:elementOf cx:engUsUkWr_EvaluativeAttributionConstruction ;
     rcxn:hasTitle "Verb Phrase" .
 
 cx:eng_ditransitive_construction_obj_inf a rcxn:Construction ;
@@ -3535,7 +3535,7 @@ cx:gmh12C_PräfixverbkonstruktionTätigkeit a rcxn:Construction ;
 
 cx:gmh_NounPhrase a rcxn:Construction ;
     lg:partOfLanguage lg:gmh ;
-    rcxn:elementOf cx:gmh12C_PräfixverbkonstruktionHandlung,
+    links:elementOf cx:gmh12C_PräfixverbkonstruktionHandlung,
         cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit ;
     rcxn:hasTitle "Noun Phrase" .
 
@@ -3557,8 +3557,8 @@ cx:engInf_coolasadmirableconstruction a rcxn:Construction ;
         cx:engInf_coolasadmirableconstruction_Ex_C ;
     rdfs:comment "first attested: 1884, cf. OED" ;
     lg:partOfLanguage lg:engInf ;
+    links:elementOf cx:engInf_Coolexclamativeconstruction ;
     links:isMetaphoricalExtensionOf cx:eng_coolconstruction ;
-    rcxn:elementOf cx:engInf_Coolexclamativeconstruction ;
     rcxn:hasConstructionMeaning cx:engInf_coolasadmirableconstruction_Meaning ;
     rcxn:hasMetadata cx:engInf_coolasadmirableconstruction_MD ;
     rcxn:hasSlots cx:engInf_coolasadmirableconstruction_slots ;
@@ -3577,8 +3577,8 @@ cx:engLME_coolasemotionconstruction a rcxn:Construction ;
         cx:engLME_coolasemotionconstruction_Ex_B ;
     rdfs:comment "first attested: Old English, Beowulf (Oxford English Dictionary)" ;
     lg:partOfLanguage lg:eng ;
+    links:elementOf cx:eng_Keepacoolheadconstruction ;
     links:isMetaphoricalExtensionOf cx:eng_coolconstruction ;
-    rcxn:elementOf cx:eng_Keepacoolheadconstruction ;
     rcxn:hasConstructionMeaning cx:engLME_coolasemotionconstruction_Meaning ;
     rcxn:hasMetadata cx:engLME_coolasemotionconstruction_MD ;
     rcxn:hasSlots cx:engLME_coolasemotionconstruction_slots ;
@@ -3597,7 +3597,7 @@ cx:engUsSpo_Hadituptoherewith a rcxn:Construction ;
 
 cx:eng_cool a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
-    rcxn:elementOf cx:engInf_coolasadmirableconstruction,
+    links:elementOf cx:engInf_coolasadmirableconstruction,
         cx:engLME_coolascolourconstruction,
         cx:engLME_coolasemotionconstruction,
         cx:eng_coolconstruction ;
@@ -3624,7 +3624,7 @@ cx:engLME_AttributeConstructionAttrAdj a rcxn:Construction ;
 
 cx:eng_Adjective a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
-    rcxn:elementOf cx:engInf_coolasadmirableconstruction,
+    links:elementOf cx:engInf_coolasadmirableconstruction,
         cx:engLME_coolascolourconstruction,
         cx:engLME_coolasemotionconstruction,
         cx:eng_AdjectivePhrase,
@@ -3702,7 +3702,7 @@ cx:eng_coolconstruction_Sources a cx:Collection ;
 
 cx:eng_AdjectivePhrase a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
-    rcxn:elementOf cx:engLME_AttributeConstructionAttrAdj,
+    links:elementOf cx:engLME_AttributeConstructionAttrAdj,
         cx:engUsUkWr_EvaluativeAttributionConstruction,
         cx:eng_AdjectiveAttributiveconstruction,
         cx:eng_AdjectivePredicativeconstruction ;
@@ -3713,7 +3713,7 @@ cx:eng_AdjectivePhrase a rcxn:Construction ;
 
 cx:eng_PrepositionalPhrase a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
-    rcxn:elementOf cx:comePLUSnoisemannerofmovementVing,
+    links:elementOf cx:comePLUSnoisemannerofmovementVing,
         cx:deuStdHigh_AllativeNP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions,
         cx:engUsUkWr_EvaluativeAttributionConstruction,
         cx:eng_AdjectivePhrase ;
@@ -3812,7 +3812,7 @@ cx:deu_AusdemAErmelschuettelnconstruction a rcxn:Construction ;
 
 cx:eng_Verb a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
-    rcxn:elementOf cx:comePLUSnoisemannerofmovementVing,
+    links:elementOf cx:comePLUSnoisemannerofmovementVing,
         cx:engLME_Argumentstructureconstruction,
         cx:engLME_AttributeConstructionAttrAdj,
         cx:engLME_Ditransitiveconstruction,
@@ -3826,7 +3826,7 @@ cx:eng_Verb a rcxn:Construction ;
 
 cx:eng_NounPhrase a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
-    rcxn:elementOf cx:comePLUSnoisemannerofmovementVing,
+    links:elementOf cx:comePLUSnoisemannerofmovementVing,
         cx:engLME_AttributeConstructionAttrAdj,
         cx:engLME_GIVEOUTVerbParticleConstruction,
         cx:engUsSpo_Hadituptoherewith,

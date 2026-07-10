@@ -22,7 +22,7 @@ cx:Active3ArgumentStructureConstruction_MD a rcxn:Metadata ;
 
 cx:engLME_Resultativeconstruction links:sameFormDifferentFunction cx:engLME_AttributeConstructionAttrAdj .
 
-cx:eng_AdjectivePhrase rcxn:elementOf cx:engLME_AttributeConstructionAttrAdj .
+cx:eng_AdjectivePhrase links:elementOf cx:engLME_AttributeConstructionAttrAdj .
 
 cx:engLME_AttributeConstructionAttrAdj_1 a rcxn:SlotOptional ;
     rcxn:hasOtherSemanticContribution "Æffector" ;
@@ -82,9 +82,9 @@ cx:engLME_AttributeConstructionAttrAdj_slots a rdf:Seq ;
     rdf:_3 cx:engLME_AttributeConstructionAttrAdj_3 ;
     rdf:_4 cx:engLME_AttributeConstructionAttrAdj_4 .
 
-cx:eng_Verb rcxn:elementOf cx:engLME_AttributeConstructionAttrAdj .
+cx:eng_Verb links:elementOf cx:engLME_AttributeConstructionAttrAdj .
 
-cx:eng_NounPhrase rcxn:elementOf cx:engLME_AttributeConstructionAttrAdj .
+cx:eng_NounPhrase links:elementOf cx:engLME_AttributeConstructionAttrAdj .
 
 cx:engLME_AttributeConstructionAttrAdj a rcxn:Construction ;
     cx:hasExample cx:engLME_AttributeConstructionAttrAdj_Ex_A ;

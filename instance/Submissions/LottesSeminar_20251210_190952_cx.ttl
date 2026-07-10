@@ -24,7 +24,7 @@ cx:Adjectiveexclamativeconstruction_MD a rcxn:Metadata ;
     rcxn:annotator membr:Petrenko ;
     dcterm:created "2025-12-10"^^xsd:date .
 
-cx:engInf_coolasadmirableconstruction rcxn:elementOf cx:engInf_Coolexclamativeconstruction .
+cx:engInf_coolasadmirableconstruction links:elementOf cx:engInf_Coolexclamativeconstruction .
 
 cx:engInf_Coolexclamativeconstruction_1 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm cx:engInf_Coolexclamativeconstruction_1_Form .

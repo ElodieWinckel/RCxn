@@ -15,7 +15,7 @@ cx:eng_Adjective a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
     rcxn:hasMetadata cx:eng_Adjective_MD ;
     rcxn:hasTitle "Adjective" ;
-    rcxn:elementOf cx:eng_coolconstruction .
+    links:elementOf cx:eng_coolconstruction .
 
 cx:eng_Adjective_MD a rcxn:Metadata ;
     rcxn:annotator membr:Winckel ;
@@ -90,7 +90,7 @@ cx:engLME_coolasemotionconstruction a rcxn:Construction ;
     RDFS:comment "first attested: Old English, Beowulf (Oxford English Dictionary)" ;
     lg:partOfLanguage lg:eng ;
     links:isMetaphoricalExtensionOf cx:eng_coolconstruction ;
-    rcxn:elementOf cx:eng_Keepacoolheadconstruction ;
+    links:elementOf cx:eng_Keepacoolheadconstruction ;
     rcxn:hasConstructionMeaning cx:engLME_coolasemotionconstruction_Meaning ;
     rcxn:hasMetadata cx:engLME_coolasemotionconstruction_MD ;
     rcxn:hasSlots cx:engLME_coolasemotionconstruction_slots ;
@@ -195,7 +195,7 @@ cx:engInf_coolasadmirableconstruction_Meaning a rcxn:ConstructionMeaning ;
 membr:Project_Winckel_F2511281100 rsrch:basedOn cx:eng_AdjectivePhrase .
 
 cx:Adverb a rcxn:Construction ;
-    rcxn:elementOf cx:eng_AdjectivePhrase ;
+    links:elementOf cx:eng_AdjectivePhrase ;
     rcxn:hasMetadata cx:Adverb_MD ;
     rcxn:hasTitle "Adverb" .
 
@@ -206,7 +206,7 @@ cx:Adverb_MD a rcxn:Metadata ;
     rcxn:annotator membr:Petrenko ;
     dcterm:created "2025-12-08"^^xsd:date .
 
-cx:eng_Adjective rcxn:elementOf cx:eng_AdjectivePhrase .
+cx:eng_Adjective links:elementOf cx:eng_AdjectivePhrase .
 
 cx:eng_AdjectivePhrase_1 a rcxn:SlotOptional ;
     rcxn:hasOtherSemanticContribution "Premodifier" ;
@@ -244,7 +244,7 @@ cx:eng_AdjectivePhrase_slots a rdf:Seq ;
     rdf:_2 cx:eng_AdjectivePhrase_2 ;
     rdf:_3 cx:eng_AdjectivePhrase_3 .
 
-cx:eng_PrepositionalPhrase rcxn:elementOf cx:eng_AdjectivePhrase .
+cx:eng_PrepositionalPhrase links:elementOf cx:eng_AdjectivePhrase .
 
 cx:eng_AdjectivePhrase a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
@@ -400,7 +400,7 @@ cx:eng_coolconstruction_slots a rdf:Seq ;
 membr:Project_Winckel_F2511281100 rsrch:basedOn cx:eng_AdjectiveAttributiveconstruction .
 
 cx:Determiner a rcxn:Construction ;
-    rcxn:elementOf cx:eng_AdjectiveAttributiveconstruction ;
+    links:elementOf cx:eng_AdjectiveAttributiveconstruction ;
     rcxn:hasMetadata cx:Determiner_MD ;
     rcxn:hasTitle "Determiner" .
 
@@ -412,7 +412,7 @@ cx:Determiner_MD a rcxn:Metadata ;
     dcterm:created "2025-12-01"^^xsd:date .
 
 cx:Noun a rcxn:Construction ;
-    rcxn:elementOf cx:eng_AdjectiveAttributiveconstruction ;
+    links:elementOf cx:eng_AdjectiveAttributiveconstruction ;
     rcxn:hasMetadata cx:Noun_MD ;
     rcxn:hasTitle "Noun" .
 
@@ -456,7 +456,7 @@ cx:eng_AdjectiveAttributiveconstruction_slots a rdf:Seq ;
     rdf:_2 cx:eng_AdjectiveAttributiveconstruction_2 ;
     rdf:_3 cx:eng_AdjectiveAttributiveconstruction_3 .
 
-cx:eng_AdjectivePhrase rcxn:elementOf cx:eng_AdjectiveAttributiveconstruction .
+cx:eng_AdjectivePhrase links:elementOf cx:eng_AdjectiveAttributiveconstruction .
 
 cx:eng_AdjectiveAttributiveconstruction a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
@@ -481,7 +481,7 @@ cx:eng_AdjectiveAttributiveconstruction a rcxn:Construction ;
 membr:Project_Winckel_F2511281100 rsrch:basedOn cx:eng_AdjectivePredicativeconstruction .
 
 cx:Copula a rcxn:Construction ;
-    rcxn:elementOf cx:eng_AdjectivePredicativeconstruction ;
+    links:elementOf cx:eng_AdjectivePredicativeconstruction ;
     rcxn:hasMetadata cx:Copula_MD ;
     rcxn:hasTitle "Copula" .
 
@@ -492,7 +492,7 @@ cx:Copula_MD a rcxn:Metadata ;
     rcxn:annotator membr:Petrenko ;
     dcterm:created "2025-12-01"^^xsd:date .
 
-cx:eng_AdjectivePhrase rcxn:elementOf cx:eng_AdjectivePredicativeconstruction .
+cx:eng_AdjectivePhrase links:elementOf cx:eng_AdjectivePredicativeconstruction .
 
 cx:eng_AdjectivePredicativeconstruction_1 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm cx:eng_AdjectivePredicativeconstruction_1_Form .
@@ -527,7 +527,7 @@ cx:eng_AdjectivePredicativeconstruction_slots a rdf:Seq ;
     rdf:_2 cx:eng_AdjectivePredicativeconstruction_2 ;
     rdf:_3 cx:eng_AdjectivePredicativeconstruction_3 .
 
-cx:eng_Phrase rcxn:elementOf cx:eng_AdjectivePredicativeconstruction .
+cx:eng_Phrase links:elementOf cx:eng_AdjectivePredicativeconstruction .
 
 cx:eng_AdjectivePredicativeconstruction a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;

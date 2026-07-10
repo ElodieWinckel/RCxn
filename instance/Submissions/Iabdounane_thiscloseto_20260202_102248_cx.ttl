@@ -1,6 +1,7 @@
 @prefix cx: <http://example.org/cx/> .
 @prefix dcterm: <http://purl.org/dc/terms/> .
 @prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
+@prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#> .
 @prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
 @prefix olia: <http://purl.org/olia/olia.owl#> .
 @prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
@@ -13,7 +14,7 @@ membr:Project_Iabdounane_F250218 rsrch:basedOn cx:eng_ThisclosetoVingconstructio
 
 cx:eng_PrepositionalPhrasetoPLUSVing a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
-    rcxn:elementOf cx:eng_ThisclosetoVingconstruction ;
+    links:elementOf cx:eng_ThisclosetoVingconstruction ;
     rcxn:hasMetadata cx:eng_PrepositionalPhrasetoPLUSVing_MD ;
     rcxn:hasTitle "Prepositional Phrase (to + V-ing)" .
 
@@ -84,11 +85,11 @@ cx:eng_ThisclosetoVingconstruction_2_slots a rdf:Seq ;
     rdf:_2 cx:eng_ThisclosetoVingconstruction_4 ;
     rdf:_3 cx:eng_ThisclosetoVingconstruction_5 .
 
-cx:eng_Verb rcxn:elementOf cx:eng_ThisclosetoVingconstruction .
+cx:eng_Verb links:elementOf cx:eng_ThisclosetoVingconstruction .
 
 cx:eng_close a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
-    rcxn:elementOf cx:eng_ThisclosetoVingconstruction ;
+    links:elementOf cx:eng_ThisclosetoVingconstruction ;
     rcxn:hasMetadata cx:eng_close_MD ;
     rcxn:hasTitle "close" .
 
@@ -98,7 +99,7 @@ cx:eng_close_MD a rcxn:Metadata ;
 
 cx:eng_this a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
-    rcxn:elementOf cx:eng_ThisclosetoVingconstruction ;
+    links:elementOf cx:eng_ThisclosetoVingconstruction ;
     rcxn:hasMetadata cx:eng_this_MD ;
     rcxn:hasTitle "this" .
 

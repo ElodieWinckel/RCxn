@@ -54,9 +54,9 @@ cx:engUsSpo_Hadituptoherewith_slots a rdf:Seq ;
     rdf:_2 cx:engUsSpo_Hadituptoherewith_2 ;
     rdf:_3 cx:engUsSpo_Hadituptoherewith_3 .
 
-cx:eng_NounPhrase rcxn:elementOf cx:engUsSpo_Hadituptoherewith .
+cx:eng_NounPhrase links:elementOf cx:engUsSpo_Hadituptoherewith .
 
-cx:eng_PrepositionalPhrasewithPLUSNP rcxn:elementOf cx:engUsSpo_Hadituptoherewith .
+cx:eng_PrepositionalPhrasewithPLUSNP links:elementOf cx:engUsSpo_Hadituptoherewith .
 
 cx:engUsSpo_Hadituptoherewith a rcxn:Construction ;
     cx:hasExample cx:engUsSpo_Hadituptoherewith_Ex_A ;

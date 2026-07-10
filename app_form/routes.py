@@ -700,7 +700,7 @@ def form_submit():
                     print("New construction needed!")
                 # In any case, write a triplet defining this construction as the object of hasStem, and a triplet for the corresponding link
                 g.add((slot_form_uri, rcxn.hasStem, cx[cleaned_stem_construction]))
-                g.add((cx[cleaned_stem_construction], rcxn.elementOf, cx[construction_name_cleaned]))
+                g.add((cx[cleaned_stem_construction], links.elementOf, cx[construction_name_cleaned]))
         if surface.strip():
             g.add((slot_form_uri, rcxn.hasSurfaceForm, Literal(surface)))
         if translation.strip():
@@ -731,7 +731,7 @@ def form_submit():
                     print("New construction needed!")
                 # In any case, write a triplet defining this construction the object of hasSyntacticForm, and a triplet for the corresponding link
                 g.add((slot_form_uri, rcxn.hasSyntacticForm, cx[cleaned_morphosyn_construction]))
-                g.add((cx[cleaned_morphosyn_construction], rcxn.elementOf, cx[construction_name_cleaned]))
+                g.add((cx[cleaned_morphosyn_construction], links.elementOf, cx[construction_name_cleaned]))
 
         # If defined, attribute its syntactic function and case to the element/slot.
         if syntactic_function.strip():

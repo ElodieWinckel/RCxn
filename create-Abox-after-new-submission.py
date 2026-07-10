@@ -296,13 +296,13 @@ add_user("Winckel",
 for subj, part in g.subject_objects(rcxn.hasSyntacticForm):
     # identify the IRI of the construction
     construction_uri = re.sub(r'_\d+_Form$', '', subj)
-    g.add((part, rcxn.elementOf, URIRef(construction_uri)))
+    g.add((part, links.elementOf, URIRef(construction_uri)))
 
 # If some construction uses another construction as construction element (stem), then link back the second construction to the first one
 for subj, part in g.subject_objects(rcxn.hasStem):
     # identify the IRI of the construction
     construction_uri = re.sub(r'_\d+_Form$', '', subj)
-    g.add((part, rcxn.elementOf, URIRef(construction_uri)))
+    g.add((part, links.elementOf, URIRef(construction_uri)))
 
 for mainCX in g.subjects(rdf_ns.type, rcxn.Construction):
     # identify inheritsFrom links
@@ -336,7 +336,7 @@ for subj, obj in g.subject_objects(links.metaphoricalLink):
 # If construction A uses the gesture construction B, then B is an element of A
 for subj, iri in g.subject_objects(gest.hasGesture):
         obj = g.value(subject=iri, predicate=gest.uses)
-        g.add((obj, rcxn.elementOf, subj))
+        g.add((obj, links.elementOf, subj))
 ###############################################################################
 # We now distinguish between the IRI that belong to cx.ttl, membr.ttl and references.ttl
 ###############################################################################
