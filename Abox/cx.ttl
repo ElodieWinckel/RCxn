@@ -1613,12 +1613,12 @@ cx:engLME_SuperlativeConstruction_1 a rcxn:SlotObligatory ;
     compcon:hasCompCon compcon:cxn_adjectival-phrase,
         compcon:cxn_adjective,
         compcon:cxn_attributive-phrase,
-        compcon:cxn_modification-construction,
         compcon:cxn_modifier,
         compcon:cxn_superlative-form,
         compcon:inf_modification,
         compcon:sem_property-concept,
         compcon:sem_superlative-degree,
+        compcon:str_degree-affix,
         compcon:str_degree-marker .
 
 cx:engLME_SuperlativeConstruction_2 a rcxn:SlotObligatory ;
