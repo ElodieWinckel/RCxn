@@ -19,7 +19,7 @@ membr:Project_Winckel_2601131454_F2601131454 rsrch:basedOn <http://example.org/c
     rcxn:hasTitle "Attribute Construction (Obj: NP)" .
 
 <http://example.org/cx/AttributeConstructionObj:NP_MD> a rcxn:Metadata ;
-    cx:annotator membr:Winckel ;
+    rcxn:annotator membr:Winckel ;
     dcterm:created "2026-01-16"^^xsd:date .
 
 cx:CausedMotionConstrutionPPto a rcxn:Construction ;
@@ -28,7 +28,7 @@ cx:CausedMotionConstrutionPPto a rcxn:Construction ;
     rcxn:hasTitle "Caused-Motion Constrution (PPto)" .
 
 cx:CausedMotionConstrutionPPto_MD a rcxn:Metadata ;
-    cx:annotator membr:Winckel ;
+    rcxn:annotator membr:Winckel ;
     dcterm:created "2026-01-16"^^xsd:date .
 
 <http://example.org/cx/eng_ditransitive_construction_obj_np_1> a rcxn:SlotOptional ;
@@ -93,9 +93,9 @@ cx:CausedMotionConstrutionPPto_MD a rcxn:Metadata ;
     rdf:_3 <http://example.org/cx/eng_ditransitive_construction_obj_np_3> ;
     rdf:_4 <http://example.org/cx/eng_ditransitive_construction_obj_np_4> .
 
-cx:eng_Verb rcxn:elementOf <http://example.org/cx/eng_ditransitive_construction_obj_np> .
+cx:eng_Verb links:elementOf <http://example.org/cx/eng_ditransitive_construction_obj_np> .
 
-cx:eng_NounPhrase rcxn:elementOf <http://example.org/cx/eng_ditransitive_construction_obj_np> .
+cx:eng_NounPhrase links:elementOf <http://example.org/cx/eng_ditransitive_construction_obj_np> .
 
 <http://example.org/cx/eng_ditransitive_construction_obj_np> a rcxn:Construction ;
     cx:hasExample <http://example.org/cx/eng_ditransitive_construction_obj_np_Ex_A> ;

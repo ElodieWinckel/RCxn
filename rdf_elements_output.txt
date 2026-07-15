@@ -61,7 +61,7 @@ olia.hasVoice
 property_uri
 rcxn.annotator
 rcxn.creationDate
-rcxn.elementOf
+links.elementOf
 rcxn.hasConstructionMeaning
 rcxn.hasIS
 rcxn.hasMeaning

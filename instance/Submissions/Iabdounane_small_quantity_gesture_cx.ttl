@@ -1,0 +1,45 @@
+@prefix cx: <http://example.org/cx/> .
+@prefix dcterm: <http://purl.org/dc/terms/> .
+@prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
+@prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
+@prefix gest: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/gest#> .
+@prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cx:SmallQuantityGestureConstruction a gest:GestureConstruction ;
+    gest:hasForm cx:SmallQuantityGestureConstruction_Form ;
+    lg:partOfLanguage lg:eng ;
+    gest:hasMeaning cx:SmallQuantityGestureConstruction_Meaning ;
+    rcxn:hasTitle "Small Quantity Gesture Construction" ;
+    rcxn:hasMetadata cx:SmallQuantityGestureConstruction_MD .
+
+cx:SmallQuantityGestureConstruction_Form a gest:GestureForm ;
+    gest:timing "Usually for the entire duration of the co-occurring verbal construction." ;
+    gest:handedness gest:OneHand ;
+    gest:handshape "Middle, right, and little fingers retracted toward the palm.",
+        "Thumb and index extended or crooked and parallel to each other." ;
+    gest:movement "Static hold or beat." ;
+    gest:orientation "Palm Lateral." ;
+    gest:position "Central space or at face level." .
+
+cx:SmallQuantityGestureConstruction_Meaning a gest:GestureMeaning ;
+    gest:pragmaticProperty "Affective/evaluative framing.",
+        "Foregrounding the small quantity of the referent." ;
+    gest:semanticProperty "Small quantity." .
+
+cx:SmallQuantityGestureConstruction_MD a rcxn:Metadata ;
+    rcxn:annotator membr:Iabdounane ;
+    dcterm:created "2026-07-07"^^xsd:date .
+
+membr:Project_Iabdounane_F250218 rsrch:basedOn cx:SmallQuantityGestureConstruction .
+
+# The following illustrates how the "This close to being construction" uses this gesture
+
+cx:eng_ThisclosetoVingconstruction gest:hasGesture cx:eng_ThisclosetoVingconstruction_Gest .
+
+cx:eng_ThisclosetoVingconstruction_Gest a gest:GestureUsage ;
+    gest:uses cx:SmallQuantityGestureConstruction ;
+    gest:starts cx:eng_ThisclosetoVingconstruction_4 ;
+    gest:ends cx:eng_ThisclosetoVingconstruction_6 .

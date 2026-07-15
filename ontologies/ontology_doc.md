@@ -18,7 +18,7 @@
 
 [Metadata](#metadata)
 
-[Similar cxs in other Cxns \[o\]](#similar-cxs-in-other-cxns-[o])
+[Similar cxs in other Cxns](#similar-cxs-in-other-cxns)
 
 [MODULE Casa (casa)](#module-casa-\(casa\))
 
@@ -28,7 +28,7 @@
 
 [Findings](#findings)
 
-[MODULE Language](#module-language)
+[MODULE Language (lg)](#module-language-\(lg\))
 
 [MODULE Text](#module-text)
 
@@ -36,9 +36,17 @@
 
 [MODULE Evidence](#module-evidence)
 
-[MODULE Comparative concepts](#module-comparative-concepts)
+[MODULE Comparative concepts (compcon)](#module-comparative-concepts-\(compcon\))
 
-# MODULE Constructicon (rcxn)
+[MODULE Gesture constructions (gest)](#module-gesture-constructions-\(gest\))
+
+[Description of gesture constructions](#description-of-gesture-constructions)
+
+[Multimodal constructions (using gesture constructions)](#multimodal-constructions-\(using-gesture-constructions\))
+
+# MODULE Constructicon (rcxn) {#module-constructicon-(rcxn)}
+
+Prefix (rcxn): https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn\#
 
 This module uses Dublin Core (dc; description), RDF Schema (rdfs; label), Schema Datatype (xsd; date), Olia (olia; DiscourseFeature & oliatop; SemanticRole) and the research module (rsrch; Project).
 
@@ -46,7 +54,7 @@ This module uses Dublin Core (dc; description), RDF Schema (rdfs; label), Schema
 | :---- | :---- |
 | description | Construction; linguistic sign with a form component and a meaning component. A network of constructions builds a Constructicon. |
 
-## Title
+## Title {#title}
 
 | Property rcxn\#hasTitle |  |
 | :---- | :---- |
@@ -55,7 +63,7 @@ This module uses Dublin Core (dc; description), RDF Schema (rdfs; label), Schema
 | range (object) | Literal |
 | label | Title (en) |
 
-## Semantic function of the construction
+## Semantic function of the construction {#semantic-function-of-the-construction}
 
 | Class rcxn\#ConstructionMeaning |  |
 | :---- | :---- |
@@ -81,7 +89,7 @@ This module uses Dublin Core (dc; description), RDF Schema (rdfs; label), Schema
 | range (object) | Literal |
 | label | Image-Schema |
 
-## Slots
+## Slots {#slots}
 
 | Class rcxn\#Slot |  |
 | :---- | :---- |
@@ -158,15 +166,6 @@ We are using sequences because the elements should be presented in a fixed order
 | range (object) | rcxn\#Construction |
 | label | Syntactic form (en) |
 
-As a corollary to hasSyntacticForm, it was necessary to add a link between construction that relates a construction back to all construction that use it (for example, the NP construction will potentially be used by many constructions):
-
-| Property rcxn\#elementOf |  |
-| :---- | :---- |
-| description | Relates a construction to the constructions that it is a part of. If the form of one construction element of A is identified as B (property hasSyntacticForm), then B is an element of B. |
-| domain (subject) | rcxn\#Construction |
-| range (object) | rcxn\#Construction |
-| label | Construction Element of (en) |
-
 | Property rcxn\#hasSyntacticFunction |  |
 | :---- | :---- |
 | description | Relates the construction element to its function. Typical functions are “subject”, “complement”, “modifier” etc. |
@@ -241,7 +240,7 @@ To describe information structure, the current ontology is very simple. The onto
 | range (object) | rcxn\#informationStructure |
 | label | Information Structure |
 
-## Metadata
+## Metadata {#metadata}
 
 | Class rcxn\#Metadata |  |
 | :---- | :---- |
@@ -262,11 +261,13 @@ To describe information structure, the current ontology is very simple. The onto
 
 Note that we use dcterm:created in the database to store the date of creation of the construction entry.
 
-## Similar cxs in other Cxns
+## Similar cxs in other Cxns {#similar-cxs-in-other-cxns}
 
 To date, links to URLs of other reference constructicons are stored via the property RDFS:seeAlso. We might, however, change this is the future.
 
-# MODULE Casa (casa)
+# MODULE Casa (casa) {#module-casa-(casa)}
+
+Prefix (casa): https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/casa\#
 
 Because the Research Constructicon project is tightly linked to the CASA Project ([https://constructicon.de/](https://constructicon.de/)), and because the entries of CASA are imported in the Research Constructicon, we needed to adopt some of their terminology.
 
@@ -277,7 +278,9 @@ Because the Research Constructicon project is tightly linked to the CASA Project
 | range (object) | Literal |
 | label | Syntactic function (CASA terminology) (en) |
 
-# MODULE Research (rsrch)
+# MODULE Research (rsrch) {#module-research-(rsrch)}
+
+Prefix (rsrch): https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch\#
 
 This module uses Dublin Core (dc; description), RDF Schema (rdfs; label) and Friend-of-a-friend (foaf; Person, Project).
 
@@ -304,7 +307,7 @@ This module uses Dublin Core (dc; description), RDF Schema (rdfs; label) and Fri
 | subclass of | rcxn\#Member |
 | disjoint with | Researcher |
 
-## Research Question
+## Research Question {#research-question}
 
 | Class rsrch\#Project |  |
 | :---- | :---- |
@@ -324,7 +327,7 @@ This module uses Dublin Core (dc; description), RDF Schema (rdfs; label) and Fri
 | domain (subject) | rsrch\#Project |
 | range (object) | Literal |
 
-## Findings
+## Findings {#findings}
 
 Research questions lead to findings. Findings are based on research data on the one hand and constructions on the other hand.
 
@@ -350,7 +353,9 @@ Research questions lead to findings. Findings are based on research data on the 
 | range (object) | cx\#Construction |
 | Characteristics | Asymmetric |
 
-# MODULE Language
+# MODULE Language (lg) {#module-language-(lg)}
+
+Prefix (lg): https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg\#
 
 We make here a distinction between “Macrolanguages” and “Language Variety”.
 
@@ -397,16 +402,16 @@ Our hierarchy of languages is implemented as individuals directly in the ontolog
 | \<\!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg\#deu \--\>     \<owl:NamedIndividual rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg\#deu"\>         \<rdf:type rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg\#macrolanguage"/\>         \<rdfs:label xml:lang="en"\>German\</rdfs:label\>     \</owl:NamedIndividual\> |
 | :---- |
 
-# MODULE Text
+# MODULE Text {#module-text}
 
 This ontology is work in progress. It should deal with translation, transliteration, transcription, and glosses. Possibly, we could also add a property that links an example to the source of the example.
 
-# MODULE Links
+# MODULE Links {#module-links}
 
 The ontology for links is presented in the following publication:   
 Winckel, Elodie. 2025\. Defining relationships in the constructional network: A Semantic Web ontology for Construction Grammar. *Lexicographica* 41(1). 299–317. [https://doi.org/10.1515/lex-2025-0012](https://doi.org/10.1515/lex-2025-0012).
 
-Since this first version 1.0, I added this property (which is therefore part of the 1.1 version):
+Since this first version 1.0, I added the following properties (which are therefore part of the 1.1 version):
 
 | Property links\#isMetaphoricalExtensionOf |  |
 | :---- | :---- |
@@ -414,12 +419,209 @@ Since this first version 1.0, I added this property (which is therefore part of 
 | subproperty of | links\#LanguageInternalLink |
 | label | is a metaphorical extension of |
 
-# MODULE Evidence
+As a corollary to hasSyntacticForm, it was necessary to add the link \#elementOf that relates a construction back to all constructions that use it (for example, the NP construction will potentially be used by many constructions). 
+
+| Property links\#elementOf |  |
+| :---- | :---- |
+| description | Relates a construction to the constructions that it is a part of. If element A uses B, then B is an element of A. |
+| subproperty of | links\#LanguageInternalLink |
+| label | Element of (en) |
+
+# MODULE Evidence {#module-evidence}
 
 The ontology does not exist yet, but should comprise definition of resources to deal with colloprofiles, refer to repositories with data and/or analyses.
 
 This ontology also include a way to link to bibliographical references. This part will be based on Dublin Core (db).
 
-# MODULE Comparative concepts
+# MODULE Comparative concepts (compcon) {#module-comparative-concepts-(compcon)}
+
+Prefix (compcon): https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/compcon\#
 
 The ontology exists, but was not really defined by us. Description is work-in-progress.
+
+# MODULE Gesture constructions (gest) {#module-gesture-constructions-(gest)}
+
+Prefix (gest): [https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/gest\#](https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/gest#)
+
+This module uses \#Construction and \#Slot from the rcxn module.
+
+## Description of gesture constructions {#description-of-gesture-constructions}
+
+| Class gest\#GestureConstruction |  |
+| :---- | :---- |
+| definition | A specific bodily gesture paired with a particular semantic or pragmatic function within a linguistic context. |
+| subclass of | rcxn\#Construction |
+| label | Gesture construction (en) |
+
+The formal properties gest\#handedness, gest\#handshape, gest\#movement, gest\#orientation, gest\#position and gest\#timing can all refer to either the form of the whole construction (gest\#GestureForm) or its phases (gest\#Phase). For this reason, an encompassing class gest\#GestureFormalComponent was needed.
+
+| Class gest\#GestureFormalComponent |  |
+| :---- | :---- |
+| definition | A class that subsumes both the overall form of a gestural construction and its individual temporal phases. |
+| label | Gesture formal component (en) |
+
+| Class gest\#GestureForm |  |
+| :---- | :---- |
+| definition | The description of the full manifestation of a gesture (rather than its phases). |
+| subclass of | gest\#GestureFormalComponent |
+| label | Form of the gesture (en) |
+
+| Class gest\#Phase |  |
+| :---- | :---- |
+| definition | The formal description of a temporally distinct segment within the unfolding of a gestural construction. |
+| subclass of | gest\#GestureFormalComponent |
+| label | Phase (en) |
+
+The construction itself is linked to gest\#GestureForm for its formal component. However, gest\#GestureForm can be a sequence of phases.
+
+| Property gest\#hasForm |  |
+| :---- | :---- |
+| description | Relates a gesture construction to its formal description. |
+| domain (subject) | gest\#GestureConstruction |
+| range (object) | gest\#GestureForm |
+| label | has form |
+
+| Class gest\#Handedness |  |
+| :---- | :---- |
+| label | Handedness (en) |
+
+| Class gest\#OneHand |  |
+| :---- | :---- |
+| definition | A gesture construction performed predominantly using one hand, with the other hand either inactive or minimally involved. |
+| subclass of | gest\#Handedness |
+| label | One-Handed (en) |
+
+| Class gest\#LeftHand |  |
+| :---- | :---- |
+| definition | A gesture construction performed predominantly using the left hand, with the right hand either inactive or minimally involved. |
+| subclass of | gest\#OneHand |
+| label | Left-Handed (en) |
+
+| Class gest\#RightHand |  |
+| :---- | :---- |
+| definition | A gesture construction performed predominantly using the right hand, with the right hand either inactive or minimally involved. |
+| subclass of | gest\#OneHand |
+| label | Right-Handed (en) |
+
+| Class gest\#TwoHands |  |
+| :---- | :---- |
+| definition | A gesture construction performed using both hands simultaneously. |
+| subclass of | gest\#Handedness |
+| label | Two-Handed (en) |
+
+| Property gest\#handedness |  |
+| :---- | :---- |
+| description | Refers to the hand or hands used in the execution of a gesture construction. |
+| domain (subject) | gest\#GestureFormalComponent |
+| range (object) | gest\#Handedness |
+| label | Handedness |
+
+| Property gest\#handshape |  |
+| :---- | :---- |
+| description | Refers to the configuration of the hand(s) during the execution of a gesture construction, specifying the physical arrangement of fingers and thumb. |
+| domain (subject) | gest\#GestureFormalComponent |
+| range (object) | Literal |
+| label | Handshape |
+
+| Property gest\#movement |  |
+| :---- | :---- |
+| description | Refers to the dynamic trajectory, direction, and manner of motion involved in a gesture construction. |
+| domain (subject) | gest\#GestureFormalComponent |
+| range (object) | Literal |
+| label | Movement |
+
+| Property gest\#orientation |  |
+| :---- | :---- |
+| description | Refers to the direction in which the hand(s) are facing during a gesture construction, specifying the spatial alignment of the palm, fingers, or hand surface. |
+| domain (subject) | gest\#GestureFormalComponent |
+| range (object) | Literal |
+| label | Orientation |
+
+| Property gest\#position |  |
+| :---- | :---- |
+| description | Refers to the spatial location of the hand(s) relative to the body during a gesture construction. |
+| domain (subject) | gest\#GestureFormalComponent |
+| range (object) | Literal |
+| label | Position |
+
+| Property gest\#timing |  |
+| :---- | :---- |
+| description | Refers to the temporal characteristics of a gesture construction, such as duration, ryththm or stroke. |
+| domain (subject) | gest\#GestureFormalComponent |
+| range (object) | Literal |
+| label | Timing |
+
+# 
+
+| Class gest\#GestureMeaning |  |
+| :---- | :---- |
+| definition | The description of the functional and interpretive significance of a gesture construction. |
+| subclass of | gest\#Handedness |
+| label | Meaning of the gesture |
+
+| Property gest\#hasMeaning |  |
+| :---- | :---- |
+| description | Relates a gesture construction to the description of its meaning and/or function. |
+| domain (subject) | gest\#GestureConstruction |
+| range (object) | gest\#GestureMeaning |
+| label | has meaning |
+
+| Property gest\#semanticProperty |  |
+| :---- | :---- |
+| description | Specifies the conceptual or referential content of the gesture construction. |
+| domain (subject) | gest\#GestureMeaning |
+| range (object) | Literal |
+| label | Semantic property |
+
+| Property gest\#pragmaticProperty |  |
+| :---- | :---- |
+| description | Specifies the functional role in discourse of a gesture construction. |
+| domain (subject) | gest\#GestureMeaning |
+| range (object) | Literal |
+| label | Pragmatic property |
+
+| Property gest\#discourseFunctionalProperty |  |
+| :---- | :---- |
+| description | Describes the role a gesture construction plays in discourse. |
+| domain (subject) | gest\#GestureMeaning |
+| range (object) | Literal |
+| label | Discourse-functional property |
+
+## Multimodal constructions (using gesture constructions) {#multimodal-constructions-(using-gesture-constructions)}
+
+Notice that the multimodal construction is not linked directly to a gesture construction, but to its usage of a gesture construction (which can in turn be linked to the gesture construction in question). This allows us to describe the usage further with features specific to the multimodal construction that do not describe the gesture construction (specifically: when the usage starts and ends).
+
+| Class gest\#GestureUsage |  |
+| :---- | :---- |
+| definition | Denotes the non-verbal, gestural components associated with a linguistic construction. |
+| label | Gesture usage of the construction (en) |
+
+| Property gest\#hasGesture |  |
+| :---- | :---- |
+| description | Relates a multimodal construction to its usage of a gesture construction. |
+| domain (subject) | rcxn\#Construction |
+| range (object) | gest\#GestureUsage |
+| label | has gesture |
+
+| Property gest\#uses |  |
+| :---- | :---- |
+| description | Relates the IRI for the gesture usage of the construction to the gesture construction(s) that are in use. |
+| domain (subject) | gest\#GestureUsage |
+| range (object) | gest\#GestureConstruction |
+| label | uses the gesture construction |
+
+| Property gest\#starts |  |
+| :---- | :---- |
+| description | Describes the usage of a gesture construction with the specific verbal construction element whose realization coincides with the onset of the gesture. |
+| domain (subject) | gest\#GestureUsage |
+| range (object) | rcxn\#Slot |
+| label | starts with |
+
+| Property gest\#ends |  |
+| :---- | :---- |
+| description | Describes the usage of a gesture construction with the specific verbal construction element whose realization coincides with the end of the gesture. |
+| domain (subject) | gest\#GestureUsage |
+| range (object) | rcxn\#Slot |
+| label | ends with |
+
+# 

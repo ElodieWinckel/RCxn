@@ -19,12 +19,12 @@ cx:gmh12C_Präfixverbkonstruktion a rcxn:Construction ;
     rcxn:hasTitle "Präfixverbkonstruktion" .
 
 cx:gmh12C_Präfixverbkonstruktion_MD a rcxn:Metadata ;
-    cx:annotator membr:Fuehrer ;
+    rcxn:annotator membr:Fuehrer ;
     dcterm:created "2025-12-19"^^xsd:date .
 
-cx:gmh_NounPhrase rcxn:elementOf <http://example.org/cx/gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit> .
+cx:gmh_NounPhrase links:elementOf <http://example.org/cx/gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit> .
 
-cx:gmh_Prefix rcxn:elementOf <http://example.org/cx/gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit> .
+cx:gmh_Prefix links:elementOf <http://example.org/cx/gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit> .
 
 <http://example.org/cx/gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_1> a rcxn:SlotObligatory ;
     cx:WordOrder "1st" ;
@@ -101,7 +101,7 @@ cx:gmh_Prefix rcxn:elementOf <http://example.org/cx/gmh12C_Präfixverbkonstrukti
     rdf:_3 <http://example.org/cx/gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_3> ;
     rdf:_4 <http://example.org/cx/gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_4> .
 
-cx:gmh_Verb rcxn:elementOf <http://example.org/cx/gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit> .
+cx:gmh_Verb links:elementOf <http://example.org/cx/gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit> .
 
 membr:Project_Fuehrer_F2512191440 a rsrch:Finding ;
     RDFS:label "directional information seemingly two times present, thus redundant" ;

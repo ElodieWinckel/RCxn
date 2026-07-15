@@ -1,5 +1,6 @@
 from rdflib import Graph, Namespace, Literal, URIRef, BNode
 from rdflib.namespace import FOAF, RDF
+from pathlib import Path
 import re
 import glob
 
@@ -14,9 +15,18 @@ graph_cx = Graph()
 graph_membr = Graph()
 graph_references = Graph()
 
-# Load everything from the submissions (assuming that everything in the submission folder has now a green light)
-for ttl_file in glob.glob("instance/Submissions/**/*.ttl", recursive=True):
+# Load everything from the submissions (except the folder with German constructions which are not green-lighted yet)
+base_path = Path("instance/Submissions")
+ignore_folder = Path("instance/Submissions/cc-project/FrameNet-Konstruktikon des Deutschen")
+for ttl_file in base_path.rglob("*.ttl"):
+    # Skip if the file is in the ignored folder
+    if ttl_file.is_relative_to(ignore_folder):
+        continue
     g.parse(ttl_file, format="turtle")
+
+# Once we can use everything, the following lines can be used
+#for ttl_file in glob.glob("instance/Submissions/**/*.ttl", recursive=True):
+#    g.parse(ttl_file, format="turtle")
 
 # Namespaces
 
@@ -34,6 +44,11 @@ compcon = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/compcon
 g.bind("compcon", compcon)
 graph_cx.bind("compcon", compcon)
 graph_membr.bind("compcon", compcon)
+
+gest = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/gest#")
+g.bind("gest", gest)
+graph_cx.bind("gest", gest)
+graph_membr.bind("gest", gest)
 
 lg = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#")
 g.bind("lg", lg)
@@ -281,13 +296,13 @@ add_user("Winckel",
 for subj, part in g.subject_objects(rcxn.hasSyntacticForm):
     # identify the IRI of the construction
     construction_uri = re.sub(r'_\d+_Form$', '', subj)
-    g.add((part, rcxn.elementOf, URIRef(construction_uri)))
+    g.add((part, links.elementOf, URIRef(construction_uri)))
 
 # If some construction uses another construction as construction element (stem), then link back the second construction to the first one
 for subj, part in g.subject_objects(rcxn.hasStem):
     # identify the IRI of the construction
     construction_uri = re.sub(r'_\d+_Form$', '', subj)
-    g.add((part, rcxn.elementOf, URIRef(construction_uri)))
+    g.add((part, links.elementOf, URIRef(construction_uri)))
 
 for mainCX in g.subjects(rdf_ns.type, rcxn.Construction):
     # identify inheritsFrom links
@@ -317,6 +332,11 @@ for prop in properties_to_mirror:
 # If construction A has a metaphorical extension B, then B is a metaphorical extension of A
 for subj, obj in g.subject_objects(links.metaphoricalLink):
         g.add((obj, links.isMetaphoricalExtensionOf, subj))
+
+# If construction A uses the gesture construction B, then B is an element of A
+for subj, iri in g.subject_objects(gest.hasGesture):
+        obj = g.value(subject=iri, predicate=gest.uses)
+        g.add((obj, links.elementOf, subj))
 ###############################################################################
 # We now distinguish between the IRI that belong to cx.ttl, membr.ttl and references.ttl
 ###############################################################################

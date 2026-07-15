@@ -19,10 +19,10 @@ cx:gmh12C_Präfixverbkonstruktion a rcxn:Construction ;
     rcxn:hasTitle "Präfixverbkonstruktion" .
 
 cx:gmh12C_Präfixverbkonstruktion_MD a rcxn:Metadata ;
-    cx:annotator membr:Fuehrer ;
+    rcxn:annotator membr:Fuehrer ;
     dcterm:created "2025-12-19"^^xsd:date .
 
-cx:gmh_Prefix rcxn:elementOf <http://example.org/cx/gmh12C_PräfixverbkonstruktionHandlung> .
+cx:gmh_Prefix links:elementOf <http://example.org/cx/gmh12C_PräfixverbkonstruktionHandlung> .
 
 <http://example.org/cx/gmh12C_PräfixverbkonstruktionHandlung_1> a rcxn:SlotOptional ;
     olia:hasCase olia:Nominative ;

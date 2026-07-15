@@ -2,6 +2,7 @@
 {% block content %}
 
 <div class="container" style="max-width: 1000px; margin: auto;">
+
   <h1>Constructions</h1>
 
   <!-- quick access by macrolanguage (jumps to the relevant section);
@@ -25,18 +26,24 @@
       {{ group.grouper }}
     </h3>
 
-    <!-- rows in two columns: one for variety, one for title -->
-    {% for c in group.list %}
-      <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 10px; padding: 4px 0;">
-        <div>{{ c.variety }}</div>
-        <div>
+  <!-- rows in two columns: one for variety, one for title -->
+  {% for c in group.list %}
+    <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 10px; padding: 4px 0;">
+      <div>{{ c.variety }}</div>
+      <div>
+        {% if c.type == 'gesture' %} <!-- gesture construction should use another template than non-gesture ones -->
+          <a href="{{ url_for('app_entries.gesture_construction_detail', uri=c.uri|replace('http://example.org/cx/', '')) }}">
+        {% else %}
           <a href="{{ url_for('app_entries.construction_detail', uri=c.uri|replace('http://example.org/cx/', '')) }}">
-            {{ c.title }}
+        {% endif %}
+          {{ c.title }}
           </a>
-        </div>
       </div>
-    {% endfor %}
+    </div>
   {% endfor %}
+
+  {% endfor %} <!-- end of "for group in constructions|groupby('macrolanguage')" -->
+
 </div>
 
 {% endblock %}

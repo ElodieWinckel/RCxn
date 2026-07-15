@@ -13,12 +13,12 @@ membr:Project_Winckel_2604130901_F2604130901 rsrch:basedOn cx:deu_SuperlativART_
 
 cx:deu_Artikel a rcxn:Construction ;
     lg:partOfLanguage lg:deu ;
-    rcxn:elementOf cx:deu_SuperlativART_ADJest ;
+    links:elementOf cx:deu_SuperlativART_ADJest ;
     rcxn:hasMetadata cx:deu_Artikel_MD ;
     rcxn:hasTitle "Artikel" .
 
 cx:deu_Artikel_MD a rcxn:Metadata ;
-    cx:annotator membr:Winckel ;
+    rcxn:annotator membr:Winckel ;
     dcterm:created "2026-05-22"^^xsd:date .
 
 cx:deu_SuperlativART_ADJest_1 a rcxn:SlotObligatory ;

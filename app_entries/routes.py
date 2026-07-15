@@ -1,9 +1,26 @@
 from . import app_entries_blueprint
-import glob
 import re
-from flask import render_template, Response, url_for
-from rdflib import Graph, URIRef, Literal, Namespace, RDF, RDFS, FOAF, SKOS, DCTERMS
-import os
+from flask import render_template, Response
+from rdflib import Graph, URIRef, Literal, Namespace, RDF, RDFS, FOAF, SKOS
+from collections import defaultdict
+
+# Load the graphs and namespaces defined in graph_loader.py
+from .graph_loader import (
+    g,
+    ont,
+    cx,
+    dc,
+    dcterm,
+    compcon,
+    gest,
+    lg,
+    links,
+    olia,
+    rcxn,
+    rd,
+    rdata,
+    rsrch,
+)
 
 ###################################################
 ### FUNCTIONS
@@ -39,6 +56,7 @@ prefixes = ("http://example.org/cx/|"
             "http://www.w3.org/2000/01/rdf-schema#|"
             "http://www.w3.org/1999/02/22-rdf-syntax-ns#|"
             "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#|"
+            "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/gest#|"
             "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rdata#|"
             "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/compcon#|"
             "http://purl.org/dc/terms/")
@@ -178,66 +196,54 @@ def identify_construction_element_triples(slots_uri):
     elements[:] = [item for item in elements if item['property'] != "hasIndex"]
     return elements, colloprofiles, list_of_nested
 
+def identify_phase_triples(slots_uri):
+    # Step 1: Extract the elements of the sequence
+    unique_slot_uri = []
+    for predicate, obj in g.predicate_objects(subject=slots_uri):
+        if predicate.startswith(str(RDF)) and predicate[len(str(RDF))] == "_":
+            unique_slot_uri.append(obj)
+
+    # Step 2: Collect triples
+    elements = []
+
+    for slot_uri in unique_slot_uri:
+        phase_number = "Phase " + slot_uri[-1]
+
+        for predicate, obj in g.predicate_objects(subject=slot_uri):
+            elements.append({
+                "phase": phase_number,
+                "property": get_label_or_iri(predicate, g, ont),
+                "definition": get_definition(obj, g, ont),
+                "object": get_label_or_iri(obj, g, ont),
+            })
+    elements[:] = [item for item in elements if item['property'] != "type"]
+
+    # Step 3: Pivot the table
+    table = defaultdict(lambda: defaultdict(list))
+
+    for row in elements:
+        table[row["property"]][row["phase"]].append(row["object"])
+
+    # Convert to ordinary dicts
+    table = {
+        prop: dict(phases)
+        for prop, phases in table.items()
+    }
+
+    # Keep phases in order
+    phase_names = sorted(
+        {row["phase"] for row in elements},
+        key=lambda p: int(p.split()[1])
+    )
+
+    return phase_names, table
+
 def find_compcon_uri_by_label(label_compcon) -> str:
     uri_compcon = ont.value(predicate=RDFS.label, object=Literal(label_compcon))
     if uri_compcon is None:
         uri_compcon = ont.value(predicate=SKOS.altLabel, object=Literal(label_compcon))
     uri_compcon_no_prefix = re.sub(prefixes, "", str(uri_compcon))
     return uri_compcon_no_prefix
-
-###################################################
-### CREATE RDF GRAPH
-###################################################
-
-g = Graph()
-
-# Check if the production directory exists (otherwise, defaults to development directory)
-if os.path.exists("/data/www/RCxn"):
-    os.chdir("/data/www/RCxn")  # # Set the working directory to the application's production path
-
-else:
-    # Load and parse all RDF files from the folder with submissions (only during development process)
-    for ttl_file in glob.glob("instance/Submissions/**/*.ttl", recursive=True):
-        g.parse(ttl_file, format="turtle")
-
-# Load and parse all RDF files in the Abox
-for ttl_file in glob.glob("Abox/*.ttl"):
-    g.parse(ttl_file, format="turtle")
-
-# The following is for debug purposes: Read triples
-#for s, p, o in g:
-    #print(s, p, o)
-
-# Define the namespaces
-cx = Namespace("http://example.org/cx/")
-g.bind("cx", cx)
-dc = Namespace("http://purl.org/dc/elements/1.1/")
-g.bind("dc",dc)
-dcterm = Namespace("http://purl.org/dc/terms/")
-g.bind("dcterm",dcterm)
-olia = Namespace("http://purl.org/olia/olia.owl#")
-g.bind("olia", olia)
-rcxn = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#")
-g.bind("rcxn", rcxn)
-rsrch = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#")
-g.bind("rsrch", rsrch)
-lg = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#")
-g.bind("lg", lg)
-rd = Namespace("http://example.org/rd/") #TODO: is this really the name?
-g.bind("rd", rd)
-rdata = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rdata#") #TODO: is this really the name? create ontology
-g.bind("rdata", rdata)
-compcon = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/compcon#")
-g.bind("compcon", compcon)
-
-# Load the ontologies
-ont = Graph()
-for xlm_file in glob.glob("ontologies/*.rdf"):
-    ont.parse(xlm_file, format="xml")
-for xlm_file in glob.glob("ontologies/*.owl"): # for olia
-    ont.parse(xlm_file, format="xml")
-for ttl_file in glob.glob("ontologies/*.ttl"): # for compcon
-    ont.parse(ttl_file, format="turtle")
 
 ###################################################
 ### CREATE A LIST OF CONSTRUCTIONS
@@ -247,8 +253,8 @@ for ttl_file in glob.glob("ontologies/*.ttl"): # for compcon
 def list_view():
     constructions = []
 
-    # SPARQL query to get the title for each construction
-    query = """
+    # SPARQL queries to get the title for each construction
+    query_nongesture = """
     PREFIX rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#>
     PREFIX lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#>
     SELECT ?construction ?title ?language
@@ -259,11 +265,23 @@ def list_view():
     }
     """
 
-    # Execute the SPARQL query
-    results = g.query(query)
+    query_gesture = """
+        PREFIX rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#>
+        PREFIX lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#>
+        SELECT ?construction ?title ?language
+        WHERE {
+            ?construction a gest:GestureConstruction .
+            ?construction rcxn:hasTitle ?title .
+            ?construction lg:partOfLanguage ?language .
+        }
+        """
 
-    # Process query results
-    for row in results:
+    # Execute the SPARQL queries
+    results_nongesture = g.query(query_nongesture)
+    results_gesture = g.query(query_gesture)
+
+    # Prepare list of constructions to pass to html
+    for row in results_nongesture:
         construction_uri = str(row.construction)
         title = str(row.title)
         variety_uri = row.language
@@ -276,7 +294,24 @@ def list_view():
             'uri': construction_uri,
             'title': title,
             'variety': variety,
-            'macrolanguage': macrolanguage_label
+            'macrolanguage': macrolanguage_label,
+            'type': "nongesture"
+        })
+    for row in results_gesture:
+        construction_uri = str(row.construction)
+        title = str(row.title)
+        variety_uri = row.language
+        variety = str(next(ont.objects(subject=variety_uri, predicate=RDFS.label), ""))
+        macrolanguage_uri = get_macrolanguage(variety_uri, ont, lg.isVarietyOf)
+        macrolanguage_label = str(next(ont.objects(subject=macrolanguage_uri, predicate=RDFS.label), ""))
+
+        # Append construction details as dictionary
+        constructions.append({
+            'uri': construction_uri,
+            'title': title,
+            'variety': variety,
+            'macrolanguage': macrolanguage_label,
+            'type': "gesture"
         })
 
     # Sorting in alphabetical order
@@ -376,6 +411,7 @@ def construction_detail(uri):
     triples[:] = [item for item in triples if item['property'] != "hasMetadata"]
     triples[:] = [item for item in triples if item['property'] != "Title"]
     triples[:] = [item for item in triples if item['property'] != "basedOnStudy"]
+    triples[:] = [item for item in triples if item['property'] != "hasGesture"]
 
     # Sort the list triples
     def custom_sort_key_for_triples(triple):
@@ -404,27 +440,25 @@ def construction_detail(uri):
         })
         colloprofiles = colloprofiles + nested_colloprofiles
 
-    # Collect triples for gesture
-    gesture = []
-    gesture_title = ""
-    for gesture_uri in g.objects(subject=entry_uri, predicate=cx.usesGesture):
-        for title in g.objects(subject=gesture_uri, predicate=rcxn.hasTitle):
-            gesture_title = str(title)
-        gesture_form_uri = gesture_uri + "_Form"
-        gesture_meaning_uri = gesture_uri + "_Meaning"
-        for pred, obj in g.predicate_objects(subject=gesture_form_uri):
-            gesture.append({
-                'synsem': "syn",
-                'property': get_label_or_iri(pred, g, ont),
-                'object': get_label_or_iri(obj, g, ont),
+    # Collect gesture constructions used
+    gesture_title = []
+    for gesture_usage_uri in g.objects(subject=entry_uri, predicate=gest.hasGesture):
+        gesture_uri = g.value(subject=gesture_usage_uri, predicate=gest.uses)
+        # Identify the start of the gesture
+        start_of_gesture_iri = g.value(subject=gesture_usage_uri, predicate=gest.starts)
+        start_of_gesture_number = start_of_gesture_iri.split("_")[-1]
+        # Identify end of the gesture
+        end_of_gesture_iri = g.value(subject=gesture_usage_uri, predicate=gest.ends)
+        end_of_gesture_number = end_of_gesture_iri.split("_")[-1]
+        for obj in g.objects(subject=gesture_uri, predicate=rcxn.hasTitle):
+            gesture_title.append({
+                'title': str(obj),
+                'uri': re.sub(prefixes, "", str(gesture_uri)),
+                'start_element': "Element " + start_of_gesture_number,
+                'end_element': "Element " + end_of_gesture_number
             })
-        for pred, obj in g.predicate_objects(subject=gesture_meaning_uri):
-            gesture.append({
-                'synsem': "sem",
-                'property': get_label_or_iri(pred, g, ont),
-                'object': get_label_or_iri(obj, g, ont),
-            })
-    triples[:] = [item for item in triples if item['property'] != "usesGesture"]
+
+    triples[:] = [item for item in triples if item['property'] != "has gesture"]
 
     # Collect triples for examples
     # Step 1: Extract the examples
@@ -575,8 +609,134 @@ def construction_detail(uri):
                            research_data=research_data,
                            references=references,
                            colloprofiles=colloprofiles,
-                           gesture_title=gesture_title,
-                           gesture=gesture)
+                           gesture_title=gesture_title)
+
+###################################################
+### CREATE GESTURE CONSTRUCTION ENTRIES
+###################################################
+
+@app_entries_blueprint.route('/gest_construction/<path:uri>', endpoint='gesture_construction_detail')
+def gesture_construction_detail(uri):
+
+    # Rebuild the full URI for the construction
+    gesture_uri = URIRef("http://example.org/cx/" + uri)
+    # Rebuild the full IRI for the form of the gesture
+    gesture_form_uri = gesture_uri + "_Form"
+    # Rebuilt the full URI for the meaning of the gesture
+    gesture_meaning_uri = gesture_uri + "_Meaning"
+    # Rebuilt the full URI for metadata
+    metadata_uri = gesture_uri + "_MD"
+
+    # Identify language
+    language = get_label_or_iri(g.value(gesture_uri, lg.partOfLanguage), g, ont)
+
+    # Identify triples for form
+    gesture = []
+    for pred, obj in g.predicate_objects(subject=gesture_form_uri):
+        if pred.startswith(str(RDF)) and pred[len(str(RDF))] == "_":  # Check for rdf:_n
+            pass
+        else:
+            gesture.append({
+                'synsem': "syn",
+                'property': get_label_or_iri(pred, g, ont),
+                'property_definition': get_definition(pred, g, ont),
+                'object': get_label_or_iri(obj, g, ont),
+                'object_definition': get_definition(obj, g, ont),
+            })
+
+    # Identify triples for meaning/function
+    for pred, obj in g.predicate_objects(subject=gesture_meaning_uri):
+        gesture.append({
+            'synsem': "sem",
+            'property': get_label_or_iri(pred, g, ont),
+            'property_definition': get_definition(pred, g, ont),
+            'object': get_label_or_iri(obj, g, ont),
+            'object_definition': get_definition(obj, g, ont),
+        })
+    gesture[:] = [item for item in gesture if item['property'] != "type"]
+
+    # Check if the gesture construction contains phases & collect the triples
+    phase_names, phase_table = identify_phase_triples(gesture_form_uri)
+
+    # Collect links (elementOf)
+    list_of_links = []
+    for uri in g.objects(subject=gesture_uri, predicate=links.elementOf):
+        object_value = get_label_or_iri(uri, g, ont)
+        for title in g.objects(subject=uri, predicate=rcxn.hasTitle):
+            lang_uri = g.value(subject=uri, predicate=lg.partOfLanguage)
+            list_of_links.append({
+                'property': get_label_or_iri(links.elementOf, g, ont),
+                'property_definition': get_definition(links.elementOf, g, ont),
+                'object': get_label_or_iri(title, g, ont),
+                'href': object_value,
+                'lang': get_label_or_iri(lang_uri, g, ont),
+            })
+
+    # Collect triples for research question and findings
+    research = []
+    for finding in g.subjects(RDF.type, rsrch.Finding):
+        # Check for the triple with form (X, rsrch:basedOn, entry_uri)
+        if (finding, rsrch.basedOn, gesture_uri) in g:
+            # Get the rdfs:label for this finding
+            finding_labels = g.objects(finding, RDFS.label)
+            for finding_label in finding_labels:
+                research.append({
+                    'property': 'Findings',
+                    'property_definition': get_definition(rsrch.Finding, g, ont),
+                    'object': str(finding_label),
+                })
+            # Next, query all URIs that correspond to this finding
+            for project in g.subjects(rsrch.hasFindings, finding):
+                project_names = g.objects(project, rsrch.projectName)
+                for project_name in project_names:
+                    research.append({
+                        'property': 'Research Question',
+                        'property_definition': get_definition(rsrch.Project, g, ont),
+                        'object': str(project_name)
+                    })
+    # Sorting the list so that 'Research Question' comes before 'Findings'
+    research.sort(key=lambda x: x['property'], reverse=True)
+
+    # Collect triples for metadata
+    metadata = []
+    for predicate, obj in g.predicate_objects(subject=metadata_uri):
+        if str(predicate) == "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#annotator":
+            given = g.value(subject=obj, predicate=FOAF.givenName)
+            family = g.value(subject=obj, predicate=FOAF.familyName)
+            homepage = g.value(subject=obj, predicate=FOAF.homepage)
+            metadata.append({
+                'property': get_label_or_iri(predicate, g, ont),
+                'property_definition': get_definition(predicate, g, ont),
+                'given': get_label_or_iri(given, g, ont),
+                'family': get_label_or_iri(family, g, ont),
+                'homepage': get_label_or_iri(homepage, g, ont),
+            })
+        elif str(predicate) != "http://www.w3.org/1999/02/22-rdf-syntax-ns#type":
+            metadata.append({
+                'property': get_label_or_iri(predicate, g, ont),
+                'property_definition': get_definition(predicate, g, ont),
+                'object': get_label_or_iri(obj, g, ont),
+            })
+    metadata[:] = [item for item in metadata if item['property'] != "hasSources"]  # resources are delt with separately (see below "collect references")
+
+    # Fetch the title to display
+    title = g.value(gesture_uri, rcxn.hasTitle)
+
+    return render_template("app_entries/gest_construction.html",
+                           title=title,
+                           language=language,
+                           gesture=gesture,
+                           links = list_of_links,
+                           phase_names=phase_names,
+                           phase_table=phase_table,
+                           metadata=metadata,
+                           research=research)
+
+
+
+###################################################
+### CONSTRUCTION ENTRIES: DOWNLOAD RDF GRAPH
+###################################################
 
 @app_entries_blueprint.route('/construction/<path:uri>/submit', methods=['POST'])
 def download_subgraph(uri):

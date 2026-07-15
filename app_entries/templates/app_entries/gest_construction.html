@@ -1,0 +1,155 @@
+{% extends "base.html" %}
+
+{% block title %}Construction Details - {{ title }}{% endblock %}
+
+{% block content %}
+
+<h1>{{ title }}</h1>
+
+<h3> Language: {{ language }}</h3>
+
+<table>
+<tbody style="border: 3px double black; border-collapse: collapse; width: 100%;">
+
+    <!-- Syntactic properties -->
+    {% for row in gesture if row.synsem == "syn" %}
+    <tr>
+        <th>
+            <span title="{{ row.property_definition }}">
+                {{ row.property }}
+            </span>
+        </th>
+        <td colspan="{{ phase_names|length }}">
+            <span title="{{ row.object_definition }}">
+            {{ row.object }}
+            </span>
+        </td>
+    </tr>
+    {% endfor %}
+
+    <!-- Phase header -->
+    {% if phase_names %} <!-- Do not display for gesture constructions that do not have phases -->
+    <tr>
+        <th> </th>
+        {% for phase in phase_names %}
+            <th>{{ phase }}</th>
+        {% endfor %}
+    </tr>
+
+    <!-- Phase data -->
+    {% for property, values in phase_table.items() %}
+    <tr>
+        <th>
+            {{ property }}
+        </th>
+
+        {% for phase in phase_names %}
+        <td>
+            {% for value in values.get(phase, []) %}
+                {{ value }}<br>
+            {% endfor %}
+        </td>
+        {% endfor %}
+
+    </tr>
+    {% endfor %}
+    {% endif %}
+
+</tbody>
+
+    <tbody style="border: 3px double black; border-collapse: collapse; width: 100%;">
+
+    <!-- Semantic properties -->
+    {% for row in gesture if row.synsem == "sem" %}
+    <tr>
+        <th>
+            <span title="{{ row.property_definition }}">
+            {{ row.property }}
+            </span>
+        </th>
+        <td colspan="{{ phase_names|length }}">
+            <span title="{{ row.object_definition }}">
+            {{ row.object }}
+            </span>
+        </td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+    {% if links %}
+    <h2>Links</h2>
+    <table border="1">
+        {% for triple in links %}
+            <tr>
+                <td>
+                    <span title="{{ triple.property_definition }}">
+                    {{ triple.property }}
+                    </span>
+                </td>
+                <td>
+                    {% if triple.href %}
+                        <a href="{{ url_for('app_entries.construction_detail', uri=triple.href) }}" target="_blank">
+                            {{triple.object}}
+                        </a>
+                    {% else %}
+                        {{ triple.object }}
+                    {% endif %}
+                </td>
+                <td>{{ triple.lang }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+
+    <h2>Research</h2>
+    <table border="1">
+        {% for triple in research %}
+            <tr>
+                <th>
+                    <span title="{{ triple.property_definition }}">
+                    {{ triple.property }}
+                    </span>
+                </th>
+                <td>
+                    {{ triple.object }}
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+
+    <h2>Metadata</h2>
+    <table border="1">
+        {% for triple in metadata %}
+            <tr>
+                <th>
+                    <span title="{{ triple.property_definition }}">
+                    {{ triple.property }}
+                    </span>
+                </th>
+                <td>{% if triple.homepage %}<a href="{{ triple.homepage }}" target="_blank">{{ triple.given }} {{ triple.family }}</a> {% endif %}
+                    {% if triple.url %}<a href="{{ triple.url }}" target="_blank">{{ triple.url }}</a> {% endif %}
+                    {% if not triple.homepage %} {{ triple.object }} {% endif %}
+                </td>
+            </tr>
+        {% endfor %}
+        {% for ref in references %}
+            <tr>
+                <th>References</th>
+                <td class="reference">
+                    {{ ref.authors }}
+                    {% if not ref.authors %} {{ ref.editors }} {% if not ref.editors %} {{ ref.source }} {% endif %} {% endif %}
+                    {% if ref.year %} ({{ ref.year }}). {% endif %}
+                    <i>{{ ref.title }}</i>.
+                    {% if ref.doi %}<a href="{{ ref.doi_href }}" target="_blank">{{ ref.doi }}</a> {% endif %}
+                </td>
+            </tr>
+    {% endfor %}
+    </table>
+
+    <p>
+    <a href="{{ url_for('app_entries.list_view') }}">Back to Constructions List</a>
+    </p>
+
+</body>
+{% endblock %}

@@ -1,4 +1,4 @@
-<?xml version="1.1"?>
+<?xml version="1.0"?>
 <rdf:RDF xmlns="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links#"
      xml:base="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
@@ -265,6 +265,7 @@
     <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#ParagRelHorizontal">
         <rdfs:subPropertyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#ParagRel"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <dc:description xml:lang="en">link between &quot;similar or contrastive constructions, even when these constructions are not (immediately) subsumed under a schema&quot; (Diessel 2019:200)</dc:description>
         <rdfs:comment xml:lang="en">link between &quot;similar or contrastive constructions, even when these constructions are not (immediately) subsumed under a schema&quot; (Diessel 2019:200)</rdfs:comment>
         <rdfs:label xml:lang="en">horizontal paradigmatic link</rdfs:label>
         <skos:altLabel xml:lang="en">horizontal relation</skos:altLabel>
@@ -379,6 +380,16 @@
     
 
 
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#elementOf -->
+
+    <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#elementOf">
+        <rdfs:subPropertyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#LanguageInternalLink"/>
+        <rdfs:comment xml:lang="en">Relates a construction to the constructions that it is a part of. If element A uses B, then B is an element of A.</rdfs:comment>
+        <rdfs:label xml:lang="en">Element of (en)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#formSimilarity -->
 
     <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#formSimilarity">
@@ -412,8 +423,8 @@
     <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#inheritedBy">
         <rdfs:subPropertyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#ParagRelVertical"/>
         <owl:inverseOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#inheritsFrom"/>
-        <rdfs:comment xml:lang="en">Takes as a subject the more general (parent) construction and as an object the more specific (child) construction.</rdfs:comment>
         <rdfs:comment xml:lang="en">In usage-based approaches, &quot;the downward direction is motivated by categorization&quot; (Diessel 2023:17)</rdfs:comment>
+        <rdfs:comment xml:lang="en">Takes as a subject the more general (parent) construction and as an object the more specific (child) construction.</rdfs:comment>
         <rdfs:label xml:lang="en">inherited by</rdfs:label>
         <skos:altLabel xml:lang="en">instance link</skos:altLabel>
     </owl:ObjectProperty>
@@ -437,8 +448,8 @@
 
     <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#inheritsFrom">
         <rdfs:subPropertyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#ParagRelVertical"/>
-        <rdfs:comment>Takes as a subject the more specific (child) construction and as an object more general (parent) construction.</rdfs:comment>
         <rdfs:comment xml:lang="en">In usage-based approaches, &quot;[t]he upwards direction is the result of abstraction [...] or schematization [...]&quot; (Diessel 2023:17)</rdfs:comment>
+        <rdfs:comment>Takes as a subject the more specific (child) construction and as an object more general (parent) construction.</rdfs:comment>
         <rdfs:label xml:lang="en">inherits from</rdfs:label>
         <skos:altLabel xml:lang="en">subpart link</skos:altLabel>
     </owl:ObjectProperty>

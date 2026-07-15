@@ -1,0 +1,35 @@
+@prefix cx: <http://example.org/cx/> .
+@prefix dcterm: <http://purl.org/dc/terms/> .
+@prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
+@prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
+@prefix gest: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/gest#> .
+@prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cx:eng_PhysicalHeight a gest:GestureConstruction ;
+    gest:hasForm cx:eng_PhysicalHeight_Form ;
+    lg:partOfLanguage lg:eng ;
+    gest:hasMeaning cx:eng_PhysicalHeight_Meaning ;
+    rcxn:hasTitle "Physical Height Gesture Construction" ;
+    rcxn:hasMetadata cx:eng_PhysicalHeight_MD .
+
+cx:eng_PhysicalHeight_Form a gest:GestureForm ;
+    gest:timing "Usually for the entire duration of the co-occurring verbal pattern." ;
+    gest:handedness gest:OneHand ;
+    gest:handshape "The index, middle, ring and little fingers are fully extended and together.",
+        "The thumb is either tucked or relaxed alongside the hand." ;
+    gest:movement "Upward movement until the resting position." ;
+    gest:orientation "Palm is vertical." , "Fingers oriented toward the speaker's center line." ;
+    gest:position "Position schema (context-dependent)." .
+
+cx:eng_PhysicalHeight_Meaning a gest:GestureMeaning ;
+    gest:semanticProperty "Vertical physical dimension of the referent relative to the ground." ,
+        "visual representation of the height or size of the referent." .
+
+cx:eng_PhysicalHeight_MD a rcxn:Metadata ;
+    rcxn:annotator membr:Iabdounane ;
+    dcterm:created "2026-07-07"^^xsd:date .
+
+membr:Project_Iabdounane_F250218 rsrch:basedOn cx:eng_PhysicalHeight .
