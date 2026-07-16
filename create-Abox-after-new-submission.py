@@ -350,32 +350,42 @@ def add_triples_recursively(g, graph_cx, subject):
             add_triples_recursively(g, graph_cx, o)
 
 # Iterate over all triples in the original graph
+counter_cx = 0
 for s, p, o in g:
     if isinstance(s, URIRef) and str(s).startswith(cx):
+        counter_cx = counter_cx + 1
         add_triples_recursively(g, graph_cx, s)
 # For the moment, we save research data into cx. TODO: should we put them in their own Abox?
 for s, p, o in g:
     if isinstance(s, URIRef) and str(s).startswith(rd):
+        counter_cx = counter_cx + 1
         add_triples_recursively(g, graph_cx, s)
 
 # Serialize the filtered graph
 graph_cx.serialize(destination=output_cx, format="turtle")
-print(f"RDF saved to {output_cx}")
+print(f"RDF saved to {output_cx}: contains {counter_cx} triplets")
 
 # Iterate over all triples in the original graph (for membr.ttl)
+counter_membr = 0
 for s, p, o in g:
     # Check if the subject starts with the desired prefix
     if isinstance(s, URIRef) and str(s).startswith(membr):
+        counter_membr = counter_membr + 1
         graph_membr.add((s, p, o))
 
 # Serialize the filtered graph
 graph_membr.serialize(destination=output_membr, format="turtle")
-print(f"RDF saved to {output_membr}")
+print(f"RDF saved to {output_membr}: contains {counter_membr} triplets")
 
 # Identify references and save them in a dedicated A-box
+counter_references = 0
 for subject, reference in g.subject_objects(cx.hasLiterature):
     for p, o in g.predicate_objects(reference):
+        counter_references = counter_references + 1
         graph_references.add((reference, p, o))
 # Serialize the filtered graph
 graph_references.serialize(destination=output_references, format="turtle")
-print(f"RDF saved to {output_references}")
+print(f"RDF saved to {output_references}: contains {counter_references} triplets")
+
+counter = counter_cx + counter_membr + counter_references
+print(f"The database contains {counter} triplets.")
