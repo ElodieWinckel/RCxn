@@ -1,0 +1,69 @@
+@prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cx: <http://example.org/cx/> .
+@prefix dcterm: <http://purl.org/dc/terms/> .
+@prefix gest: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/gest#> .
+@prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
+@prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#> .
+@prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
+@prefix olia: <http://purl.org/olia/olia.owl#> .
+@prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+membr:Project_Iabdounane_Fmeso rsrch:basedOn cx:engUsSpo_Hadituptoherewithphysicalheightgesture .
+
+cx:engUsSpo_Hadituptoherewithphysicalheightgesture_1 a rcxn:SlotObligatory ;
+    olia:hasSemanticRole olia:ExperiencerRole ;
+    rcxn:hasSlotForm cx:engUsSpo_Hadituptoherewithphysicalheightgesture_1_Form ;
+    rcxn:hasSyntacticFunction "Subject" .
+
+cx:engUsSpo_Hadituptoherewithphysicalheightgesture_1_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:eng_NounPhrase .
+
+cx:engUsSpo_Hadituptoherewithphysicalheightgesture_2 a rcxn:SlotObligatory ;
+    rcxn:hasOtherSemanticContribution "Enough" ;
+    rcxn:hasSlotForm cx:engUsSpo_Hadituptoherewithphysicalheightgesture_2_Form ;
+    rcxn:hasSyntacticFunction "Predicator" .
+
+cx:engUsSpo_Hadituptoherewithphysicalheightgesture_2_Form a rcxn:SlotForm ;
+    rcxn:hasSurfaceForm "had it up to here" .
+
+cx:engUsSpo_Hadituptoherewithphysicalheightgesture_3 a rcxn:SlotOptional ;
+    olia:hasSemanticRole olia:CauseRole ;
+    rcxn:hasSlotForm cx:engUsSpo_Hadituptoherewithphysicalheightgesture_3_Form ;
+    rcxn:hasSyntacticFunction "Oblique complement" .
+
+cx:engUsSpo_Hadituptoherewithphysicalheightgesture_3_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:eng_PrepositionalPhrasewithPLUSNP .
+
+cx:engUsSpo_Hadituptoherewithphysicalheightgesture_MD a rcxn:Metadata ;
+    dcterm:created "2026-07-07"^^xsd:date ;
+    rcxn:annotator membr:Iabdounane .
+
+cx:engUsSpo_Hadituptoherewithphysicalheightgesture_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "[An experiencer]1 has reached their maximum tolerance level of [a negative stimulus]3 and cannot take more of it." .
+
+cx:engUsSpo_Hadituptoherewithphysicalheightgesture_slots a rdf:Seq ;
+    rdf:_1 cx:engUsSpo_Hadituptoherewithphysicalheightgesture_1 ;
+    rdf:_2 cx:engUsSpo_Hadituptoherewithphysicalheightgesture_2 ;
+    rdf:_3 cx:engUsSpo_Hadituptoherewithphysicalheightgesture_3 .
+
+cx:eng_NounPhrase links:elementOf cx:engUsSpo_Hadituptoherewithphysicalheightgesture .
+
+cx:eng_PrepositionalPhrasewithPLUSNP links:elementOf cx:engUsSpo_Hadituptoherewithphysicalheightgesture .
+
+cx:engUsSpo_Hadituptoherewithphysicalheightgesture a rcxn:Construction ;
+    lg:partOfLanguage lg:engUsSpo ;
+    rcxn:hasConstructionMeaning cx:engUsSpo_Hadituptoherewithphysicalheightgesture_Meaning ;
+    rcxn:hasMetadata cx:engUsSpo_Hadituptoherewithphysicalheightgesture_MD ;
+    rcxn:hasSlots cx:engUsSpo_Hadituptoherewithphysicalheightgesture_slots ;
+    rcxn:hasTitle "Had it up to here with (+ physical height gesture)" ;
+    gest:hasGesture cx:engUsSpo_Hadituptoherewithphysicalheightgesture_Gest ;
+    links:inheritsFrom cx:engUsSpo_Hadituptoherewithmesoconstruction .
+
+cx:engUsSpo_Hadituptoherewithphysicalheightgesture_Gest a gest:GestureUsage ;
+    gest:uses cx:eng_PhysicalHeight ;
+    gest:starts cx:engUsSpo_Hadituptoherewithphysicalheightgesture_2 ;
+    gest:ends cx:engUsSpo_Hadituptoherewithphysicalheightgesture_3 .
+

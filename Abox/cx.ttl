@@ -158,13 +158,6 @@ cx:eng_ChefskissGesturalConstruction a gest:GestureConstruction ;
     rcxn:hasMetadata cx:eng_ChefskissGesturalConstruction_MD ;
     rcxn:hasTitle "Chef’s Kiss as a Gestural Construction" .
 
-cx:eng_PhysicalHeight a gest:GestureConstruction ;
-    gest:hasForm cx:eng_PhysicalHeight_Form ;
-    gest:hasMeaning cx:eng_PhysicalHeight_Meaning ;
-    lg:partOfLanguage lg:eng ;
-    rcxn:hasMetadata cx:eng_PhysicalHeight_MD ;
-    rcxn:hasTitle "Physical Height Gesture Construction" .
-
 cx:eng_caused_motion_construction_ppto links:sameFunctionDifferentForm cx:eng_ditransitive_construction_obj_np .
 
 cx:eng_monotransitive_construction a rcxn:Construction ;
@@ -1798,6 +1791,37 @@ cx:engUsSpo_Hadituptoherewithmesoconstruction_slots a rdf_ns:Seq ;
     rdf_ns:_2 cx:engUsSpo_Hadituptoherewithmesoconstruction_2 ;
     rdf_ns:_3 cx:engUsSpo_Hadituptoherewithmesoconstruction_3 .
 
+cx:engUsSpo_Hadituptoherewithphysicalheightgesture_1 a rcxn:SlotObligatory ;
+    olia:hasSemanticRole olia:ExperiencerRole ;
+    rcxn:hasSlotForm cx:engUsSpo_Hadituptoherewithphysicalheightgesture_1_Form ;
+    rcxn:hasSyntacticFunction "Subject" .
+
+cx:engUsSpo_Hadituptoherewithphysicalheightgesture_1_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:eng_NounPhrase .
+
+cx:engUsSpo_Hadituptoherewithphysicalheightgesture_2_Form a rcxn:SlotForm ;
+    rcxn:hasSurfaceForm "had it up to here" .
+
+cx:engUsSpo_Hadituptoherewithphysicalheightgesture_3_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:eng_PrepositionalPhrasewithPLUSNP .
+
+cx:engUsSpo_Hadituptoherewithphysicalheightgesture_Gest a gest:GestureUsage ;
+    gest:ends cx:engUsSpo_Hadituptoherewithphysicalheightgesture_3 ;
+    gest:starts cx:engUsSpo_Hadituptoherewithphysicalheightgesture_2 ;
+    gest:uses cx:eng_PhysicalHeight .
+
+cx:engUsSpo_Hadituptoherewithphysicalheightgesture_MD a rcxn:Metadata ;
+    dcterms:created "2026-07-07"^^xsd:date ;
+    rcxn:annotator membr:Iabdounane .
+
+cx:engUsSpo_Hadituptoherewithphysicalheightgesture_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "[An experiencer]1 has reached their maximum tolerance level of [a negative stimulus]3 and cannot take more of it." .
+
+cx:engUsSpo_Hadituptoherewithphysicalheightgesture_slots a rdf_ns:Seq ;
+    rdf_ns:_1 cx:engUsSpo_Hadituptoherewithphysicalheightgesture_1 ;
+    rdf_ns:_2 cx:engUsSpo_Hadituptoherewithphysicalheightgesture_2 ;
+    rdf_ns:_3 cx:engUsSpo_Hadituptoherewithphysicalheightgesture_3 .
+
 cx:engUsUkWr_EvaluativeAttributionConstruction_1 a rcxn:SlotOptional ;
     rcxn:hasOtherSemanticContribution "Attributor" ;
     rcxn:hasSlotForm cx:engUsUkWr_EvaluativeAttributionConstruction_1_Form .
@@ -2116,6 +2140,14 @@ cx:eng_Keepacoolheadconstruction_slots a rdf_ns:Seq ;
     rdf_ns:_2 cx:eng_Keepacoolheadconstruction_2 ;
     rdf_ns:_3 cx:eng_Keepacoolheadconstruction_3 ;
     rdf_ns:_4 cx:eng_Keepacoolheadconstruction_4 .
+
+cx:eng_PhysicalHeight a gest:GestureConstruction ;
+    gest:hasForm cx:eng_PhysicalHeight_Form ;
+    gest:hasMeaning cx:eng_PhysicalHeight_Meaning ;
+    lg:partOfLanguage lg:eng ;
+    links:elementOf cx:engUsSpo_Hadituptoherewithphysicalheightgesture ;
+    rcxn:hasMetadata cx:eng_PhysicalHeight_MD ;
+    rcxn:hasTitle "Physical Height Gesture Construction" .
 
 cx:eng_PhysicalHeight_Form a gest:GestureForm ;
     gest:handedness gest:OneHand ;
@@ -3342,6 +3374,16 @@ cx:engUsSpo_Hadituptoherewith_3 a rcxn:SlotOptional ;
     rcxn:hasSlotForm cx:engUsSpo_Hadituptoherewith_3_Form ;
     rcxn:hasSyntacticFunction "Oblique complement" .
 
+cx:engUsSpo_Hadituptoherewithphysicalheightgesture_2 a rcxn:SlotObligatory ;
+    rcxn:hasOtherSemanticContribution "Enough" ;
+    rcxn:hasSlotForm cx:engUsSpo_Hadituptoherewithphysicalheightgesture_2_Form ;
+    rcxn:hasSyntacticFunction "Predicator" .
+
+cx:engUsSpo_Hadituptoherewithphysicalheightgesture_3 a rcxn:SlotOptional ;
+    olia:hasSemanticRole olia:CauseRole ;
+    rcxn:hasSlotForm cx:engUsSpo_Hadituptoherewithphysicalheightgesture_3_Form ;
+    rcxn:hasSyntacticFunction "Oblique complement" .
+
 cx:eng_CauseMotionconstruction a rcxn:Construction ;
     cx:hasExample cx:eng_CauseMotionconstruction_Ex_A ;
     lg:partOfLanguage lg:eng ;
@@ -3367,13 +3409,6 @@ cx:eng_Keepacoolheadconstruction a rcxn:Construction ;
     rcxn:hasMetadata cx:eng_Keepacoolheadconstruction_MD ;
     rcxn:hasSlots cx:eng_Keepacoolheadconstruction_slots ;
     rcxn:hasTitle "Keep a cool head construction" .
-
-cx:eng_PrepositionalPhrasewithPLUSNP a rcxn:Construction ;
-    lg:partOfLanguage lg:eng ;
-    links:elementOf cx:engUsSpo_Hadituptoherewith,
-        cx:engUsSpo_Hadituptoherewithmesoconstruction ;
-    rcxn:hasMetadata cx:eng_PrepositionalPhrasewithPLUSNP_MD ;
-    rcxn:hasTitle "Prepositional Phrase (with + NP)" .
 
 cx:eng_ThisclosetoVingconstruction_4 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm cx:eng_ThisclosetoVingconstruction_4_Form .
@@ -3464,15 +3499,6 @@ cx:engLME_coolascolourconstruction a rcxn:Construction ;
     rcxn:hasSlots cx:engLME_coolascolourconstruction_slots ;
     rcxn:hasTitle "cool as colour construction" .
 
-cx:engUsSpo_Hadituptoherewithmesoconstruction a rcxn:Construction ;
-    cx:hasExample cx:engUsSpo_Hadituptoherewithmesoconstruction_Ex_A ;
-    lg:partOfLanguage lg:engUsSpo ;
-    links:inheritedBy cx:engUsSpo_Hadituptoherewith ;
-    rcxn:hasConstructionMeaning cx:engUsSpo_Hadituptoherewithmesoconstruction_Meaning ;
-    rcxn:hasMetadata cx:engUsSpo_Hadituptoherewithmesoconstruction_MD ;
-    rcxn:hasSlots cx:engUsSpo_Hadituptoherewithmesoconstruction_slots ;
-    rcxn:hasTitle "Had it up to here with (meso-construction)" .
-
 cx:eng_AdjectiveAttributiveconstruction a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
     rcxn:hasConstructionMeaning cx:eng_AdjectiveAttributiveconstruction_Meaning ;
@@ -3498,6 +3524,14 @@ cx:eng_Phrase a rcxn:Construction ;
     links:elementOf cx:engLME_Argumentstructureconstruction,
         cx:eng_AdjectivePredicativeconstruction ;
     rcxn:hasTitle "Phrase" .
+
+cx:eng_PrepositionalPhrasewithPLUSNP a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    links:elementOf cx:engUsSpo_Hadituptoherewith,
+        cx:engUsSpo_Hadituptoherewithmesoconstruction,
+        cx:engUsSpo_Hadituptoherewithphysicalheightgesture ;
+    rcxn:hasMetadata cx:eng_PrepositionalPhrasewithPLUSNP_MD ;
+    rcxn:hasTitle "Prepositional Phrase (with + NP)" .
 
 cx:eng_VerbPhrase a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
@@ -3593,7 +3627,26 @@ cx:engUsSpo_Hadituptoherewith a rcxn:Construction ;
     rcxn:hasConstructionMeaning cx:engUsSpo_Hadituptoherewith_Meaning ;
     rcxn:hasMetadata cx:engUsSpo_Hadituptoherewith_MD ;
     rcxn:hasSlots cx:engUsSpo_Hadituptoherewith_slots ;
-    rcxn:hasTitle "Had it up to here with" .
+    rcxn:hasTitle "Had it up to here with (+ throat cut gesture)" .
+
+cx:engUsSpo_Hadituptoherewithmesoconstruction a rcxn:Construction ;
+    cx:hasExample cx:engUsSpo_Hadituptoherewithmesoconstruction_Ex_A ;
+    lg:partOfLanguage lg:engUsSpo ;
+    links:inheritedBy cx:engUsSpo_Hadituptoherewith,
+        cx:engUsSpo_Hadituptoherewithphysicalheightgesture ;
+    rcxn:hasConstructionMeaning cx:engUsSpo_Hadituptoherewithmesoconstruction_Meaning ;
+    rcxn:hasMetadata cx:engUsSpo_Hadituptoherewithmesoconstruction_MD ;
+    rcxn:hasSlots cx:engUsSpo_Hadituptoherewithmesoconstruction_slots ;
+    rcxn:hasTitle "Had it up to here with (meso-construction)" .
+
+cx:engUsSpo_Hadituptoherewithphysicalheightgesture a rcxn:Construction ;
+    gest:hasGesture cx:engUsSpo_Hadituptoherewithphysicalheightgesture_Gest ;
+    lg:partOfLanguage lg:engUsSpo ;
+    links:inheritsFrom cx:engUsSpo_Hadituptoherewithmesoconstruction ;
+    rcxn:hasConstructionMeaning cx:engUsSpo_Hadituptoherewithphysicalheightgesture_Meaning ;
+    rcxn:hasMetadata cx:engUsSpo_Hadituptoherewithphysicalheightgesture_MD ;
+    rcxn:hasSlots cx:engUsSpo_Hadituptoherewithphysicalheightgesture_slots ;
+    rcxn:hasTitle "Had it up to here with (+ physical height gesture)" .
 
 cx:eng_cool a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
@@ -3824,17 +3877,6 @@ cx:eng_Verb a rcxn:Construction ;
         cx:eng_ditransitive_construction_obj_np ;
     rcxn:hasTitle "Verb" .
 
-cx:eng_NounPhrase a rcxn:Construction ;
-    lg:partOfLanguage lg:eng ;
-    links:elementOf cx:comePLUSnoisemannerofmovementVing,
-        cx:engLME_AttributeConstructionAttrAdj,
-        cx:engLME_GIVEOUTVerbParticleConstruction,
-        cx:engUsSpo_Hadituptoherewith,
-        cx:engUsSpo_Hadituptoherewithmesoconstruction,
-        cx:engUsUkWr_EvaluativeAttributionConstruction,
-        cx:eng_ditransitive_construction_obj_np ;
-    rcxn:hasTitle "Noun Phrase" .
-
 cx:gmh12C_PräfixverbkonstruktionHandlung a rcxn:Construction ;
     cx:hasExample cx:gmh12C_PräfixverbkonstruktionHandlung_Ex_A,
         cx:gmh12C_PräfixverbkonstruktionHandlung_Ex_B,
@@ -3846,6 +3888,18 @@ cx:gmh12C_PräfixverbkonstruktionHandlung a rcxn:Construction ;
     rcxn:hasMetadata cx:gmh12C_PräfixverbkonstruktionHandlung_MD ;
     rcxn:hasSlots cx:gmh12C_PräfixverbkonstruktionHandlung_slots ;
     rcxn:hasTitle "Präfixverbkonstruktion (Handlung)" .
+
+cx:eng_NounPhrase a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    links:elementOf cx:comePLUSnoisemannerofmovementVing,
+        cx:engLME_AttributeConstructionAttrAdj,
+        cx:engLME_GIVEOUTVerbParticleConstruction,
+        cx:engUsSpo_Hadituptoherewith,
+        cx:engUsSpo_Hadituptoherewithmesoconstruction,
+        cx:engUsSpo_Hadituptoherewithphysicalheightgesture,
+        cx:engUsUkWr_EvaluativeAttributionConstruction,
+        cx:eng_ditransitive_construction_obj_np ;
+    rcxn:hasTitle "Noun Phrase" .
 
 cx:deu_NPDefDetstrongPLUSADJweakPLUSN a rcxn:Construction ;
     lg:partOfLanguage lg:deu ;

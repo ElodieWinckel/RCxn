@@ -365,6 +365,7 @@ membr:Project_Iabdounane_Fmeso a rsrch:Finding ;
     rsrch:basedOn cx:SmallQuantityGestureConstruction,
         cx:engUsSpo_Hadituptoherewith,
         cx:engUsSpo_Hadituptoherewithmesoconstruction,
+        cx:engUsSpo_Hadituptoherewithphysicalheightgesture,
         cx:eng_PhysicalHeight,
         cx:eng_ThroatCutGesture .
 

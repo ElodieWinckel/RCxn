@@ -65,7 +65,7 @@ cx:engUsSpo_Hadituptoherewith a rcxn:Construction ;
     rcxn:hasConstructionMeaning cx:engUsSpo_Hadituptoherewith_Meaning ;
     rcxn:hasMetadata cx:engUsSpo_Hadituptoherewith_MD ;
     rcxn:hasSlots cx:engUsSpo_Hadituptoherewith_slots ;
-    rcxn:hasTitle "Had it up to here with" ;
+    rcxn:hasTitle "Had it up to here with (+ throat cut gesture)" ;
     gest:hasGesture cx:engUsSpo_Hadituptoherewith_Gest ;
     links:inheritsFrom cx:engUsSpo_Hadituptoherewithmesoconstruction .
 
