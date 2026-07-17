@@ -5,6 +5,7 @@ import re
 from flask import render_template, url_for
 from rdflib import Graph, URIRef, Literal, Namespace, RDF, RDFS, SKOS
 import os
+from collections import defaultdict
 
 ###################################################
 ### FUNCTIONS
@@ -206,10 +207,15 @@ def comparative_concept_detail(uri):
             'object': object_with_urls,
             'definition': definition_without_ahref
         })
+    # Delete non-relevant properties
     description[:] = [item for item in description if item[
         'property'] != "http://www.w3.org/2000/01/rdf-schema#label"]  # The label is the title, therefore not needed
     description[:] = [item for item in description if item[
         'property'] != "Link to the MoCCA database of Comparative Concepts"]  # The link will be added to the sources, not needed in the main table
+    # Group by property
+    grouped_description = defaultdict(list)
+    for triple in description:
+        grouped_description[triple['property']].append(triple)
 
     # Collect constructions that use entry_uri as a comparative concept
     construction_list = []
@@ -236,6 +242,6 @@ def comparative_concept_detail(uri):
 
     return render_template("app_compcon/entry.html",
                            title = complete_title,
-                           description = description,
+                           description=grouped_description.items(),
                            constructions = construction_list,
                            url_in_mocca_database = url_in_mocca_database)

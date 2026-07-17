@@ -5,25 +5,21 @@
 {% block content %}
 
     <h1>{{ title }}</h1>
-    <table border="1">
-        {% for triple in description %}
+    <table>
+        {% for property, triples in description %}
             <tr>
-                <th>{{ triple.property }}</th>
+                <th>{{ property }}</th>
                 <td>
-                    <span title="{{ triple.definition }}">
-                        {% if triple.url %}
-                            <a href="{{ url_for('app_entries.construction_detail', uri=triple.url) }}" target="_blank">
-                                {{ triple.object }}
-                            </a>
-                        {% else %}
+                    {% for triple in triples %}
+                        <span title="{{ triple.definition|e }}">
                             {{ triple.object|safe }}
-                        {% endif %}
-                    </span>
+                        </span>
+                        {% if not loop.last %}<br>{% endif %}
+                    {% endfor %}
                 </td>
             </tr>
         {% endfor %}
     </table>
-
 
 {% if constructions %}
 <h2>Constructions in the Research Constructicon using this comparative concept</h2>
