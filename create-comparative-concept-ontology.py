@@ -1,5 +1,4 @@
 from rdflib import Graph, Literal, Namespace, URIRef, RDF, RDFS, OWL, SKOS
-from rdflib.namespace import DC, DCTERMS
 import yaml
 
 # Define namespaces
@@ -7,7 +6,8 @@ compcon = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/compcon
 cx = Namespace("http://example.org/cx/")
 
 # Load YAML content
-with open('/home/meuhlodi/Travail/RCxn/ontologies/cc-database.yaml', 'r') as file:
+with open('./ontologies/cc-database.yaml', 'r', encoding = 'utf-8') as file:
+    print("Found yaml file.")
     database = yaml.safe_load(file)
 
 g = Graph()
@@ -36,6 +36,9 @@ g.add((compcon[iri_for_definition], RDF.type, OWL.Class))
 g.add((compcon[iri_for_definition], RDFS.label, Literal("definition")))
 g.add((compcon[iri_for_definition], RDFS.comment, Literal("A category of concepts which are part of the terminology used by Croft (2022) to describe comparative concepts. They are not comparative concepts themselves.")))
 
+# Define a class introduced in the YAML database
+g.add((compcon.Example, RDFS.label, Literal("Illustration of a comparative concept")))
+
 # Define some properties introduced in the yaml database
 g.add((compcon.subtypeOf, RDF.type, OWL.ObjectProperty))
 g.add((compcon.subtypeOf, RDFS.label, Literal("Subtype of")))
@@ -51,6 +54,8 @@ g.add((compcon.linkToDatabase, RDF.type, OWL.ObjectProperty))
 g.add((compcon.linkToDatabase, RDFS.label, Literal("Link to the MoCCA database of Comparative Concepts")))
 g.add((compcon.Sections, RDF.type, OWL.ObjectProperty))
 g.add((compcon.Sections, RDFS.label, Literal("See section (in Croft 2022)")))
+g.add((compcon.hasExample, RDF.type, OWL.ObjectProperty))
+g.add((compcon.hasExample, RDFS.label, Literal("Example")))
 
 # Define property hasCompCon which will be used to annotate construction entries
 g.add((compcon.hasCompCon, RDF.type, OWL.ObjectProperty))
@@ -108,12 +113,12 @@ def add_entry_to_graph(entry):
         for i, example in enumerate(entry['Examples']):
             if isinstance(example, str):
                 example_uri = URIRef(f"{compcon}{entry_id.split(':')[1]}-example-{i}")
-                g.add((example_uri, RDF.type, cx.Example))
+                g.add((example_uri, RDF.type, compcon.Example))
                 g.add((example_uri, RDFS.label, Literal(example)))
-                g.add((entry_uri, cx.hasExample, example_uri))
+                g.add((entry_uri, compcon.hasExample, example_uri))
             elif isinstance(example, dict):
                 example_uri = URIRef(f"{compcon}{entry_id.split(':')[1]}-example-{i}")
-                g.add((example_uri, RDF.type, cx.Example))
+                g.add((example_uri, RDF.type, compcon.Example))
                 g.add((example_uri, compcon.language, Literal(example['Language'])))
                 g.add((example_uri, RDFS.label, Literal(example['Example'])))
                 #if example['Gloss']:
@@ -121,7 +126,7 @@ def add_entry_to_graph(entry):
                 #    print(gloss_literal)
                 #    g.add((example_uri, cx.gloss, Literal(gloss_literal)))
                 #g.add((example_uri, cx.translation, Literal(example['Translation'])))
-                g.add((entry_uri, cx.hasExample, example_uri))
+                g.add((entry_uri, compcon.hasExample, example_uri))
 
     # Add a link to the original
     url_in_original_database = "https://comparative-concepts.github.io/cc-database/cc-database.html#" + entry_id
@@ -135,5 +140,5 @@ for entry in database:
 ttl_content = g.serialize(format='turtle')
 
 # Save the Turtle content to a file
-with open('/home/meuhlodi/Travail/RCxn/ontologies/compcon.ttl', 'w') as f:
+with open('./ontologies/compcon.ttl', 'w', encoding = 'utf-8') as f:
     f.write(ttl_content)

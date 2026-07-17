@@ -87,7 +87,7 @@ if os.path.exists("/data/www/RCxn"):
     os.chdir("/data/www/RCxn")  # # Set the working directory to the application's production path
 
 else:
-    # Load and parse all RDF files from the folder with submissions (only during development process)
+    # Load and parse all RDF files from the folder with submissions (only during development)
     for ttl_file in glob.glob("instance/Submissions/*.ttl"):
         g.parse(ttl_file, format="turtle")
 
@@ -101,6 +101,11 @@ g.bind("compcon", compcon)
 
 # Load the ontologies
 ont = Graph()
+ont = Graph()
+for xlm_file in glob.glob("ontologies/*.rdf"):
+    ont.parse(xlm_file, format="xml")
+for xlm_file in glob.glob("ontologies/*.owl"): # for olia
+    ont.parse(xlm_file, format="xml")
 for ttl_file in glob.glob("ontologies/*.ttl"): # for compcon
     ont.parse(ttl_file, format="turtle")
 
