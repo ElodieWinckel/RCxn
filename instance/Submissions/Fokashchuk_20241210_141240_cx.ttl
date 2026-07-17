@@ -11,67 +11,68 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-cx:deuStdHigh_AllativeNP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions a rcxn:Construction ;
-    rcxn:hasTitle "Allative NP1 + auf + NP2 & NP1 + an + NP2 constructions" ;
-    rcxn:hasConstructionMeaning cx:deuStdHigh_AllativeNP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_Meaning ;
-    rcxn:hasMetadata cx:deuStdHigh_AllativeNP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_MD ;
-    rcxn:hasSlots cx:deuStdHigh_AllativeNP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_slots ;
+cx:deuStdHigh_NP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions a rcxn:Construction ;
+    rcxn:hasTitle "NP1 + auf + NP2 & NP1 + an + NP2 constructions" ;
+    rcxn:hasConstructionMeaning cx:deuStdHigh_NP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_Meaning ;
+    rcxn:hasMetadata cx:deuStdHigh_NP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_MD ;
+    rcxn:hasSlots cx:deuStdHigh_NP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_slots ;
     lg:partOfLanguage lg:deuStdHigh .
 
-cx:deuStdHigh_AllativeNP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_1 a rcxn:SlotObligatory ;
+cx:deuStdHigh_NP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_1 a rcxn:SlotObligatory ;
     rcxn:hasIS rcxn:Focus ;
-    rcxn:hasSlotForm cx:deuStdHigh_AllativeNP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_1_Form ;
-    cx:hasIndex cx:deuStdHigh_AllativeNP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_1_Index ;
-    RDFS:comment "usually the nominative case" ;
-    rcxn:hasSyntacticFunction "head of Element 2" .
+    rcxn:hasSlotForm cx:deuStdHigh_NP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_1_Form ;
+    cx:hasIndex cx:deuStdHigh_NP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_1_Index ;
+    RDFS:comment "usually in the nominative case" , "profiled toward Element 2";
+    rcxn:hasSyntacticFunction "head of Element 2" ;
+    rcxn:hasOtherSemanticContribution "trajector" .
 
-cx:deuStdHigh_AllativeNP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_1_Form a rcxn:SlotForm ;
+cx:deuStdHigh_NP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_1_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:deu_NounPhrase .
 
-cx:deuStdHigh_AllativeNP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_1_Index a cx:Individual ;
+cx:deuStdHigh_NP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_1_Index a cx:Individual ;
     olia:hasAnimacy olia:Inanimate .
 
-cx:deuStdHigh_AllativeNP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_2 a rcxn:SlotObligatory ;
+cx:deuStdHigh_NP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_2 a rcxn:SlotObligatory ;
     cx:WordOrder "follows Element 1" ;
-    rcxn:hasSlotForm cx:deuStdHigh_AllativeNP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_2_Form ;
-    rcxn:hasSlots cx:deuStdHigh_AllativeNP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_2_slots .
-
-cx:deuStdHigh_AllativeNP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_2_Form a rcxn:SlotForm ;
-    rcxn:hasSyntacticForm cx:eng_PrepositionalPhrase .
-
-cx:deuStdHigh_AllativeNP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_3 a rcxn:SlotObligatory ;
-    cx:WordOrder "first element of Element 2" ;
-    rcxn:hasSlotForm cx:deuStdHigh_AllativeNP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_3_Form ;
+    rcxn:hasSlotForm cx:deuStdHigh_NP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_2_Form ;
+    rcxn:hasSlots cx:deuStdHigh_NP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_2_slots ;
     olia:hasSemanticRole olia:DirectionRole .
 
-cx:deuStdHigh_AllativeNP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_3_Form a cx:SlotForm ;
+cx:deuStdHigh_NP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_2_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:eng_PrepositionalPhrase .
+
+cx:deuStdHigh_NP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_3 a rcxn:SlotObligatory ;
+    cx:WordOrder "first element of Element 2" ;
+    rcxn:hasSlotForm cx:deuStdHigh_NP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_3_Form .
+
+cx:deuStdHigh_NP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_3_Form a cx:SlotForm ;
     rcxn:hasSurfaceForm "auf" ;
     rcxn:hasSurfaceForm "an" .
 
-cx:deuStdHigh_AllativeNP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_4 a rcxn:SlotObligatory ;
+cx:deuStdHigh_NP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_4 a rcxn:SlotObligatory ;
     cx:WordOrder "follows Element 3" ;
     rcxn:hasIS rcxn:Background ;
     rcxn:hasSyntacticFunction "complement of Element 3" ;
     olia:hasSemanticRole olia:ThemeRole .
 
-cx:deuStdHigh_AllativeNP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_4_Form a cx:SlotForm ;
+cx:deuStdHigh_NP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_4_Form a cx:SlotForm ;
     rcxn:hasSyntacticForm cx:deu_NounPhrase .
 
-cx:deuStdHigh_AllativeNP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_MD a rcxn:Metadata ;
+cx:deuStdHigh_NP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_MD a rcxn:Metadata ;
     rcxn:annotator membr:Fokashchuk ;
     dcterm:created "2024-12-10"^^xsd:date .
 
-cx:deuStdHigh_AllativeNP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_Meaning a rcxn:ConstructionMeaning ;
+cx:deuStdHigh_NP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_Meaning a rcxn:ConstructionMeaning ;
     rcxn:usesImageSchema "SUPPORT, DIRECTION, CONTACT, PROXIMITY, LOCATION, CONTAINMENT, SOURCE-PATH-GOAL, FORCE, PART-WHOLE, SURFACE" ;
     rcxn:hasMeaning "The sense of direction of [one entity]1 towards [another entity]4" .
 
-cx:deuStdHigh_AllativeNP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_slots a rdf:Seq ;
-    rdf:_1 cx:deuStdHigh_AllativeNP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_1 ;
-    rdf:_2 cx:deuStdHigh_AllativeNP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_2 .
+cx:deuStdHigh_NP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_slots a rdf:Seq ;
+    rdf:_1 cx:deuStdHigh_NP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_1 ;
+    rdf:_2 cx:deuStdHigh_NP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_2 .
 
-cx:deuStdHigh_AllativeNP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_2_slots a rdf:Seq ;
-    rdf:_1 cx:deuStdHigh_AllativeNP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_3 ;
-    rdf:_2 cx:deuStdHigh_AllativeNP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_4 .
+cx:deuStdHigh_NP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_2_slots a rdf:Seq ;
+    rdf:_1 cx:deuStdHigh_NP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_3 ;
+    rdf:_2 cx:deuStdHigh_NP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_4 .
 
 cx:deu_NounPhrase  a rcxn:Construction ;
     rcxn:hasTitle "Noun Phrase" ;
@@ -87,5 +88,5 @@ membr:Project_Fokashchuk_241210_F250218 a rsrch:Finding ;
     rdfs:label  """(1) Most constructions across languages do not employ the same prepositions in terms of their spatial meaning, which challenges the assumption of uniform metaphorical and/or metonymic extensions. This indicates that when expressing similar scenes or relations between entities, different languages focus on distinct aspects of the relationship, or activate different "active zones" (Langacker 1991).\r
 (2) There are some cross-linguistic correspondences when auf and an are used spatially, as auf/an are often translated as "on" in the other 3 languages. However, in abstract meanings, the semantic network diverges significantly: auf sometimes retains a connection to spatial "on", while an does not.\r
 (3) Another parallelism: (a) an often corresponds to "of" in English and to the absence of a preposition but the object in genitive case in Polish and Ukrainian in NP1 + an + NP2 constructions. (b) Synonyms in English, Polish, and Ukrainian tend to govern the same prepositions, whereas this pattern is much less consistent in German.""" ;
-    rsrch:basedOn cx:deuStdHigh_AllativeNP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions.
+    rsrch:basedOn cx:deuStdHigh_NP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions.
 
