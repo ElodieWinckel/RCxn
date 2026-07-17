@@ -342,18 +342,35 @@ membr:Project_Hutta a rsrch:Project ;
     rsrch:projectName "Project Hutta"@en .
 
 membr:Project_Iabdounane a rsrch:Project ;
-    rsrch:hasFindings membr:Project_Iabdounane_F250218 ;
+    rsrch:hasResearchQuestion membr:Project_Iabdounane_20260717 ;
     rsrch:projectName "Multimodal constructional space"@en .
+
+membr:Project_Iabdounane_20260717 a rsrch:Project ;
+    rsrch:hasFindings membr:Project_Iabdounane_F250218,
+        membr:Project_Iabdounane_Fchefskiss,
+        membr:Project_Iabdounane_Fmeso,
+        membr:Project_Iabdounane_Fthiscloseto ;
+    rsrch:projectName "How can multimodal phenomena be modelled in Construction Grammar?" .
 
 membr:Project_Iabdounane_F250218 a rsrch:Finding ;
     rdfs:label "The verbal form “this close to V-ing” and the close index finger - thumb gesture co-occur 93% of the time. The two forms are likely entrenched together as a single unit, thus making it one formal multimodal unit.\r The construction is multimodal." ;
+    rsrch:basedOn cx:eng_ThisclosetoVingconstruction .
+
+membr:Project_Iabdounane_Fchefskiss a rsrch:Finding ;
+    rdfs:label "Chef’s Kiss exemplifies a gesture that functions as a construction in its own right, as it constitutes a form-meaning pairing. It can occupy specific slots within argument structure constructions, resulting in a multimodal construct where the gesture assumes a syntactic role." ;
+    rsrch:basedOn cx:eng_ChefskissGesturalConstruction .
+
+membr:Project_Iabdounane_Fmeso a rsrch:Finding ;
+    rdfs:label "The meso construction is a semi-schematic multimodal construction: the verbal form is fixed, while the gestural component is a schematic slot. This slot accepts specific gesture types, primarily those indicating height or cutting motions. The meanings of these gestures are metaphorically extended to the domain of emotions conceptualized as a liquid." ;
     rsrch:basedOn cx:SmallQuantityGestureConstruction,
         cx:engUsSpo_Hadituptoherewith,
         cx:engUsSpo_Hadituptoherewithmesoconstruction,
-        cx:eng_ChefskissGesturalConstruction,
         cx:eng_PhysicalHeight,
-        cx:eng_ThisclosetoVingconstruction,
         cx:eng_ThroatCutGesture .
+
+membr:Project_Iabdounane_Fthiscloseto a rsrch:Finding ;
+    rdfs:label "This close to is an example of a multimodal construction in which the verbal form and the gesture are fixed and frequently co-occur. As such, it presents no significant challenges for modeling within Construction Grammar." ;
+    rsrch:basedOn cx:eng_ThisclosetoVingconstruction .
 
 membr:Project_Immertreu a rsrch:Project ;
     rsrch:projectName "Multimodal cognitive maps for cross-domain constructional networks"@en .

@@ -11,7 +11,7 @@
 @prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-membr:Project_Iabdounane_F250218 rsrch:basedOn cx:engUsSpo_Hadituptoherewith .
+membr:Project_Iabdounane_Fmeso rsrch:basedOn cx:engUsSpo_Hadituptoherewith .
 
 cx:engUsSpo_Hadituptoherewith_1 a rcxn:SlotObligatory ;
     olia:hasSemanticRole olia:ExperiencerRole ;

@@ -1,0 +1,18 @@
+@prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
+
+membr:Project_Iabdounane rsrch:hasResearchQuestion membr:Project_Iabdounane_20260717 .
+
+membr:Project_Iabdounane_20260717 a rsrch:Project ;
+    rsrch:projectName "How can multimodal phenomena be modelled in Construction Grammar?" ;
+    rsrch:hasFindings membr:Project_Iabdounane_F250218 , membr:Project_Iabdounane_Fthiscloseto , membr:Project_Iabdounane_Fmeso , membr:Project_Iabdounane_Fchefskiss .
+
+membr:Project_Iabdounane_Fthiscloseto a rsrch:Finding ;
+    rdfs:label """This close to is an example of a multimodal construction in which the verbal form and the gesture are fixed and frequently co-occur. As such, it presents no significant challenges for modeling within Construction Grammar.""" .
+
+membr:Project_Iabdounane_Fmeso a rsrch:Finding ;
+    rdfs:label """The meso construction is a semi-schematic multimodal construction: the verbal form is fixed, while the gestural component is a schematic slot. This slot accepts specific gesture types, primarily those indicating height or cutting motions. The meanings of these gestures are metaphorically extended to the domain of emotions conceptualized as a liquid.""" .
+
+membr:Project_Iabdounane_Fchefskiss a rsrch:Finding ;
+    rdfs:label """Chef’s Kiss exemplifies a gesture that functions as a construction in its own right, as it constitutes a form-meaning pairing. It can occupy specific slots within argument structure constructions, resulting in a multimodal construct where the gesture assumes a syntactic role.""" .

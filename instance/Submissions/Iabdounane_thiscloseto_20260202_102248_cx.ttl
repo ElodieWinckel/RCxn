@@ -10,8 +10,6 @@
 @prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-membr:Project_Iabdounane_F250218 rsrch:basedOn cx:eng_ThisclosetoVingconstruction .
-
 cx:eng_PrepositionalPhrasetoPLUSVing a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
     links:elementOf cx:eng_ThisclosetoVingconstruction ;
@@ -121,7 +119,10 @@ cx:eng_ThisclosetoVingconstruction_Ex_A a cx:Example ;
     rdfs:comment "http://go.redhenlab.org/yas/0117" .
 # https://pisa.vrnewsscape.ucla.edu/newsscape_mp4_snippet.cgi?file=fa5d0dfc-cb7b-11e6-97cd-089e01ba0338&start=2396&end=2401
 
-membr:Project_Iabdounane rsrch:hasFindings membr:Project_Iabdounane_F250218 .
-
 membr:Project_Iabdounane_F250218 a rsrch:Finding ;
     rdfs:label """The verbal form “this close to V-ing” and the close index finger - thumb gesture co-occur 93% of the time. The two forms are likely entrenched together as a single unit, thus making it one formal multimodal unit.\r The construction is multimodal.""" .
+
+membr:Project_Iabdounane_F250218 rsrch:basedOn cx:eng_ThisclosetoVingconstruction .
+
+membr:Project_Iabdounane_Fthiscloseto rsrch:basedOn cx:eng_ThisclosetoVingconstruction .
+
