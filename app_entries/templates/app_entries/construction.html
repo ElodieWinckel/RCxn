@@ -91,6 +91,25 @@ const elements = extractTopLevel(rawElements);
 //---------------------------------------------
 // 3. Build main table data mapping
 //---------------------------------------------
+
+const compconUrlTemplate = "{{ url_for('app_compcon.comparative_concept_detail', uri='PLACEHOLDER_URI') }}";
+
+// Function to generate rows in the table (with definition, hyperlink to compcon, etc.)
+// This function will be used by createCrossTable.
+function renderValue(v) {
+    const title = v.definition ? ` title="${v.definition}"` : '';
+
+    if (v.href_compcon) {
+        const compconUrl = compconUrlTemplate.replace("PLACEHOLDER_URI",encodeURIComponent(v.href_compcon));
+        return `<a href="${compconUrl}" target="_blank"${title}>${v.object}</a>`;
+    }
+    if (v.href) {
+        return `<a href="${v.href}" target="_blank"${title}>${v.object}</a>`;
+    }
+    return `<span${title}>${v.object}</span>`;
+}
+
+// Main function to create the table.
 function createCrossTable(data) {
 
     const subjects = [...new Set(data.map(item => item.subject))];
@@ -145,19 +164,7 @@ function createCrossTable(data) {
     // Function: render only top-level values for a cell
     //---------------------------------------------
     function renderTopLevelValues(values) {
-        return values.map(v => {
-            const title = v.definition ? ` title="${v.definition}"` : '';
-            if (v.href_compcon) {
-                // Use the blueprint URL for href_compcon
-                const compconUrl = `/app_compcon/entry/${encodeURIComponent(v.href_compcon)}`;
-                return `<a href="${compconUrl}" target="_blank"${title}>${v.object}</a>`;
-            } else if (v.href) {
-                // Use the original href if no href_compcon
-                return `<a href="${v.href}" target="_blank"${title}>${v.object}</a>`;
-            } else {
-                return `<span${title}>${v.object}</span>`;
-            }
-        }).join('<br>');
+        return values.map(renderValue).join('<br>');
     }
 
     //---------------------------------------------
@@ -187,9 +194,9 @@ function createCrossTable(data) {
         // group child data by property and subject
         const nestedTableData = {};
         childProperties.forEach(p => nestedTableData[p] = {});
-        children.forEach(({ subject: chSubj, property, object, href }) => {
+        children.forEach(({ subject: chSubj, property, object, href, href_compcon, definition }) => {
             if (!nestedTableData[property][chSubj]) nestedTableData[property][chSubj] = [];
-            nestedTableData[property][chSubj].push({ object, href });
+            nestedTableData[property][chSubj].push({ object, href, href_compcon, definition });
         });
 
         // Build nested table HTML (single nested table returned)
@@ -208,12 +215,7 @@ function createCrossTable(data) {
             nested += childSubjects.map(s => {
                 const vals = nestedTableData[prop][s] || [];
                 return `<td style="padding:4px 6px;">${
-                    vals.map(v => {
-                        const title = v.definition ? ` title="${v.definition}"` : '';
-                        return v.href
-                            ? `<a href="${v.href}" target="_blank"${title}>${v.object}</a>`
-                            : `<span${title}>${v.object}</span>`;
-                    }).join('<br>')
+                    vals.map(renderValue).join('<br>')
                 }</td>`;
             }).join('');
             nested += `</tr>`;
