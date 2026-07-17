@@ -230,6 +230,7 @@ def comparative_concept_detail(uri):
             'object': name,
             'url': url,
         })
+        construction_list = list({item['object']: item for item in construction_list}.values()) # deletes duplicates
 
     url_in_mocca_database = ont.value(subject=entry_uri, predicate=compcon.linkToDatabase)
 
