@@ -6,10 +6,11 @@
 
     <h1>{{ title }}</h1>
     <table>
-        {% for triple in triples %}
+        {% for property, triples in description %}
             <tr>
-                <th>{{ triple.property }}</th>
+                <th>{{ property }}</th>
                 <td>
+                    {% for triple in triples %}
                     <span title="{{ triple.definition }}">
                         {% if triple.url %}
                             <a href="{{ url_for('app_compcon.comparative_concept_detail', uri=triple.url) }}" target="_blank">
@@ -19,6 +20,8 @@
                             {{ triple.object|safe }}
                         {% endif %}
                     </span>
+                    {% if not loop.last %}<br>{% endif %}
+                    {% endfor %}
                 </td>
             </tr>
         {% endfor %}

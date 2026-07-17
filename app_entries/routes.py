@@ -427,6 +427,11 @@ def construction_detail(uri):
         return custom_order_for_triples.get(property_value, 1)
     triples = sorted(triples, key=custom_sort_key_for_triples)
 
+    # Group the list triple by property
+    grouped_triples = defaultdict(list)
+    for triple in triples:
+        grouped_triples[triple['property']].append(triple)
+
     # Collect triples for elements / slots
     elements, colloprofiles, list_of_nested = identify_construction_element_triples(slots_uri)
     for nested in list_of_nested:
@@ -600,7 +605,7 @@ def construction_detail(uri):
 
     return render_template("app_entries/construction.html",
                            title=title,
-                           triples=triples,
+                           description=grouped_triples.items(),
                            elements=elements,
                            grouped_examples=grouped_examples,
                            links=links,
