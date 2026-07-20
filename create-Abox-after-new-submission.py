@@ -50,6 +50,11 @@ g.bind("evid", evid)
 graph_cx.bind("evid", evid)
 graph_membr.bind("evid", evid)
 
+frac = Namespace("http://www.w3.org/ns/lemon/frac##")
+g.bind("frac", frac)
+graph_cx.bind("frac", frac)
+graph_membr.bind("frac", frac)
+
 gest = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/gest#")
 g.bind("gest", gest)
 graph_cx.bind("gest", gest)

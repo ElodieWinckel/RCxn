@@ -7,7 +7,8 @@
 @prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
 @prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#> .
 @prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
-@prefix ns1: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rdata#> .
+@prefix ns1: <http://www.w3.org/ns/lemon/frac#> .
+@prefix ns2: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rdata#> .
 @prefix olia: <http://purl.org/olia/olia.owl#> .
 @prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
 @prefix rd: <http://example.org/rd/> .
@@ -399,44 +400,82 @@ cx:comePLUSnoisemannerofmovementVing_2_Form a rcxn:SlotForm ;
 
 cx:comePLUSnoisemannerofmovementVing_3 a rcxn:SlotObligatory ;
     rdfs:comment "present participle" ;
-    evid:colloprofile ( [ cx:frequency 36 ;
-                evid:filler "tumbling" ] [ cx:frequency 22 ;
-                evid:filler "hurrying" ] [ cx:frequency 11 ;
-                evid:filler "barging" ] [ cx:frequency 22 ;
-                evid:filler "hurtling" ] [ cx:frequency 20 ;
-                evid:filler "striding" ] [ cx:frequency 27 ;
-                evid:filler "crashing" ] [ cx:frequency 56 ;
-                evid:filler "rushing" ] [ cx:frequency 14 ;
-                evid:filler "bounding" ] [ cx:frequency 19 ;
-                evid:filler "bursting" ] [ cx:frequency 11 ;
-                evid:filler "crowding" ] [ cx:frequency 23 ;
-                evid:filler "pouring" ] [ cx:frequency 109 ;
-                evid:filler "running" ] [ cx:frequency 7 ;
-                evid:filler "surging" ] [ cx:frequency 12 ;
-                evid:filler "roaring" ] [ cx:frequency 7 ;
-                evid:filler "streaming" ] [ cx:frequency 10 ;
-                evid:filler "trotting" ] [ cx:frequency 22 ;
-                evid:filler "flying" ] [ cx:frequency 4 ;
-                evid:filler "shambling" ] [ cx:frequency 21 ;
-                evid:filler "riding" ] [ cx:frequency 5 ;
-                evid:filler "blundering" ] [ cx:frequency 7 ;
-                evid:filler "leaping" ] [ cx:frequency 6 ;
-                evid:filler "stumbling" ] [ cx:frequency 5 ;
-                evid:filler "clattering" ] [ cx:frequency 5 ;
-                evid:filler "floating" ] [ cx:frequency 5 ;
-                evid:filler "thundering" ] [ cx:frequency 9 ;
-                evid:filler "charging" ] [ cx:frequency 5 ;
-                evid:filler "spilling" ] [ cx:frequency 5 ;
-                evid:filler "storming" ] [ cx:frequency 3 ;
-                evid:filler "lolloping" ] [ cx:frequency 7 ;
-                evid:filler "drifting" ] [ cx:frequency 7 ;
-                evid:filler "tearing" ] [ cx:frequency 4 ;
-                evid:filler "galloping" ] [ cx:frequency 6 ;
-                evid:filler "panting" ] [ cx:frequency 11 ;
-                evid:filler "racing" ] [ cx:frequency 4 ;
-                evid:filler "scurrying" ] [ cx:frequency 3 ;
-                evid:filler "loping" ] [ cx:frequency 3 ;
-                evid:filler "prancing" ] [ cx:frequency 3 ;
+    evid:colloprofile ( [ ns1:frequency [ a cx:CorpusX ;
+                        rdf_ns:value "36"^^xsd:int ] ;
+                evid:filler "tumbling" ] [ ns1:frequency [ a cx:CorpusX ;
+                        rdf_ns:value "22"^^xsd:int ] ;
+                evid:filler "hurrying" ] [ ns1:frequency [ a cx:CorpusX ;
+                        rdf_ns:value "11"^^xsd:int ] ;
+                evid:filler "barging" ] [ ns1:frequency [ a cx:CorpusX ;
+                        rdf_ns:value "22"^^xsd:int ] ;
+                evid:filler "hurtling" ] [ ns1:frequency [ a cx:CorpusX ;
+                        rdf_ns:value "20"^^xsd:int ] ;
+                evid:filler "striding" ] [ ns1:frequency [ a cx:CorpusX ;
+                        rdf_ns:value "27"^^xsd:int ] ;
+                evid:filler "crashing" ] [ ns1:frequency [ a cx:CorpusX ;
+                        rdf_ns:value "56"^^xsd:int ] ;
+                evid:filler "rushing" ] [ ns1:frequency [ a cx:CorpusX ;
+                        rdf_ns:value "14"^^xsd:int ] ;
+                evid:filler "bounding" ] [ ns1:frequency [ a cx:CorpusX ;
+                        rdf_ns:value "19"^^xsd:int ] ;
+                evid:filler "bursting" ] [ ns1:frequency [ a cx:CorpusX ;
+                        rdf_ns:value "11"^^xsd:int ] ;
+                evid:filler "crowding" ] [ ns1:frequency [ a cx:CorpusX ;
+                        rdf_ns:value "23"^^xsd:int ] ;
+                evid:filler "pouring" ] [ ns1:frequency [ a cx:CorpusX ;
+                        rdf_ns:value "109"^^xsd:int ] ;
+                evid:filler "running" ] [ ns1:frequency [ a cx:CorpusX ;
+                        rdf_ns:value "7"^^xsd:int ] ;
+                evid:filler "surging" ] [ ns1:frequency [ a cx:CorpusX ;
+                        rdf_ns:value "12"^^xsd:int ] ;
+                evid:filler "roaring" ] [ ns1:frequency [ a cx:CorpusX ;
+                        rdf_ns:value "7"^^xsd:int ] ;
+                evid:filler "streaming" ] [ ns1:frequency [ a cx:CorpusX ;
+                        rdf_ns:value "10"^^xsd:int ] ;
+                evid:filler "trotting" ] [ ns1:frequency [ a cx:CorpusX ;
+                        rdf_ns:value "22"^^xsd:int ] ;
+                evid:filler "flying" ] [ ns1:frequency [ a cx:CorpusX ;
+                        rdf_ns:value "4"^^xsd:int ] ;
+                evid:filler "shambling" ] [ ns1:frequency [ a cx:CorpusX ;
+                        rdf_ns:value "21"^^xsd:int ] ;
+                evid:filler "riding" ] [ ns1:frequency [ a cx:CorpusX ;
+                        rdf_ns:value "5"^^xsd:int ] ;
+                evid:filler "blundering" ] [ ns1:frequency [ a cx:CorpusX ;
+                        rdf_ns:value "7"^^xsd:int ] ;
+                evid:filler "leaping" ] [ ns1:frequency [ a cx:CorpusX ;
+                        rdf_ns:value "6"^^xsd:int ] ;
+                evid:filler "stumbling" ] [ ns1:frequency [ a cx:CorpusX ;
+                        rdf_ns:value "5"^^xsd:int ] ;
+                evid:filler "clattering" ] [ ns1:frequency [ a cx:CorpusX ;
+                        rdf_ns:value "5"^^xsd:int ] ;
+                evid:filler "floating" ] [ ns1:frequency [ a cx:CorpusX ;
+                        rdf_ns:value "5"^^xsd:int ] ;
+                evid:filler "thundering" ] [ ns1:frequency [ a cx:CorpusX ;
+                        rdf_ns:value "9"^^xsd:int ] ;
+                evid:filler "charging" ] [ ns1:frequency [ a cx:CorpusX ;
+                        rdf_ns:value "5"^^xsd:int ] ;
+                evid:filler "spilling" ] [ ns1:frequency [ a cx:CorpusX ;
+                        rdf_ns:value "5"^^xsd:int ] ;
+                evid:filler "storming" ] [ ns1:frequency [ a cx:CorpusX ;
+                        rdf_ns:value "3"^^xsd:int ] ;
+                evid:filler "lolloping" ] [ ns1:frequency [ a cx:CorpusX ;
+                        rdf_ns:value "7"^^xsd:int ] ;
+                evid:filler "drifting" ] [ ns1:frequency [ a cx:CorpusX ;
+                        rdf_ns:value "7"^^xsd:int ] ;
+                evid:filler "tearing" ] [ ns1:frequency [ a cx:CorpusX ;
+                        rdf_ns:value "4"^^xsd:int ] ;
+                evid:filler "galloping" ] [ ns1:frequency [ a cx:CorpusX ;
+                        rdf_ns:value "6"^^xsd:int ] ;
+                evid:filler "panting" ] [ ns1:frequency [ a cx:CorpusX ;
+                        rdf_ns:value "11"^^xsd:int ] ;
+                evid:filler "racing" ] [ ns1:frequency [ a cx:CorpusX ;
+                        rdf_ns:value "4"^^xsd:int ] ;
+                evid:filler "scurrying" ] [ ns1:frequency [ a cx:CorpusX ;
+                        rdf_ns:value "3"^^xsd:int ] ;
+                evid:filler "loping" ] [ ns1:frequency [ a cx:CorpusX ;
+                        rdf_ns:value "3"^^xsd:int ] ;
+                evid:filler "prancing" ] [ ns1:frequency [ a cx:CorpusX ;
+                        rdf_ns:value "3"^^xsd:int ] ;
                 evid:filler "straggling" ] ) ;
     rcxn:hasSlotForm cx:comePLUSnoisemannerofmovementVing_3_Form .
 
@@ -545,13 +584,20 @@ cx:deuStdHigh_NP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_slots a rdf_ns:S
 cx:deuWrSt20_sichNPADJADVvorAugenVP_1 a rcxn:SlotOptional ;
     cx:WordOrder "In most cases, NP precedes the prepositional phrase \"vor Augen\"." ;
     cx:hasIS cx:Topic ;
-    evid:colloprofile ( [ cx:frequency 39 ;
-                evid:filler "Ziel" ] [ cx:frequency 24 ;
-                evid:filler "Bild" ] [ cx:frequency 22 ;
-                evid:filler "Tod" ] [ cx:frequency 16 ;
-                evid:filler "Beispiel" ] [ cx:frequency 13 ;
-                evid:filler "Welt" ] [ cx:frequency 12 ;
-                evid:filler "Tatsache" ] [ cx:frequency 10 ;
+    evid:colloprofile ( [ ns1:frequency [ a cx:CorpusX ;
+                        rdf_ns:value "39"^^xsd:int ] ;
+                evid:filler "Ziel" ] [ ns1:frequency [ a cx:CorpusX ;
+                        rdf_ns:value "24"^^xsd:int ] ;
+                evid:filler "Bild" ] [ ns1:frequency [ a cx:CorpusX ;
+                        rdf_ns:value "22"^^xsd:int ] ;
+                evid:filler "Tod" ] [ ns1:frequency [ a cx:CorpusX ;
+                        rdf_ns:value "16"^^xsd:int ] ;
+                evid:filler "Beispiel" ] [ ns1:frequency [ a cx:CorpusX ;
+                        rdf_ns:value "13"^^xsd:int ] ;
+                evid:filler "Welt" ] [ ns1:frequency [ a cx:CorpusX ;
+                        rdf_ns:value "12"^^xsd:int ] ;
+                evid:filler "Tatsache" ] [ ns1:frequency [ a cx:CorpusX ;
+                        rdf_ns:value "10"^^xsd:int ] ;
                 evid:filler "Volk" ] ) ;
     rcxn:hasSemanticProperty "The NP predominantly denotes abstract concepts, particularly those that are 1) subject to mental representation (Ziel, Bild, Beispiel), 2) abstract existential element or phenomenon (Welt, Tod, Tatsache), 3) collective entities." ;
     rcxn:hasSlotForm cx:deuWrSt20_sichNPADJADVvorAugenVP_1_Form ;
@@ -563,13 +609,20 @@ cx:deuWrSt20_sichNPADJADVvorAugenVP_1_Form a rcxn:SlotForm ;
 cx:deuWrSt20_sichNPADJADVvorAugenVP_2 a rcxn:SlotOptional ;
     cx:WordOrder "The adjectives mostly directly precedes the prepositional phrase \"vor Augen\"." ;
     rdfs:comment "The adjectives are also frequently modified by an adverb \"so\", forming adverbial phrases such as \"so deutlich, so klar\", etc. " ;
-    evid:colloprofile ( [ cx:frequency 51 ;
-                evid:filler "deutlich" ] [ cx:frequency 47 ;
-                evid:filler "klar" ] [ cx:frequency 10 ;
-                evid:filler "anschaulich" ] [ cx:frequency 9 ;
-                evid:filler "eindringlich" ] [ cx:frequency 9 ;
-                evid:filler "lebendig" ] [ cx:frequency 9 ;
-                evid:filler "unmittelbar" ] [ cx:frequency 7 ;
+    evid:colloprofile ( [ ns1:frequency [ a cx:CorpusX ;
+                        rdf_ns:value "51"^^xsd:int ] ;
+                evid:filler "deutlich" ] [ ns1:frequency [ a cx:CorpusX ;
+                        rdf_ns:value "47"^^xsd:int ] ;
+                evid:filler "klar" ] [ ns1:frequency [ a cx:CorpusX ;
+                        rdf_ns:value "10"^^xsd:int ] ;
+                evid:filler "anschaulich" ] [ ns1:frequency [ a cx:CorpusX ;
+                        rdf_ns:value "9"^^xsd:int ] ;
+                evid:filler "eindringlich" ] [ ns1:frequency [ a cx:CorpusX ;
+                        rdf_ns:value "9"^^xsd:int ] ;
+                evid:filler "lebendig" ] [ ns1:frequency [ a cx:CorpusX ;
+                        rdf_ns:value "9"^^xsd:int ] ;
+                evid:filler "unmittelbar" ] [ ns1:frequency [ a cx:CorpusX ;
+                        rdf_ns:value "7"^^xsd:int ] ;
                 evid:filler "lebhaft" ] ) ;
     rcxn:hasSemanticProperty "The adjectives share the semantic property of describing vividness or clarity." ;
     rcxn:hasSlotForm cx:deuWrSt20_sichNPADJADVvorAugenVP_2_Form .
@@ -579,11 +632,16 @@ cx:deuWrSt20_sichNPADJADVvorAugenVP_2_Form a rcxn:SlotForm ;
 
 cx:deuWrSt20_sichNPADJADVvorAugenVP_3 a rcxn:SlotOptional ;
     cx:WordOrder "The adverbs typically appear directly before the prepositional phrase \"vor Augen\"." ;
-    evid:colloprofile ( [ cx:frequency 42 ;
-                evid:filler "immer" ] [ cx:frequency 32 ;
-                evid:filler "wieder" ] [ cx:frequency 27 ;
-                evid:filler "stets" ] [ cx:frequency 25 ;
-                evid:filler "noch" ] [ cx:frequency 9 ;
+    evid:colloprofile ( [ ns1:frequency [ a cx:CorpusX ;
+                        rdf_ns:value "42"^^xsd:int ] ;
+                evid:filler "immer" ] [ ns1:frequency [ a cx:CorpusX ;
+                        rdf_ns:value "32"^^xsd:int ] ;
+                evid:filler "wieder" ] [ ns1:frequency [ a cx:CorpusX ;
+                        rdf_ns:value "27"^^xsd:int ] ;
+                evid:filler "stets" ] [ ns1:frequency [ a cx:CorpusX ;
+                        rdf_ns:value "25"^^xsd:int ] ;
+                evid:filler "noch" ] [ ns1:frequency [ a cx:CorpusX ;
+                        rdf_ns:value "9"^^xsd:int ] ;
                 evid:filler "täglich" ] ) ;
     rcxn:hasSemanticProperty "The adverbs share a semantic property of expressing recurrence or regularity." ;
     rcxn:hasSlotForm cx:deuWrSt20_sichNPADJADVvorAugenVP_3_Form .
@@ -620,11 +678,16 @@ cx:deuWrSt20_sichNPADJADVvorAugenVP_6 a rcxn:SlotOptional ;
     cx:WordOrder "The position of the verb within the construction is relatively flexible." ;
     cx:hasIS cx:Comment ;
     rdfs:comment "When the verb führen or halten occur, the reflexive pronoun \"sich\" is obligatory present (Element 1)." ;
-    evid:colloprofile ( [ cx:frequency 225 ;
-                evid:filler "führen" ] [ cx:frequency 143 ;
-                evid:filler "halten" ] [ cx:frequency 129 ;
-                evid:filler "haben" ] [ cx:frequency 25 ;
-                evid:filler "stellen" ] [ cx:frequency 15 ;
+    evid:colloprofile ( [ ns1:frequency [ a cx:CorpusX ;
+                        rdf_ns:value "225"^^xsd:int ] ;
+                evid:filler "führen" ] [ ns1:frequency [ a cx:CorpusX ;
+                        rdf_ns:value "143"^^xsd:int ] ;
+                evid:filler "halten" ] [ ns1:frequency [ a cx:CorpusX ;
+                        rdf_ns:value "129"^^xsd:int ] ;
+                evid:filler "haben" ] [ ns1:frequency [ a cx:CorpusX ;
+                        rdf_ns:value "25"^^xsd:int ] ;
+                evid:filler "stellen" ] [ ns1:frequency [ a cx:CorpusX ;
+                        rdf_ns:value "15"^^xsd:int ] ;
                 evid:filler "stehen" ] ) ;
     rcxn:hasSemanticProperty "Though these verbs are highly polysemous, they either relate to the positioning of something in space, either actively (führen, stellen) or passively (stehen), or imply control or possession (halten, haben, führen)" ;
     rcxn:hasSlotForm cx:deuWrSt20_sichNPADJADVvorAugenVP_6_Form .
@@ -2206,9 +2269,12 @@ cx:eng_ThisclosetoVingconstruction_2_slots a rdf_ns:Seq ;
     rdf_ns:_3 cx:eng_ThisclosetoVingconstruction_5 .
 
 cx:eng_ThisclosetoVingconstruction_3 a rcxn:SlotOptional ;
-    evid:colloprofile ( [ cx:frequency 327 ;
-                evid:filler "be" ] [ cx:frequency 109 ;
-                evid:filler "come" ] [ cx:frequency 11 ;
+    evid:colloprofile ( [ ns1:frequency [ a cx:CorpusX ;
+                        rdf_ns:value "327"^^xsd:int ] ;
+                evid:filler "be" ] [ ns1:frequency [ a cx:CorpusX ;
+                        rdf_ns:value "109"^^xsd:int ] ;
+                evid:filler "come" ] [ ns1:frequency [ a cx:CorpusX ;
+                        rdf_ns:value "11"^^xsd:int ] ;
                 evid:filler "get" ] ) ;
     rcxn:hasSlotForm cx:eng_ThisclosetoVingconstruction_3_Form .
 
@@ -3300,12 +3366,12 @@ cx:zho_VerbPhrase a rcxn:Construction ;
     links:elementOf cx:lzh_Dooperationwithoperand1onoperand2construction ;
     rcxn:hasTitle "Verb Phrase" .
 
-rd:FernandezSantos_20260130_629471 a ns1:Study ;
-    ns1:Summary "Participants' accuracy on subject relative clauses is at ceiling only when the verb follows the relativizer. Accuracy decreases when the verb is in a clause-final position. Object relative clauses are not at ceiling, but are misinterpreted as subject relative clauses over 90% of the time when there is no object marker and the verb follows the relativizer. The presence of an object marker does not impact accuracy when the verb is clause-final." ;
-    ns1:dataRepository "https://osf.io/4x6pz/files/osfstorage" ;
-    ns1:publishedIn "Llompart, Fernández Santos & Dąbrowska (2024-10-10). Comprehension of object relatives in Spanish: the role of frequency and transparency in acquisition and adult grammar. 10.1515/cog-2024-0016" ;
-    ns1:relevantFor cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause ;
-    ns1:studyType ns1:behavioralExperiment .
+rd:FernandezSantos_20260130_629471 a ns2:Study ;
+    ns2:Summary "Participants' accuracy on subject relative clauses is at ceiling only when the verb follows the relativizer. Accuracy decreases when the verb is in a clause-final position. Object relative clauses are not at ceiling, but are misinterpreted as subject relative clauses over 90% of the time when there is no object marker and the verb follows the relativizer. The presence of an object marker does not impact accuracy when the verb is clause-final." ;
+    ns2:dataRepository "https://osf.io/4x6pz/files/osfstorage" ;
+    ns2:publishedIn "Llompart, Fernández Santos & Dąbrowska (2024-10-10). Comprehension of object relatives in Spanish: the role of frequency and transparency in acquisition and adult grammar. 10.1515/cog-2024-0016" ;
+    ns2:relevantFor cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause ;
+    ns2:studyType ns2:behavioralExperiment .
 
 cx:Noun a rcxn:Construction ;
     links:elementOf cx:eng_AdjectiveAttributiveconstruction,
@@ -3419,12 +3485,18 @@ cx:eng_ThisclosetoVingconstruction_4 a rcxn:SlotObligatory ;
 cx:eng_ThisclosetoVingconstruction_6 a rcxn:SlotObligatory ;
     olia:hasSemanticRole olia:GoalRole ;
     rdfs:comment "List of Collocations for this close to x-ing as obtained from AntConc 4.2.4" ;
-    evid:colloprofile ( [ cx:frequency 150 ;
-                evid:filler "being" ] [ cx:frequency 129 ;
-                evid:filler "getting" ] [ cx:frequency 57 ;
-                evid:filler "having" ] [ cx:frequency 27 ;
-                evid:filler "losing" ] [ cx:frequency 27 ;
-                evid:filler "winning" ] [ cx:frequency 24 ;
+    evid:colloprofile ( [ ns1:frequency [ a cx:CorpusX ;
+                        rdf_ns:value "150"^^xsd:int ] ;
+                evid:filler "being" ] [ ns1:frequency [ a cx:CorpusX ;
+                        rdf_ns:value "129"^^xsd:int ] ;
+                evid:filler "getting" ] [ ns1:frequency [ a cx:CorpusX ;
+                        rdf_ns:value "57"^^xsd:int ] ;
+                evid:filler "having" ] [ ns1:frequency [ a cx:CorpusX ;
+                        rdf_ns:value "27"^^xsd:int ] ;
+                evid:filler "losing" ] [ ns1:frequency [ a cx:CorpusX ;
+                        rdf_ns:value "27"^^xsd:int ] ;
+                evid:filler "winning" ] [ ns1:frequency [ a cx:CorpusX ;
+                        rdf_ns:value "24"^^xsd:int ] ;
                 evid:filler "saying" ] ) ;
     rcxn:hasSlotForm cx:eng_ThisclosetoVingconstruction_6_Form ;
     rcxn:hasSyntacticFunction "Complement" .
@@ -3838,7 +3910,7 @@ cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause a rcxn:Construction ;
     rcxn:hasMetadata cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_MD ;
     rcxn:hasSlots cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_slots ;
     rcxn:hasTitle "Potentially ambiguous object relative clause" ;
-    ns1:basedOnStudy rd:FernandezSantos_20260130_629471 .
+    ns2:basedOnStudy rd:FernandezSantos_20260130_629471 .
 
 cx:itaStoria_RelativeTopicShiftConstruction a rcxn:Construction ;
     cx:hasExample cx:itaStoria_RelativeTopicShiftConstruction_Ex_A,

@@ -13,6 +13,7 @@ from .graph_loader import (
     dcterm,
     compcon,
     evid,
+    frac,
     gest,
     lg,
     links,
@@ -120,8 +121,9 @@ def identify_construction_element_triples(slots_uri):
         for collo_list in g.objects(subject=slot_uri, predicate=evid.colloprofile):
             for item in g.items(collo_list):
                 filler = g.value(item, evid.filler)
-                freq = g.value(item, cx.frequency)
-                collo.append({"filler": str(filler), "frequency": int(freq)})
+                freq = g.value(item, frac.frequency)
+                freq_value = g.value(freq, RDF.value)
+                collo.append({"filler": str(filler), "frequency": int(freq_value)})
         if collo:  # append only if there is a colloprofile
             collo.sort(key=lambda x: x["frequency"], reverse=True)  # Sort by frequency (descending)
             colloprofiles.append({

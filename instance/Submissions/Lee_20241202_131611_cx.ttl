@@ -2,6 +2,7 @@
 @prefix cx: <http://example.org/cx/> .
 @prefix dcterm: <http://purl.org/dc/terms/> .
 @prefix evid: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/evid#> .
+@prefix frac: <http://www.w3.org/ns/lemon/frac#> .
 @prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
 @prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#> .
 @prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
@@ -38,13 +39,13 @@ cx:deuWrSt20_sichNPADJADVvorAugenVP_1 a rcxn:SlotOptional ;
     cx:hasIS cx:Topic ;
     rcxn:hasSlotForm cx:deuWrSt20_sichNPADJADVvorAugenVP_1_Form ;
     evid:colloprofile (
-        [ evid:filler "Ziel"; cx:frequency 39 ]
-        [ evid:filler "Bild"; cx:frequency 24 ]
-        [ evid:filler "Tod"; cx:frequency 22 ]
-        [ evid:filler "Beispiel"; cx:frequency 16 ]
-        [ evid:filler "Welt"; cx:frequency 13 ]
-        [ evid:filler "Tatsache"; cx:frequency 12 ]
-        [ evid:filler "Volk"; cx:frequency 10 ] ) ;
+        [ evid:filler "Ziel"; frac:frequency [ a cx:CorpusX ; rdf:value "39"^^xsd:int]]
+        [ evid:filler "Bild"; frac:frequency [ a cx:CorpusX ; rdf:value "24"^^xsd:int]]
+        [ evid:filler "Tod"; frac:frequency [ a cx:CorpusX ; rdf:value "22"^^xsd:int]]
+        [ evid:filler "Beispiel"; frac:frequency [ a cx:CorpusX ; rdf:value "16"^^xsd:int]]
+        [ evid:filler "Welt"; frac:frequency [ a cx:CorpusX ; rdf:value "13"^^xsd:int]]
+        [ evid:filler "Tatsache"; frac:frequency [ a cx:CorpusX ; rdf:value "12"^^xsd:int]]
+        [ evid:filler "Volk"; frac:frequency [ a cx:CorpusX ; rdf:value "10"^^xsd:int]] ) ;
     rcxn:hasSyntacticFunction "Object" ;
     rcxn:hasSemanticProperty "The NP predominantly denotes abstract concepts, particularly those that are 1) subject to mental representation (Ziel, Bild, Beispiel), 2) abstract existential element or phenomenon (Welt, Tod, Tatsache), 3) collective entities." .
 
@@ -56,13 +57,13 @@ cx:deuWrSt20_sichNPADJADVvorAugenVP_2 a rcxn:SlotOptional ;
     rcxn:hasSlotForm cx:deuWrSt20_sichNPADJADVvorAugenVP_2_Form ;
     RDFS:comment "The adjectives are also frequently modified by an adverb \"so\", forming adverbial phrases such as \"so deutlich, so klar\", etc. " ;
     evid:colloprofile (
-        [ evid:filler "deutlich"; cx:frequency 51 ]
-        [ evid:filler "klar"; cx:frequency 47 ]
-        [ evid:filler "anschaulich"; cx:frequency 10 ]
-        [ evid:filler "eindringlich"; cx:frequency 9 ]
-        [ evid:filler "lebendig"; cx:frequency 9 ]
-        [ evid:filler "unmittelbar"; cx:frequency 9 ]
-        [ evid:filler "lebhaft"; cx:frequency 7 ] ) ;
+        [ evid:filler "deutlich"; frac:frequency [ a cx:CorpusX ; rdf:value "51"^^xsd:int]]
+        [ evid:filler "klar"; frac:frequency [ a cx:CorpusX ; rdf:value "47"^^xsd:int]]
+        [ evid:filler "anschaulich"; frac:frequency [ a cx:CorpusX ; rdf:value "10"^^xsd:int]]
+        [ evid:filler "eindringlich"; frac:frequency [ a cx:CorpusX ; rdf:value "9"^^xsd:int]]
+        [ evid:filler "lebendig"; frac:frequency [ a cx:CorpusX ; rdf:value "9"^^xsd:int]]
+        [ evid:filler "unmittelbar"; frac:frequency [ a cx:CorpusX ; rdf:value "9"^^xsd:int]]
+        [ evid:filler "lebhaft"; frac:frequency [ a cx:CorpusX ; rdf:value "7"^^xsd:int]] ) ;
     rcxn:hasSemanticProperty "The adjectives share the semantic property of describing vividness or clarity." .
 
 cx:deuWrSt20_sichNPADJADVvorAugenVP_2_Form a rcxn:SlotForm ;
@@ -72,11 +73,11 @@ cx:deuWrSt20_sichNPADJADVvorAugenVP_3 a rcxn:SlotOptional ;
     cx:WordOrder "The adverbs typically appear directly before the prepositional phrase \"vor Augen\"." ;
     rcxn:hasSlotForm cx:deuWrSt20_sichNPADJADVvorAugenVP_3_Form ;
     evid:colloprofile (
-        [ evid:filler "immer"; cx:frequency 42 ]
-        [ evid:filler "wieder"; cx:frequency 32 ]
-        [ evid:filler "stets"; cx:frequency 27 ]
-        [ evid:filler "noch"; cx:frequency 25 ]
-        [ evid:filler "täglich"; cx:frequency 9 ] ) ;
+        [ evid:filler "immer"; frac:frequency [ a cx:CorpusX ; rdf:value "42"^^xsd:int]]
+        [ evid:filler "wieder"; frac:frequency [ a cx:CorpusX ; rdf:value "32"^^xsd:int]]
+        [ evid:filler "stets"; frac:frequency [ a cx:CorpusX ; rdf:value "27"^^xsd:int]]
+        [ evid:filler "noch"; frac:frequency [ a cx:CorpusX ; rdf:value "25"^^xsd:int]]
+        [ evid:filler "täglich"; frac:frequency [ a cx:CorpusX ; rdf:value "9"^^xsd:int]] ) ;
     rcxn:hasSemanticProperty "The adverbs share a semantic property of expressing recurrence or regularity." .
 
 cx:deuWrSt20_sichNPADJADVvorAugenVP_3_Form a rcxn:SlotForm ;
@@ -113,11 +114,11 @@ cx:deuWrSt20_sichNPADJADVvorAugenVP_6 a rcxn:SlotOptional ;
     rcxn:hasSlotForm cx:deuWrSt20_sichNPADJADVvorAugenVP_6_Form ;
     RDFS:comment "When the verb führen or halten occur, the reflexive pronoun \"sich\" is obligatory present (Element 1)." ;
     evid:colloprofile (
-        [ evid:filler "führen"; cx:frequency 225 ]
-        [ evid:filler "halten"; cx:frequency 143 ]
-        [ evid:filler "haben"; cx:frequency 129 ]
-        [ evid:filler "stellen"; cx:frequency 25 ]
-        [ evid:filler "stehen"; cx:frequency 15 ] ) ;
+        [ evid:filler "führen"; frac:frequency [ a cx:CorpusX ; rdf:value "225"^^xsd:int]]
+        [ evid:filler "halten"; frac:frequency [ a cx:CorpusX ; rdf:value "143"^^xsd:int]]
+        [ evid:filler "haben"; frac:frequency [ a cx:CorpusX ; rdf:value "129"^^xsd:int]]
+        [ evid:filler "stellen"; frac:frequency [ a cx:CorpusX ; rdf:value "25"^^xsd:int]]
+        [ evid:filler "stehen"; frac:frequency [ a cx:CorpusX ; rdf:value "15"^^xsd:int]] ) ;
     rcxn:hasSemanticProperty "Though these verbs are highly polysemous, they either relate to the positioning of something in space, either actively (führen, stellen) or passively (stehen), or imply control or possession (halten, haben, führen)" .
 
 cx:deuWrSt20_sichNPADJADVvorAugenVP_6_Form a rcxn:SlotForm ;

@@ -1,6 +1,7 @@
 @prefix cx: <http://example.org/cx/> .
 @prefix dcterm: <http://purl.org/dc/terms/> .
 @prefix evid: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/evid#> .
+@prefix frac: <http://www.w3.org/ns/lemon/frac#> .
 @prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
 @prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#> .
 @prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
@@ -31,9 +32,9 @@ cx:eng_ThisclosetoVingconstruction_2 a rcxn:SlotObligatory ;
 
 cx:eng_ThisclosetoVingconstruction_3 a rcxn:SlotOptional ;
     evid:colloprofile (
-        [ evid:filler "be"; cx:frequency 327 ]
-        [ evid:filler "come"; cx:frequency 109 ]
-        [ evid:filler "get"; cx:frequency 11 ] ) ;
+        [ evid:filler "be"; frac:frequency [ a cx:CorpusX ; rdf:value "327"^^xsd:int]]
+        [ evid:filler "come"; frac:frequency [ a cx:CorpusX ; rdf:value "109"^^xsd:int]]
+        [ evid:filler "get"; frac:frequency [ a cx:CorpusX ; rdf:value "11"^^xsd:int]] ) ;
     rcxn:hasSlotForm cx:eng_ThisclosetoVingconstruction_3_Form .
 
 cx:eng_ThisclosetoVingconstruction_3_Form a rcxn:SlotForm ;
@@ -56,12 +57,12 @@ cx:eng_ThisclosetoVingconstruction_6 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm cx:eng_ThisclosetoVingconstruction_6_Form ;
     rcxn:hasSyntacticFunction "Complement" ;
     evid:colloprofile (
-        [ evid:filler "being"; cx:frequency 150 ]
-        [ evid:filler "getting"; cx:frequency 129 ]
-        [ evid:filler "having"; cx:frequency 57 ]
-        [ evid:filler "losing"; cx:frequency 27 ]
-        [ evid:filler "winning"; cx:frequency 27 ]
-        [ evid:filler "saying"; cx:frequency 24 ]    ) ;
+        [ evid:filler "being"; frac:frequency [ a cx:CorpusX ; rdf:value "150"^^xsd:int]]
+        [ evid:filler "getting"; frac:frequency [ a cx:CorpusX ; rdf:value "129"^^xsd:int]]
+        [ evid:filler "having"; frac:frequency [ a cx:CorpusX ; rdf:value "57"^^xsd:int]]
+        [ evid:filler "losing"; frac:frequency [ a cx:CorpusX ; rdf:value "27"^^xsd:int]]
+        [ evid:filler "winning"; frac:frequency [ a cx:CorpusX ; rdf:value "27"^^xsd:int]]
+        [ evid:filler "saying"; frac:frequency [ a cx:CorpusX ; rdf:value "24"^^xsd:int]] ) ;
     rdfs:comment "List of Collocations for this close to x-ing as obtained from AntConc 4.2.4" .
 
 cx:eng_ThisclosetoVingconstruction_6_Form a rcxn:SlotForm ;

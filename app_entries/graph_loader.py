@@ -40,6 +40,8 @@ compcon = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/compcon
 g.bind("compcon", compcon)
 evid = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/evid#")
 g.bind("evid", evid)
+frac = Namespace("http://www.w3.org/ns/lemon/frac#")
+g.bind("frac", frac)
 gest = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/gest#")
 g.bind("gest", gest)
 lg = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#")
