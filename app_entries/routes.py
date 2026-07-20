@@ -12,6 +12,7 @@ from .graph_loader import (
     dc,
     dcterm,
     compcon,
+    evid,
     gest,
     lg,
     links,
@@ -116,7 +117,7 @@ def identify_construction_element_triples(slots_uri):
         element_number = "Element " + slot_uri[-1]
         # Extract colloprofiles for this slot
         collo = []
-        for collo_list in g.objects(subject=slot_uri, predicate=cx.colloprofile):
+        for collo_list in g.objects(subject=slot_uri, predicate=evid.colloprofile):
             for item in g.items(collo_list):
                 word = g.value(item, cx.word)
                 freq = g.value(item, cx.frequency)

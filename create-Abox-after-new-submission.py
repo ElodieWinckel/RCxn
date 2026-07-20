@@ -45,6 +45,11 @@ g.bind("compcon", compcon)
 graph_cx.bind("compcon", compcon)
 graph_membr.bind("compcon", compcon)
 
+evid = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/evid#")
+g.bind("evid", evid)
+graph_cx.bind("evid", evid)
+graph_membr.bind("evid", evid)
+
 gest = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/gest#")
 g.bind("gest", gest)
 graph_cx.bind("gest", gest)

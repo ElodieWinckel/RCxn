@@ -281,7 +281,7 @@ function generateFields() {
 
         // Create fields for colloprofile
         const colloprofileLabel = document.createElement('label');
-        colloprofileLabel.textContent = `Colloprofile (Provisional: enter different lexical items separated by semicolons, and indications about frequency in parentheses) (optional):`;
+        colloprofileLabel.textContent = `Colloprofile (optional): For a complete colloprofile with frequencies, please submit a table of frequencies together with this entry. Do not forget to provide the name of the corpus (and eventually, the total amount of token). If the colloprofile is just a series of lexical items without frequencies, use the field below. Enter the list of lexical items separated by semicolons.`;
         const colloprofileInput = document.createElement('input');
         colloprofileInput.type = 'text';
         colloprofileInput.name = `colloprofile_${i + 1}`;

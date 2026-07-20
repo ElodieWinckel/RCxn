@@ -1,6 +1,7 @@
 @prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix cx: <http://example.org/cx/> .
 @prefix dcterm: <http://purl.org/dc/terms/> .
+@prefix evid: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/evid#> .
 @prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
 @prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#> .
 @prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
@@ -36,7 +37,7 @@ cx:deuWrSt20_sichNPADJADVvorAugenVP_1 a rcxn:SlotOptional ;
     cx:WordOrder "In most cases, NP precedes the prepositional phrase \"vor Augen\"." ;
     cx:hasIS cx:Topic ;
     rcxn:hasSlotForm cx:deuWrSt20_sichNPADJADVvorAugenVP_1_Form ;
-    cx:colloprofile (
+    evid:colloprofile (
         [ cx:word "Ziel"; cx:frequency 39 ]
         [ cx:word "Bild"; cx:frequency 24 ]
         [ cx:word "Tod"; cx:frequency 22 ]
@@ -54,7 +55,7 @@ cx:deuWrSt20_sichNPADJADVvorAugenVP_2 a rcxn:SlotOptional ;
     cx:WordOrder "The adjectives mostly directly precedes the prepositional phrase \"vor Augen\"." ;
     rcxn:hasSlotForm cx:deuWrSt20_sichNPADJADVvorAugenVP_2_Form ;
     RDFS:comment "The adjectives are also frequently modified by an adverb \"so\", forming adverbial phrases such as \"so deutlich, so klar\", etc. " ;
-    cx:colloprofile (
+    evid:colloprofile (
         [ cx:word "deutlich"; cx:frequency 51 ]
         [ cx:word "klar"; cx:frequency 47 ]
         [ cx:word "anschaulich"; cx:frequency 10 ]
@@ -70,7 +71,7 @@ cx:deuWrSt20_sichNPADJADVvorAugenVP_2_Form a rcxn:SlotForm ;
 cx:deuWrSt20_sichNPADJADVvorAugenVP_3 a rcxn:SlotOptional ;
     cx:WordOrder "The adverbs typically appear directly before the prepositional phrase \"vor Augen\"." ;
     rcxn:hasSlotForm cx:deuWrSt20_sichNPADJADVvorAugenVP_3_Form ;
-    cx:colloprofile (
+    evid:colloprofile (
         [ cx:word "immer"; cx:frequency 42 ]
         [ cx:word "wieder"; cx:frequency 32 ]
         [ cx:word "stets"; cx:frequency 27 ]
@@ -111,7 +112,7 @@ cx:deuWrSt20_sichNPADJADVvorAugenVP_6 a rcxn:SlotOptional ;
     cx:hasIS cx:Comment ;
     rcxn:hasSlotForm cx:deuWrSt20_sichNPADJADVvorAugenVP_6_Form ;
     RDFS:comment "When the verb führen or halten occur, the reflexive pronoun \"sich\" is obligatory present (Element 1)." ;
-    cx:colloprofile (
+    evid:colloprofile (
         [ cx:word "führen"; cx:frequency 225 ]
         [ cx:word "halten"; cx:frequency 143 ]
         [ cx:word "haben"; cx:frequency 129 ]
