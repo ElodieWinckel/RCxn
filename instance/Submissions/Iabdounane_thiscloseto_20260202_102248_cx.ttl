@@ -31,9 +31,9 @@ cx:eng_ThisclosetoVingconstruction_2 a rcxn:SlotObligatory ;
 
 cx:eng_ThisclosetoVingconstruction_3 a rcxn:SlotOptional ;
     evid:colloprofile (
-        [ cx:word "be"; cx:frequency 327 ]
-        [ cx:word "come"; cx:frequency 109 ]
-        [ cx:word "get"; cx:frequency 11 ] ) ;
+        [ evid:filler "be"; cx:frequency 327 ]
+        [ evid:filler "come"; cx:frequency 109 ]
+        [ evid:filler "get"; cx:frequency 11 ] ) ;
     rcxn:hasSlotForm cx:eng_ThisclosetoVingconstruction_3_Form .
 
 cx:eng_ThisclosetoVingconstruction_3_Form a rcxn:SlotForm ;
@@ -56,12 +56,12 @@ cx:eng_ThisclosetoVingconstruction_6 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm cx:eng_ThisclosetoVingconstruction_6_Form ;
     rcxn:hasSyntacticFunction "Complement" ;
     evid:colloprofile (
-        [ cx:word "being"; cx:frequency 150 ]
-        [ cx:word "getting"; cx:frequency 129 ]
-        [ cx:word "having"; cx:frequency 57 ]
-        [ cx:word "losing"; cx:frequency 27 ]
-        [ cx:word "winning"; cx:frequency 27 ]
-        [ cx:word "saying"; cx:frequency 24 ]    ) ;
+        [ evid:filler "being"; cx:frequency 150 ]
+        [ evid:filler "getting"; cx:frequency 129 ]
+        [ evid:filler "having"; cx:frequency 57 ]
+        [ evid:filler "losing"; cx:frequency 27 ]
+        [ evid:filler "winning"; cx:frequency 27 ]
+        [ evid:filler "saying"; cx:frequency 24 ]    ) ;
     rdfs:comment "List of Collocations for this close to x-ing as obtained from AntConc 4.2.4" .
 
 cx:eng_ThisclosetoVingconstruction_6_Form a rcxn:SlotForm ;

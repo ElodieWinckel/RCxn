@@ -376,7 +376,7 @@ container.appendChild(table);
       new Chart(ctx{{ loop.index }}, {
         type: 'bar',
         data: {
-          labels: {{ profile.collocations|map(attribute='word')|list|tojson|safe }},
+          labels: {{ profile.collocations|map(attribute='filler')|list|tojson|safe }},
           datasets: [{
             label: 'Frequency',
             data: {{ profile.collocations|map(attribute='frequency')|list|tojson|safe }},

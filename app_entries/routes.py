@@ -119,9 +119,9 @@ def identify_construction_element_triples(slots_uri):
         collo = []
         for collo_list in g.objects(subject=slot_uri, predicate=evid.colloprofile):
             for item in g.items(collo_list):
-                word = g.value(item, cx.word)
+                filler = g.value(item, evid.filler)
                 freq = g.value(item, cx.frequency)
-                collo.append({"word": str(word), "frequency": int(freq)})
+                collo.append({"filler": str(filler), "frequency": int(freq)})
         if collo:  # append only if there is a colloprofile
             collo.sort(key=lambda x: x["frequency"], reverse=True)  # Sort by frequency (descending)
             colloprofiles.append({
@@ -137,13 +137,13 @@ def identify_construction_element_triples(slots_uri):
                     'definition': get_definition(obj, g, ont),
                     'object': get_label_or_iri(obj, g, ont),
                 })
-            elif str(predicate) == "http://example.org/cx/colloprofile":  # special case for colloprofile
+            elif predicate == evid.colloprofile:  # special case for colloprofile
                 elements.append({
                     'subject': element_number,
                     'property': "Colloprofile",
                     'object': "See colloprofile for " + element_number + " below",
                 })
-            elif str(predicate) == "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#hasSlotForm" and not isinstance(obj, Literal): # the value of hasSlotForm should only be kept if it is a literal object (this is specific for CASA entries)
+            elif predicate == rcxn.hasSlotForm and not isinstance(obj, Literal): # the value of hasSlotForm should only be kept if it is a literal object (this is specific for CASA entries)
                 pass
             elif str(predicate).startswith(
                     "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/compcon#"):  # deal with comparative concepts
