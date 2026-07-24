@@ -372,8 +372,8 @@ cx:arzCai_Ditransitiveconstruction_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "[ÆFFECTOR]1 makes [RECIPIENT]3 receive or lose [ÆFFECTED]4" .
 
 cx:arzCai_Ditransitiveconstruction_Sources a cx:Collection ;
-    cx:hasLiterature <file:///C:/Users/User/Documents/RCxn/instance/Submissions/Diem_2002>,
-        <file:///C:/Users/User/Documents/RCxn/instance/Submissions/Woidich_2006> .
+    cx:hasLiterature <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Diem_2002>,
+        <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Woidich_2006> .
 
 cx:arzCai_Ditransitiveconstruction_slots a rdf_ns:Seq ;
     rdf_ns:_1 cx:arzCai_Ditransitiveconstruction_1 ;
@@ -1200,7 +1200,7 @@ cx:engLME_Argumentstructureconstruction_Meaning a rcxn:ConstructionMeaning ;
 
 cx:engLME_Argumentstructureconstruction_Sources a cx:Collection ;
     cx:basedOn <https://doi.org/10.3389/frai.2025.1477246> ;
-    cx:hasLiterature <file:///C:/Users/User/Documents/RCxn/instance/Submissions/Goldberg_1995>,
+    cx:hasLiterature <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Goldberg_1995>,
         <https://doi.org/10.3389/frai.2025.1477246> .
 
 cx:engLME_Argumentstructureconstruction_slots a rdf_ns:Seq ;
@@ -2514,11 +2514,11 @@ cx:eng_ditransitive_construction_obj_np_Meaning a rcxn:ConstructionMeaning ;
         "ÆFFECTOR makes RECIPIENT receive ÆFFECTED." .
 
 cx:eng_ditransitive_construction_obj_np_Sources a cx:Collection ;
-    cx:hasLiterature <file:///C:/Users/User/Documents/RCxn/instance/Submissions/Croft_2012>,
-        <file:///C:/Users/User/Documents/RCxn/instance/Submissions/Goldberg_1995>,
-        <file:///C:/Users/User/Documents/RCxn/instance/Submissions/Goldberg_2006>,
-        <file:///C:/Users/User/Documents/RCxn/instance/Submissions/Herbst_2020>,
-        <file:///C:/Users/User/Documents/RCxn/instance/Submissions/Herbst_Hoffman_2024> ;
+    cx:hasLiterature <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Croft_2012>,
+        <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Goldberg_1995>,
+        <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Goldberg_2006>,
+        <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Herbst_2020>,
+        <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Herbst_Hoffman_2024> ;
     rdfs:seeAlso <https://constructicon.de/constructions/5> .
 
 cx:eng_ditransitive_construction_obj_np_slots a rdf_ns:Seq ;
@@ -3015,7 +3015,7 @@ cx:itaStoria_RelativeTopicShiftConstruction_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "Transition from one (discourse) topic to another" .
 
 cx:itaStoria_RelativeTopicShiftConstruction_Sources a cx:Collection ;
-    cx:hasLiterature <file:///C:/Users/User/Documents/RCxn/instance/Submissions/La_lingua_del_Guicciardini>,
+    cx:hasLiterature <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/La_lingua_del_Guicciardini>,
         <https://doi.org/10.1093/llc/fqw021>,
         <https://doi.org/10.1417/81352> .
 
@@ -3172,8 +3172,8 @@ cx:lzh_Dooperationwithoperand1onoperand2construction_Meaning a rcxn:Construction
     rcxn:hasMeaning "Do [operation]3 with [operand 1]2 and [operand 2]4" .
 
 cx:lzh_Dooperationwithoperand1onoperand2construction_Sources a cx:Collection ;
-    cx:basedOn <file:///C:/Users/User/Documents/RCxn/instance/Submissions/Shuchun-2004> ;
-    cx:hasLiterature <file:///C:/Users/User/Documents/RCxn/instance/Submissions/Shuchun-2004> .
+    cx:basedOn <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Shuchun-2004> ;
+    cx:hasLiterature <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Shuchun-2004> .
 
 cx:lzh_Dooperationwithoperand1onoperand2construction_slots a rdf_ns:Seq ;
     rdf_ns:_1 cx:lzh_Dooperationwithoperand1onoperand2construction_1 ;
@@ -3823,8 +3823,8 @@ cx:engUsUkWr_EvaluativeAttributionConstruction a rcxn:Construction ;
     rcxn:hasTitle "Evaluative Attribution Construction" .
 
 cx:eng_coolconstruction_Sources a cx:Collection ;
-    cx:hasLiterature <file:///C:/Users/User/Documents/RCxn/instance/Submissions/www.english-corpora.org/bnc/>,
-        <file:///C:/Users/User/Documents/RCxn/instance/Submissions/www.english-corpora.org/coca/>,
+    cx:hasLiterature <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/www.english-corpora.org/bnc/>,
+        <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/www.english-corpora.org/coca/>,
         <https://www.dwds.de/wb/cool>,
         <https://www.oed.com/dictionary/cool_adj?tl=true> .
 

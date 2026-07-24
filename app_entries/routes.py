@@ -1,3 +1,5 @@
+from itertools import count
+
 from . import app_entries_blueprint
 import re
 from flask import render_template, Response
@@ -322,6 +324,8 @@ def list_view():
         constructions,
         key=lambda x: (x['macrolanguage'].lower(), x['title'].lower())
     )
+
+    print(f"Total number of constructions created: {len(constructions)}")
 
     return render_template("app_entries/list.html", constructions=constructions)
 
