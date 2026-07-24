@@ -399,3 +399,42 @@ print(f"RDF saved to {output_references}: contains {counter_references} triplets
 
 counter = counter_cx + counter_membr + counter_references
 print(f"The database contains {counter} triplets.")
+
+# Count classes and properties in the ontology:
+ontology_files = [
+    "ontologies/casa.rdf",
+    "ontologies/compcon.ttl",
+    "ontologies/evid.rdf",
+    "ontologies/gest.rdf",
+    "ontologies/lg.rdf",
+    "ontologies/links-1.1.rdf",
+    "ontologies/rcxn.rdf",
+    "ontologies/rsrch.rdf"
+]
+ont = Graph()
+for file_path in ontology_files:
+    if file_path.endswith(".owl") or file_path.endswith(".rdf"):
+        ont.parse(file_path, format="xml")
+    elif file_path.endswith(".ttl"):
+        ont.parse(file_path, format="turtle")
+
+# --- Count Classes ---
+classes_query = """
+    SELECT (COUNT(DISTINCT ?class) AS ?count)
+    WHERE {
+        ?class a owl:Class .
+    }
+"""
+class_result = ont.query(classes_query)
+num_classes = class_result.bindings[0]['count'].value
+
+# --- Count Properties ---
+properties_query = """
+    SELECT (COUNT(DISTINCT ?prop) AS ?count)
+    WHERE {
+        ?prop a owl:ObjectProperty .
+    }
+"""
+prop_result = ont.query(properties_query)
+num_properties = prop_result.bindings[0]['count'].value
+print(f"The ontology contains {num_classes} classes and {num_properties} properties.")
