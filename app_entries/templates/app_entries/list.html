@@ -44,6 +44,10 @@
 
   {% endfor %} <!-- end of "for group in constructions|groupby('macrolanguage')" -->
 
+  <p>
+    <a href="{{ url_for('app_entries.custom_list_view') }}">List of projects</a>
+  </p>
+
 </div>
 
 {% endblock %}

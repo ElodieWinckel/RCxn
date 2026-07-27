@@ -31,8 +31,6 @@ Both are matrixes in the format of NumPy arrays but can be converted to any supp
 This is a similar publicly available dataset: https://github.com/SPOClab-ca/neural-reality-constructions\r
 """ .
 
-membr:Project_Ramezani rsrch:hasResearchQuestion membr:Project_Ramezani_250214 .
-
 cx:engLME_Argumentstructureconstruction_1 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm cx:engLME_Argumentstructureconstruction_1_Form ;
     rcxn:hasSyntacticFunction "Subject" .
@@ -122,7 +120,7 @@ cx:eng_Phrase a rcxn:Construction ;
     rcxn:hasTitle "Phrase" ;
     lg:partOfLanguage lg:eng .
 
-membr:Project_Ramezani_250214 rsrch:hasFindings membr:Project_Ramezani_250214_F250218 .
+membr:Project_Ramezani rsrch:hasFindings membr:Project_Ramezani_250214_F250218 .
 
 membr:Project_Ramezani_250214_F250218 a rsrch:Finding ;
     rdfs:label "So far we have results from LLM analysis that can significantly recognize and differentiate between argument structure constructions." ;

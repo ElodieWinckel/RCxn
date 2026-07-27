@@ -457,10 +457,8 @@ membr:Project_Prela a rsrch:Project ;
     rsrch:projectName "Project Prela"@en .
 
 membr:Project_Ramezani a rsrch:Project ;
-    rsrch:hasResearchQuestion membr:Project_Ramezani_250214 ;
+    rsrch:hasFindings membr:Project_Ramezani_250214_F250218 ;
     rsrch:projectName "Representation and processing of constructions in the brain"@en .
-
-membr:Project_Ramezani_250214 rsrch:hasFindings membr:Project_Ramezani_250214_F250218 .
 
 membr:Project_Ramezani_250214_F250218 a rsrch:Finding ;
     rdfs:label "So far we have results from LLM analysis that can significantly recognize and differentiate between argument structure constructions." ;

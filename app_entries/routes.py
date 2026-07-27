@@ -251,7 +251,7 @@ def find_compcon_uri_by_label(label_compcon) -> str:
     return uri_compcon_no_prefix
 
 ###################################################
-### CREATE A LIST OF CONSTRUCTIONS
+### CREATE A LIST OF CONSTRUCTIONS (BY DEFAULT: ORGANIZED BY LANGUAGE)
 ###################################################
 
 @app_entries_blueprint.route("/")
@@ -328,6 +328,92 @@ def list_view():
     print(f"Total number of constructions created: {len(constructions)}")
 
     return render_template("app_entries/list.html", constructions=constructions)
+
+###################################################
+### CREATE A CUSTOM LIST OF CONSTRUCTIONS
+###################################################
+
+@app_entries_blueprint.route("/query/")
+def custom_list_view():
+    constructions = []
+
+    # SPARQL queries to get the title for each construction
+    query_nongesture = """
+    PREFIX rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#>
+    PREFIX lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#>
+    SELECT ?construction ?title ?language ?rq
+    WHERE {
+        ?construction a rcxn:Construction .
+        ?construction rcxn:hasTitle ?title .
+        ?construction lg:partOfLanguage ?language .
+        ?finding rsrch:basedOn ?construction .
+        ?rq rsrch:hasFindings ?finding .
+    }
+    """
+
+    query_gesture = """
+        PREFIX rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#>
+        PREFIX lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#>
+        SELECT ?construction ?title ?language ?rq
+        WHERE {
+            ?construction a gest:GestureConstruction .
+            ?construction rcxn:hasTitle ?title .
+            ?construction lg:partOfLanguage ?language .
+            ?finding rsrch:basedOn ?construction .
+            ?rq rsrch:hasFindings ?finding .
+        }
+        """
+
+    # Execute the SPARQL queries
+    results_nongesture = g.query(query_nongesture)
+    #results_gesture = g.query(query_gesture)
+
+    # Prepare list of constructions to pass to html
+    for row in results_nongesture:
+        construction_uri = str(row.construction)
+        title = str(row.title)
+        variety_uri = row.language
+        rq = str(g.value(row.rq, rsrch.projectName))
+        variety = str(next(ont.objects(subject=variety_uri, predicate=RDFS.label), ""))
+        macrolanguage_uri = get_macrolanguage(variety_uri, ont, lg.isVarietyOf)
+        macrolanguage_label = str(next(ont.objects(subject=macrolanguage_uri, predicate=RDFS.label), ""))
+
+        # Append construction details as dictionary
+        constructions.append({
+            'uri': construction_uri,
+            'title': title,
+            'variety': variety,
+            'macrolanguage': macrolanguage_label,
+            'type': "nongesture",
+            'rq': rq
+        })
+    #for row in results_gesture:
+    #    construction_uri = str(row.construction)
+    #    title = str(row.title)
+    #    variety_uri = row.language
+    #    if row.rq:
+    #        rq = g.value(row.rq, rsrch.projectName)
+    #    variety = str(next(ont.objects(subject=variety_uri, predicate=RDFS.label), ""))
+    #    macrolanguage_uri = get_macrolanguage(variety_uri, ont, lg.isVarietyOf)
+    #    macrolanguage_label = str(next(ont.objects(subject=macrolanguage_uri, predicate=RDFS.label), ""))
+
+        # Append construction details as dictionary
+        #constructions.append({
+        #    'uri': construction_uri,
+        #    'title': title,
+        #    'variety': variety,
+        #    'macrolanguage': macrolanguage_label,
+        #    'type': "gesture",
+        #    'rq': rq
+        #})
+
+    # Sorting in alphabetical order
+    constructions = sorted(
+        constructions,
+        key=lambda x: (x['rq'].lower(), x['title'].lower())
+    )
+
+    return render_template("app_entries/query.html", constructions=constructions)
 
 ###################################################
 ### CREATE CONSTRUCTION ENTRIES
