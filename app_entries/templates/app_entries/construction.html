@@ -463,10 +463,14 @@ container.appendChild(table);
 
     <h2>Research</h2>
     <table border="1">
+        <tr>
+            <th>Research Question</th>
+            <th>Finding</th>
+        </tr>
         {% for triple in research %}
             <tr>
-                <th>{{ triple.property }}</th>
-                <td>{{ triple.object }}</td>
+                <td>{{ triple.RQ }}</td>
+                <td>{{ triple.Findings }}</td>
             </tr>
         {% endfor %}
     </table>

@@ -581,19 +581,16 @@ def construction_detail(uri):
     # Collect triples for research question and findings
     research = []
     for finding in g.subjects(RDF.type, rsrch.Finding):
-        # Check for the triple with form (X, rsrch:basedOn, entry_uri)
+        # Check for the triples with form (X, rsrch:basedOn, entry_uri)
         if (finding, rsrch.basedOn, entry_uri) in g:
-            # Get the rdfs:label for this finding
-            finding_labels = g.objects(finding, RDFS.label)
-            for finding_label in finding_labels:
-                research.append({'property': 'Findings', 'object': str(finding_label)})
-            # Next, query all URIs that correspond to this finding
+            finding_label = g.value(finding, RDFS.label)
             for project in g.subjects(rsrch.hasFindings, finding):
-                project_names = g.objects(project, rsrch.projectName)
-                for project_name in project_names:
-                    research.append({'property': 'Research Question', 'object': str(project_name)})
-    # Sorting the list so that 'Research Question' comes before 'Findings'
-    research.sort(key=lambda x: x['property'], reverse=True)
+                project_uri = project
+                project_name = g.value(project_uri, rsrch.projectName)
+                research.append({
+                    'RQ': str(project_name),
+                    'Findings': str(finding_label)
+                })
 
     # Collect triples for research data
     research_data = []
