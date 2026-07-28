@@ -1,31 +1,15 @@
-from rdflib import Graph, Namespace, Literal, URIRef, BNode
-from rdflib.namespace import FOAF, RDF
+from rdflib import Graph, Literal, URIRef, BNode
+from rdflib.namespace import DC, DCTERMS, FOAF, RDF, RDFS, SKOS
 from pathlib import Path
 import re
-import glob
+
+# Load the namespaces defined in graph_loader.py
+from graph_loader import (casa, cx, compcon, evid, frac, gest, lg, links, membr, olia, oliatop, rcxn, rd, rdata, rsrch)
 
 # File paths
 output_cx = "Abox/cx.ttl"
 output_membr = "Abox/membr.ttl"
 output_references = "Abox/references.ttl"
-
-# Namespace definitions
-casa = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/casa#")
-cx = Namespace("http://example.org/cx/")
-compcon = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/compcon#")
-evid = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/evid#")
-frac = Namespace("http://www.w3.org/ns/lemon/frac##")
-gest = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/gest#")
-lg = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#")
-links = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#")
-membr = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#")
-olia = Namespace("http://purl.org/olia/olia.owl#")
-oliatop = Namespace("http://purl.org/olia/olia-top.owl#")
-rcxn = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#")
-rd = Namespace("http://example.org/rd/")
-rdf_ns = Namespace("http://www.w3.org/1999/02/22-rdf-syntax-ns#")
-rdfs = Namespace("http://www.w3.org/2000/01/rdf-schema#")
-rsrch = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#")
 
 # List of namespaces to bind
 NAMESPACES = {
@@ -42,10 +26,14 @@ NAMESPACES = {
     "oliatop": oliatop,
     "rcxn": rcxn,
     "rd": rd,
-    "rdf_ns": rdf_ns,
-    "rdfs": rdfs,
+    "rdata": rdata,
     "rsrch": rsrch,
-    "foaf": FOAF,
+    "DC":DC,
+    "DCTERMS":DCTERMS,
+    "FOAF":FOAF,
+    "RDF":RDF,
+    "RDFS":RDFS,
+    "SKOS":SKOS
 }
 
 def create_abox_from_submissions():
@@ -79,6 +67,7 @@ def create_abox_from_submissions():
         g.bind(prefix, ns)
         graph_cx.bind(prefix, ns)
         graph_membr.bind(prefix, ns)
+        graph_references.bind(prefix, ns)
 
     # Function to add a user to the graph
     def add_user(last_name, first_name, project_name, homepage):
@@ -292,12 +281,12 @@ def create_abox_from_submissions():
         construction_uri = re.sub(r'_\d+_Form$', '', subj)
         g.add((part, links.elementOf, URIRef(construction_uri)))
 
-    for mainCX in g.subjects(rdf_ns.type, rcxn.Construction):
+    for mainCX in g.subjects(RDF.type, rcxn.Construction):
         # identify inheritsFrom links
         for linkedCX in g.objects(mainCX, links.inheritsFrom):
             g.add((linkedCX, links.inheritedBy, mainCX))
 
-    for mainCX in g.subjects(rdf_ns.type, rcxn.Construction):
+    for mainCX in g.subjects(RDF.type, rcxn.Construction):
         # identify inheritsFrom links
         for linkedCX in g.objects(mainCX, links.inheritedBy):
             g.add((linkedCX, links.inheritsFrom, mainCX))

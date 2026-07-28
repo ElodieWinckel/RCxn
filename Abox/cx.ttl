@@ -1,22 +1,22 @@
+@prefix DCTERMS: <http://purl.org/dc/terms/> .
+@prefix RDF: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix casa: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/casa#> .
 @prefix compcon: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/compcon#> .
 @prefix cx: <http://example.org/cx/> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix evid: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/evid#> .
+@prefix frac: <http://www.w3.org/ns/lemon/frac#> .
 @prefix gest: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/gest#> .
 @prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
 @prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#> .
 @prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
-@prefix ns1: <http://www.w3.org/ns/lemon/frac#> .
-@prefix ns2: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rdata#> .
 @prefix olia: <http://purl.org/olia/olia.owl#> .
 @prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
 @prefix rd: <http://example.org/rd/> .
-@prefix rdf_ns: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdata: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rdata#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-cx:Definitearticle rdfs:label "Definite article" .
+cx:Definitearticle RDFS:label "Definite article" .
 
 cx:comePLUSnoisemannerofmovementVing_4_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_PrepositionalPhrase .
@@ -190,7 +190,7 @@ cx:Active3ArgumentStructureConstruction a rcxn:Construction ;
     rcxn:hasTitle "Active 3 Argument Structure Construction" .
 
 cx:Active3ArgumentStructureConstruction_MD a rcxn:Metadata ;
-    dcterms:created "2026-01-13"^^xsd:date ;
+    DCTERMS:created "2026-01-13"^^xsd:date ;
     rcxn:annotator membr:Winckel .
 
 cx:Adjectiveexclamativeconstruction a rcxn:Construction ;
@@ -200,7 +200,7 @@ cx:Adjectiveexclamativeconstruction a rcxn:Construction ;
     rcxn:hasTitle "Adjective! exclamative construction" .
 
 cx:Adjectiveexclamativeconstruction_MD a rcxn:Metadata ;
-    dcterms:created "2025-12-10"^^xsd:date ;
+    DCTERMS:created "2025-12-10"^^xsd:date ;
     rcxn:annotator membr:Boos,
         membr:Petrenko,
         membr:Weigelt,
@@ -212,7 +212,7 @@ cx:Adverb a rcxn:Construction ;
     rcxn:hasTitle "Adverb" .
 
 cx:Adverb_MD a rcxn:Metadata ;
-    dcterms:created "2025-12-08"^^xsd:date ;
+    DCTERMS:created "2025-12-08"^^xsd:date ;
     rcxn:annotator membr:Boos,
         membr:Petrenko,
         membr:Weigelt,
@@ -224,7 +224,7 @@ cx:Adverb_MD a rcxn:Metadata ;
     rcxn:hasTitle "Attribute Construction (Obj: NP)" .
 
 <http://example.org/cx/AttributeConstructionObj:NP_MD> a rcxn:Metadata ;
-    dcterms:created "2026-01-16"^^xsd:date ;
+    DCTERMS:created "2026-01-16"^^xsd:date ;
     rcxn:annotator membr:Winckel .
 
 cx:CausedMotionConstrutionPPto a rcxn:Construction ;
@@ -233,7 +233,7 @@ cx:CausedMotionConstrutionPPto a rcxn:Construction ;
     rcxn:hasTitle "Caused-Motion Constrution (PPto)" .
 
 cx:CausedMotionConstrutionPPto_MD a rcxn:Metadata ;
-    dcterms:created "2026-01-16"^^xsd:date ;
+    DCTERMS:created "2026-01-16"^^xsd:date ;
     rcxn:annotator membr:Winckel .
 
 cx:Copula a rcxn:Construction ;
@@ -242,7 +242,7 @@ cx:Copula a rcxn:Construction ;
     rcxn:hasTitle "Copula" .
 
 cx:Copula_MD a rcxn:Metadata ;
-    dcterms:created "2025-12-01"^^xsd:date ;
+    DCTERMS:created "2025-12-01"^^xsd:date ;
     rcxn:annotator membr:Boos,
         membr:Petrenko,
         membr:Weigelt,
@@ -254,7 +254,7 @@ cx:Determiner a rcxn:Construction ;
     rcxn:hasTitle "Determiner" .
 
 cx:Determiner_MD a rcxn:Metadata ;
-    dcterms:created "2025-12-01"^^xsd:date ;
+    DCTERMS:created "2025-12-01"^^xsd:date ;
     rcxn:annotator membr:Boos,
         membr:Petrenko,
         membr:Weigelt,
@@ -266,11 +266,11 @@ cx:GenitiveConstruction a rcxn:Construction ;
     rcxn:hasTitle "Genitive Construction" .
 
 cx:GenitiveConstruction_MD a rcxn:Metadata ;
-    dcterms:created "2026-01-16"^^xsd:date ;
+    DCTERMS:created "2026-01-16"^^xsd:date ;
     rcxn:annotator membr:Winckel .
 
 cx:Noun_MD a rcxn:Metadata ;
-    dcterms:created "2025-12-01"^^xsd:date,
+    DCTERMS:created "2025-12-01"^^xsd:date,
         "2026-01-16"^^xsd:date ;
     rcxn:annotator membr:Boos,
         membr:Petrenko,
@@ -295,7 +295,7 @@ cx:SmallQuantityGestureConstruction_Form a gest:GestureForm ;
     gest:timing "Usually for the entire duration of the co-occurring verbal construction." .
 
 cx:SmallQuantityGestureConstruction_MD a rcxn:Metadata ;
-    dcterms:created "2026-07-07"^^xsd:date ;
+    DCTERMS:created "2026-07-07"^^xsd:date ;
     rcxn:annotator membr:Iabdounane .
 
 cx:SmallQuantityGestureConstruction_Meaning a gest:GestureMeaning ;
@@ -318,7 +318,7 @@ cx:arzCai_Ditransitiveconstruction_1 a rcxn:SlotOptional ;
     cx:WordOrder "Before Element 2" ;
     cx:hasIndex cx:arzCai_Ditransitiveconstruction_1_Index ;
     olia:hasSemanticRole olia:AgentRole ;
-    rdfs:comment "Pronominal subjects are only expressed if emphasized" ;
+    RDFS:comment "Pronominal subjects are only expressed if emphasized" ;
     rcxn:hasSyntacticFunction "subject" .
 
 cx:arzCai_Ditransitiveconstruction_1_Index a cx:Individual ;
@@ -326,7 +326,7 @@ cx:arzCai_Ditransitiveconstruction_1_Index a cx:Individual ;
 
 cx:arzCai_Ditransitiveconstruction_2 a rcxn:SlotObligatory ;
     cx:WordOrder "After Element 1, before Elements 3 and 4" ;
-    rdfs:comment "colloprofile: idda; ʿallim; nāwil; massik; sallif; labbis; sallim; ḥammil; darris; šammim; fahhim; ḥaffaẓ; nassa; ballaġ; saʾal; fahhim; malla; warra; ḫassaṛ; ġaṛṛam; ʾallaʿ" ;
+    RDFS:comment "colloprofile: idda; ʿallim; nāwil; massik; sallif; labbis; sallim; ḥammil; darris; šammim; fahhim; ḥaffaẓ; nassa; ballaġ; saʾal; fahhim; malla; warra; ḫassaṛ; ġaṛṛam; ʾallaʿ" ;
     rcxn:hasSemanticProperty "Verbs of the four following groups: \"to give\", \"to provide s.o. with sth.\", \"to tell\", \"to withdraw\"" ;
     rcxn:hasSyntacticFunction "Verb" .
 
@@ -334,7 +334,7 @@ cx:arzCai_Ditransitiveconstruction_3 a rcxn:SlotObligatory ;
     cx:WordOrder "After Element 2, before or after Element 4" ;
     cx:hasIndex cx:arzCai_Ditransitiveconstruction_3_Index ;
     olia:hasSemanticRole olia:RecipientRole ;
-    rdfs:comment "Obligatorily marked by the preposition/dative marker li- if the theme is pronominal, otherwise marking is optional. " ;
+    RDFS:comment "Obligatorily marked by the preposition/dative marker li- if the theme is pronominal, otherwise marking is optional. " ;
     rcxn:hasSyntacticFunction "object" .
 
 cx:arzCai_Ditransitiveconstruction_3_Index a cx:Individual ;
@@ -365,7 +365,7 @@ cx:arzCai_Ditransitiveconstruction_Ex_C a cx:Example ;
 
 cx:arzCai_Ditransitiveconstruction_MD a rcxn:Metadata ;
     cx:hasSources cx:arzCai_Ditransitiveconstruction_Sources ;
-    dcterms:created "2026-02-25"^^xsd:date ;
+    DCTERMS:created "2026-02-25"^^xsd:date ;
     rcxn:annotator membr:Bayer .
 
 cx:arzCai_Ditransitiveconstruction_Meaning a rcxn:ConstructionMeaning ;
@@ -375,11 +375,11 @@ cx:arzCai_Ditransitiveconstruction_Sources a cx:Collection ;
     cx:hasLiterature <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Diem_2002>,
         <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Woidich_2006> .
 
-cx:arzCai_Ditransitiveconstruction_slots a rdf_ns:Seq ;
-    rdf_ns:_1 cx:arzCai_Ditransitiveconstruction_1 ;
-    rdf_ns:_2 cx:arzCai_Ditransitiveconstruction_2 ;
-    rdf_ns:_3 cx:arzCai_Ditransitiveconstruction_3 ;
-    rdf_ns:_4 cx:arzCai_Ditransitiveconstruction_4 .
+cx:arzCai_Ditransitiveconstruction_slots a RDF:Seq ;
+    RDF:_1 cx:arzCai_Ditransitiveconstruction_1 ;
+    RDF:_2 cx:arzCai_Ditransitiveconstruction_2 ;
+    RDF:_3 cx:arzCai_Ditransitiveconstruction_3 ;
+    RDF:_4 cx:arzCai_Ditransitiveconstruction_4 .
 
 cx:comePLUSnoisemannerofmovementVing_1 a rcxn:SlotOptional ;
     rcxn:hasSemanticRole olia:UndergoerMacroRole ;
@@ -391,7 +391,7 @@ cx:comePLUSnoisemannerofmovementVing_1_Form a rcxn:SlotForm ;
 
 cx:comePLUSnoisemannerofmovementVing_2 a rcxn:SlotObligatory ;
     cx:WordOrder "Element 2 immediately before element 3" ;
-    rdfs:comment "perspective may imply subjective perception, enhanced expressivity, or inevitability of the action decribed by element 3" ;
+    RDFS:comment "perspective may imply subjective perception, enhanced expressivity, or inevitability of the action decribed by element 3" ;
     rcxn:hasSlotForm cx:comePLUSnoisemannerofmovementVing_2_Form .
 
 cx:comePLUSnoisemannerofmovementVing_2_Form a rcxn:SlotForm ;
@@ -399,83 +399,83 @@ cx:comePLUSnoisemannerofmovementVing_2_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_Verb .
 
 cx:comePLUSnoisemannerofmovementVing_3 a rcxn:SlotObligatory ;
-    rdfs:comment "present participle" ;
-    evid:colloprofile ( [ ns1:frequency [ a cx:CorpusX ;
-                        rdf_ns:value "36"^^xsd:int ] ;
-                evid:filler "tumbling" ] [ ns1:frequency [ a cx:CorpusX ;
-                        rdf_ns:value "22"^^xsd:int ] ;
-                evid:filler "hurrying" ] [ ns1:frequency [ a cx:CorpusX ;
-                        rdf_ns:value "11"^^xsd:int ] ;
-                evid:filler "barging" ] [ ns1:frequency [ a cx:CorpusX ;
-                        rdf_ns:value "22"^^xsd:int ] ;
-                evid:filler "hurtling" ] [ ns1:frequency [ a cx:CorpusX ;
-                        rdf_ns:value "20"^^xsd:int ] ;
-                evid:filler "striding" ] [ ns1:frequency [ a cx:CorpusX ;
-                        rdf_ns:value "27"^^xsd:int ] ;
-                evid:filler "crashing" ] [ ns1:frequency [ a cx:CorpusX ;
-                        rdf_ns:value "56"^^xsd:int ] ;
-                evid:filler "rushing" ] [ ns1:frequency [ a cx:CorpusX ;
-                        rdf_ns:value "14"^^xsd:int ] ;
-                evid:filler "bounding" ] [ ns1:frequency [ a cx:CorpusX ;
-                        rdf_ns:value "19"^^xsd:int ] ;
-                evid:filler "bursting" ] [ ns1:frequency [ a cx:CorpusX ;
-                        rdf_ns:value "11"^^xsd:int ] ;
-                evid:filler "crowding" ] [ ns1:frequency [ a cx:CorpusX ;
-                        rdf_ns:value "23"^^xsd:int ] ;
-                evid:filler "pouring" ] [ ns1:frequency [ a cx:CorpusX ;
-                        rdf_ns:value "109"^^xsd:int ] ;
-                evid:filler "running" ] [ ns1:frequency [ a cx:CorpusX ;
-                        rdf_ns:value "7"^^xsd:int ] ;
-                evid:filler "surging" ] [ ns1:frequency [ a cx:CorpusX ;
-                        rdf_ns:value "12"^^xsd:int ] ;
-                evid:filler "roaring" ] [ ns1:frequency [ a cx:CorpusX ;
-                        rdf_ns:value "7"^^xsd:int ] ;
-                evid:filler "streaming" ] [ ns1:frequency [ a cx:CorpusX ;
-                        rdf_ns:value "10"^^xsd:int ] ;
-                evid:filler "trotting" ] [ ns1:frequency [ a cx:CorpusX ;
-                        rdf_ns:value "22"^^xsd:int ] ;
-                evid:filler "flying" ] [ ns1:frequency [ a cx:CorpusX ;
-                        rdf_ns:value "4"^^xsd:int ] ;
-                evid:filler "shambling" ] [ ns1:frequency [ a cx:CorpusX ;
-                        rdf_ns:value "21"^^xsd:int ] ;
-                evid:filler "riding" ] [ ns1:frequency [ a cx:CorpusX ;
-                        rdf_ns:value "5"^^xsd:int ] ;
-                evid:filler "blundering" ] [ ns1:frequency [ a cx:CorpusX ;
-                        rdf_ns:value "7"^^xsd:int ] ;
-                evid:filler "leaping" ] [ ns1:frequency [ a cx:CorpusX ;
-                        rdf_ns:value "6"^^xsd:int ] ;
-                evid:filler "stumbling" ] [ ns1:frequency [ a cx:CorpusX ;
-                        rdf_ns:value "5"^^xsd:int ] ;
-                evid:filler "clattering" ] [ ns1:frequency [ a cx:CorpusX ;
-                        rdf_ns:value "5"^^xsd:int ] ;
-                evid:filler "floating" ] [ ns1:frequency [ a cx:CorpusX ;
-                        rdf_ns:value "5"^^xsd:int ] ;
-                evid:filler "thundering" ] [ ns1:frequency [ a cx:CorpusX ;
-                        rdf_ns:value "9"^^xsd:int ] ;
-                evid:filler "charging" ] [ ns1:frequency [ a cx:CorpusX ;
-                        rdf_ns:value "5"^^xsd:int ] ;
-                evid:filler "spilling" ] [ ns1:frequency [ a cx:CorpusX ;
-                        rdf_ns:value "5"^^xsd:int ] ;
-                evid:filler "storming" ] [ ns1:frequency [ a cx:CorpusX ;
-                        rdf_ns:value "3"^^xsd:int ] ;
-                evid:filler "lolloping" ] [ ns1:frequency [ a cx:CorpusX ;
-                        rdf_ns:value "7"^^xsd:int ] ;
-                evid:filler "drifting" ] [ ns1:frequency [ a cx:CorpusX ;
-                        rdf_ns:value "7"^^xsd:int ] ;
-                evid:filler "tearing" ] [ ns1:frequency [ a cx:CorpusX ;
-                        rdf_ns:value "4"^^xsd:int ] ;
-                evid:filler "galloping" ] [ ns1:frequency [ a cx:CorpusX ;
-                        rdf_ns:value "6"^^xsd:int ] ;
-                evid:filler "panting" ] [ ns1:frequency [ a cx:CorpusX ;
-                        rdf_ns:value "11"^^xsd:int ] ;
-                evid:filler "racing" ] [ ns1:frequency [ a cx:CorpusX ;
-                        rdf_ns:value "4"^^xsd:int ] ;
-                evid:filler "scurrying" ] [ ns1:frequency [ a cx:CorpusX ;
-                        rdf_ns:value "3"^^xsd:int ] ;
-                evid:filler "loping" ] [ ns1:frequency [ a cx:CorpusX ;
-                        rdf_ns:value "3"^^xsd:int ] ;
-                evid:filler "prancing" ] [ ns1:frequency [ a cx:CorpusX ;
-                        rdf_ns:value "3"^^xsd:int ] ;
+    RDFS:comment "present participle" ;
+    evid:colloprofile ( [ frac:frequency [ a cx:CorpusX ;
+                        RDF:value "36"^^xsd:int ] ;
+                evid:filler "tumbling" ] [ frac:frequency [ a cx:CorpusX ;
+                        RDF:value "22"^^xsd:int ] ;
+                evid:filler "hurrying" ] [ frac:frequency [ a cx:CorpusX ;
+                        RDF:value "11"^^xsd:int ] ;
+                evid:filler "barging" ] [ frac:frequency [ a cx:CorpusX ;
+                        RDF:value "22"^^xsd:int ] ;
+                evid:filler "hurtling" ] [ frac:frequency [ a cx:CorpusX ;
+                        RDF:value "20"^^xsd:int ] ;
+                evid:filler "striding" ] [ frac:frequency [ a cx:CorpusX ;
+                        RDF:value "27"^^xsd:int ] ;
+                evid:filler "crashing" ] [ frac:frequency [ a cx:CorpusX ;
+                        RDF:value "56"^^xsd:int ] ;
+                evid:filler "rushing" ] [ frac:frequency [ a cx:CorpusX ;
+                        RDF:value "14"^^xsd:int ] ;
+                evid:filler "bounding" ] [ frac:frequency [ a cx:CorpusX ;
+                        RDF:value "19"^^xsd:int ] ;
+                evid:filler "bursting" ] [ frac:frequency [ a cx:CorpusX ;
+                        RDF:value "11"^^xsd:int ] ;
+                evid:filler "crowding" ] [ frac:frequency [ a cx:CorpusX ;
+                        RDF:value "23"^^xsd:int ] ;
+                evid:filler "pouring" ] [ frac:frequency [ a cx:CorpusX ;
+                        RDF:value "109"^^xsd:int ] ;
+                evid:filler "running" ] [ frac:frequency [ a cx:CorpusX ;
+                        RDF:value "7"^^xsd:int ] ;
+                evid:filler "surging" ] [ frac:frequency [ a cx:CorpusX ;
+                        RDF:value "12"^^xsd:int ] ;
+                evid:filler "roaring" ] [ frac:frequency [ a cx:CorpusX ;
+                        RDF:value "7"^^xsd:int ] ;
+                evid:filler "streaming" ] [ frac:frequency [ a cx:CorpusX ;
+                        RDF:value "10"^^xsd:int ] ;
+                evid:filler "trotting" ] [ frac:frequency [ a cx:CorpusX ;
+                        RDF:value "22"^^xsd:int ] ;
+                evid:filler "flying" ] [ frac:frequency [ a cx:CorpusX ;
+                        RDF:value "4"^^xsd:int ] ;
+                evid:filler "shambling" ] [ frac:frequency [ a cx:CorpusX ;
+                        RDF:value "21"^^xsd:int ] ;
+                evid:filler "riding" ] [ frac:frequency [ a cx:CorpusX ;
+                        RDF:value "5"^^xsd:int ] ;
+                evid:filler "blundering" ] [ frac:frequency [ a cx:CorpusX ;
+                        RDF:value "7"^^xsd:int ] ;
+                evid:filler "leaping" ] [ frac:frequency [ a cx:CorpusX ;
+                        RDF:value "6"^^xsd:int ] ;
+                evid:filler "stumbling" ] [ frac:frequency [ a cx:CorpusX ;
+                        RDF:value "5"^^xsd:int ] ;
+                evid:filler "clattering" ] [ frac:frequency [ a cx:CorpusX ;
+                        RDF:value "5"^^xsd:int ] ;
+                evid:filler "floating" ] [ frac:frequency [ a cx:CorpusX ;
+                        RDF:value "5"^^xsd:int ] ;
+                evid:filler "thundering" ] [ frac:frequency [ a cx:CorpusX ;
+                        RDF:value "9"^^xsd:int ] ;
+                evid:filler "charging" ] [ frac:frequency [ a cx:CorpusX ;
+                        RDF:value "5"^^xsd:int ] ;
+                evid:filler "spilling" ] [ frac:frequency [ a cx:CorpusX ;
+                        RDF:value "5"^^xsd:int ] ;
+                evid:filler "storming" ] [ frac:frequency [ a cx:CorpusX ;
+                        RDF:value "3"^^xsd:int ] ;
+                evid:filler "lolloping" ] [ frac:frequency [ a cx:CorpusX ;
+                        RDF:value "7"^^xsd:int ] ;
+                evid:filler "drifting" ] [ frac:frequency [ a cx:CorpusX ;
+                        RDF:value "7"^^xsd:int ] ;
+                evid:filler "tearing" ] [ frac:frequency [ a cx:CorpusX ;
+                        RDF:value "4"^^xsd:int ] ;
+                evid:filler "galloping" ] [ frac:frequency [ a cx:CorpusX ;
+                        RDF:value "6"^^xsd:int ] ;
+                evid:filler "panting" ] [ frac:frequency [ a cx:CorpusX ;
+                        RDF:value "11"^^xsd:int ] ;
+                evid:filler "racing" ] [ frac:frequency [ a cx:CorpusX ;
+                        RDF:value "4"^^xsd:int ] ;
+                evid:filler "scurrying" ] [ frac:frequency [ a cx:CorpusX ;
+                        RDF:value "3"^^xsd:int ] ;
+                evid:filler "loping" ] [ frac:frequency [ a cx:CorpusX ;
+                        RDF:value "3"^^xsd:int ] ;
+                evid:filler "prancing" ] [ frac:frequency [ a cx:CorpusX ;
+                        RDF:value "3"^^xsd:int ] ;
                 evid:filler "straggling" ] ) ;
     rcxn:hasSlotForm cx:comePLUSnoisemannerofmovementVing_3_Form .
 
@@ -509,7 +509,7 @@ cx:comePLUSnoisemannerofmovementVing_Ex_D a cx:Example ;
 
 cx:comePLUSnoisemannerofmovementVing_MD a rcxn:Metadata ;
     cx:hasSources cx:comePLUSnoisemannerofmovementVing_Sources ;
-    dcterms:created "2024-11-28"^^xsd:date ;
+    DCTERMS:created "2024-11-28"^^xsd:date ;
     rcxn:annotator membr:Patel .
 
 cx:comePLUSnoisemannerofmovementVing_Meaning a rcxn:ConstructionMeaning ;
@@ -519,17 +519,17 @@ cx:comePLUSnoisemannerofmovementVing_Sources a cx:Collection ;
     cx:basedOn <https://journals.openedition.org/anglophonia/5335> ;
     cx:hasLiterature <https://journals.openedition.org/anglophonia/5335> .
 
-cx:comePLUSnoisemannerofmovementVing_slots a rdf_ns:Seq ;
-    rdf_ns:_1 cx:comePLUSnoisemannerofmovementVing_1 ;
-    rdf_ns:_2 cx:comePLUSnoisemannerofmovementVing_2 ;
-    rdf_ns:_3 cx:comePLUSnoisemannerofmovementVing_3 ;
-    rdf_ns:_4 cx:comePLUSnoisemannerofmovementVing_4 ;
-    rdf_ns:_5 cx:comePLUSnoisemannerofmovementVing_5 ;
-    rdf_ns:_6 cx:comePLUSnoisemannerofmovementVing_6 .
+cx:comePLUSnoisemannerofmovementVing_slots a RDF:Seq ;
+    RDF:_1 cx:comePLUSnoisemannerofmovementVing_1 ;
+    RDF:_2 cx:comePLUSnoisemannerofmovementVing_2 ;
+    RDF:_3 cx:comePLUSnoisemannerofmovementVing_3 ;
+    RDF:_4 cx:comePLUSnoisemannerofmovementVing_4 ;
+    RDF:_5 cx:comePLUSnoisemannerofmovementVing_5 ;
+    RDF:_6 cx:comePLUSnoisemannerofmovementVing_6 .
 
 cx:deuStdHigh_NP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_1 a rcxn:SlotObligatory ;
     cx:hasIndex cx:deuStdHigh_NP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_1_Index ;
-    rdfs:comment "profiled toward Element 2",
+    RDFS:comment "profiled toward Element 2",
         "usually in the nominative case" ;
     rcxn:hasIS rcxn:Focus ;
     rcxn:hasOtherSemanticContribution "trajector" ;
@@ -551,9 +551,9 @@ cx:deuStdHigh_NP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_2 a rcxn:SlotObl
 cx:deuStdHigh_NP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_2_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_PrepositionalPhrase .
 
-cx:deuStdHigh_NP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_2_slots a rdf_ns:Seq ;
-    rdf_ns:_1 cx:deuStdHigh_NP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_3 ;
-    rdf_ns:_2 cx:deuStdHigh_NP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_4 .
+cx:deuStdHigh_NP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_2_slots a RDF:Seq ;
+    RDF:_1 cx:deuStdHigh_NP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_3 ;
+    RDF:_2 cx:deuStdHigh_NP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_4 .
 
 cx:deuStdHigh_NP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_3 a rcxn:SlotObligatory ;
     cx:WordOrder "first element of Element 2" ;
@@ -570,34 +570,34 @@ cx:deuStdHigh_NP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_4 a rcxn:SlotObl
     rcxn:hasSyntacticFunction "complement of Element 3" .
 
 cx:deuStdHigh_NP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_MD a rcxn:Metadata ;
-    dcterms:created "2024-12-10"^^xsd:date ;
+    DCTERMS:created "2024-12-10"^^xsd:date ;
     rcxn:annotator membr:Fokashchuk .
 
 cx:deuStdHigh_NP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "The sense of direction of [one entity]1 towards [another entity]4" ;
     rcxn:usesImageSchema "SUPPORT, DIRECTION, CONTACT, PROXIMITY, LOCATION, CONTAINMENT, SOURCE-PATH-GOAL, FORCE, PART-WHOLE, SURFACE" .
 
-cx:deuStdHigh_NP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_slots a rdf_ns:Seq ;
-    rdf_ns:_1 cx:deuStdHigh_NP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_1 ;
-    rdf_ns:_2 cx:deuStdHigh_NP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_2 .
+cx:deuStdHigh_NP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_slots a RDF:Seq ;
+    RDF:_1 cx:deuStdHigh_NP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_1 ;
+    RDF:_2 cx:deuStdHigh_NP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_2 .
 
 cx:deuWrSt20_sichNPADJADVvorAugenVP_1 a rcxn:SlotOptional ;
     cx:WordOrder "In most cases, NP precedes the prepositional phrase \"vor Augen\"." ;
     cx:hasIS cx:Topic ;
-    evid:colloprofile ( [ ns1:frequency [ a cx:CorpusX ;
-                        rdf_ns:value "39"^^xsd:int ] ;
-                evid:filler "Ziel" ] [ ns1:frequency [ a cx:CorpusX ;
-                        rdf_ns:value "24"^^xsd:int ] ;
-                evid:filler "Bild" ] [ ns1:frequency [ a cx:CorpusX ;
-                        rdf_ns:value "22"^^xsd:int ] ;
-                evid:filler "Tod" ] [ ns1:frequency [ a cx:CorpusX ;
-                        rdf_ns:value "16"^^xsd:int ] ;
-                evid:filler "Beispiel" ] [ ns1:frequency [ a cx:CorpusX ;
-                        rdf_ns:value "13"^^xsd:int ] ;
-                evid:filler "Welt" ] [ ns1:frequency [ a cx:CorpusX ;
-                        rdf_ns:value "12"^^xsd:int ] ;
-                evid:filler "Tatsache" ] [ ns1:frequency [ a cx:CorpusX ;
-                        rdf_ns:value "10"^^xsd:int ] ;
+    evid:colloprofile ( [ frac:frequency [ a cx:CorpusX ;
+                        RDF:value "39"^^xsd:int ] ;
+                evid:filler "Ziel" ] [ frac:frequency [ a cx:CorpusX ;
+                        RDF:value "24"^^xsd:int ] ;
+                evid:filler "Bild" ] [ frac:frequency [ a cx:CorpusX ;
+                        RDF:value "22"^^xsd:int ] ;
+                evid:filler "Tod" ] [ frac:frequency [ a cx:CorpusX ;
+                        RDF:value "16"^^xsd:int ] ;
+                evid:filler "Beispiel" ] [ frac:frequency [ a cx:CorpusX ;
+                        RDF:value "13"^^xsd:int ] ;
+                evid:filler "Welt" ] [ frac:frequency [ a cx:CorpusX ;
+                        RDF:value "12"^^xsd:int ] ;
+                evid:filler "Tatsache" ] [ frac:frequency [ a cx:CorpusX ;
+                        RDF:value "10"^^xsd:int ] ;
                 evid:filler "Volk" ] ) ;
     rcxn:hasSemanticProperty "The NP predominantly denotes abstract concepts, particularly those that are 1) subject to mental representation (Ziel, Bild, Beispiel), 2) abstract existential element or phenomenon (Welt, Tod, Tatsache), 3) collective entities." ;
     rcxn:hasSlotForm cx:deuWrSt20_sichNPADJADVvorAugenVP_1_Form ;
@@ -608,21 +608,21 @@ cx:deuWrSt20_sichNPADJADVvorAugenVP_1_Form a rcxn:SlotForm ;
 
 cx:deuWrSt20_sichNPADJADVvorAugenVP_2 a rcxn:SlotOptional ;
     cx:WordOrder "The adjectives mostly directly precedes the prepositional phrase \"vor Augen\"." ;
-    rdfs:comment "The adjectives are also frequently modified by an adverb \"so\", forming adverbial phrases such as \"so deutlich, so klar\", etc. " ;
-    evid:colloprofile ( [ ns1:frequency [ a cx:CorpusX ;
-                        rdf_ns:value "51"^^xsd:int ] ;
-                evid:filler "deutlich" ] [ ns1:frequency [ a cx:CorpusX ;
-                        rdf_ns:value "47"^^xsd:int ] ;
-                evid:filler "klar" ] [ ns1:frequency [ a cx:CorpusX ;
-                        rdf_ns:value "10"^^xsd:int ] ;
-                evid:filler "anschaulich" ] [ ns1:frequency [ a cx:CorpusX ;
-                        rdf_ns:value "9"^^xsd:int ] ;
-                evid:filler "eindringlich" ] [ ns1:frequency [ a cx:CorpusX ;
-                        rdf_ns:value "9"^^xsd:int ] ;
-                evid:filler "lebendig" ] [ ns1:frequency [ a cx:CorpusX ;
-                        rdf_ns:value "9"^^xsd:int ] ;
-                evid:filler "unmittelbar" ] [ ns1:frequency [ a cx:CorpusX ;
-                        rdf_ns:value "7"^^xsd:int ] ;
+    RDFS:comment "The adjectives are also frequently modified by an adverb \"so\", forming adverbial phrases such as \"so deutlich, so klar\", etc. " ;
+    evid:colloprofile ( [ frac:frequency [ a cx:CorpusX ;
+                        RDF:value "51"^^xsd:int ] ;
+                evid:filler "deutlich" ] [ frac:frequency [ a cx:CorpusX ;
+                        RDF:value "47"^^xsd:int ] ;
+                evid:filler "klar" ] [ frac:frequency [ a cx:CorpusX ;
+                        RDF:value "10"^^xsd:int ] ;
+                evid:filler "anschaulich" ] [ frac:frequency [ a cx:CorpusX ;
+                        RDF:value "9"^^xsd:int ] ;
+                evid:filler "eindringlich" ] [ frac:frequency [ a cx:CorpusX ;
+                        RDF:value "9"^^xsd:int ] ;
+                evid:filler "lebendig" ] [ frac:frequency [ a cx:CorpusX ;
+                        RDF:value "9"^^xsd:int ] ;
+                evid:filler "unmittelbar" ] [ frac:frequency [ a cx:CorpusX ;
+                        RDF:value "7"^^xsd:int ] ;
                 evid:filler "lebhaft" ] ) ;
     rcxn:hasSemanticProperty "The adjectives share the semantic property of describing vividness or clarity." ;
     rcxn:hasSlotForm cx:deuWrSt20_sichNPADJADVvorAugenVP_2_Form .
@@ -632,16 +632,16 @@ cx:deuWrSt20_sichNPADJADVvorAugenVP_2_Form a rcxn:SlotForm ;
 
 cx:deuWrSt20_sichNPADJADVvorAugenVP_3 a rcxn:SlotOptional ;
     cx:WordOrder "The adverbs typically appear directly before the prepositional phrase \"vor Augen\"." ;
-    evid:colloprofile ( [ ns1:frequency [ a cx:CorpusX ;
-                        rdf_ns:value "42"^^xsd:int ] ;
-                evid:filler "immer" ] [ ns1:frequency [ a cx:CorpusX ;
-                        rdf_ns:value "32"^^xsd:int ] ;
-                evid:filler "wieder" ] [ ns1:frequency [ a cx:CorpusX ;
-                        rdf_ns:value "27"^^xsd:int ] ;
-                evid:filler "stets" ] [ ns1:frequency [ a cx:CorpusX ;
-                        rdf_ns:value "25"^^xsd:int ] ;
-                evid:filler "noch" ] [ ns1:frequency [ a cx:CorpusX ;
-                        rdf_ns:value "9"^^xsd:int ] ;
+    evid:colloprofile ( [ frac:frequency [ a cx:CorpusX ;
+                        RDF:value "42"^^xsd:int ] ;
+                evid:filler "immer" ] [ frac:frequency [ a cx:CorpusX ;
+                        RDF:value "32"^^xsd:int ] ;
+                evid:filler "wieder" ] [ frac:frequency [ a cx:CorpusX ;
+                        RDF:value "27"^^xsd:int ] ;
+                evid:filler "stets" ] [ frac:frequency [ a cx:CorpusX ;
+                        RDF:value "25"^^xsd:int ] ;
+                evid:filler "noch" ] [ frac:frequency [ a cx:CorpusX ;
+                        RDF:value "9"^^xsd:int ] ;
                 evid:filler "täglich" ] ) ;
     rcxn:hasSemanticProperty "The adverbs share a semantic property of expressing recurrence or regularity." ;
     rcxn:hasSlotForm cx:deuWrSt20_sichNPADJADVvorAugenVP_3_Form .
@@ -677,17 +677,17 @@ cx:deuWrSt20_sichNPADJADVvorAugenVP_5_Form a rcxn:SlotForm ;
 cx:deuWrSt20_sichNPADJADVvorAugenVP_6 a rcxn:SlotOptional ;
     cx:WordOrder "The position of the verb within the construction is relatively flexible." ;
     cx:hasIS cx:Comment ;
-    rdfs:comment "When the verb führen or halten occur, the reflexive pronoun \"sich\" is obligatory present (Element 1)." ;
-    evid:colloprofile ( [ ns1:frequency [ a cx:CorpusX ;
-                        rdf_ns:value "225"^^xsd:int ] ;
-                evid:filler "führen" ] [ ns1:frequency [ a cx:CorpusX ;
-                        rdf_ns:value "143"^^xsd:int ] ;
-                evid:filler "halten" ] [ ns1:frequency [ a cx:CorpusX ;
-                        rdf_ns:value "129"^^xsd:int ] ;
-                evid:filler "haben" ] [ ns1:frequency [ a cx:CorpusX ;
-                        rdf_ns:value "25"^^xsd:int ] ;
-                evid:filler "stellen" ] [ ns1:frequency [ a cx:CorpusX ;
-                        rdf_ns:value "15"^^xsd:int ] ;
+    RDFS:comment "When the verb führen or halten occur, the reflexive pronoun \"sich\" is obligatory present (Element 1)." ;
+    evid:colloprofile ( [ frac:frequency [ a cx:CorpusX ;
+                        RDF:value "225"^^xsd:int ] ;
+                evid:filler "führen" ] [ frac:frequency [ a cx:CorpusX ;
+                        RDF:value "143"^^xsd:int ] ;
+                evid:filler "halten" ] [ frac:frequency [ a cx:CorpusX ;
+                        RDF:value "129"^^xsd:int ] ;
+                evid:filler "haben" ] [ frac:frequency [ a cx:CorpusX ;
+                        RDF:value "25"^^xsd:int ] ;
+                evid:filler "stellen" ] [ frac:frequency [ a cx:CorpusX ;
+                        RDF:value "15"^^xsd:int ] ;
                 evid:filler "stehen" ] ) ;
     rcxn:hasSemanticProperty "Though these verbs are highly polysemous, they either relate to the positioning of something in space, either actively (führen, stellen) or passively (stehen), or imply control or possession (halten, haben, führen)" ;
     rcxn:hasSlotForm cx:deuWrSt20_sichNPADJADVvorAugenVP_6_Form .
@@ -696,19 +696,19 @@ cx:deuWrSt20_sichNPADJADVvorAugenVP_6_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:deu_Verb .
 
 cx:deuWrSt20_sichNPADJADVvorAugenVP_MD a rcxn:Metadata ;
-    dcterms:created "2024-12-02"^^xsd:date ;
+    DCTERMS:created "2024-12-02"^^xsd:date ;
     rcxn:annotator membr:Lee .
 
 cx:deuWrSt20_sichNPADJADVvorAugenVP_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "The construction denotes a cognitive process involving the act of bringing something into focus or visualizing it mentally, including introspection, planning and imaginative conceptualization." .
 
-cx:deuWrSt20_sichNPADJADVvorAugenVP_slots a rdf_ns:Seq ;
-    rdf_ns:_1 cx:deuWrSt20_sichNPADJADVvorAugenVP_1 ;
-    rdf_ns:_2 cx:deuWrSt20_sichNPADJADVvorAugenVP_2 ;
-    rdf_ns:_3 cx:deuWrSt20_sichNPADJADVvorAugenVP_3 ;
-    rdf_ns:_4 cx:deuWrSt20_sichNPADJADVvorAugenVP_4 ;
-    rdf_ns:_5 cx:deuWrSt20_sichNPADJADVvorAugenVP_5 ;
-    rdf_ns:_6 cx:deuWrSt20_sichNPADJADVvorAugenVP_6 .
+cx:deuWrSt20_sichNPADJADVvorAugenVP_slots a RDF:Seq ;
+    RDF:_1 cx:deuWrSt20_sichNPADJADVvorAugenVP_1 ;
+    RDF:_2 cx:deuWrSt20_sichNPADJADVvorAugenVP_2 ;
+    RDF:_3 cx:deuWrSt20_sichNPADJADVvorAugenVP_3 ;
+    RDF:_4 cx:deuWrSt20_sichNPADJADVvorAugenVP_4 ;
+    RDF:_5 cx:deuWrSt20_sichNPADJADVvorAugenVP_5 ;
+    RDF:_6 cx:deuWrSt20_sichNPADJADVvorAugenVP_6 .
 
 cx:deu_ADJstrongPLUSADJweakPLUSN a rcxn:Construction ;
     lg:partOfLanguage lg:deu ;
@@ -717,7 +717,7 @@ cx:deu_ADJstrongPLUSADJweakPLUSN a rcxn:Construction ;
     rcxn:hasTitle "NP [ADJ-strong + ADJ-weak+ N]" .
 
 cx:deu_ADJstrongPLUSADJweakPLUSN_MD a rcxn:Metadata ;
-    dcterms:created "2024-12-02"^^xsd:date ;
+    DCTERMS:created "2024-12-02"^^xsd:date ;
     rcxn:annotator membr:Kligge .
 
 cx:deu_Adverb a rcxn:Construction ;
@@ -732,10 +732,10 @@ cx:deu_AusdemAErmelschuettelnconstruction_1 a rcxn:SlotObligatory ;
 cx:deu_AusdemAErmelschuettelnconstruction_1_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:deu_PrepositionalPhrase .
 
-cx:deu_AusdemAErmelschuettelnconstruction_1_slots a rdf_ns:Seq ;
-    rdf_ns:_1 cx:deu_AusdemAErmelschuettelnconstruction_2 ;
-    rdf_ns:_2 cx:deu_AusdemAErmelschuettelnconstruction_3 ;
-    rdf_ns:_3 cx:deu_AusdemAErmelschuettelnconstruction_4 .
+cx:deu_AusdemAErmelschuettelnconstruction_1_slots a RDF:Seq ;
+    RDF:_1 cx:deu_AusdemAErmelschuettelnconstruction_2 ;
+    RDF:_2 cx:deu_AusdemAErmelschuettelnconstruction_3 ;
+    RDF:_3 cx:deu_AusdemAErmelschuettelnconstruction_4 .
 
 cx:deu_AusdemAErmelschuettelnconstruction_2 a rcxn:SlotObligatory ;
     cx:WordOrder "Initial position in Element 1" ;
@@ -800,25 +800,25 @@ cx:deu_AusdemAErmelschuettelnconstruction_Ex_A a cx:Example ;
     cx:hasGlosses "a daycare-spot(ACC) can one not just.like.that out the sleeve shake" ;
     cx:hasText "Ein KitaPlatz kann man nicht einfach aus dem Ärmel schütteln. [Saarbrücker Zeitung, 09.02.2022]" ;
     cx:hasTranslation "One cannot simply pull a daycare spot out of thin air. / One cannot simply conjure a daycare spot." ;
-    rdfs:comment "Used in negative context with modal verb (kann) and generalized subject (man) ; includes \"einfac so\" emphasizing imposition" .
+    RDFS:comment "Used in negative context with modal verb (kann) and generalized subject (man) ; includes \"einfac so\" emphasizing imposition" .
 
 cx:deu_AusdemAErmelschuettelnconstruction_Ex_B a cx:Example ;
     cx:hasAnnotatedText "Da diese Summe nicht einfach [aus]1 [dem]2 [Ärmel]3 [zu schütteln]4 ist, brauche es einen Investor. [Dresdner Neueste Nachrichter]" ;
     cx:hasGlosses "since this sum(NOM) not simply out the sleeve to shake is needed it an investor(ACC)" ;
     cx:hasText "Da diese Summe nicht einfach aus dem Ärmel zu schütteln ist, brauche es einen Investor. [Dresdner Neueste Nachrichter]" ;
     cx:hasTranslation "Since the sum cannot be simply pulled out of thin air, an investor was needed." ;
-    rdfs:comment "Shows the construction in zu-infinitive form with sein ; again in negative context." .
+    RDFS:comment "Shows the construction in zu-infinitive form with sein ; again in negative context." .
 
 cx:deu_AusdemAErmelschuettelnconstruction_MD a rcxn:Metadata ;
-    dcterms:created "2024-12-04"^^xsd:date ;
+    DCTERMS:created "2024-12-04"^^xsd:date ;
     rcxn:annotator membr:Rastegar .
 
 cx:deu_AusdemAErmelschuettelnconstruction_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "done with ease" .
 
-cx:deu_AusdemAErmelschuettelnconstruction_slots a rdf_ns:Seq ;
-    rdf_ns:_1 cx:deu_AusdemAErmelschuettelnconstruction_1 ;
-    rdf_ns:_2 cx:deu_AusdemAErmelschuettelnconstruction_5 .
+cx:deu_AusdemAErmelschuettelnconstruction_slots a RDF:Seq ;
+    RDF:_1 cx:deu_AusdemAErmelschuettelnconstruction_1 ;
+    RDF:_2 cx:deu_AusdemAErmelschuettelnconstruction_5 .
 
 cx:deu_DefiniteArticle a rcxn:Construction ;
     lg:partOfLanguage lg:deu ;
@@ -837,7 +837,7 @@ cx:deu_Generalprepositionalconstructions a rcxn:Construction ;
     rcxn:hasTitle "General prepositional constructions" .
 
 cx:deu_Generalprepositionalconstructions_MD a rcxn:Metadata ;
-    dcterms:created "2024-12-02"^^xsd:date ;
+    DCTERMS:created "2024-12-02"^^xsd:date ;
     rcxn:annotator membr:Lee .
 
 cx:deu_NPDefDetstrongPLUSADJweakPLUSN_1 a rcxn:SlotObligatory ;
@@ -861,25 +861,25 @@ cx:deu_NPDefDetstrongPLUSADJweakPLUSN_3_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:deu_Noun .
 
 cx:deu_NPDefDetstrongPLUSADJweakPLUSN_MD a rcxn:Metadata ;
-    dcterms:created "2024-12-02"^^xsd:date ;
+    DCTERMS:created "2024-12-02"^^xsd:date ;
     rcxn:annotator membr:Kligge .
 
 cx:deu_NPDefDetstrongPLUSADJweakPLUSN_Meaning a rcxn:ConstructionMeaning .
 
-cx:deu_NPDefDetstrongPLUSADJweakPLUSN_slots a rdf_ns:Seq ;
-    rdf_ns:_1 cx:deu_NPDefDetstrongPLUSADJweakPLUSN_1 ;
-    rdf_ns:_2 cx:deu_NPDefDetstrongPLUSADJweakPLUSN_2,
+cx:deu_NPDefDetstrongPLUSADJweakPLUSN_slots a RDF:Seq ;
+    RDF:_1 cx:deu_NPDefDetstrongPLUSADJweakPLUSN_1 ;
+    RDF:_2 cx:deu_NPDefDetstrongPLUSADJweakPLUSN_2,
         cx:deu_NPDefDetstrongPLUSADJweakPLUSN_3 .
 
 cx:deu_NPdasPLUSADJeNaccsgneut a rcxn:Construction ;
-    dcterms:created "2024-12-02"^^xsd:date ;
+    DCTERMS:created "2024-12-02"^^xsd:date ;
     lg:partOfLanguage lg:deu ;
     links:similarFormSimilarFunction cx:deu_NPderPLUSADJeNnomsgmasc ;
     rcxn:annotator membr:Kligge ;
     rcxn:hasTitle "NP[das + ADJ-e N]acc.sg.neut" .
 
 cx:deu_NPdasPLUSADJeNnomsgneut a rcxn:Construction ;
-    dcterms:created "2024-12-02"^^xsd:date ;
+    DCTERMS:created "2024-12-02"^^xsd:date ;
     lg:partOfLanguage lg:deu ;
     links:similarFormSimilarFunction cx:deu_NPderPLUSADJeNnomsgmasc ;
     rcxn:annotator membr:Kligge ;
@@ -892,7 +892,7 @@ cx:deu_NPdasPLUSADJePLUSNnomsgneut a rcxn:Construction ;
     rcxn:hasTitle "NP [das+ ADJ-e+ N]nom.sg.neut" .
 
 cx:deu_NPdasPLUSADJePLUSNnomsgneut_MD a rcxn:Metadata ;
-    dcterms:created "2024-12-02"^^xsd:date ;
+    DCTERMS:created "2024-12-02"^^xsd:date ;
     rcxn:annotator membr:Kligge .
 
 cx:deu_NPdefDETstrongPLUSN a rcxn:Construction ;
@@ -902,18 +902,18 @@ cx:deu_NPdefDETstrongPLUSN a rcxn:Construction ;
     rcxn:hasTitle "NP [def.DET-strong + N]" .
 
 cx:deu_NPdefDETstrongPLUSN_MD a rcxn:Metadata ;
-    dcterms:created "2024-12-02"^^xsd:date ;
+    DCTERMS:created "2024-12-02"^^xsd:date ;
     rcxn:annotator membr:Kligge .
 
 cx:deu_NPdemPLUSADJenNdatsgmasc a rcxn:Construction ;
-    dcterms:created "2024-12-02"^^xsd:date ;
+    DCTERMS:created "2024-12-02"^^xsd:date ;
     lg:partOfLanguage lg:deu ;
     links:similarFormSimilarFunction cx:deu_NPderPLUSADJeNnomsgmasc ;
     rcxn:annotator membr:Kligge ;
     rcxn:hasTitle "NP[dem + ADJ-en N]dat.sg.masc" .
 
 cx:deu_NPdemPLUSADJenNdatsgneut a rcxn:Construction ;
-    dcterms:created "2024-12-02"^^xsd:date ;
+    DCTERMS:created "2024-12-02"^^xsd:date ;
     lg:partOfLanguage lg:deu ;
     links:similarFormSimilarFunction cx:deu_NPderPLUSADJeNnomsgmasc ;
     rcxn:annotator membr:Kligge ;
@@ -926,11 +926,11 @@ cx:deu_NPdemPLUSADJenPLUSNdatsgmascSLASHneut a rcxn:Construction ;
     rcxn:hasTitle "NP [dem + ADJ-en+ N]dat.sg.masc/neut" .
 
 cx:deu_NPdemPLUSADJenPLUSNdatsgmascSLASHneut_MD a rcxn:Metadata ;
-    dcterms:created "2024-12-02"^^xsd:date ;
+    DCTERMS:created "2024-12-02"^^xsd:date ;
     rcxn:annotator membr:Kligge .
 
 cx:deu_NPdenPLUSADJenNaccsgmasc a rcxn:Construction ;
-    dcterms:created "2024-12-02"^^xsd:date ;
+    DCTERMS:created "2024-12-02"^^xsd:date ;
     lg:partOfLanguage lg:deu ;
     links:similarFormSimilarFunction cx:deu_NPderPLUSADJeNnomsgmasc ;
     rcxn:annotator membr:Kligge ;
@@ -945,16 +945,16 @@ cx:deu_NPderPLUSADJeNnomsgmasc_2 a rcxn:SlotObligatory ;
 cx:deu_NPderPLUSADJeNnomsgmasc_3 a rcxn:SlotObligatory .
 
 cx:deu_NPderPLUSADJeNnomsgmasc_MD a rcxn:Metadata ;
-    dcterms:created "2024-12-02"^^xsd:date ;
+    DCTERMS:created "2024-12-02"^^xsd:date ;
     rcxn:annotator membr:Kligge .
 
 cx:deu_NPderPLUSADJeNnomsgmasc_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "NPs in German have obligatory grammatical marking specifying case, number, gender." .
 
-cx:deu_NPderPLUSADJeNnomsgmasc_slots a rdf_ns:Seq ;
-    rdf_ns:_1 cx:deu_NPderPLUSADJeNnomsgmasc_1 ;
-    rdf_ns:_2 cx:deu_NPderPLUSADJeNnomsgmasc_2 ;
-    rdf_ns:_3 cx:deu_NPderPLUSADJeNnomsgmasc_3 .
+cx:deu_NPderPLUSADJeNnomsgmasc_slots a RDF:Seq ;
+    RDF:_1 cx:deu_NPderPLUSADJeNnomsgmasc_1 ;
+    RDF:_2 cx:deu_NPderPLUSADJeNnomsgmasc_2 ;
+    RDF:_3 cx:deu_NPderPLUSADJeNnomsgmasc_3 .
 
 cx:deu_NPderPLUSADJePLUSNnomsgmasc a rcxn:Construction ;
     lg:partOfLanguage lg:deu ;
@@ -963,11 +963,11 @@ cx:deu_NPderPLUSADJePLUSNnomsgmasc a rcxn:Construction ;
     rcxn:hasTitle "NP [der+ ADJ-e+ N]nom.sg.masc" .
 
 cx:deu_NPderPLUSADJePLUSNnomsgmasc_MD a rcxn:Metadata ;
-    dcterms:created "2024-12-02"^^xsd:date ;
+    DCTERMS:created "2024-12-02"^^xsd:date ;
     rcxn:annotator membr:Kligge .
 
 cx:deu_NPdiePLUSADJeNnomsgfem a rcxn:Construction ;
-    dcterms:created "2024-12-02"^^xsd:date ;
+    DCTERMS:created "2024-12-02"^^xsd:date ;
     lg:partOfLanguage lg:deu ;
     links:similarFormSimilarFunction cx:deu_NPderPLUSADJeNnomsgmasc ;
     rcxn:annotator membr:Kligge ;
@@ -980,7 +980,7 @@ cx:deu_NPdiePLUSADJePLUSNnomsgfem a rcxn:Construction ;
     rcxn:hasTitle "NP [die + ADJ-e+ N]nom.sg.fem" .
 
 cx:deu_NPdiePLUSADJePLUSNnomsgfem_MD a rcxn:Metadata ;
-    dcterms:created "2024-12-02"^^xsd:date ;
+    DCTERMS:created "2024-12-02"^^xsd:date ;
     rcxn:annotator membr:Kligge .
 
 cx:deu_NPindefDETstrongPLUSADJweakPLUSN a rcxn:Construction ;
@@ -990,7 +990,7 @@ cx:deu_NPindefDETstrongPLUSADJweakPLUSN a rcxn:Construction ;
     rcxn:hasTitle "NP [indef.DET-strong + ADJ-weak + N]" .
 
 cx:deu_NPindefDETstrongPLUSADJweakPLUSN_MD a rcxn:Metadata ;
-    dcterms:created "2024-12-02"^^xsd:date ;
+    DCTERMS:created "2024-12-02"^^xsd:date ;
     rcxn:annotator membr:Kligge .
 
 cx:deu_NPindefDETstrongPLUSN a rcxn:Construction ;
@@ -1000,7 +1000,7 @@ cx:deu_NPindefDETstrongPLUSN a rcxn:Construction ;
     rcxn:hasTitle "NP [indef.DET-strong + N]" .
 
 cx:deu_NPindefDETstrongPLUSN_MD a rcxn:Metadata ;
-    dcterms:created "2024-12-02"^^xsd:date ;
+    DCTERMS:created "2024-12-02"^^xsd:date ;
     rcxn:annotator membr:Kligge .
 
 cx:deu_NPindefDETzeroPLUSN a rcxn:Construction ;
@@ -1010,11 +1010,11 @@ cx:deu_NPindefDETzeroPLUSN a rcxn:Construction ;
     rcxn:hasTitle "NP [indef.DET-zero + N]" .
 
 cx:deu_NPindefDETzeroPLUSN_MD a rcxn:Metadata ;
-    dcterms:created "2024-12-02"^^xsd:date ;
+    DCTERMS:created "2024-12-02"^^xsd:date ;
     rcxn:annotator membr:Kligge .
 
 cx:deu_NPnomsgmasc a rcxn:Construction ;
-    dcterms:created "2024-12-02"^^xsd:date ;
+    DCTERMS:created "2024-12-02"^^xsd:date ;
     lg:partOfLanguage lg:deu ;
     links:inheritedBy cx:deu_NPderPLUSADJeNnomsgmasc ;
     rcxn:annotator membr:Kligge ;
@@ -1052,7 +1052,7 @@ cx:deu_vorPLUSbodypartconstructions a rcxn:Construction ;
     rcxn:hasTitle "vor + body part constructions" .
 
 cx:deu_vorPLUSbodypartconstructions_MD a rcxn:Metadata ;
-    dcterms:created "2024-12-02"^^xsd:date ;
+    DCTERMS:created "2024-12-02"^^xsd:date ;
     rcxn:annotator membr:Lee .
 
 cx:deu_vor_Meaning a rcxn:ConstructionMeaning ;
@@ -1065,7 +1065,7 @@ cx:engInf_Coolexclamativeconstruction_1_Form a rcxn:SlotForm ;
     rcxn:hasStem cx:engInf_coolasadmirableconstruction .
 
 cx:engInf_Coolexclamativeconstruction_2 a rcxn:SlotOptional ;
-    rdfs:comment "Typically added in the written modality." ;
+    RDFS:comment "Typically added in the written modality." ;
     rcxn:hasSlotForm cx:engInf_Coolexclamativeconstruction_2_Form .
 
 cx:engInf_Coolexclamativeconstruction_2_Form a rcxn:SlotForm ;
@@ -1073,7 +1073,7 @@ cx:engInf_Coolexclamativeconstruction_2_Form a rcxn:SlotForm ;
 
 cx:engInf_Coolexclamativeconstruction_MD a rcxn:Metadata ;
     cx:hasSources cx:eng_coolconstruction_Sources ;
-    dcterms:created "2025-12-10"^^xsd:date ;
+    DCTERMS:created "2025-12-10"^^xsd:date ;
     rcxn:annotator membr:Boos,
         membr:Petrenko,
         membr:Weigelt,
@@ -1082,9 +1082,9 @@ cx:engInf_Coolexclamativeconstruction_MD a rcxn:Metadata ;
 cx:engInf_Coolexclamativeconstruction_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "Expressing approval or enthusiasm." .
 
-cx:engInf_Coolexclamativeconstruction_slots a rdf_ns:Seq ;
-    rdf_ns:_1 cx:engInf_Coolexclamativeconstruction_1 ;
-    rdf_ns:_2 cx:engInf_Coolexclamativeconstruction_2 .
+cx:engInf_Coolexclamativeconstruction_slots a RDF:Seq ;
+    RDF:_1 cx:engInf_Coolexclamativeconstruction_1 ;
+    RDF:_2 cx:engInf_Coolexclamativeconstruction_2 .
 
 cx:engInf_coolasadmirableconstruction_1 a rcxn:SlotObligatory ;
     rcxn:hasPhonology "/kuːl/" ;
@@ -1097,7 +1097,7 @@ cx:engInf_coolasadmirableconstruction_1_Form a rcxn:SlotForm ;
 cx:engInf_coolasadmirableconstruction_Ex_A a cx:Example ;
     cx:hasAnnotatedText "For years, anything more than a slick of Vaseline or a brush of mascara was considered too try-hard to be [cool]1." ;
     cx:hasText "For years, anything more than a slick of Vaseline or a brush of mascara was considered too try-hard to be cool." ;
-    rdfs:comment "BNC Newspaper, 1992" .
+    RDFS:comment "BNC Newspaper, 1992" .
 
 cx:engInf_coolasadmirableconstruction_Ex_B a cx:Example ;
     cx:hasAnnotatedText "a [cool]1 outfit" ;
@@ -1109,7 +1109,7 @@ cx:engInf_coolasadmirableconstruction_Ex_C a cx:Example ;
 
 cx:engInf_coolasadmirableconstruction_MD a rcxn:Metadata ;
     cx:hasSources cx:eng_coolconstruction_Sources ;
-    dcterms:created "2025-11-28"^^xsd:date ;
+    DCTERMS:created "2025-11-28"^^xsd:date ;
     rcxn:annotator membr:Boos,
         membr:Petrenko,
         membr:Weigelt,
@@ -1118,8 +1118,8 @@ cx:engInf_coolasadmirableconstruction_MD a rcxn:Metadata ;
 cx:engInf_coolasadmirableconstruction_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "positive evaluation: admirable, relaxed, stylish, sophisticated, fashionable" .
 
-cx:engInf_coolasadmirableconstruction_slots a rdf_ns:Seq ;
-    rdf_ns:_1 cx:engInf_coolasadmirableconstruction_1 .
+cx:engInf_coolasadmirableconstruction_slots a RDF:Seq ;
+    RDF:_1 cx:engInf_coolasadmirableconstruction_1 .
 
 cx:engLME_AdjectivalwithPARTNERConstruction_1 a rcxn:SlotObligatory ;
     compcon:hasCompCon compcon:cxn_referent-expression .
@@ -1139,15 +1139,15 @@ cx:engLME_AdjectivalwithPARTNERConstruction_3 a rcxn:SlotObligatory ;
         compcon:str_preposition .
 
 cx:engLME_AdjectivalwithPARTNERConstruction_MD a rcxn:Metadata ;
-    dcterms:created "2026-03-06"^^xsd:date ;
+    DCTERMS:created "2026-03-06"^^xsd:date ;
     rcxn:annotator membr:Petrenko .
 
 cx:engLME_AdjectivalwithPARTNERConstruction_Meaning a rcxn:ConstructionMeaning .
 
-cx:engLME_AdjectivalwithPARTNERConstruction_slots a rdf_ns:Seq ;
-    rdf_ns:_1 cx:engLME_AdjectivalwithPARTNERConstruction_1 ;
-    rdf_ns:_2 cx:engLME_AdjectivalwithPARTNERConstruction_2 ;
-    rdf_ns:_3 cx:engLME_AdjectivalwithPARTNERConstruction_3 .
+cx:engLME_AdjectivalwithPARTNERConstruction_slots a RDF:Seq ;
+    RDF:_1 cx:engLME_AdjectivalwithPARTNERConstruction_1 ;
+    RDF:_2 cx:engLME_AdjectivalwithPARTNERConstruction_2 ;
+    RDF:_3 cx:engLME_AdjectivalwithPARTNERConstruction_3 .
 
 cx:engLME_AdjectiveConstruction_1 a rcxn:SlotObligatory ;
     compcon:hasCompCon compcon:cxn_adjectival-phrase,
@@ -1160,14 +1160,14 @@ cx:engLME_AdjectiveConstruction_2 a rcxn:SlotObligatory ;
     compcon:hasCompCon compcon:cxn_referent-expression .
 
 cx:engLME_AdjectiveConstruction_MD a rcxn:Metadata ;
-    dcterms:created "2026-03-06"^^xsd:date ;
+    DCTERMS:created "2026-03-06"^^xsd:date ;
     rcxn:annotator membr:Petrenko .
 
 cx:engLME_AdjectiveConstruction_Meaning a rcxn:ConstructionMeaning .
 
-cx:engLME_AdjectiveConstruction_slots a rdf_ns:Seq ;
-    rdf_ns:_1 cx:engLME_AdjectiveConstruction_1 ;
-    rdf_ns:_2 cx:engLME_AdjectiveConstruction_2 .
+cx:engLME_AdjectiveConstruction_slots a RDF:Seq ;
+    RDF:_1 cx:engLME_AdjectiveConstruction_1 ;
+    RDF:_2 cx:engLME_AdjectiveConstruction_2 .
 
 cx:engLME_Argumentstructureconstruction_1 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm cx:engLME_Argumentstructureconstruction_1_Form ;
@@ -1187,12 +1187,12 @@ cx:engLME_Argumentstructureconstruction_3 a rcxn:SlotObligatory ;
     rcxn:hasSyntacticFunction "Complement(s)" .
 
 cx:engLME_Argumentstructureconstruction_3_Form a rcxn:SlotForm ;
-    rdfs:comment "one or several Phrases" ;
+    RDFS:comment "one or several Phrases" ;
     rcxn:hasSyntacticForm cx:eng_Phrase .
 
 cx:engLME_Argumentstructureconstruction_MD a rcxn:Metadata ;
     cx:hasSources cx:engLME_Argumentstructureconstruction_Sources ;
-    dcterms:created "2025-02-14"^^xsd:date ;
+    DCTERMS:created "2025-02-14"^^xsd:date ;
     rcxn:annotator membr:Ramezani .
 
 cx:engLME_Argumentstructureconstruction_Meaning a rcxn:ConstructionMeaning ;
@@ -1203,10 +1203,10 @@ cx:engLME_Argumentstructureconstruction_Sources a cx:Collection ;
     cx:hasLiterature <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Goldberg_1995>,
         <https://doi.org/10.3389/frai.2025.1477246> .
 
-cx:engLME_Argumentstructureconstruction_slots a rdf_ns:Seq ;
-    rdf_ns:_1 cx:engLME_Argumentstructureconstruction_1 ;
-    rdf_ns:_2 cx:engLME_Argumentstructureconstruction_2 ;
-    rdf_ns:_3 cx:engLME_Argumentstructureconstruction_3 .
+cx:engLME_Argumentstructureconstruction_slots a RDF:Seq ;
+    RDF:_1 cx:engLME_Argumentstructureconstruction_1 ;
+    RDF:_2 cx:engLME_Argumentstructureconstruction_2 ;
+    RDF:_3 cx:engLME_Argumentstructureconstruction_3 .
 
 cx:engLME_AttributeConstructionAttrAdj_1 a rcxn:SlotOptional ;
     casa:hasCasaSyntacticFunction "potential subject" ;
@@ -1218,7 +1218,7 @@ cx:engLME_AttributeConstructionAttrAdj_1_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_NounPhrase .
 
 cx:engLME_AttributeConstructionAttrAdj_2 a rcxn:SlotObligatory ;
-    rdfs:comment "Borderline cases: buy sell (something cheap) ",
+    RDFS:comment "Borderline cases: buy sell (something cheap) ",
         "Source for collo-profile: Valency Dictionary of English, Patternbank",
         "colloprofile: account  assume  beat  believe  consider  discover  dream  find  guarantee  judge  label  lay  mark  pass  present  show  think  worry  " ;
     rcxn:hasSlotForm cx:engLME_AttributeConstructionAttrAdj_2_Form .
@@ -1250,7 +1250,7 @@ cx:engLME_AttributeConstructionAttrAdj_Ex_A a cx:Example ;
 
 cx:engLME_AttributeConstructionAttrAdj_MD a rcxn:Metadata ;
     cx:hasSources cx:engLME_AttributeConstructionAttrAdj_Sources ;
-    dcterms:created "2026-01-13"^^xsd:date ;
+    DCTERMS:created "2026-01-13"^^xsd:date ;
     rcxn:annotator membr:Garibyan,
         membr:Winckel .
 
@@ -1258,13 +1258,13 @@ cx:engLME_AttributeConstructionAttrAdj_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "An [ÆFFECTOR]1 assigns an [ATTRIBUTE]4 to an [ATTRIBUTEE]3." .
 
 cx:engLME_AttributeConstructionAttrAdj_Sources a cx:Collection ;
-    rdfs:seeAlso <https://constructicon.de/constructions/23> .
+    RDFS:seeAlso <https://constructicon.de/constructions/23> .
 
-cx:engLME_AttributeConstructionAttrAdj_slots a rdf_ns:Seq ;
-    rdf_ns:_1 cx:engLME_AttributeConstructionAttrAdj_1 ;
-    rdf_ns:_2 cx:engLME_AttributeConstructionAttrAdj_2 ;
-    rdf_ns:_3 cx:engLME_AttributeConstructionAttrAdj_3 ;
-    rdf_ns:_4 cx:engLME_AttributeConstructionAttrAdj_4 .
+cx:engLME_AttributeConstructionAttrAdj_slots a RDF:Seq ;
+    RDF:_1 cx:engLME_AttributeConstructionAttrAdj_1 ;
+    RDF:_2 cx:engLME_AttributeConstructionAttrAdj_2 ;
+    RDF:_3 cx:engLME_AttributeConstructionAttrAdj_3 ;
+    RDF:_4 cx:engLME_AttributeConstructionAttrAdj_4 .
 
 cx:engLME_Burnonesbridgesconstruction a rcxn:Construction ;
     cx:hasExample cx:engLME_Burnonesbridgesconstruction_Ex_A,
@@ -1337,18 +1337,18 @@ cx:engLME_Burnonesbridgesconstruction_Ex_B a cx:Example ;
     cx:hasText "I had, quite deliberately, burned my bridges -- there was no returning to the closet for me." .
 
 cx:engLME_Burnonesbridgesconstruction_MD a rcxn:Metadata ;
-    dcterms:created "2024-12-03"^^xsd:date ;
+    DCTERMS:created "2024-12-03"^^xsd:date ;
     rcxn:annotator membr:Rastegar .
 
 cx:engLME_Burnonesbridgesconstruction_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "[A person]1 ends relationships.",
         "[Someone]1 commits oneself to a course from which there is no retreat." .
 
-cx:engLME_Burnonesbridgesconstruction_slots a rdf_ns:Seq ;
-    rdf_ns:_1 cx:engLME_Burnonesbridgesconstruction_1 ;
-    rdf_ns:_2 cx:engLME_Burnonesbridgesconstruction_2 ;
-    rdf_ns:_3 cx:engLME_Burnonesbridgesconstruction_3 ;
-    rdf_ns:_4 cx:engLME_Burnonesbridgesconstruction_4 .
+cx:engLME_Burnonesbridgesconstruction_slots a RDF:Seq ;
+    RDF:_1 cx:engLME_Burnonesbridgesconstruction_1 ;
+    RDF:_2 cx:engLME_Burnonesbridgesconstruction_2 ;
+    RDF:_3 cx:engLME_Burnonesbridgesconstruction_3 ;
+    RDF:_4 cx:engLME_Burnonesbridgesconstruction_4 .
 
 cx:engLME_ComparativeConstruction_1 a rcxn:SlotObligatory ;
     compcon:hasCompCon compcon:cxn_comparative-form,
@@ -1368,16 +1368,16 @@ cx:engLME_ComparativeConstruction_4 a rcxn:SlotObligatory ;
         compcon:sem_standard .
 
 cx:engLME_ComparativeConstruction_MD a rcxn:Metadata ;
-    dcterms:created "2026-03-06"^^xsd:date ;
+    DCTERMS:created "2026-03-06"^^xsd:date ;
     rcxn:annotator membr:Petrenko .
 
 cx:engLME_ComparativeConstruction_Meaning a rcxn:ConstructionMeaning .
 
-cx:engLME_ComparativeConstruction_slots a rdf_ns:Seq ;
-    rdf_ns:_1 cx:engLME_ComparativeConstruction_1 ;
-    rdf_ns:_2 cx:engLME_ComparativeConstruction_2 ;
-    rdf_ns:_3 cx:engLME_ComparativeConstruction_3 ;
-    rdf_ns:_4 cx:engLME_ComparativeConstruction_4 .
+cx:engLME_ComparativeConstruction_slots a RDF:Seq ;
+    RDF:_1 cx:engLME_ComparativeConstruction_1 ;
+    RDF:_2 cx:engLME_ComparativeConstruction_2 ;
+    RDF:_3 cx:engLME_ComparativeConstruction_3 ;
+    RDF:_4 cx:engLME_ComparativeConstruction_4 .
 
 cx:engLME_Ditransitiveconstruction_1 a rcxn:SlotObligatory ;
     rcxn:hasSyntacticFunction "Subject" .
@@ -1395,17 +1395,17 @@ cx:engLME_Ditransitiveconstruction_Ex_A a cx:Example ;
     cx:hasText "The teacher gave students homework." .
 
 cx:engLME_Ditransitiveconstruction_MD a cx:Metadata ;
-    dcterms:created "2025-02-14"^^xsd:date ;
+    DCTERMS:created "2025-02-14"^^xsd:date ;
     rcxn:annotator membr:Ramezani .
 
 cx:engLME_Ditransitiveconstruction_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "A [subject]1 performs [an action of transfer]2 involving [a direct object]3 and [an indirect object]4." .
 
-cx:engLME_Ditransitiveconstruction_slots a rdf_ns:Seq ;
-    rdf_ns:_1 cx:engLME_Ditransitiveconstruction_1 ;
-    rdf_ns:_2 cx:engLME_Ditransitiveconstruction_2 ;
-    rdf_ns:_3 cx:engLME_Ditransitiveconstruction_3 ;
-    rdf_ns:_4 cx:engLME_Ditransitiveconstruction_4 .
+cx:engLME_Ditransitiveconstruction_slots a RDF:Seq ;
+    RDF:_1 cx:engLME_Ditransitiveconstruction_1 ;
+    RDF:_2 cx:engLME_Ditransitiveconstruction_2 ;
+    RDF:_3 cx:engLME_Ditransitiveconstruction_3 ;
+    RDF:_4 cx:engLME_Ditransitiveconstruction_4 .
 
 cx:engLME_GIVEOUTVerbParticleConstruction_1 a rcxn:SlotOptional ;
     rcxn:hasOtherSemanticContribution "ÆFFECTOR" ;
@@ -1439,16 +1439,16 @@ cx:engLME_GIVEOUTVerbParticleConstruction_Ex_A a cx:Example ;
         "[The event organizer]1 [gave]2 [out]3 [gift bags]4 to all attendees at the end of the ceremony." .
 
 cx:engLME_GIVEOUTVerbParticleConstruction_MD a rcxn:Metadata ;
-    dcterms:created "2024-12-01"^^xsd:date ;
+    DCTERMS:created "2024-12-01"^^xsd:date ;
     rcxn:annotator membr:Kissane .
 
 cx:engLME_GIVEOUTVerbParticleConstruction_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "[An ÆFFECTOR]1 distributes [items]4 to multiple recipients or reaches a point of depletion or cessation of function." .
 
-cx:engLME_GIVEOUTVerbParticleConstruction_slots a rdf_ns:Seq ;
-    rdf_ns:_1 cx:engLME_GIVEOUTVerbParticleConstruction_1 ;
-    rdf_ns:_2 cx:engLME_GIVEOUTVerbParticleConstruction_2 ;
-    rdf_ns:_3 cx:engLME_GIVEOUTVerbParticleConstruction_3,
+cx:engLME_GIVEOUTVerbParticleConstruction_slots a RDF:Seq ;
+    RDF:_1 cx:engLME_GIVEOUTVerbParticleConstruction_1 ;
+    RDF:_2 cx:engLME_GIVEOUTVerbParticleConstruction_2 ;
+    RDF:_3 cx:engLME_GIVEOUTVerbParticleConstruction_3,
         cx:engLME_GIVEOUTVerbParticleConstruction_4 .
 
 cx:engLME_GeneralPostmodifierofAdjectiveConstruction_1 a rcxn:SlotObligatory ;
@@ -1462,14 +1462,14 @@ cx:engLME_GeneralPostmodifierofAdjectiveConstruction_2 a rcxn:SlotObligatory ;
         compcon:sem_degree .
 
 cx:engLME_GeneralPostmodifierofAdjectiveConstruction_MD a rcxn:Metadata ;
-    dcterms:created "2026-02-25"^^xsd:date ;
+    DCTERMS:created "2026-02-25"^^xsd:date ;
     rcxn:annotator membr:Petrenko .
 
 cx:engLME_GeneralPostmodifierofAdjectiveConstruction_Meaning a rcxn:ConstructionMeaning .
 
-cx:engLME_GeneralPostmodifierofAdjectiveConstruction_slots a rdf_ns:Seq ;
-    rdf_ns:_1 cx:engLME_GeneralPostmodifierofAdjectiveConstruction_1 ;
-    rdf_ns:_2 cx:engLME_GeneralPostmodifierofAdjectiveConstruction_2 .
+cx:engLME_GeneralPostmodifierofAdjectiveConstruction_slots a RDF:Seq ;
+    RDF:_1 cx:engLME_GeneralPostmodifierofAdjectiveConstruction_1 ;
+    RDF:_2 cx:engLME_GeneralPostmodifierofAdjectiveConstruction_2 .
 
 cx:engLME_MoreThanComparisonConstructiontype1_1 a rcxn:SlotObligatory ;
     compcon:hasCompCon compcon:cxn_adjectival-phrase,
@@ -1501,17 +1501,17 @@ cx:engLME_MoreThanComparisonConstructiontype1_5 a rcxn:SlotObligatory ;
         compcon:sem_standard .
 
 cx:engLME_MoreThanComparisonConstructiontype1_MD a rcxn:Metadata ;
-    dcterms:created "2026-03-06"^^xsd:date ;
+    DCTERMS:created "2026-03-06"^^xsd:date ;
     rcxn:annotator membr:Petrenko .
 
 cx:engLME_MoreThanComparisonConstructiontype1_Meaning a rcxn:ConstructionMeaning .
 
-cx:engLME_MoreThanComparisonConstructiontype1_slots a rdf_ns:Seq ;
-    rdf_ns:_1 cx:engLME_MoreThanComparisonConstructiontype1_1 ;
-    rdf_ns:_2 cx:engLME_MoreThanComparisonConstructiontype1_2 ;
-    rdf_ns:_3 cx:engLME_MoreThanComparisonConstructiontype1_3 ;
-    rdf_ns:_4 cx:engLME_MoreThanComparisonConstructiontype1_4 ;
-    rdf_ns:_5 cx:engLME_MoreThanComparisonConstructiontype1_5 .
+cx:engLME_MoreThanComparisonConstructiontype1_slots a RDF:Seq ;
+    RDF:_1 cx:engLME_MoreThanComparisonConstructiontype1_1 ;
+    RDF:_2 cx:engLME_MoreThanComparisonConstructiontype1_2 ;
+    RDF:_3 cx:engLME_MoreThanComparisonConstructiontype1_3 ;
+    RDF:_4 cx:engLME_MoreThanComparisonConstructiontype1_4 ;
+    RDF:_5 cx:engLME_MoreThanComparisonConstructiontype1_5 .
 
 cx:engLME_MoreThanComparisonConstructiontype2_1 a rcxn:SlotObligatory ;
     compcon:hasCompCon compcon:cxn_attributive-phrase,
@@ -1533,16 +1533,16 @@ cx:engLME_MoreThanComparisonConstructiontype2_4 a rcxn:SlotObligatory ;
         compcon:sem_standard .
 
 cx:engLME_MoreThanComparisonConstructiontype2_MD a rcxn:Metadata ;
-    dcterms:created "2026-03-06"^^xsd:date ;
+    DCTERMS:created "2026-03-06"^^xsd:date ;
     rcxn:annotator membr:Petrenko .
 
 cx:engLME_MoreThanComparisonConstructiontype2_Meaning a rcxn:ConstructionMeaning .
 
-cx:engLME_MoreThanComparisonConstructiontype2_slots a rdf_ns:Seq ;
-    rdf_ns:_1 cx:engLME_MoreThanComparisonConstructiontype2_1 ;
-    rdf_ns:_2 cx:engLME_MoreThanComparisonConstructiontype2_2 ;
-    rdf_ns:_3 cx:engLME_MoreThanComparisonConstructiontype2_3 ;
-    rdf_ns:_4 cx:engLME_MoreThanComparisonConstructiontype2_4 .
+cx:engLME_MoreThanComparisonConstructiontype2_slots a RDF:Seq ;
+    RDF:_1 cx:engLME_MoreThanComparisonConstructiontype2_1 ;
+    RDF:_2 cx:engLME_MoreThanComparisonConstructiontype2_2 ;
+    RDF:_3 cx:engLME_MoreThanComparisonConstructiontype2_3 ;
+    RDF:_4 cx:engLME_MoreThanComparisonConstructiontype2_4 .
 
 cx:engLME_MoreThanComparisonConstructiontype3_1 a rcxn:SlotObligatory ;
     compcon:hasCompCon compcon:cxn_attributive-phrase,
@@ -1564,16 +1564,16 @@ cx:engLME_MoreThanComparisonConstructiontype3_4 a rcxn:SlotObligatory ;
         compcon:sem_standard .
 
 cx:engLME_MoreThanComparisonConstructiontype3_MD a rcxn:Metadata ;
-    dcterms:created "2026-03-06"^^xsd:date ;
+    DCTERMS:created "2026-03-06"^^xsd:date ;
     rcxn:annotator membr:Petrenko .
 
 cx:engLME_MoreThanComparisonConstructiontype3_Meaning a rcxn:ConstructionMeaning .
 
-cx:engLME_MoreThanComparisonConstructiontype3_slots a rdf_ns:Seq ;
-    rdf_ns:_1 cx:engLME_MoreThanComparisonConstructiontype3_1 ;
-    rdf_ns:_2 cx:engLME_MoreThanComparisonConstructiontype3_2 ;
-    rdf_ns:_3 cx:engLME_MoreThanComparisonConstructiontype3_3 ;
-    rdf_ns:_4 cx:engLME_MoreThanComparisonConstructiontype3_4 .
+cx:engLME_MoreThanComparisonConstructiontype3_slots a RDF:Seq ;
+    RDF:_1 cx:engLME_MoreThanComparisonConstructiontype3_1 ;
+    RDF:_2 cx:engLME_MoreThanComparisonConstructiontype3_2 ;
+    RDF:_3 cx:engLME_MoreThanComparisonConstructiontype3_3 ;
+    RDF:_4 cx:engLME_MoreThanComparisonConstructiontype3_4 .
 
 cx:engLME_MostLeastConstruction_1 a rcxn:SlotObligatory ;
     compcon:hasCompCon compcon:cxn_adjectival-phrase,
@@ -1593,14 +1593,14 @@ cx:engLME_MostLeastConstruction_2 a rcxn:SlotObligatory ;
         compcon:sem_object-concept .
 
 cx:engLME_MostLeastConstruction_MD a rcxn:Metadata ;
-    dcterms:created "2026-03-06"^^xsd:date ;
+    DCTERMS:created "2026-03-06"^^xsd:date ;
     rcxn:annotator membr:Petrenko .
 
 cx:engLME_MostLeastConstruction_Meaning a rcxn:ConstructionMeaning .
 
-cx:engLME_MostLeastConstruction_slots a rdf_ns:Seq ;
-    rdf_ns:_1 cx:engLME_MostLeastConstruction_1 ;
-    rdf_ns:_2 cx:engLME_MostLeastConstruction_2 .
+cx:engLME_MostLeastConstruction_slots a RDF:Seq ;
+    RDF:_1 cx:engLME_MostLeastConstruction_1 ;
+    RDF:_2 cx:engLME_MostLeastConstruction_2 .
 
 cx:engLME_PremodifierofAdjectiveConstruction_1 a rcxn:SlotObligatory ;
     compcon:hasCompCon compcon:cxn_admodifier,
@@ -1614,17 +1614,17 @@ cx:engLME_PremodifierofAdjectiveConstruction_2 a rcxn:SlotObligatory ;
         compcon:sem_property-concept .
 
 cx:engLME_PremodifierofAdjectiveConstruction_MD a rcxn:Metadata ;
-    dcterms:created "2026-03-06"^^xsd:date ;
+    DCTERMS:created "2026-03-06"^^xsd:date ;
     rcxn:annotator membr:Petrenko .
 
 cx:engLME_PremodifierofAdjectiveConstruction_Meaning a rcxn:ConstructionMeaning .
 
-cx:engLME_PremodifierofAdjectiveConstruction_slots a rdf_ns:Seq ;
-    rdf_ns:_1 cx:engLME_PremodifierofAdjectiveConstruction_1 ;
-    rdf_ns:_2 cx:engLME_PremodifierofAdjectiveConstruction_2 .
+cx:engLME_PremodifierofAdjectiveConstruction_slots a RDF:Seq ;
+    RDF:_1 cx:engLME_PremodifierofAdjectiveConstruction_1 ;
+    RDF:_2 cx:engLME_PremodifierofAdjectiveConstruction_2 .
 
 cx:engLME_Pullsomethingoutofahat a rcxn:Construction ;
-    dcterms:created "2024-12-04"^^xsd:date ;
+    DCTERMS:created "2024-12-04"^^xsd:date ;
     lg:partOfLanguage lg:eng ;
     links:CL_differentFormSameFunction cx:deu_AusdemAErmelschuettelnconstruction ;
     rcxn:annotator membr:Rastegar ;
@@ -1646,17 +1646,17 @@ cx:engLME_Resultativeconstruction_Ex_A a cx:Example ;
     cx:hasText "The chef cut the cake into slices." .
 
 cx:engLME_Resultativeconstruction_MD a cx:Metadata ;
-    dcterms:created "2025-02-14"^^xsd:date ;
+    DCTERMS:created "2025-02-14"^^xsd:date ;
     rcxn:annotator membr:Ramezani .
 
 cx:engLME_Resultativeconstruction_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "[An action]2 results in a change of state of [the object]3." .
 
-cx:engLME_Resultativeconstruction_slots a rdf_ns:Seq ;
-    rdf_ns:_1 cx:engLME_Resultativeconstruction_1 ;
-    rdf_ns:_2 cx:engLME_Resultativeconstruction_2 ;
-    rdf_ns:_3 cx:engLME_Resultativeconstruction_3 ;
-    rdf_ns:_4 cx:engLME_Resultativeconstruction_4 .
+cx:engLME_Resultativeconstruction_slots a RDF:Seq ;
+    RDF:_1 cx:engLME_Resultativeconstruction_1 ;
+    RDF:_2 cx:engLME_Resultativeconstruction_2 ;
+    RDF:_3 cx:engLME_Resultativeconstruction_3 ;
+    RDF:_4 cx:engLME_Resultativeconstruction_4 .
 
 cx:engLME_Rollupyoursleeves a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
@@ -1665,7 +1665,7 @@ cx:engLME_Rollupyoursleeves a rcxn:Construction ;
     rcxn:hasTitle "Roll up your sleeves" .
 
 cx:engLME_Rollupyoursleeves_MD a rcxn:Metadata ;
-    dcterms:created "2024-12-04"^^xsd:date ;
+    DCTERMS:created "2024-12-04"^^xsd:date ;
     rcxn:annotator membr:Rastegar .
 
 cx:engLME_SuperlativeConstruction_1 a rcxn:SlotObligatory ;
@@ -1685,14 +1685,14 @@ cx:engLME_SuperlativeConstruction_2 a rcxn:SlotObligatory ;
         compcon:sem_object-concept .
 
 cx:engLME_SuperlativeConstruction_MD a rcxn:Metadata ;
-    dcterms:created "2026-03-06"^^xsd:date ;
+    DCTERMS:created "2026-03-06"^^xsd:date ;
     rcxn:annotator membr:Petrenko .
 
 cx:engLME_SuperlativeConstruction_Meaning a rcxn:ConstructionMeaning .
 
-cx:engLME_SuperlativeConstruction_slots a rdf_ns:Seq ;
-    rdf_ns:_1 cx:engLME_SuperlativeConstruction_1 ;
-    rdf_ns:_2 cx:engLME_SuperlativeConstruction_2 .
+cx:engLME_SuperlativeConstruction_slots a RDF:Seq ;
+    RDF:_1 cx:engLME_SuperlativeConstruction_1 ;
+    RDF:_2 cx:engLME_SuperlativeConstruction_2 .
 
 cx:engLME_Transitiveconstruction_1 a rcxn:SlotObligatory ;
     rcxn:hasSyntacticFunction "Subject" .
@@ -1707,16 +1707,16 @@ cx:engLME_Transitiveconstruction_Ex_A a cx:Example ;
     cx:hasText "The baker baked a cake." .
 
 cx:engLME_Transitiveconstruction_MD a cx:Metadata ;
-    dcterms:created "2025-02-14"^^xsd:date ;
+    DCTERMS:created "2025-02-14"^^xsd:date ;
     rcxn:annotator membr:Ramezani .
 
 cx:engLME_Transitiveconstruction_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "A [subject]1 performs [an action]2 on [a direct object]3." .
 
-cx:engLME_Transitiveconstruction_slots a rdf_ns:Seq ;
-    rdf_ns:_1 cx:engLME_Transitiveconstruction_1 ;
-    rdf_ns:_2 cx:engLME_Transitiveconstruction_2 ;
-    rdf_ns:_3 cx:engLME_Transitiveconstruction_3 .
+cx:engLME_Transitiveconstruction_slots a RDF:Seq ;
+    RDF:_1 cx:engLME_Transitiveconstruction_1 ;
+    RDF:_2 cx:engLME_Transitiveconstruction_2 ;
+    RDF:_3 cx:engLME_Transitiveconstruction_3 .
 
 cx:engLME_coolascolourconstruction_1 a rcxn:SlotObligatory ;
     rcxn:hasPhonology "/kuːl/" ;
@@ -1729,7 +1729,7 @@ cx:engLME_coolascolourconstruction_1_Form a rcxn:SlotForm ;
 cx:engLME_coolascolourconstruction_Ex_A a cx:Example ;
     cx:hasAnnotatedText "The [cool]1 palette consists of French ultramarine, Prussian green, lamp black and titanium white." ;
     cx:hasText "The cool palette consists of French ultramarine, Prussian green, lamp black and titanium white." ;
-    rdfs:comment "OED, 1991" .
+    RDFS:comment "OED, 1991" .
 
 cx:engLME_coolascolourconstruction_Ex_B a cx:Example ;
     cx:hasAnnotatedText "a [cool]1 shade of grey" ;
@@ -1737,7 +1737,7 @@ cx:engLME_coolascolourconstruction_Ex_B a cx:Example ;
 
 cx:engLME_coolascolourconstruction_MD a rcxn:Metadata ;
     cx:hasSources cx:eng_coolconstruction_Sources ;
-    dcterms:created "2025-11-28"^^xsd:date ;
+    DCTERMS:created "2025-11-28"^^xsd:date ;
     rcxn:annotator membr:Boos,
         membr:Petrenko,
         membr:Weigelt,
@@ -1746,8 +1746,8 @@ cx:engLME_coolascolourconstruction_MD a rcxn:Metadata ;
 cx:engLME_coolascolourconstruction_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "(for a colour) containing green, blue, indigo, violet, purple" .
 
-cx:engLME_coolascolourconstruction_slots a rdf_ns:Seq ;
-    rdf_ns:_1 cx:engLME_coolascolourconstruction_1 .
+cx:engLME_coolascolourconstruction_slots a RDF:Seq ;
+    RDF:_1 cx:engLME_coolascolourconstruction_1 .
 
 cx:engLME_coolasemotionconstruction_1 a rcxn:SlotObligatory ;
     rcxn:hasPhonology "/kuːl/" ;
@@ -1760,7 +1760,7 @@ cx:engLME_coolasemotionconstruction_1_Form a rcxn:SlotForm ;
 cx:engLME_coolasemotionconstruction_Ex_A a cx:Example ;
     cx:hasAnnotatedText "However, the West's [cool]1 attitude towards the King over his pro-Iraqi stance was partly offset by Jordan's willingness to take in vast numbers of refugees from Iraq and Kuwait during August." ;
     cx:hasText "However, the West's cool attitude towards the King over his pro-Iraqi stance was partly offset by Jordan's willingness to take in vast numbers of refugees from Iraq and Kuwait during August." ;
-    rdfs:comment "BNC: Keesings Contemporary Archives (1985-1994). 3238 s-units." .
+    RDFS:comment "BNC: Keesings Contemporary Archives (1985-1994). 3238 s-units." .
 
 cx:engLME_coolasemotionconstruction_Ex_B a cx:Example ;
     cx:hasAnnotatedText "He is staying [cool]1 under pressure." ;
@@ -1768,7 +1768,7 @@ cx:engLME_coolasemotionconstruction_Ex_B a cx:Example ;
 
 cx:engLME_coolasemotionconstruction_MD a rcxn:Metadata ;
     cx:hasSources cx:eng_coolconstruction_Sources ;
-    dcterms:created "2025-11-28"^^xsd:date ;
+    DCTERMS:created "2025-11-28"^^xsd:date ;
     rcxn:annotator membr:Boos,
         membr:Petrenko,
         membr:Weigelt,
@@ -1777,8 +1777,8 @@ cx:engLME_coolasemotionconstruction_MD a rcxn:Metadata ;
 cx:engLME_coolasemotionconstruction_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "emotionless, without passion" .
 
-cx:engLME_coolasemotionconstruction_slots a rdf_ns:Seq ;
-    rdf_ns:_1 cx:engLME_coolasemotionconstruction_1 .
+cx:engLME_coolasemotionconstruction_slots a RDF:Seq ;
+    RDF:_1 cx:engLME_coolasemotionconstruction_1 .
 
 cx:engUsSpo_Hadituptoherewith_1 a rcxn:SlotObligatory ;
     olia:hasSemanticRole olia:ExperiencerRole ;
@@ -1797,7 +1797,7 @@ cx:engUsSpo_Hadituptoherewith_3_Form a rcxn:SlotForm ;
 cx:engUsSpo_Hadituptoherewith_Ex_A a cx:Example ;
     cx:hasAnnotatedText "All you do is turn away and sulk and [I]1 have [had it up to here]2 [with that behavior]3." ;
     cx:hasText "All you do is turn away and sulk and I have had it up to here with that behavior." ;
-    rdfs:comment "https://gallo.case.edu/go/yas/0055/2015-06-02_1800_US_KNBC_Access_Hollywood_Live_1509-1515.mp4" .
+    RDFS:comment "https://gallo.case.edu/go/yas/0055/2015-06-02_1800_US_KNBC_Access_Hollywood_Live_1509-1515.mp4" .
 
 cx:engUsSpo_Hadituptoherewith_Gest a gest:GestureUsage ;
     gest:ends cx:engUsSpo_Hadituptoherewith_3 ;
@@ -1805,16 +1805,16 @@ cx:engUsSpo_Hadituptoherewith_Gest a gest:GestureUsage ;
     gest:uses cx:eng_ThroatCutGesture .
 
 cx:engUsSpo_Hadituptoherewith_MD a rcxn:Metadata ;
-    dcterms:created "2026-07-07"^^xsd:date ;
+    DCTERMS:created "2026-07-07"^^xsd:date ;
     rcxn:annotator membr:Iabdounane .
 
 cx:engUsSpo_Hadituptoherewith_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "[An experiencer]1 has reached their maximum tolerance level of [a negative stimulus]3 and cannot take more of it." .
 
-cx:engUsSpo_Hadituptoherewith_slots a rdf_ns:Seq ;
-    rdf_ns:_1 cx:engUsSpo_Hadituptoherewith_1 ;
-    rdf_ns:_2 cx:engUsSpo_Hadituptoherewith_2 ;
-    rdf_ns:_3 cx:engUsSpo_Hadituptoherewith_3 .
+cx:engUsSpo_Hadituptoherewith_slots a RDF:Seq ;
+    RDF:_1 cx:engUsSpo_Hadituptoherewith_1 ;
+    RDF:_2 cx:engUsSpo_Hadituptoherewith_2 ;
+    RDF:_3 cx:engUsSpo_Hadituptoherewith_3 .
 
 cx:engUsSpo_Hadituptoherewithmesoconstruction_1 a rcxn:SlotObligatory ;
     olia:hasSemanticRole olia:ExperiencerRole ;
@@ -1843,19 +1843,19 @@ cx:engUsSpo_Hadituptoherewithmesoconstruction_3_Form a rcxn:SlotForm ;
 cx:engUsSpo_Hadituptoherewithmesoconstruction_Ex_A a cx:Example ;
     cx:hasAnnotatedText "Some people tell me [we]1 have [had it up to here]2 [with typical politicians]3." ;
     cx:hasText "Some people tell me we have had it up to here with typical politicians." ;
-    rdfs:comment "http://go.redhenlab.org/yas/0054" .
+    RDFS:comment "http://go.redhenlab.org/yas/0054" .
 
 cx:engUsSpo_Hadituptoherewithmesoconstruction_MD a rcxn:Metadata ;
-    dcterms:created "2026-07-07"^^xsd:date ;
+    DCTERMS:created "2026-07-07"^^xsd:date ;
     rcxn:annotator membr:Iabdounane .
 
 cx:engUsSpo_Hadituptoherewithmesoconstruction_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "An [experiencer]1 has reached their maximum tolerance level of [a negative stimulus]3 and cannot take more of it." .
 
-cx:engUsSpo_Hadituptoherewithmesoconstruction_slots a rdf_ns:Seq ;
-    rdf_ns:_1 cx:engUsSpo_Hadituptoherewithmesoconstruction_1 ;
-    rdf_ns:_2 cx:engUsSpo_Hadituptoherewithmesoconstruction_2 ;
-    rdf_ns:_3 cx:engUsSpo_Hadituptoherewithmesoconstruction_3 .
+cx:engUsSpo_Hadituptoherewithmesoconstruction_slots a RDF:Seq ;
+    RDF:_1 cx:engUsSpo_Hadituptoherewithmesoconstruction_1 ;
+    RDF:_2 cx:engUsSpo_Hadituptoherewithmesoconstruction_2 ;
+    RDF:_3 cx:engUsSpo_Hadituptoherewithmesoconstruction_3 .
 
 cx:engUsSpo_Hadituptoherewithphysicalheightgesture_1 a rcxn:SlotObligatory ;
     olia:hasSemanticRole olia:ExperiencerRole ;
@@ -1877,16 +1877,16 @@ cx:engUsSpo_Hadituptoherewithphysicalheightgesture_Gest a gest:GestureUsage ;
     gest:uses cx:eng_PhysicalHeight .
 
 cx:engUsSpo_Hadituptoherewithphysicalheightgesture_MD a rcxn:Metadata ;
-    dcterms:created "2026-07-07"^^xsd:date ;
+    DCTERMS:created "2026-07-07"^^xsd:date ;
     rcxn:annotator membr:Iabdounane .
 
 cx:engUsSpo_Hadituptoherewithphysicalheightgesture_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "[An experiencer]1 has reached their maximum tolerance level of [a negative stimulus]3 and cannot take more of it." .
 
-cx:engUsSpo_Hadituptoherewithphysicalheightgesture_slots a rdf_ns:Seq ;
-    rdf_ns:_1 cx:engUsSpo_Hadituptoherewithphysicalheightgesture_1 ;
-    rdf_ns:_2 cx:engUsSpo_Hadituptoherewithphysicalheightgesture_2 ;
-    rdf_ns:_3 cx:engUsSpo_Hadituptoherewithphysicalheightgesture_3 .
+cx:engUsSpo_Hadituptoherewithphysicalheightgesture_slots a RDF:Seq ;
+    RDF:_1 cx:engUsSpo_Hadituptoherewithphysicalheightgesture_1 ;
+    RDF:_2 cx:engUsSpo_Hadituptoherewithphysicalheightgesture_2 ;
+    RDF:_3 cx:engUsSpo_Hadituptoherewithphysicalheightgesture_3 .
 
 cx:engUsUkWr_EvaluativeAttributionConstruction_1 a rcxn:SlotOptional ;
     rcxn:hasOtherSemanticContribution "Attributor" ;
@@ -1927,18 +1927,18 @@ cx:engUsUkWr_EvaluativeAttributionConstruction_5_Form a rcxn:SlotForm ;
         cx:eng_clause .
 
 cx:engUsUkWr_EvaluativeAttributionConstruction_MD a rcxn:Metadata ;
-    dcterms:created "2024-12-02"^^xsd:date ;
+    DCTERMS:created "2024-12-02"^^xsd:date ;
     rcxn:annotator membr:Stampfer .
 
 cx:engUsUkWr_EvaluativeAttributionConstruction_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "[An ATTRIBUTOR]1 mentally assigns [ATTRIBUTE]5 to an [ATTRIBUTEE]3." .
 
-cx:engUsUkWr_EvaluativeAttributionConstruction_slots a rdf_ns:Seq ;
-    rdf_ns:_1 cx:engUsUkWr_EvaluativeAttributionConstruction_1 ;
-    rdf_ns:_2 cx:engUsUkWr_EvaluativeAttributionConstruction_2 ;
-    rdf_ns:_3 cx:engUsUkWr_EvaluativeAttributionConstruction_3 ;
-    rdf_ns:_4 cx:engUsUkWr_EvaluativeAttributionConstruction_4 ;
-    rdf_ns:_5 cx:engUsUkWr_EvaluativeAttributionConstruction_5 .
+cx:engUsUkWr_EvaluativeAttributionConstruction_slots a RDF:Seq ;
+    RDF:_1 cx:engUsUkWr_EvaluativeAttributionConstruction_1 ;
+    RDF:_2 cx:engUsUkWr_EvaluativeAttributionConstruction_2 ;
+    RDF:_3 cx:engUsUkWr_EvaluativeAttributionConstruction_3 ;
+    RDF:_4 cx:engUsUkWr_EvaluativeAttributionConstruction_4 ;
+    RDF:_5 cx:engUsUkWr_EvaluativeAttributionConstruction_5 .
 
 cx:eng_AdjectiveAttributiveconstruction_1 a rcxn:SlotOptional ;
     rcxn:hasSlotForm cx:eng_AdjectiveAttributiveconstruction_1_Form .
@@ -1959,7 +1959,7 @@ cx:eng_AdjectiveAttributiveconstruction_3_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:Noun .
 
 cx:eng_AdjectiveAttributiveconstruction_MD a rcxn:Metadata ;
-    dcterms:created "2025-12-01"^^xsd:date ;
+    DCTERMS:created "2025-12-01"^^xsd:date ;
     rcxn:annotator membr:Boos,
         membr:Petrenko,
         membr:Weigelt,
@@ -1968,10 +1968,10 @@ cx:eng_AdjectiveAttributiveconstruction_MD a rcxn:Metadata ;
 cx:eng_AdjectiveAttributiveconstruction_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "Describes [a quality]2 of [an entity]3." .
 
-cx:eng_AdjectiveAttributiveconstruction_slots a rdf_ns:Seq ;
-    rdf_ns:_1 cx:eng_AdjectiveAttributiveconstruction_1 ;
-    rdf_ns:_2 cx:eng_AdjectiveAttributiveconstruction_2 ;
-    rdf_ns:_3 cx:eng_AdjectiveAttributiveconstruction_3 .
+cx:eng_AdjectiveAttributiveconstruction_slots a RDF:Seq ;
+    RDF:_1 cx:eng_AdjectiveAttributiveconstruction_1 ;
+    RDF:_2 cx:eng_AdjectiveAttributiveconstruction_2 ;
+    RDF:_3 cx:eng_AdjectiveAttributiveconstruction_3 .
 
 cx:eng_AdjectivePhrase_1 a rcxn:SlotOptional ;
     rcxn:hasOtherSemanticContribution "Premodifier" ;
@@ -1995,7 +1995,7 @@ cx:eng_AdjectivePhrase_3_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_PrepositionalPhrase .
 
 cx:eng_AdjectivePhrase_MD a rcxn:Metadata ;
-    dcterms:created "2025-12-08"^^xsd:date ;
+    DCTERMS:created "2025-12-08"^^xsd:date ;
     rcxn:annotator membr:Boos,
         membr:Petrenko,
         membr:Weigelt,
@@ -2004,10 +2004,10 @@ cx:eng_AdjectivePhrase_MD a rcxn:Metadata ;
 cx:eng_AdjectivePhrase_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "Ascribing an [attribute]1." .
 
-cx:eng_AdjectivePhrase_slots a rdf_ns:Seq ;
-    rdf_ns:_1 cx:eng_AdjectivePhrase_1 ;
-    rdf_ns:_2 cx:eng_AdjectivePhrase_2 ;
-    rdf_ns:_3 cx:eng_AdjectivePhrase_3 .
+cx:eng_AdjectivePhrase_slots a RDF:Seq ;
+    RDF:_1 cx:eng_AdjectivePhrase_1 ;
+    RDF:_2 cx:eng_AdjectivePhrase_2 ;
+    RDF:_3 cx:eng_AdjectivePhrase_3 .
 
 cx:eng_AdjectivePredicativeconstruction_1 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm cx:eng_AdjectivePredicativeconstruction_1_Form .
@@ -2028,7 +2028,7 @@ cx:eng_AdjectivePredicativeconstruction_3_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_AdjectivePhrase .
 
 cx:eng_AdjectivePredicativeconstruction_MD a rcxn:Metadata ;
-    dcterms:created "2025-12-01"^^xsd:date ;
+    DCTERMS:created "2025-12-01"^^xsd:date ;
     rcxn:annotator membr:Boos,
         membr:Petrenko,
         membr:Weigelt,
@@ -2037,13 +2037,13 @@ cx:eng_AdjectivePredicativeconstruction_MD a rcxn:Metadata ;
 cx:eng_AdjectivePredicativeconstruction_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "[Something]1 has [a quality]3." .
 
-cx:eng_AdjectivePredicativeconstruction_slots a rdf_ns:Seq ;
-    rdf_ns:_1 cx:eng_AdjectivePredicativeconstruction_1 ;
-    rdf_ns:_2 cx:eng_AdjectivePredicativeconstruction_2 ;
-    rdf_ns:_3 cx:eng_AdjectivePredicativeconstruction_3 .
+cx:eng_AdjectivePredicativeconstruction_slots a RDF:Seq ;
+    RDF:_1 cx:eng_AdjectivePredicativeconstruction_1 ;
+    RDF:_2 cx:eng_AdjectivePredicativeconstruction_2 ;
+    RDF:_3 cx:eng_AdjectivePredicativeconstruction_3 .
 
 cx:eng_Adjective_MD a rcxn:Metadata ;
-    dcterms:created "2025-11-28"^^xsd:date ;
+    DCTERMS:created "2025-11-28"^^xsd:date ;
     rcxn:annotator membr:Boos,
         membr:Petrenko,
         membr:Weigelt,
@@ -2065,17 +2065,17 @@ cx:eng_CauseMotionconstruction_Ex_A a cx:Example ;
     cx:hasText "The cat chased the mouse into the garden." .
 
 cx:eng_CauseMotionconstruction_MD a cx:Metadata ;
-    dcterms:created "2025-02-14"^^xsd:date ;
+    DCTERMS:created "2025-02-14"^^xsd:date ;
     rcxn:annotator membr:Ramezani .
 
 cx:eng_CauseMotionconstruction_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "A [subject]1 causes [an object]3 to move along [a trajectory]4." .
 
-cx:eng_CauseMotionconstruction_slots a rdf_ns:Seq ;
-    rdf_ns:_1 cx:eng_CauseMotionconstruction_1 ;
-    rdf_ns:_2 cx:eng_CauseMotionconstruction_2 ;
-    rdf_ns:_3 cx:eng_CauseMotionconstruction_3 ;
-    rdf_ns:_4 cx:eng_CauseMotionconstruction_4 .
+cx:eng_CauseMotionconstruction_slots a RDF:Seq ;
+    RDF:_1 cx:eng_CauseMotionconstruction_1 ;
+    RDF:_2 cx:eng_CauseMotionconstruction_2 ;
+    RDF:_3 cx:eng_CauseMotionconstruction_3 ;
+    RDF:_4 cx:eng_CauseMotionconstruction_4 .
 
 cx:eng_ChefskissGesturalConstruction_1 a gest:Phase ;
     gest:handshape "All fingers are extended, touching at their tips." ;
@@ -2095,18 +2095,18 @@ cx:eng_ChefskissGesturalConstruction_3 a gest:Phase ;
     gest:orientation "Fingers oriented upwards.",
         "Palm is lateral." .
 
-cx:eng_ChefskissGesturalConstruction_Form a rdf_ns:Seq,
+cx:eng_ChefskissGesturalConstruction_Form a RDF:Seq,
         gest:GestureForm ;
-    rdf_ns:_1 cx:eng_ChefskissGesturalConstruction_1 ;
-    rdf_ns:_2 cx:eng_ChefskissGesturalConstruction_2 ;
-    rdf_ns:_3 cx:eng_ChefskissGesturalConstruction_3 ;
+    RDF:_1 cx:eng_ChefskissGesturalConstruction_1 ;
+    RDF:_2 cx:eng_ChefskissGesturalConstruction_2 ;
+    RDF:_3 cx:eng_ChefskissGesturalConstruction_3 ;
     gest:handedness gest:OneHand ;
     gest:position "Central space at mouth level." ;
     gest:sound "Kissing sound" ;
     gest:timing "Usually no longer than 1 second." .
 
 cx:eng_ChefskissGesturalConstruction_MD a rcxn:Metadata ;
-    dcterms:created "2026-07-07"^^xsd:date ;
+    DCTERMS:created "2026-07-07"^^xsd:date ;
     rcxn:annotator membr:Iabdounane .
 
 cx:eng_ChefskissGesturalConstruction_Meaning a gest:GestureMeaning ;
@@ -2114,7 +2114,7 @@ cx:eng_ChefskissGesturalConstruction_Meaning a gest:GestureMeaning ;
 
 cx:eng_GenitiveNPConstruction_1 a rcxn:SlotObligatory ;
     olia:hasSemanticRole olia:PossessorRole ;
-    rdfs:comment "[1] president’s state’s government’s week’s party’s court’s night’s ...",
+    RDFS:comment "[1] president’s state’s government’s week’s party’s court’s night’s ...",
         "[2] world’s people’s year’s mother’s man’s nation’s father’s company’s city’s country’s ...",
         "[3] church’s judge’s horse’s ...",
         "[4] women's children's ...",
@@ -2122,9 +2122,9 @@ cx:eng_GenitiveNPConstruction_1 a rcxn:SlotObligatory ;
         "colloprofile: his  my  her  your  their  our  its  one's  everyone's  everything's  everybody's  nobody's  each other's  " ;
     rcxn:hasSlots cx:eng_GenitiveNPConstruction_1_slots .
 
-cx:eng_GenitiveNPConstruction_1_slots a rdf_ns:Seq ;
-    rdf_ns:_1 cx:eng_GenitiveNPConstruction_2 ;
-    rdf_ns:_2 cx:eng_GenitiveNPConstruction_3 .
+cx:eng_GenitiveNPConstruction_1_slots a RDF:Seq ;
+    RDF:_1 cx:eng_GenitiveNPConstruction_2 ;
+    RDF:_2 cx:eng_GenitiveNPConstruction_3 .
 
 cx:eng_GenitiveNPConstruction_2 a rcxn:SlotObligatory ;
     rcxn:hasPhonology "[1] Nsg ending in voiceless consonant except /s, ʃ, tʃ/",
@@ -2150,15 +2150,15 @@ cx:eng_GenitiveNPConstruction_4_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:Noun .
 
 cx:eng_GenitiveNPConstruction_MD a rcxn:Metadata ;
-    dcterms:created "2026-01-16"^^xsd:date ;
+    DCTERMS:created "2026-01-16"^^xsd:date ;
     rcxn:annotator membr:Winckel .
 
 cx:eng_GenitiveNPConstruction_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "Establishing a relation between a [REFERENT]4 and a [POSSESSOR]2." .
 
-cx:eng_GenitiveNPConstruction_slots a rdf_ns:Seq ;
-    rdf_ns:_1 cx:eng_GenitiveNPConstruction_1 ;
-    rdf_ns:_2 cx:eng_GenitiveNPConstruction_4 .
+cx:eng_GenitiveNPConstruction_slots a RDF:Seq ;
+    RDF:_1 cx:eng_GenitiveNPConstruction_1 ;
+    RDF:_2 cx:eng_GenitiveNPConstruction_4 .
 
 cx:eng_Keepacoolheadconstruction_1 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm cx:eng_Keepacoolheadconstruction_1_Form .
@@ -2188,11 +2188,11 @@ cx:eng_Keepacoolheadconstruction_4_Form a rcxn:SlotForm ;
 cx:eng_Keepacoolheadconstruction_Ex_A a cx:Example ;
     cx:hasAnnotatedText "Luke wants to [keep]1 [a]2 [cool]3 [head]4 ... even if Madonna calls." ;
     cx:hasText "Luke wants to keep a cool head ... even if Madonna calls." ;
-    rdfs:comment "BNC, Newspaper, 1992" .
+    RDFS:comment "BNC, Newspaper, 1992" .
 
 cx:eng_Keepacoolheadconstruction_MD a rcxn:Metadata ;
     cx:hasSources cx:eng_coolconstruction_Sources ;
-    dcterms:created "2025-11-28"^^xsd:date ;
+    DCTERMS:created "2025-11-28"^^xsd:date ;
     rcxn:annotator membr:Boos,
         membr:Petrenko,
         membr:Weigelt,
@@ -2201,11 +2201,11 @@ cx:eng_Keepacoolheadconstruction_MD a rcxn:Metadata ;
 cx:eng_Keepacoolheadconstruction_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "remain composed" .
 
-cx:eng_Keepacoolheadconstruction_slots a rdf_ns:Seq ;
-    rdf_ns:_1 cx:eng_Keepacoolheadconstruction_1 ;
-    rdf_ns:_2 cx:eng_Keepacoolheadconstruction_2 ;
-    rdf_ns:_3 cx:eng_Keepacoolheadconstruction_3 ;
-    rdf_ns:_4 cx:eng_Keepacoolheadconstruction_4 .
+cx:eng_Keepacoolheadconstruction_slots a RDF:Seq ;
+    RDF:_1 cx:eng_Keepacoolheadconstruction_1 ;
+    RDF:_2 cx:eng_Keepacoolheadconstruction_2 ;
+    RDF:_3 cx:eng_Keepacoolheadconstruction_3 ;
+    RDF:_4 cx:eng_Keepacoolheadconstruction_4 .
 
 cx:eng_PhysicalHeight a gest:GestureConstruction ;
     gest:hasForm cx:eng_PhysicalHeight_Form ;
@@ -2226,7 +2226,7 @@ cx:eng_PhysicalHeight_Form a gest:GestureForm ;
     gest:timing "Usually for the entire duration of the co-occurring verbal pattern." .
 
 cx:eng_PhysicalHeight_MD a rcxn:Metadata ;
-    dcterms:created "2026-07-07"^^xsd:date ;
+    DCTERMS:created "2026-07-07"^^xsd:date ;
     rcxn:annotator membr:Iabdounane .
 
 cx:eng_PhysicalHeight_Meaning a gest:GestureMeaning ;
@@ -2244,11 +2244,11 @@ cx:eng_PrepositionalPhrasetoPLUSVing a rcxn:Construction ;
     rcxn:hasTitle "Prepositional Phrase (to + V-ing)" .
 
 cx:eng_PrepositionalPhrasetoPLUSVing_MD a rcxn:Metadata ;
-    dcterms:created "2026-02-02"^^xsd:date ;
+    DCTERMS:created "2026-02-02"^^xsd:date ;
     rcxn:annotator membr:Iabdounane .
 
 cx:eng_PrepositionalPhrasewithPLUSNP_MD a rcxn:Metadata ;
-    dcterms:created "2026-07-07"^^xsd:date ;
+    DCTERMS:created "2026-07-07"^^xsd:date ;
     rcxn:annotator membr:Iabdounane .
 
 cx:eng_Pronoun a rcxn:Construction ;
@@ -2263,18 +2263,18 @@ cx:eng_ThisclosetoVingconstruction_2 a rcxn:SlotObligatory ;
     rcxn:hasSlots cx:eng_ThisclosetoVingconstruction_2_slots ;
     rcxn:hasSyntacticFunction "PREDICATOR" .
 
-cx:eng_ThisclosetoVingconstruction_2_slots a rdf_ns:Seq ;
-    rdf_ns:_1 cx:eng_ThisclosetoVingconstruction_3 ;
-    rdf_ns:_2 cx:eng_ThisclosetoVingconstruction_4 ;
-    rdf_ns:_3 cx:eng_ThisclosetoVingconstruction_5 .
+cx:eng_ThisclosetoVingconstruction_2_slots a RDF:Seq ;
+    RDF:_1 cx:eng_ThisclosetoVingconstruction_3 ;
+    RDF:_2 cx:eng_ThisclosetoVingconstruction_4 ;
+    RDF:_3 cx:eng_ThisclosetoVingconstruction_5 .
 
 cx:eng_ThisclosetoVingconstruction_3 a rcxn:SlotOptional ;
-    evid:colloprofile ( [ ns1:frequency [ a cx:CorpusX ;
-                        rdf_ns:value "327"^^xsd:int ] ;
-                evid:filler "be" ] [ ns1:frequency [ a cx:CorpusX ;
-                        rdf_ns:value "109"^^xsd:int ] ;
-                evid:filler "come" ] [ ns1:frequency [ a cx:CorpusX ;
-                        rdf_ns:value "11"^^xsd:int ] ;
+    evid:colloprofile ( [ frac:frequency [ a cx:CorpusX ;
+                        RDF:value "327"^^xsd:int ] ;
+                evid:filler "be" ] [ frac:frequency [ a cx:CorpusX ;
+                        RDF:value "109"^^xsd:int ] ;
+                evid:filler "come" ] [ frac:frequency [ a cx:CorpusX ;
+                        RDF:value "11"^^xsd:int ] ;
                 evid:filler "get" ] ) ;
     rcxn:hasSlotForm cx:eng_ThisclosetoVingconstruction_3_Form .
 
@@ -2296,7 +2296,7 @@ cx:eng_ThisclosetoVingconstruction_6_Form a rcxn:SlotForm ;
 cx:eng_ThisclosetoVingconstruction_Ex_A a cx:Example ;
     cx:hasAnnotatedText "[It]1 [was this close]2 [to happening]6, right? [This close]2 [to happening]6! " ;
     cx:hasText "It was this close to happening, right? This close to happening! " ;
-    rdfs:comment "http://go.redhenlab.org/yas/0117" .
+    RDFS:comment "http://go.redhenlab.org/yas/0117" .
 
 cx:eng_ThisclosetoVingconstruction_Gest a gest:GestureUsage ;
     gest:ends cx:eng_ThisclosetoVingconstruction_6 ;
@@ -2304,16 +2304,16 @@ cx:eng_ThisclosetoVingconstruction_Gest a gest:GestureUsage ;
     gest:uses cx:SmallQuantityGestureConstruction .
 
 cx:eng_ThisclosetoVingconstruction_MD a rcxn:Metadata ;
-    dcterms:created "2026-02-02"^^xsd:date ;
+    DCTERMS:created "2026-02-02"^^xsd:date ;
     rcxn:annotator membr:Iabdounane .
 
 cx:eng_ThisclosetoVingconstruction_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "[An agent]1 is/was metaphorically very close to [a goal or an outcome]6." .
 
-cx:eng_ThisclosetoVingconstruction_slots a rdf_ns:Seq ;
-    rdf_ns:_1 cx:eng_ThisclosetoVingconstruction_1 ;
-    rdf_ns:_2 cx:eng_ThisclosetoVingconstruction_2 ;
-    rdf_ns:_3 cx:eng_ThisclosetoVingconstruction_6 .
+cx:eng_ThisclosetoVingconstruction_slots a RDF:Seq ;
+    RDF:_1 cx:eng_ThisclosetoVingconstruction_1 ;
+    RDF:_2 cx:eng_ThisclosetoVingconstruction_2 ;
+    RDF:_3 cx:eng_ThisclosetoVingconstruction_6 .
 
 cx:eng_ThroatCutGesture a gest:GestureConstruction ;
     gest:hasForm cx:eng_ThroatCutGesture_Form ;
@@ -2333,7 +2333,7 @@ cx:eng_ThroatCutGesture_Form gest:handedness gest:OneHand ;
     gest:timing "Context-dependent." .
 
 cx:eng_ThroatCutGesture_MD a rcxn:Metadata ;
-    dcterms:created "2026-07-07"^^xsd:date ;
+    DCTERMS:created "2026-07-07"^^xsd:date ;
     rcxn:annotator membr:Iabdounane .
 
 cx:eng_ThroatCutGesture_Meaning a gest:GestureMeaning ;
@@ -2369,7 +2369,7 @@ cx:eng_close a rcxn:Construction ;
     rcxn:hasTitle "close" .
 
 cx:eng_close_MD a rcxn:Metadata ;
-    dcterms:created "2026-02-02"^^xsd:date ;
+    DCTERMS:created "2026-02-02"^^xsd:date ;
     rcxn:annotator membr:Iabdounane .
 
 cx:eng_come a rcxn:Construction ;
@@ -2388,7 +2388,7 @@ cx:eng_coolconstruction_1_Form a rcxn:SlotForm ;
 cx:eng_coolconstruction_Ex_A a cx:Example ;
     cx:hasAnnotatedText "The guests enjoyed [cool]1 drinks on the arched terrace beside the gently-lapping poll." ;
     cx:hasText "The guests enjoyed cool drinks on the arched terrace beside the gently-lapping poll." ;
-    rdfs:comment "BNC: The Daily Mirror. London:Mirror Group Newspaper, 1992, pp.??. 9942 s-units." .
+    RDFS:comment "BNC: The Daily Mirror. London:Mirror Group Newspaper, 1992, pp.??. 9942 s-units." .
 
 cx:eng_coolconstruction_Ex_B a cx:Example ;
     cx:hasAnnotatedText "[cool]1 breeze" ;
@@ -2404,7 +2404,7 @@ cx:eng_coolconstruction_Ex_D a cx:Example ;
 
 cx:eng_coolconstruction_MD a rcxn:Metadata ;
     cx:hasSources cx:eng_coolconstruction_Sources ;
-    dcterms:created "2025-11-28"^^xsd:date ;
+    DCTERMS:created "2025-11-28"^^xsd:date ;
     rcxn:annotator membr:Boos,
         membr:Petrenko,
         membr:Weigelt,
@@ -2413,8 +2413,8 @@ cx:eng_coolconstruction_MD a rcxn:Metadata ;
 cx:eng_coolconstruction_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "low temperature" .
 
-cx:eng_coolconstruction_slots a rdf_ns:Seq ;
-    rdf_ns:_1 cx:eng_coolconstruction_1 .
+cx:eng_coolconstruction_slots a RDF:Seq ;
+    RDF:_1 cx:eng_coolconstruction_1 .
 
 cx:eng_ditransitive_construction_obj_inf_1 a rcxn:SlotOptional ;
     rcxn:hasCasaSyntacticFunction "potential subject" ;
@@ -2423,7 +2423,7 @@ cx:eng_ditransitive_construction_obj_inf_1 a rcxn:SlotOptional ;
     rcxn:hasSyntacticFunction "potential subject" .
 
 cx:eng_ditransitive_construction_obj_inf_2 a rcxn:SlotObligatory ;
-    rdfs:comment "Source for collo-profile: Valency Dictionary of English, Patternbank",
+    RDFS:comment "Source for collo-profile: Valency Dictionary of English, Patternbank",
         "colloprofile: bid  help  let  make" ;
     rcxn:hasSlotForm "V" .
 
@@ -2440,17 +2440,17 @@ cx:eng_ditransitive_construction_obj_inf_4 a rcxn:SlotObligatory ;
     rcxn:hasSyntacticFunction "unit in predicate" .
 
 cx:eng_ditransitive_construction_obj_inf_MD a rcxn:Metadata ;
-    dcterms:created "2026-02-04"^^xsd:date ;
+    DCTERMS:created "2026-02-04"^^xsd:date ;
     rcxn:annotator membr:Winckel .
 
 cx:eng_ditransitive_construction_obj_inf_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "ÆFFECTOR makes RECIPIENT receive ÆFFECTED (i.e. ÆFFECTOR causes or enables the RECIPIENT to carry out ÆFFECTED-ACTION.)" .
 
-cx:eng_ditransitive_construction_obj_inf_slots a rdf_ns:Seq ;
-    rdf_ns:_1 cx:eng_ditransitive_construction_obj_inf_1 ;
-    rdf_ns:_2 cx:eng_ditransitive_construction_obj_inf_2 ;
-    rdf_ns:_3 cx:eng_ditransitive_construction_obj_inf_3 ;
-    rdf_ns:_4 cx:eng_ditransitive_construction_obj_inf_4 .
+cx:eng_ditransitive_construction_obj_inf_slots a RDF:Seq ;
+    RDF:_1 cx:eng_ditransitive_construction_obj_inf_1 ;
+    RDF:_2 cx:eng_ditransitive_construction_obj_inf_2 ;
+    RDF:_3 cx:eng_ditransitive_construction_obj_inf_3 ;
+    RDF:_4 cx:eng_ditransitive_construction_obj_inf_4 .
 
 cx:eng_ditransitive_construction_obj_np_1 a rcxn:SlotOptional ;
     casa:hasCasaSyntacticFunction "potential subject" ;
@@ -2464,7 +2464,7 @@ cx:eng_ditransitive_construction_obj_np_1_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_NounPhrase .
 
 cx:eng_ditransitive_construction_obj_np_2 a rcxn:SlotObligatory ;
-    rdfs:comment "Borderline cases: bet excuse (attendance)",
+    RDFS:comment "Borderline cases: bet excuse (attendance)",
         "Source for collo-profile: Valency Dictionary of English, British National Corpus",
         "Sources for collo-profile: Valency Dictionary of English, British National Corpus",
         "colloprofile: give  tell  bring  cost  offer  send  show  allow  ask  buy  cause  do  find  get  grant  hand  owe  lend  make  pay  save  take  wish  afford  answer  award  bid  build  call  concede  create  cut  deal  design  deny  draw  drop  earn  ensure  feed  fix  forbid  gain  guarantee  hire  insure  lead  lease  leave  lend  light  loose  make  mix  order  pack  pass  permit  pick  play  pour  prepare  promise  quote  read  refuse  rent  sell  serve  set  shoot  sing  slip  spare  strike  teach  throw  win  write  ",
@@ -2505,7 +2505,7 @@ cx:eng_ditransitive_construction_obj_np_Ex_A a cx:Example ;
 
 cx:eng_ditransitive_construction_obj_np_MD a rcxn:Metadata ;
     cx:hasSources cx:eng_ditransitive_construction_obj_np_Sources ;
-    dcterms:created "2026-01-16"^^xsd:date,
+    DCTERMS:created "2026-01-16"^^xsd:date,
         "2026-02-04"^^xsd:date ;
     rcxn:annotator membr:Winckel .
 
@@ -2519,13 +2519,13 @@ cx:eng_ditransitive_construction_obj_np_Sources a cx:Collection ;
         <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Goldberg_2006>,
         <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Herbst_2020>,
         <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Herbst_Hoffman_2024> ;
-    rdfs:seeAlso <https://constructicon.de/constructions/5> .
+    RDFS:seeAlso <https://constructicon.de/constructions/5> .
 
-cx:eng_ditransitive_construction_obj_np_slots a rdf_ns:Seq ;
-    rdf_ns:_1 cx:eng_ditransitive_construction_obj_np_1 ;
-    rdf_ns:_2 cx:eng_ditransitive_construction_obj_np_2 ;
-    rdf_ns:_3 cx:eng_ditransitive_construction_obj_np_3 ;
-    rdf_ns:_4 cx:eng_ditransitive_construction_obj_np_4 .
+cx:eng_ditransitive_construction_obj_np_slots a RDF:Seq ;
+    RDF:_1 cx:eng_ditransitive_construction_obj_np_1 ;
+    RDF:_2 cx:eng_ditransitive_construction_obj_np_2 ;
+    RDF:_3 cx:eng_ditransitive_construction_obj_np_3 ;
+    RDF:_4 cx:eng_ditransitive_construction_obj_np_4 .
 
 cx:eng_give a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
@@ -2559,16 +2559,16 @@ cx:eng_monotransitive_construction_Ex_B a cx:Example ;
     cx:hasText "He opened the window. (COCA-2012-FIC)" .
 
 cx:eng_monotransitive_construction_MD a rcxn:Metadata ;
-    dcterms:created "2026-02-03"^^xsd:date ;
+    DCTERMS:created "2026-02-03"^^xsd:date ;
     rcxn:annotator membr:Winckel .
 
 cx:eng_monotransitive_construction_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "An ÆFFECTOR does something to an ÆFFECTED." .
 
-cx:eng_monotransitive_construction_slots a rdf_ns:Seq ;
-    rdf_ns:_1 cx:eng_monotransitive_construction_1 ;
-    rdf_ns:_2 cx:eng_monotransitive_construction_2 ;
-    rdf_ns:_3 cx:eng_monotransitive_construction_3 .
+cx:eng_monotransitive_construction_slots a RDF:Seq ;
+    RDF:_1 cx:eng_monotransitive_construction_1 ;
+    RDF:_2 cx:eng_monotransitive_construction_2 ;
+    RDF:_3 cx:eng_monotransitive_construction_3 .
 
 cx:eng_resultative_construction_attr_to_inf links:sameFormDifferentFunction cx:eng_ditransitive_construction_obj_inf .
 
@@ -2579,7 +2579,7 @@ cx:eng_this a rcxn:Construction ;
     rcxn:hasTitle "this" .
 
 cx:eng_this_MD a rcxn:Metadata ;
-    dcterms:created "2026-02-02"^^xsd:date ;
+    DCTERMS:created "2026-02-02"^^xsd:date ;
     rcxn:annotator membr:Iabdounane .
 
 <http://example.org/cx/etc.> links:inheritsFrom cx:deu_NPDefDetstrongPLUSADJweakPLUSN .
@@ -2640,7 +2640,7 @@ cx:gmh12C_PräfixverbkonstruktionHandlung_Ex_A a cx:Example ;
     cx:hasText "ſi durh hiwen daz wal " ;
     cx:hasTranslation "'they punched their way through the battlefield'" ;
     cx:hasTransliteration "si durh hiwen daz wal" ;
-    rdfs:comment "Source: Jüngere Judith: 0a,415; see https://www.linguistics.rub.de/rem/pub/texts//M119_dipl.pdf" .
+    RDFS:comment "Source: Jüngere Judith: 0a,415; see https://www.linguistics.rub.de/rem/pub/texts//M119_dipl.pdf" .
 
 cx:gmh12C_PräfixverbkonstruktionHandlung_Ex_B a cx:Example ;
     cx:hasAnnotatedText "[ſi]1 giengen ûz unt [durh]2 [giengen]3 [div caſtel]4 brediginde vnt heilinde allen thalbin " ;
@@ -2648,27 +2648,27 @@ cx:gmh12C_PräfixverbkonstruktionHandlung_Ex_B a cx:Example ;
     cx:hasText "ſi giengen ûz unt durh giengen div caſtel brediginde vnt heilinde allen thalbin " ;
     cx:hasTranslation "'they went out and went through the castle, preaching and healing to every side'" ;
     cx:hasTransliteration "si giengen uz und durh giengen div castel brediginde unt heilinde allen thalbin" ;
-    rdfs:comment "Source: Wien-Münchner Evangelienübersetzung: 48ba,14; see https://www.linguistics.rub.de/rem/pub/texts//M067_dipl.pdf" .
+    RDFS:comment "Source: Wien-Münchner Evangelienübersetzung: 48ba,14; see https://www.linguistics.rub.de/rem/pub/texts//M067_dipl.pdf" .
 
 cx:gmh12C_PräfixverbkonstruktionHandlung_Ex_C a cx:Example ;
     cx:hasAnnotatedText "got uir lazin hat in. [durch]2[ethint]3 [in]4 un̄ begrifet in" ;
     cx:hasGlosses "god left him. chase him and get him" ;
     cx:hasText "got uir lazin hat in. durchethint in un̄ begrifet in" ;
     cx:hasTranslation "'God left him. Chase him down and get him!'" ;
-    rdfs:comment "Source: Trierer Interlinearversion zum Psalter: 28va,9; see https://www.linguistics.rub.de/rem/pub/texts//M188_dipl.pdf" .
+    RDFS:comment "Source: Trierer Interlinearversion zum Psalter: 28va,9; see https://www.linguistics.rub.de/rem/pub/texts//M188_dipl.pdf" .
 
 cx:gmh12C_PräfixverbkonstruktionHandlung_MD a rcxn:Metadata ;
-    dcterms:created "2025-12-19"^^xsd:date ;
+    DCTERMS:created "2025-12-19"^^xsd:date ;
     rcxn:annotator membr:Fuehrer .
 
 cx:gmh12C_PräfixverbkonstruktionHandlung_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "local-concrete, local-abstract, intensifying" .
 
-cx:gmh12C_PräfixverbkonstruktionHandlung_slots a rdf_ns:Seq ;
-    rdf_ns:_1 cx:gmh12C_PräfixverbkonstruktionHandlung_1 ;
-    rdf_ns:_2 cx:gmh12C_PräfixverbkonstruktionHandlung_2 ;
-    rdf_ns:_3 cx:gmh12C_PräfixverbkonstruktionHandlung_3 ;
-    rdf_ns:_4 cx:gmh12C_PräfixverbkonstruktionHandlung_4 .
+cx:gmh12C_PräfixverbkonstruktionHandlung_slots a RDF:Seq ;
+    RDF:_1 cx:gmh12C_PräfixverbkonstruktionHandlung_1 ;
+    RDF:_2 cx:gmh12C_PräfixverbkonstruktionHandlung_2 ;
+    RDF:_3 cx:gmh12C_PräfixverbkonstruktionHandlung_3 ;
+    RDF:_4 cx:gmh12C_PräfixverbkonstruktionHandlung_4 .
 
 cx:gmh12C_PräfixverbkonstruktionTätigkeit_1 a rcxn:SlotObligatory ;
     cx:WordOrder "1st" ;
@@ -2720,22 +2720,22 @@ cx:gmh12C_PräfixverbkonstruktionTätigkeit_Ex_A a cx:Example ;
     cx:hasText "ich durc ginc in miner unſculde hercē mineſ in mitten huſeſ mineſ [TP h/55va,6]" ;
     cx:hasTranslation "I strolled through the inside of my house in my heart's complete innocence" ;
     cx:hasTransliteration "ich durc ginc in miner unschulde herce mines in mitten huses mines" ;
-    rdfs:comment "Source: Trierer Interlinearversion zum Psalter: 55va,6; see https://www.linguistics.rub.de/rem/pub/texts//M188_dipl.pdf" .
+    RDFS:comment "Source: Trierer Interlinearversion zum Psalter: 55va,6; see https://www.linguistics.rub.de/rem/pub/texts//M188_dipl.pdf" .
 
 cx:gmh12C_PräfixverbkonstruktionTätigkeit_MD a rcxn:Metadata ;
-    dcterms:created "2025-12-19"^^xsd:date ;
+    DCTERMS:created "2025-12-19"^^xsd:date ;
     rcxn:annotator membr:Fuehrer .
 
 cx:gmh12C_PräfixverbkonstruktionTätigkeit_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "local-concrete" .
 
-cx:gmh12C_PräfixverbkonstruktionTätigkeit_slots a rdf_ns:Seq ;
-    rdf_ns:_1 cx:gmh12C_PräfixverbkonstruktionTätigkeit_1 ;
-    rdf_ns:_2 cx:gmh12C_PräfixverbkonstruktionTätigkeit_2 ;
-    rdf_ns:_3 cx:gmh12C_PräfixverbkonstruktionTätigkeit_3 .
+cx:gmh12C_PräfixverbkonstruktionTätigkeit_slots a RDF:Seq ;
+    RDF:_1 cx:gmh12C_PräfixverbkonstruktionTätigkeit_1 ;
+    RDF:_2 cx:gmh12C_PräfixverbkonstruktionTätigkeit_2 ;
+    RDF:_3 cx:gmh12C_PräfixverbkonstruktionTätigkeit_3 .
 
 cx:gmh12C_Präfixverbkonstruktion_MD a rcxn:Metadata ;
-    dcterms:created "2025-12-19"^^xsd:date ;
+    DCTERMS:created "2025-12-19"^^xsd:date ;
     rcxn:annotator membr:Fuehrer .
 
 cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_1 a rcxn:SlotObligatory ;
@@ -2790,14 +2790,14 @@ cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_Ex_A a cx:Example ;
     cx:hasGlosses "we through went through the fire and the water" ;
     cx:hasText "Wir durch furen durch daz fur un̄ daz wazer " ;
     cx:hasTranslation "'we went through fire and water'" ;
-    rdfs:comment "Source: Trierer Interlinearversion zum Psalter: 23ra, 6; see https://www.linguistics.rub.de/rem/pub/texts//M188_dipl.pdf" .
+    RDFS:comment "Source: Trierer Interlinearversion zum Psalter: 23ra, 6; see https://www.linguistics.rub.de/rem/pub/texts//M188_dipl.pdf" .
 
 cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_Ex_B a cx:Example ;
     cx:hasAnnotatedText "[zunge ire]1 [durch]2 [fur]3 [in die erdᵉn]4" ;
     cx:hasGlosses "tongue their through went in the earth" ;
     cx:hasText "zunge ire durch fur in die erdᵉn" ;
     cx:hasTranslation "'their tongue went into the ground'" ;
-    rdfs:comment "Source: Trierer Interlinearversion zum Psalter: 30va, 11; see https://www.linguistics.rub.de/rem/pub/texts//M188_dipl.pdf" .
+    RDFS:comment "Source: Trierer Interlinearversion zum Psalter: 30va, 11; see https://www.linguistics.rub.de/rem/pub/texts//M188_dipl.pdf" .
 
 cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_Ex_C a cx:Example ;
     cx:hasAnnotatedText "[er]1 [durch]2 [prach]3 [indi ſcar]4" ;
@@ -2805,20 +2805,20 @@ cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_Ex_C a cx:Example ;
     cx:hasText "er durch prach indi ſcar" ;
     cx:hasTranslation "'he broke through into the fighting hordes'" ;
     cx:hasTransliteration "er durch prach indi scar" ;
-    rdfs:comment "Source: Kaiserchronik A [V]: 0a, 7074; see https://www.linguistics.rub.de/rem/pub/texts//M121Y_dipl.pdf" .
+    RDFS:comment "Source: Kaiserchronik A [V]: 0a, 7074; see https://www.linguistics.rub.de/rem/pub/texts//M121Y_dipl.pdf" .
 
 cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_MD a rcxn:Metadata ;
-    dcterms:created "2025-12-19"^^xsd:date ;
+    DCTERMS:created "2025-12-19"^^xsd:date ;
     rcxn:annotator membr:Fuehrer .
 
 cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "local-concrete" .
 
-cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_slots a rdf_ns:Seq ;
-    rdf_ns:_1 cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_1 ;
-    rdf_ns:_2 cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_2 ;
-    rdf_ns:_3 cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_3 ;
-    rdf_ns:_4 cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_4 .
+cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_slots a RDF:Seq ;
+    RDF:_1 cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_1 ;
+    RDF:_2 cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_2 ;
+    RDF:_3 cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_3 ;
+    RDF:_4 cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_4 .
 
 cx:gmh_Verb a rcxn:Construction ;
     lg:partOfLanguage lg:gmh ;
@@ -2897,7 +2897,7 @@ cx:hat_NounPhrase a rcxn:Construction ;
 
 cx:hat_POUbeneficiaryconstruction_1 a rcxn:SlotObligatory ;
     olia:hasSemanticRole olia:ThemeRole ;
-    rdfs:comment "not always concrete" ;
+    RDFS:comment "not always concrete" ;
     rcxn:hasSlotForm cx:hat_POUbeneficiaryconstruction_1_Form .
 
 cx:hat_POUbeneficiaryconstruction_1_Form a rcxn:SlotForm ;
@@ -2924,20 +2924,20 @@ cx:hat_POUbeneficiaryconstruction_Ex_A a cx:Example ;
     cx:hasGlosses "3SG   ANT  make/do   mass  pou   2PL" ;
     cx:hasText "Yo      te           fè          mès    pou   nou." ;
     cx:hasTranslation "They made a mass in our name" ;
-    rdfs:comment "Text 1, #27" .
+    RDFS:comment "Text 1, #27" .
 
 cx:hat_POUbeneficiaryconstruction_MD a rcxn:Metadata ;
-    dcterms:created "2024-11-28"^^xsd:date ;
+    DCTERMS:created "2024-11-28"^^xsd:date ;
     rcxn:annotator membr:Legoute .
 
 cx:hat_POUbeneficiaryconstruction_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "Refers to [a beneficiary]3",
         "[A beneficiary]3 benefits from [a theme]1" .
 
-cx:hat_POUbeneficiaryconstruction_slots a rdf_ns:Seq ;
-    rdf_ns:_1 cx:hat_POUbeneficiaryconstruction_1 ;
-    rdf_ns:_2 cx:hat_POUbeneficiaryconstruction_2 ;
-    rdf_ns:_3 cx:hat_POUbeneficiaryconstruction_3 .
+cx:hat_POUbeneficiaryconstruction_slots a RDF:Seq ;
+    RDF:_1 cx:hat_POUbeneficiaryconstruction_1 ;
+    RDF:_2 cx:hat_POUbeneficiaryconstruction_2 ;
+    RDF:_3 cx:hat_POUbeneficiaryconstruction_3 .
 
 cx:hat_POUpurposeconstruction a rcxn:Construction ;
     lg:partOfLanguage lg:hat ;
@@ -2946,7 +2946,7 @@ cx:hat_POUpurposeconstruction a rcxn:Construction ;
     rcxn:hasTitle "POU-purpose construction" .
 
 cx:hat_POUpurposeconstruction_MD a rcxn:Metadata ;
-    dcterms:created "2024-11-28"^^xsd:date ;
+    DCTERMS:created "2024-11-28"^^xsd:date ;
     rcxn:annotator membr:Legoute .
 
 cx:hat_Phrase a rcxn:Construction ;
@@ -2956,13 +2956,13 @@ cx:hat_Phrase a rcxn:Construction ;
 
 cx:itaStoria_RelativeTopicShiftConstruction_1 a rcxn:SlotObligatory ;
     cx:WordOrder "Element 1 immediately before element 4" ;
-    rdfs:comment "Element 1 is a \"coniunctio relativa\", i.e., a structure in which a relative pronoun (e.g., il quale, la quale) introduces a subordinate clause. The head noun can be omitted, remaining contextually recoverable. When this happens, the coniunctio relativa represents an elliptical noun phrase, with the relative pronoun standing in place of the implicit nominal head. Such an NP is anaphorically linked to the preceding co-text" ;
+    RDFS:comment "Element 1 is a \"coniunctio relativa\", i.e., a structure in which a relative pronoun (e.g., il quale, la quale) introduces a subordinate clause. The head noun can be omitted, remaining contextually recoverable. When this happens, the coniunctio relativa represents an elliptical noun phrase, with the relative pronoun standing in place of the implicit nominal head. Such an NP is anaphorically linked to the preceding co-text" ;
     rcxn:hasSlotForm cx:itaStoria_RelativeTopicShiftConstruction_1_Form ;
     rcxn:hasSlots cx:itaStoria_RelativeTopicShiftConstruction_1_slots .
 
-cx:itaStoria_RelativeTopicShiftConstruction_1_slots a rdf_ns:Seq ;
-    rdf_ns:_2 cx:itaStoria_RelativeTopicShiftConstruction_2 ;
-    rdf_ns:_3 cx:itaStoria_RelativeTopicShiftConstruction_3 .
+cx:itaStoria_RelativeTopicShiftConstruction_1_slots a RDF:Seq ;
+    RDF:_2 cx:itaStoria_RelativeTopicShiftConstruction_2 ;
+    RDF:_3 cx:itaStoria_RelativeTopicShiftConstruction_3 .
 
 cx:itaStoria_RelativeTopicShiftConstruction_2 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm cx:itaStoria_RelativeTopicShiftConstruction_1_Form .
@@ -2975,9 +2975,9 @@ cx:itaStoria_RelativeTopicShiftConstruction_3 a rcxn:SlotOptional ;
 cx:itaStoria_RelativeTopicShiftConstruction_4 a rcxn:SlotObligatory ;
     rcxn:hasSlots cx:itaStoria_RelativeTopicShiftConstruction_4_slots .
 
-cx:itaStoria_RelativeTopicShiftConstruction_4_slots a rdf_ns:Seq ;
-    rdf_ns:_1 cx:itaStoria_RelativeTopicShiftConstruction_5 ;
-    rdf_ns:_2 cx:itaStoria_RelativeTopicShiftConstruction_6 .
+cx:itaStoria_RelativeTopicShiftConstruction_4_slots a RDF:Seq ;
+    RDF:_1 cx:itaStoria_RelativeTopicShiftConstruction_5 ;
+    RDF:_2 cx:itaStoria_RelativeTopicShiftConstruction_6 .
 
 cx:itaStoria_RelativeTopicShiftConstruction_5 a rcxn:SlotObligatory ;
     cx:WordOrder "Element 5 immediately before Element 6" ;
@@ -2987,7 +2987,7 @@ cx:itaStoria_RelativeTopicShiftConstruction_5_Form a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "mentre che" .
 
 cx:itaStoria_RelativeTopicShiftConstruction_6 a rcxn:SlotObligatory ;
-    rdfs:comment "The verb is often, though not exclusively, in the present tense. It frequently, but not exclusively, features a \"si passivante\" construction (formed by the particle 'si' combined with a transitive verb to convey a passive meaning). Additionally, the VP may have a more complex internal structure, incorporating various other elements. The verb appearing in the VP often anaphorically references an action or process already mentioned in the preceding co-text. This can occur either through direct repetition of the same verb or through synonyms" ;
+    RDFS:comment "The verb is often, though not exclusively, in the present tense. It frequently, but not exclusively, features a \"si passivante\" construction (formed by the particle 'si' combined with a transitive verb to convey a passive meaning). Additionally, the VP may have a more complex internal structure, incorporating various other elements. The verb appearing in the VP often anaphorically references an action or process already mentioned in the preceding co-text. This can occur either through direct repetition of the same verb or through synonyms" ;
     rcxn:hasSlotForm cx:itaStoria_RelativeTopicShiftConstruction_6_Form .
 
 cx:itaStoria_RelativeTopicShiftConstruction_6_Form a rcxn:SlotForm ;
@@ -2998,17 +2998,17 @@ cx:itaStoria_RelativeTopicShiftConstruction_Ex_A a cx:Example ;
     cx:hasAnnotatedText "Ma era al tutto diversa la deliberazione del senato viniziano. (Discorso indiretto del portavoce veneziano). [Le quali]2 [cose]3 [mentre che]5 [con aperta disunione si trattano tra i collegati]6, nuovo accidente che sopravenne partorì effetti molto diversi da' pensieri degli uomini;" ;
     cx:hasText "Ma era al tutto diversa la deliberazione del senato viniziano. (Discorso indiretto del portavoce veneziano). Le quali cose mentre che con aperta disunione si trattano tra i collegati, nuovo accidente che sopravenne partorì effetti molto diversi da' pensieri degli uomini;" ;
     cx:hasTranslation "But the decision of the Venetian Senate was completely different. (Indirect speech of the Venetian spokesman). [While these things were being discussed with open disunity among the allies], a new event that arose produced effects very different from the common expectations;" ;
-    rdfs:comment "The Construction is in square brackets, while the rest has been included to allow for an understanding of its function. The NP with the coniunctio relativa includes the noun \"cose\" ('things'), which functions as an anaphoric encapsulator, summarizing the entire portion of the preceding text related to the discussions taking place among the allies. The verb \"trattare\" ('to discuss'), appearing in the VP with a 'si passivante' (thus, without a specified agent), carries an anaphoric value and refers to the action of discussing, which is the topic of the preceding co-text. The main clause that follows the Relative-Topic-Shift Construction introduces a new topic (the new and unexpected event being mentioned). Thus, it can be seen how, thanks to its anaphoric value, the Construction connects the preceding topic, which has already been concluded, to the subsequent one, simultaneously creating an effect of both cohesion and \"separation\" between two distinct subjects" .
+    RDFS:comment "The Construction is in square brackets, while the rest has been included to allow for an understanding of its function. The NP with the coniunctio relativa includes the noun \"cose\" ('things'), which functions as an anaphoric encapsulator, summarizing the entire portion of the preceding text related to the discussions taking place among the allies. The verb \"trattare\" ('to discuss'), appearing in the VP with a 'si passivante' (thus, without a specified agent), carries an anaphoric value and refers to the action of discussing, which is the topic of the preceding co-text. The main clause that follows the Relative-Topic-Shift Construction introduces a new topic (the new and unexpected event being mentioned). Thus, it can be seen how, thanks to its anaphoric value, the Construction connects the preceding topic, which has already been concluded, to the subsequent one, simultaneously creating an effect of both cohesion and \"separation\" between two distinct subjects" .
 
 cx:itaStoria_RelativeTopicShiftConstruction_Ex_B a cx:Example ;
     cx:hasAnnotatedText "...; e si ritirorno verso Cascina, attendendo che provisioni facesse più il re contro a sì manifesta contumacia de' suoi medesimi. [Le quali]2 [mentre che]5 [s'aspettano]6, non mancavano da altre parti a' fiorentini nuovi e pericolosi travagli, suscitati principalmente da' potentati della lega." ;
     cx:hasText "...; e si ritirorno verso Cascina, attendendo che provisioni facesse più il re contro a sì manifesta contumacia de' suoi medesimi. Le quali mentre che s'aspettano, non mancavano da altre parti a' fiorentini nuovi e pericolosi travagli, suscitati principalmente da' potentati della lega." ;
     cx:hasTranslation "...; and they withdrew toward Cascina, waiting for the king to take further measures against such open defiance from his own subjects. [While these were being awaited], the Florentines faced new and dangerous troubles from other quarters, stirred up primarily by the powers of the league." ;
-    rdfs:comment "The Construction is in square brackets, while the rest has been included to allow for an understanding of its function. The coniunctio relativa 'Le quali' anaphorically refers to the 'provisioni' mentioned before the Construction. The noun in the NP thus remains implicit. The verb in the VP, 'aspettare' ('to wait') functions anaphorically, as it is a synonym of 'attendere', which appears shortly before the Construction. The main clause following the Construction introduces a new topic (the new trouble that the Florentines have to face). " .
+    RDFS:comment "The Construction is in square brackets, while the rest has been included to allow for an understanding of its function. The coniunctio relativa 'Le quali' anaphorically refers to the 'provisioni' mentioned before the Construction. The noun in the NP thus remains implicit. The verb in the VP, 'aspettare' ('to wait') functions anaphorically, as it is a synonym of 'attendere', which appears shortly before the Construction. The main clause following the Construction introduces a new topic (the new trouble that the Florentines have to face). " .
 
 cx:itaStoria_RelativeTopicShiftConstruction_MD a rcxn:Metadata ;
     cx:hasSources cx:itaStoria_RelativeTopicShiftConstruction_Sources ;
-    dcterms:created "2024-11-21"^^xsd:date ;
+    DCTERMS:created "2024-11-21"^^xsd:date ;
     rcxn:annotator membr:Trombetta .
 
 cx:itaStoria_RelativeTopicShiftConstruction_Meaning a rcxn:ConstructionMeaning ;
@@ -3019,9 +3019,9 @@ cx:itaStoria_RelativeTopicShiftConstruction_Sources a cx:Collection ;
         <https://doi.org/10.1093/llc/fqw021>,
         <https://doi.org/10.1417/81352> .
 
-cx:itaStoria_RelativeTopicShiftConstruction_slots a rdf_ns:Seq ;
-    rdf_ns:_1 cx:itaStoria_RelativeTopicShiftConstruction_1 ;
-    rdf_ns:_2 cx:itaStoria_RelativeTopicShiftConstruction_4 .
+cx:itaStoria_RelativeTopicShiftConstruction_slots a RDF:Seq ;
+    RDF:_1 cx:itaStoria_RelativeTopicShiftConstruction_1 ;
+    RDF:_2 cx:itaStoria_RelativeTopicShiftConstruction_4 .
 
 cx:ita_ConiunctioRelativa a rcxn:Construction ;
     lg:partOfLanguage lg:ita ;
@@ -3030,7 +3030,7 @@ cx:ita_ConiunctioRelativa a rcxn:Construction ;
     rcxn:hasTitle "Coniunctio Relativa" .
 
 cx:ita_ConiunctioRelativa_MD a rcxn:Metadata ;
-    dcterms:created "2024-11-21"^^xsd:date ;
+    DCTERMS:created "2024-11-21"^^xsd:date ;
     rcxn:annotator membr:Trombetta .
 
 cx:ita_DemonstrativeTopicShiftConstruction a rcxn:Construction ;
@@ -3040,7 +3040,7 @@ cx:ita_DemonstrativeTopicShiftConstruction a rcxn:Construction ;
     rcxn:hasTitle "Demonstrative-Topic-Shift Construction" .
 
 cx:ita_DemonstrativeTopicShiftConstruction_MD a rcxn:Metadata ;
-    dcterms:created "2024-11-21"^^xsd:date ;
+    DCTERMS:created "2024-11-21"^^xsd:date ;
     rcxn:annotator membr:Trombetta .
 
 cx:ita_Noun a rcxn:Construction ;
@@ -3060,7 +3060,7 @@ cx:ita_RelativeClause a rcxn:Construction ;
     rcxn:hasTitle "Relative Clause" .
 
 cx:ita_RelativeClause_MD a rcxn:Metadata ;
-    dcterms:created "2024-11-21"^^xsd:date ;
+    DCTERMS:created "2024-11-21"^^xsd:date ;
     rcxn:annotator membr:Trombetta .
 
 cx:ita_SiPassivante a rcxn:Construction ;
@@ -3070,7 +3070,7 @@ cx:ita_SiPassivante a rcxn:Construction ;
     rcxn:hasTitle "Si Passivante" .
 
 cx:ita_SiPassivante_MD a rcxn:Metadata ;
-    dcterms:created "2024-11-21"^^xsd:date ;
+    DCTERMS:created "2024-11-21"^^xsd:date ;
     rcxn:annotator membr:Trombetta .
 
 cx:ita_TemporalSubordinateClause a rcxn:Construction ;
@@ -3080,7 +3080,7 @@ cx:ita_TemporalSubordinateClause a rcxn:Construction ;
     rcxn:hasTitle "Temporal Subordinate Clause" .
 
 cx:ita_TemporalSubordinateClause_MD a rcxn:Metadata ;
-    dcterms:created "2024-11-21"^^xsd:date ;
+    DCTERMS:created "2024-11-21"^^xsd:date ;
     rcxn:annotator membr:Trombetta .
 
 cx:ita_VerbPhrase a rcxn:Construction ;
@@ -3091,13 +3091,13 @@ cx:ita_VerbPhrase a rcxn:Construction ;
 cx:lat_Adjective_1 a rcxn:SlotObligatory .
 
 cx:lat_Adjective_MD a rcxn:Metadata ;
-    dcterms:created "2026-03-30"^^xsd:date ;
+    DCTERMS:created "2026-03-30"^^xsd:date ;
     rcxn:annotator membr:Winckel .
 
 cx:lat_Adjective_Meaning a rcxn:ConstructionMeaning .
 
-cx:lat_Adjective_slots a rdf_ns:Seq ;
-    rdf_ns:_1 cx:lat_Adjective_1 .
+cx:lat_Adjective_slots a RDF:Seq ;
+    RDF:_1 cx:lat_Adjective_1 .
 
 cx:lat_linkingclicheieinCaesarsandTacitusworks a rcxn:Construction ;
     lg:partOfLanguage lg:lat ;
@@ -3106,7 +3106,7 @@ cx:lat_linkingclicheieinCaesarsandTacitusworks a rcxn:Construction ;
     rcxn:hasTitle "linking cliché (i.e., in Caesar's and Tacitus' works)" .
 
 cx:lat_linkingclicheieinCaesarsandTacitusworks_MD a rcxn:Metadata ;
-    dcterms:created "2024-11-21"^^xsd:date ;
+    DCTERMS:created "2024-11-21"^^xsd:date ;
     rcxn:annotator membr:Trombetta .
 
 cx:lidativeconstruction a rcxn:Construction ;
@@ -3116,7 +3116,7 @@ cx:lidativeconstruction a rcxn:Construction ;
     rcxn:hasTitle "li-dative construction" .
 
 cx:lidativeconstruction_MD a rcxn:Metadata ;
-    dcterms:created "2026-02-25"^^xsd:date ;
+    DCTERMS:created "2026-02-25"^^xsd:date ;
     rcxn:annotator membr:Bayer .
 
 cx:lzh_Dooperationwithoperand1onoperand2construction_1 a rcxn:SlotOptional ;
@@ -3132,7 +3132,7 @@ cx:lzh_Dooperationwithoperand1onoperand2construction_1_Form a rcxn:SlotForm ;
 cx:lzh_Dooperationwithoperand1onoperand2construction_2 a rcxn:SlotObligatory ;
     cx:WordOrder "Immediately before Element 3" ;
     olia:hasSemanticRole olia:InstrumentRole ;
-    rdfs:comment "Semantically, Element 2 is not optional. However, if it is the result of the directly preceding operation, what would normally be expressed by \"之\", the slot can be empty, as it is implied by 以." ;
+    RDFS:comment "Semantically, Element 2 is not optional. However, if it is the result of the directly preceding operation, what would normally be expressed by \"之\", the slot can be empty, as it is implied by 以." ;
     rcxn:hasSemanticProperty "In case when the operation (Element 3) is \"subtraction\", this operand is the one that is being subtracted." ;
     rcxn:hasSlotForm cx:lzh_Dooperationwithoperand1onoperand2construction_2_Form .
 
@@ -3141,7 +3141,7 @@ cx:lzh_Dooperationwithoperand1onoperand2construction_2_Form a rcxn:SlotForm ;
 
 cx:lzh_Dooperationwithoperand1onoperand2construction_3 a rcxn:SlotObligatory ;
     cx:WordOrder "Immediately after Element 2" ;
-    rdfs:comment "colloprofile: 加 (frequent), 減 (frequent), 乘 (frequent), 除 (frequent)" ;
+    RDFS:comment "colloprofile: 加 (frequent), 減 (frequent), 乘 (frequent), 除 (frequent)" ;
     rcxn:hasSlotForm cx:lzh_Dooperationwithoperand1onoperand2construction_3_Form .
 
 cx:lzh_Dooperationwithoperand1onoperand2construction_3_Form a rcxn:SlotForm ;
@@ -3165,7 +3165,7 @@ cx:lzh_Dooperationwithoperand1onoperand2construction_Ex_A a cx:Example ;
 
 cx:lzh_Dooperationwithoperand1onoperand2construction_MD a rcxn:Metadata ;
     cx:hasSources cx:lzh_Dooperationwithoperand1onoperand2construction_Sources ;
-    dcterms:created "2024-12-01"^^xsd:date ;
+    DCTERMS:created "2024-12-01"^^xsd:date ;
     rcxn:annotator membr:Kessler .
 
 cx:lzh_Dooperationwithoperand1onoperand2construction_Meaning a rcxn:ConstructionMeaning ;
@@ -3175,11 +3175,11 @@ cx:lzh_Dooperationwithoperand1onoperand2construction_Sources a cx:Collection ;
     cx:basedOn <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Shuchun-2004> ;
     cx:hasLiterature <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Shuchun-2004> .
 
-cx:lzh_Dooperationwithoperand1onoperand2construction_slots a rdf_ns:Seq ;
-    rdf_ns:_1 cx:lzh_Dooperationwithoperand1onoperand2construction_1 ;
-    rdf_ns:_2 cx:lzh_Dooperationwithoperand1onoperand2construction_2 ;
-    rdf_ns:_3 cx:lzh_Dooperationwithoperand1onoperand2construction_3 ;
-    rdf_ns:_4 cx:lzh_Dooperationwithoperand1onoperand2construction_4 .
+cx:lzh_Dooperationwithoperand1onoperand2construction_slots a RDF:Seq ;
+    RDF:_1 cx:lzh_Dooperationwithoperand1onoperand2construction_1 ;
+    RDF:_2 cx:lzh_Dooperationwithoperand1onoperand2construction_2 ;
+    RDF:_3 cx:lzh_Dooperationwithoperand1onoperand2construction_3 ;
+    RDF:_4 cx:lzh_Dooperationwithoperand1onoperand2construction_4 .
 
 cx:pes_baraayekasiaastinbaalaazadantorollupsleevesforsomething a rcxn:Construction ;
     lg:partOfLanguage lg:pes ;
@@ -3188,7 +3188,7 @@ cx:pes_baraayekasiaastinbaalaazadantorollupsleevesforsomething a rcxn:Constructi
     rcxn:hasTitle "barāye kasi āstin bālā zadan: to roll up sleeves for something" .
 
 cx:pes_baraayekasiaastinbaalaazadantorollupsleevesforsomething_MD a rcxn:Metadata ;
-    dcterms:created "2024-12-04"^^xsd:date ;
+    DCTERMS:created "2024-12-04"^^xsd:date ;
     rcxn:annotator membr:Rastegar .
 
 cx:pes_maaraastinexodparvaraandantonurtureasnakeinonesbosom a rcxn:Construction ;
@@ -3198,7 +3198,7 @@ cx:pes_maaraastinexodparvaraandantonurtureasnakeinonesbosom a rcxn:Construction 
     rcxn:hasTitle "mār āstin-e xod parvarāndan: to nurture a snake in one's bosom" .
 
 cx:pes_maaraastinexodparvaraandantonurtureasnakeinonesbosom_MD a rcxn:Metadata ;
-    dcterms:created "2024-12-04"^^xsd:date ;
+    DCTERMS:created "2024-12-04"^^xsd:date ;
     lg:partOfLanguage lg:pes ;
     rcxn:annotator membr:Rastegar ;
     rcxn:hasTitle "mār āstin-e xod parvarāndan: to nurture a snake in one's bosom" .
@@ -3252,7 +3252,7 @@ cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_4_Index a cx:Individual ;
 cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_5 a rcxn:SlotObligatory ;
     cx:WordOrder "immediately after Element 4" ;
     cx:hasIndex cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_5_Index ;
-    rdfs:comment "1st conjugation verb" ;
+    RDFS:comment "1st conjugation verb" ;
     rcxn:hasSlotForm cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_5_Form .
 
 cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_5_Form a rcxn:SlotForm ;
@@ -3267,28 +3267,28 @@ cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_Ex_A a cx:Example ;
     cx:hasGlosses "The grandpa to:the that the kid hugs" ;
     cx:hasText "El abuelo al que el niño abraza" ;
     cx:hasTranslation "The grandpa that is being hugged by the kid" ;
-    rdfs:comment "a-variant verb-final" .
+    RDFS:comment "a-variant verb-final" .
 
 cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_Ex_B a cx:Example ;
     cx:hasAnnotatedText "[El abuelo]1 [que]3 [el niño]4 [abraza]5" ;
     cx:hasGlosses "The grandpa that the kid hugs" ;
     cx:hasText "El abuelo que el niño abraza" ;
     cx:hasTranslation "The grandpa that is being hugged by the kid" ;
-    rdfs:comment "plain-variant verb-final" .
+    RDFS:comment "plain-variant verb-final" .
 
 cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_Ex_C a cx:Example ;
     cx:hasAnnotatedText "[El abuelo]1 [al]2 [que]3 [abraza]5 [el niño]4" ;
     cx:hasGlosses "The grandpa to:the that hugs the kid" ;
     cx:hasText "El abuelo al que abraza el niño" ;
     cx:hasTranslation "The grandpa that is being hugged by the kid" ;
-    rdfs:comment "a-variant verb-medial" .
+    RDFS:comment "a-variant verb-medial" .
 
 cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_Ex_D a cx:Example ;
     cx:hasAnnotatedText "[El abuelo]1 [que]3 [abraza]5 [el niño]4" ;
     cx:hasGlosses "The grandpa that hugs the kid" ;
     cx:hasText "El abuelo que abraza el niño" ;
     cx:hasTranslation "The grandpa that is being hugged by the kid" ;
-    rdfs:comment "plain-variant verb-medial" .
+    RDFS:comment "plain-variant verb-medial" .
 
 cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_MD a rcxn:Metadata ;
     cx:creationDate "2024-11-25"^^xsd:date ;
@@ -3303,12 +3303,12 @@ cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_Sources a cx:Collection ;
     cx:hasLiterature <https://onlinelibrary.wiley.com/doi/10.1111/lang.12066>,
         <https://www.degruyter.com/document/doi/10.1515/cog-2024-0016/html> .
 
-cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_slots a rdf_ns:Seq ;
-    rdf_ns:_1 cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_1 ;
-    rdf_ns:_2 cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_2 ;
-    rdf_ns:_3 cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_3 ;
-    rdf_ns:_4 cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_4 ;
-    rdf_ns:_5 cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_5 .
+cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_slots a RDF:Seq ;
+    RDF:_1 cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_1 ;
+    RDF:_2 cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_2 ;
+    RDF:_3 cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_3 ;
+    RDF:_4 cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_4 ;
+    RDF:_5 cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_5 .
 
 cx:spa_PrepositionalPhrase a rcxn:Construction ;
     lg:partOfLanguage lg:spa ;
@@ -3332,7 +3332,7 @@ cx:spa_objectrelativeclause a rcxn:Construction ;
     rcxn:hasTitle "Object relative clause" .
 
 cx:spa_objectrelativeclause_MD a rcxn:Metadata ;
-    dcterms:created "2024-11-25"^^xsd:date ;
+    DCTERMS:created "2024-11-25"^^xsd:date ;
     lg:partOfLanguage lg:spa ;
     rcxn:annotator membr:FernandezSantos .
 
@@ -3343,7 +3343,7 @@ cx:spa_relativeclause a rcxn:Construction ;
     rcxn:hasTitle "Relative clause" .
 
 cx:spa_relativeclause_MD a rcxn:Metadata ;
-    dcterms:created "2024-11-25"^^xsd:date ;
+    DCTERMS:created "2024-11-25"^^xsd:date ;
     rcxn:annotator membr:FernandezSantos .
 
 cx:spa_transitiveconstruction a rcxn:Construction ;
@@ -3353,7 +3353,7 @@ cx:spa_transitiveconstruction a rcxn:Construction ;
     rcxn:hasTitle "Transitive construction" .
 
 cx:spa_transitiveconstruction_MD a rcxn:Metadata ;
-    dcterms:created "2024-11-25"^^xsd:date ;
+    DCTERMS:created "2024-11-25"^^xsd:date ;
     rcxn:annotator membr:FernandezSantos .
 
 cx:zho_Particle a rcxn:Construction ;
@@ -3366,12 +3366,12 @@ cx:zho_VerbPhrase a rcxn:Construction ;
     links:elementOf cx:lzh_Dooperationwithoperand1onoperand2construction ;
     rcxn:hasTitle "Verb Phrase" .
 
-rd:FernandezSantos_20260130_629471 a ns2:Study ;
-    ns2:Summary "Participants' accuracy on subject relative clauses is at ceiling only when the verb follows the relativizer. Accuracy decreases when the verb is in a clause-final position. Object relative clauses are not at ceiling, but are misinterpreted as subject relative clauses over 90% of the time when there is no object marker and the verb follows the relativizer. The presence of an object marker does not impact accuracy when the verb is clause-final." ;
-    ns2:dataRepository "https://osf.io/4x6pz/files/osfstorage" ;
-    ns2:publishedIn "Llompart, Fernández Santos & Dąbrowska (2024-10-10). Comprehension of object relatives in Spanish: the role of frequency and transparency in acquisition and adult grammar. 10.1515/cog-2024-0016" ;
-    ns2:relevantFor cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause ;
-    ns2:studyType ns2:behavioralExperiment .
+rd:FernandezSantos_20260130_629471 a rdata:Study ;
+    rdata:Summary "Participants' accuracy on subject relative clauses is at ceiling only when the verb follows the relativizer. Accuracy decreases when the verb is in a clause-final position. Object relative clauses are not at ceiling, but are misinterpreted as subject relative clauses over 90% of the time when there is no object marker and the verb follows the relativizer. The presence of an object marker does not impact accuracy when the verb is clause-final." ;
+    rdata:dataRepository "https://osf.io/4x6pz/files/osfstorage" ;
+    rdata:publishedIn "Llompart, Fernández Santos & Dąbrowska (2024-10-10). Comprehension of object relatives in Spanish: the role of frequency and transparency in acquisition and adult grammar. 10.1515/cog-2024-0016" ;
+    rdata:relevantFor cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause ;
+    rdata:studyType rdata:behavioralExperiment .
 
 cx:Noun a rcxn:Construction ;
     links:elementOf cx:eng_AdjectiveAttributiveconstruction,
@@ -3394,7 +3394,7 @@ cx:deu_Adjective a rcxn:Construction ;
 
 cx:deu_NPADJstrongPLUSADJstrongPLUSN a rcxn:Construction,
         rcxn:Metadata ;
-    dcterms:created "2024-12-02"^^xsd:date ;
+    DCTERMS:created "2024-12-02"^^xsd:date ;
     lg:partOfLanguage lg:deu ;
     links:similarFormSameFunction cx:deu_NPDefDetstrongPLUSADJweakPLUSN ;
     rcxn:annotator membr:Kligge ;
@@ -3472,7 +3472,7 @@ cx:eng_GenitiveNPConstruction a rcxn:Construction ;
 
 cx:eng_Keepacoolheadconstruction a rcxn:Construction ;
     cx:hasExample cx:eng_Keepacoolheadconstruction_Ex_A ;
-    rdfs:comment "first attested 1718, cf. OED" ;
+    RDFS:comment "first attested 1718, cf. OED" ;
     lg:partOfLanguage lg:eng ;
     rcxn:hasConstructionMeaning cx:eng_Keepacoolheadconstruction_Meaning ;
     rcxn:hasMetadata cx:eng_Keepacoolheadconstruction_MD ;
@@ -3484,19 +3484,19 @@ cx:eng_ThisclosetoVingconstruction_4 a rcxn:SlotObligatory ;
 
 cx:eng_ThisclosetoVingconstruction_6 a rcxn:SlotObligatory ;
     olia:hasSemanticRole olia:GoalRole ;
-    rdfs:comment "List of Collocations for this close to x-ing as obtained from AntConc 4.2.4" ;
-    evid:colloprofile ( [ ns1:frequency [ a cx:CorpusX ;
-                        rdf_ns:value "150"^^xsd:int ] ;
-                evid:filler "being" ] [ ns1:frequency [ a cx:CorpusX ;
-                        rdf_ns:value "129"^^xsd:int ] ;
-                evid:filler "getting" ] [ ns1:frequency [ a cx:CorpusX ;
-                        rdf_ns:value "57"^^xsd:int ] ;
-                evid:filler "having" ] [ ns1:frequency [ a cx:CorpusX ;
-                        rdf_ns:value "27"^^xsd:int ] ;
-                evid:filler "losing" ] [ ns1:frequency [ a cx:CorpusX ;
-                        rdf_ns:value "27"^^xsd:int ] ;
-                evid:filler "winning" ] [ ns1:frequency [ a cx:CorpusX ;
-                        rdf_ns:value "24"^^xsd:int ] ;
+    RDFS:comment "List of Collocations for this close to x-ing as obtained from AntConc 4.2.4" ;
+    evid:colloprofile ( [ frac:frequency [ a cx:CorpusX ;
+                        RDF:value "150"^^xsd:int ] ;
+                evid:filler "being" ] [ frac:frequency [ a cx:CorpusX ;
+                        RDF:value "129"^^xsd:int ] ;
+                evid:filler "getting" ] [ frac:frequency [ a cx:CorpusX ;
+                        RDF:value "57"^^xsd:int ] ;
+                evid:filler "having" ] [ frac:frequency [ a cx:CorpusX ;
+                        RDF:value "27"^^xsd:int ] ;
+                evid:filler "losing" ] [ frac:frequency [ a cx:CorpusX ;
+                        RDF:value "27"^^xsd:int ] ;
+                evid:filler "winning" ] [ frac:frequency [ a cx:CorpusX ;
+                        RDF:value "24"^^xsd:int ] ;
                 evid:filler "saying" ] ) ;
     rcxn:hasSlotForm cx:eng_ThisclosetoVingconstruction_6_Form ;
     rcxn:hasSyntacticFunction "Complement" .
@@ -3566,7 +3566,7 @@ cx:engLME_Resultativeconstruction a rcxn:Construction ;
 cx:engLME_coolascolourconstruction a rcxn:Construction ;
     cx:hasExample cx:engLME_coolascolourconstruction_Ex_A,
         cx:engLME_coolascolourconstruction_Ex_B ;
-    rdfs:comment "first attested: 1758, cf. OED" ;
+    RDFS:comment "first attested: 1758, cf. OED" ;
     lg:partOfLanguage lg:eng ;
     links:isMetaphoricalExtensionOf cx:eng_coolconstruction ;
     rcxn:hasConstructionMeaning cx:engLME_coolascolourconstruction_Meaning ;
@@ -3634,7 +3634,7 @@ cx:gmh12C_Präfixverbkonstruktion a rcxn:Construction ;
 
 cx:gmh12C_PräfixverbkonstruktionTätigkeit a rcxn:Construction ;
     cx:hasExample cx:gmh12C_PräfixverbkonstruktionTätigkeit_Ex_A ;
-    rdfs:comment "1 csv file with all the data from the 12th century" ;
+    RDFS:comment "1 csv file with all the data from the 12th century" ;
     lg:partOfLanguage lg:gmh12C ;
     links:inheritsFrom cx:gmh12C_Präfixverbkonstruktion ;
     rcxn:hasConstructionMeaning cx:gmh12C_PräfixverbkonstruktionTätigkeit_Meaning ;
@@ -3664,7 +3664,7 @@ cx:engInf_coolasadmirableconstruction a rcxn:Construction ;
     cx:hasExample cx:engInf_coolasadmirableconstruction_Ex_A,
         cx:engInf_coolasadmirableconstruction_Ex_B,
         cx:engInf_coolasadmirableconstruction_Ex_C ;
-    rdfs:comment "first attested: 1884, cf. OED" ;
+    RDFS:comment "first attested: 1884, cf. OED" ;
     lg:partOfLanguage lg:engInf ;
     links:elementOf cx:engInf_Coolexclamativeconstruction ;
     links:isMetaphoricalExtensionOf cx:eng_coolconstruction ;
@@ -3684,7 +3684,7 @@ cx:engLME_GIVEOUTVerbParticleConstruction a rcxn:Construction ;
 cx:engLME_coolasemotionconstruction a rcxn:Construction ;
     cx:hasExample cx:engLME_coolasemotionconstruction_Ex_A,
         cx:engLME_coolasemotionconstruction_Ex_B ;
-    rdfs:comment "first attested: Old English, Beowulf (Oxford English Dictionary)" ;
+    RDFS:comment "first attested: Old English, Beowulf (Oxford English Dictionary)" ;
     lg:partOfLanguage lg:eng ;
     links:elementOf cx:eng_Keepacoolheadconstruction ;
     links:isMetaphoricalExtensionOf cx:eng_coolconstruction ;
@@ -3695,7 +3695,7 @@ cx:engLME_coolasemotionconstruction a rcxn:Construction ;
 
 cx:engUsSpo_Hadituptoherewith a rcxn:Construction ;
     cx:hasExample cx:engUsSpo_Hadituptoherewith_Ex_A ;
-    rdfs:comment "The Throat Cut Gesture Positioned at the Head Level" ;
+    RDFS:comment "The Throat Cut Gesture Positioned at the Head Level" ;
     gest:hasGesture cx:engUsSpo_Hadituptoherewith_Gest ;
     lg:partOfLanguage lg:engUsSpo ;
     links:inheritsFrom cx:engUsSpo_Hadituptoherewithmesoconstruction ;
@@ -3774,7 +3774,7 @@ cx:eng_coolconstruction a rcxn:Construction ;
         cx:eng_coolconstruction_Ex_B,
         cx:eng_coolconstruction_Ex_C,
         cx:eng_coolconstruction_Ex_D ;
-    rdfs:comment "from Indo-european *gel(ə) (DWDS)" ;
+    RDFS:comment "from Indo-european *gel(ə) (DWDS)" ;
     lg:partOfLanguage lg:eng ;
     links:metaphoricalLink cx:engInf_coolasadmirableconstruction,
         cx:engLME_coolascolourconstruction,
@@ -3789,7 +3789,7 @@ cx:comePLUSnoisemannerofmovementVing a rcxn:Construction ;
         cx:comePLUSnoisemannerofmovementVing_Ex_B,
         cx:comePLUSnoisemannerofmovementVing_Ex_C,
         cx:comePLUSnoisemannerofmovementVing_Ex_D ;
-    rdfs:comment "tables (of association scores, etc.) and possibly some figures" ;
+    RDFS:comment "tables (of association scores, etc.) and possibly some figures" ;
     lg:partOfLanguage lg:eng ;
     rcxn:hasConstructionMeaning cx:comePLUSnoisemannerofmovementVing_Meaning ;
     rcxn:hasMetadata cx:comePLUSnoisemannerofmovementVing_MD ;
@@ -3797,7 +3797,7 @@ cx:comePLUSnoisemannerofmovementVing a rcxn:Construction ;
     rcxn:hasTitle "come + [noise/manner of movement] V-ing" .
 
 cx:engLME_Argumentstructureconstruction a rcxn:Construction ;
-    rdfs:comment """The main data includes 2000 sentences that are generated by GPT-4, which is a text file.\r\r
+    RDFS:comment """The main data includes 2000 sentences that are generated by GPT-4, which is a text file.\r\r
 The extension data includes a representation of these data in LLM and brain, \r\r
 Representation in LLMs are matrixes including hidden layer activity and attention factor.\r\r
 The representation in the brain includes EEG recordings from 10 participants while listening to 200 of these sentences.\r\r
@@ -3863,7 +3863,7 @@ cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit a rcxn:Construction ;
     cx:hasExample cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_Ex_A,
         cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_Ex_B,
         cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_Ex_C ;
-    rdfs:comment "1 csv file with all the data from the 12th century" ;
+    RDFS:comment "1 csv file with all the data from the 12th century" ;
     lg:partOfLanguage lg:gmh12C ;
     links:inheritsFrom cx:gmh12C_Präfixverbkonstruktion ;
     rcxn:hasConstructionMeaning cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_Meaning ;
@@ -3901,7 +3901,7 @@ cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause a rcxn:Construction ;
         cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_Ex_B,
         cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_Ex_C,
         cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_Ex_D ;
-    rdfs:comment "2 graphs (PDF- accuracy and reaction time). Tables with model output - if relevant (CSV or docx)" ;
+    RDFS:comment "2 graphs (PDF- accuracy and reaction time). Tables with model output - if relevant (CSV or docx)" ;
     lg:partOfLanguage lg:spaSpoPen ;
     links:inheritsFrom cx:spa_objectrelativeclause,
         cx:spa_relativeclause,
@@ -3910,7 +3910,7 @@ cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause a rcxn:Construction ;
     rcxn:hasMetadata cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_MD ;
     rcxn:hasSlots cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_slots ;
     rcxn:hasTitle "Potentially ambiguous object relative clause" ;
-    ns2:basedOnStudy rd:FernandezSantos_20260130_629471 .
+    rdata:basedOnStudy rd:FernandezSantos_20260130_629471 .
 
 cx:itaStoria_RelativeTopicShiftConstruction a rcxn:Construction ;
     cx:hasExample cx:itaStoria_RelativeTopicShiftConstruction_Ex_A,
@@ -3956,7 +3956,7 @@ cx:gmh12C_PräfixverbkonstruktionHandlung a rcxn:Construction ;
     cx:hasExample cx:gmh12C_PräfixverbkonstruktionHandlung_Ex_A,
         cx:gmh12C_PräfixverbkonstruktionHandlung_Ex_B,
         cx:gmh12C_PräfixverbkonstruktionHandlung_Ex_C ;
-    rdfs:comment "1 csv file with all the data from the 12th century" ;
+    RDFS:comment "1 csv file with all the data from the 12th century" ;
     lg:partOfLanguage lg:gmh12C ;
     links:inheritsFrom cx:gmh12C_Präfixverbkonstruktion ;
     rcxn:hasConstructionMeaning cx:gmh12C_PräfixverbkonstruktionHandlung_Meaning ;

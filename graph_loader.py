@@ -1,5 +1,6 @@
 import glob
 import os
+from rdflib.namespace import DC, DCTERMS, FOAF, RDF, RDFS, SKOS
 
 from rdflib import (
     Graph,
@@ -15,10 +16,8 @@ g = Graph()
 # Define Namespace and bind
 cx = Namespace("http://example.org/cx/")
 g.bind("cx", cx)
-dc = Namespace("http://purl.org/dc/elements/1.1/")
-g.bind("dc",dc)
-dcterm = Namespace("http://purl.org/dc/terms/")
-g.bind("dcterm",dcterm)
+casa = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/casa#")
+g.bind("casa", casa)
 compcon = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/compcon#")
 g.bind("compcon", compcon)
 evid = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/evid#")
@@ -45,6 +44,13 @@ rdata = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rdata#") 
 g.bind("rdata", rdata)
 rsrch = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#")
 g.bind("rsrch", rsrch)
+
+g.bind("DC", DC)
+g.bind("DCTERMS", DCTERMS)
+g.bind("FOAF", FOAF)
+g.bind("RDF", RDF)
+g.bind("RDFS", RDFS)
+g.bind("SKOS", SKOS)
 
 ###################################################
 ### LOAD A-BOX

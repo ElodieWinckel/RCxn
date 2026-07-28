@@ -1,257 +1,257 @@
+@prefix FOAF: <http://xmlns.com/foaf/0.1/> .
+@prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix cx: <http://example.org/cx/> .
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
 
-membr:Alhabyan a foaf:Person ;
-    foaf:currentProject membr:Project_Alhabyan ;
-    foaf:familyName "Alhabyan" ;
-    foaf:givenName "Raghad" ;
-    foaf:homepage <https://www.cxg.phil.fau.eu/person/raghad-alhabyan/> .
+membr:Alhabyan a FOAF:Person ;
+    FOAF:currentProject membr:Project_Alhabyan ;
+    FOAF:familyName "Alhabyan" ;
+    FOAF:givenName "Raghad" ;
+    FOAF:homepage <https://www.cxg.phil.fau.eu/person/raghad-alhabyan/> .
 
-membr:Badawi a foaf:Person ;
-    foaf:currentProject membr:Project_Badawi ;
-    foaf:familyName "Badawi" ;
-    foaf:givenName "Soran" ;
-    foaf:homepage <https://www.cxg.phil.fau.eu/person/soran-badawi/> .
+membr:Badawi a FOAF:Person ;
+    FOAF:currentProject membr:Project_Badawi ;
+    FOAF:familyName "Badawi" ;
+    FOAF:givenName "Soran" ;
+    FOAF:homepage <https://www.cxg.phil.fau.eu/person/soran-badawi/> .
 
-membr:Bayer a foaf:Person ;
-    foaf:currentProject membr:Project_Bayer,
+membr:Bayer a FOAF:Person ;
+    FOAF:currentProject membr:Project_Bayer,
         membr:Project_Bayer_2602251146 ;
-    foaf:familyName "Bayer" ;
-    foaf:givenName "Nadine" ;
-    foaf:homepage <https://www.cxg.phil.fau.eu/person/nadine-bayer/> .
+    FOAF:familyName "Bayer" ;
+    FOAF:givenName "Nadine" ;
+    FOAF:homepage <https://www.cxg.phil.fau.eu/person/nadine-bayer/> .
 
-membr:BenitoFernandez a foaf:Person ;
-    foaf:currentProject membr:Project_BenitoFernandez ;
-    foaf:familyName "Benito Fernandez" ;
-    foaf:givenName "Elba" ;
-    foaf:homepage <https://www.cxg.phil.fau.eu/person/elba-benito-fernandez/> .
+membr:BenitoFernandez a FOAF:Person ;
+    FOAF:currentProject membr:Project_BenitoFernandez ;
+    FOAF:familyName "Benito Fernandez" ;
+    FOAF:givenName "Elba" ;
+    FOAF:homepage <https://www.cxg.phil.fau.eu/person/elba-benito-fernandez/> .
 
-membr:Blake a foaf:Person ;
-    foaf:currentProject membr:Project_Blake ;
-    foaf:familyName "Blake" ;
-    foaf:givenName "Ashley" ;
-    foaf:homepage <https://www.cxg.phil.fau.eu/person/ashley-blake/> .
+membr:Blake a FOAF:Person ;
+    FOAF:currentProject membr:Project_Blake ;
+    FOAF:familyName "Blake" ;
+    FOAF:givenName "Ashley" ;
+    FOAF:homepage <https://www.cxg.phil.fau.eu/person/ashley-blake/> .
 
-membr:Boos a foaf:Person ;
-    foaf:currentProject membr:Project_Boos ;
-    foaf:familyName "Boos" ;
-    foaf:givenName "Julia" ;
-    foaf:homepage <https://www.cxg.phil.fau.eu/person/julia-boos/> .
+membr:Boos a FOAF:Person ;
+    FOAF:currentProject membr:Project_Boos ;
+    FOAF:familyName "Boos" ;
+    FOAF:givenName "Julia" ;
+    FOAF:homepage <https://www.cxg.phil.fau.eu/person/julia-boos/> .
 
-membr:DelaGarza a foaf:Person ;
-    foaf:currentProject membr:Project_DelaGarza ;
-    foaf:familyName "De la Garza" ;
-    foaf:givenName "Vania" ;
-    foaf:homepage <https://www.cxg.phil.fau.eu/person/vania-de-la-garza/> .
+membr:DelaGarza a FOAF:Person ;
+    FOAF:currentProject membr:Project_DelaGarza ;
+    FOAF:familyName "De la Garza" ;
+    FOAF:givenName "Vania" ;
+    FOAF:homepage <https://www.cxg.phil.fau.eu/person/vania-de-la-garza/> .
 
-membr:FernandezSantos a foaf:Person ;
-    foaf:currentProject membr:Project_FernandezSantos ;
-    foaf:familyName "Fernández Santos" ;
-    foaf:givenName "Sara" ;
-    foaf:homepage <https://www.cxg.phil.fau.eu/person/sara-fernandez-santos/> .
+membr:FernandezSantos a FOAF:Person ;
+    FOAF:currentProject membr:Project_FernandezSantos ;
+    FOAF:familyName "Fernández Santos" ;
+    FOAF:givenName "Sara" ;
+    FOAF:homepage <https://www.cxg.phil.fau.eu/person/sara-fernandez-santos/> .
 
-membr:Fokashchuk a foaf:Person ;
-    foaf:currentProject membr:Project_Fokashchuk ;
-    foaf:familyName "Fokashchuk" ;
-    foaf:givenName "Iryna" ;
-    foaf:homepage <https://www.cxg.phil.fau.eu/person/iryna-fokashchuk/> .
+membr:Fokashchuk a FOAF:Person ;
+    FOAF:currentProject membr:Project_Fokashchuk ;
+    FOAF:familyName "Fokashchuk" ;
+    FOAF:givenName "Iryna" ;
+    FOAF:homepage <https://www.cxg.phil.fau.eu/person/iryna-fokashchuk/> .
 
-membr:Fuehrer a foaf:Person ;
-    foaf:currentProject membr:Project_Fuehrer ;
-    foaf:familyName "Führer" ;
-    foaf:givenName "Bastian" ;
-    foaf:homepage <https://www.cxg.phil.fau.eu/person/bastian-fuhrer/> .
+membr:Fuehrer a FOAF:Person ;
+    FOAF:currentProject membr:Project_Fuehrer ;
+    FOAF:familyName "Führer" ;
+    FOAF:givenName "Bastian" ;
+    FOAF:homepage <https://www.cxg.phil.fau.eu/person/bastian-fuhrer/> .
 
-membr:Garibyan a foaf:Person ;
-    foaf:currentProject membr:Project_Garibyan,
+membr:Garibyan a FOAF:Person ;
+    FOAF:currentProject membr:Project_Garibyan,
         membr:Project_Winckel_2601131454 ;
-    foaf:familyName "Garibyan" ;
-    foaf:givenName "Armine" ;
-    foaf:homepage <https://www.cxg.phil.fau.eu/person/armine-garibyan/> .
+    FOAF:familyName "Garibyan" ;
+    FOAF:givenName "Armine" ;
+    FOAF:homepage <https://www.cxg.phil.fau.eu/person/armine-garibyan/> .
 
-membr:Gedik a foaf:Person ;
-    foaf:currentProject membr:Project_Gedik ;
-    foaf:familyName "Gedik" ;
-    foaf:givenName "Tan Arda" ;
-    foaf:homepage <https://www.cxg.phil.fau.eu/person/tan-arda-gedik/> .
+membr:Gedik a FOAF:Person ;
+    FOAF:currentProject membr:Project_Gedik ;
+    FOAF:familyName "Gedik" ;
+    FOAF:givenName "Tan Arda" ;
+    FOAF:homepage <https://www.cxg.phil.fau.eu/person/tan-arda-gedik/> .
 
-membr:Gromadsky a foaf:Person ;
-    foaf:currentProject membr:Project_Gromadsky ;
-    foaf:familyName "Gromadsky" ;
-    foaf:givenName "Dmitry" ;
-    foaf:homepage <https://www.cxg.phil.fau.eu/person/dmitry-gromadsky/> .
+membr:Gromadsky a FOAF:Person ;
+    FOAF:currentProject membr:Project_Gromadsky ;
+    FOAF:familyName "Gromadsky" ;
+    FOAF:givenName "Dmitry" ;
+    FOAF:homepage <https://www.cxg.phil.fau.eu/person/dmitry-gromadsky/> .
 
-membr:GroseHodge a foaf:Person ;
-    foaf:currentProject membr:Project_GroseHodge ;
-    foaf:familyName "Grose-Hodge" ;
-    foaf:givenName "Magdalena" ;
-    foaf:homepage <https://www.cxg.phil.fau.eu/person/magdalena-grose-hodge/> .
+membr:GroseHodge a FOAF:Person ;
+    FOAF:currentProject membr:Project_GroseHodge ;
+    FOAF:familyName "Grose-Hodge" ;
+    FOAF:givenName "Magdalena" ;
+    FOAF:homepage <https://www.cxg.phil.fau.eu/person/magdalena-grose-hodge/> .
 
-membr:Hutta a foaf:Person ;
-    foaf:currentProject membr:Project_Hutta ;
-    foaf:familyName "Hutta" ;
-    foaf:givenName "Sophie" ;
-    foaf:homepage <https://www.cxg.phil.fau.eu/person/sophie-hutta/> .
+membr:Hutta a FOAF:Person ;
+    FOAF:currentProject membr:Project_Hutta ;
+    FOAF:familyName "Hutta" ;
+    FOAF:givenName "Sophie" ;
+    FOAF:homepage <https://www.cxg.phil.fau.eu/person/sophie-hutta/> .
 
-membr:Iabdounane a foaf:Person ;
-    foaf:currentProject membr:Project_Iabdounane ;
-    foaf:familyName "Iabdounane" ;
-    foaf:givenName "Yassine" ;
-    foaf:homepage <https://www.cxg.phil.fau.eu/person/yassine-iabdounane/> .
+membr:Iabdounane a FOAF:Person ;
+    FOAF:currentProject membr:Project_Iabdounane ;
+    FOAF:familyName "Iabdounane" ;
+    FOAF:givenName "Yassine" ;
+    FOAF:homepage <https://www.cxg.phil.fau.eu/person/yassine-iabdounane/> .
 
-membr:Immertreu a foaf:Person ;
-    foaf:currentProject membr:Project_Immertreu ;
-    foaf:familyName "Immertreu" ;
-    foaf:givenName "Mathis" ;
-    foaf:homepage <https://www.cxg.phil.fau.eu/person/mathis-immertreu/> .
+membr:Immertreu a FOAF:Person ;
+    FOAF:currentProject membr:Project_Immertreu ;
+    FOAF:familyName "Immertreu" ;
+    FOAF:givenName "Mathis" ;
+    FOAF:homepage <https://www.cxg.phil.fau.eu/person/mathis-immertreu/> .
 
-membr:Kashigin a foaf:Person ;
-    foaf:currentProject membr:Project_Kashigin ;
-    foaf:familyName "Kashigin" ;
-    foaf:givenName "Kyra" ;
-    foaf:homepage <https://www.cxg.phil.fau.eu/person/kyra-kashigin/> .
+membr:Kashigin a FOAF:Person ;
+    FOAF:currentProject membr:Project_Kashigin ;
+    FOAF:familyName "Kashigin" ;
+    FOAF:givenName "Kyra" ;
+    FOAF:homepage <https://www.cxg.phil.fau.eu/person/kyra-kashigin/> .
 
-membr:Kassler a foaf:Person ;
-    foaf:currentProject membr:Project_Kassler ;
-    foaf:familyName "Kassler" ;
-    foaf:givenName "Annika" ;
-    foaf:homepage <https://www.cxg.phil.fau.eu/person/annika-kassler/> .
+membr:Kassler a FOAF:Person ;
+    FOAF:currentProject membr:Project_Kassler ;
+    FOAF:familyName "Kassler" ;
+    FOAF:givenName "Annika" ;
+    FOAF:homepage <https://www.cxg.phil.fau.eu/person/annika-kassler/> .
 
-membr:Kenanidis a foaf:Person ;
-    foaf:currentProject membr:Project_Kenanidis ;
-    foaf:familyName "Kenanidis" ;
-    foaf:givenName "Panagiotis" ;
-    foaf:homepage <https://www.cxg.phil.fau.eu/person/panagiotis-kenanidis/> .
+membr:Kenanidis a FOAF:Person ;
+    FOAF:currentProject membr:Project_Kenanidis ;
+    FOAF:familyName "Kenanidis" ;
+    FOAF:givenName "Panagiotis" ;
+    FOAF:homepage <https://www.cxg.phil.fau.eu/person/panagiotis-kenanidis/> .
 
-membr:Kessler a foaf:Person ;
-    foaf:currentProject membr:Project_Kessler ;
-    foaf:familyName "Keßler" ;
-    foaf:givenName "Florian" ;
-    foaf:homepage <https://www.cxg.phil.fau.eu/person/florian-kesler/> .
+membr:Kessler a FOAF:Person ;
+    FOAF:currentProject membr:Project_Kessler ;
+    FOAF:familyName "Keßler" ;
+    FOAF:givenName "Florian" ;
+    FOAF:homepage <https://www.cxg.phil.fau.eu/person/florian-kesler/> .
 
-membr:Khanoub a foaf:Person ;
-    foaf:currentProject membr:Project_Khanoub ;
-    foaf:familyName "Khanoub" ;
-    foaf:givenName "Rania" ;
-    foaf:homepage <https://www.cxg.phil.fau.eu/person/rania-khanoub/> .
+membr:Khanoub a FOAF:Person ;
+    FOAF:currentProject membr:Project_Khanoub ;
+    FOAF:familyName "Khanoub" ;
+    FOAF:givenName "Rania" ;
+    FOAF:homepage <https://www.cxg.phil.fau.eu/person/rania-khanoub/> .
 
-membr:Kissane a foaf:Person ;
-    foaf:currentProject membr:Project_Kissane ;
-    foaf:familyName "Kissane" ;
-    foaf:givenName "Hassane" ;
-    foaf:homepage <https://www.cxg.phil.fau.eu/person/hassane-kissane/> .
+membr:Kissane a FOAF:Person ;
+    FOAF:currentProject membr:Project_Kissane ;
+    FOAF:familyName "Kissane" ;
+    FOAF:givenName "Hassane" ;
+    FOAF:homepage <https://www.cxg.phil.fau.eu/person/hassane-kissane/> .
 
-membr:Kligge a foaf:Person ;
-    foaf:currentProject membr:Project_Kligge ;
-    foaf:familyName "Kligge" ;
-    foaf:givenName "Hendrik" ;
-    foaf:homepage <https://www.cxg.phil.fau.eu/person/hendrik-kligge/> .
+membr:Kligge a FOAF:Person ;
+    FOAF:currentProject membr:Project_Kligge ;
+    FOAF:familyName "Kligge" ;
+    FOAF:givenName "Hendrik" ;
+    FOAF:homepage <https://www.cxg.phil.fau.eu/person/hendrik-kligge/> .
 
-membr:Lee a foaf:Person ;
-    foaf:currentProject membr:Project_Lee ;
-    foaf:familyName "Lee" ;
-    foaf:givenName "Dongeun" ;
-    foaf:homepage <https://www.cxg.phil.fau.eu/person/dongeun-lee/> .
+membr:Lee a FOAF:Person ;
+    FOAF:currentProject membr:Project_Lee ;
+    FOAF:familyName "Lee" ;
+    FOAF:givenName "Dongeun" ;
+    FOAF:homepage <https://www.cxg.phil.fau.eu/person/dongeun-lee/> .
 
-membr:Legoute a foaf:Person ;
-    foaf:currentProject membr:Project_Legoute ;
-    foaf:familyName "Legouté" ;
-    foaf:givenName "Anne Sherley" ;
-    foaf:homepage <https://www.cxg.phil.fau.eu/person/anne-sherley-legoute/> .
+membr:Legoute a FOAF:Person ;
+    FOAF:currentProject membr:Project_Legoute ;
+    FOAF:familyName "Legouté" ;
+    FOAF:givenName "Anne Sherley" ;
+    FOAF:homepage <https://www.cxg.phil.fau.eu/person/anne-sherley-legoute/> .
 
-membr:Makhanina a foaf:Person ;
-    foaf:currentProject membr:Project_Makhanina ;
-    foaf:familyName "Makhanina" ;
-    foaf:givenName "Asia" ;
-    foaf:homepage <https://www.cxg.phil.fau.eu/person/asia-makhanina/> .
+membr:Makhanina a FOAF:Person ;
+    FOAF:currentProject membr:Project_Makhanina ;
+    FOAF:familyName "Makhanina" ;
+    FOAF:givenName "Asia" ;
+    FOAF:homepage <https://www.cxg.phil.fau.eu/person/asia-makhanina/> .
 
-membr:Patel a foaf:Person ;
-    foaf:currentProject membr:Project_Patel ;
-    foaf:familyName "Patel" ;
-    foaf:givenName "Malin" ;
-    foaf:homepage <https://www.cxg.phil.fau.eu/person/malin-patel/> .
+membr:Patel a FOAF:Person ;
+    FOAF:currentProject membr:Project_Patel ;
+    FOAF:familyName "Patel" ;
+    FOAF:givenName "Malin" ;
+    FOAF:homepage <https://www.cxg.phil.fau.eu/person/malin-patel/> .
 
-membr:Petrenko a foaf:Person ;
-    foaf:currentProject membr:Project_Petrenko ;
-    foaf:familyName "Petrenko" ;
-    foaf:givenName "Elizaveta" ;
-    foaf:homepage <https://www.cxg.phil.fau.eu/person/elizaveta-petrenko/> .
+membr:Petrenko a FOAF:Person ;
+    FOAF:currentProject membr:Project_Petrenko ;
+    FOAF:familyName "Petrenko" ;
+    FOAF:givenName "Elizaveta" ;
+    FOAF:homepage <https://www.cxg.phil.fau.eu/person/elizaveta-petrenko/> .
 
-membr:Prela a foaf:Person ;
-    foaf:currentProject membr:Project_Prela ;
-    foaf:familyName "Prela" ;
-    foaf:givenName "Leonarda" ;
-    foaf:homepage <https://www.cxg.phil.fau.eu/person/leonarda-prela/> .
+membr:Prela a FOAF:Person ;
+    FOAF:currentProject membr:Project_Prela ;
+    FOAF:familyName "Prela" ;
+    FOAF:givenName "Leonarda" ;
+    FOAF:homepage <https://www.cxg.phil.fau.eu/person/leonarda-prela/> .
 
-membr:Ramezani a foaf:Person ;
-    foaf:currentProject membr:Project_Ramezani ;
-    foaf:familyName "Ramezani" ;
-    foaf:givenName "Pegah" ;
-    foaf:homepage <https://www.cxg.phil.fau.eu/person/pegah-ramezani/> .
+membr:Ramezani a FOAF:Person ;
+    FOAF:currentProject membr:Project_Ramezani ;
+    FOAF:familyName "Ramezani" ;
+    FOAF:givenName "Pegah" ;
+    FOAF:homepage <https://www.cxg.phil.fau.eu/person/pegah-ramezani/> .
 
-membr:Rastegar a foaf:Person ;
-    foaf:currentProject membr:Project_Rastegar ;
-    foaf:familyName "Rastegar" ;
-    foaf:givenName "Aria" ;
-    foaf:homepage <https://www.cxg.phil.fau.eu/person/aria-rastegar/> .
+membr:Rastegar a FOAF:Person ;
+    FOAF:currentProject membr:Project_Rastegar ;
+    FOAF:familyName "Rastegar" ;
+    FOAF:givenName "Aria" ;
+    FOAF:homepage <https://www.cxg.phil.fau.eu/person/aria-rastegar/> .
 
-membr:Rohwedder a foaf:Person ;
-    foaf:currentProject membr:Project_Rohwedder ;
-    foaf:familyName "Rohwedder" ;
-    foaf:givenName "Paul" ;
-    foaf:homepage <https://www.cxg.phil.fau.eu/person/paul-rohwedder/> .
+membr:Rohwedder a FOAF:Person ;
+    FOAF:currentProject membr:Project_Rohwedder ;
+    FOAF:familyName "Rohwedder" ;
+    FOAF:givenName "Paul" ;
+    FOAF:homepage <https://www.cxg.phil.fau.eu/person/paul-rohwedder/> .
 
-membr:Schmechel a foaf:Person ;
-    foaf:currentProject membr:Project_Schmechel ;
-    foaf:familyName "Schmechel" ;
-    foaf:givenName "Dennis" ;
-    foaf:homepage <https://www.cxg.phil.fau.eu/person/dennis-schmechel/> .
+membr:Schmechel a FOAF:Person ;
+    FOAF:currentProject membr:Project_Schmechel ;
+    FOAF:familyName "Schmechel" ;
+    FOAF:givenName "Dennis" ;
+    FOAF:homepage <https://www.cxg.phil.fau.eu/person/dennis-schmechel/> .
 
-membr:Senger a foaf:Person ;
-    foaf:currentProject membr:Project_Senger ;
-    foaf:familyName "Senger" ;
-    foaf:givenName "Lena" ;
-    foaf:homepage <https://www.cxg.phil.fau.eu/person/lena-senger/> .
+membr:Senger a FOAF:Person ;
+    FOAF:currentProject membr:Project_Senger ;
+    FOAF:familyName "Senger" ;
+    FOAF:givenName "Lena" ;
+    FOAF:homepage <https://www.cxg.phil.fau.eu/person/lena-senger/> .
 
-membr:Stampfer a foaf:Person ;
-    foaf:currentProject membr:Project_Stampfer ;
-    foaf:familyName "Stampfer" ;
-    foaf:givenName "Veronika" ;
-    foaf:homepage <https://www.cxg.phil.fau.eu/person/veronika-stampfer/> .
+membr:Stampfer a FOAF:Person ;
+    FOAF:currentProject membr:Project_Stampfer ;
+    FOAF:familyName "Stampfer" ;
+    FOAF:givenName "Veronika" ;
+    FOAF:homepage <https://www.cxg.phil.fau.eu/person/veronika-stampfer/> .
 
-membr:Trombetta a foaf:Person ;
-    foaf:currentProject membr:Project_Trombetta ;
-    foaf:familyName "Trombetta" ;
-    foaf:givenName "Chiara" ;
-    foaf:homepage <https://www.cxg.phil.fau.eu/person/chiara-trombetta/> .
+membr:Trombetta a FOAF:Person ;
+    FOAF:currentProject membr:Project_Trombetta ;
+    FOAF:familyName "Trombetta" ;
+    FOAF:givenName "Chiara" ;
+    FOAF:homepage <https://www.cxg.phil.fau.eu/person/chiara-trombetta/> .
 
-membr:Tzimas a foaf:Person ;
-    foaf:currentProject membr:Project_Tzimas ;
-    foaf:familyName "Tzimas" ;
-    foaf:givenName "Theocharis" ;
-    foaf:homepage <https://www.cxg.phil.fau.eu/person/theocharis-tzimas/> .
+membr:Tzimas a FOAF:Person ;
+    FOAF:currentProject membr:Project_Tzimas ;
+    FOAF:familyName "Tzimas" ;
+    FOAF:givenName "Theocharis" ;
+    FOAF:homepage <https://www.cxg.phil.fau.eu/person/theocharis-tzimas/> .
 
-membr:Weigelt a foaf:Person ;
-    foaf:currentProject membr:Project_Weigelt ;
-    foaf:familyName "Weigelt" ;
-    foaf:givenName "Lina" ;
-    foaf:homepage <https://www.cxg.phil.fau.eu/person/lina-weigelt/> .
+membr:Weigelt a FOAF:Person ;
+    FOAF:currentProject membr:Project_Weigelt ;
+    FOAF:familyName "Weigelt" ;
+    FOAF:givenName "Lina" ;
+    FOAF:homepage <https://www.cxg.phil.fau.eu/person/lina-weigelt/> .
 
-membr:Winckel a foaf:Person ;
-    foaf:currentProject membr:Project_Winckel,
+membr:Winckel a FOAF:Person ;
+    FOAF:currentProject membr:Project_Winckel,
         membr:Project_Winckel_2601131454 ;
-    foaf:familyName "Winckel" ;
-    foaf:givenName "Elodie" ;
-    foaf:homepage <https://www.cxg.phil.fau.eu/person/elodie-winckel/> .
+    FOAF:familyName "Winckel" ;
+    FOAF:givenName "Elodie" ;
+    FOAF:homepage <https://www.cxg.phil.fau.eu/person/elodie-winckel/> .
 
-membr:Wright a foaf:Person ;
-    foaf:currentProject membr:Project_Wright ;
-    foaf:familyName "Wright" ;
-    foaf:givenName "Richenda" ;
-    foaf:homepage <https://www.cxg.phil.fau.eu/person/richenda-wright/> .
+membr:Wright a FOAF:Person ;
+    FOAF:currentProject membr:Project_Wright ;
+    FOAF:familyName "Wright" ;
+    FOAF:givenName "Richenda" ;
+    FOAF:homepage <https://www.cxg.phil.fau.eu/person/richenda-wright/> .
 
 membr:Project_Alhabyan a rsrch:Project ;
     rsrch:projectName "Valency, preposition governing, and phrasal verbs in Arabic and Semitic"@en .
@@ -264,7 +264,7 @@ membr:Project_Bayer a rsrch:Project ;
     rsrch:projectName "Differential argument marking in Arabic"@en .
 
 membr:Project_Bayer_2602251146_F2602251146 a rsrch:Finding ;
-    rdfs:label "Marking of the recipient is conditioned by expectation sensitivity and is advancing." ;
+    RDFS:label "Marking of the recipient is conditioned by expectation sensitivity and is advancing." ;
     rsrch:basedOn cx:arzCai_Ditransitiveconstruction .
 
 membr:Project_BenitoFernandez a rsrch:Project ;
@@ -288,7 +288,7 @@ membr:Project_FernandezSantos_241125 a rsrch:Project ;
     rsrch:projectName "The relative role of verb position and additional morphological markers in comprehension" .
 
 membr:Project_FernandezSantos_241125_F250218 a rsrch:Finding ;
-    rdfs:label "The late disambiguation of verb-medial plain-variant (no a + article) object relative can lead to shallow processing. This in combination with high phonetic similarity with a canonical SR could lead to predictive processing overriding perceptual information (at the point of the last NP an object is expected so it’s more likely to hear \"al\" rather than \"el\"). In more general terms, expectations of canonical linguistic input in locally ambiguous structures can override acoustic perception." ;
+    RDFS:label "The late disambiguation of verb-medial plain-variant (no a + article) object relative can lead to shallow processing. This in combination with high phonetic similarity with a canonical SR could lead to predictive processing overriding perceptual information (at the point of the last NP an object is expected so it’s more likely to hear \"al\" rather than \"el\"). In more general terms, expectations of canonical linguistic input in locally ambiguous structures can override acoustic perception." ;
     rsrch:basedOn cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause .
 
 membr:Project_Fokashchuk a rsrch:Project ;
@@ -300,7 +300,7 @@ membr:Project_Fokashchuk_241210 a rsrch:Project ;
     rsrch:projectName "How are German NP1 + auf/an + NP2 constructions expressed in English, Polish, and Ukrainian, and to what extent do these languages employ spatial prepositions to convey similar functions and meanings? What are the cross-linguistic similarities and differences in form and meaning of these constructions?" .
 
 membr:Project_Fokashchuk_241210_F250218 a rsrch:Finding ;
-    rdfs:label """(1) Most constructions across languages do not employ the same prepositions in terms of their spatial meaning, which challenges the assumption of uniform metaphorical and/or metonymic extensions. This indicates that when expressing similar scenes or relations between entities, different languages focus on distinct aspects of the relationship, or activate different "active zones" (Langacker 1991).\r\r
+    RDFS:label """(1) Most constructions across languages do not employ the same prepositions in terms of their spatial meaning, which challenges the assumption of uniform metaphorical and/or metonymic extensions. This indicates that when expressing similar scenes or relations between entities, different languages focus on distinct aspects of the relationship, or activate different "active zones" (Langacker 1991).\r\r
 (2) There are some cross-linguistic correspondences when auf and an are used spatially, as auf/an are often translated as "on" in the other 3 languages. However, in abstract meanings, the semantic network diverges significantly: auf sometimes retains a connection to spatial "on", while an does not.\r\r
 (3) Another parallelism: (a) an often corresponds to "of" in English and to the absence of a preposition but the object in genitive case in Polish and Ukrainian in NP1 + an + NP2 constructions. (b) Synonyms in English, Polish, and Ukrainian tend to govern the same prepositions, whereas this pattern is much less consistent in German.""" ;
     rsrch:basedOn cx:deuStdHigh_NP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions .
@@ -312,17 +312,17 @@ membr:Project_Fuehrer a rsrch:Project ;
     rsrch:projectName "German verbs with particles or prefixes in language change: Form, meaning, and syntax"@en .
 
 membr:Project_Fuehrer_F2512191334 a rsrch:Finding ;
-    rdfs:label """Subject is mostly animate (~85%), and sometimes inanimate (~15%).\r\r
+    RDFS:label """Subject is mostly animate (~85%), and sometimes inanimate (~15%).\r\r
 Accusative object can fluctuate between a locality and things/persons, thus altering the interpretation of the construct.\r\r
 Intensifying function occurs when there's already a directional element present in the base verb.""" ;
     rsrch:basedOn cx:gmh12C_PräfixverbkonstruktionHandlung .
 
 membr:Project_Fuehrer_F2512191344 a rsrch:Finding ;
-    rdfs:label "none" ;
+    RDFS:label "none" ;
     rsrch:basedOn cx:gmh12C_PräfixverbkonstruktionTätigkeit .
 
 membr:Project_Fuehrer_F2512191440 a rsrch:Finding ;
-    rdfs:label "directional information seemingly two times present, thus redundant" ;
+    RDFS:label "directional information seemingly two times present, thus redundant" ;
     rsrch:basedOn cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit .
 
 membr:Project_Garibyan a rsrch:Project ;
@@ -353,15 +353,15 @@ membr:Project_Iabdounane_20260717 a rsrch:Project ;
     rsrch:projectName "How can multimodal phenomena be modelled in Construction Grammar?" .
 
 membr:Project_Iabdounane_F250218 a rsrch:Finding ;
-    rdfs:label "The verbal form “this close to V-ing” and the close index finger - thumb gesture co-occur 93% of the time. The two forms are likely entrenched together as a single unit, thus making it one formal multimodal unit.\r The construction is multimodal." ;
+    RDFS:label "The verbal form “this close to V-ing” and the close index finger - thumb gesture co-occur 93% of the time. The two forms are likely entrenched together as a single unit, thus making it one formal multimodal unit.\r The construction is multimodal." ;
     rsrch:basedOn cx:eng_ThisclosetoVingconstruction .
 
 membr:Project_Iabdounane_Fchefskiss a rsrch:Finding ;
-    rdfs:label "Chef’s Kiss exemplifies a gesture that functions as a construction in its own right, as it constitutes a form-meaning pairing. It can occupy specific slots within argument structure constructions, resulting in a multimodal construct where the gesture assumes a syntactic role." ;
+    RDFS:label "Chef’s Kiss exemplifies a gesture that functions as a construction in its own right, as it constitutes a form-meaning pairing. It can occupy specific slots within argument structure constructions, resulting in a multimodal construct where the gesture assumes a syntactic role." ;
     rsrch:basedOn cx:eng_ChefskissGesturalConstruction .
 
 membr:Project_Iabdounane_Fmeso a rsrch:Finding ;
-    rdfs:label "The meso construction is a semi-schematic multimodal construction: the verbal form is fixed, while the gestural component is a schematic slot. This slot accepts specific gesture types, primarily those indicating height or cutting motions. The meanings of these gestures are metaphorically extended to the domain of emotions conceptualized as a liquid." ;
+    RDFS:label "The meso construction is a semi-schematic multimodal construction: the verbal form is fixed, while the gestural component is a schematic slot. This slot accepts specific gesture types, primarily those indicating height or cutting motions. The meanings of these gestures are metaphorically extended to the domain of emotions conceptualized as a liquid." ;
     rsrch:basedOn cx:SmallQuantityGestureConstruction,
         cx:engUsSpo_Hadituptoherewith,
         cx:engUsSpo_Hadituptoherewithmesoconstruction,
@@ -370,7 +370,7 @@ membr:Project_Iabdounane_Fmeso a rsrch:Finding ;
         cx:eng_ThroatCutGesture .
 
 membr:Project_Iabdounane_Fthiscloseto a rsrch:Finding ;
-    rdfs:label "This close to is an example of a multimodal construction in which the verbal form and the gesture are fixed and frequently co-occur. As such, it presents no significant challenges for modeling within Construction Grammar." ;
+    RDFS:label "This close to is an example of a multimodal construction in which the verbal form and the gesture are fixed and frequently co-occur. As such, it presents no significant challenges for modeling within Construction Grammar." ;
     rsrch:basedOn cx:eng_ThisclosetoVingconstruction .
 
 membr:Project_Immertreu a rsrch:Project ;
@@ -390,7 +390,7 @@ membr:Project_Kessler a rsrch:Project ;
     rsrch:projectName "Chinese Mathematics"@en .
 
 membr:Project_Kessler_F250218 a rsrch:Finding ;
-    rdfs:label "There is remarkable stability in the use of the construction over a very long period of time" ;
+    RDFS:label "There is remarkable stability in the use of the construction over a very long period of time" ;
     rsrch:basedOn cx:lzh_Dooperationwithoperand1onoperand2construction .
 
 membr:Project_Khanoub a rsrch:Project ;
@@ -411,7 +411,7 @@ membr:Project_Lee_241202 a rsrch:Project ;
     rsrch:projectName "Prepositional constructions - a corpuslinguistic study on collocation patterns and construction networks" .
 
 membr:Project_Lee_241202_F250218 a rsrch:Finding ;
-    rdfs:label "Grammatically fixed with zero-realization, the \"vor-Augen construction\" displays a distinct collocational pattern closely tied to its meaning and contextual usage." ;
+    RDFS:label "Grammatically fixed with zero-realization, the \"vor-Augen construction\" displays a distinct collocational pattern closely tied to its meaning and contextual usage." ;
     rsrch:basedOn cx:deuWrSt20_sichNPADJADVvorAugenVP_MD .
 
 membr:Project_Legoute a rsrch:Project ;
@@ -423,7 +423,7 @@ membr:Project_Legoute_241128 a rsrch:Project ;
     rsrch:projectName "POU in Haitian Creole" .
 
 membr:Project_Legoute_241128_F250218 a rsrch:Finding ;
-    rdfs:label "POU provokes a NP to become a beneficiary" ;
+    RDFS:label "POU provokes a NP to become a beneficiary" ;
     rsrch:basedOn cx:hat_POUbeneficiaryconstruction .
 
 membr:Project_Makhanina a rsrch:Project ;
@@ -441,7 +441,7 @@ membr:Project_Petrenko a rsrch:Project ;
     rsrch:projectName "Comparing constructions cross-linguistically — Connecting constructicons"@en .
 
 membr:Project_Petrenko_F2603061532 a rsrch:Finding ;
-    rdfs:label "Comparative concepts can partially be applied to CASA Constructicon." ;
+    RDFS:label "Comparative concepts can partially be applied to CASA Constructicon." ;
     rsrch:basedOn cx:engLME_AdjectivalwithPARTNERConstruction,
         cx:engLME_AdjectiveConstruction,
         cx:engLME_ComparativeConstruction,
@@ -461,7 +461,7 @@ membr:Project_Ramezani a rsrch:Project ;
     rsrch:projectName "Representation and processing of constructions in the brain"@en .
 
 membr:Project_Ramezani_250214_F250218 a rsrch:Finding ;
-    rdfs:label "So far we have results from LLM analysis that can significantly recognize and differentiate between argument structure constructions." ;
+    RDFS:label "So far we have results from LLM analysis that can significantly recognize and differentiate between argument structure constructions." ;
     rsrch:basedOn cx:engLME_Argumentstructureconstruction,
         cx:engLME_Ditransitiveconstruction,
         cx:engLME_Resultativeconstruction,
@@ -488,7 +488,7 @@ membr:Project_Trombetta a rsrch:Project ;
     rsrch:projectName "Constructions beyond the sentence: text-structuring in (esp.) sixteenth-century historiographical texts"@en .
 
 membr:Project_Trombetta_F250218 a rsrch:Finding ;
-    rdfs:label "The text reveals various types of text-level constructions, i.e., constructions capable of structuring and organizing the text. These structures, while formally appearing as sentences or phrases, operate at the textual level." ;
+    RDFS:label "The text reveals various types of text-level constructions, i.e., constructions capable of structuring and organizing the text. These structures, while formally appearing as sentences or phrases, operate at the textual level." ;
     rsrch:basedOn cx:itaStoria_RelativeTopicShiftConstruction .
 
 membr:Project_Tzimas a rsrch:Project ;
@@ -503,14 +503,14 @@ membr:Project_Winckel a rsrch:Project ;
     rsrch:projectName "Building a Research Constructicon"@en .
 
 membr:Project_Winckel_2601131454_F2601131454 a rsrch:Finding ;
-    rdfs:label "The relational database for CASA entries can be translated into the RDF format of the Research Constructicon." ;
+    RDFS:label "The relational database for CASA entries can be translated into the RDF format of the Research Constructicon." ;
     rsrch:basedOn cx:engLME_AttributeConstructionAttrAdj,
         cx:eng_GenitiveNPConstruction,
         cx:eng_ditransitive_construction_obj_np,
         cx:lat_Adjective .
 
 membr:Project_Winckel_F2511281100 a rsrch:Finding ;
-    rdfs:label "Implement a lexical item in the research constructicon" ;
+    RDFS:label "Implement a lexical item in the research constructicon" ;
     rsrch:basedOn cx:_coolconstruction,
         cx:engInf_Coolexclamativeconstruction,
         cx:eng_AdjectiveAttributiveconstruction,
