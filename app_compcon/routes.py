@@ -1,11 +1,12 @@
 from typing import Any
 from . import app_compcon_blueprint
-import glob
 import re
 from flask import render_template, url_for
-from rdflib import Graph, URIRef, Literal, Namespace, RDF, RDFS, SKOS
-import os
+from rdflib import URIRef, Literal, RDF, RDFS, SKOS
 from collections import defaultdict
+
+# Load the graphs and namespaces defined in graph_loader.py
+from graph_loader import (g, ont, cx, dc, dcterm, compcon, evid, frac, gest, lg, links, membr, olia, oliatop, rcxn, rd, rdata, rsrch)
 
 ###################################################
 ### FUNCTIONS
@@ -76,39 +77,6 @@ def convert_a_tags_to_html_links(text):
         text
     )
     return html_text
-
-###################################################
-### CREATE RDF GRAPH
-###################################################
-
-g = Graph()
-
-# Check if the production directory exists (otherwise, defaults to development directory)
-if os.path.exists("/data/www/RCxn"):
-    os.chdir("/data/www/RCxn")  # # Set the working directory to the application's production path
-
-else:
-    # Load and parse all RDF files from the folder with submissions (only during development)
-    for ttl_file in glob.glob("instance/Submissions/*.ttl"):
-        g.parse(ttl_file, format="turtle")
-
-# Load and parse all RDF files in the Abox
-for ttl_file in glob.glob("Abox/*.ttl"):
-    g.parse(ttl_file, format="turtle")
-
-# Define the namespaces
-compcon = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/compcon#")
-g.bind("compcon", compcon)
-
-# Load the ontologies
-ont = Graph()
-ont = Graph()
-for xlm_file in glob.glob("ontologies/*.rdf"):
-    ont.parse(xlm_file, format="xml")
-for xlm_file in glob.glob("ontologies/*.owl"): # for olia
-    ont.parse(xlm_file, format="xml")
-for ttl_file in glob.glob("ontologies/*.ttl"): # for compcon
-    ont.parse(ttl_file, format="turtle")
 
 ###################################################
 ### CREATE LIST OF COMPARATIVE CONCEPTS

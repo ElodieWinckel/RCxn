@@ -1,5 +1,3 @@
-from itertools import count
-
 from . import app_entries_blueprint
 import re
 from flask import render_template, Response
@@ -7,24 +5,7 @@ from rdflib import Graph, URIRef, Literal, Namespace, RDF, RDFS, FOAF, SKOS
 from collections import defaultdict
 
 # Load the graphs and namespaces defined in graph_loader.py
-from .graph_loader import (
-    g,
-    ont,
-    cx,
-    dc,
-    dcterm,
-    compcon,
-    evid,
-    frac,
-    gest,
-    lg,
-    links,
-    olia,
-    rcxn,
-    rd,
-    rdata,
-    rsrch,
-)
+from graph_loader import (g, ont, cx, dc, dcterm, compcon, evid, frac, gest, lg, links, membr, olia, oliatop, rcxn, rd, rdata, rsrch)
 
 ###################################################
 ### FUNCTIONS

@@ -24,6 +24,7 @@ A Flask-based web application for submitting, managing and displaying linguistic
 ├── Abox/                  # Stores A-box files (e.g., membr.ttl, cx.ttl, references.ttl)
 ├── app_entries/           # Flask app for construction entries
 │   └── templates          # HTML for construction entries
+│   └── graph_loader.py    # script to load the graph
 ├── app_form/              # Flask app for the submission form
 │   └── templates          # HTML for the submission form
 ├── instances/
