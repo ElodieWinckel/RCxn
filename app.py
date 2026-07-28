@@ -1,4 +1,5 @@
 from main_app import create_app
+from prep_a_box import create_abox_from_submissions
 import os
 
 # Check if the production directory exists
@@ -22,4 +23,7 @@ def test_static():
 
 
 if __name__ == "__main__":
+    # Update th A-box before starting the server
+    create_abox_from_submissions()
+
     app.run(debug=True)

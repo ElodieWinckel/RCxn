@@ -49,7 +49,7 @@ A Flask-based web application for submitting, managing and displaying linguistic
 │   └── js/                # JavaScript files
 ├── templates/             # HTML templates
 ├── app.py                 # Main Flask application
-├── create-Abox-after-new-submission.py  # Script for post-submission processing
+├── prep_a_box.py          # Module to update the A-box
 ├── graph_loader.py        # Shared module: loads RDF graphs, namespaces, A-box and T-box
 └── requirements.txt       # Python dependencies
 ```

@@ -16,8 +16,8 @@ graph_membr = Graph()
 graph_references = Graph()
 
 # Load everything from the submissions (except the folder with German constructions which are not green-lighted yet)
-base_path = Path("instance/Submissions")
-ignore_folder = Path("instance/Submissions/cc-project/FrameNet-Konstruktikon des Deutschen")
+base_path = Path("../instance/Submissions")
+ignore_folder = Path("../instance/Submissions/cc-project/FrameNet-Konstruktikon des Deutschen")
 for ttl_file in base_path.rglob("*.ttl"):
     # Skip if the file is in the ignored folder
     if ttl_file.is_relative_to(ignore_folder):

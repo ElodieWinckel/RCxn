@@ -1,0 +1,422 @@
+from rdflib import Graph, Namespace, Literal, URIRef, BNode
+from rdflib.namespace import FOAF, RDF
+from pathlib import Path
+import re
+import glob
+
+# File paths
+output_cx = "Abox/cx.ttl"
+output_membr = "Abox/membr.ttl"
+output_references = "Abox/references.ttl"
+
+# Namespace definitions
+casa = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/casa#")
+cx = Namespace("http://example.org/cx/")
+compcon = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/compcon#")
+evid = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/evid#")
+frac = Namespace("http://www.w3.org/ns/lemon/frac##")
+gest = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/gest#")
+lg = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#")
+links = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#")
+membr = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#")
+olia = Namespace("http://purl.org/olia/olia.owl#")
+oliatop = Namespace("http://purl.org/olia/olia-top.owl#")
+rcxn = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#")
+rd = Namespace("http://example.org/rd/")
+rdf_ns = Namespace("http://www.w3.org/1999/02/22-rdf-syntax-ns#")
+rdfs = Namespace("http://www.w3.org/2000/01/rdf-schema#")
+rsrch = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#")
+
+# List of namespaces to bind
+NAMESPACES = {
+    "casa": casa,
+    "cx": cx,
+    "compcon": compcon,
+    "evid": evid,
+    "frac": frac,
+    "gest": gest,
+    "lg": lg,
+    "links": links,
+    "membr": membr,
+    "olia": olia,
+    "oliatop": oliatop,
+    "rcxn": rcxn,
+    "rd": rd,
+    "rdf_ns": rdf_ns,
+    "rdfs": rdfs,
+    "rsrch": rsrch,
+    "foaf": FOAF,
+}
+
+def create_abox_from_submissions():
+    """
+    Loads all .ttl files from instance/Submissions (excluding ignored folder).
+    Adds RTG members and make sure that logical relationships are part of the graph.
+    Splits the graph into cx.ttl, membr.ttl, references.ttl, and saves them to Abox/.
+    """
+
+    # Create general graph, and subgraphs holders for cx, membr and references
+    g = Graph()
+    graph_cx = Graph()
+    graph_membr = Graph()
+    graph_references = Graph()
+
+    # Load all submissions (except the folder with German constructions which are not green-lighted yet)
+    base_path = Path("instance/Submissions")
+    ignore_folder = Path("instance/Submissions/cc-project/FrameNet-Konstruktikon des Deutschen")
+    for ttl_file in base_path.rglob("*.ttl"):
+        # Skip if the file is in the ignored folder
+        if ttl_file.is_relative_to(ignore_folder):
+            continue
+        g.parse(ttl_file, format="turtle")
+
+    # Once we can use everything, the following lines can be used
+    #for ttl_file in glob.glob("instance/Submissions/**/*.ttl", recursive=True):
+    #    g.parse(ttl_file, format="turtle")
+
+    # Bind namespaces
+    for prefix, ns in NAMESPACES.items():
+        g.bind(prefix, ns)
+        graph_cx.bind(prefix, ns)
+        graph_membr.bind(prefix, ns)
+
+    # Function to add a user to the graph
+    def add_user(last_name, first_name, project_name, homepage):
+        # Remove all blank spaces from the last name
+        last_name_cleaned = last_name.replace(" ", "")
+        last_name_cleaned = last_name_cleaned.replace("-", "")
+        last_name_cleaned = last_name_cleaned.replace("ß", "ss")
+        last_name_cleaned = last_name_cleaned.replace("á", "a")
+        last_name_cleaned = last_name_cleaned.replace("é", "e")
+        last_name_cleaned = last_name_cleaned.replace("ü", "ue")
+
+        # Create a URI for the user based on their last name
+        user_uri = membr[last_name_cleaned]
+        # Create a URI for the projects based on the last name of the researcher
+        project_uri = membr[f'Project_{last_name_cleaned}']
+
+        # Add RDF triples to the graph
+        # related to researcher
+        g.add((user_uri, RDF.type, FOAF.Person))
+        g.add((user_uri, FOAF.familyName, Literal(last_name)))
+        g.add((user_uri, FOAF.givenName, Literal(first_name)))
+        g.add((user_uri, FOAF.currentProject, project_uri))
+        g.add((user_uri, FOAF.homepage, URIRef(homepage)))
+        # related to projects
+        g.add((project_uri, RDF.type, rsrch.Project))
+        g.add((project_uri, rsrch.projectName, Literal(project_name, lang = "en")))
+
+    ################################
+    # ADD RTG members to the graph
+    #################################
+
+    # Add RTG members to the graph
+    add_user("Alhabyan",
+             "Raghad",
+             "Valency, preposition governing, and phrasal verbs in Arabic and Semitic",
+             "https://www.cxg.phil.fau.eu/person/raghad-alhabyan/")
+    add_user("Badawi",
+             "Soran",
+             "Corpus-based measures of constructionhood",
+             "https://www.cxg.phil.fau.eu/person/soran-badawi/")
+    add_user("Bayer",
+             "Nadine",
+             "Differential argument marking in Arabic",
+             "https://www.cxg.phil.fau.eu/person/nadine-bayer/")
+    add_user("Benito Fernandez",
+             "Elba",
+             "Spanish quotative constructions in oral narratives — an Interactional Construction Grammar approach",
+             "https://www.cxg.phil.fau.eu/person/elba-benito-fernandez/")
+    add_user("Blake",
+             "Ashley",
+             "Project Blake",
+             "https://www.cxg.phil.fau.eu/person/ashley-blake/")
+    add_user("Boos",
+             "Julia",
+             "Entrenchment meets literacy: How the development of reading ability affects child and adult language processing",
+             "https://www.cxg.phil.fau.eu/person/julia-boos/")
+    add_user("De la Garza",
+             "Vania",
+             "Project De la Garza",
+             "https://www.cxg.phil.fau.eu/person/vania-de-la-garza/")
+    add_user("Fernández Santos",
+             "Sara",
+             "Artificial language learning as a window to the early entrenchment of constructions",
+             "https://www.cxg.phil.fau.eu/person/sara-fernandez-santos/")
+    add_user("Fokashchuk",
+             "Iryna",
+             "Functions and cognitive semantics of prepositions in complex constructions",
+             "https://www.cxg.phil.fau.eu/person/iryna-fokashchuk/")
+    add_user("Führer",
+             "Bastian",
+             "German verbs with particles or prefixes in language change: Form, meaning, and syntax",
+             "https://www.cxg.phil.fau.eu/person/bastian-fuhrer/")
+    add_user("Garibyan",
+             "Armine",
+             "Project Garibyan",
+             "https://www.cxg.phil.fau.eu/person/armine-garibyan/")
+    add_user("Gedik",
+             "Tan Arda",
+             "Project Gedik",
+             "https://www.cxg.phil.fau.eu/person/tan-arda-gedik/")
+    add_user("Gromadsky",
+             "Dmitry",
+             "Constructions in communication",
+             "https://www.cxg.phil.fau.eu/person/dmitry-gromadsky/")
+    add_user("Grose-Hodge",
+             "Magdalena",
+             "Project Grose-Hodge",
+             "https://www.cxg.phil.fau.eu/person/magdalena-grose-hodge/")
+    add_user("Hutta",
+             "Sophie",
+             "Project Hutta",
+             "https://www.cxg.phil.fau.eu/person/sophie-hutta/")
+    add_user("Iabdounane",
+             "Yassine",
+             "Multimodal constructional space",
+             "https://www.cxg.phil.fau.eu/person/yassine-iabdounane/")
+    add_user("Immertreu",
+             "Mathis",
+             "Multimodal cognitive maps for cross-domain constructional networks",
+             "https://www.cxg.phil.fau.eu/person/mathis-immertreu/")
+    add_user("Kashigin",
+             "Kyra",
+             "Contrastive Construction Grammar: The interaction of argument-structure constructions and sentence-type constructions in english, Dutch and German",
+             "https://www.cxg.phil.fau.eu/person/kyra-kashigin/")
+    add_user("Kassler",
+             "Annika",
+             "Project Kassler",
+             "https://www.cxg.phil.fau.eu/person/annika-kassler/")
+    add_user("Kenanidis",
+             "Panagiotis",
+             "Project Kenanidis",
+             "https://www.cxg.phil.fau.eu/person/panagiotis-kenanidis/")
+    add_user("Keßler",
+             "Florian",
+             "Chinese Mathematics",
+             "https://www.cxg.phil.fau.eu/person/florian-kesler/")
+    add_user("Khanoub",
+             "Rania",
+             "Competition and change in Modern English quantifier constructions",
+             "https://www.cxg.phil.fau.eu/person/rania-khanoub/")
+    add_user("Kissane",
+             "Hassane",
+             "Form and meaning as factors in the identification and learning of constructional slots – English phrasal verbs and verb-preposition combinations",
+             "https://www.cxg.phil.fau.eu/person/hassane-kissane/")
+    add_user("Kligge",
+             "Hendrik",
+             "Representation and acquisition of agreement relations in a usage-based framework",
+             "https://www.cxg.phil.fau.eu/person/hendrik-kligge/")
+    add_user("Lee",
+             "Dongeun",
+             "Project Lee",
+             "https://www.cxg.phil.fau.eu/person/dongeun-lee/")
+    add_user("Makhanina",
+             "Asia",
+             "Representation and acquisition of idiomatic constructions in L1 and L2 learners",
+             "https://www.cxg.phil.fau.eu/person/asia-makhanina/")
+    add_user("Patel",
+             "Malin",
+             "Corpus evidence for delineating constructions",
+             "https://www.cxg.phil.fau.eu/person/malin-patel/")
+    add_user("Petrenko",
+             "Elizaveta",
+             "Comparing constructions cross-linguistically — Connecting constructicons",
+             "https://www.cxg.phil.fau.eu/person/elizaveta-petrenko/")
+    add_user("Prela",
+             "Leonarda",
+             "Project Prela",
+             "https://www.cxg.phil.fau.eu/person/leonarda-prela/")
+    add_user("Ramezani",
+             "Pegah",
+             "Representation and processing of constructions in the brain",
+             "https://www.cxg.phil.fau.eu/person/pegah-ramezani/")
+    add_user("Rastegar",
+             "Aria",
+             "Representation and acquisition of idiomatic constructions in L1 and L2 learners",
+             "https://www.cxg.phil.fau.eu/person/aria-rastegar/")
+    add_user("Rohwedder",
+             "Paul",
+             "Project Rohwedder",
+             "https://www.cxg.phil.fau.eu/person/paul-rohwedder/")
+    add_user("Legouté",
+             "Anne Sherley",
+             "Multifunctionality in Haitian Creole: New insights from a Construction Grammar perspective",
+             "https://www.cxg.phil.fau.eu/person/anne-sherley-legoute/")
+    add_user("Schmechel",
+             "Dennis",
+             "A constructional approach to prepositions and prepositional phrases in Old English",
+             "https://www.cxg.phil.fau.eu/person/dennis-schmechel/")
+    add_user("Senger",
+             "Lena",
+             "Project Senger",
+             "https://www.cxg.phil.fau.eu/person/lena-senger/")
+    add_user("Stampfer",
+             "Veronika",
+             "Semantically related argument structures in the history of English",
+             "https://www.cxg.phil.fau.eu/person/veronika-stampfer/")
+    add_user("Trombetta",
+             "Chiara",
+             "Constructions beyond the sentence: text-structuring in (esp.) sixteenth-century historiographical texts",
+             "https://www.cxg.phil.fau.eu/person/chiara-trombetta/")
+    add_user("Tzimas",
+             "Theocharis",
+             "Subject-inversion throughout Early Modern English: changing relations in individual and communal constructions",
+             "https://www.cxg.phil.fau.eu/person/theocharis-tzimas/")
+    add_user("Wright",
+             "Richenda",
+             "Project Wright",
+             "https://www.cxg.phil.fau.eu/person/richenda-wright/")
+    add_user("Weigelt",
+             "Lina",
+             "Project Weigelt",
+             "https://www.cxg.phil.fau.eu/person/lina-weigelt/")
+    add_user("Winckel",
+             "Elodie",
+             "Building a Research Constructicon",
+             "https://www.cxg.phil.fau.eu/person/elodie-winckel/")
+
+    ####################################################
+    # Make useful inferences (e.g., for mirror links)
+    ####################################################
+
+    # If some construction uses another construction as construction element (syntactic form), then link back the second construction to the first one
+    for subj, part in g.subject_objects(rcxn.hasSyntacticForm):
+        # identify the IRI of the construction
+        construction_uri = re.sub(r'_\d+_Form$', '', subj)
+        g.add((part, links.elementOf, URIRef(construction_uri)))
+
+    # If some construction uses another construction as construction element (stem), then link back the second construction to the first one
+    for subj, part in g.subject_objects(rcxn.hasStem):
+        # identify the IRI of the construction
+        construction_uri = re.sub(r'_\d+_Form$', '', subj)
+        g.add((part, links.elementOf, URIRef(construction_uri)))
+
+    for mainCX in g.subjects(rdf_ns.type, rcxn.Construction):
+        # identify inheritsFrom links
+        for linkedCX in g.objects(mainCX, links.inheritsFrom):
+            g.add((linkedCX, links.inheritedBy, mainCX))
+
+    for mainCX in g.subjects(rdf_ns.type, rcxn.Construction):
+        # identify inheritsFrom links
+        for linkedCX in g.objects(mainCX, links.inheritedBy):
+            g.add((linkedCX, links.inheritsFrom, mainCX))
+
+    # List of all symmetrical links
+    properties_to_mirror = ("sameFormSameFunction", "sameFormSimilarFunction", "sameFormDifferentFunction",
+                            "similarFormSameFunction", "similarFormSimilarFunction", "similarFormDifferentFunction",
+                            "differentFormSameFunction", "differentFormSimilarFunction", "differentFormDifferentFunction",
+                            "CL_sameFormSameFunction", "CL_sameFormSimilarFunction", "CL_sameFormDifferentFunction",
+                            "CL_similarFormSameFunction", "CL_similarFormSimilarFunction", "CL_similarFormDifferentFunction",
+                            "CL_differentFormSameFunction", "CL_differentFormSimilarFunction", "CL_differentFormDifferentFunction"
+                            )
+
+    # Add symmetrical link
+    for prop in properties_to_mirror:
+        for subj, obj in g.subject_objects(links[prop]):
+            # Add the mirrored triple
+            g.add((obj, links[prop], subj))
+
+    # If construction A has a metaphorical extension B, then B is a metaphorical extension of A
+    for subj, obj in g.subject_objects(links.metaphoricalLink):
+            g.add((obj, links.isMetaphoricalExtensionOf, subj))
+
+    # If construction A uses the gesture construction B, then B is an element of A
+    for subj, iri in g.subject_objects(gest.hasGesture):
+            obj = g.value(subject=iri, predicate=gest.uses)
+            g.add((obj, links.elementOf, subj))
+
+    ##################################################################################
+    # Distinguish between the IRI that belong to cx.ttl, membr.ttl and references.ttl
+    ##################################################################################
+
+    def add_triples_recursively(g, graph_cx, subject):
+        # Add all triplets where 'subject' is the subject
+        for p, o in g.predicate_objects(subject):
+            graph_cx.add((subject, p, o))
+            # If the object is a blank node, recursively add its triples
+            if isinstance(o, BNode):
+                add_triples_recursively(g, graph_cx, o)
+
+    # Identify triplets for cx.ttl
+    counter_cx = 0
+    for s, p, o in g:
+        if isinstance(s, URIRef) and str(s).startswith(cx):
+            counter_cx = counter_cx + 1
+            add_triples_recursively(g, graph_cx, s)
+
+    # NB: For the moment, we save research data into cx. TODO: should we put them in their own Abox?
+    for s, p, o in g:
+        if isinstance(s, URIRef) and str(s).startswith(rd):
+            counter_cx = counter_cx + 1
+            add_triples_recursively(g, graph_cx, s)
+
+    # Serialize cx.ttl
+    graph_cx.serialize(destination=output_cx, format="turtle")
+    print(f"RDF saved to {output_cx}: contains {counter_cx} triplets")
+
+    # Identify triplets for membr.ttl
+    counter_membr = 0
+    for s, p, o in g:
+        # Check if the subject starts with the desired prefix
+        if isinstance(s, URIRef) and str(s).startswith(membr):
+            counter_membr = counter_membr + 1
+            graph_membr.add((s, p, o))
+
+    # Serialize membr.ttl
+    graph_membr.serialize(destination=output_membr, format="turtle")
+    print(f"RDF saved to {output_membr}: contains {counter_membr} triplets")
+
+    # Identify references and save them in a dedicated A-box
+    counter_references = 0
+    for subject, reference in g.subject_objects(cx.hasLiterature):
+        for p, o in g.predicate_objects(reference):
+            counter_references = counter_references + 1
+            graph_references.add((reference, p, o))
+    # Serialize refernce.ttl
+    graph_references.serialize(destination=output_references, format="turtle")
+    print(f"RDF saved to {output_references}: contains {counter_references} triplets")
+
+    counter = counter_cx + counter_membr + counter_references
+    print(f"The database contains {counter} triplets.")
+
+    # Count classes and properties in the ontology:
+    ontology_files = [
+        "ontologies/casa.rdf",
+        "ontologies/compcon.ttl",
+        "ontologies/evid.rdf",
+        "ontologies/gest.rdf",
+        "ontologies/lg.rdf",
+        "ontologies/links-1.1.rdf",
+        "ontologies/rcxn.rdf",
+        "ontologies/rsrch.rdf"
+    ]
+    ont = Graph()
+    for file_path in ontology_files:
+        if file_path.endswith(".owl") or file_path.endswith(".rdf"):
+            ont.parse(file_path, format="xml")
+        elif file_path.endswith(".ttl"):
+            ont.parse(file_path, format="turtle")
+
+    # --- Count Classes ---
+    classes_query = """
+        SELECT (COUNT(DISTINCT ?class) AS ?count)
+        WHERE {
+            ?class a owl:Class .
+        }
+    """
+    class_result = ont.query(classes_query)
+    num_classes = class_result.bindings[0]['count'].value
+
+    # --- Count Properties ---
+    properties_query = """
+        SELECT (COUNT(DISTINCT ?prop) AS ?count)
+        WHERE {
+            ?prop a owl:ObjectProperty .
+        }
+    """
+    prop_result = ont.query(properties_query)
+    num_properties = prop_result.bindings[0]['count'].value
+    print(f"The ontology contains {num_classes} classes and {num_properties} properties.")
+
+    return counter
