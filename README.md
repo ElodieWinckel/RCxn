@@ -22,17 +22,26 @@ A Flask-based web application for submitting, managing and displaying linguistic
 ```
 .
 ├── Abox/                  # Stores A-box files (e.g., membr.ttl, cx.ttl, references.ttl)
+├── app_compcon/           # Flask app for comparative concept entries
+│   ├── templates          # HTML for comparative concepts entries
+│   ├── __init__.py
+│   └── routes.py
 ├── app_entries/           # Flask app for construction entries
-│   └── templates          # HTML for construction entries
-│   └── graph_loader.py    # script to load the graph
+│   ├── templates          # HTML for construction entries
+│   ├── __init__.py
+│   └── routes.py
 ├── app_form/              # Flask app for the submission form
-│   └── templates          # HTML for the submission form
+│   ├── templates          # HTML for submission form
+│   ├── __init__.py
+│   └── routes.py
 ├── instances/
 │   └── Submissions/       # Stores submitted .ttl files
 │   └── user_graphs/       # RDF saved automatically upon submission; as backup
 ├── main_app/              # Flask app for the landing page
+│   ├── __init__.py
+│   └── routes.py
 ├── old_files/             # Legacy files
-├── ontologies/            # RDF ontologies
+├── ontologies/            # RDF ontologies (T-box)
 ├── static/
 │   ├── css/               # Stylesheets
 │   ├── data/
@@ -40,7 +49,8 @@ A Flask-based web application for submitting, managing and displaying linguistic
 │   └── js/                # JavaScript files
 ├── templates/             # HTML templates
 ├── app.py                 # Main Flask application
-├── create-Abox-after-new-submission.py  # Main Flask application
+├── create-Abox-after-new-submission.py  # Script for post-submission processing
+├── graph_loader.py        # Shared module: loads RDF graphs, namespaces, A-box and T-box
 └── requirements.txt       # Python dependencies
 ```
 
