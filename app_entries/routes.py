@@ -306,8 +306,6 @@ def list_view():
         key=lambda x: (x['macrolanguage'].lower(), x['title'].lower())
     )
 
-    print(f"Total number of constructions created: {len(constructions)}")
-
     return render_template("app_entries/list.html", constructions=constructions)
 
 ###################################################

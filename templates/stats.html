@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}Status page{% endblock %}
+
+{% block content %}
+<div style="max-width: 900px; margin: 40px auto; padding: 0 20px; font-family: Arial, Helvetica, sans-serif; line-height: 1.6;">
+    <h1>Status page</h1>
+
+    <h2>Ontology</h2>
+
+    <main class="container">
+        <p>
+            As of the {{ last_updated }}, the ontology developed
+            for the Research Constructicon contains
+            <strong>{{ num_classes }}</strong> classes and
+            <strong>{{ num_properties }}</strong> properties.
+        </p>
+    </main>
+
+    <h2>Database</h2>
+
+    <main class="container">
+        <p>
+            As of the {{ last_updated }}, the Research Constructicon contains
+            <strong>{{ num_constructions }}</strong> constructions
+            from <strong>{{ num_contributors }}</strong> contributors,
+            distributed across <strong>10</strong> macrolanguages.
+            Among these constructions,
+            <strong>{{ num_nongesture }}</strong> are verbal constructions and
+            <strong>{{ num_gesture }}</strong> are gesture constructions.
+
+        </p>
+
+        <p>
+
+            To describe these constructions, the database contains
+            <strong>{{ counter }}</strong> RDF triplets.
+            The A-box is stored in three separate files.
+            One file (cx.ttl) stores information about the constructions
+            and contains <strong>{{ counter_cx }}</strong> RDF triplets,
+            one (membr.ttl) stores information about the researchers and their research
+            and contains <strong>{{ counter_membr }}</strong> RDF triplets,
+            and the last one (references.ttl) stores the bibliography
+            and contains <strong>{{ counter_references }}</strong> RDF triplets.
+
+
+        </p>
+    </main>
+
+</div>
+{% endblock %}

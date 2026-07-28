@@ -328,84 +328,30 @@ def create_abox_from_submissions():
                 add_triples_recursively(g, graph_cx, o)
 
     # Identify triplets for cx.ttl
-    counter_cx = 0
     for s, p, o in g:
         if isinstance(s, URIRef) and str(s).startswith(cx):
-            counter_cx = counter_cx + 1
             add_triples_recursively(g, graph_cx, s)
 
     # NB: For the moment, we save research data into cx. TODO: should we put them in their own Abox?
     for s, p, o in g:
         if isinstance(s, URIRef) and str(s).startswith(rd):
-            counter_cx = counter_cx + 1
             add_triples_recursively(g, graph_cx, s)
 
     # Serialize cx.ttl
     graph_cx.serialize(destination=output_cx, format="turtle")
-    print(f"RDF saved to {output_cx}: contains {counter_cx} triplets")
 
     # Identify triplets for membr.ttl
-    counter_membr = 0
     for s, p, o in g:
         # Check if the subject starts with the desired prefix
         if isinstance(s, URIRef) and str(s).startswith(membr):
-            counter_membr = counter_membr + 1
             graph_membr.add((s, p, o))
 
     # Serialize membr.ttl
     graph_membr.serialize(destination=output_membr, format="turtle")
-    print(f"RDF saved to {output_membr}: contains {counter_membr} triplets")
 
     # Identify references and save them in a dedicated A-box
-    counter_references = 0
     for subject, reference in g.subject_objects(cx.hasLiterature):
         for p, o in g.predicate_objects(reference):
-            counter_references = counter_references + 1
             graph_references.add((reference, p, o))
     # Serialize refernce.ttl
     graph_references.serialize(destination=output_references, format="turtle")
-    print(f"RDF saved to {output_references}: contains {counter_references} triplets")
-
-    counter = counter_cx + counter_membr + counter_references
-    print(f"The database contains {counter} triplets.")
-
-    # Count classes and properties in the ontology:
-    ontology_files = [
-        "ontologies/casa.rdf",
-        "ontologies/compcon.ttl",
-        "ontologies/evid.rdf",
-        "ontologies/gest.rdf",
-        "ontologies/lg.rdf",
-        "ontologies/links-1.1.rdf",
-        "ontologies/rcxn.rdf",
-        "ontologies/rsrch.rdf"
-    ]
-    ont = Graph()
-    for file_path in ontology_files:
-        if file_path.endswith(".owl") or file_path.endswith(".rdf"):
-            ont.parse(file_path, format="xml")
-        elif file_path.endswith(".ttl"):
-            ont.parse(file_path, format="turtle")
-
-    # --- Count Classes ---
-    classes_query = """
-        SELECT (COUNT(DISTINCT ?class) AS ?count)
-        WHERE {
-            ?class a owl:Class .
-        }
-    """
-    class_result = ont.query(classes_query)
-    num_classes = class_result.bindings[0]['count'].value
-
-    # --- Count Properties ---
-    properties_query = """
-        SELECT (COUNT(DISTINCT ?prop) AS ?count)
-        WHERE {
-            ?prop a owl:ObjectProperty .
-        }
-    """
-    prop_result = ont.query(properties_query)
-    num_properties = prop_result.bindings[0]['count'].value
-    print(f"The ontology contains {num_classes} classes and {num_properties} properties.")
-
-    return counter
