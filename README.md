@@ -74,7 +74,7 @@ The app will start locally, typically at `http://127.0.0.1:5000/`.
 2. **Editor**:
    - Save the `.ttl` file in `instances/Submissions/`. At this stage, the construction only appears in development mode.
    - Review the submission and communicate with the contributor if needed.
-   - Once approved, run the `create-Abox-after-new-submission.py` script to update the A-box files (`membr.ttl`, `cx.ttl`, `references.ttl`) and add inferences. The construction will be displayed on the server.
+   - Once approved, move the `.ttl` file to `instances/Finalized/`. The construction will be displayed on the server.
 
 ## Adding a New Language
 1. **Contributor**:

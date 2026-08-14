@@ -4,7 +4,7 @@ from pathlib import Path
 import re
 
 # Load the namespaces defined in graph_loader.py
-from graph_loader import (casa, cx, compcon, evid, frac, gest, lg, links, membr, olia, oliatop, rcxn, rd, rdata, rsrch)
+from graph_loader import (casa, cx, compcon, evid, frac, gest, lg, links, membr, olia, oliatop, rcxn, references, rd, rdata, rsrch)
 
 # File paths
 output_cx = "Abox/cx.ttl"
@@ -25,6 +25,7 @@ NAMESPACES = {
     "olia": olia,
     "oliatop": oliatop,
     "rcxn": rcxn,
+    "references": references,
     "rd": rd,
     "rdata": rdata,
     "rsrch": rsrch,
@@ -350,8 +351,9 @@ def create_abox_from_submissions():
     graph_membr.serialize(destination=output_membr, format="turtle")
 
     # Identify references and save them in a dedicated A-box
-    for subject, reference in g.subject_objects(cx.hasLiterature):
-        for p, o in g.predicate_objects(reference):
-            graph_references.add((reference, p, o))
+    for s, p, o in g:
+        # Check if the subject starts with the desired prefix
+        if isinstance(s, URIRef) and str(s).startswith(references):
+            graph_references.add((s, p, o))
     # Serialize refernce.ttl
     graph_references.serialize(destination=output_references, format="turtle")

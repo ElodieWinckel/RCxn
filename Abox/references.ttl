@@ -1,131 +1,51 @@
-@prefix DC: <http://purl.org/dc/elements/1.1/> .
+@prefix evid: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/evid#> .
+@prefix references: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/references#> .
 
-<file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Croft_2012> DC:creator "William Croft" ;
-    DC:date "2012" ;
-    DC:publisher "Oxford University Press" ;
-    DC:title "Constructions at Work" ;
-    DC:type "Book" .
+references:08c12345-af8413-45e16f-746e5f49b3f9 evid:biblio "Gournay, Lucie. 2023. Implementing quantitative data in a qualitative contrastive approach: the case of COME+V-ING. Anglophonia 35. https://doi.org/10.4000/11qbf." .
 
-<file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Diem_2002> DC:creator "Werner Diem" ;
-    DC:date "2002" ;
-    DC:publisher "Harrassowitz" ;
-    DC:title "Translokative Verben im Arabischen" ;
-    DC:type "Book" .
+references:08c9d8b7-8413-45e1-af6f-746e5f49b3f9 evid:biblio "Reali, Florencia. 2014. Frequency Affects Object Relative Clause Processing: Some Evidence in Favor of Usage-Based Accounts. Language Learning 64(3). 685–714. https://doi.org/10.1111/lang.12066." .
 
-<file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Goldberg_1995> DC:creator "Adele E. Goldberg" ;
-    DC:date "1995" ;
-    DC:publisher "University of Chicago Press" ;
-    DC:title "Constructions: A Construction Grammar Approach to Argument Structure" ;
-    DC:type "Book" .
+references:08c9d8b7-af8413-45e16f-746e5f49b3f9 evid:biblio "Chemla, Karine & Guo Shuchun (eds.). 2004. Les neuf chapitres: Le classique mathématique de la Chine ancienne et ses commentaires. Dunod." .
 
-<file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Goldberg_2006> DC:creator "Adele E. Goldberg" ;
-    DC:date "2006" ;
-    DC:publisher "Oxford University Press" ;
-    DC:title "Verbs: aspect and causal structure" ;
-    DC:type "Book" .
+references:08c9d8b7-af8413-45e16f-746e5f49b3f9-1 evid:biblio "Goldberg, Adele E. 1995. Constructions: A Construction Grammar Approach to Argument Structure. University of Chicago Press." .
 
-<file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Herbst_2020> DC:creator "Thomas Herbst" ;
-    DC:date "2020" ;
-    DC:identifier "DOI 10.1075/cf.00035.her" ;
-    DC:title "Constructions, generalizations, and the unpredictability of language: Moving towards colloconstruction grammar" ;
-    DC:type "journalArticle" .
+references:08c9d8b7-af8413-45e16f-746e5f49b3f9-10 evid:biblio "Goldberg, Adele E. 2006. Constructions at Work. Oxford: Oxford University Press." .
 
-<file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Herbst_Hoffman_2024> DC:creator "Herbst, Thomas",
-        "Hoffmann, Thomas" ;
-    DC:date "2024" ;
-    DC:identifier "ISBN 978-90-272-4676-9" ;
-    DC:publisher "John Benjamins Publishing Company" ;
-    DC:rights "De Gruyter expressly reserves the right to use all content for commercial text and data mining within the meaning of Section 44b of the German Copyright Act." ;
-    DC:title "A Construction Grammar of the English Language: CASA – a Constructionist Approach to Syntactic Analysis" ;
-    DC:type "book" .
+references:08c9d8b7-af8413-45e16f-746e5f49b3f9-11 evid:biblio "Croft, William. 2012. Verbs: aspect and causal structure (Oxford Linguistics). Oxford [England] New York: Oxford University Press." .
 
-<file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/La_lingua_del_Guicciardini> DC:creator "Nencioni, Giovanni" ;
-    DC:date "1984" ;
-    DC:publisher "Leo S. Olschki" ;
-    DC:title "La lingua del Guicciardini" ;
-    DC:type "bookSection" .
+references:08c9d8b7-af8413-45e16f-746e5f49b3f9-12 evid:biblio "Herbst, Thomas. 2020. Constructions, generalizations, and the unpredictability of language: Moving towards colloconstruction grammar. Constructions and Frames 12(1). 56–95. https://doi.org/10.1075/cf.00035.her." .
 
-<file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Shuchun-2004> DC:creator "Chemla, Karine",
-        "Guo Shuchun 郭書春" ;
-    DC:date "2004" ;
-    DC:publisher "Dunod" ;
-    DC:title "Les neuf chapitres: Le classique mathématique de la Chine ancienne et ses commentaires" ;
-    DC:type "book" .
+references:08c9d8b7-af8413-45e16f-746e5f49b3f9-13 evid:biblio "Herbst, Thomas & Thomas Hoffmann. 2024. A Construction Grammar of the English Language: CASA – a Constructionist Approach to Syntactic Analysis. John Benjamins Publishing Company. https://doi.org/10.1075/clip.5." .
 
-<file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Woidich_2006> DC:creator "Manfred Woidich" ;
-    DC:date "2006" ;
-    DC:publisher "Harrassowitz" ;
-    DC:title "Das Kairensisch-Arabische. Eine Grammatik" ;
-    DC:type "Book" .
+references:08c9d8b7-af8413-45e16f-746e5f49b3f9-2 evid:biblio "Ramezani, Pegah, Achim Schilling & Patrick Krauss. 2025. Analysis of argument structure constructions in a deep recurrent language model. Frontiers in Computational Neuroscience. Frontiers 19. https://doi.org/10.3389/fncom.2025.1474860." .
 
-<file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/www.english-corpora.org/bnc/> DC:contributor "Davies, Mark" ;
-    DC:date "2024" ;
-    DC:title "British National Corpus" ;
-    DC:type "book" .
+references:08c9d8b7-af8413-45e16f-746e5f49b3f9-3 evid:biblio "Ramezani, Pegah, Achim Schilling & Patrick Krauss. 2025. Analysis of argument structure constructions in the large language model BERT. Frontiers in Artificial Intelligence 8. 1477246. https://doi.org/10.3389/frai.2025.1477246." .
 
-<file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/www.english-corpora.org/coca/> DC:contributor "Davies, Mark" ;
-    DC:title "The Corpus of Contemporary American English (COCA)" ;
-    DC:type "book" .
+references:08c9d8b7-af8413-45e16f-746e5f49b3f9-4 evid:biblio "Ramezani, Pegah, Thomas Kinfe, Andreas Maier, Achim Schilling & Patrick Krauss. 2026. Convergent representations of linguistic constructions in human and artificial neural systems. Frontiers in Language Sciences. Frontiers 5. https://doi.org/10.3389/flang.2026.1846406." .
 
-<https://doi.org/10.1093/llc/fqw021> DC:creator "Longrée, Dominique",
-        "Mellet, Sylvie" ;
-    DC:date "2017-09-01" ;
-    DC:identifier "DOI 10.1093/llc/fqw021",
-        "ISSN 2055-7671" ;
-    DC:title "A text structure indicator and two topological methods: New ways for studying Latin historic narratives" ;
-    DC:type "journalArticle" .
+references:08c9d8b7-af8413-45e16f-746e5f49b3f9-5 evid:biblio "Longrée, Dominique & Sylvie Mellet. 2017. A Text Structure Indicator and two Topological Methods: New Ways for Studying Latin Historic Narratives. Digital Scholarship in the Humanities fqw021. https://doi.org/10.1093/llc/fqw021." .
 
-<https://doi.org/10.1417/81352> DC:creator "Mengaldo, Pier Vincenzo" ;
-    DC:date "2015" ;
-    DC:identifier "DOI 10.1417/81352",
-        "ISSN 0024-385X" ;
-    DC:title "Sintassi e narrazione nella «Storia d'Italia» di Guicciardini: effetti di legato e di staccato" ;
-    DC:type "journalArticle" .
+references:08c9d8b7-af8413-45e16f-746e5f49b3f9-6 evid:biblio "Pier Vincenzo Mengaldo. 2015. Sintassi e narrazione nella “Storia d’Italia” di Guicciardini: effetti di legato e di staccato. Lingua e Stile (2). 209–224. https://doi.org/10.1417/81352." .
 
-<https://doi.org/10.3389/frai.2025.1477246> DC:creator "Achim Schilling",
-        "Patrick Krauss",
-        "Pegah Ramezani" ;
-    DC:date "2025" ;
-    DC:identifier "https://doi.org/10.3389/frai.2025.1477246" ;
-    DC:publisher "Frontiers in Artificial Intelligence",
-        "University of Chicago Press" ;
-    DC:title "Analysis of Argument Structure Constructions in the Large Language Model BERT" ;
-    DC:type "Article" .
+references:08c9d8b7-af8413-45e16f-746e5f49b3f9-7 evid:biblio "Nencioni, Giovanni. 1983. La lingua del Guicciardini. In Leo S. Olschki (ed.), Francesco Guicciardini, 1483-1983: nel V centenario della nascita, 215–270. Istituto Nazionale di Studi sul Rinascimento Studi e testi." .
 
-<https://journals.openedition.org/anglophonia/5335> DC:creator "Gournay, Lucie" ;
-    DC:date "2023/07/13" ;
-    DC:identifier "DOI 10.4000/11qbf",
-        "ISSN 2427-0466" ;
-    DC:rights "https://creativecommons.org/licenses/by-nc-nd/4.0/" ;
-    DC:title "Implementing quantitative data in a qualitative contrastive approach: the case of COME+V-ING" ;
-    DC:type "journalArticle" .
+references:3123c19c-3f37-43ae-9471-d753fdd7839c evid:biblio "Woidich, Manfred. 2006. Das Kairensisch-Arabische. Eine Grammatik. Wiesbaden: Harrassowitz." .
 
-<https://onlinelibrary.wiley.com/doi/10.1111/lang.12066> DC:creator "Reali, Florencia" ;
-    DC:date "2014" ;
-    DC:identifier "DOI 10.1111/lang.12066",
-        "ISSN 00238333" ;
-    DC:title "Frequency Affects Object Relative Clause Processing: Some Evidence in Favor of Usage-Based Accounts: Frequency Affects Object Relative Clause Processing" ;
-    DC:type "journalArticle" .
+references:4a943605-0f85-4796-b75d-ac165582ab1f evid:biblio "2025. cool. DWDS - Digitale Wörterbuch der deutschen Sprache. Berlin-Brandenburgische Akademie der Wissenschaften. https://www.dwds.de/wb/cool. (28 November, 2025)." .
 
-<https://www.degruyter.com/document/doi/10.1515/cog-2024-0016/html> DC:creator "Dąbrowska, Ewa",
-        "Fernández Santos, Sara",
-        "Llompart, Miquel" ;
-    DC:date "2024-10-10" ;
-    DC:identifier "DOI 10.1515/cog-2024-0016",
-        "ISSN 0936-5907, 1613-3641" ;
-    DC:rights "http://creativecommons.org/licenses/by/4.0" ;
-    DC:title "Comprehension of object relatives in Spanish: the role of frequency and transparency in acquisition and adult grammar" ;
-    DC:type "journalArticle" .
+references:4a943605-0f85-4796-b75d-ac165582ab1f-2 evid:biblio "2025. cool (adjective, Adverb, Interjection). Oxford English Dictionary. Ocford, UK: Oxford University Press. https://www.oed.com/dictionary/cool_adj?tl=true. (28 November, 2025)." .
 
-<https://www.dwds.de/wb/cool> DC:date "2025" ;
-    DC:publisher "Berlin-Brandenburgische Akademie der Wissenschaften" ;
-    DC:source "DWDS - Digitale Wörterbuch der deutschen Sprache" ;
-    DC:title "cool" ;
-    DC:type "encyclopediaArticle" .
+references:4a943605-0f85-4796-b75d-ac165582ab1f-3 evid:biblio "Davies, Mark (ed.). 2024. British National Corpus. Oxford University Press. Oxford, UK. www.english-corpora.org/bnc/. (28 November, 2025)." .
 
-<https://www.oed.com/dictionary/cool_adj?tl=true> DC:date "2025" ;
-    DC:publisher "Oxford University Press" ;
-    DC:source "Oxford English Dictionary" ;
-    DC:title "cool (adjective, Adverb, Interjection)" ;
-    DC:type "encyclopediaArticle" .
+references:4a943605-0f85-4796-b75d-ac165582ab1f-4 evid:biblio "Davies, Mark (ed.). The Corpus of Contemporary American English (COCA). www.english-corpora.org/coca/. (28 November, 2025)." .
+
+references:53dd38c7-b35e-4852-bea9-6515e3855562 evid:biblio "Del Río, David, Ramón López-Higes & MaríaTeresa Martín-Aragoneses. 2012. Canonical word order and interference-based integration costs during sentence comprehension: The case of Spanish subject- and object-relative clauses. Quarterly Journal of Experimental Psychology 65(11). 2108–2128. https://doi.org/10.1080/17470218.2012.674951." .
+
+references:8440be44-e7bb-4219-ae21-3ba91bc4696b evid:biblio "Llompart, Miquel, Sara Fernández Santos & Ewa Dąbrowska. 2025. Comprehension of object relatives in Spanish: the role of frequency and transparency in acquisition and adult grammar. Cognitive Linguistics 36(1). 31–57. https://doi.org/10.1515/cog-2024-0016." .
+
+references:bc0c483a-f00d-4a05-aaee-7c42f22dcdb5 evid:biblio "Llompart, Miquel & Ewa Dąbrowska. 2024. Explicit instruction improves the comprehension of Spanish object relatives by young monolingual children. Language and Cognition 16(4). 986–1006. https://doi.org/10.1017/langcog.2023.69." .
+
+references:c3138c0e-1108-404a-96a8-0ade960b6ca4 evid:biblio "Diem, Werner. 2002. Translokative Verben im Arabischen. Wiesbaden: Harrassowitz." .
+
+references:db2b532f-f711-4470-8922-91afa4fc6aef evid:biblio "Presotto, Giacomo & Jacopo Torregrossa. 2024. Intervention and amelioration effects in the acquisition of Spanish object relative clauses: the role of word order and DOM. Glossa: a journal of general linguistics 9(1). https://doi.org/10.16995/glossa.11254." .
 

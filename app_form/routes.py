@@ -1,11 +1,13 @@
 from . import app_form_blueprint
 from flask import current_app, request, render_template, send_file
-from rdflib import Graph, URIRef, Literal, Namespace, RDF, XSD
+from rdflib import Graph, URIRef, Literal, BNode, Namespace, RDF, XSD, DCTERMS, DC
 from datetime import datetime
 import re
 import glob
 import json
 import os
+import requests
+import uuid
 
 # Check if the production directory exists
 if os.path.exists("/data/www/RCxn"):
@@ -324,9 +326,7 @@ def form_submit():
     # Research data (only a comment for the moment) TODO
     research_data = request.form['researchdata']
     # Field in the category "Sources"
-    reference_rdf = request.form['reference']
-    reference_uri = request.form['ReferenceUserItemURI']  # Field for UserItem URI
-    literature_entries = request.form.getlist('literature[]')  # Retrieve all literature entries
+    bibliography_plain_text = request.form['bibliography']
     url_entries = request.form.getlist('url[]')  # Retrieve all URL entries
 
 ###################################################
@@ -365,8 +365,14 @@ def form_submit():
     RDFS = Namespace("http://www.w3.org/2000/01/rdf-schema#")
     g.bind("RDFS", RDFS)
 
+    references = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/references#")
+    g.bind("references", references)
+
     lg = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#")
     g.bind("lg", lg)
+
+    evid = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/evid#")
+    g.bind("evid", evid)
 
     # Triple that defines the URI of the construction
     g.add((cx[construction_name_cleaned], RDF.type, rcxn.Construction))
@@ -419,61 +425,24 @@ def form_submit():
 ### IMPLEMENT CONSTRUCTION SOURCES
 ###################################################
 
+    DCTERMS_Collection = URIRef("http://purl.org/dc/dcmitype/Collection") # Apparently, dcterms:Collection is not supported by rdflib
+
     # URI for Sources
     sources_uri = f"{construction_name_cleaned}_Sources"
+    if bibliography_plain_text or url_entries:
+        g.add((cx[metadata_uri], DCTERMS.references, cx[sources_uri]))
+        g.add((cx[sources_uri], RDF.type , DCTERMS_Collection))
 
-    # REFERENCE
-    # Parse and merge the RDF code from the 'Reference' field
-    if reference_rdf:
-            try:
-                reference_graph = Graph()
-                reference_graph.parse(data=reference_rdf, format='xml')  # Assuming RDF/XML format
-                # Extract the subject (URI) from the 'Reference' field
-                reference_subjects = list(reference_graph.subjects())
-                if reference_subjects:
-                    reference_subject = reference_subjects[0]  # Assuming the first subject is the main reference
-                    # Define sources uri
-                    g.add((cx[sources_uri], RDF.type,
-                           cx.Collection))  # TODO Collection (or similar) might already exist in dc
-                    # Triple to relate sources to metadata
-                    g.add((cx[metadata_uri], cx.hasSources, cx[sources_uri]))
-                    # Triple for reference
-                    g.add((cx[sources_uri], cx.basedOn, reference_subject)) # TODO basedOn already exists to relate a finding to a construction or to research data, find another name
-                g += reference_graph  # Merge with the existing graph
-            except Exception as e:
-                return f"Error parsing RDF Reference: {e}", 400
-
-    # LITERATURE
-    # Parse and merge all Literature RDF entries
-    for literature_rdf in literature_entries:
-            if literature_rdf:  # Only process non-empty entries
-                try:
-                    literature_graph = Graph()
-                    literature_graph.parse(data=literature_rdf, format='xml')  # Assuming RDF/XML format
-                    # Extract the subject (URI) from each 'Literature' entry
-                    literature_subjects = list(literature_graph.subjects())
-                    if literature_subjects:
-                        literature_subject = literature_subjects[0]
-                        # Define sources uri
-                        g.add((cx[sources_uri], RDF.type,
-                               cx.Collection))  # TODO Collection (or similar) might already exist in dc
-                        # Triple to relate sources to metadata
-                        g.add((cx[metadata_uri], cx.hasSources, cx[sources_uri]))
-                        # Triple for Literature
-                        g.add((cx[sources_uri], cx.hasLiterature, literature_subject))
-                    g += literature_graph  # Merge with the existing graph
-                except Exception as e:
-                    return f"Error parsing RDF Literature: {e}",
+    if bibliography_plain_text:
+        # Define a URI for the entry
+        bib_uri = str(uuid.uuid4())
+        g.add((references[bib_uri], evid.biblio, Literal(bibliography_plain_text)))
+        g.add((cx[sources_uri], DCTERMS.hasPart, references[bib_uri]))
 
     # OTHER CONSTRUCTICONS
     # Add each URL from other constructicons (with rdfs:seeAlso)
     for url in url_entries:
         if url:  # Only process non-empty entries
-            # Define sources uri
-            g.add((cx[sources_uri], RDF.type, cx.Collection))  # TODO Collection (or similar) might already exist in dc
-            # Triple to relate sources to metadata
-            g.add((cx[metadata_uri], cx.hasSources, cx[sources_uri]))
-            # Triple for URL from another constructicon
             g.add((cx[sources_uri], RDFS.seeAlso, URIRef(url)))
 
 ###################################################

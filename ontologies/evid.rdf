@@ -22,6 +22,21 @@
     
 
 
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/evid#biblio -->
+
+    <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/evid#biblio">
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">The bibliographic entry that informed the construction entry.</rdfs:comment>
+        <rdfs:label xml:lang="en">Bibliographic entry</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/evid#colloprofile -->
 
     <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/evid#colloprofile">

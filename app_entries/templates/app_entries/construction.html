@@ -512,13 +512,7 @@ container.appendChild(table);
         {% for ref in references %}
             <tr>
                 <th>References</th>
-                <td class="reference">
-                    {{ ref.authors }}
-                    {% if not ref.authors %} {{ ref.editors }} {% if not ref.editors %} {{ ref.source }} {% endif %} {% endif %}
-                    {% if ref.year %} ({{ ref.year }}). {% endif %}
-                    <i>{{ ref.title }}</i>.
-                    {% if ref.doi %}<a href="{{ ref.doi_href }}" target="_blank">{{ ref.doi }}</a> {% endif %}
-                </td>
+                <td>{{ ref }}</td>
             </tr>
     {% endfor %}
     </table>

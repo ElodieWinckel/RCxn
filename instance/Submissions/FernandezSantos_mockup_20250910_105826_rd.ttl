@@ -13,33 +13,7 @@
 @prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://journals.sagepub.com/doi/10.1080/17470218.2012.674951> dc:creator "López-Higes, Ramón",
-        "Martín-Aragoneses, MaríaTeresa",
-        "del Río, David" ;
-    dc:date "11/2012" ;
-    dc:identifier "DOI 10.1080/17470218.2012.674951",
-        "ISSN 1747-0218, 1747-0226" ;
-    dc:title "Canonical word order and interference-based integration costs during sentence comprehension: The case of Spanish subject- and object-relative clauses" ;
-    dc:type "journalArticle" .
-
 membr:Project_FernandezSantos rsrch:hasResearchQuestion membr:Project_FernandezSantos_241125 .
-
-<https://www.cambridge.org/core/product/identifier/S1866980823000698/type/journal_article> dc:creator "Dąbrowska, Ewa",
-        "Llompart, Miquel" ;
-    dc:date "2024-01-11" ;
-    dc:identifier "DOI 10.1017/langcog.2023.69",
-        "ISSN 1866-9808, 1866-9859" ;
-    dc:title "Explicit instruction improves the comprehension of Spanish object relatives by young monolingual children" ;
-    dc:type "journalArticle" .
-
-<https://www.glossa-journal.org/article/id/11254/> dc:creator "Presotto, Giacomo",
-        "Torregrossa, Jacopo" ;
-    dc:date "2024-8-8" ;
-    dc:identifier "DOI 10.16995/glossa.11254",
-        "ISSN 2397-1835" ;
-    dc:rights "https://creativecommons.org/licenses/by/4.0" ;
-    dc:title "Intervention and amelioration effects in the acquisition of Spanish object relative clauses: the role of word order and DOM" ;
-    dc:type "journalArticle" .
 
 cx:spa_objectrelativeclause a rcxn:Construction ;
     lg:partOfLanguage lg:spa ;
@@ -164,11 +138,6 @@ cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_MD a rcxn:Metadata ;
 cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "Identificatory NP: [Someone]4 carries out a [transitive action]5 that affects [someone else]1. The function of the object relative clause is to identify the [affected]1." .
 
-cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_Sources a cx:Collection ;
-    cx:basedOn <https://www.degruyter.com/document/doi/10.1515/cog-2024-0016/html> ;
-    cx:hasLiterature <https://onlinelibrary.wiley.com/doi/10.1111/lang.12066>,
-        <https://www.degruyter.com/document/doi/10.1515/cog-2024-0016/html> .
-
 cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_slots a rdf:Seq ;
     rdf:_1 cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_1 ;
     rdf:_2 cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_2 ;
@@ -188,13 +157,6 @@ cx:spa_Verb a rcxn:Construction ;
     lg:partOfLanguage lg:spa ;
     rcxn:hasTitle "Verb" .
 
-rd:FernandezSantos_20260130_629471 a rdata:Study ;
-    rdata:Summary "Participants' accuracy on subject relative clauses is at ceiling only when the verb follows the relativizer. Accuracy decreases when the verb is in a clause-final position. Object relative clauses are not at ceiling, but are misinterpreted as subject relative clauses over 90% of the time when there is no object marker and the verb follows the relativizer. The presence of an object marker does not impact accuracy when the verb is clause-final." ;
-    rdata:dataRepository "https://osf.io/4x6pz/files/osfstorage" ;
-    rdata:publishedIn "Llompart, Fernández Santos & Dąbrowska (2024-10-10). Comprehension of object relatives in Spanish: the role of frequency and transparency in acquisition and adult grammar. 10.1515/cog-2024-0016" ;
-    rdata:relevantFor cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause ;
-    rdata:studyType rdata:behavioralExperiment .
-
 membr:Project_FernandezSantos_241125 a rsrch:Project ;
     rsrch:hasFindings membr:Project_FernandezSantos_241125_F250218 ;
     rsrch:projectName "The relative role of verb position and additional morphological markers in comprehension" .
@@ -204,13 +166,6 @@ membr:Project_FernandezSantos_241125_F250218 a rsrch:Finding ;
     rsrch:basedOn cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause .
 
 rdata:behavioralExperiment rdfs:label "Behavioral experiment" .
-
-<https://onlinelibrary.wiley.com/doi/10.1111/lang.12066> dc:creator "Reali, Florencia" ;
-    dc:date "2014" ;
-    dc:identifier "DOI 10.1111/lang.12066",
-        "ISSN 00238333" ;
-    dc:title "Frequency Affects Object Relative Clause Processing: Some Evidence in Favor of Usage-Based Accounts: Frequency Affects Object Relative Clause Processing" ;
-    dc:type "journalArticle" .
 
 cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause a rcxn:Construction ;
     cx:hasExample cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_Ex_A,
@@ -231,14 +186,3 @@ cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause a rcxn:Construction ;
 cx:spa_NounPhrase a rcxn:Construction ;
     lg:partOfLanguage lg:spa ;
     rcxn:hasTitle "Noun Phrase" .
-
-<https://www.degruyter.com/document/doi/10.1515/cog-2024-0016/html> dc:creator "Dąbrowska, Ewa",
-        "Fernández Santos, Sara",
-        "Llompart, Miquel" ;
-    dc:date "2024-10-10" ;
-    dc:identifier "DOI 10.1515/cog-2024-0016",
-        "ISSN 0936-5907, 1613-3641" ;
-    dc:rights "http://creativecommons.org/licenses/by/4.0" ;
-    dc:title "Comprehension of object relatives in Spanish: the role of frequency and transparency in acquisition and adult grammar" ;
-    dc:type "journalArticle" .
-

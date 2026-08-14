@@ -2,6 +2,7 @@
 @prefix cx: <http://example.org/cx/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcterm: <http://purl.org/dc/terms/> .
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
 @prefix evid: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/evid#> .
 @prefix frac: <http://www.w3.org/ns/lemon/frac#> .
 @prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
@@ -10,6 +11,7 @@
 @prefix oliatop: <http://purl.org/olia/olia-top.owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
+@prefix references: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/references#> .
 @prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -130,9 +132,8 @@ cx:comePLUSnoisemannerofmovementVing_MD a rcxn:Metadata ;
 cx:comePLUSnoisemannerofmovementVing_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "[Someone or something]1 moves towards [a reference point]4 in [a specified manner]3, often in a manner that is fast, sudden, uncontrolled, noisy, or otherwise overwhelming." .
 
-cx:comePLUSnoisemannerofmovementVing_Sources a cx:Collection ;
-    cx:basedOn <https://journals.openedition.org/anglophonia/5335> ;
-    cx:hasLiterature <https://journals.openedition.org/anglophonia/5335> .
+cx:comePLUSnoisemannerofmovementVing_Sources a dcmitype:Collection ;
+    dcterm:hasPart references:08c12345-af8413-45e16f-746e5f49b3f9 .
 
 cx:comePLUSnoisemannerofmovementVing_slots a rdf:Seq ;
     rdf:_1 cx:comePLUSnoisemannerofmovementVing_1 ;
@@ -142,13 +143,7 @@ cx:comePLUSnoisemannerofmovementVing_slots a rdf:Seq ;
     rdf:_5 cx:comePLUSnoisemannerofmovementVing_5 ;
     rdf:_6 cx:comePLUSnoisemannerofmovementVing_6 .
 
-<https://journals.openedition.org/anglophonia/5335> dc:creator "Gournay, Lucie" ;
-    dc:date "2023/07/13" ;
-    dc:identifier "DOI 10.4000/11qbf",
-        "ISSN 2427-0466" ;
-    dc:rights "https://creativecommons.org/licenses/by-nc-nd/4.0/" ;
-    dc:title "Implementing quantitative data in a qualitative contrastive approach: the case of COME+V-ING" ;
-    dc:type "journalArticle" .
+references:08c12345-af8413-45e16f-746e5f49b3f9 evid:biblio "Gournay, Lucie. 2023. Implementing quantitative data in a qualitative contrastive approach: the case of COME+V-ING. Anglophonia 35. https://doi.org/10.4000/11qbf." .
 
 cx:eng_VerbING a rcxn:Construction ;
     rcxn:hasTitle "Verb + -ing" ;

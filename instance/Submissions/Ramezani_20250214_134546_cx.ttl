@@ -2,6 +2,8 @@
 @prefix cx: <http://example.org/cx/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcterm: <http://purl.org/dc/terms/> .
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
+@prefix evid: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/evid#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
 @prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#> .
@@ -9,6 +11,7 @@
 @prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix references: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/references#> .
 @prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -60,11 +63,6 @@ cx:engLME_Argumentstructureconstruction_MD a rcxn:Metadata ;
 cx:engLME_Argumentstructureconstruction_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning """The central senses of argument structure construction have been argued to be in association with humanly relevant scenes like: transferring [something]3 to [someone]3, causing [something]3 to change state or move, experiencing [something,]3 [something]1 undergoing a change of state or location""" .
 
-cx:engLME_Argumentstructureconstruction_Sources a cx:Collection ;
-    cx:basedOn <https://doi.org/10.3389/frai.2025.1477246> ;
-    cx:hasLiterature <Goldberg_1995> ,
-        <https://doi.org/10.3389/frai.2025.1477246> .
-
 cx:engLME_Argumentstructureconstruction_slots a rdf:Seq ;
     rdf:_1 cx:engLME_Argumentstructureconstruction_1 ;
     rdf:_2 cx:engLME_Argumentstructureconstruction_2 ;
@@ -106,15 +104,19 @@ cx:engLME_Transitiveconstruction_MD a cx:Metadata ;
     rcxn:annotator membr:Ramezani ;
     dcterm:created "2025-02-14"^^xsd:date .
 
-<https://doi.org/10.3389/frai.2025.1477246> dc:creator "Pegah Ramezani",
-        "Achim Schilling",
-        "Patrick Krauss" ;
-    dc:date "2025" ;
-    dc:identifier "https://doi.org/10.3389/frai.2025.1477246" ;
-    dc:publisher "Frontiers in Artificial Intelligence",
-        "University of Chicago Press" ;
-    dc:title "Analysis of Argument Structure Constructions in the Large Language Model BERT" ;
-    dc:type "Article" .
+cx:engLME_Argumentstructureconstruction_Sources a dcmitype:Collection ;
+    dcterm:hasPart references:08c9d8b7-af8413-45e16f-746e5f49b3f9-1 ,
+    references:08c9d8b7-af8413-45e16f-746e5f49b3f9-2 ,
+     references:08c9d8b7-af8413-45e16f-746e5f49b3f9-3 ,
+     references:08c9d8b7-af8413-45e16f-746e5f49b3f9-4 .
+
+references:08c9d8b7-af8413-45e16f-746e5f49b3f9-1 evid:biblio "Goldberg, Adele E. 1995. Constructions: A Construction Grammar Approach to Argument Structure. University of Chicago Press." .
+
+references:08c9d8b7-af8413-45e16f-746e5f49b3f9-2 evid:biblio "Ramezani, Pegah, Achim Schilling & Patrick Krauss. 2025. Analysis of argument structure constructions in a deep recurrent language model. Frontiers in Computational Neuroscience. Frontiers 19. https://doi.org/10.3389/fncom.2025.1474860." .
+
+references:08c9d8b7-af8413-45e16f-746e5f49b3f9-3 evid:biblio "Ramezani, Pegah, Achim Schilling & Patrick Krauss. 2025. Analysis of argument structure constructions in the large language model BERT. Frontiers in Artificial Intelligence 8. 1477246. https://doi.org/10.3389/frai.2025.1477246." .
+
+references:08c9d8b7-af8413-45e16f-746e5f49b3f9-4 evid:biblio "Ramezani, Pegah, Thomas Kinfe, Andreas Maier, Achim Schilling & Patrick Krauss. 2026. Convergent representations of linguistic constructions in human and artificial neural systems. Frontiers in Language Sciences. Frontiers 5. https://doi.org/10.3389/flang.2026.1846406." .
 
 cx:eng_Phrase a rcxn:Construction ;
     rcxn:hasTitle "Phrase" ;

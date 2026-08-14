@@ -1,0 +1,140 @@
+# Map Crossref type to BLL-style codes
+    type_mapping = {
+        "journal-article": "JOUR",
+        "book-chapter": "CHAP",
+        "book": "BOOK",
+        "proceedings-article": "JOUR",
+        "posted-content": "POST",
+        "dataset": "DATA",
+        "report": "REPO",
+        "standard": "STAN",
+        "dissertation": "THES",
+        "thesis": "THES",
+        "monograph": "BOOK",
+        "reference-entry": "ENCY",
+        "other": "MISC",
+        "unknown": "MISC",
+    }
+
+DCTERMS_volume = URIRef("http://purl.org/dc/terms/Volume") # same with dcterms:volume
+DCTERMS_issue = URIRef("http://purl.org/dc/terms/Issue")
+
+# Use DOIs to retrieve the references
+    if doi_list:
+
+        # Split DOIs by comma and clean
+        raw_dois = [doi.strip() for doi in doi_list.split(",") if doi.strip()]
+        dois = []
+        for raw_doi in raw_dois:
+            if raw_doi.lower().startswith("https://doi.org/"):
+                raw_doi = raw_doi[16:]  # Remove "https://doi.org/"
+            elif raw_doi.lower().startswith("http://doi.org/"):
+                raw_doi = raw_doi[15:]  # Remove "http://doi.org/"
+            # Remove any trailing spaces or quotes
+            raw_doi = raw_doi.strip().strip('"').strip("'")
+            if raw_doi:
+                dois.append(raw_doi)
+
+        for doi in dois:
+
+            # Define a URI for the entry with a random code
+            bib_uri = str(uuid.uuid4())
+
+            # Normalize DOI (ensure it's in proper format)
+            if not doi.lower().startswith("http"):
+                doi = "https://doi.org/" + doi
+            try:
+                # Make request to Crossref API
+                headers = {"User-Agent": "RCxn (https://bdlweb.phil.uni-erlangen.de/RCxn; elodie.winckel@fau.de)"}
+                response = requests.get(f"https://api.crossref.org/works/{doi}", headers=headers)
+
+                # Check that the request works
+                if response.status_code == 200:
+                    api_response = response.json().get("message", {})
+                    # Extract authors (keep the order)
+                    author_seq = BNode()  # Blank node for a sequence (because the order of the authors matters)
+                    g.add((author_seq, RDF.type, RDF.Seq))
+                    for i, a in enumerate(api_response.get("author", [])):
+                        family = a.get("family", "").strip()
+                        given = a.get("given", "").strip()
+                        if family or given:
+                            author_name = f"{family}, {given}".strip(", ")
+                            # Create a blank node for the position
+                            position = URIRef(RDF[f"_{i + 1}"])
+                            g.add((author_seq, position, Literal(author_name)))
+                    g.add((references[bib_uri], DC.creator, author_seq))
+                    # Extract year from issued.date-parts
+                    issued = api_response.get("issued", {})
+                    date_parts = issued.get("date-parts", [])
+                    if date_parts and len(date_parts) > 0:
+                        year = date_parts[0][0]  # First element of first array
+                    else:
+                        year = "Unknown"
+                    # Extract other relevant fields
+                    title = api_response.get("title", ["Unknown"])[0] if api_response.get("title") else "Unknown"
+                    journal = api_response.get("container-title", ["Unknown"])[0] if api_response.get("container-title") else "Unknown"
+                    volume = api_response.get("volume", "")
+                    issue = api_response.get("issue", "")
+                    page = api_response.get("page", "")
+                    publisher = api_response.get("publisher", "")
+
+                    # Get the type from Crossref and map to BLL type
+                    bll_type = type_mapping.get(api_response.get("type", "unknown").lower(), "MISC")
+
+                    # Add the bibliographic entry to the graph (BLL-style)
+                    g.add((cx[sources_uri], DCTERMS.hasPart, references[bib_uri]))
+                    g.add((references[bib_uri], DC.title, Literal(title)))
+                    g.add((references[bib_uri], DC.type, Literal(bll_type)))  # e.g., "JOUR", "BOOK"
+                    g.add((references[bib_uri], DCTERMS.issued, Literal(str(year))))
+                    g.add((references[bib_uri], DCTERMS.isPartOf, Literal(journal)))
+                    g.add((references[bib_uri], DC.identifier, Literal(doi)))  # Add DOI as identifier
+                    if volume:
+                        g.add((references[bib_uri], bibo.volume, Literal(volume)))
+                    if issue:
+                        g.add((references[bib_uri], bibo.issue, Literal(issue)))
+                    if page:
+                        g.add((references[bib_uri], bibo.page, Literal(page)))
+
+                else:
+                    print(f"Crossref API error for {doi}: {response.status_code} - {response.text}")
+                    g.add((references[bib_uri], DC.identifier, Literal(doi)))
+                    g.add((cx[sources_uri], DCTERMS.hasPart, references[bib_uri]))
+
+            except Exception as e:
+                print(f"Error fetching DOI {doi}: {e}")
+                g.add((references[bib_uri], DC.identifier, Literal(doi)))
+                g.add((cx[sources_uri], DCTERMS.hasPart, references[bib_uri]))
+
+
+
+
+########################
+
+
+
+
+
+    bibo = Namespace("http://purl.org/ontology/bibo/")
+    g.bind("bibo", bibo)
+
+
+##########################
+
+
+  <div>
+    <label for="doi">Enter here DOIs (separated by a comma).</label>
+    <textarea id="doi" name="doi" rows="5" cols="50" placeholder="List of DOIs"></textarea>
+    <label for="doi">(recommended field)</label>
+  </div>
+
+##########################
+
+
+NOTE on bibliographic references
+We encourage contributors to provide bibliographic references to a construction entry. For this, we create bibliographic entries, collect them in a bibliography, and attach this bibliography to the metadata of the construction.
+
+The description of a bibliographic entry roughly follows the format adopted by the Bibliography of Linguistic Literature. Following their entries, a bibliographic entry uses dc:creator (for authors), dc:title (for title), dc:type (for the type of entry, e.g., JOUR for journal), dcterms:issued (for publication year), dcterms:publisher (for publisher), dcterms:isPartOf (for journal), bibo:volume (for volume number), bibo:issue (for issue number), bibo:pages (for page range) and dc:identifier (for DOIs).
+The Bibliography of Linguistic Literature (BLL): https://data.linguistik.de/en/
+BLLDB (the online version of the BLL): https://www.blldb-online.de/blldb/templates/template.xml?vid=9EC46B92-A6E0-421A-B817-154FAC462A88&contenttype=text/html&Skript=home
+Whenever possible, we retrieve this information directly from Crossref.
+The URI of the bibliographic entry uses the prefix references: (https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/references#).

@@ -152,28 +152,15 @@ This means that the referents for the attributor, attribute and attributee are t
     <label for="researchdata">(recommended field)</label>
   </div>
 
-  <h1>Sources</h1>
-  <h3>Reference</h3>
-  <div>
-    <label for="reference">This is what the content of the entry is based on.</label>
-    <label for="reference">Go in your reference management software (e.g. Zotero) and export the content of the entry in Dublin Core (e.g. for Zotero: export as "Unqualified Dublin Core RDF"). Copy-and-paste the code provided below:</label>
-    <textarea id="reference" name="reference" rows="10" cols="50" placeholder="Paste RDF code"></textarea>
-    <label for="reference">(recommended field)</label>
-  </div>
-  <!-- Hidden field to store the URI of the UserItem -->
-  <input type="hidden" id="ReferenceUserItemURI" name="ReferenceUserItemURI">
+  <h1>References</h1>
 
-  <h3>Literature</h3>
-  <div id="literature-container">
-    <div class="literature-entry">
-      List here the literature dedicated to this construction.<br>
-      Go in your reference management software (e.g. Zotero) and export the content of the entry in Dublin Core (e.g. for Zotero: export as "Unqualified Dublin Core RDF").
-      <label for="literature">Copy-and-paste the code provided below:</label>
-      <textarea name="literature[]" rows="5" cols="50" placeholder="Paste RDF code"></textarea>
-    </div>
+  <h3>Bibliography</h3>
+  <div>Add here the bibliography that you wish to link to this entry.</div>
+  <div>
+    <label for="bibliography">Copy-paste the bibliography entries (please use the Unified Stylesheet for Linguistics format).</label>
+    <textarea id="bibliography" name="bibliography" rows="10" cols="50" placeholder="Bibliography as plain text."></textarea>
+    <label for="bibliography">(recommended field)</label>
   </div>
-  <button type="button" id="add-literature-btn">Add another Literature entry</button>
-  <div>(optional field)</div>
 
   <h3>Similar construction in other Constructicons</h3>
   <div id="url-container">

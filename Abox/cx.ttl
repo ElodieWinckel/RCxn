@@ -4,6 +4,7 @@
 @prefix casa: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/casa#> .
 @prefix compcon: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/compcon#> .
 @prefix cx: <http://example.org/cx/> .
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
 @prefix evid: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/evid#> .
 @prefix frac: <http://www.w3.org/ns/lemon/frac#> .
 @prefix gest: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/gest#> .
@@ -14,6 +15,7 @@
 @prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
 @prefix rd: <http://example.org/rd/> .
 @prefix rdata: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rdata#> .
+@prefix references: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/references#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 cx:Definitearticle RDFS:label "Definite article" .
@@ -161,6 +163,12 @@ cx:eng_ChefskissGesturalConstruction a gest:GestureConstruction ;
     rcxn:hasTitle "Chef’s Kiss as a Gestural Construction" .
 
 cx:eng_caused_motion_construction_ppto links:sameFunctionDifferentForm cx:eng_ditransitive_construction_obj_np .
+
+cx:eng_coolconstruction_a a dcmitype:Collection ;
+    DCTERMS:hasPart references:4a943605-0f85-4796-b75d-ac165582ab1f,
+        references:4a943605-0f85-4796-b75d-ac165582ab1f-2,
+        references:4a943605-0f85-4796-b75d-ac165582ab1f-3,
+        references:4a943605-0f85-4796-b75d-ac165582ab1f-4 .
 
 cx:eng_monotransitive_construction a rcxn:Construction ;
     cx:hasExample cx:eng_monotransitive_construction_Ex_A,
@@ -371,9 +379,9 @@ cx:arzCai_Ditransitiveconstruction_MD a rcxn:Metadata ;
 cx:arzCai_Ditransitiveconstruction_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "[ÆFFECTOR]1 makes [RECIPIENT]3 receive or lose [ÆFFECTED]4" .
 
-cx:arzCai_Ditransitiveconstruction_Sources a cx:Collection ;
-    cx:hasLiterature <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Diem_2002>,
-        <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Woidich_2006> .
+cx:arzCai_Ditransitiveconstruction_Sources a dcmitype:Collection ;
+    DCTERMS:hasPart references:3123c19c-3f37-43ae-9471-d753fdd7839c,
+        references:c3138c0e-1108-404a-96a8-0ade960b6ca4 .
 
 cx:arzCai_Ditransitiveconstruction_slots a RDF:Seq ;
     RDF:_1 cx:arzCai_Ditransitiveconstruction_1 ;
@@ -515,9 +523,8 @@ cx:comePLUSnoisemannerofmovementVing_MD a rcxn:Metadata ;
 cx:comePLUSnoisemannerofmovementVing_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "[Someone or something]1 moves towards [a reference point]4 in [a specified manner]3, often in a manner that is fast, sudden, uncontrolled, noisy, or otherwise overwhelming." .
 
-cx:comePLUSnoisemannerofmovementVing_Sources a cx:Collection ;
-    cx:basedOn <https://journals.openedition.org/anglophonia/5335> ;
-    cx:hasLiterature <https://journals.openedition.org/anglophonia/5335> .
+cx:comePLUSnoisemannerofmovementVing_Sources a dcmitype:Collection ;
+    DCTERMS:hasPart references:08c12345-af8413-45e16f-746e5f49b3f9 .
 
 cx:comePLUSnoisemannerofmovementVing_slots a RDF:Seq ;
     RDF:_1 cx:comePLUSnoisemannerofmovementVing_1 ;
@@ -1198,10 +1205,11 @@ cx:engLME_Argumentstructureconstruction_MD a rcxn:Metadata ;
 cx:engLME_Argumentstructureconstruction_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "The central senses of argument structure construction have been argued to be in association with humanly relevant scenes like: transferring [something]3 to [someone]3, causing [something]3 to change state or move, experiencing [something,]3 [something]1 undergoing a change of state or location" .
 
-cx:engLME_Argumentstructureconstruction_Sources a cx:Collection ;
-    cx:basedOn <https://doi.org/10.3389/frai.2025.1477246> ;
-    cx:hasLiterature <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Goldberg_1995>,
-        <https://doi.org/10.3389/frai.2025.1477246> .
+cx:engLME_Argumentstructureconstruction_Sources a dcmitype:Collection ;
+    DCTERMS:hasPart references:08c9d8b7-af8413-45e16f-746e5f49b3f9-1,
+        references:08c9d8b7-af8413-45e16f-746e5f49b3f9-2,
+        references:08c9d8b7-af8413-45e16f-746e5f49b3f9-3,
+        references:08c9d8b7-af8413-45e16f-746e5f49b3f9-4 .
 
 cx:engLME_Argumentstructureconstruction_slots a RDF:Seq ;
     RDF:_1 cx:engLME_Argumentstructureconstruction_1 ;
@@ -1257,7 +1265,7 @@ cx:engLME_AttributeConstructionAttrAdj_MD a rcxn:Metadata ;
 cx:engLME_AttributeConstructionAttrAdj_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "An [ÆFFECTOR]1 assigns an [ATTRIBUTE]4 to an [ATTRIBUTEE]3." .
 
-cx:engLME_AttributeConstructionAttrAdj_Sources a cx:Collection ;
+cx:engLME_AttributeConstructionAttrAdj_Sources a dcmitype:Collection ;
     RDFS:seeAlso <https://constructicon.de/constructions/23> .
 
 cx:engLME_AttributeConstructionAttrAdj_slots a RDF:Seq ;
@@ -2513,12 +2521,12 @@ cx:eng_ditransitive_construction_obj_np_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "[ÆFFECTOR]1 makes [RECIPIENT]3 receive [ÆFFECTED]4.",
         "ÆFFECTOR makes RECIPIENT receive ÆFFECTED." .
 
-cx:eng_ditransitive_construction_obj_np_Sources a cx:Collection ;
-    cx:hasLiterature <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Croft_2012>,
-        <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Goldberg_1995>,
-        <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Goldberg_2006>,
-        <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Herbst_2020>,
-        <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Herbst_Hoffman_2024> ;
+cx:eng_ditransitive_construction_obj_np_Sources a dcmitype:Collection ;
+    DCTERMS:hasPart references:08c9d8b7-af8413-45e16f-746e5f49b3f9-1,
+        references:08c9d8b7-af8413-45e16f-746e5f49b3f9-10,
+        references:08c9d8b7-af8413-45e16f-746e5f49b3f9-11,
+        references:08c9d8b7-af8413-45e16f-746e5f49b3f9-12,
+        references:08c9d8b7-af8413-45e16f-746e5f49b3f9-13 ;
     RDFS:seeAlso <https://constructicon.de/constructions/5> .
 
 cx:eng_ditransitive_construction_obj_np_slots a RDF:Seq ;
@@ -3014,10 +3022,10 @@ cx:itaStoria_RelativeTopicShiftConstruction_MD a rcxn:Metadata ;
 cx:itaStoria_RelativeTopicShiftConstruction_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "Transition from one (discourse) topic to another" .
 
-cx:itaStoria_RelativeTopicShiftConstruction_Sources a cx:Collection ;
-    cx:hasLiterature <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/La_lingua_del_Guicciardini>,
-        <https://doi.org/10.1093/llc/fqw021>,
-        <https://doi.org/10.1417/81352> .
+cx:itaStoria_RelativeTopicShiftConstruction_Sources a dcmitype:Collection ;
+    DCTERMS:hasPart references:08c9d8b7-af8413-45e16f-746e5f49b3f9-5,
+        references:08c9d8b7-af8413-45e16f-746e5f49b3f9-6,
+        references:08c9d8b7-af8413-45e16f-746e5f49b3f9-7 .
 
 cx:itaStoria_RelativeTopicShiftConstruction_slots a RDF:Seq ;
     RDF:_1 cx:itaStoria_RelativeTopicShiftConstruction_1 ;
@@ -3171,9 +3179,8 @@ cx:lzh_Dooperationwithoperand1onoperand2construction_MD a rcxn:Metadata ;
 cx:lzh_Dooperationwithoperand1onoperand2construction_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "Do [operation]3 with [operand 1]2 and [operand 2]4" .
 
-cx:lzh_Dooperationwithoperand1onoperand2construction_Sources a cx:Collection ;
-    cx:basedOn <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Shuchun-2004> ;
-    cx:hasLiterature <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/Shuchun-2004> .
+cx:lzh_Dooperationwithoperand1onoperand2construction_Sources a dcmitype:Collection ;
+    DCTERMS:hasPart references:08c9d8b7-af8413-45e16f-746e5f49b3f9 .
 
 cx:lzh_Dooperationwithoperand1onoperand2construction_slots a RDF:Seq ;
     RDF:_1 cx:lzh_Dooperationwithoperand1onoperand2construction_1 ;
@@ -3298,10 +3305,12 @@ cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_MD a rcxn:Metadata ;
 cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "Identificatory NP: [Someone]4 carries out a [transitive action]5 that affects [someone else]1. The function of the object relative clause is to identify the [affected]1." .
 
-cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_Sources a cx:Collection ;
-    cx:basedOn <https://www.degruyter.com/document/doi/10.1515/cog-2024-0016/html> ;
-    cx:hasLiterature <https://onlinelibrary.wiley.com/doi/10.1111/lang.12066>,
-        <https://www.degruyter.com/document/doi/10.1515/cog-2024-0016/html> .
+cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_Sources a dcmitype:Collection ;
+    DCTERMS:hasPart references:08c9d8b7-8413-45e1-af6f-746e5f49b3f9,
+        references:53dd38c7-b35e-4852-bea9-6515e3855562,
+        references:8440be44-e7bb-4219-ae21-3ba91bc4696b,
+        references:bc0c483a-f00d-4a05-aaee-7c42f22dcdb5,
+        references:db2b532f-f711-4470-8922-91afa4fc6aef .
 
 cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_slots a RDF:Seq ;
     RDF:_1 cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_1 ;
@@ -3365,13 +3374,6 @@ cx:zho_VerbPhrase a rcxn:Construction ;
     lg:partOfLanguage lg:zho ;
     links:elementOf cx:lzh_Dooperationwithoperand1onoperand2construction ;
     rcxn:hasTitle "Verb Phrase" .
-
-rd:FernandezSantos_20260130_629471 a rdata:Study ;
-    rdata:Summary "Participants' accuracy on subject relative clauses is at ceiling only when the verb follows the relativizer. Accuracy decreases when the verb is in a clause-final position. Object relative clauses are not at ceiling, but are misinterpreted as subject relative clauses over 90% of the time when there is no object marker and the verb follows the relativizer. The presence of an object marker does not impact accuracy when the verb is clause-final." ;
-    rdata:dataRepository "https://osf.io/4x6pz/files/osfstorage" ;
-    rdata:publishedIn "Llompart, Fernández Santos & Dąbrowska (2024-10-10). Comprehension of object relatives in Spanish: the role of frequency and transparency in acquisition and adult grammar. 10.1515/cog-2024-0016" ;
-    rdata:relevantFor cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause ;
-    rdata:studyType rdata:behavioralExperiment .
 
 cx:Noun a rcxn:Construction ;
     links:elementOf cx:eng_AdjectiveAttributiveconstruction,
@@ -3797,13 +3799,13 @@ cx:comePLUSnoisemannerofmovementVing a rcxn:Construction ;
     rcxn:hasTitle "come + [noise/manner of movement] V-ing" .
 
 cx:engLME_Argumentstructureconstruction a rcxn:Construction ;
-    RDFS:comment """The main data includes 2000 sentences that are generated by GPT-4, which is a text file.\r\r
-The extension data includes a representation of these data in LLM and brain, \r\r
-Representation in LLMs are matrixes including hidden layer activity and attention factor.\r\r
-The representation in the brain includes EEG recordings from 10 participants while listening to 200 of these sentences.\r\r
-Both are matrixes in the format of NumPy arrays but can be converted to any supporting format.\r\r
-\r\r
-This is a similar publicly available dataset: https://github.com/SPOClab-ca/neural-reality-constructions\r\r
+    RDFS:comment """The main data includes 2000 sentences that are generated by GPT-4, which is a text file.\r
+The extension data includes a representation of these data in LLM and brain, \r
+Representation in LLMs are matrixes including hidden layer activity and attention factor.\r
+The representation in the brain includes EEG recordings from 10 participants while listening to 200 of these sentences.\r
+Both are matrixes in the format of NumPy arrays but can be converted to any supporting format.\r
+\r
+This is a similar publicly available dataset: https://github.com/SPOClab-ca/neural-reality-constructions\r
 """ ;
     lg:partOfLanguage lg:eng ;
     links:inheritedBy cx:engLME_Ditransitiveconstruction,
@@ -3821,12 +3823,6 @@ cx:engUsUkWr_EvaluativeAttributionConstruction a rcxn:Construction ;
     rcxn:hasMetadata cx:engUsUkWr_EvaluativeAttributionConstruction_MD ;
     rcxn:hasSlots cx:engUsUkWr_EvaluativeAttributionConstruction_slots ;
     rcxn:hasTitle "Evaluative Attribution Construction" .
-
-cx:eng_coolconstruction_Sources a cx:Collection ;
-    cx:hasLiterature <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/www.english-corpora.org/bnc/>,
-        <file:///C:/Users/em27upeq/PycharmProjects/RCxn/instance/Submissions/www.english-corpora.org/coca/>,
-        <https://www.dwds.de/wb/cool>,
-        <https://www.oed.com/dictionary/cool_adj?tl=true> .
 
 cx:eng_AdjectivePhrase a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
@@ -3871,6 +3867,23 @@ cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit a rcxn:Construction ;
     rcxn:hasSlots cx:gmh12C_PräfixverbkonstruktionlokalistischeTätigkeit_slots ;
     rcxn:hasTitle "Präfixverbkonstruktion (lokalistische Tätigkeit)" .
 
+cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause a rcxn:Construction ;
+    cx:hasExample <http://example.org/cx/Trcx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_Ex_C>,
+        cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_Ex_A,
+        cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_Ex_B,
+        cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_Ex_C,
+        cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_Ex_D ;
+    RDFS:comment "2 graphs (PDF- accuracy and reaction time). Tables with model output - if relevant (CSV or docx)" ;
+    lg:partOfLanguage lg:spaSpoPen ;
+    links:inheritsFrom cx:spa_objectrelativeclause,
+        cx:spa_relativeclause,
+        cx:spa_transitiveconstruction ;
+    rcxn:hasConstructionMeaning cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_Meaning ;
+    rcxn:hasMetadata cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_MD ;
+    rcxn:hasSlots cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_slots ;
+    rcxn:hasTitle "Potentially ambiguous object relative clause" ;
+    rdata:basedOnStudy rd:FernandezSantos_20260130_629471 .
+
 cx:deuWrSt20_sichNPADJADVvorAugenVP a rcxn:Construction ;
     lg:partOfLanguage lg:deuWrSt20 ;
     links:inheritsFrom cx:deu_Generalprepositionalconstructions,
@@ -3894,23 +3907,6 @@ cx:deu_NPderPLUSADJeNnomsgmasc a rcxn:Construction ;
     rcxn:hasMetadata cx:deu_NPderPLUSADJeNnomsgmasc_MD ;
     rcxn:hasSlots cx:deu_NPderPLUSADJeNnomsgmasc_slots ;
     rcxn:hasTitle "NP[der+ ADJ-e N]nom.sg.masc" .
-
-cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause a rcxn:Construction ;
-    cx:hasExample <http://example.org/cx/Trcx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_Ex_C>,
-        cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_Ex_A,
-        cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_Ex_B,
-        cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_Ex_C,
-        cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_Ex_D ;
-    RDFS:comment "2 graphs (PDF- accuracy and reaction time). Tables with model output - if relevant (CSV or docx)" ;
-    lg:partOfLanguage lg:spaSpoPen ;
-    links:inheritsFrom cx:spa_objectrelativeclause,
-        cx:spa_relativeclause,
-        cx:spa_transitiveconstruction ;
-    rcxn:hasConstructionMeaning cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_Meaning ;
-    rcxn:hasMetadata cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_MD ;
-    rcxn:hasSlots cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_slots ;
-    rcxn:hasTitle "Potentially ambiguous object relative clause" ;
-    rdata:basedOnStudy rd:FernandezSantos_20260130_629471 .
 
 cx:itaStoria_RelativeTopicShiftConstruction a rcxn:Construction ;
     cx:hasExample cx:itaStoria_RelativeTopicShiftConstruction_Ex_A,

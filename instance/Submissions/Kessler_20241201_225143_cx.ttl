@@ -2,6 +2,8 @@
 @prefix cx: <http://example.org/cx/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcterm: <http://purl.org/dc/terms/> .
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
+@prefix evid: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/evid#> .
 @prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
 @prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
 @prefix olia: <http://purl.org/olia/olia.owl#> .
@@ -9,6 +11,7 @@
 @prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix references: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/references#> .
 @prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -72,16 +75,10 @@ cx:lzh_Dooperationwithoperand1onoperand2construction_MD a rcxn:Metadata ;
 cx:lzh_Dooperationwithoperand1onoperand2construction_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "Do [operation]3 with [operand 1]2 and [operand 2]4" .
 
-cx:lzh_Dooperationwithoperand1onoperand2construction_Sources a cx:Collection ;
-    cx:basedOn <Shuchun-2004> ;
-    cx:hasLiterature <Shuchun-2004> .
+cx:lzh_Dooperationwithoperand1onoperand2construction_Sources a dcmitype:Collection ;
+    dcterm:hasPart references:08c9d8b7-af8413-45e16f-746e5f49b3f9 .
 
-<Shuchun-2004> dc:creator "Chemla, Karine",
-                "Guo Shuchun 郭書春" ;
-            dc:date "2004" ;
-            dc:publisher "Dunod" ;
-            dc:title "Les neuf chapitres: Le classique mathématique de la Chine ancienne et ses commentaires" ;
-            dc:type "book" .
+references:08c9d8b7-af8413-45e16f-746e5f49b3f9 evid:biblio "Chemla, Karine & Guo Shuchun (eds.). 2004. Les neuf chapitres: Le classique mathématique de la Chine ancienne et ses commentaires. Dunod." .
 
 cx:lzh_Dooperationwithoperand1onoperand2construction_slots a rdf:Seq ;
     rdf:_1 cx:lzh_Dooperationwithoperand1onoperand2construction_1 ;

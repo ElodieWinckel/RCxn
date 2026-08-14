@@ -2,12 +2,15 @@
 @prefix cx: <http://example.org/cx/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcterm: <http://purl.org/dc/terms/> .
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
+@prefix evid: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/evid#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
 @prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#> .
 @prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
 @prefix olia: <http://purl.org/olia/olia.owl#> .
 @prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
+@prefix references: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/references#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -108,20 +111,10 @@ membr:Project_Bayer_2602251146 a rsrch:Project ;
     rsrch:hasFindings membr:Project_Bayer_2602251146_F2602251146 ;
     rsrch:projectName "Recipient marking in Cairo Arabic" .
 
-cx:arzCai_Ditransitiveconstruction_Sources a cx:Collection ;
-    cx:hasLiterature <Woidich_2006>,
-        <Diem_2002> .
+cx:arzCai_Ditransitiveconstruction_Sources a dcmitype:Collection ;
+    dcterm:hasPart references:3123c19c-3f37-43ae-9471-d753fdd7839c,
+        references:c3138c0e-1108-404a-96a8-0ade960b6ca4 .
 
-# Woidich, Manfred. 2006. Das Kairensisch-Arabische. Eine Grammatik. Wiesbaden: Harrassowitz.
-<Woidich_2006> dc:creator "Manfred Woidich" ;
-    dc:date "2006" ;
-    dc:publisher "Harrassowitz" ;
-    dc:title "Das Kairensisch-Arabische. Eine Grammatik" ;
-    dc:type "Book" .
+references:3123c19c-3f37-43ae-9471-d753fdd7839c evid:biblio "Woidich, Manfred. 2006. Das Kairensisch-Arabische. Eine Grammatik. Wiesbaden: Harrassowitz." .
 
-# Diem, Werner. 2002. Translokative Verben im Arabischen. Wiesbaden: Harrassowitz.
-<Diem_2002> dc:creator "Werner Diem" ;
-    dc:date "2002" ;
-    dc:publisher "Harrassowitz" ;
-    dc:title "Translokative Verben im Arabischen" ;
-    dc:type "Book" .
+references:c3138c0e-1108-404a-96a8-0ade960b6ca4 evid:biblio "Diem, Werner. 2002. Translokative Verben im Arabischen. Wiesbaden: Harrassowitz." .

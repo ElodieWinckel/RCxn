@@ -1,14 +1,18 @@
-@prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
 @prefix cx: <http://example.org/cx/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcterm: <http://purl.org/dc/terms/> .
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
+@prefix evid: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/evid#> .
 @prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
 @prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#> .
 @prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
 @prefix olia: <http://purl.org/olia/olia.owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
+@prefix references: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/references#> .
 @prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
+@prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -26,32 +30,6 @@ cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause a rcxn:Construction ;
         cx:spa_transitiveconstruction ;
     lg:partOfLanguage lg:spaSpoPen ;
     rdfs:comment "2 graphs (PDF- accuracy and reaction time). Tables with model output - if relevant (CSV or docx)" .
-
-<http://journals.sagepub.com/doi/10.1080/17470218.2012.674951> dc:creator "López-Higes, Ramón",
-        "Martín-Aragoneses, MaríaTeresa",
-        "del Río, David" ;
-    dc:date "11/2012" ;
-    dc:identifier "DOI 10.1080/17470218.2012.674951",
-        "ISSN 1747-0218, 1747-0226" ;
-    dc:title "Canonical word order and interference-based integration costs during sentence comprehension: The case of Spanish subject- and object-relative clauses" ;
-    dc:type "journalArticle" .
-
-<https://www.cambridge.org/core/product/identifier/S1866980823000698/type/journal_article> dc:creator "Dąbrowska, Ewa",
-        "Llompart, Miquel" ;
-    dc:date "2024-01-11" ;
-    dc:identifier "DOI 10.1017/langcog.2023.69",
-        "ISSN 1866-9808, 1866-9859" ;
-    dc:title "Explicit instruction improves the comprehension of Spanish object relatives by young monolingual children" ;
-    dc:type "journalArticle" .
-
-<https://www.glossa-journal.org/article/id/11254/> dc:creator "Presotto, Giacomo",
-        "Torregrossa, Jacopo" ;
-    dc:date "2024-8-8" ;
-    dc:identifier "DOI 10.16995/glossa.11254",
-        "ISSN 2397-1835" ;
-    dc:rights "https://creativecommons.org/licenses/by/4.0" ;
-    dc:title "Intervention and amelioration effects in the acquisition of Spanish object relative clauses: the role of word order and DOM" ;
-    dc:type "journalArticle" .
 
 cx:spa_objectrelativeclause a rcxn:Construction ;
     rcxn:hasMetadata cx:spa_objectrelativeclause_MD ;
@@ -176,34 +154,12 @@ cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_MD a rcxn:Metadata ;
 cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "Identificatory NP: [Someone]4 carries out a [transitive action]5 that affects [someone else]1. The function of the object relative clause is to identify the [affected]1." .
 
-cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_Sources a cx:Collection ;
-    cx:basedOn <https://www.degruyter.com/document/doi/10.1515/cog-2024-0016/html> ;
-    cx:hasLiterature <https://onlinelibrary.wiley.com/doi/10.1111/lang.12066> ,
-        <https://www.degruyter.com/document/doi/10.1515/cog-2024-0016/html> .
-
 cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_slots a rdf:Seq ;
     rdf:_1 cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_1 ;
     rdf:_2 cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_2 ;
     rdf:_3 cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_3 ;
     rdf:_4 cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_4 ;
     rdf:_5 cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_5 .
-
-<https://onlinelibrary.wiley.com/doi/10.1111/lang.12066> dc:creator "Reali, Florencia" ;
-    dc:date "2014" ;
-    dc:identifier "DOI 10.1111/lang.12066",
-        "ISSN 00238333" ;
-    dc:title "Frequency Affects Object Relative Clause Processing: Some Evidence in Favor of Usage-Based Accounts: Frequency Affects Object Relative Clause Processing" ;
-    dc:type "journalArticle" .
-
-<https://www.degruyter.com/document/doi/10.1515/cog-2024-0016/html> dc:creator "Llompart, Miquel",
-        "Fernández Santos, Sara",
-        "Dąbrowska, Ewa" ;
-    dc:date "2024-10-10" ;
-    dc:identifier "DOI 10.1515/cog-2024-0016",
-        "ISSN 0936-5907, 1613-3641" ;
-    dc:rights "http://creativecommons.org/licenses/by/4.0" ;
-    dc:title "Comprehension of object relatives in Spanish: the role of frequency and transparency in acquisition and adult grammar" ;
-    dc:type "journalArticle" .
 
 cx:spa_NounPhrase a rcxn:Construction ;
     rcxn:hasTitle "Noun Phrase" ;
@@ -231,3 +187,21 @@ membr:Project_FernandezSantos_241125_F250218 a rsrch:Finding ;
 
 membr:Project_FernandezSantos rsrch:hasResearchQuestion membr:Project_FernandezSantos_241125 .
 
+# REFERENCES
+
+cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_Sources a dcmitype:Collection ;
+    dcterm:hasPart references:08c9d8b7-8413-45e1-af6f-746e5f49b3f9,
+        references:53dd38c7-b35e-4852-bea9-6515e3855562,
+        references:8440be44-e7bb-4219-ae21-3ba91bc4696b,
+        references:bc0c483a-f00d-4a05-aaee-7c42f22dcdb5,
+        references:db2b532f-f711-4470-8922-91afa4fc6aef .
+
+references:08c9d8b7-8413-45e1-af6f-746e5f49b3f9 evid:biblio "Reali, Florencia. 2014. Frequency Affects Object Relative Clause Processing: Some Evidence in Favor of Usage-Based Accounts. Language Learning 64(3). 685–714. https://doi.org/10.1111/lang.12066." .
+
+references:53dd38c7-b35e-4852-bea9-6515e3855562 evid:biblio "Del Río, David, Ramón López-Higes & MaríaTeresa Martín-Aragoneses. 2012. Canonical word order and interference-based integration costs during sentence comprehension: The case of Spanish subject- and object-relative clauses. Quarterly Journal of Experimental Psychology 65(11). 2108–2128. https://doi.org/10.1080/17470218.2012.674951." .
+
+references:8440be44-e7bb-4219-ae21-3ba91bc4696b evid:biblio "Llompart, Miquel, Sara Fernández Santos & Ewa Dąbrowska. 2025. Comprehension of object relatives in Spanish: the role of frequency and transparency in acquisition and adult grammar. Cognitive Linguistics 36(1). 31–57. https://doi.org/10.1515/cog-2024-0016." .
+
+references:bc0c483a-f00d-4a05-aaee-7c42f22dcdb5 evid:biblio "Llompart, Miquel & Ewa Dąbrowska. 2024. Explicit instruction improves the comprehension of Spanish object relatives by young monolingual children. Language and Cognition 16(4). 986–1006. https://doi.org/10.1017/langcog.2023.69." .
+
+references:db2b532f-f711-4470-8922-91afa4fc6aef evid:biblio "Presotto, Giacomo & Jacopo Torregrossa. 2024. Intervention and amelioration effects in the acquisition of Spanish object relative clauses: the role of word order and DOM. Glossa: a journal of general linguistics 9(1). https://doi.org/10.16995/glossa.11254." .

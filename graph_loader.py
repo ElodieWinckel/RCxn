@@ -38,6 +38,8 @@ oliatop = Namespace("http://purl.org/olia/olia-top.owl#")
 g.bind("oliatop", oliatop)
 rcxn = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#")
 g.bind("rcxn", rcxn)
+references = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/references#")
+g.bind("references", references)
 rd = Namespace("http://example.org/rd/") #TODO: is this really the name?
 g.bind("rd", rd)
 rdata = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rdata#") #TODO: is this really the name? create ontology

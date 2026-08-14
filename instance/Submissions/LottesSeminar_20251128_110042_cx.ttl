@@ -2,12 +2,15 @@
 @prefix cx: <http://example.org/cx/> .
 @prefix dcterm: <http://purl.org/dc/terms/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
+@prefix evid: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/evid#> .
 @prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
 @prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#> .
 @prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
 @prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix references: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/references#> .
 @prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -578,11 +581,8 @@ cx:eng_keep a rcxn:Construction ;
 
 
 
-cx:eng_coolconstruction_Sources a cx:Collection ;
-    cx:hasLiterature <https://www.dwds.de/wb/cool>,
-        <https://www.oed.com/dictionary/cool_adj?tl=true>,
-        <www.english-corpora.org/bnc/>,
-        <www.english-corpora.org/coca/> .
+cx:eng_coolconstruction_a a dcmitype:Collection ;
+    dcterm:hasPart references:4a943605-0f85-4796-b75d-ac165582ab1f , references:4a943605-0f85-4796-b75d-ac165582ab1f-2 , references:4a943605-0f85-4796-b75d-ac165582ab1f-3, references:4a943605-0f85-4796-b75d-ac165582ab1f-4 .
 
 membr:Project_Winckel rsrch:hasFindings membr:Project_Winckel_F2511281100 .
 
@@ -592,23 +592,10 @@ membr:Project_Winckel_F2511281100 a rsrch:Finding ;
                   cx:eng_Keepacoolheadconstruction ,
                   cx:_coolconstruction .
 
-<https://www.dwds.de/wb/cool> dc:date "2025" ;
-    dc:publisher "Berlin-Brandenburgische Akademie der Wissenschaften" ;
-    dc:title "cool" ;
-    dc:type "encyclopediaArticle" ;
-    dc:source "DWDS - Digitale Wörterbuch der deutschen Sprache".
+references:4a943605-0f85-4796-b75d-ac165582ab1f evid:biblio "2025. cool. DWDS - Digitale Wörterbuch der deutschen Sprache. Berlin-Brandenburgische Akademie der Wissenschaften. https://www.dwds.de/wb/cool. (28 November, 2025)." .
 
-<https://www.oed.com/dictionary/cool_adj?tl=true> dc:date "2025" ;
-    dc:publisher "Oxford University Press" ;
-    dc:title "cool (adjective, Adverb, Interjection)" ;
-    dc:type "encyclopediaArticle" ;
-    dc:source "Oxford English Dictionary" .
+references:4a943605-0f85-4796-b75d-ac165582ab1f-2 evid:biblio "2025. cool (adjective, Adverb, Interjection). Oxford English Dictionary. Ocford, UK: Oxford University Press. https://www.oed.com/dictionary/cool_adj?tl=true. (28 November, 2025)." .
 
-<www.english-corpora.org/bnc/> dc:contributor "Davies, Mark" ;
-    dc:date "2024" ;
-    dc:title "British National Corpus" ;
-    dc:type "book" .
+references:4a943605-0f85-4796-b75d-ac165582ab1f-3 evid:biblio "Davies, Mark (ed.). 2024. British National Corpus. Oxford University Press. Oxford, UK. www.english-corpora.org/bnc/. (28 November, 2025)." .
 
-<www.english-corpora.org/coca/> dc:contributor "Davies, Mark" ;
-    dc:title "The Corpus of Contemporary American English (COCA)" ;
-    dc:type "book" .
+references:4a943605-0f85-4796-b75d-ac165582ab1f-4 evid:biblio "Davies, Mark (ed.). The Corpus of Contemporary American English (COCA). www.english-corpora.org/coca/. (28 November, 2025)." .
