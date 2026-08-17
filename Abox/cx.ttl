@@ -141,6 +141,7 @@ cx:engLME_Resultativeconstruction_2_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_Verb .
 
 cx:engLME_SuperlativeConstruction a rcxn:Construction ;
+    RDFS:comment "Original entry on https://constructicon.de/constructions/114" ;
     compcon:hasCompCon compcon:cxn_modification-construction,
         compcon:cxn_referring-phrase ;
     lg:partOfLanguage lg:engLME ;
@@ -1677,26 +1678,36 @@ cx:engLME_Rollupyoursleeves_MD a rcxn:Metadata ;
     rcxn:annotator membr:Rastegar .
 
 cx:engLME_SuperlativeConstruction_1 a rcxn:SlotObligatory ;
+    RDFS:comment "colloprofile: biggest, tallest, largest, greatest, highest, oldest" ;
     compcon:hasCompCon compcon:cxn_adjectival-phrase,
         compcon:cxn_adjective,
+        compcon:cxn_admodifier,
         compcon:cxn_attributive-phrase,
         compcon:cxn_modifier,
         compcon:cxn_superlative-form,
+        compcon:inf_admodification,
         compcon:inf_modification,
         compcon:sem_property-concept,
         compcon:sem_superlative-degree,
         compcon:str_degree-affix,
-        compcon:str_degree-marker .
+        compcon:str_degree-marker ;
+    rcxn:hasOtherSemanticContribution "Attribute" ;
+    rcxn:hasSlotForm "Adj+-est",
+        "best",
+        "worst" .
 
 cx:engLME_SuperlativeConstruction_2 a rcxn:SlotObligatory ;
+    RDFS:comment "provided by another construction (with Adj slot)" ;
     compcon:hasCompCon compcon:cxn_referent-expression,
-        compcon:sem_object-concept .
+        compcon:sem_object-concept ;
+    rcxn:hasOtherSemanticContribution "Attributee" .
 
 cx:engLME_SuperlativeConstruction_MD a rcxn:Metadata ;
     DCTERMS:created "2026-03-06"^^xsd:date ;
     rcxn:annotator membr:Petrenko .
 
-cx:engLME_SuperlativeConstruction_Meaning a rcxn:ConstructionMeaning .
+cx:engLME_SuperlativeConstruction_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "Indicating that an [ATTRIBUTE]1 applies maximally or minimally to an [ATTRIBUTEE]2." .
 
 cx:engLME_SuperlativeConstruction_slots a RDF:Seq ;
     RDF:_1 cx:engLME_SuperlativeConstruction_1 ;

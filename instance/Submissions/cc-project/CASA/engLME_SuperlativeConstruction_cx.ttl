@@ -14,11 +14,21 @@ cx:engLME_SuperlativeConstruction a rcxn:Construction ;
     rcxn:hasConstructionMeaning cx:engLME_SuperlativeConstruction_Meaning ;
     rcxn:hasMetadata cx:engLME_SuperlativeConstruction_MD ;
     rcxn:hasSlots cx:engLME_SuperlativeConstruction_slots ;
-    rcxn:hasTitle "Superlative Construction" .
+    rcxn:hasTitle "Superlative Construction" ;
+    rcxn:hasConstructionMeaning cx:engLME_SuperlativeConstruction_Meaning ;
+    RDFS:comment "Original entry on https://constructicon.de/constructions/114".
 
-cx:engLME_SuperlativeConstruction_1 a rcxn:SlotObligatory .
+cx:engLME_SuperlativeConstruction_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "Indicating that an [ATTRIBUTE]1 applies maximally or minimally to an [ATTRIBUTEE]2." .
 
-cx:engLME_SuperlativeConstruction_2 a rcxn:SlotObligatory .
+cx:engLME_SuperlativeConstruction_1 a rcxn:SlotObligatory ;
+    rcxn:hasOtherSemanticContribution "Attribute" ;
+    rcxn:hasSlotForm "Adj+-est" , "best" , "worst" ;
+    RDFS:comment "colloprofile: biggest, tallest, largest, greatest, highest, oldest" .
+
+cx:engLME_SuperlativeConstruction_2 a rcxn:SlotObligatory ;
+    rcxn:hasOtherSemanticContribution "Attributee" ;
+    RDFS:comment "provided by another construction (with Adj slot)" .
 
 cx:engLME_SuperlativeConstruction_MD a rcxn:Metadata ;
     rcxn:annotator membr:Petrenko ;
