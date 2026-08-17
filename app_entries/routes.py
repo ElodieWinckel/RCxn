@@ -308,6 +308,88 @@ def list_view():
 
     return render_template("app_entries/list.html", constructions=constructions)
 
+########################################################
+### CREATE A LIST OF CONSTRUCTIONS FOR ONE PROJECT ONLY
+########################################################
+# TODO: for the moment, that's for project 10 (Elizaveta), best would be to filter by project on demand
+
+@app_entries_blueprint.route("/project/Petrenko")
+def project_list_view():
+    constructions = []
+
+    # SPARQL queries to get the title for each construction
+    query_nongesture = """
+    PREFIX rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#>
+    PREFIX lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#>
+    SELECT ?construction ?title ?language
+    WHERE {
+        ?construction a rcxn:Construction .
+        ?construction rcxn:hasTitle ?title .
+        ?construction lg:partOfLanguage ?language .
+        ?construction rcxn:hasMetadata ?meta .
+        ?meta rcxn:annotator membr:Petrenko .
+    }
+    """
+
+    query_gesture = """
+        PREFIX rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#>
+        PREFIX lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#>
+        SELECT ?construction ?title ?language
+        WHERE {
+            ?construction a gest:GestureConstruction .
+            ?construction rcxn:hasTitle ?title .
+            ?construction lg:partOfLanguage ?language .
+            ?construction rcxn:hasMetadata ?meta .
+            ?meta rcxn:annotator membr:Petrenko .
+        }
+        """
+
+    # Execute the SPARQL queries
+    results_nongesture = g.query(query_nongesture)
+    results_gesture = g.query(query_gesture)
+
+    # Prepare list of constructions to pass to html
+    for row in results_nongesture:
+        construction_uri = str(row.construction)
+        title = str(row.title)
+        variety_uri = row.language
+        variety = str(next(ont.objects(subject=variety_uri, predicate=RDFS.label), ""))
+        macrolanguage_uri = get_macrolanguage(variety_uri, ont, lg.isVarietyOf)
+        macrolanguage_label = str(next(ont.objects(subject=macrolanguage_uri, predicate=RDFS.label), ""))
+
+        # Append construction details as dictionary
+        constructions.append({
+            'uri': construction_uri,
+            'title': title,
+            'variety': variety,
+            'macrolanguage': macrolanguage_label,
+            'type': "nongesture"
+        })
+    for row in results_gesture:
+        construction_uri = str(row.construction)
+        title = str(row.title)
+        variety_uri = row.language
+        variety = str(next(ont.objects(subject=variety_uri, predicate=RDFS.label), ""))
+        macrolanguage_uri = get_macrolanguage(variety_uri, ont, lg.isVarietyOf)
+        macrolanguage_label = str(next(ont.objects(subject=macrolanguage_uri, predicate=RDFS.label), ""))
+
+        # Append construction details as dictionary
+        constructions.append({
+            'uri': construction_uri,
+            'title': title,
+            'variety': variety,
+            'macrolanguage': macrolanguage_label,
+            'type': "gesture"
+        })
+
+    # Sorting in alphabetical order
+    constructions = sorted(
+        constructions,
+        key=lambda x: (x['macrolanguage'].lower(), x['title'].lower())
+    )
+
+    return render_template("app_entries/list.html", constructions=constructions)
+
 ###################################################
 ### CREATE A CUSTOM LIST OF CONSTRUCTIONS
 ###################################################

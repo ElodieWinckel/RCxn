@@ -19,6 +19,7 @@ cx:deu_Superlativ_KompositionADJstEINHEIT a rcxn:Construction ;
     rcxn:hasTitle "Superlativ_Komposition:ADJ-st-EINHEIT" .
 
 cx:Superlativ_KompositionADJstEINHEIT_MD a rcxn:Metadata ;
+    rcxn:annotator membr:Petrenko ;
     rcxn:annotator membr:Winckel ;
     dcterm:created "2026-04-20"^^xsd:date .
 
@@ -99,6 +100,7 @@ cx:deu_SuperlativADJst_ADJ_Ex_F a cx:Example ;
 
 cx:deu_SuperlativADJst_ADJ_MD a rcxn:Metadata ;
     dcterm:created "2026-04-20"^^xsd:date ;
+    rcxn:annotator membr:Petrenko ;
     rcxn:annotator membr:Winckel .
 
 cx:deu_SuperlativADJst_ADJ_Meaning a rcxn:ConstructionMeaning ;
@@ -130,3 +132,4 @@ cx:deu_SuperlativADJst_ADJ a rcxn:Construction ;
     rcxn:hasSlots cx:deu_SuperlativADJst_ADJ_slots ;
     rcxn:hasTitle "Superlativ:ADJ-st_ADJ" .
 
+membr:Project_Petrenko_F2608171532 rsrch:basedOn cx:deu_SuperlativADJst_ADJ .

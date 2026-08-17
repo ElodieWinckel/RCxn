@@ -114,6 +114,7 @@ cx:deu_SuperlativART_ADJest_Ex_J a cx:Example ;
 
 cx:deu_SuperlativART_ADJest_MD a rcxn:Metadata ;
     dcterm:created "2026-05-22"^^xsd:date ;
+    rcxn:annotator membr:Petrenko ;
     rcxn:annotator membr:Winckel .
 
 cx:deu_SuperlativART_ADJest_Meaning a rcxn:ConstructionMeaning ;
@@ -153,3 +154,4 @@ cx:deu_SuperlativART_ADJest a rcxn:Construction ;
     rcxn:hasSlots cx:deu_SuperlativART_ADJest_slots ;
     rcxn:hasTitle "Superlativ:ART_ADJ-(e)st" .
 
+membr:Project_Petrenko_F2608171532 rsrch:basedOn cx:deu_SuperlativART_ADJest .

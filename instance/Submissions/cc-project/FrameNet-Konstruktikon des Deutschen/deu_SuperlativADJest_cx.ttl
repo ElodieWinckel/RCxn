@@ -25,6 +25,7 @@ membr:Project_Winckel rsrch:hasResearchQuestion membr:Project_Winckel_2604130901
 
 <http://example.org/cx/SuperlativART_ADJest_MD> a rcxn:Metadata ;
     rcxn:annotator membr:Winckel ;
+    rcxn:annotator membr:Petrenko ;
     dcterm:created "2026-04-13"^^xsd:date .
 
 <http://example.org/cx/SuperlativXst> a rcxn:Construction ;
@@ -34,6 +35,7 @@ membr:Project_Winckel rsrch:hasResearchQuestion membr:Project_Winckel_2604130901
 
 <http://example.org/cx/SuperlativXst_MD> a rcxn:Metadata ;
     rcxn:annotator membr:Winckel ;
+    rcxn:annotator membr:Petrenko ;
     dcterm:created "2026-04-13"^^xsd:date .
 
 <http://example.org/cx/Superlativam_ADJsten> a rcxn:Construction ;
@@ -43,6 +45,7 @@ membr:Project_Winckel rsrch:hasResearchQuestion membr:Project_Winckel_2604130901
 
 <http://example.org/cx/Superlativam_ADJsten_MD> a rcxn:Metadata ;
     rcxn:annotator membr:Winckel ;
+    rcxn:annotator membr:Petrenko ;
     dcterm:created "2026-04-13"^^xsd:date .
 
 cx:deu_Adjektivstamm a rcxn:Construction ;
@@ -94,6 +97,7 @@ cx:deu_Adjektivstamm_MD a rcxn:Metadata ;
 <http://example.org/cx/deu_SuperlativADJest_MD> a rcxn:Metadata ;
     cx:hasSources <http://example.org/cx/deu_SuperlativADJest_Sources> ;
     dcterm:created "2026-04-13"^^xsd:date ;
+    rcxn:annotator membr:Petrenko ;
     rcxn:annotator membr:Winckel .
 
 <http://example.org/cx/deu_SuperlativADJest_Meaning> a rcxn:ConstructionMeaning ;
@@ -135,3 +139,8 @@ membr:Project_Winckel_2604130901 a rsrch:Project ;
 
 membr:Winckel foaf:currentProject membr:Project_Winckel_2604130901 .
 
+membr:Project_Petrenko_F2608171532 a rsrch:Finding ;
+    RDFS:label "While annotating the FrameNet-Konstruktikon des Deutschen for comparative concepts, we identified an issue with the definition of the modification (cxn) in comparative concepts that only apply in attributive cases, while the constructions typically apply indistinctly to attributive and predicative use." ;
+    rsrch:basedOn cx:deu_SuperlativADJest .
+
+membr:Project_Petrenko rsrch:hasFindings membr:Project_Petrenko_F2608171532 .

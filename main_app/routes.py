@@ -15,6 +15,10 @@ def home():
 def impressum():
     return render_template("impressum.html")
 
+@main_blueprint.route("/cc-project")
+def cc_project():
+    return render_template("cc-project.html")
+
 @main_blueprint.route("/stats")
 def stats():
 
