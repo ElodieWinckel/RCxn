@@ -28,8 +28,7 @@ cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause a rcxn:Construction ;
     links:inheritsFrom cx:spa_objectrelativeclause,
         cx:spa_relativeclause,
         cx:spa_transitiveconstruction ;
-    lg:partOfLanguage lg:spaSpoPen ;
-    rdfs:comment "2 graphs (PDF- accuracy and reaction time). Tables with model output - if relevant (CSV or docx)" .
+    lg:partOfLanguage lg:spaSpoPen .
 
 cx:spa_objectrelativeclause a rcxn:Construction ;
     rcxn:hasMetadata cx:spa_objectrelativeclause_MD ;
@@ -79,8 +78,7 @@ cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_2 a rcxn:SlotOptional ;
     rcxn:hasSyntacticFunction "direct object marker" .
 
 cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_2_Form a rcxn:SlotForm ;
-    rcxn:hasStem "a + article" ;
-    rcxn:hasSyntacticForm cx:spa_PrepositionalPhrase .
+    rcxn:hasSyntacticForm cx:spa_aPLUSarticle .
 
 cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_3 a rcxn:SlotObligatory ;
     cx:WordOrder "immediately after Element 1 (if Element 2 not present), or immediately after Element 2 if present" ;
@@ -165,8 +163,8 @@ cx:spa_NounPhrase a rcxn:Construction ;
     rcxn:hasTitle "Noun Phrase" ;
     lg:partOfLanguage lg:spa.
 
-cx:spa_PrepositionalPhrase a rcxn:Construction ;
-    rcxn:hasTitle "Prepositional Phrase" ;
+cx:spa_aPLUSarticle a rcxn:Construction ;
+    rcxn:hasTitle "a + article" ;
     lg:partOfLanguage lg:spa.
 
 cx:spa_Relativizer a rcxn:Construction ;

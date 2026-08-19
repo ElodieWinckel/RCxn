@@ -3252,8 +3252,7 @@ cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_2 a rcxn:SlotOptional ;
     rcxn:hasSyntacticFunction "direct object marker" .
 
 cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_2_Form a rcxn:SlotForm ;
-    rcxn:hasStem "a + article" ;
-    rcxn:hasSyntacticForm cx:spa_PrepositionalPhrase .
+    rcxn:hasSyntacticForm cx:spa_aPLUSarticle .
 
 cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_3 a rcxn:SlotObligatory ;
     cx:WordOrder "immediately after Element 1 (if Element 2 not present), or immediately after Element 2 if present" ;
@@ -3334,11 +3333,6 @@ cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_slots a RDF:Seq ;
     RDF:_4 cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_4 ;
     RDF:_5 cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_5 .
 
-cx:spa_PrepositionalPhrase a rcxn:Construction ;
-    lg:partOfLanguage lg:spa ;
-    links:elementOf cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause ;
-    rcxn:hasTitle "Prepositional Phrase" .
-
 cx:spa_Relativizer a rcxn:Construction ;
     lg:partOfLanguage lg:spa ;
     links:elementOf cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause ;
@@ -3348,6 +3342,11 @@ cx:spa_Verb a rcxn:Construction ;
     lg:partOfLanguage lg:spa ;
     links:elementOf cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause ;
     rcxn:hasTitle "Verb" .
+
+cx:spa_aPLUSarticle a rcxn:Construction ;
+    lg:partOfLanguage lg:spa ;
+    links:elementOf cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause ;
+    rcxn:hasTitle "a + article" .
 
 cx:spa_objectrelativeclause a rcxn:Construction ;
     lg:partOfLanguage lg:spa ;
@@ -3911,7 +3910,6 @@ cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause a rcxn:Construction ;
         cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_Ex_A,
         cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_Ex_B,
         cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_Ex_D ;
-    RDFS:comment "2 graphs (PDF- accuracy and reaction time). Tables with model output - if relevant (CSV or docx)" ;
     evid:basedOnStudy cx:FernandezSantos_20260130_629471 ;
     lg:partOfLanguage lg:spaSpoPen ;
     links:inheritsFrom cx:spa_objectrelativeclause,
