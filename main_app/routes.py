@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template
 from rdflib import Graph, URIRef
 from datetime import date
-from graph_loader import (g, cx, rd, membr)
+from graph_loader import (g, cx, membr)
 
 # Create the blueprint for the main app
 main_blueprint = Blueprint('main', __name__, template_folder='../templates')
@@ -64,11 +64,6 @@ def stats():
     counter_cx = 0
     for s, p, o in g:
         if isinstance(s, URIRef) and str(s).startswith(cx):
-            counter_cx = counter_cx + 1
-
-    # NB: For the moment, we save research data into cx. TODO: should we put them in their own Abox?
-    for s, p, o in g:
-        if isinstance(s, URIRef) and str(s).startswith(rd):
             counter_cx = counter_cx + 1
 
     # Count triplets for membr.ttl

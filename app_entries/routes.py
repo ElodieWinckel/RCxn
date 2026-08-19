@@ -5,7 +5,7 @@ from rdflib import Graph, URIRef, Literal, Namespace, RDF, RDFS, FOAF, SKOS, DCT
 from collections import defaultdict
 
 # Load the graphs and namespaces defined in graph_loader.py
-from graph_loader import (g, ont, casa, cx, compcon, evid, frac, gest, lg, links, membr, olia, oliatop, rcxn, rd, rdata, rsrch)
+from graph_loader import (g, ont, casa, cx, compcon, evid, frac, gest, lg, links, membr, olia, oliatop, rcxn, rsrch)
 
 ###################################################
 ### FUNCTIONS
@@ -42,7 +42,7 @@ prefixes = ("http://example.org/cx/|"
             "http://www.w3.org/1999/02/22-rdf-syntax-ns#|"
             "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#|"
             "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/gest#|"
-            "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rdata#|"
+            "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/evid#|"
             "https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/compcon#|"
             "http://purl.org/dc/terms/")
 
@@ -703,15 +703,14 @@ def construction_detail(uri):
 
     # Collect triples for research data
     research_data = []
-    for study in g.objects(entry_uri, rdata.basedOnStudy):
-        title = g.value(study, rdata.hasTitle)
-        type = g.value(study, rdata.studyType)
-        repository = g.value(study, rdata.dataRepository)
-        publication = g.value(study, rdata.publishedIn)
-        research_data.append({'title': str(title),
-                              'type': re.sub(prefixes, "", str(type)),
-                              'repository': str(repository),
-                              'publication': publication})
+    for study in g.objects(entry_uri, evid.basedOnStudy):
+        type = g.value(study, RDF.type)
+        repository = g.value(study, evid.repository)
+        publication_iri = g.value(study, evid.publishedIn)
+        publication = g.value(publication_iri, evid.biblio)
+        research_data.append({'type': get_label_or_iri(type, g, ont),
+                              'repository': get_label_or_iri(repository, g, ont),
+                              'publication': get_label_or_iri(publication, g, ont)})
 
     # Fetch the title to display
     title = g.value(entry_uri, rcxn.hasTitle)

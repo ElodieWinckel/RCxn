@@ -209,3 +209,11 @@ references:db2b532f-f711-4470-8922-91afa4fc6aef evid:biblio "Presotto, Giacomo &
 references:db2b532f-f711-4470-8922-91afa4fc6aef-1 evid:biblio "Fernández Santos, Sara, Miquel Llompart & Ewa Dąbrowska. 2025. Predictive processing can override perceptual information: evidence from Spanish object relative clauses. Language and Cognition 17. e59. https://doi.org/10.1017/langcog.2025.10015." .
 
 references:db2b532f-f711-4470-8922-91afa4fc6aef-2 evid:biblio "Kenanidis, Panagiotis, Miquel Llompart, Sara Fernández Santos & Ewa Dąbrowska. 2024. Redundancy can hinder adult L2 grammar learning: evidence from case markers of varying salience levels. Frontiers in Psychology 15. https://doi.org/10.3389/fpsyg.2024.1368080." .
+
+# RESEARCH DATA
+
+cx:FernandezSantos_20260130_629471 a evid:BehavioralExperiment ;
+    evid:relevantFor cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause ;
+    evid:publishedIn references:8440be44-e7bb-4219-ae21-3ba91bc4696b ;
+    evid:repository "https://osf.io/4x6pz/" ;
+    evid:summary "Participants' accuracy on subject relative clauses is at ceiling only when the verb follows the relativizer. Accuracy decreases when the verb is in a clause-final position. Object relative clauses are not at ceiling, but are misinterpreted as subject relative clauses over 90% of the time when there is no object marker and the verb follows the relativizer. The presence of an object marker does not impact accuracy when the verb is clause-final." .

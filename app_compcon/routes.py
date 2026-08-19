@@ -6,7 +6,7 @@ from rdflib import URIRef, Literal, RDF, RDFS, SKOS
 from collections import defaultdict
 
 # Load the graphs and namespaces defined in graph_loader.py
-from graph_loader import (g, ont, casa, cx, compcon, evid, frac, gest, lg, links, membr, olia, oliatop, rcxn, rd, rdata, rsrch)
+from graph_loader import (g, ont, casa, cx, compcon, evid, frac, gest, lg, links, membr, olia, oliatop, rcxn, rsrch)
 
 ###################################################
 ### FUNCTIONS

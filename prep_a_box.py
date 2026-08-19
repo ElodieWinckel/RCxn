@@ -4,7 +4,7 @@ from pathlib import Path
 import re
 
 # Load the namespaces defined in graph_loader.py
-from graph_loader import (casa, cx, compcon, evid, frac, gest, lg, links, membr, olia, oliatop, rcxn, references, rd, rdata, rsrch)
+from graph_loader import (casa, cx, compcon, evid, frac, gest, lg, links, membr, olia, oliatop, rcxn, references, rsrch)
 
 # File paths
 output_cx = "Abox/cx.ttl"
@@ -26,8 +26,6 @@ NAMESPACES = {
     "oliatop": oliatop,
     "rcxn": rcxn,
     "references": references,
-    "rd": rd,
-    "rdata": rdata,
     "rsrch": rsrch,
     "DC":DC,
     "DCTERMS":DCTERMS,
@@ -316,6 +314,10 @@ def create_abox_from_submissions():
             obj = g.value(subject=iri, predicate=gest.uses)
             g.add((obj, links.elementOf, subj))
 
+    # If study A is relevant for construction B, then construction B is based on study A
+    for subj, obj in g.subject_objects(evid.relevantFor):
+        g.add((obj, evid.basedOnStudy, subj))
+
     ##################################################################################
     # Distinguish between the IRI that belong to cx.ttl, membr.ttl and references.ttl
     ##################################################################################
@@ -329,13 +331,9 @@ def create_abox_from_submissions():
                 add_triples_recursively(g, graph_cx, o)
 
     # Identify triplets for cx.ttl
-    for s, p, o in g:
-        if isinstance(s, URIRef) and str(s).startswith(cx):
-            add_triples_recursively(g, graph_cx, s)
-
     # NB: For the moment, we save research data into cx. TODO: should we put them in their own Abox?
     for s, p, o in g:
-        if isinstance(s, URIRef) and str(s).startswith(rd):
+        if isinstance(s, URIRef) and str(s).startswith(cx):
             add_triples_recursively(g, graph_cx, s)
 
     # Serialize cx.ttl

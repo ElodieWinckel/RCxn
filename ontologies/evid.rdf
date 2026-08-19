@@ -22,6 +22,17 @@
     
 
 
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/evid#basedOnStudy -->
+
+    <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/evid#basedOnStudy">
+        <owl:inverseOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/evid#relevantFor"/>
+        <rdfs:range rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/evid#Study"/>
+        <rdfs:comment xml:lang="en">Establishes a connection between a construction and a linguistic study whose results informed the construction’s description.</rdfs:comment>
+        <rdfs:label xml:lang="en">based on</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/evid#biblio -->
 
     <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/evid#biblio">
@@ -63,6 +74,64 @@
     
 
 
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/evid#publishedIn -->
+
+    <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/evid#publishedIn">
+        <rdfs:domain rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/evid#Study"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">Relates a linguistic study to the bibliographic entry that reports it.</rdfs:comment>
+        <rdfs:label xml:lang="en">Publication</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/evid#relevantFor -->
+
+    <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/evid#relevantFor">
+        <rdfs:domain rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/evid#Study"/>
+        <rdfs:comment xml:lang="en">Establishes a connection between the linguistic study and the construction or phenomenon it aims to explore.</rdfs:comment>
+        <rdfs:label xml:lang="en">Relevant construction</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/evid#repository -->
+
+    <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/evid#repository">
+        <rdfs:domain rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/evid#Study"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">Relates a linguistic study to the online repository which contains research data, material and/or other research resources.</rdfs:comment>
+        <rdfs:label xml:lang="en">Repository</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/evid#summary -->
+
+    <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/evid#summary">
+        <rdfs:domain rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/evid#Study"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">Describes the content (method, results) of a linguistic study.</rdfs:comment>
+        <rdfs:label xml:lang="en">Summary</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -77,6 +146,25 @@
     <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#Bag -->
 
     <owl:Class rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#Bag"/>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/evid#BehavioralExperiment -->
+
+    <owl:Class rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/evid#BehavioralExperiment">
+        <rdfs:subClassOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/evid#Study"/>
+        <rdfs:comment xml:lang="en">An empirical study in linguistics that uses controlled, systematic tasks to investigate linguistic behavior in human participants.</rdfs:comment>
+        <rdfs:label xml:lang="en">Behavioral experiment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/evid#Study -->
+
+    <owl:Class rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/evid#Study">
+        <rdfs:comment xml:lang="en">An empirical study to investigate a linguistic phenomenon. It addresses a specific research question (or set of closely related questions) under a specific methodology.</rdfs:comment>
+        <rdfs:label xml:lang="en">Study</rdfs:label>
+    </owl:Class>
     
 
 

@@ -40,10 +40,6 @@ rcxn = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#")
 g.bind("rcxn", rcxn)
 references = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/references#")
 g.bind("references", references)
-rd = Namespace("http://example.org/rd/") #TODO: is this really the name?
-g.bind("rd", rd)
-rdata = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rdata#") #TODO: is this really the name? create ontology
-g.bind("rdata", rdata)
 rsrch = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#")
 g.bind("rsrch", rsrch)
 
