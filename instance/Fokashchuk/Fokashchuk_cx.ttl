@@ -1,0 +1,598 @@
+@prefix cx: <http://example.org/cx/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
+@prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#> .
+@prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
+@prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+membr:Project_Fokashchuk_241210_F250218 rsrch:basedOn cx:deu_Angriffauf,
+        cx:deu_Attentatauf,
+        cx:deu_Ausblickauf,
+        cx:deu_Hassauf,
+        cx:deu_Hinweisauf,
+        cx:deu_Konzentrationauf,
+        cx:deu_Satireauf,
+        cx:deu_Schussauf,
+        cx:deu_UEberfallauf,
+        cx:deu_UEbergriffauf,
+        cx:deu_XanY,
+        cx:deu_XaufY,
+        cx:deu_nan .
+
+cx:deu_Angriff_MD a rcxn:Metadata ;
+    dcterms:created "2026-08-25"^^xsd:date ;
+    rcxn:annotator membr:Fokashchuk .
+
+cx:deu_Angriffauf_1 rcxn:hasOtherSemanticContribution "trajector" ;
+    rcxn:hasSlotForm cx:deu_Angriffauf_1_Form .
+
+cx:deu_Angriffauf_1_Form a rcxn:SlotForm ;
+    rcxn:hasStem cx:deu_Angriff .
+
+cx:deu_Angriffauf_2 rcxn:hasOtherSemanticContribution "landmark" ;
+    rcxn:hasSlotForm cx:deu_Angriffauf_2_Form .
+
+cx:deu_Angriffauf_2_Form a rcxn:SlotForm ;
+    rcxn:hasStem cx:deu_auf .
+
+cx:deu_Angriffauf_3 rcxn:hasOtherSemanticContribution "NaN"^^xsd:double ;
+    rcxn:hasSlotForm cx:deu_Angriffauf_3_Form .
+
+cx:deu_Angriffauf_3_Form a rcxn:SlotForm .
+
+cx:deu_Angriffauf_MD a rcxn:Metadata ;
+    dcterms:created "2026-08-25"^^xsd:date ;
+    rcxn:annotator membr:Fokashchuk .
+
+cx:deu_Angriffauf_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "hostile advance, raid (DWDS)" .
+
+cx:deu_Angriffauf_slots a rdf:Seq ;
+    rdf:_1 cx:deu_Angriffauf_1 ;
+    rdf:_2 cx:deu_Angriffauf_2 ;
+    rdf:_3 cx:deu_Angriffauf_3 .
+
+cx:deu_Attentat_MD a rcxn:Metadata ;
+    dcterms:created "2026-08-25"^^xsd:date ;
+    rcxn:annotator membr:Fokashchuk .
+
+cx:deu_Attentatauf_1 rcxn:hasOtherSemanticContribution "trajector" ;
+    rcxn:hasSlotForm cx:deu_Attentatauf_1_Form .
+
+cx:deu_Attentatauf_1_Form a rcxn:SlotForm ;
+    rcxn:hasStem cx:deu_Attentat .
+
+cx:deu_Attentatauf_2 rcxn:hasOtherSemanticContribution "landmark" ;
+    rcxn:hasSlotForm cx:deu_Attentatauf_2_Form .
+
+cx:deu_Attentatauf_2_Form a rcxn:SlotForm ;
+    rcxn:hasStem cx:deu_auf .
+
+cx:deu_Attentatauf_3 rcxn:hasOtherSemanticContribution "NaN"^^xsd:double ;
+    rcxn:hasSlotForm cx:deu_Attentatauf_3_Form .
+
+cx:deu_Attentatauf_3_Form a rcxn:SlotForm .
+
+cx:deu_Attentatauf_MD a rcxn:Metadata ;
+    dcterms:created "2026-08-25"^^xsd:date ;
+    rcxn:annotator membr:Fokashchuk .
+
+cx:deu_Attentatauf_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "(Political) assassination attempt on a public figure (DWDS)" .
+
+cx:deu_Attentatauf_slots a rdf:Seq ;
+    rdf:_1 cx:deu_Attentatauf_1 ;
+    rdf:_2 cx:deu_Attentatauf_2 ;
+    rdf:_3 cx:deu_Attentatauf_3 .
+
+cx:deu_Ausblickauf_1 rcxn:hasOtherSemanticContribution "trajector" ;
+    rcxn:hasSlotForm cx:deu_Ausblickauf_1_Form .
+
+cx:deu_Ausblickauf_1_Form a rcxn:SlotForm ;
+    rcxn:hasStem cx:deu_nan .
+
+cx:deu_Ausblickauf_2 rcxn:hasOtherSemanticContribution "landmark" ;
+    rcxn:hasSlotForm cx:deu_Ausblickauf_2_Form .
+
+cx:deu_Ausblickauf_2_Form a rcxn:SlotForm ;
+    rcxn:hasStem cx:deu_auf .
+
+cx:deu_Ausblickauf_3 rcxn:hasOtherSemanticContribution "NaN"^^xsd:double ;
+    rcxn:hasSlotForm cx:deu_Ausblickauf_3_Form .
+
+cx:deu_Ausblickauf_3_Form a rcxn:SlotForm .
+
+cx:deu_Ausblickauf_MD a rcxn:Metadata ;
+    dcterms:created "2026-08-25"^^xsd:date ;
+    rcxn:annotator membr:Fokashchuk .
+
+cx:deu_Ausblickauf_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "Outlook on sth. (DWDS)" .
+
+cx:deu_Ausblickauf_slots a rdf:Seq ;
+    rdf:_1 cx:deu_Ausblickauf_1 ;
+    rdf:_2 cx:deu_Ausblickauf_2 ;
+    rdf:_3 cx:deu_Ausblickauf_3 .
+
+cx:deu_Hass_MD a rcxn:Metadata ;
+    dcterms:created "2026-08-25"^^xsd:date ;
+    rcxn:annotator membr:Fokashchuk .
+
+cx:deu_Hassauf_1 rcxn:hasOtherSemanticContribution "trajector" ;
+    rcxn:hasSlotForm cx:deu_Hassauf_1_Form .
+
+cx:deu_Hassauf_1_Form a rcxn:SlotForm ;
+    rcxn:hasStem cx:deu_Hass .
+
+cx:deu_Hassauf_2 rcxn:hasOtherSemanticContribution "landmark" ;
+    rcxn:hasSlotForm cx:deu_Hassauf_2_Form .
+
+cx:deu_Hassauf_2_Form a rcxn:SlotForm ;
+    rcxn:hasStem cx:deu_auf .
+
+cx:deu_Hassauf_3 rcxn:hasOtherSemanticContribution "NaN"^^xsd:double ;
+    rcxn:hasSlotForm cx:deu_Hassauf_3_Form .
+
+cx:deu_Hassauf_3_Form a rcxn:SlotForm .
+
+cx:deu_Hassauf_MD a rcxn:Metadata ;
+    dcterms:created "2026-08-25"^^xsd:date ;
+    rcxn:annotator membr:Fokashchuk .
+
+cx:deu_Hassauf_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "a strong sense of hostility, rejection directed towards sb./sth. (DWDS)" .
+
+cx:deu_Hassauf_slots a rdf:Seq ;
+    rdf:_1 cx:deu_Hassauf_1 ;
+    rdf:_2 cx:deu_Hassauf_2 ;
+    rdf:_3 cx:deu_Hassauf_3 .
+
+cx:deu_Hinweisauf_1 rcxn:hasOtherSemanticContribution "trajector" ;
+    rcxn:hasSlotForm cx:deu_Hinweisauf_1_Form .
+
+cx:deu_Hinweisauf_1_Form a rcxn:SlotForm ;
+    rcxn:hasStem cx:deu_nan .
+
+cx:deu_Hinweisauf_2 rcxn:hasOtherSemanticContribution "landmark" ;
+    rcxn:hasSlotForm cx:deu_Hinweisauf_2_Form .
+
+cx:deu_Hinweisauf_2_Form a rcxn:SlotForm ;
+    rcxn:hasStem cx:deu_auf .
+
+cx:deu_Hinweisauf_3 rcxn:hasOtherSemanticContribution "NaN"^^xsd:double ;
+    rcxn:hasSlotForm cx:deu_Hinweisauf_3_Form .
+
+cx:deu_Hinweisauf_3_Form a rcxn:SlotForm .
+
+cx:deu_Hinweisauf_MD a rcxn:Metadata ;
+    dcterms:created "2026-08-25"^^xsd:date ;
+    rcxn:annotator membr:Fokashchuk .
+
+cx:deu_Hinweisauf_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "a hint pointed at sth. (DWDS)" .
+
+cx:deu_Hinweisauf_slots a rdf:Seq ;
+    rdf:_1 cx:deu_Hinweisauf_1 ;
+    rdf:_2 cx:deu_Hinweisauf_2 ;
+    rdf:_3 cx:deu_Hinweisauf_3 .
+
+cx:deu_Konzentration_MD a rcxn:Metadata ;
+    dcterms:created "2026-08-25"^^xsd:date ;
+    rcxn:annotator membr:Fokashchuk .
+
+cx:deu_Konzentrationauf_1 rcxn:hasOtherSemanticContribution "trajector" ;
+    rcxn:hasSlotForm cx:deu_Konzentrationauf_1_Form .
+
+cx:deu_Konzentrationauf_1_Form a rcxn:SlotForm ;
+    rcxn:hasStem cx:deu_Konzentration .
+
+cx:deu_Konzentrationauf_2 rcxn:hasOtherSemanticContribution "landmark" ;
+    rcxn:hasSlotForm cx:deu_Konzentrationauf_2_Form .
+
+cx:deu_Konzentrationauf_2_Form a rcxn:SlotForm ;
+    rcxn:hasStem cx:deu_auf .
+
+cx:deu_Konzentrationauf_3 rcxn:hasOtherSemanticContribution "NaN"^^xsd:double ;
+    rcxn:hasSlotForm cx:deu_Konzentrationauf_3_Form .
+
+cx:deu_Konzentrationauf_3_Form a rcxn:SlotForm .
+
+cx:deu_Konzentrationauf_MD a rcxn:Metadata ;
+    dcterms:created "2026-08-25"^^xsd:date ;
+    rcxn:annotator membr:Fokashchuk .
+
+cx:deu_Konzentrationauf_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "nan (DWDS)" .
+
+cx:deu_Konzentrationauf_slots a rdf:Seq ;
+    rdf:_1 cx:deu_Konzentrationauf_1 ;
+    rdf:_2 cx:deu_Konzentrationauf_2 ;
+    rdf:_3 cx:deu_Konzentrationauf_3 .
+
+cx:deu_Satireauf_1 rcxn:hasOtherSemanticContribution "trajector" ;
+    rcxn:hasSlotForm cx:deu_Satireauf_1_Form .
+
+cx:deu_Satireauf_1_Form a rcxn:SlotForm ;
+    rcxn:hasStem cx:deu_nan .
+
+cx:deu_Satireauf_2 rcxn:hasOtherSemanticContribution "landmark" ;
+    rcxn:hasSlotForm cx:deu_Satireauf_2_Form .
+
+cx:deu_Satireauf_2_Form a rcxn:SlotForm ;
+    rcxn:hasStem cx:deu_auf .
+
+cx:deu_Satireauf_3 rcxn:hasOtherSemanticContribution "NaN"^^xsd:double ;
+    rcxn:hasSlotForm cx:deu_Satireauf_3_Form .
+
+cx:deu_Satireauf_3_Form a rcxn:SlotForm .
+
+cx:deu_Satireauf_MD a rcxn:Metadata ;
+    dcterms:created "2026-08-25"^^xsd:date ;
+    rcxn:annotator membr:Fokashchuk .
+
+cx:deu_Satireauf_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "A form of humor, which uses the sharpest satire and revealing polemics to expose characteristic contradictions in individuals and society and hold them up to ridicule (DWDS)" .
+
+cx:deu_Satireauf_slots a rdf:Seq ;
+    rdf:_1 cx:deu_Satireauf_1 ;
+    rdf:_2 cx:deu_Satireauf_2 ;
+    rdf:_3 cx:deu_Satireauf_3 .
+
+cx:deu_Schuss_MD a rcxn:Metadata ;
+    dcterms:created "2026-08-25"^^xsd:date ;
+    rcxn:annotator membr:Fokashchuk .
+
+cx:deu_Schussauf_1 rcxn:hasOtherSemanticContribution "trajector" ;
+    rcxn:hasSlotForm cx:deu_Schussauf_1_Form .
+
+cx:deu_Schussauf_1_Form a rcxn:SlotForm ;
+    rcxn:hasStem cx:deu_Schuss .
+
+cx:deu_Schussauf_2 rcxn:hasOtherSemanticContribution "landmark" ;
+    rcxn:hasSlotForm cx:deu_Schussauf_2_Form .
+
+cx:deu_Schussauf_2_Form a rcxn:SlotForm ;
+    rcxn:hasStem cx:deu_auf .
+
+cx:deu_Schussauf_3 rcxn:hasOtherSemanticContribution "NaN"^^xsd:double ;
+    rcxn:hasSlotForm cx:deu_Schussauf_3_Form .
+
+cx:deu_Schussauf_3_Form a rcxn:SlotForm .
+
+cx:deu_Schussauf_MD a rcxn:Metadata ;
+    dcterms:created "2026-08-25"^^xsd:date ;
+    rcxn:annotator membr:Fokashchuk .
+
+cx:deu_Schussauf_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "the act of firing a projectile (DWDS)" .
+
+cx:deu_Schussauf_slots a rdf:Seq ;
+    rdf:_1 cx:deu_Schussauf_1 ;
+    rdf:_2 cx:deu_Schussauf_2 ;
+    rdf:_3 cx:deu_Schussauf_3 .
+
+cx:deu_UEberfall_MD a rcxn:Metadata ;
+    dcterms:created "2026-08-25"^^xsd:date ;
+    rcxn:annotator membr:Fokashchuk .
+
+cx:deu_UEberfallauf_1 rcxn:hasOtherSemanticContribution "trajector" ;
+    rcxn:hasSlotForm cx:deu_UEberfallauf_1_Form .
+
+cx:deu_UEberfallauf_1_Form a rcxn:SlotForm ;
+    rcxn:hasStem cx:deu_UEberfall .
+
+cx:deu_UEberfallauf_2 rcxn:hasOtherSemanticContribution "landmark" ;
+    rcxn:hasSlotForm cx:deu_UEberfallauf_2_Form .
+
+cx:deu_UEberfallauf_2_Form a rcxn:SlotForm ;
+    rcxn:hasStem cx:deu_auf .
+
+cx:deu_UEberfallauf_3 rcxn:hasOtherSemanticContribution "NaN"^^xsd:double ;
+    rcxn:hasSlotForm cx:deu_UEberfallauf_3_Form .
+
+cx:deu_UEberfallauf_3_Form a rcxn:SlotForm .
+
+cx:deu_UEberfallauf_MD a rcxn:Metadata ;
+    dcterms:created "2026-08-25"^^xsd:date ;
+    rcxn:annotator membr:Fokashchuk .
+
+cx:deu_UEberfallauf_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "surprise attack (DWDS)" .
+
+cx:deu_UEberfallauf_slots a rdf:Seq ;
+    rdf:_1 cx:deu_UEberfallauf_1 ;
+    rdf:_2 cx:deu_UEberfallauf_2 ;
+    rdf:_3 cx:deu_UEberfallauf_3 .
+
+cx:deu_UEbergriff_MD a rcxn:Metadata ;
+    dcterms:created "2026-08-25"^^xsd:date ;
+    rcxn:annotator membr:Fokashchuk .
+
+cx:deu_UEbergriffauf_1 rcxn:hasOtherSemanticContribution "trajector" ;
+    rcxn:hasSlotForm cx:deu_UEbergriffauf_1_Form .
+
+cx:deu_UEbergriffauf_1_Form a rcxn:SlotForm ;
+    rcxn:hasStem cx:deu_UEbergriff .
+
+cx:deu_UEbergriffauf_2 rcxn:hasOtherSemanticContribution "landmark" ;
+    rcxn:hasSlotForm cx:deu_UEbergriffauf_2_Form .
+
+cx:deu_UEbergriffauf_2_Form a rcxn:SlotForm ;
+    rcxn:hasStem cx:deu_auf .
+
+cx:deu_UEbergriffauf_3 rcxn:hasOtherSemanticContribution "NaN"^^xsd:double ;
+    rcxn:hasSlotForm cx:deu_UEbergriffauf_3_Form .
+
+cx:deu_UEbergriffauf_3_Form a rcxn:SlotForm .
+
+cx:deu_UEbergriffauf_MD a rcxn:Metadata ;
+    dcterms:created "2026-08-25"^^xsd:date ;
+    rcxn:annotator membr:Fokashchuk .
+
+cx:deu_UEbergriffauf_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "an act carried out without authorization, exceeding one's authority, and directed against someone or something (DWDS)" .
+
+cx:deu_UEbergriffauf_slots a rdf:Seq ;
+    rdf:_1 cx:deu_UEbergriffauf_1 ;
+    rdf:_2 cx:deu_UEbergriffauf_2 ;
+    rdf:_3 cx:deu_UEbergriffauf_3 .
+
+cx:deu_XanY a rcxn:Construction ;
+    lg:partOfLanguage lg:deu ;
+    rcxn:hasConstructionMeaning cx:deu_XanY_Meaning ;
+    rcxn:hasMetadata cx:deu_XanY_MD ;
+    rcxn:hasSlots cx:deu_XanY_slots ;
+    rcxn:hasTitle "X an Y" .
+
+cx:deu_XanY_1 rcxn:hasOtherSemanticContribution "trajector" ;
+    rcxn:hasSlotForm cx:deu_XanY_1_Form .
+
+cx:deu_XanY_1_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:deu_Noun .
+
+cx:deu_XanY_2 rcxn:hasOtherSemanticContribution "landmark" ;
+    rcxn:hasSlotForm cx:deu_XanY_2_Form .
+
+cx:deu_XanY_2_Form a rcxn:SlotForm ;
+    rcxn:hasStem cx:deu_an .
+
+cx:deu_XanY_3 rcxn:hasOtherSemanticContribution "NaN"^^xsd:double ;
+    rcxn:hasSlotForm cx:deu_XanY_3_Form .
+
+cx:deu_XanY_3_Form a rcxn:SlotForm .
+
+cx:deu_XanY_MD a rcxn:Metadata ;
+    dcterms:created "2026-08-25"^^xsd:date ;
+    rcxn:annotator membr:Fokashchuk .
+
+cx:deu_XanY_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "Directed orientation toward a referent (DWDS)",
+        "Relational attachment to a domain (DWDS)" .
+
+cx:deu_XanY_slots a rdf:Seq ;
+    rdf:_1 cx:deu_XanY_1 ;
+    rdf:_2 cx:deu_XanY_2 ;
+    rdf:_3 cx:deu_XanY_3 .
+
+cx:deu_XaufY a rcxn:Construction ;
+    lg:partOfLanguage lg:deu ;
+    rcxn:hasConstructionMeaning cx:deu_XaufY_Meaning ;
+    rcxn:hasMetadata cx:deu_XaufY_MD ;
+    rcxn:hasSlots cx:deu_XaufY_slots ;
+    rcxn:hasTitle "X auf Y" .
+
+cx:deu_XaufY_1 rcxn:hasOtherSemanticContribution "trajector" ;
+    rcxn:hasSlotForm cx:deu_XaufY_1_Form .
+
+cx:deu_XaufY_1_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:deu_Noun .
+
+cx:deu_XaufY_2 rcxn:hasOtherSemanticContribution "landmark" ;
+    rcxn:hasSlotForm cx:deu_XaufY_2_Form .
+
+cx:deu_XaufY_2_Form a rcxn:SlotForm ;
+    rcxn:hasStem cx:deu_auf .
+
+cx:deu_XaufY_3 rcxn:hasOtherSemanticContribution "Obj. (animate/inanimate) towards which an action is directed" ;
+    rcxn:hasSlotForm cx:deu_XaufY_3_Form .
+
+cx:deu_XaufY_3_Form a rcxn:SlotForm .
+
+cx:deu_XaufY_MD a rcxn:Metadata ;
+    dcterms:created "2026-08-25"^^xsd:date ;
+    rcxn:annotator membr:Fokashchuk .
+
+cx:deu_XaufY_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "Directed cognitive/communicative act towards an entity (DWDS)",
+        "Directed physical/abstract aggression towards an entity (DWDS)" .
+
+cx:deu_XaufY_slots a rdf:Seq ;
+    rdf:_1 cx:deu_XaufY_1 ;
+    rdf:_2 cx:deu_XaufY_2 ;
+    rdf:_3 cx:deu_XaufY_3 .
+
+cx:deu_nan_1 rcxn:hasOtherSemanticContribution "NaN"^^xsd:double,
+        "trajector" ;
+    rcxn:hasSlotForm cx:deu_nan_1_Form .
+
+cx:deu_nan_1_Form a rcxn:SlotForm ;
+    rcxn:hasStem cx:deu_Angriff,
+        cx:deu_Attentat,
+        cx:deu_Hass,
+        cx:deu_Konzentration,
+        cx:deu_Schuss,
+        cx:deu_UEberfall,
+        cx:deu_UEbergriff,
+        cx:deu_nan .
+
+cx:deu_nan_2 rcxn:hasOtherSemanticContribution "NaN"^^xsd:double,
+        "landmark" ;
+    rcxn:hasSlotForm cx:deu_nan_2_Form .
+
+cx:deu_nan_2_Form a rcxn:SlotForm ;
+    rcxn:hasStem cx:deu_auf,
+        cx:deu_nan .
+
+cx:deu_nan_3 rcxn:hasOtherSemanticContribution "NaN"^^xsd:double,
+        "an inanimate entity toward which a cognitive/attentional process is directed",
+        "an inanimate entity toward which a satire is directed",
+        "aniamte obj. towards which an action directed",
+        "aniamte obj. towards which an action is directed",
+        "aniamte obj. towards which an emotionis directed",
+        "animate obj. towards which an aggressive action is directed",
+        "inaniamte obj. towards which an action is directed",
+        "inanimate obj. towards which a cognitive activity is directed",
+        "inanimate obj. towards which an aggressive action is directed",
+        "inanimate temporal entity toward which a prospective cognitive orientation is directed" ;
+    rcxn:hasSlotForm cx:deu_nan_3_Form .
+
+cx:deu_nan_3_Form a rcxn:SlotForm .
+
+cx:deu_nan_MD a rcxn:Metadata ;
+    dcterms:created "2026-08-25"^^xsd:date ;
+    rcxn:annotator membr:Fokashchuk .
+
+cx:deu_nan_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "an attack directed against X / an attempt to damage or undermine X (DWDS)",
+        "nan (DWDS)",
+        "sustained tension; focusing all one's mental energy on a problem or goal; intense concentration on sb./sth. (DWDS)" .
+
+cx:deu_nan_slots a rdf:Seq ;
+    rdf:_1 cx:deu_nan_1 ;
+    rdf:_2 cx:deu_nan_2 ;
+    rdf:_3 cx:deu_nan_3 .
+
+cx:deu_Angriff a rcxn:Construction ;
+    lg:partOfLanguage lg:deu ;
+    links:elementOf cx:deu_Angriffauf,
+        cx:deu_nan ;
+    rcxn:hasMetadata cx:deu_Angriff_MD ;
+    rcxn:hasTitle "Angriff" .
+
+cx:deu_Angriffauf a rcxn:Construction ;
+    lg:partOfLanguage lg:deu ;
+    rcxn:hasConstructionMeaning cx:deu_Angriffauf_Meaning ;
+    rcxn:hasMetadata cx:deu_Angriffauf_MD ;
+    rcxn:hasSlots cx:deu_Angriffauf_slots ;
+    rcxn:hasTitle "Angriff auf" .
+
+cx:deu_Attentat a rcxn:Construction ;
+    lg:partOfLanguage lg:deu ;
+    links:elementOf cx:deu_Attentatauf,
+        cx:deu_nan ;
+    rcxn:hasMetadata cx:deu_Attentat_MD ;
+    rcxn:hasTitle "Attentat" .
+
+cx:deu_Attentatauf a rcxn:Construction ;
+    lg:partOfLanguage lg:deu ;
+    rcxn:hasConstructionMeaning cx:deu_Attentatauf_Meaning ;
+    rcxn:hasMetadata cx:deu_Attentatauf_MD ;
+    rcxn:hasSlots cx:deu_Attentatauf_slots ;
+    rcxn:hasTitle "Attentat auf " .
+
+cx:deu_Ausblickauf a rcxn:Construction ;
+    lg:partOfLanguage lg:deu ;
+    rcxn:hasConstructionMeaning cx:deu_Ausblickauf_Meaning ;
+    rcxn:hasMetadata cx:deu_Ausblickauf_MD ;
+    rcxn:hasSlots cx:deu_Ausblickauf_slots ;
+    rcxn:hasTitle "Ausblick auf" .
+
+cx:deu_Hass a rcxn:Construction ;
+    lg:partOfLanguage lg:deu ;
+    links:elementOf cx:deu_Hassauf,
+        cx:deu_nan ;
+    rcxn:hasMetadata cx:deu_Hass_MD ;
+    rcxn:hasTitle "Hass" .
+
+cx:deu_Hassauf a rcxn:Construction ;
+    lg:partOfLanguage lg:deu ;
+    rcxn:hasConstructionMeaning cx:deu_Hassauf_Meaning ;
+    rcxn:hasMetadata cx:deu_Hassauf_MD ;
+    rcxn:hasSlots cx:deu_Hassauf_slots ;
+    rcxn:hasTitle "Hass auf" .
+
+cx:deu_Hinweisauf a rcxn:Construction ;
+    lg:partOfLanguage lg:deu ;
+    rcxn:hasConstructionMeaning cx:deu_Hinweisauf_Meaning ;
+    rcxn:hasMetadata cx:deu_Hinweisauf_MD ;
+    rcxn:hasSlots cx:deu_Hinweisauf_slots ;
+    rcxn:hasTitle "Hinweis auf " .
+
+cx:deu_Konzentration a rcxn:Construction ;
+    lg:partOfLanguage lg:deu ;
+    links:elementOf cx:deu_Konzentrationauf,
+        cx:deu_nan ;
+    rcxn:hasMetadata cx:deu_Konzentration_MD ;
+    rcxn:hasTitle "Konzentration " .
+
+cx:deu_Konzentrationauf a rcxn:Construction ;
+    lg:partOfLanguage lg:deu ;
+    rcxn:hasConstructionMeaning cx:deu_Konzentrationauf_Meaning ;
+    rcxn:hasMetadata cx:deu_Konzentrationauf_MD ;
+    rcxn:hasSlots cx:deu_Konzentrationauf_slots ;
+    rcxn:hasTitle "Konzentration auf " .
+
+cx:deu_Satireauf a rcxn:Construction ;
+    lg:partOfLanguage lg:deu ;
+    rcxn:hasConstructionMeaning cx:deu_Satireauf_Meaning ;
+    rcxn:hasMetadata cx:deu_Satireauf_MD ;
+    rcxn:hasSlots cx:deu_Satireauf_slots ;
+    rcxn:hasTitle "Satire auf" .
+
+cx:deu_Schuss a rcxn:Construction ;
+    lg:partOfLanguage lg:deu ;
+    links:elementOf cx:deu_Schussauf,
+        cx:deu_nan ;
+    rcxn:hasMetadata cx:deu_Schuss_MD ;
+    rcxn:hasTitle "Schuss" .
+
+cx:deu_Schussauf a rcxn:Construction ;
+    lg:partOfLanguage lg:deu ;
+    rcxn:hasConstructionMeaning cx:deu_Schussauf_Meaning ;
+    rcxn:hasMetadata cx:deu_Schussauf_MD ;
+    rcxn:hasSlots cx:deu_Schussauf_slots ;
+    rcxn:hasTitle "Schuss auf" .
+
+cx:deu_UEberfall a rcxn:Construction ;
+    lg:partOfLanguage lg:deu ;
+    links:elementOf cx:deu_UEberfallauf,
+        cx:deu_nan ;
+    rcxn:hasMetadata cx:deu_UEberfall_MD ;
+    rcxn:hasTitle "Überfall " .
+
+cx:deu_UEberfallauf a rcxn:Construction ;
+    lg:partOfLanguage lg:deu ;
+    rcxn:hasConstructionMeaning cx:deu_UEberfallauf_Meaning ;
+    rcxn:hasMetadata cx:deu_UEberfallauf_MD ;
+    rcxn:hasSlots cx:deu_UEberfallauf_slots ;
+    rcxn:hasTitle "Überfall auf" .
+
+cx:deu_UEbergriff a rcxn:Construction ;
+    lg:partOfLanguage lg:deu ;
+    links:elementOf cx:deu_UEbergriffauf,
+        cx:deu_nan ;
+    rcxn:hasMetadata cx:deu_UEbergriff_MD ;
+    rcxn:hasTitle "Übergriff" .
+
+cx:deu_UEbergriffauf a rcxn:Construction ;
+    lg:partOfLanguage lg:deu ;
+    rcxn:hasConstructionMeaning cx:deu_UEbergriffauf_Meaning ;
+    rcxn:hasMetadata cx:deu_UEbergriffauf_MD ;
+    rcxn:hasSlots cx:deu_UEbergriffauf_slots ;
+    rcxn:hasTitle "Übergriff auf " .
+
+cx:deu_nan a rcxn:Construction ;
+    lg:partOfLanguage lg:deu ;
+    links:elementOf cx:deu_Ausblickauf,
+        cx:deu_Hinweisauf,
+        cx:deu_Satireauf,
+        cx:deu_nan ;
+    rcxn:hasConstructionMeaning cx:deu_nan_Meaning ;
+    rcxn:hasMetadata cx:deu_nan_MD ;
+    rcxn:hasSlots cx:deu_nan_slots ;
+    rcxn:hasTitle "NaN"^^xsd:double,
+        "nan" .
+
