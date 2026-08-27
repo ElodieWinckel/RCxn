@@ -24,8 +24,9 @@ cx:comePLUSnoisemannerofmovementVing a rcxn:Construction ;
         cx:comePLUSnoisemannerofmovementVing_Ex_D ;
     rcxn:hasMetadata cx:comePLUSnoisemannerofmovementVing_MD ;
     rcxn:hasSlots cx:comePLUSnoisemannerofmovementVing_slots ;
-    lg:partOfLanguage lg:eng ;
-    RDFS:comment "tables (of association scores, etc.) and possibly some figures" .
+    lg:partOfLanguage lg:eng .
+
+# RDFS:comment "tables (of association scores, etc.) and possibly some figures" .
 
 cx:comePLUSnoisemannerofmovementVing_1 a rcxn:SlotOptional ;
     rcxn:hasSlotForm cx:comePLUSnoisemannerofmovementVing_1_Form ;
@@ -130,7 +131,7 @@ cx:comePLUSnoisemannerofmovementVing_MD a rcxn:Metadata ;
     cx:hasSources cx:comePLUSnoisemannerofmovementVing_Sources .
 
 cx:comePLUSnoisemannerofmovementVing_Meaning a rcxn:ConstructionMeaning ;
-    rcxn:hasMeaning "[Someone or something]1 moves towards [a reference point]4 in [a specified manner]3, often in a manner that is fast, sudden, uncontrolled, noisy, or otherwise overwhelming." .
+    rcxn:hasMeaning "[Someone or something]1 moves towards a reference point in [a specified manner]3, often in a manner that is fast, sudden, uncontrolled, noisy, or otherwise overwhelming." .
 
 cx:comePLUSnoisemannerofmovementVing_Sources a dcmitype:Collection ;
     dcterm:hasPart references:08c12345-af8413-45e16f-746e5f49b3f9 .
@@ -160,5 +161,9 @@ cx:eng_PrepositionalPhrase a rcxn:Construction ;
 membr:Project_Patel rsrch:hasResearchQuestion membr:Project_Patel_241128 .
 
 membr:Project_Patel_241128 a rsrch:Project ;
+    rsrch:hasFindings membr:Project_Patel_241128_F2608271115 ;
     rsrch:projectName "Identifying semantic sub-constructions of the V-ing pattern" .
 
+membr:Project_Patel_241128_F2608271115 a rsrch:Finding ;
+    RDFS:label "[provisional] In addition to demonstrating the usefulness of the QuACC analysis tool, the case study has shown ways in which measures of productivity, t-SNE plots of slot filler embeddings, and different kinds of collexeme analysis can help identify which sub-patterns are likely construction candidates. In particular, it has demonstrated how quantitative analyses can determine which slot restrictions are relevant for delineating a candidate, at which level(s) of schematicity they can be posited, and how restrictions on different slots co-vary." ;
+    rsrch:basedOn cx:comePLUSnoisemannerofmovementVing .

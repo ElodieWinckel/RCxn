@@ -434,7 +434,12 @@ membr:Project_Patel a rsrch:Project ;
     rsrch:projectName "Corpus evidence for delineating constructions"@en .
 
 membr:Project_Patel_241128 a rsrch:Project ;
+    rsrch:hasFindings membr:Project_Patel_241128_F2608271115 ;
     rsrch:projectName "Identifying semantic sub-constructions of the V-ing pattern" .
+
+membr:Project_Patel_241128_F2608271115 a rsrch:Finding ;
+    RDFS:label "[provisional] In addition to demonstrating the usefulness of the QuACC analysis tool, the case study has shown ways in which measures of productivity, t-SNE plots of slot filler embeddings, and different kinds of collexeme analysis can help identify which sub-patterns are likely construction candidates. In particular, it has demonstrated how quantitative analyses can determine which slot restrictions are relevant for delineating a candidate, at which level(s) of schematicity they can be posited, and how restrictions on different slots co-vary." ;
+    rsrch:basedOn cx:comePLUSnoisemannerofmovementVing .
 
 membr:Project_Petrenko a rsrch:Project ;
     rsrch:hasFindings membr:Project_Petrenko_F2603061532 ;
