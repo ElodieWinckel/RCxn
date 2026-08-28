@@ -21,7 +21,7 @@ cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause a rcxn:Construction ;
     rcxn:hasConstructionMeaning cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_Meaning ;
     cx:hasExample cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_Ex_A,
         cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_Ex_B,
-        cx:Trcx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_Ex_C,
+        cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_Ex_C,
         cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_Ex_D ;
     rcxn:hasMetadata cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_MD ;
     rcxn:hasSlots cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_slots ;
@@ -210,8 +210,13 @@ references:db2b532f-f711-4470-8922-91afa4fc6aef-2 evid:biblio "Kenanidis, Panagi
 
 # RESEARCH DATA
 
+cx:FernandezSantos_20260130_629470 a evid:BehavioralExperiment ;
+    evid:relevantFor cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause ;
+    evid:publishedIn references:db2b532f-f711-4470-8922-91afa4fc6aef-1 ;
+    evid:repository "https://osf.io/4x6pz/" .
+
 cx:FernandezSantos_20260130_629471 a evid:BehavioralExperiment ;
     evid:relevantFor cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause ;
     evid:publishedIn references:8440be44-e7bb-4219-ae21-3ba91bc4696b ;
-    evid:repository "https://osf.io/4x6pz/" ;
+    evid:repository "https://osf.io/f7ymg/" ;
     evid:summary "Participants' accuracy on subject relative clauses is at ceiling only when the verb follows the relativizer. Accuracy decreases when the verb is in a clause-final position. Object relative clauses are not at ceiling, but are misinterpreted as subject relative clauses over 90% of the time when there is no object marker and the verb follows the relativizer. The presence of an object marker does not impact accuracy when the verb is clause-final." .
