@@ -10,7 +10,7 @@
 
 cx:eng_PhysicalHeight a gest:GestureConstruction ;
     gest:hasForm cx:eng_PhysicalHeight_Form ;
-    lg:partOfLanguage lg:eng ;
+    lg:partOfLanguage lg:engUsSpo ;
     gest:hasMeaning cx:eng_PhysicalHeight_Meaning ;
     rcxn:hasTitle "Physical Height Gesture Construction" ;
     rcxn:hasMetadata cx:eng_PhysicalHeight_MD .

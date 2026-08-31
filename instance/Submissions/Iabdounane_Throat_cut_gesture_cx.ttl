@@ -10,7 +10,7 @@
 
 cx:eng_ThroatCutGesture a gest:GestureConstruction ;
     gest:hasForm cx:eng_ThroatCutGesture_Form ;
-    lg:partOfLanguage lg:eng ;
+    lg:partOfLanguage lg:engUsSpo ;
     gest:hasMeaning cx:eng_ThroatCutGesture_Meaning ;
     rcxn:hasTitle "Throat Cut Gesture Construction" ;
     rcxn:hasMetadata cx:eng_ThroatCutGesture_MD .

@@ -10,7 +10,7 @@
 
 cx:SmallQuantityGestureConstruction a gest:GestureConstruction ;
     gest:hasForm cx:SmallQuantityGestureConstruction_Form ;
-    lg:partOfLanguage lg:eng ;
+    lg:partOfLanguage lg:engUsSpo ;
     gest:hasMeaning cx:SmallQuantityGestureConstruction_Meaning ;
     rcxn:hasTitle "Small Quantity Gesture Construction" ;
     rcxn:hasMetadata cx:SmallQuantityGestureConstruction_MD .

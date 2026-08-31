@@ -13,7 +13,7 @@ cx:engLME_GIVEOUTVerbParticleConstruction a rcxn:Construction ;
     cx:hasExample cx:engLME_GIVEOUTVerbParticleConstruction_Ex_A ;
     rcxn:hasMetadata cx:engLME_GIVEOUTVerbParticleConstruction_MD ;
     rcxn:hasSlots cx:engLME_GIVEOUTVerbParticleConstruction_slots ;
-    lg:partOfLanguage lg:eng .
+    lg:partOfLanguage lg:engLME .
 
 cx:engLME_GIVEOUTVerbParticleConstruction_1 a rcxn:SlotOptional ;
     rcxn:hasSlotForm cx:engLME_GIVEOUTVerbParticleConstruction_1_Form ;

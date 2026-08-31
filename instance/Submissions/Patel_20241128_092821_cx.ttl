@@ -24,7 +24,7 @@ cx:comePLUSnoisemannerofmovementVing a rcxn:Construction ;
         cx:comePLUSnoisemannerofmovementVing_Ex_D ;
     rcxn:hasMetadata cx:comePLUSnoisemannerofmovementVing_MD ;
     rcxn:hasSlots cx:comePLUSnoisemannerofmovementVing_slots ;
-    lg:partOfLanguage lg:eng .
+    lg:partOfLanguage lg:engLME .
 
 # RDFS:comment "tables (of association scores, etc.) and possibly some figures" .
 

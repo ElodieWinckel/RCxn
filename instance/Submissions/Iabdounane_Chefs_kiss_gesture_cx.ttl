@@ -11,7 +11,7 @@
 cx:eng_ChefskissGesturalConstruction a gest:GestureConstruction ;
     gest:hasForm cx:eng_ChefskissGesturalConstruction_Form ;
     gest:hasMeaning cx:eng_ChefskissGesturalConstruction_Meaning ;
-    lg:partOfLanguage lg:eng ;
+    lg:partOfLanguage lg:engUsSpo ;
     rcxn:hasTitle "Chef’s Kiss as a Gestural Construction" ;
     rcxn:hasMetadata cx:eng_ChefskissGesturalConstruction_MD .
 

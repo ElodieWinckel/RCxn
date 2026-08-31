@@ -29,12 +29,12 @@ cx:engLME_Pullsomethingoutofahat a rcxn:Construction ;
     rcxn:annotator membr:Rastegar ;
     dcterm:created "2024-12-04"^^xsd:date ;
     rcxn:hasTitle "Pull something out of a hat" ;
-    lg:partOfLanguage lg:eng .
+    lg:partOfLanguage lg:engLME .
 
 cx:engLME_Rollupyoursleeves a rcxn:Construction ;
     rcxn:hasMetadata cx:engLME_Rollupyoursleeves_MD ;
     rcxn:hasTitle "Roll up your sleeves" ;
-    lg:partOfLanguage lg:eng .
+    lg:partOfLanguage lg:engLME .
 
 cx:engLME_Rollupyoursleeves_MD a rcxn:Metadata ;
     rcxn:annotator membr:Rastegar ;

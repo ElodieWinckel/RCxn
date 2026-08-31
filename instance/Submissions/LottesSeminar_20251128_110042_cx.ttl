@@ -318,7 +318,7 @@ cx:eng_Keepacoolheadconstruction_slots a rdf:Seq ;
 cx:eng_Keepacoolheadconstruction a rcxn:Construction ;
     cx:hasExample cx:eng_Keepacoolheadconstruction_Ex_A ;
     RDFS:comment "first attested 1718, cf. OED" ;
-    lg:partOfLanguage lg:eng ;
+    lg:partOfLanguage lg:engLME ;
     rcxn:hasConstructionMeaning cx:eng_Keepacoolheadconstruction_Meaning ;
     rcxn:hasMetadata cx:eng_Keepacoolheadconstruction_MD ;
     rcxn:hasSlots cx:eng_Keepacoolheadconstruction_slots ;
@@ -462,7 +462,7 @@ cx:eng_AdjectiveAttributiveconstruction_slots a rdf:Seq ;
 cx:eng_AdjectivePhrase links:elementOf cx:eng_AdjectiveAttributiveconstruction .
 
 cx:eng_AdjectiveAttributiveconstruction a rcxn:Construction ;
-    lg:partOfLanguage lg:eng ;
+    lg:partOfLanguage lg:engLME ;
     rcxn:hasConstructionMeaning cx:eng_AdjectiveAttributiveconstruction_Meaning ;
     rcxn:hasMetadata cx:eng_AdjectiveAttributiveconstruction_MD ;
     rcxn:hasSlots cx:eng_AdjectiveAttributiveconstruction_slots ;
@@ -533,7 +533,7 @@ cx:eng_AdjectivePredicativeconstruction_slots a rdf:Seq ;
 cx:eng_Phrase links:elementOf cx:eng_AdjectivePredicativeconstruction .
 
 cx:eng_AdjectivePredicativeconstruction a rcxn:Construction ;
-    lg:partOfLanguage lg:eng ;
+    lg:partOfLanguage lg:engLME ;
     rcxn:hasConstructionMeaning cx:eng_AdjectivePredicativeconstruction_Meaning ;
     rcxn:hasMetadata cx:eng_AdjectivePredicativeconstruction_MD ;
     rcxn:hasSlots cx:eng_AdjectivePredicativeconstruction_slots ;

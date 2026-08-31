@@ -110,7 +110,7 @@ cx:eng_NounPhrase links:elementOf <http://example.org/cx/eng_ditransitive_constr
 
 <http://example.org/cx/eng_ditransitive_construction_obj_np> a rcxn:Construction ;
     cx:hasExample <http://example.org/cx/eng_ditransitive_construction_obj_np_Ex_A> ;
-    lg:partOfLanguage lg:eng ;
+    lg:partOfLanguage lg:engLME ;
     links:differentFormSimilarFunction cx:CausedMotionConstrutionPPto ;
     links:sameFormDifferentFunction <http://example.org/cx/AttributeConstructionObj:NP> ;
     rcxn:hasConstructionMeaning <http://example.org/cx/eng_ditransitive_construction_obj_np_Meaning> ;

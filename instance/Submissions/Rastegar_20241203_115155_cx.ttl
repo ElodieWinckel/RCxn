@@ -16,7 +16,7 @@ cx:engLME_Burnonesbridgesconstruction a rcxn:Construction ;
         cx:engLME_Burnonesbridgesconstruction_Ex_B ;
     rcxn:hasMetadata cx:engLME_Burnonesbridgesconstruction_MD ;
     rcxn:hasSlots cx:engLME_Burnonesbridgesconstruction_slots ;
-    lg:partOfLanguage lg:eng .
+    lg:partOfLanguage lg:engLME .
 
 cx:engLME_Burnonesbridgesconstruction_1 a rcxn:SlotObligatory ;
     cx:WordOrder "Initial position" ;

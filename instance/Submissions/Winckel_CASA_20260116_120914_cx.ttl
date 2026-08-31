@@ -79,7 +79,7 @@ cx:eng_GenitiveNPConstruction_1_slots a rdf:Seq ;
     rdf:_2 cx:eng_GenitiveNPConstruction_3 .
 
 cx:eng_GenitiveNPConstruction a rcxn:Construction ;
-    lg:partOfLanguage lg:eng ;
+    lg:partOfLanguage lg:engLME ;
     links:inheritsFrom cx:GenitiveConstruction ;
     rcxn:hasConstructionMeaning cx:eng_GenitiveNPConstruction_Meaning ;
     rcxn:hasMetadata cx:eng_GenitiveNPConstruction_MD ;

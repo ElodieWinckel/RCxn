@@ -89,7 +89,7 @@ cx:eng_NounPhrase links:elementOf cx:engLME_AttributeConstructionAttrAdj .
 
 cx:engLME_AttributeConstructionAttrAdj a rcxn:Construction ;
     cx:hasExample cx:engLME_AttributeConstructionAttrAdj_Ex_A ;
-    lg:partOfLanguage lg:eng ;
+    lg:partOfLanguage lg:engLME ;
     links:inheritsFrom cx:Active3ArgumentStructureConstruction ;
     links:sameFormDifferentFunction cx:engLME_Resultativeconstruction ;
     rcxn:hasConstructionMeaning cx:engLME_AttributeConstructionAttrAdj_Meaning ;

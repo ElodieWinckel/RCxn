@@ -157,7 +157,7 @@ cx:eng_CauseMotionconstruction_2_Form a rcxn:SlotForm ;
 cx:eng_ChefskissGesturalConstruction a gest:GestureConstruction ;
     gest:hasForm cx:eng_ChefskissGesturalConstruction_Form ;
     gest:hasMeaning cx:eng_ChefskissGesturalConstruction_Meaning ;
-    lg:partOfLanguage lg:eng ;
+    lg:partOfLanguage lg:engUsSpo ;
     rcxn:hasMetadata cx:eng_ChefskissGesturalConstruction_MD ;
     rcxn:hasTitle "Chef’s Kiss as a Gestural Construction" .
 
@@ -172,7 +172,7 @@ cx:eng_coolconstruction_a a dcmitype:Collection ;
 cx:eng_monotransitive_construction a rcxn:Construction ;
     cx:hasExample cx:eng_monotransitive_construction_Ex_A,
         cx:eng_monotransitive_construction_Ex_B ;
-    lg:partOfLanguage lg:eng ;
+    lg:partOfLanguage lg:engLME ;
     rcxn:hasConstructionMeaning cx:eng_monotransitive_construction_Meaning ;
     rcxn:hasMetadata cx:eng_monotransitive_construction_MD ;
     rcxn:hasSlots cx:eng_monotransitive_construction_slots ;
@@ -298,7 +298,7 @@ cx:Noun_MD a rcxn:Metadata ;
 cx:SmallQuantityGestureConstruction a gest:GestureConstruction ;
     gest:hasForm cx:SmallQuantityGestureConstruction_Form ;
     gest:hasMeaning cx:SmallQuantityGestureConstruction_Meaning ;
-    lg:partOfLanguage lg:eng ;
+    lg:partOfLanguage lg:engUsSpo ;
     links:elementOf cx:eng_ThisclosetoVingconstruction ;
     rcxn:hasMetadata cx:SmallQuantityGestureConstruction_MD ;
     rcxn:hasTitle "Small Quantity Gesture Construction" .
@@ -1287,7 +1287,7 @@ cx:engLME_AttributeConstructionAttrAdj_slots a RDF:Seq ;
 cx:engLME_Burnonesbridgesconstruction a rcxn:Construction ;
     cx:hasExample cx:engLME_Burnonesbridgesconstruction_Ex_A,
         cx:engLME_Burnonesbridgesconstruction_Ex_B ;
-    lg:partOfLanguage lg:eng ;
+    lg:partOfLanguage lg:engLME ;
     rcxn:hasConstructionMeaning cx:engLME_Burnonesbridgesconstruction_Meaning ;
     rcxn:hasMetadata cx:engLME_Burnonesbridgesconstruction_MD ;
     rcxn:hasSlots cx:engLME_Burnonesbridgesconstruction_slots ;
@@ -1643,7 +1643,7 @@ cx:engLME_PremodifierofAdjectiveConstruction_slots a RDF:Seq ;
 
 cx:engLME_Pullsomethingoutofahat a rcxn:Construction ;
     DCTERMS:created "2024-12-04"^^xsd:date ;
-    lg:partOfLanguage lg:eng ;
+    lg:partOfLanguage lg:engLME ;
     links:CL_differentFormSameFunction cx:deu_AusdemAErmelschuettelnconstruction ;
     rcxn:annotator membr:Rastegar ;
     rcxn:hasTitle "Pull something out of a hat" .
@@ -1677,7 +1677,7 @@ cx:engLME_Resultativeconstruction_slots a RDF:Seq ;
     RDF:_4 cx:engLME_Resultativeconstruction_4 .
 
 cx:engLME_Rollupyoursleeves a rcxn:Construction ;
-    lg:partOfLanguage lg:eng ;
+    lg:partOfLanguage lg:engLME ;
     links:CL_similarFormDifferentFunction cx:deu_AusdemAErmelschuettelnconstruction ;
     rcxn:hasMetadata cx:engLME_Rollupyoursleeves_MD ;
     rcxn:hasTitle "Roll up your sleeves" .
@@ -2238,7 +2238,7 @@ cx:eng_Keepacoolheadconstruction_slots a RDF:Seq ;
 cx:eng_PhysicalHeight a gest:GestureConstruction ;
     gest:hasForm cx:eng_PhysicalHeight_Form ;
     gest:hasMeaning cx:eng_PhysicalHeight_Meaning ;
-    lg:partOfLanguage lg:eng ;
+    lg:partOfLanguage lg:engUsSpo ;
     links:elementOf cx:engUsSpo_Hadituptoherewithphysicalheightgesture ;
     rcxn:hasMetadata cx:eng_PhysicalHeight_MD ;
     rcxn:hasTitle "Physical Height Gesture Construction" .
@@ -2346,7 +2346,7 @@ cx:eng_ThisclosetoVingconstruction_slots a RDF:Seq ;
 cx:eng_ThroatCutGesture a gest:GestureConstruction ;
     gest:hasForm cx:eng_ThroatCutGesture_Form ;
     gest:hasMeaning cx:eng_ThroatCutGesture_Meaning ;
-    lg:partOfLanguage lg:eng ;
+    lg:partOfLanguage lg:engUsSpo ;
     links:elementOf cx:engUsSpo_Hadituptoherewith ;
     rcxn:hasMetadata cx:eng_ThroatCutGesture_MD ;
     rcxn:hasTitle "Throat Cut Gesture Construction" .
@@ -3438,7 +3438,7 @@ cx:engInf_Coolexclamativeconstruction a rcxn:Construction ;
 
 cx:engLME_Ditransitiveconstruction a rcxn:Construction ;
     cx:hasExample cx:engLME_Ditransitiveconstruction_Ex_A ;
-    lg:partOfLanguage lg:eng ;
+    lg:partOfLanguage lg:engLME ;
     links:inheritsFrom cx:engLME_Argumentstructureconstruction ;
     rcxn:hasConstructionMeaning cx:engLME_Ditransitiveconstruction_Meaning ;
     rcxn:hasMetadata cx:engLME_Ditransitiveconstruction_MD ;
@@ -3447,7 +3447,7 @@ cx:engLME_Ditransitiveconstruction a rcxn:Construction ;
 
 cx:engLME_Transitiveconstruction a rcxn:Construction ;
     cx:hasExample cx:engLME_Transitiveconstruction_Ex_A ;
-    lg:partOfLanguage lg:eng ;
+    lg:partOfLanguage lg:engLME ;
     links:inheritsFrom cx:engLME_Argumentstructureconstruction ;
     rcxn:hasConstructionMeaning cx:engLME_Transitiveconstruction_Meaning ;
     rcxn:hasMetadata cx:engLME_Transitiveconstruction_MD ;
@@ -3476,7 +3476,7 @@ cx:engUsSpo_Hadituptoherewithphysicalheightgesture_3 a rcxn:SlotOptional ;
 
 cx:eng_CauseMotionconstruction a rcxn:Construction ;
     cx:hasExample cx:eng_CauseMotionconstruction_Ex_A ;
-    lg:partOfLanguage lg:eng ;
+    lg:partOfLanguage lg:engLME ;
     links:inheritsFrom cx:engLME_Argumentstructureconstruction ;
     rcxn:hasConstructionMeaning cx:eng_CauseMotionconstruction_Meaning ;
     rcxn:hasMetadata cx:eng_CauseMotionconstruction_MD ;
@@ -3484,7 +3484,7 @@ cx:eng_CauseMotionconstruction a rcxn:Construction ;
     rcxn:hasTitle "Caused-Motion construction" .
 
 cx:eng_GenitiveNPConstruction a rcxn:Construction ;
-    lg:partOfLanguage lg:eng ;
+    lg:partOfLanguage lg:engLME ;
     links:inheritsFrom cx:GenitiveConstruction ;
     rcxn:hasConstructionMeaning cx:eng_GenitiveNPConstruction_Meaning ;
     rcxn:hasMetadata cx:eng_GenitiveNPConstruction_MD ;
@@ -3494,7 +3494,7 @@ cx:eng_GenitiveNPConstruction a rcxn:Construction ;
 cx:eng_Keepacoolheadconstruction a rcxn:Construction ;
     cx:hasExample cx:eng_Keepacoolheadconstruction_Ex_A ;
     RDFS:comment "first attested 1718, cf. OED" ;
-    lg:partOfLanguage lg:eng ;
+    lg:partOfLanguage lg:engLME ;
     rcxn:hasConstructionMeaning cx:eng_Keepacoolheadconstruction_Meaning ;
     rcxn:hasMetadata cx:eng_Keepacoolheadconstruction_MD ;
     rcxn:hasSlots cx:eng_Keepacoolheadconstruction_slots ;
@@ -3576,7 +3576,7 @@ cx:deu_NounPhrase a rcxn:Construction ;
 
 cx:engLME_Resultativeconstruction a rcxn:Construction ;
     cx:hasExample cx:engLME_Resultativeconstruction_Ex_A ;
-    lg:partOfLanguage lg:eng ;
+    lg:partOfLanguage lg:engLME ;
     links:inheritsFrom cx:engLME_Argumentstructureconstruction ;
     links:sameFormDifferentFunction cx:engLME_AttributeConstructionAttrAdj ;
     rcxn:hasConstructionMeaning cx:engLME_Resultativeconstruction_Meaning ;
@@ -3596,14 +3596,14 @@ cx:engLME_coolascolourconstruction a rcxn:Construction ;
     rcxn:hasTitle "cool as colour construction" .
 
 cx:eng_AdjectiveAttributiveconstruction a rcxn:Construction ;
-    lg:partOfLanguage lg:eng ;
+    lg:partOfLanguage lg:engLME ;
     rcxn:hasConstructionMeaning cx:eng_AdjectiveAttributiveconstruction_Meaning ;
     rcxn:hasMetadata cx:eng_AdjectiveAttributiveconstruction_MD ;
     rcxn:hasSlots cx:eng_AdjectiveAttributiveconstruction_slots ;
     rcxn:hasTitle "Adjective Attributive construction" .
 
 cx:eng_AdjectivePredicativeconstruction a rcxn:Construction ;
-    lg:partOfLanguage lg:eng ;
+    lg:partOfLanguage lg:engLME ;
     rcxn:hasConstructionMeaning cx:eng_AdjectivePredicativeconstruction_Meaning ;
     rcxn:hasMetadata cx:eng_AdjectivePredicativeconstruction_MD ;
     rcxn:hasSlots cx:eng_AdjectivePredicativeconstruction_slots ;
@@ -3636,7 +3636,7 @@ cx:eng_VerbPhrase a rcxn:Construction ;
 
 cx:eng_ditransitive_construction_obj_inf a rcxn:Construction ;
     cx:hasExample cx:eng_ditransitive_construction_obj_inf_Ex_A ;
-    lg:partOfLanguage lg:eng ;
+    lg:partOfLanguage lg:engLME ;
     links:inheritsFrom cx:eng_active_3_argument_structure_construction ;
     links:sameFormDifferentFunction cx:eng_attribute_construction_attr_to_inf,
         cx:eng_resultative_construction_attr_to_inf ;
@@ -3696,7 +3696,7 @@ cx:engInf_coolasadmirableconstruction a rcxn:Construction ;
 
 cx:engLME_GIVEOUTVerbParticleConstruction a rcxn:Construction ;
     cx:hasExample cx:engLME_GIVEOUTVerbParticleConstruction_Ex_A ;
-    lg:partOfLanguage lg:eng ;
+    lg:partOfLanguage lg:engLME ;
     rcxn:hasConstructionMeaning cx:engLME_GIVEOUTVerbParticleConstruction_Meaning ;
     rcxn:hasMetadata cx:engLME_GIVEOUTVerbParticleConstruction_MD ;
     rcxn:hasSlots cx:engLME_GIVEOUTVerbParticleConstruction_slots ;
@@ -3763,7 +3763,7 @@ cx:hat_POUbeneficiaryconstruction a rcxn:Construction ;
 
 cx:engLME_AttributeConstructionAttrAdj a rcxn:Construction ;
     cx:hasExample cx:engLME_AttributeConstructionAttrAdj_Ex_A ;
-    lg:partOfLanguage lg:eng ;
+    lg:partOfLanguage lg:engLME ;
     links:inheritsFrom cx:Active3ArgumentStructureConstruction ;
     links:sameFormDifferentFunction cx:engLME_Resultativeconstruction ;
     rcxn:hasConstructionMeaning cx:engLME_AttributeConstructionAttrAdj_Meaning ;
@@ -3810,7 +3810,7 @@ cx:comePLUSnoisemannerofmovementVing a rcxn:Construction ;
         cx:comePLUSnoisemannerofmovementVing_Ex_B,
         cx:comePLUSnoisemannerofmovementVing_Ex_C,
         cx:comePLUSnoisemannerofmovementVing_Ex_D ;
-    lg:partOfLanguage lg:eng ;
+    lg:partOfLanguage lg:engLME ;
     rcxn:hasConstructionMeaning cx:comePLUSnoisemannerofmovementVing_Meaning ;
     rcxn:hasMetadata cx:comePLUSnoisemannerofmovementVing_MD ;
     rcxn:hasSlots cx:comePLUSnoisemannerofmovementVing_slots ;
@@ -3825,7 +3825,7 @@ Both are matrixes in the format of NumPy arrays but can be converted to any supp
 \r
 This is a similar publicly available dataset: https://github.com/SPOClab-ca/neural-reality-constructions\r
 """ ;
-    lg:partOfLanguage lg:eng ;
+    lg:partOfLanguage lg:engLME ;
     links:inheritedBy cx:engLME_Ditransitiveconstruction,
         cx:engLME_Resultativeconstruction,
         cx:engLME_Transitiveconstruction,
@@ -3863,7 +3863,7 @@ cx:eng_PrepositionalPhrase a rcxn:Construction ;
 
 cx:eng_ditransitive_construction_obj_np a rcxn:Construction ;
     cx:hasExample cx:eng_ditransitive_construction_obj_np_Ex_A ;
-    lg:partOfLanguage lg:eng ;
+    lg:partOfLanguage lg:engLME ;
     links:differentFormSimilarFunction cx:CausedMotionConstrutionPPto ;
     links:inheritsFrom cx:eng_active_3_argument_structure_construction ;
     links:sameFormDifferentFunction <http://example.org/cx/AttributeConstructionObj:NP>,

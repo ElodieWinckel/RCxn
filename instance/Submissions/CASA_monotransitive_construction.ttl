@@ -49,7 +49,7 @@ cx:eng_monotransitive_construction_Meaning a rcxn:ConstructionMeaning ;
 cx:eng_monotransitive_construction a rcxn:Construction ;
     cx:hasExample cx:eng_monotransitive_construction_Ex_A ;
     cx:hasExample cx:eng_monotransitive_construction_Ex_B ;
-    lg:partOfLanguage lg:eng ;
+    lg:partOfLanguage lg:engLME ;
     rcxn:hasConstructionMeaning cx:eng_monotransitive_construction_Meaning ;
     rcxn:hasMetadata cx:eng_monotransitive_construction_MD ;
     rcxn:hasSlots cx:eng_monotransitive_construction_slots ;
