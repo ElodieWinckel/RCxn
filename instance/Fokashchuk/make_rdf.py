@@ -7,7 +7,7 @@ from graph_loader import (g, ont, casa, cx, compcon, evid, frac, gest, lg, links
 
 
 # Read Excel file
-df = pd.read_excel("data.xlsx")
+df = pd.read_excel("data_modified.xlsx")
 
 # Create RDF graph
 g = Graph()
@@ -85,7 +85,7 @@ for _, row in df.iterrows():
     g.add((cx[construction_name_cleaned], rcxn.hasConstructionMeaning, cx[cx_meaning_uri]))
     g.add((cx[cx_meaning_uri], rcxn.hasMeaning, Literal(meaning)))
 
-    # sequence of construction elements
+    # Sequence of construction elements
     seq_slots = URIRef(cx[f"{construction_name_cleaned}_slots"])
     g.add((seq_slots, RDF.type, RDF.Seq))
     g.add((cx[construction_name_cleaned], rcxn.hasSlots, seq_slots))
@@ -148,6 +148,21 @@ for _, row in df.iterrows():
     if row['DE: Case of NP2'] == "DAT.":
         NP2_case = "DativeCase"
         g.add((NP2_element_uri, olia.hasCase, olia[NP2_case]))
+
+    # Example
+    if not pd.isna(row['DE: Construct (example from SKELL)']):
+        example = row['DE: Construct (example from SKELL)']
+        words = example.split()
+        first = f"[{words[0]}]1"
+        second = f" [{words[1]}]2"
+        remaining = ' '.join(words[2:])
+        third = f" [{remaining}]3"
+        annotated_example = first + second + third
+        example_uri = cx[f"{construction_name_cleaned}_Ex_A"]
+        g.add((cx[construction_name_cleaned], cx.hasExample, example_uri))
+        g.add((example_uri, RDF.type, cx.Example))
+        g.add((example_uri, cx.hasAnnotatedText, Literal(annotated_example)))
+        g.add((example_uri, cx.hasText, Literal(example)))
 
 ################################################################
 ### ENGLISH CONSTRUCTION
