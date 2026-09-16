@@ -8,6 +8,7 @@ import json
 import os
 import requests
 import uuid
+from utils.clean_name import clean_name
 
 # Check if the production directory exists
 if os.path.exists("/data/www/RCxn"):
@@ -195,42 +196,6 @@ def get_macrolanguage(lang_uri):
         visited.add(parent)
         current = parent
 
-###################################################
-### FUNCTION TO PREPARE CLEAN URIS BASED ON NAME
-###################################################
-
-def clean_name(name):
-    original = str(name)
-    clean = original.replace(" ", "")
-    clean = clean.replace("?", "")
-    clean = clean.replace("!", "")
-    clean = clean.replace(".", "")
-    clean = clean.replace(":", "")
-    clean = clean.replace(",", "")
-    clean = clean.replace("-", "")
-    clean = clean.replace("[", "")
-    clean = clean.replace("]", "")
-    clean = clean.replace("(", "")
-    clean = clean.replace(")", "")
-    clean = clean.replace("/", "")
-    clean = clean.replace("'","")
-    clean = clean.replace("ß", "ss")
-    clean = clean.replace("á", "a")
-    clean = clean.replace("â", "a")
-    clean = clean.replace("é", "e")
-    clean = clean.replace("ë", "e")
-    clean = clean.replace("î", "i")
-    clean = clean.replace("ä", "ae")
-    clean = clean.replace("ö", "oe")
-    clean = clean.replace("ü", "ue")
-    clean = clean.replace("Ä","AE")
-    clean = clean.replace("Ö", "OE")
-    clean = clean.replace("Ü", "UE")
-    clean = clean.replace("ā", "aa")
-    clean = clean.replace("+", "PLUS")
-    clean = clean.replace("&", "AND")
-    clean = clean.replace("/", "SLASH")
-    return clean
 
 ###################################################
 ### RUN HTML FORM

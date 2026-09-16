@@ -1,6 +1,7 @@
 import pandas as pd
 from datetime import datetime
 from rdflib import Graph, Namespace, URIRef, Literal, RDF, DCTERMS, XSD, RDFS
+from utils.clean_name import clean_name
 
 # Load the graphs and namespaces defined in graph_loader.py
 from graph_loader import (g, ont, casa, cx, compcon, evid, frac, gest, lg, links, membr, olia, oliatop, rcxn, rsrch)
@@ -19,45 +20,6 @@ g.bind("links", links)
 g.bind("membr", membr)
 g.bind("rcxn", rcxn)
 g.bind("rsrch", rsrch)
-
-# Functions
-def clean_name(name):
-    original = str(name)
-    clean = original.replace(" ", "")
-    clean = clean.replace("?", "")
-    clean = clean.replace("!", "")
-    clean = clean.replace(".", "")
-    clean = clean.replace(":", "")
-    clean = clean.replace(",", "")
-    clean = clean.replace("-", "")
-    clean = clean.replace("[", "")
-    clean = clean.replace("]", "")
-    clean = clean.replace("(", "")
-    clean = clean.replace(")", "")
-    clean = clean.replace("/", "")
-    clean = clean.replace("'","")
-    clean = clean.replace("ʹ","")
-    clean = clean.replace("ß", "ss")
-    clean = clean.replace("á", "a")
-    clean = clean.replace("â", "a")
-    clean = clean.replace("é", "e")
-    clean = clean.replace("ë", "e")
-    clean = clean.replace("î", "i")
-    clean = clean.replace("ä", "ae")
-    clean = clean.replace("ö", "oe")
-    clean = clean.replace("ü", "ue")
-    clean = clean.replace("Ä", "AE")
-    clean = clean.replace("Ö", "OE")
-    clean = clean.replace("Ü", "UE")
-    clean = clean.replace("ā", "aa")
-    clean = clean.replace("ś", "sh")
-    clean = clean.replace("ł", "w")
-    clean = clean.replace("ó", "oo")
-    clean = clean.replace("ć", "ch")
-    clean = clean.replace("+", "PLUS")
-    clean = clean.replace("&", "AND")
-    clean = clean.replace("/", "SLASH")
-    return clean
 
 # Create Polish NP
 POLNP_name = "Noun Phrase"
