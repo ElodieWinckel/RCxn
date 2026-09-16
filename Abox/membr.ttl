@@ -316,7 +316,6 @@ membr:Project_Fokashchuk_241210_F250218 a rsrch:Finding ;
         cx:deu_UEbergriffauf,
         cx:deu_XanY,
         cx:deu_XaufY,
-        cx:deu_nan,
         cx:engLME_assassinationattempton,
         cx:engLME_assaulton,
         cx:engLME_attackonupon,

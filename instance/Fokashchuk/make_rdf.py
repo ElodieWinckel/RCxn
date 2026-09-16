@@ -82,8 +82,13 @@ g.add((cx[UKRNP_MD], DCTERMS.created, Literal(datetime.now().strftime('%Y-%m-%d'
 g.add((cx[UKRNP_name_cleaned], rcxn.hasTitle, Literal(POLNP_name)))
 g.add((cx[UKRNP_name_cleaned], lg.partOfLanguage, lg.ukr))
 
+generic = ""
+
 # Convert rows into triples
 for _, row in df.iterrows():
+
+    if row.isna().all():
+        continue  # Skip empty rows
 
 ################################################################
 ### GERMAN CONSTRUCTION
@@ -192,6 +197,12 @@ for _, row in df.iterrows():
         g.add((example_uri, cx.hasText, Literal(example)))
         eng_example = row['ENG: Construct (equivalent to German)']
         g.add((example_uri, cx.hasTranslation, Literal(eng_example)))
+
+    # vertical link
+    if row['Taxonomy'] == "schematic":
+        generic = construction_name_cleaned = construction_language_uri + "_" + clean_name(row['DE: Construction'])
+    else:
+        g.add((cx[construction_name_cleaned], links.inheritsFrom, cx[generic]))
 
 ################################################################
 ### ENGLISH CONSTRUCTION
@@ -421,6 +432,7 @@ for _, row in df.iterrows():
         g.add((cx[ukr_construction_name_cleaned], lg.partOfLanguage, lg[ukr_construction_language_uri]))
         g.add((cx[ukr_construction_name_cleaned], links.CL_similarFormSameFunction, cx[construction_name_cleaned]))
         g.add((cx[ukr_construction_name_cleaned], links.CL_similarFormSameFunction, cx[eng_construction_name_cleaned]))
+        g.add((cx[ukr_construction_name_cleaned], links.CL_similarFormSameFunction, cx[pol_construction_name_cleaned]))
 
         # Meaning of the English construction
         ukr_cx_meaning_uri = f"{ukr_construction_name_cleaned}_Meaning"

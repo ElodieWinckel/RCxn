@@ -26,7 +26,6 @@ membr:Project_Fokashchuk_241210_F250218 rsrch:basedOn cx:deu_Angriffauf,
         cx:deu_UEbergriffauf,
         cx:deu_XanY,
         cx:deu_XaufY,
-        cx:deu_nan,
         cx:engLME_assassinationattempton,
         cx:engLME_assaulton,
         cx:engLME_attackonupon,
@@ -149,11 +148,21 @@ cx:deu_Attentatauf_slots a rdf:Seq ;
     rdf:_2 cx:deu_Attentatauf_2 ;
     rdf:_3 cx:deu_Attentatauf_3 .
 
+cx:deu_Ausblick a rcxn:Construction ;
+    lg:partOfLanguage lg:deu ;
+    links:elementOf cx:deu_Ausblickauf ;
+    rcxn:hasMetadata cx:deu_Ausblick_MD ;
+    rcxn:hasTitle "Ausblick" .
+
+cx:deu_Ausblick_MD a rcxn:Metadata ;
+    dcterms:created "2026-09-16"^^xsd:date ;
+    rcxn:annotator membr:Fokashchuk .
+
 cx:deu_Ausblickauf_1 rcxn:hasOtherSemanticContribution "trajector" ;
     rcxn:hasSlotForm cx:deu_Ausblickauf_1_Form .
 
 cx:deu_Ausblickauf_1_Form a rcxn:SlotForm ;
-    rcxn:hasStem cx:deu_nan .
+    rcxn:hasStem cx:deu_Ausblick .
 
 cx:deu_Ausblickauf_2 rcxn:hasOtherSemanticContribution "landmark" ;
     rcxn:hasSlotForm cx:deu_Ausblickauf_2_Form .
@@ -233,11 +242,21 @@ cx:deu_Hassauf_slots a rdf:Seq ;
     rdf:_2 cx:deu_Hassauf_2 ;
     rdf:_3 cx:deu_Hassauf_3 .
 
+cx:deu_Hinweis a rcxn:Construction ;
+    lg:partOfLanguage lg:deu ;
+    links:elementOf cx:deu_Hinweisauf ;
+    rcxn:hasMetadata cx:deu_Hinweis_MD ;
+    rcxn:hasTitle "Hinweis" .
+
+cx:deu_Hinweis_MD a rcxn:Metadata ;
+    dcterms:created "2026-09-16"^^xsd:date ;
+    rcxn:annotator membr:Fokashchuk .
+
 cx:deu_Hinweisauf_1 rcxn:hasOtherSemanticContribution "trajector" ;
     rcxn:hasSlotForm cx:deu_Hinweisauf_1_Form .
 
 cx:deu_Hinweisauf_1_Form a rcxn:SlotForm ;
-    rcxn:hasStem cx:deu_nan .
+    rcxn:hasStem cx:deu_Hinweis .
 
 cx:deu_Hinweisauf_2 rcxn:hasOtherSemanticContribution "landmark" ;
     rcxn:hasSlotForm cx:deu_Hinweisauf_2_Form .
@@ -317,11 +336,21 @@ cx:deu_Konzentrationauf_slots a rdf:Seq ;
     rdf:_2 cx:deu_Konzentrationauf_2 ;
     rdf:_3 cx:deu_Konzentrationauf_3 .
 
+cx:deu_Satire a rcxn:Construction ;
+    lg:partOfLanguage lg:deu ;
+    links:elementOf cx:deu_Satireauf ;
+    rcxn:hasMetadata cx:deu_Satire_MD ;
+    rcxn:hasTitle "Satire" .
+
+cx:deu_Satire_MD a rcxn:Metadata ;
+    dcterms:created "2026-09-16"^^xsd:date ;
+    rcxn:annotator membr:Fokashchuk .
+
 cx:deu_Satireauf_1 rcxn:hasOtherSemanticContribution "trajector" ;
     rcxn:hasSlotForm cx:deu_Satireauf_1_Form .
 
 cx:deu_Satireauf_1_Form a rcxn:SlotForm ;
-    rcxn:hasStem cx:deu_nan .
+    rcxn:hasStem cx:deu_Satire .
 
 cx:deu_Satireauf_2 rcxn:hasOtherSemanticContribution "landmark" ;
     rcxn:hasSlotForm cx:deu_Satireauf_2_Form .
@@ -535,13 +564,6 @@ cx:deu_XanY_slots a rdf:Seq ;
     rdf:_2 cx:deu_XanY_2 ;
     rdf:_3 cx:deu_XanY_3 .
 
-cx:deu_XaufY a rcxn:Construction ;
-    lg:partOfLanguage lg:deu ;
-    rcxn:hasConstructionMeaning cx:deu_XaufY_Meaning ;
-    rcxn:hasMetadata cx:deu_XaufY_MD ;
-    rcxn:hasSlots cx:deu_XaufY_slots ;
-    rcxn:hasTitle "X auf Y" .
-
 cx:deu_XaufY_1 rcxn:hasOtherSemanticContribution "trajector" ;
     rcxn:hasSlotForm cx:deu_XaufY_1_Form .
 
@@ -573,37 +595,6 @@ cx:deu_XaufY_slots a rdf:Seq ;
     rdf:_1 cx:deu_XaufY_1 ;
     rdf:_2 cx:deu_XaufY_2 ;
     rdf:_3 cx:deu_XaufY_3 .
-
-cx:deu_nan_1 rcxn:hasOtherSemanticContribution "NaN"^^xsd:double ;
-    rcxn:hasSlotForm cx:deu_nan_1_Form .
-
-cx:deu_nan_1_Form a rcxn:SlotForm ;
-    rcxn:hasStem cx:deu_nan .
-
-cx:deu_nan_2 rcxn:hasOtherSemanticContribution "NaN"^^xsd:double ;
-    rcxn:hasSlotForm cx:deu_nan_2_Form .
-
-cx:deu_nan_2_Form a rcxn:SlotForm ;
-    rcxn:hasSurfaceForm "NaN"^^xsd:double .
-
-cx:deu_nan_3 rcxn:hasOtherSemanticContribution "NaN"^^xsd:double ;
-    rcxn:hasSlotForm cx:deu_nan_3_Form .
-
-cx:deu_nan_3_Form a rcxn:SlotForm ;
-    rdfs:comment "head is \"nan\"" ;
-    rcxn:hasSyntacticForm cx:deu_NounPhrase .
-
-cx:deu_nan_MD a rcxn:Metadata ;
-    dcterms:created "2026-09-16"^^xsd:date ;
-    rcxn:annotator membr:Fokashchuk .
-
-cx:deu_nan_Meaning a rcxn:ConstructionMeaning ;
-    rcxn:hasMeaning "nan (DWDS)" .
-
-cx:deu_nan_slots a rdf:Seq ;
-    rdf:_1 cx:deu_nan_1 ;
-    rdf:_2 cx:deu_nan_2 ;
-    rdf:_3 cx:deu_nan_3 .
 
 cx:engLME_assassinationattempton_1 rcxn:hasSlotForm cx:engLME_assassinationattempton_1_Form .
 
@@ -1778,17 +1769,108 @@ cx:pol_NounPhrase_MD a rcxn:Metadata ;
     dcterms:created "2026-09-16"^^xsd:date ;
     rcxn:annotator membr:Fokashchuk .
 
-cx:pol_ataknaPLUSACC a rcxn:Construction ;
-    cx:hasExample cx:pol_ataknaPLUSACC_Ex_A ;
-    lg:partOfLanguage lg:pol ;
-    links:CL_similarFormSameFunction cx:deu_Angriffauf,
-        cx:deu_UEberfallauf,
+cx:ukr_KontsentratsiianaPLUSLOC a rcxn:Construction ;
+    cx:hasExample cx:ukr_KontsentratsiianaPLUSLOC_Ex_A ;
+    lg:partOfLanguage lg:ukr ;
+    links:CL_similarFormSameFunction cx:deu_Konzentrationauf,
+        cx:engLME_concentrationon,
+        cx:pol_koncentracjanaPLUSLOC ;
+    rcxn:hasConstructionMeaning cx:ukr_KontsentratsiianaPLUSLOC_Meaning ;
+    rcxn:hasMetadata cx:ukr_KontsentratsiianaPLUSLOC_MD ;
+    rcxn:hasSlots cx:ukr_KontsentratsiianaPLUSLOC_slots ;
+    rcxn:hasTitle "концентрація на + LOC." .
+
+cx:ukr_NabihNalitNapadnaPLUSACC a rcxn:Construction ;
+    cx:hasExample cx:ukr_NabihNalitNapadnaPLUSACC_Ex_A ;
+    lg:partOfLanguage lg:ukr ;
+    links:CL_similarFormSameFunction cx:deu_UEberfallauf,
         cx:engLME_assaulton,
-        cx:engLME_attackonupon ;
-    rcxn:hasConstructionMeaning cx:pol_ataknaPLUSACC_Meaning ;
-    rcxn:hasMetadata cx:pol_ataknaPLUSACC_MD ;
-    rcxn:hasSlots cx:pol_ataknaPLUSACC_slots ;
-    rcxn:hasTitle "atak na + ACC." .
+        cx:pol_ataknaPLUSACC ;
+    rcxn:hasConstructionMeaning cx:ukr_NabihNalitNapadnaPLUSACC_Meaning ;
+    rcxn:hasMetadata cx:ukr_NabihNalitNapadnaPLUSACC_MD ;
+    rcxn:hasSlots cx:ukr_NabihNalitNapadnaPLUSACC_slots ;
+    rcxn:hasTitle "набіг/наліт/напад на + ACC." .
+
+cx:ukr_NapadnaPLUSACC a rcxn:Construction ;
+    cx:hasExample cx:ukr_NapadnaPLUSACC_Ex_A ;
+    lg:partOfLanguage lg:ukr ;
+    links:CL_similarFormSameFunction cx:deu_Angriffauf,
+        cx:deu_UEbergriffauf,
+        cx:engLME_assaulton,
+        cx:engLME_attackonupon,
+        cx:pol_ataknaPLUSACC,
+        cx:pol_napadnaPLUSACC ;
+    rcxn:hasConstructionMeaning cx:ukr_NapadnaPLUSACC_Meaning ;
+    rcxn:hasMetadata cx:ukr_NapadnaPLUSACC_MD ;
+    rcxn:hasSlots cx:ukr_NapadnaPLUSACC_slots ;
+    rcxn:hasTitle "напад на + ACC.",
+        "напад на + Acc." .
+
+cx:ukr_NenavystdoPLUSGEN a rcxn:Construction ;
+    cx:hasExample cx:ukr_NenavystdoPLUSGEN_Ex_A ;
+    lg:partOfLanguage lg:ukr ;
+    links:CL_similarFormSameFunction cx:deu_Hassauf,
+        cx:engLME_hatredtowards,
+        cx:pol_nienawishchdoPLUSGEN ;
+    rcxn:hasConstructionMeaning cx:ukr_NenavystdoPLUSGEN_Meaning ;
+    rcxn:hasMetadata cx:ukr_NenavystdoPLUSGEN_MD ;
+    rcxn:hasSlots cx:ukr_NenavystdoPLUSGEN_slots ;
+    rcxn:hasTitle "ненависть до + GEN." .
+
+cx:ukr_PostrilvPLUSACC a rcxn:Construction ;
+    cx:hasExample cx:ukr_PostrilvPLUSACC_Ex_A ;
+    lg:partOfLanguage lg:ukr ;
+    links:CL_similarFormSameFunction cx:deu_Schussauf,
+        cx:engLME_shotatto,
+        cx:pol_strzawwPLUSACC ;
+    rcxn:hasConstructionMeaning cx:ukr_PostrilvPLUSACC_Meaning ;
+    rcxn:hasMetadata cx:ukr_PostrilvPLUSACC_MD ;
+    rcxn:hasSlots cx:ukr_PostrilvPLUSACC_slots ;
+    rcxn:hasTitle "постріл в + ACC." .
+
+cx:ukr_SatyranaPLUSACC a rcxn:Construction ;
+    cx:hasExample cx:ukr_SatyranaPLUSACC_Ex_A ;
+    lg:partOfLanguage lg:ukr ;
+    links:CL_similarFormSameFunction cx:deu_Satireauf,
+        cx:engLME_satireon,
+        cx:pol_satyranaPLUSACC ;
+    rcxn:hasConstructionMeaning cx:ukr_SatyranaPLUSACC_Meaning ;
+    rcxn:hasMetadata cx:ukr_SatyranaPLUSACC_MD ;
+    rcxn:hasSlots cx:ukr_SatyranaPLUSACC_slots ;
+    rcxn:hasTitle "сатира на + ACC." .
+
+cx:ukr_VkazivkanaPLUSACC a rcxn:Construction ;
+    cx:hasExample cx:ukr_VkazivkanaPLUSACC_Ex_A ;
+    lg:partOfLanguage lg:ukr ;
+    links:CL_similarFormSameFunction cx:deu_Hinweisauf,
+        cx:engLME_tiponreferenceto,
+        cx:pol_wskazoowkanaPLUSACCodniesieniadoPLUSGEN ;
+    rcxn:hasConstructionMeaning cx:ukr_VkazivkanaPLUSACC_Meaning ;
+    rcxn:hasMetadata cx:ukr_VkazivkanaPLUSACC_MD ;
+    rcxn:hasSlots cx:ukr_VkazivkanaPLUSACC_slots ;
+    rcxn:hasTitle "вказівка на + ACC." .
+
+cx:ukr_VydnaPLUSACC a rcxn:Construction ;
+    cx:hasExample cx:ukr_VydnaPLUSACC_Ex_A ;
+    lg:partOfLanguage lg:ukr ;
+    links:CL_similarFormSameFunction cx:deu_Ausblickauf,
+        cx:engLME_viewon,
+        cx:pol_widoknaPLUSACC ;
+    rcxn:hasConstructionMeaning cx:ukr_VydnaPLUSACC_Meaning ;
+    rcxn:hasMetadata cx:ukr_VydnaPLUSACC_MD ;
+    rcxn:hasSlots cx:ukr_VydnaPLUSACC_slots ;
+    rcxn:hasTitle "вид на + ACC." .
+
+cx:ukr_ZamakhnaPLUSACC a rcxn:Construction ;
+    cx:hasExample cx:ukr_ZamakhnaPLUSACC_Ex_A ;
+    lg:partOfLanguage lg:ukr ;
+    links:CL_similarFormSameFunction cx:deu_Attentatauf,
+        cx:engLME_assassinationattempton,
+        cx:pol_zamachnaPLUSACC ;
+    rcxn:hasConstructionMeaning cx:ukr_ZamakhnaPLUSACC_Meaning ;
+    rcxn:hasMetadata cx:ukr_ZamakhnaPLUSACC_MD ;
+    rcxn:hasSlots cx:ukr_ZamakhnaPLUSACC_slots ;
+    rcxn:hasTitle "замах на + ACC." .
 
 cx:pol_koncentracjanaPLUSLOC a rcxn:Construction ;
     cx:hasExample cx:pol_koncentracjanaPLUSLOC_Ex_A ;
@@ -1870,99 +1952,6 @@ cx:pol_zamachnaPLUSACC a rcxn:Construction ;
     rcxn:hasSlots cx:pol_zamachnaPLUSACC_slots ;
     rcxn:hasTitle "zamach na + ACC." .
 
-cx:ukr_KontsentratsiianaPLUSLOC a rcxn:Construction ;
-    cx:hasExample cx:ukr_KontsentratsiianaPLUSLOC_Ex_A ;
-    lg:partOfLanguage lg:ukr ;
-    links:CL_similarFormSameFunction cx:deu_Konzentrationauf,
-        cx:engLME_concentrationon ;
-    rcxn:hasConstructionMeaning cx:ukr_KontsentratsiianaPLUSLOC_Meaning ;
-    rcxn:hasMetadata cx:ukr_KontsentratsiianaPLUSLOC_MD ;
-    rcxn:hasSlots cx:ukr_KontsentratsiianaPLUSLOC_slots ;
-    rcxn:hasTitle "концентрація на + LOC." .
-
-cx:ukr_NabihNalitNapadnaPLUSACC a rcxn:Construction ;
-    cx:hasExample cx:ukr_NabihNalitNapadnaPLUSACC_Ex_A ;
-    lg:partOfLanguage lg:ukr ;
-    links:CL_similarFormSameFunction cx:deu_UEberfallauf,
-        cx:engLME_assaulton ;
-    rcxn:hasConstructionMeaning cx:ukr_NabihNalitNapadnaPLUSACC_Meaning ;
-    rcxn:hasMetadata cx:ukr_NabihNalitNapadnaPLUSACC_MD ;
-    rcxn:hasSlots cx:ukr_NabihNalitNapadnaPLUSACC_slots ;
-    rcxn:hasTitle "набіг/наліт/напад на + ACC." .
-
-cx:ukr_NapadnaPLUSACC a rcxn:Construction ;
-    cx:hasExample cx:ukr_NapadnaPLUSACC_Ex_A ;
-    lg:partOfLanguage lg:ukr ;
-    links:CL_similarFormSameFunction cx:deu_Angriffauf,
-        cx:deu_UEbergriffauf,
-        cx:engLME_assaulton,
-        cx:engLME_attackonupon ;
-    rcxn:hasConstructionMeaning cx:ukr_NapadnaPLUSACC_Meaning ;
-    rcxn:hasMetadata cx:ukr_NapadnaPLUSACC_MD ;
-    rcxn:hasSlots cx:ukr_NapadnaPLUSACC_slots ;
-    rcxn:hasTitle "напад на + ACC.",
-        "напад на + Acc." .
-
-cx:ukr_NenavystdoPLUSGEN a rcxn:Construction ;
-    cx:hasExample cx:ukr_NenavystdoPLUSGEN_Ex_A ;
-    lg:partOfLanguage lg:ukr ;
-    links:CL_similarFormSameFunction cx:deu_Hassauf,
-        cx:engLME_hatredtowards ;
-    rcxn:hasConstructionMeaning cx:ukr_NenavystdoPLUSGEN_Meaning ;
-    rcxn:hasMetadata cx:ukr_NenavystdoPLUSGEN_MD ;
-    rcxn:hasSlots cx:ukr_NenavystdoPLUSGEN_slots ;
-    rcxn:hasTitle "ненависть до + GEN." .
-
-cx:ukr_PostrilvPLUSACC a rcxn:Construction ;
-    cx:hasExample cx:ukr_PostrilvPLUSACC_Ex_A ;
-    lg:partOfLanguage lg:ukr ;
-    links:CL_similarFormSameFunction cx:deu_Schussauf,
-        cx:engLME_shotatto ;
-    rcxn:hasConstructionMeaning cx:ukr_PostrilvPLUSACC_Meaning ;
-    rcxn:hasMetadata cx:ukr_PostrilvPLUSACC_MD ;
-    rcxn:hasSlots cx:ukr_PostrilvPLUSACC_slots ;
-    rcxn:hasTitle "постріл в + ACC." .
-
-cx:ukr_SatyranaPLUSACC a rcxn:Construction ;
-    cx:hasExample cx:ukr_SatyranaPLUSACC_Ex_A ;
-    lg:partOfLanguage lg:ukr ;
-    links:CL_similarFormSameFunction cx:deu_Satireauf,
-        cx:engLME_satireon ;
-    rcxn:hasConstructionMeaning cx:ukr_SatyranaPLUSACC_Meaning ;
-    rcxn:hasMetadata cx:ukr_SatyranaPLUSACC_MD ;
-    rcxn:hasSlots cx:ukr_SatyranaPLUSACC_slots ;
-    rcxn:hasTitle "сатира на + ACC." .
-
-cx:ukr_VkazivkanaPLUSACC a rcxn:Construction ;
-    cx:hasExample cx:ukr_VkazivkanaPLUSACC_Ex_A ;
-    lg:partOfLanguage lg:ukr ;
-    links:CL_similarFormSameFunction cx:deu_Hinweisauf,
-        cx:engLME_tiponreferenceto ;
-    rcxn:hasConstructionMeaning cx:ukr_VkazivkanaPLUSACC_Meaning ;
-    rcxn:hasMetadata cx:ukr_VkazivkanaPLUSACC_MD ;
-    rcxn:hasSlots cx:ukr_VkazivkanaPLUSACC_slots ;
-    rcxn:hasTitle "вказівка на + ACC." .
-
-cx:ukr_VydnaPLUSACC a rcxn:Construction ;
-    cx:hasExample cx:ukr_VydnaPLUSACC_Ex_A ;
-    lg:partOfLanguage lg:ukr ;
-    links:CL_similarFormSameFunction cx:deu_Ausblickauf,
-        cx:engLME_viewon ;
-    rcxn:hasConstructionMeaning cx:ukr_VydnaPLUSACC_Meaning ;
-    rcxn:hasMetadata cx:ukr_VydnaPLUSACC_MD ;
-    rcxn:hasSlots cx:ukr_VydnaPLUSACC_slots ;
-    rcxn:hasTitle "вид на + ACC." .
-
-cx:ukr_ZamakhnaPLUSACC a rcxn:Construction ;
-    cx:hasExample cx:ukr_ZamakhnaPLUSACC_Ex_A ;
-    lg:partOfLanguage lg:ukr ;
-    links:CL_similarFormSameFunction cx:deu_Attentatauf,
-        cx:engLME_assassinationattempton ;
-    rcxn:hasConstructionMeaning cx:ukr_ZamakhnaPLUSACC_Meaning ;
-    rcxn:hasMetadata cx:ukr_ZamakhnaPLUSACC_MD ;
-    rcxn:hasSlots cx:ukr_ZamakhnaPLUSACC_slots ;
-    rcxn:hasTitle "замах на + ACC." .
-
 cx:engLME_assassinationattempton a rcxn:Construction ;
     cx:hasExample cx:engLME_assassinationattempton_Ex_A ;
     lg:partOfLanguage lg:engLME ;
@@ -2035,9 +2024,22 @@ cx:engLME_viewon a rcxn:Construction ;
     rcxn:hasSlots cx:engLME_viewon_slots ;
     rcxn:hasTitle "view on" .
 
+cx:pol_ataknaPLUSACC a rcxn:Construction ;
+    cx:hasExample cx:pol_ataknaPLUSACC_Ex_A ;
+    lg:partOfLanguage lg:pol ;
+    links:CL_similarFormSameFunction cx:deu_Angriffauf,
+        cx:deu_UEberfallauf,
+        cx:engLME_assaulton,
+        cx:engLME_attackonupon ;
+    rcxn:hasConstructionMeaning cx:pol_ataknaPLUSACC_Meaning ;
+    rcxn:hasMetadata cx:pol_ataknaPLUSACC_MD ;
+    rcxn:hasSlots cx:pol_ataknaPLUSACC_slots ;
+    rcxn:hasTitle "atak na + ACC." .
+
 cx:deu_Angriffauf a rcxn:Construction ;
     cx:hasExample cx:deu_Angriffauf_Ex_A ;
     lg:partOfLanguage lg:deu ;
+    links:inheritsFrom cx:deu_XaufY ;
     rcxn:hasConstructionMeaning cx:deu_Angriffauf_Meaning ;
     rcxn:hasMetadata cx:deu_Angriffauf_MD ;
     rcxn:hasSlots cx:deu_Angriffauf_slots ;
@@ -2046,6 +2048,7 @@ cx:deu_Angriffauf a rcxn:Construction ;
 cx:deu_Attentatauf a rcxn:Construction ;
     cx:hasExample cx:deu_Attentatauf_Ex_A ;
     lg:partOfLanguage lg:deu ;
+    links:inheritsFrom cx:deu_XaufY ;
     rcxn:hasConstructionMeaning cx:deu_Attentatauf_Meaning ;
     rcxn:hasMetadata cx:deu_Attentatauf_MD ;
     rcxn:hasSlots cx:deu_Attentatauf_slots ;
@@ -2054,6 +2057,7 @@ cx:deu_Attentatauf a rcxn:Construction ;
 cx:deu_Ausblickauf a rcxn:Construction ;
     cx:hasExample cx:deu_Ausblickauf_Ex_A ;
     lg:partOfLanguage lg:deu ;
+    links:inheritsFrom cx:deu_XaufY ;
     rcxn:hasConstructionMeaning cx:deu_Ausblickauf_Meaning ;
     rcxn:hasMetadata cx:deu_Ausblickauf_MD ;
     rcxn:hasSlots cx:deu_Ausblickauf_slots ;
@@ -2062,6 +2066,7 @@ cx:deu_Ausblickauf a rcxn:Construction ;
 cx:deu_Hassauf a rcxn:Construction ;
     cx:hasExample cx:deu_Hassauf_Ex_A ;
     lg:partOfLanguage lg:deu ;
+    links:inheritsFrom cx:deu_XaufY ;
     rcxn:hasConstructionMeaning cx:deu_Hassauf_Meaning ;
     rcxn:hasMetadata cx:deu_Hassauf_MD ;
     rcxn:hasSlots cx:deu_Hassauf_slots ;
@@ -2070,6 +2075,7 @@ cx:deu_Hassauf a rcxn:Construction ;
 cx:deu_Hinweisauf a rcxn:Construction ;
     cx:hasExample cx:deu_Hinweisauf_Ex_A ;
     lg:partOfLanguage lg:deu ;
+    links:inheritsFrom cx:deu_XaufY ;
     rcxn:hasConstructionMeaning cx:deu_Hinweisauf_Meaning ;
     rcxn:hasMetadata cx:deu_Hinweisauf_MD ;
     rcxn:hasSlots cx:deu_Hinweisauf_slots ;
@@ -2078,6 +2084,7 @@ cx:deu_Hinweisauf a rcxn:Construction ;
 cx:deu_Konzentrationauf a rcxn:Construction ;
     cx:hasExample cx:deu_Konzentrationauf_Ex_A ;
     lg:partOfLanguage lg:deu ;
+    links:inheritsFrom cx:deu_XaufY ;
     rcxn:hasConstructionMeaning cx:deu_Konzentrationauf_Meaning ;
     rcxn:hasMetadata cx:deu_Konzentrationauf_MD ;
     rcxn:hasSlots cx:deu_Konzentrationauf_slots ;
@@ -2086,6 +2093,7 @@ cx:deu_Konzentrationauf a rcxn:Construction ;
 cx:deu_Satireauf a rcxn:Construction ;
     cx:hasExample cx:deu_Satireauf_Ex_A ;
     lg:partOfLanguage lg:deu ;
+    links:inheritsFrom cx:deu_XaufY ;
     rcxn:hasConstructionMeaning cx:deu_Satireauf_Meaning ;
     rcxn:hasMetadata cx:deu_Satireauf_MD ;
     rcxn:hasSlots cx:deu_Satireauf_slots ;
@@ -2094,6 +2102,7 @@ cx:deu_Satireauf a rcxn:Construction ;
 cx:deu_Schussauf a rcxn:Construction ;
     cx:hasExample cx:deu_Schussauf_Ex_A ;
     lg:partOfLanguage lg:deu ;
+    links:inheritsFrom cx:deu_XaufY ;
     rcxn:hasConstructionMeaning cx:deu_Schussauf_Meaning ;
     rcxn:hasMetadata cx:deu_Schussauf_MD ;
     rcxn:hasSlots cx:deu_Schussauf_slots ;
@@ -2102,6 +2111,7 @@ cx:deu_Schussauf a rcxn:Construction ;
 cx:deu_UEberfallauf a rcxn:Construction ;
     cx:hasExample cx:deu_UEberfallauf_Ex_A ;
     lg:partOfLanguage lg:deu ;
+    links:inheritsFrom cx:deu_XaufY ;
     rcxn:hasConstructionMeaning cx:deu_UEberfallauf_Meaning ;
     rcxn:hasMetadata cx:deu_UEberfallauf_MD ;
     rcxn:hasSlots cx:deu_UEberfallauf_slots ;
@@ -2110,22 +2120,11 @@ cx:deu_UEberfallauf a rcxn:Construction ;
 cx:deu_UEbergriffauf a rcxn:Construction ;
     cx:hasExample cx:deu_UEbergriffauf_Ex_A ;
     lg:partOfLanguage lg:deu ;
+    links:inheritsFrom cx:deu_XaufY ;
     rcxn:hasConstructionMeaning cx:deu_UEbergriffauf_Meaning ;
     rcxn:hasMetadata cx:deu_UEbergriffauf_MD ;
     rcxn:hasSlots cx:deu_UEbergriffauf_slots ;
     rcxn:hasTitle "Übergriff auf " .
-
-cx:deu_nan a rcxn:Construction ;
-    lg:partOfLanguage lg:deu ;
-    links:elementOf cx:deu_Ausblickauf,
-        cx:deu_Hinweisauf,
-        cx:deu_Satireauf,
-        cx:deu_nan ;
-    rcxn:hasConstructionMeaning cx:deu_nan_Meaning ;
-    rcxn:hasMetadata cx:deu_nan_MD ;
-    rcxn:hasSlots cx:deu_nan_slots ;
-    rcxn:hasTitle "NaN"^^xsd:double,
-        "nan" .
 
 cx:engLME_assaulton a rcxn:Construction ;
     cx:hasExample cx:engLME_assaulton_Ex_A ;
@@ -2146,4 +2145,11 @@ cx:ukr_NounPhrase a rcxn:Construction ;
     lg:partOfLanguage lg:ukr ;
     rcxn:hasMetadata cx:pol_NounPhrase_MD ;
     rcxn:hasTitle "Noun Phrase" .
+
+cx:deu_XaufY a rcxn:Construction ;
+    lg:partOfLanguage lg:deu ;
+    rcxn:hasConstructionMeaning cx:deu_XaufY_Meaning ;
+    rcxn:hasMetadata cx:deu_XaufY_MD ;
+    rcxn:hasSlots cx:deu_XaufY_slots ;
+    rcxn:hasTitle "X auf Y" .
 
