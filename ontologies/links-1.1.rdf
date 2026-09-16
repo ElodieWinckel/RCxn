@@ -385,7 +385,7 @@
     <owl:ObjectProperty rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#elementOf">
         <rdfs:subPropertyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#LanguageInternalLink"/>
         <rdfs:comment xml:lang="en">Relates a construction to the constructions that it is a part of. If element A uses B, then B is an element of A.</rdfs:comment>
-        <rdfs:label xml:lang="en">Element of (en)</rdfs:label>
+        <rdfs:label xml:lang="en">Element of</rdfs:label>
     </owl:ObjectProperty>
     
 
