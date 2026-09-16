@@ -749,7 +749,7 @@ cx:deu_Angriff a rcxn:Construction ;
     rcxn:hasTitle "Angriff" .
 
 cx:deu_Angriff_MD a rcxn:Metadata ;
-    DCTERMS:created "2026-09-15"^^xsd:date ;
+    DCTERMS:created "2026-09-16"^^xsd:date ;
     rcxn:annotator membr:Fokashchuk .
 
 cx:deu_Angriffauf_1 rcxn:hasOtherSemanticContribution "trajector" ;
@@ -774,10 +774,11 @@ cx:deu_Angriffauf_3_Form a rcxn:SlotForm ;
 
 cx:deu_Angriffauf_Ex_A a cx:Example ;
     cx:hasAnnotatedText "[Angriff]1 [auf]2 [die Religionsfreiheit]3" ;
-    cx:hasText "Angriff auf die Religionsfreiheit" .
+    cx:hasText "Angriff auf die Religionsfreiheit" ;
+    cx:hasTranslation "attack on religious freedom" .
 
 cx:deu_Angriffauf_MD a rcxn:Metadata ;
-    DCTERMS:created "2026-09-15"^^xsd:date ;
+    DCTERMS:created "2026-09-16"^^xsd:date ;
     rcxn:annotator membr:Fokashchuk .
 
 cx:deu_Angriffauf_Meaning a rcxn:ConstructionMeaning ;
@@ -795,7 +796,7 @@ cx:deu_Attentat a rcxn:Construction ;
     rcxn:hasTitle "Attentat" .
 
 cx:deu_Attentat_MD a rcxn:Metadata ;
-    DCTERMS:created "2026-09-15"^^xsd:date ;
+    DCTERMS:created "2026-09-16"^^xsd:date ;
     rcxn:annotator membr:Fokashchuk .
 
 cx:deu_Attentatauf_1 rcxn:hasOtherSemanticContribution "trajector" ;
@@ -820,10 +821,11 @@ cx:deu_Attentatauf_3_Form a rcxn:SlotForm ;
 
 cx:deu_Attentatauf_Ex_A a cx:Example ;
     cx:hasAnnotatedText "[Attentat]1 [auf]2 [den König]3" ;
-    cx:hasText "Attentat auf den König" .
+    cx:hasText "Attentat auf den König" ;
+    cx:hasTranslation "assassination attempt on the king" .
 
 cx:deu_Attentatauf_MD a rcxn:Metadata ;
-    DCTERMS:created "2026-09-15"^^xsd:date ;
+    DCTERMS:created "2026-09-16"^^xsd:date ;
     rcxn:annotator membr:Fokashchuk .
 
 cx:deu_Attentatauf_Meaning a rcxn:ConstructionMeaning ;
@@ -856,10 +858,11 @@ cx:deu_Ausblickauf_3_Form a rcxn:SlotForm ;
 
 cx:deu_Ausblickauf_Ex_A a cx:Example ;
     cx:hasAnnotatedText "[Ausblick]1 [auf]2 [das laufende Jahr]3" ;
-    cx:hasText "Ausblick auf das laufende Jahr" .
+    cx:hasText "Ausblick auf das laufende Jahr" ;
+    cx:hasTranslation "view on the current year" .
 
 cx:deu_Ausblickauf_MD a rcxn:Metadata ;
-    DCTERMS:created "2026-09-15"^^xsd:date ;
+    DCTERMS:created "2026-09-16"^^xsd:date ;
     rcxn:annotator membr:Fokashchuk .
 
 cx:deu_Ausblickauf_Meaning a rcxn:ConstructionMeaning ;
@@ -992,7 +995,7 @@ cx:deu_Hass a rcxn:Construction ;
     rcxn:hasTitle "Hass" .
 
 cx:deu_Hass_MD a rcxn:Metadata ;
-    DCTERMS:created "2026-09-15"^^xsd:date ;
+    DCTERMS:created "2026-09-16"^^xsd:date ;
     rcxn:annotator membr:Fokashchuk .
 
 cx:deu_Hassauf_1 rcxn:hasOtherSemanticContribution "trajector" ;
@@ -1017,10 +1020,11 @@ cx:deu_Hassauf_3_Form a rcxn:SlotForm ;
 
 cx:deu_Hassauf_Ex_A a cx:Example ;
     cx:hasAnnotatedText "[Hass]1 [auf]2 [den Partner]3" ;
-    cx:hasText "Hass auf den Partner" .
+    cx:hasText "Hass auf den Partner" ;
+    cx:hasTranslation "hatred toward a partner" .
 
 cx:deu_Hassauf_MD a rcxn:Metadata ;
-    DCTERMS:created "2026-09-15"^^xsd:date ;
+    DCTERMS:created "2026-09-16"^^xsd:date ;
     rcxn:annotator membr:Fokashchuk .
 
 cx:deu_Hassauf_Meaning a rcxn:ConstructionMeaning ;
@@ -1053,10 +1057,11 @@ cx:deu_Hinweisauf_3_Form a rcxn:SlotForm ;
 
 cx:deu_Hinweisauf_Ex_A a cx:Example ;
     cx:hasAnnotatedText "[Hinweis]1 [auf]2 [die Informationsveranstaltung]3" ;
-    cx:hasText "Hinweis auf die Informationsveranstaltung" .
+    cx:hasText "Hinweis auf die Informationsveranstaltung" ;
+    cx:hasTranslation "reference to the information session" .
 
 cx:deu_Hinweisauf_MD a rcxn:Metadata ;
-    DCTERMS:created "2026-09-15"^^xsd:date ;
+    DCTERMS:created "2026-09-16"^^xsd:date ;
     rcxn:annotator membr:Fokashchuk .
 
 cx:deu_Hinweisauf_Meaning a rcxn:ConstructionMeaning ;
@@ -1074,7 +1079,7 @@ cx:deu_Konzentration a rcxn:Construction ;
     rcxn:hasTitle "Konzentration " .
 
 cx:deu_Konzentration_MD a rcxn:Metadata ;
-    DCTERMS:created "2026-09-15"^^xsd:date ;
+    DCTERMS:created "2026-09-16"^^xsd:date ;
     rcxn:annotator membr:Fokashchuk .
 
 cx:deu_Konzentrationauf_1 rcxn:hasOtherSemanticContribution "trajector" ;
@@ -1099,10 +1104,11 @@ cx:deu_Konzentrationauf_3_Form a rcxn:SlotForm ;
 
 cx:deu_Konzentrationauf_Ex_A a cx:Example ;
     cx:hasAnnotatedText "[Konzentration]1 [auf]2 [das Wesentliche]3" ;
-    cx:hasText "Konzentration auf das Wesentliche" .
+    cx:hasText "Konzentration auf das Wesentliche" ;
+    cx:hasTranslation "concentration on the essentials" .
 
 cx:deu_Konzentrationauf_MD a rcxn:Metadata ;
-    DCTERMS:created "2026-09-15"^^xsd:date ;
+    DCTERMS:created "2026-09-16"^^xsd:date ;
     rcxn:annotator membr:Fokashchuk .
 
 cx:deu_Konzentrationauf_Meaning a rcxn:ConstructionMeaning ;
@@ -1325,10 +1331,11 @@ cx:deu_Satireauf_3_Form a rcxn:SlotForm ;
 
 cx:deu_Satireauf_Ex_A a cx:Example ;
     cx:hasAnnotatedText "[Satire]1 [auf]2 [die Bürokratie]3" ;
-    cx:hasText "Satire auf die Bürokratie" .
+    cx:hasText "Satire auf die Bürokratie" ;
+    cx:hasTranslation "satire on bureaucracy" .
 
 cx:deu_Satireauf_MD a rcxn:Metadata ;
-    DCTERMS:created "2026-09-15"^^xsd:date ;
+    DCTERMS:created "2026-09-16"^^xsd:date ;
     rcxn:annotator membr:Fokashchuk .
 
 cx:deu_Satireauf_Meaning a rcxn:ConstructionMeaning ;
@@ -1346,7 +1353,7 @@ cx:deu_Schuss a rcxn:Construction ;
     rcxn:hasTitle "Schuss" .
 
 cx:deu_Schuss_MD a rcxn:Metadata ;
-    DCTERMS:created "2026-09-15"^^xsd:date ;
+    DCTERMS:created "2026-09-16"^^xsd:date ;
     rcxn:annotator membr:Fokashchuk .
 
 cx:deu_Schussauf_1 rcxn:hasOtherSemanticContribution "trajector" ;
@@ -1371,10 +1378,11 @@ cx:deu_Schussauf_3_Form a rcxn:SlotForm ;
 
 cx:deu_Schussauf_Ex_A a cx:Example ;
     cx:hasAnnotatedText "[Schuss]1 [auf]2 [die Piraten]3" ;
-    cx:hasText "Schuss auf die Piraten" .
+    cx:hasText "Schuss auf die Piraten" ;
+    cx:hasTranslation "shot at the pirates" .
 
 cx:deu_Schussauf_MD a rcxn:Metadata ;
-    DCTERMS:created "2026-09-15"^^xsd:date ;
+    DCTERMS:created "2026-09-16"^^xsd:date ;
     rcxn:annotator membr:Fokashchuk .
 
 cx:deu_Schussauf_Meaning a rcxn:ConstructionMeaning ;
@@ -1392,7 +1400,7 @@ cx:deu_UEberfall a rcxn:Construction ;
     rcxn:hasTitle "Überfall " .
 
 cx:deu_UEberfall_MD a rcxn:Metadata ;
-    DCTERMS:created "2026-09-15"^^xsd:date ;
+    DCTERMS:created "2026-09-16"^^xsd:date ;
     rcxn:annotator membr:Fokashchuk .
 
 cx:deu_UEberfallauf_1 rcxn:hasOtherSemanticContribution "trajector" ;
@@ -1417,10 +1425,11 @@ cx:deu_UEberfallauf_3_Form a rcxn:SlotForm ;
 
 cx:deu_UEberfallauf_Ex_A a cx:Example ;
     cx:hasAnnotatedText "[Überfall]1 [auf]2 [die Tankstelle]3" ;
-    cx:hasText "Überfall auf die Tankstelle" .
+    cx:hasText "Überfall auf die Tankstelle" ;
+    cx:hasTranslation "robbery at the gas station" .
 
 cx:deu_UEberfallauf_MD a rcxn:Metadata ;
-    DCTERMS:created "2026-09-15"^^xsd:date ;
+    DCTERMS:created "2026-09-16"^^xsd:date ;
     rcxn:annotator membr:Fokashchuk .
 
 cx:deu_UEberfallauf_Meaning a rcxn:ConstructionMeaning ;
@@ -1438,7 +1447,7 @@ cx:deu_UEbergriff a rcxn:Construction ;
     rcxn:hasTitle "Übergriff" .
 
 cx:deu_UEbergriff_MD a rcxn:Metadata ;
-    DCTERMS:created "2026-09-15"^^xsd:date ;
+    DCTERMS:created "2026-09-16"^^xsd:date ;
     rcxn:annotator membr:Fokashchuk .
 
 cx:deu_UEbergriffauf_1 rcxn:hasOtherSemanticContribution "trajector" ;
@@ -1463,10 +1472,11 @@ cx:deu_UEbergriffauf_3_Form a rcxn:SlotForm ;
 
 cx:deu_UEbergriffauf_Ex_A a cx:Example ;
     cx:hasAnnotatedText "[Übergriffe]1 [auf]2 [das Personal]3" ;
-    cx:hasText "Übergriffe auf das Personal" .
+    cx:hasText "Übergriffe auf das Personal" ;
+    cx:hasTranslation "assaults on staff" .
 
 cx:deu_UEbergriffauf_MD a rcxn:Metadata ;
-    DCTERMS:created "2026-09-15"^^xsd:date ;
+    DCTERMS:created "2026-09-16"^^xsd:date ;
     rcxn:annotator membr:Fokashchuk .
 
 cx:deu_UEbergriffauf_Meaning a rcxn:ConstructionMeaning ;
@@ -1498,7 +1508,7 @@ cx:deu_XanY_3_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:deu_NounPhrase .
 
 cx:deu_XanY_MD a rcxn:Metadata ;
-    DCTERMS:created "2026-09-15"^^xsd:date ;
+    DCTERMS:created "2026-09-16"^^xsd:date ;
     rcxn:annotator membr:Fokashchuk .
 
 cx:deu_XanY_Meaning a rcxn:ConstructionMeaning ;
@@ -1530,7 +1540,7 @@ cx:deu_XaufY_3_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:deu_NounPhrase .
 
 cx:deu_XaufY_MD a rcxn:Metadata ;
-    DCTERMS:created "2026-09-15"^^xsd:date ;
+    DCTERMS:created "2026-09-16"^^xsd:date ;
     rcxn:annotator membr:Fokashchuk .
 
 cx:deu_XaufY_Meaning a rcxn:ConstructionMeaning ;
@@ -1562,7 +1572,7 @@ cx:deu_nan_3_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:deu_NounPhrase .
 
 cx:deu_nan_MD a rcxn:Metadata ;
-    DCTERMS:created "2026-09-15"^^xsd:date ;
+    DCTERMS:created "2026-09-16"^^xsd:date ;
     rcxn:annotator membr:Fokashchuk .
 
 cx:deu_nan_Meaning a rcxn:ConstructionMeaning ;
@@ -2288,8 +2298,12 @@ cx:engLME_assassinationattempton_3_Form a rcxn:SlotForm ;
     RDFS:comment "head is \"sb./sth.\"" ;
     rcxn:hasSyntacticForm cx:eng_NounPhrase .
 
+cx:engLME_assassinationattempton_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "[assassination]1 [attempt]2 [on the king]3" ;
+    cx:hasText "assassination attempt on the king" .
+
 cx:engLME_assassinationattempton_MD a rcxn:Metadata ;
-    DCTERMS:created "2026-09-15"^^xsd:date ;
+    DCTERMS:created "2026-09-16"^^xsd:date ;
     rcxn:annotator membr:Fokashchuk .
 
 cx:engLME_assassinationattempton_Meaning a rcxn:ConstructionMeaning ;
@@ -2316,8 +2330,14 @@ cx:engLME_assaulton_3_Form a rcxn:SlotForm ;
     RDFS:comment "head is \"sb./sth.\"" ;
     rcxn:hasSyntacticForm cx:eng_NounPhrase .
 
+cx:engLME_assaulton_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "[assaults]1 [on]2 [staff]3",
+        "[robbery]1 [at]2 [the gas station]3" ;
+    cx:hasText "assaults on staff",
+        "robbery at the gas station" .
+
 cx:engLME_assaulton_MD a rcxn:Metadata ;
-    DCTERMS:created "2026-09-15"^^xsd:date ;
+    DCTERMS:created "2026-09-16"^^xsd:date ;
     rcxn:annotator membr:Fokashchuk .
 
 cx:engLME_assaulton_Meaning a rcxn:ConstructionMeaning ;
@@ -2346,8 +2366,12 @@ cx:engLME_attackonupon_3_Form a rcxn:SlotForm ;
     RDFS:comment "head is \"sb./sth.\"" ;
     rcxn:hasSyntacticForm cx:eng_NounPhrase .
 
+cx:engLME_attackonupon_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "[attack]1 [on]2 [religious freedom]3" ;
+    cx:hasText "attack on religious freedom" .
+
 cx:engLME_attackonupon_MD a rcxn:Metadata ;
-    DCTERMS:created "2026-09-15"^^xsd:date ;
+    DCTERMS:created "2026-09-16"^^xsd:date ;
     rcxn:annotator membr:Fokashchuk .
 
 cx:engLME_attackonupon_Meaning a rcxn:ConstructionMeaning ;
@@ -2374,8 +2398,12 @@ cx:engLME_concentrationon_3_Form a rcxn:SlotForm ;
     RDFS:comment "head is \"sb./sth.\"" ;
     rcxn:hasSyntacticForm cx:eng_NounPhrase .
 
+cx:engLME_concentrationon_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "[concentration]1 [on]2 [the essentials]3" ;
+    cx:hasText "concentration on the essentials" .
+
 cx:engLME_concentrationon_MD a rcxn:Metadata ;
-    DCTERMS:created "2026-09-15"^^xsd:date ;
+    DCTERMS:created "2026-09-16"^^xsd:date ;
     rcxn:annotator membr:Fokashchuk .
 
 cx:engLME_concentrationon_Meaning a rcxn:ConstructionMeaning ;
@@ -2464,8 +2492,12 @@ cx:engLME_hatredtowards_3_Form a rcxn:SlotForm ;
     RDFS:comment "head is \"sb./sth.\"" ;
     rcxn:hasSyntacticForm cx:eng_NounPhrase .
 
+cx:engLME_hatredtowards_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "[hatred]1 [toward]2 [a partner]3" ;
+    cx:hasText "hatred toward a partner" .
+
 cx:engLME_hatredtowards_MD a rcxn:Metadata ;
-    DCTERMS:created "2026-09-15"^^xsd:date ;
+    DCTERMS:created "2026-09-16"^^xsd:date ;
     rcxn:annotator membr:Fokashchuk .
 
 cx:engLME_hatredtowards_Meaning a rcxn:ConstructionMeaning ;
@@ -2492,8 +2524,12 @@ cx:engLME_satireon_3_Form a rcxn:SlotForm ;
     RDFS:comment "head is \"sb./sth.\"" ;
     rcxn:hasSyntacticForm cx:eng_NounPhrase .
 
+cx:engLME_satireon_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "[satire]1 [on]2 [bureaucracy]3" ;
+    cx:hasText "satire on bureaucracy" .
+
 cx:engLME_satireon_MD a rcxn:Metadata ;
-    DCTERMS:created "2026-09-15"^^xsd:date ;
+    DCTERMS:created "2026-09-16"^^xsd:date ;
     rcxn:annotator membr:Fokashchuk .
 
 cx:engLME_satireon_Meaning a rcxn:ConstructionMeaning ;
@@ -2521,8 +2557,12 @@ cx:engLME_shotatto_3_Form a rcxn:SlotForm ;
     RDFS:comment "head is \"sb./sth.\"" ;
     rcxn:hasSyntacticForm cx:eng_NounPhrase .
 
+cx:engLME_shotatto_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "[shot]1 [at]2 [the pirates]3" ;
+    cx:hasText "shot at the pirates" .
+
 cx:engLME_shotatto_MD a rcxn:Metadata ;
-    DCTERMS:created "2026-09-15"^^xsd:date ;
+    DCTERMS:created "2026-09-16"^^xsd:date ;
     rcxn:annotator membr:Fokashchuk .
 
 cx:engLME_shotatto_Meaning a rcxn:ConstructionMeaning ;
@@ -2550,8 +2590,12 @@ cx:engLME_tiponreferenceto_3_Form a rcxn:SlotForm ;
     RDFS:comment "head is \"sb./sth.\"" ;
     rcxn:hasSyntacticForm cx:eng_NounPhrase .
 
+cx:engLME_tiponreferenceto_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "[reference]1 [to]2 [the information session]3" ;
+    cx:hasText "reference to the information session" .
+
 cx:engLME_tiponreferenceto_MD a rcxn:Metadata ;
-    DCTERMS:created "2026-09-15"^^xsd:date ;
+    DCTERMS:created "2026-09-16"^^xsd:date ;
     rcxn:annotator membr:Fokashchuk .
 
 cx:engLME_tiponreferenceto_Meaning a rcxn:ConstructionMeaning ;
@@ -2578,8 +2622,12 @@ cx:engLME_viewon_3_Form a rcxn:SlotForm ;
     RDFS:comment "head is \"sb./sth.\"" ;
     rcxn:hasSyntacticForm cx:eng_NounPhrase .
 
+cx:engLME_viewon_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "[view]1 [on]2 [the current year]3" ;
+    cx:hasText "view on the current year" .
+
 cx:engLME_viewon_MD a rcxn:Metadata ;
-    DCTERMS:created "2026-09-15"^^xsd:date ;
+    DCTERMS:created "2026-09-16"^^xsd:date ;
     rcxn:annotator membr:Fokashchuk .
 
 cx:engLME_viewon_Meaning a rcxn:ConstructionMeaning ;
@@ -3163,7 +3211,7 @@ cx:eng_assassinationattempt a rcxn:Construction ;
     rcxn:hasTitle "assassination attempt" .
 
 cx:eng_assassinationattempt_MD a rcxn:Metadata ;
-    DCTERMS:created "2026-09-15"^^xsd:date ;
+    DCTERMS:created "2026-09-16"^^xsd:date ;
     rcxn:annotator membr:Fokashchuk .
 
 cx:eng_assault a rcxn:Construction ;
@@ -3173,7 +3221,7 @@ cx:eng_assault a rcxn:Construction ;
     rcxn:hasTitle "assault " .
 
 cx:eng_assault_MD a rcxn:Metadata ;
-    DCTERMS:created "2026-09-15"^^xsd:date ;
+    DCTERMS:created "2026-09-16"^^xsd:date ;
     rcxn:annotator membr:Fokashchuk .
 
 cx:eng_attack a rcxn:Construction ;
@@ -3183,7 +3231,7 @@ cx:eng_attack a rcxn:Construction ;
     rcxn:hasTitle "attack" .
 
 cx:eng_attack_MD a rcxn:Metadata ;
-    DCTERMS:created "2026-09-15"^^xsd:date ;
+    DCTERMS:created "2026-09-16"^^xsd:date ;
     rcxn:annotator membr:Fokashchuk .
 
 cx:eng_attribute_construction_attr_to_inf links:sameFormDifferentFunction cx:eng_ditransitive_construction_obj_inf .
@@ -3224,7 +3272,7 @@ cx:eng_concentration a rcxn:Construction ;
     rcxn:hasTitle "concentration " .
 
 cx:eng_concentration_MD a rcxn:Metadata ;
-    DCTERMS:created "2026-09-15"^^xsd:date ;
+    DCTERMS:created "2026-09-16"^^xsd:date ;
     rcxn:annotator membr:Fokashchuk .
 
 cx:eng_coolconstruction_1 a rcxn:SlotObligatory ;
@@ -3389,7 +3437,7 @@ cx:eng_hatred a rcxn:Construction ;
     rcxn:hasTitle "hatred " .
 
 cx:eng_hatred_MD a rcxn:Metadata ;
-    DCTERMS:created "2026-09-15"^^xsd:date ;
+    DCTERMS:created "2026-09-16"^^xsd:date ;
     rcxn:annotator membr:Fokashchuk .
 
 cx:eng_keep a rcxn:Construction ;
@@ -3439,7 +3487,7 @@ cx:eng_satire a rcxn:Construction ;
     rcxn:hasTitle "satire" .
 
 cx:eng_satire_MD a rcxn:Metadata ;
-    DCTERMS:created "2026-09-15"^^xsd:date ;
+    DCTERMS:created "2026-09-16"^^xsd:date ;
     rcxn:annotator membr:Fokashchuk .
 
 cx:eng_shot a rcxn:Construction ;
@@ -3449,7 +3497,7 @@ cx:eng_shot a rcxn:Construction ;
     rcxn:hasTitle "shot" .
 
 cx:eng_shot_MD a rcxn:Metadata ;
-    DCTERMS:created "2026-09-15"^^xsd:date ;
+    DCTERMS:created "2026-09-16"^^xsd:date ;
     rcxn:annotator membr:Fokashchuk .
 
 cx:eng_this a rcxn:Construction ;
@@ -3469,7 +3517,7 @@ cx:eng_tipreference a rcxn:Construction ;
     rcxn:hasTitle "tip/reference" .
 
 cx:eng_tipreference_MD a rcxn:Metadata ;
-    DCTERMS:created "2026-09-15"^^xsd:date ;
+    DCTERMS:created "2026-09-16"^^xsd:date ;
     rcxn:annotator membr:Fokashchuk .
 
 cx:eng_view a rcxn:Construction ;
@@ -3479,7 +3527,7 @@ cx:eng_view a rcxn:Construction ;
     rcxn:hasTitle "view" .
 
 cx:eng_view_MD a rcxn:Metadata ;
-    DCTERMS:created "2026-09-15"^^xsd:date ;
+    DCTERMS:created "2026-09-16"^^xsd:date ;
     rcxn:annotator membr:Fokashchuk .
 
 <http://example.org/cx/etc.> links:inheritsFrom cx:deu_NPDefDetstrongPLUSADJweakPLUSN .
@@ -4102,6 +4150,403 @@ cx:pes_maaraastinexodparvaraandantonurtureasnakeinonesbosom_MD a rcxn:Metadata ;
     rcxn:annotator membr:Rastegar ;
     rcxn:hasTitle "mār āstin-e xod parvarāndan: to nurture a snake in one's bosom" .
 
+cx:pol_NounPhrase_MD a rcxn:Metadata ;
+    DCTERMS:created "2026-09-16"^^xsd:date ;
+    rcxn:annotator membr:Fokashchuk .
+
+cx:pol_atak a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    links:elementOf cx:pol_ataknaPLUSACC ;
+    rcxn:hasMetadata cx:pol_atak_MD ;
+    rcxn:hasTitle "atak" .
+
+cx:pol_atak_MD a rcxn:Metadata ;
+    DCTERMS:created "2026-09-16"^^xsd:date ;
+    rcxn:annotator membr:Fokashchuk .
+
+cx:pol_ataknaPLUSACC_1 rcxn:hasSlotForm cx:pol_ataknaPLUSACC_1_Form .
+
+cx:pol_ataknaPLUSACC_1_Form a rcxn:SlotForm ;
+    rcxn:hasStem cx:pol_atak .
+
+cx:pol_ataknaPLUSACC_2 rcxn:hasSlotForm cx:pol_ataknaPLUSACC_2_Form .
+
+cx:pol_ataknaPLUSACC_2_Form a rcxn:SlotForm ;
+    rcxn:hasSurfaceForm "na" .
+
+cx:pol_ataknaPLUSACC_3 olia:hasCase olia:Accusative ;
+    rcxn:hasSlotForm cx:pol_ataknaPLUSACC_3_Form .
+
+cx:pol_ataknaPLUSACC_3_Form a rcxn:SlotForm ;
+    RDFS:comment "head is \"kogo, co\"",
+        "head is \"kogoś, coś\"" ;
+    rcxn:hasSyntacticForm cx:pol_NounPhrase .
+
+cx:pol_ataknaPLUSACC_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "[atak]1 [na]2 [stację benzynową]3",
+        "[atak]1 [na]2 [wolność religijną]3" ;
+    cx:hasText "atak na stację benzynową",
+        "atak na wolność religijną" .
+
+cx:pol_ataknaPLUSACC_MD a rcxn:Metadata ;
+    DCTERMS:created "2026-09-16"^^xsd:date ;
+    rcxn:annotator membr:Fokashchuk .
+
+cx:pol_ataknaPLUSACC_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "hostile advance, raid / an attack directed against X / an attempt to damage or undermine X (DWDS)",
+        "surprise attack (DWDS)" .
+
+cx:pol_ataknaPLUSACC_slots a RDF:Seq ;
+    RDF:_1 cx:pol_ataknaPLUSACC_1 ;
+    RDF:_2 cx:pol_ataknaPLUSACC_2 ;
+    RDF:_3 cx:pol_ataknaPLUSACC_3 .
+
+cx:pol_koncentracja a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    links:elementOf cx:pol_koncentracjanaPLUSLOC ;
+    rcxn:hasMetadata cx:pol_koncentracja_MD ;
+    rcxn:hasTitle "koncentracja " .
+
+cx:pol_koncentracja_MD a rcxn:Metadata ;
+    DCTERMS:created "2026-09-16"^^xsd:date ;
+    rcxn:annotator membr:Fokashchuk .
+
+cx:pol_koncentracjanaPLUSLOC_1 rcxn:hasSlotForm cx:pol_koncentracjanaPLUSLOC_1_Form .
+
+cx:pol_koncentracjanaPLUSLOC_1_Form a rcxn:SlotForm ;
+    rcxn:hasStem cx:pol_koncentracja .
+
+cx:pol_koncentracjanaPLUSLOC_2 rcxn:hasSlotForm cx:pol_koncentracjanaPLUSLOC_2_Form .
+
+cx:pol_koncentracjanaPLUSLOC_2_Form a rcxn:SlotForm ;
+    rcxn:hasSurfaceForm "na" .
+
+cx:pol_koncentracjanaPLUSLOC_3 olia:hasCase olia:LocativeCase ;
+    rcxn:hasSlotForm cx:pol_koncentracjanaPLUSLOC_3_Form .
+
+cx:pol_koncentracjanaPLUSLOC_3_Form a rcxn:SlotForm ;
+    RDFS:comment "head is \"kimś/czymś\"" ;
+    rcxn:hasSyntacticForm cx:pol_NounPhrase .
+
+cx:pol_koncentracjanaPLUSLOC_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "[koncentracja]1 [na]2 [najważniejszych kwestiach]3" ;
+    cx:hasText "koncentracja na najważniejszych kwestiach" .
+
+cx:pol_koncentracjanaPLUSLOC_MD a rcxn:Metadata ;
+    DCTERMS:created "2026-09-16"^^xsd:date ;
+    rcxn:annotator membr:Fokashchuk .
+
+cx:pol_koncentracjanaPLUSLOC_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "nan (DWDS)" .
+
+cx:pol_koncentracjanaPLUSLOC_slots a RDF:Seq ;
+    RDF:_1 cx:pol_koncentracjanaPLUSLOC_1 ;
+    RDF:_2 cx:pol_koncentracjanaPLUSLOC_2 ;
+    RDF:_3 cx:pol_koncentracjanaPLUSLOC_3 .
+
+cx:pol_napad a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    links:elementOf cx:pol_napadnaPLUSAcc ;
+    rcxn:hasMetadata cx:pol_napad_MD ;
+    rcxn:hasTitle "napad " .
+
+cx:pol_napad_MD a rcxn:Metadata ;
+    DCTERMS:created "2026-09-16"^^xsd:date ;
+    rcxn:annotator membr:Fokashchuk .
+
+cx:pol_napadnaPLUSAcc_1 rcxn:hasSlotForm cx:pol_napadnaPLUSAcc_1_Form .
+
+cx:pol_napadnaPLUSAcc_1_Form a rcxn:SlotForm ;
+    rcxn:hasStem cx:pol_napad .
+
+cx:pol_napadnaPLUSAcc_2 rcxn:hasSlotForm cx:pol_napadnaPLUSAcc_2_Form .
+
+cx:pol_napadnaPLUSAcc_2_Form a rcxn:SlotForm ;
+    rcxn:hasSurfaceForm "na" .
+
+cx:pol_napadnaPLUSAcc_3 olia:hasCase olia:Accusative ;
+    rcxn:hasSlotForm cx:pol_napadnaPLUSAcc_3_Form .
+
+cx:pol_napadnaPLUSAcc_3_Form a rcxn:SlotForm ;
+    RDFS:comment "head is \"kogo, co\"" ;
+    rcxn:hasSyntacticForm cx:pol_NounPhrase .
+
+cx:pol_napadnaPLUSAcc_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "[naapady]1 [na]2 [personel]3" ;
+    cx:hasText "naapady na personel" .
+
+cx:pol_napadnaPLUSAcc_MD a rcxn:Metadata ;
+    DCTERMS:created "2026-09-16"^^xsd:date ;
+    rcxn:annotator membr:Fokashchuk .
+
+cx:pol_napadnaPLUSAcc_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "an act carried out without authorization, exceeding one's authority, and directed against someone or something (DWDS)" .
+
+cx:pol_napadnaPLUSAcc_slots a RDF:Seq ;
+    RDF:_1 cx:pol_napadnaPLUSAcc_1 ;
+    RDF:_2 cx:pol_napadnaPLUSAcc_2 ;
+    RDF:_3 cx:pol_napadnaPLUSAcc_3 .
+
+cx:pol_nienawiść a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    links:elementOf cx:pol_nienawiśćdoPLUSGEN ;
+    rcxn:hasMetadata cx:pol_nienawiść_MD ;
+    rcxn:hasTitle "nienawiść " .
+
+cx:pol_nienawiść_MD a rcxn:Metadata ;
+    DCTERMS:created "2026-09-16"^^xsd:date ;
+    rcxn:annotator membr:Fokashchuk .
+
+cx:pol_nienawiśćdoPLUSGEN_1 rcxn:hasSlotForm cx:pol_nienawiśćdoPLUSGEN_1_Form .
+
+cx:pol_nienawiśćdoPLUSGEN_1_Form a rcxn:SlotForm ;
+    rcxn:hasStem cx:pol_nienawiść .
+
+cx:pol_nienawiśćdoPLUSGEN_2 rcxn:hasSlotForm cx:pol_nienawiśćdoPLUSGEN_2_Form .
+
+cx:pol_nienawiśćdoPLUSGEN_2_Form a rcxn:SlotForm ;
+    rcxn:hasSurfaceForm "do" .
+
+cx:pol_nienawiśćdoPLUSGEN_3 olia:hasCase olia:GenitiveCase ;
+    rcxn:hasSlotForm cx:pol_nienawiśćdoPLUSGEN_3_Form .
+
+cx:pol_nienawiśćdoPLUSGEN_3_Form a rcxn:SlotForm ;
+    RDFS:comment "head is \"kogo, czego\"" ;
+    rcxn:hasSyntacticForm cx:pol_NounPhrase .
+
+cx:pol_nienawiśćdoPLUSGEN_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "[nienawiść]1 [do]2 [partnera]3" ;
+    cx:hasText "nienawiść do partnera" .
+
+cx:pol_nienawiśćdoPLUSGEN_MD a rcxn:Metadata ;
+    DCTERMS:created "2026-09-16"^^xsd:date ;
+    rcxn:annotator membr:Fokashchuk .
+
+cx:pol_nienawiśćdoPLUSGEN_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "a strong sense of hostility, rejection directed towards sb./sth. (DWDS)" .
+
+cx:pol_nienawiśćdoPLUSGEN_slots a RDF:Seq ;
+    RDF:_1 cx:pol_nienawiśćdoPLUSGEN_1 ;
+    RDF:_2 cx:pol_nienawiśćdoPLUSGEN_2 ;
+    RDF:_3 cx:pol_nienawiśćdoPLUSGEN_3 .
+
+cx:pol_satyra a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    links:elementOf cx:pol_satyranaPLUSAcc ;
+    rcxn:hasMetadata cx:pol_satyra_MD ;
+    rcxn:hasTitle "satyra" .
+
+cx:pol_satyra_MD a rcxn:Metadata ;
+    DCTERMS:created "2026-09-16"^^xsd:date ;
+    rcxn:annotator membr:Fokashchuk .
+
+cx:pol_satyranaPLUSAcc_1 rcxn:hasSlotForm cx:pol_satyranaPLUSAcc_1_Form .
+
+cx:pol_satyranaPLUSAcc_1_Form a rcxn:SlotForm ;
+    rcxn:hasStem cx:pol_satyra .
+
+cx:pol_satyranaPLUSAcc_2 rcxn:hasSlotForm cx:pol_satyranaPLUSAcc_2_Form .
+
+cx:pol_satyranaPLUSAcc_2_Form a rcxn:SlotForm ;
+    rcxn:hasSurfaceForm "na" .
+
+cx:pol_satyranaPLUSAcc_3 olia:hasCase olia:Accusative ;
+    rcxn:hasSlotForm cx:pol_satyranaPLUSAcc_3_Form .
+
+cx:pol_satyranaPLUSAcc_3_Form a rcxn:SlotForm ;
+    RDFS:comment "head is \"kogo, co\"" ;
+    rcxn:hasSyntacticForm cx:pol_NounPhrase .
+
+cx:pol_satyranaPLUSAcc_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "[satyra]1 [na]2 [biurokrację]3" ;
+    cx:hasText "satyra na biurokrację" .
+
+cx:pol_satyranaPLUSAcc_MD a rcxn:Metadata ;
+    DCTERMS:created "2026-09-16"^^xsd:date ;
+    rcxn:annotator membr:Fokashchuk .
+
+cx:pol_satyranaPLUSAcc_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "A form of humor, which uses the sharpest satire and revealing polemics to expose characteristic contradictions in individuals and society and hold them up to ridicule (DWDS)" .
+
+cx:pol_satyranaPLUSAcc_slots a RDF:Seq ;
+    RDF:_1 cx:pol_satyranaPLUSAcc_1 ;
+    RDF:_2 cx:pol_satyranaPLUSAcc_2 ;
+    RDF:_3 cx:pol_satyranaPLUSAcc_3 .
+
+cx:pol_strzał a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    links:elementOf cx:pol_strzałwPLUSACC ;
+    rcxn:hasMetadata cx:pol_strzał_MD ;
+    rcxn:hasTitle "strzał " .
+
+cx:pol_strzał_MD a rcxn:Metadata ;
+    DCTERMS:created "2026-09-16"^^xsd:date ;
+    rcxn:annotator membr:Fokashchuk .
+
+cx:pol_strzałwPLUSACC_1 rcxn:hasSlotForm cx:pol_strzałwPLUSACC_1_Form .
+
+cx:pol_strzałwPLUSACC_1_Form a rcxn:SlotForm ;
+    rcxn:hasStem cx:pol_strzał .
+
+cx:pol_strzałwPLUSACC_2 rcxn:hasSlotForm cx:pol_strzałwPLUSACC_2_Form .
+
+cx:pol_strzałwPLUSACC_2_Form a rcxn:SlotForm ;
+    rcxn:hasSurfaceForm "w" .
+
+cx:pol_strzałwPLUSACC_3 olia:hasCase olia:Accusative ;
+    rcxn:hasSlotForm cx:pol_strzałwPLUSACC_3_Form .
+
+cx:pol_strzałwPLUSACC_3_Form a rcxn:SlotForm ;
+    RDFS:comment "head is \"kogo, co\"" ;
+    rcxn:hasSyntacticForm cx:pol_NounPhrase .
+
+cx:pol_strzałwPLUSACC_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "[Strzał]1 [w]2 [piratów]3" ;
+    cx:hasText "Strzał w piratów" .
+
+cx:pol_strzałwPLUSACC_MD a rcxn:Metadata ;
+    DCTERMS:created "2026-09-16"^^xsd:date ;
+    rcxn:annotator membr:Fokashchuk .
+
+cx:pol_strzałwPLUSACC_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "the act of firing a projectile (DWDS)" .
+
+cx:pol_strzałwPLUSACC_slots a RDF:Seq ;
+    RDF:_1 cx:pol_strzałwPLUSACC_1 ;
+    RDF:_2 cx:pol_strzałwPLUSACC_2 ;
+    RDF:_3 cx:pol_strzałwPLUSACC_3 .
+
+cx:pol_widok a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    links:elementOf cx:pol_widoknaPLUSAcc ;
+    rcxn:hasMetadata cx:pol_widok_MD ;
+    rcxn:hasTitle "widok" .
+
+cx:pol_widok_MD a rcxn:Metadata ;
+    DCTERMS:created "2026-09-16"^^xsd:date ;
+    rcxn:annotator membr:Fokashchuk .
+
+cx:pol_widoknaPLUSAcc_1 rcxn:hasSlotForm cx:pol_widoknaPLUSAcc_1_Form .
+
+cx:pol_widoknaPLUSAcc_1_Form a rcxn:SlotForm ;
+    rcxn:hasStem cx:pol_widok .
+
+cx:pol_widoknaPLUSAcc_2 rcxn:hasSlotForm cx:pol_widoknaPLUSAcc_2_Form .
+
+cx:pol_widoknaPLUSAcc_2_Form a rcxn:SlotForm ;
+    rcxn:hasSurfaceForm "na" .
+
+cx:pol_widoknaPLUSAcc_3 olia:hasCase olia:Accusative ;
+    rcxn:hasSlotForm cx:pol_widoknaPLUSAcc_3_Form .
+
+cx:pol_widoknaPLUSAcc_3_Form a rcxn:SlotForm ;
+    RDFS:comment "head is \"kogo, co\"" ;
+    rcxn:hasSyntacticForm cx:pol_NounPhrase .
+
+cx:pol_widoknaPLUSAcc_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "[prognoza]1 [na]2 [bieżący rok]3" ;
+    cx:hasText "prognoza na bieżący rok" .
+
+cx:pol_widoknaPLUSAcc_MD a rcxn:Metadata ;
+    DCTERMS:created "2026-09-16"^^xsd:date ;
+    rcxn:annotator membr:Fokashchuk .
+
+cx:pol_widoknaPLUSAcc_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "Outlook on sth. (DWDS)" .
+
+cx:pol_widoknaPLUSAcc_slots a RDF:Seq ;
+    RDF:_1 cx:pol_widoknaPLUSAcc_1 ;
+    RDF:_2 cx:pol_widoknaPLUSAcc_2 ;
+    RDF:_3 cx:pol_widoknaPLUSAcc_3 .
+
+cx:pol_wskazówka a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    links:elementOf cx:pol_wskazówkanaPLUSAccodniesieniadoPLUSGen ;
+    rcxn:hasMetadata cx:pol_wskazówka_MD ;
+    rcxn:hasTitle "wskazówka " .
+
+cx:pol_wskazówka_MD a rcxn:Metadata ;
+    DCTERMS:created "2026-09-16"^^xsd:date ;
+    rcxn:annotator membr:Fokashchuk .
+
+cx:pol_wskazówkanaPLUSAccodniesieniadoPLUSGen_1 rcxn:hasSlotForm cx:pol_wskazówkanaPLUSAccodniesieniadoPLUSGen_1_Form .
+
+cx:pol_wskazówkanaPLUSAccodniesieniadoPLUSGen_1_Form a rcxn:SlotForm ;
+    rcxn:hasStem cx:pol_wskazówka .
+
+cx:pol_wskazówkanaPLUSAccodniesieniadoPLUSGen_2 rcxn:hasSlotForm cx:pol_wskazówkanaPLUSAccodniesieniadoPLUSGen_2_Form .
+
+cx:pol_wskazówkanaPLUSAccodniesieniadoPLUSGen_2_Form a rcxn:SlotForm ;
+    rcxn:hasSurfaceForm "do",
+        "na" .
+
+cx:pol_wskazówkanaPLUSAccodniesieniadoPLUSGen_3 olia:hasCase olia:Accusative,
+        olia:LocativeCase ;
+    rcxn:hasSlotForm cx:pol_wskazówkanaPLUSAccodniesieniadoPLUSGen_3_Form .
+
+cx:pol_wskazówkanaPLUSAccodniesieniadoPLUSGen_3_Form a rcxn:SlotForm ;
+    RDFS:comment "head is \"kogo, co/ kogoś/czegoś\"" ;
+    rcxn:hasSyntacticForm cx:pol_NounPhrase .
+
+cx:pol_wskazówkanaPLUSAccodniesieniadoPLUSGen_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "[wskazówka]1 [na]2 [temat spotkania informacyjnego]3" ;
+    cx:hasText "wskazówka na temat spotkania informacyjnego" .
+
+cx:pol_wskazówkanaPLUSAccodniesieniadoPLUSGen_MD a rcxn:Metadata ;
+    DCTERMS:created "2026-09-16"^^xsd:date ;
+    rcxn:annotator membr:Fokashchuk .
+
+cx:pol_wskazówkanaPLUSAccodniesieniadoPLUSGen_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "a hint pointed at sth. (DWDS)" .
+
+cx:pol_wskazówkanaPLUSAccodniesieniadoPLUSGen_slots a RDF:Seq ;
+    RDF:_1 cx:pol_wskazówkanaPLUSAccodniesieniadoPLUSGen_1 ;
+    RDF:_2 cx:pol_wskazówkanaPLUSAccodniesieniadoPLUSGen_2 ;
+    RDF:_3 cx:pol_wskazówkanaPLUSAccodniesieniadoPLUSGen_3 .
+
+cx:pol_zamach a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    links:elementOf cx:pol_zamachnaPLUSACC ;
+    rcxn:hasMetadata cx:pol_zamach_MD ;
+    rcxn:hasTitle "zamach " .
+
+cx:pol_zamach_MD a rcxn:Metadata ;
+    DCTERMS:created "2026-09-16"^^xsd:date ;
+    rcxn:annotator membr:Fokashchuk .
+
+cx:pol_zamachnaPLUSACC_1 rcxn:hasSlotForm cx:pol_zamachnaPLUSACC_1_Form .
+
+cx:pol_zamachnaPLUSACC_1_Form a rcxn:SlotForm ;
+    rcxn:hasStem cx:pol_zamach .
+
+cx:pol_zamachnaPLUSACC_2 rcxn:hasSlotForm cx:pol_zamachnaPLUSACC_2_Form .
+
+cx:pol_zamachnaPLUSACC_2_Form a rcxn:SlotForm ;
+    rcxn:hasSurfaceForm "na" .
+
+cx:pol_zamachnaPLUSACC_3 olia:hasCase olia:Accusative ;
+    rcxn:hasSlotForm cx:pol_zamachnaPLUSACC_3_Form .
+
+cx:pol_zamachnaPLUSACC_3_Form a rcxn:SlotForm ;
+    RDFS:comment "head is \"kogoś, coś\"" ;
+    rcxn:hasSyntacticForm cx:pol_NounPhrase .
+
+cx:pol_zamachnaPLUSACC_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "[zamach]1 [na]2 [króla]3" ;
+    cx:hasText "zamach na króla" .
+
+cx:pol_zamachnaPLUSACC_MD a rcxn:Metadata ;
+    DCTERMS:created "2026-09-16"^^xsd:date ;
+    rcxn:annotator membr:Fokashchuk .
+
+cx:pol_zamachnaPLUSACC_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "(Political) assassination attempt on a public figure (DWDS)" .
+
+cx:pol_zamachnaPLUSACC_slots a RDF:Seq ;
+    RDF:_1 cx:pol_zamachnaPLUSACC_1 ;
+    RDF:_2 cx:pol_zamachnaPLUSACC_2 ;
+    RDF:_3 cx:pol_zamachnaPLUSACC_3 .
+
 cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_1 a rcxn:SlotObligatory ;
     cx:hasIndex cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_1_Index ;
     rcxn:hasSlotForm cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_1_Form ;
@@ -4447,96 +4892,6 @@ cx:zho_NounPhrase a rcxn:Construction ;
     links:elementOf cx:lzh_Dooperationwithoperand1onoperand2construction ;
     rcxn:hasTitle "Noun Phrase" .
 
-cx:deu_Angriffauf a rcxn:Construction ;
-    cx:hasExample cx:deu_Angriffauf_Ex_A ;
-    lg:partOfLanguage lg:deu ;
-    links:CL_similarFormSameFunction cx:engLME_attackonupon ;
-    rcxn:hasConstructionMeaning cx:deu_Angriffauf_Meaning ;
-    rcxn:hasMetadata cx:deu_Angriffauf_MD ;
-    rcxn:hasSlots cx:deu_Angriffauf_slots ;
-    rcxn:hasTitle "Angriff auf" .
-
-cx:deu_Attentatauf a rcxn:Construction ;
-    cx:hasExample cx:deu_Attentatauf_Ex_A ;
-    lg:partOfLanguage lg:deu ;
-    links:CL_similarFormSameFunction cx:engLME_assassinationattempton ;
-    rcxn:hasConstructionMeaning cx:deu_Attentatauf_Meaning ;
-    rcxn:hasMetadata cx:deu_Attentatauf_MD ;
-    rcxn:hasSlots cx:deu_Attentatauf_slots ;
-    rcxn:hasTitle "Attentat auf " .
-
-cx:deu_Ausblickauf a rcxn:Construction ;
-    cx:hasExample cx:deu_Ausblickauf_Ex_A ;
-    lg:partOfLanguage lg:deu ;
-    links:CL_similarFormSameFunction cx:engLME_viewon ;
-    rcxn:hasConstructionMeaning cx:deu_Ausblickauf_Meaning ;
-    rcxn:hasMetadata cx:deu_Ausblickauf_MD ;
-    rcxn:hasSlots cx:deu_Ausblickauf_slots ;
-    rcxn:hasTitle "Ausblick auf" .
-
-cx:deu_Hassauf a rcxn:Construction ;
-    cx:hasExample cx:deu_Hassauf_Ex_A ;
-    lg:partOfLanguage lg:deu ;
-    links:CL_similarFormSameFunction cx:engLME_hatredtowards ;
-    rcxn:hasConstructionMeaning cx:deu_Hassauf_Meaning ;
-    rcxn:hasMetadata cx:deu_Hassauf_MD ;
-    rcxn:hasSlots cx:deu_Hassauf_slots ;
-    rcxn:hasTitle "Hass auf" .
-
-cx:deu_Hinweisauf a rcxn:Construction ;
-    cx:hasExample cx:deu_Hinweisauf_Ex_A ;
-    lg:partOfLanguage lg:deu ;
-    links:CL_similarFormSameFunction cx:engLME_tiponreferenceto ;
-    rcxn:hasConstructionMeaning cx:deu_Hinweisauf_Meaning ;
-    rcxn:hasMetadata cx:deu_Hinweisauf_MD ;
-    rcxn:hasSlots cx:deu_Hinweisauf_slots ;
-    rcxn:hasTitle "Hinweis auf " .
-
-cx:deu_Konzentrationauf a rcxn:Construction ;
-    cx:hasExample cx:deu_Konzentrationauf_Ex_A ;
-    lg:partOfLanguage lg:deu ;
-    links:CL_similarFormSameFunction cx:engLME_concentrationon ;
-    rcxn:hasConstructionMeaning cx:deu_Konzentrationauf_Meaning ;
-    rcxn:hasMetadata cx:deu_Konzentrationauf_MD ;
-    rcxn:hasSlots cx:deu_Konzentrationauf_slots ;
-    rcxn:hasTitle "Konzentration auf " .
-
-cx:deu_Satireauf a rcxn:Construction ;
-    cx:hasExample cx:deu_Satireauf_Ex_A ;
-    lg:partOfLanguage lg:deu ;
-    links:CL_similarFormSameFunction cx:engLME_satireon ;
-    rcxn:hasConstructionMeaning cx:deu_Satireauf_Meaning ;
-    rcxn:hasMetadata cx:deu_Satireauf_MD ;
-    rcxn:hasSlots cx:deu_Satireauf_slots ;
-    rcxn:hasTitle "Satire auf" .
-
-cx:deu_Schussauf a rcxn:Construction ;
-    cx:hasExample cx:deu_Schussauf_Ex_A ;
-    lg:partOfLanguage lg:deu ;
-    links:CL_similarFormSameFunction cx:engLME_shotatto ;
-    rcxn:hasConstructionMeaning cx:deu_Schussauf_Meaning ;
-    rcxn:hasMetadata cx:deu_Schussauf_MD ;
-    rcxn:hasSlots cx:deu_Schussauf_slots ;
-    rcxn:hasTitle "Schuss auf" .
-
-cx:deu_UEberfallauf a rcxn:Construction ;
-    cx:hasExample cx:deu_UEberfallauf_Ex_A ;
-    lg:partOfLanguage lg:deu ;
-    links:CL_similarFormSameFunction cx:engLME_assaulton ;
-    rcxn:hasConstructionMeaning cx:deu_UEberfallauf_Meaning ;
-    rcxn:hasMetadata cx:deu_UEberfallauf_MD ;
-    rcxn:hasSlots cx:deu_UEberfallauf_slots ;
-    rcxn:hasTitle "Überfall auf" .
-
-cx:deu_UEbergriffauf a rcxn:Construction ;
-    cx:hasExample cx:deu_UEbergriffauf_Ex_A ;
-    lg:partOfLanguage lg:deu ;
-    links:CL_similarFormSameFunction cx:engLME_assaulton ;
-    rcxn:hasConstructionMeaning cx:deu_UEbergriffauf_Meaning ;
-    rcxn:hasMetadata cx:deu_UEbergriffauf_MD ;
-    rcxn:hasSlots cx:deu_UEbergriffauf_slots ;
-    rcxn:hasTitle "Übergriff auf " .
-
 cx:engLME_Resultativeconstruction a rcxn:Construction ;
     cx:hasExample cx:engLME_Resultativeconstruction_Ex_A ;
     lg:partOfLanguage lg:engLME ;
@@ -4546,30 +4901,6 @@ cx:engLME_Resultativeconstruction a rcxn:Construction ;
     rcxn:hasMetadata cx:engLME_Resultativeconstruction_MD ;
     rcxn:hasSlots cx:engLME_Resultativeconstruction_slots ;
     rcxn:hasTitle "Resultative construction" .
-
-cx:engLME_assassinationattempton a rcxn:Construction ;
-    lg:partOfLanguage lg:engLME ;
-    links:CL_similarFormSameFunction cx:deu_Attentatauf ;
-    rcxn:hasConstructionMeaning cx:engLME_assassinationattempton_Meaning ;
-    rcxn:hasMetadata cx:engLME_assassinationattempton_MD ;
-    rcxn:hasSlots cx:engLME_assassinationattempton_slots ;
-    rcxn:hasTitle "assassination attempt on" .
-
-cx:engLME_attackonupon a rcxn:Construction ;
-    lg:partOfLanguage lg:engLME ;
-    links:CL_similarFormSameFunction cx:deu_Angriffauf ;
-    rcxn:hasConstructionMeaning cx:engLME_attackonupon_Meaning ;
-    rcxn:hasMetadata cx:engLME_attackonupon_MD ;
-    rcxn:hasSlots cx:engLME_attackonupon_slots ;
-    rcxn:hasTitle "attack on/upon" .
-
-cx:engLME_concentrationon a rcxn:Construction ;
-    lg:partOfLanguage lg:engLME ;
-    links:CL_similarFormSameFunction cx:deu_Konzentrationauf ;
-    rcxn:hasConstructionMeaning cx:engLME_concentrationon_Meaning ;
-    rcxn:hasMetadata cx:engLME_concentrationon_MD ;
-    rcxn:hasSlots cx:engLME_concentrationon_slots ;
-    rcxn:hasTitle "concentration on" .
 
 cx:engLME_coolascolourconstruction a rcxn:Construction ;
     cx:hasExample cx:engLME_coolascolourconstruction_Ex_A,
@@ -4581,46 +4912,6 @@ cx:engLME_coolascolourconstruction a rcxn:Construction ;
     rcxn:hasMetadata cx:engLME_coolascolourconstruction_MD ;
     rcxn:hasSlots cx:engLME_coolascolourconstruction_slots ;
     rcxn:hasTitle "cool as colour construction" .
-
-cx:engLME_hatredtowards a rcxn:Construction ;
-    lg:partOfLanguage lg:engLME ;
-    links:CL_similarFormSameFunction cx:deu_Hassauf ;
-    rcxn:hasConstructionMeaning cx:engLME_hatredtowards_Meaning ;
-    rcxn:hasMetadata cx:engLME_hatredtowards_MD ;
-    rcxn:hasSlots cx:engLME_hatredtowards_slots ;
-    rcxn:hasTitle "hatred towards" .
-
-cx:engLME_satireon a rcxn:Construction ;
-    lg:partOfLanguage lg:engLME ;
-    links:CL_similarFormSameFunction cx:deu_Satireauf ;
-    rcxn:hasConstructionMeaning cx:engLME_satireon_Meaning ;
-    rcxn:hasMetadata cx:engLME_satireon_MD ;
-    rcxn:hasSlots cx:engLME_satireon_slots ;
-    rcxn:hasTitle "satire on" .
-
-cx:engLME_shotatto a rcxn:Construction ;
-    lg:partOfLanguage lg:engLME ;
-    links:CL_similarFormSameFunction cx:deu_Schussauf ;
-    rcxn:hasConstructionMeaning cx:engLME_shotatto_Meaning ;
-    rcxn:hasMetadata cx:engLME_shotatto_MD ;
-    rcxn:hasSlots cx:engLME_shotatto_slots ;
-    rcxn:hasTitle "shot at/to" .
-
-cx:engLME_tiponreferenceto a rcxn:Construction ;
-    lg:partOfLanguage lg:engLME ;
-    links:CL_similarFormSameFunction cx:deu_Hinweisauf ;
-    rcxn:hasConstructionMeaning cx:engLME_tiponreferenceto_Meaning ;
-    rcxn:hasMetadata cx:engLME_tiponreferenceto_MD ;
-    rcxn:hasSlots cx:engLME_tiponreferenceto_slots ;
-    rcxn:hasTitle "tip on/ reference to" .
-
-cx:engLME_viewon a rcxn:Construction ;
-    lg:partOfLanguage lg:engLME ;
-    links:CL_similarFormSameFunction cx:deu_Ausblickauf ;
-    rcxn:hasConstructionMeaning cx:engLME_viewon_Meaning ;
-    rcxn:hasMetadata cx:engLME_viewon_MD ;
-    rcxn:hasSlots cx:engLME_viewon_slots ;
-    rcxn:hasTitle "view on" .
 
 cx:eng_AdjectiveAttributiveconstruction a rcxn:Construction ;
     lg:partOfLanguage lg:engLME ;
@@ -4708,6 +4999,106 @@ cx:lzh_Dooperationwithoperand1onoperand2construction a rcxn:Construction ;
     rcxn:hasSlots cx:lzh_Dooperationwithoperand1onoperand2construction_slots ;
     rcxn:hasTitle "Do operation with operand1 on operand2 construction" .
 
+cx:deu_Angriffauf a rcxn:Construction ;
+    cx:hasExample cx:deu_Angriffauf_Ex_A ;
+    lg:partOfLanguage lg:deu ;
+    links:CL_similarFormSameFunction cx:engLME_attackonupon,
+        cx:pol_ataknaPLUSACC ;
+    rcxn:hasConstructionMeaning cx:deu_Angriffauf_Meaning ;
+    rcxn:hasMetadata cx:deu_Angriffauf_MD ;
+    rcxn:hasSlots cx:deu_Angriffauf_slots ;
+    rcxn:hasTitle "Angriff auf" .
+
+cx:deu_Attentatauf a rcxn:Construction ;
+    cx:hasExample cx:deu_Attentatauf_Ex_A ;
+    lg:partOfLanguage lg:deu ;
+    links:CL_similarFormSameFunction cx:engLME_assassinationattempton,
+        cx:pol_zamachnaPLUSACC ;
+    rcxn:hasConstructionMeaning cx:deu_Attentatauf_Meaning ;
+    rcxn:hasMetadata cx:deu_Attentatauf_MD ;
+    rcxn:hasSlots cx:deu_Attentatauf_slots ;
+    rcxn:hasTitle "Attentat auf " .
+
+cx:deu_Ausblickauf a rcxn:Construction ;
+    cx:hasExample cx:deu_Ausblickauf_Ex_A ;
+    lg:partOfLanguage lg:deu ;
+    links:CL_similarFormSameFunction cx:engLME_viewon,
+        cx:pol_widoknaPLUSAcc ;
+    rcxn:hasConstructionMeaning cx:deu_Ausblickauf_Meaning ;
+    rcxn:hasMetadata cx:deu_Ausblickauf_MD ;
+    rcxn:hasSlots cx:deu_Ausblickauf_slots ;
+    rcxn:hasTitle "Ausblick auf" .
+
+cx:deu_Hassauf a rcxn:Construction ;
+    cx:hasExample cx:deu_Hassauf_Ex_A ;
+    lg:partOfLanguage lg:deu ;
+    links:CL_similarFormSameFunction cx:engLME_hatredtowards,
+        cx:pol_nienawiśćdoPLUSGEN ;
+    rcxn:hasConstructionMeaning cx:deu_Hassauf_Meaning ;
+    rcxn:hasMetadata cx:deu_Hassauf_MD ;
+    rcxn:hasSlots cx:deu_Hassauf_slots ;
+    rcxn:hasTitle "Hass auf" .
+
+cx:deu_Hinweisauf a rcxn:Construction ;
+    cx:hasExample cx:deu_Hinweisauf_Ex_A ;
+    lg:partOfLanguage lg:deu ;
+    links:CL_similarFormSameFunction cx:engLME_tiponreferenceto,
+        cx:pol_wskazówkanaPLUSAccodniesieniadoPLUSGen ;
+    rcxn:hasConstructionMeaning cx:deu_Hinweisauf_Meaning ;
+    rcxn:hasMetadata cx:deu_Hinweisauf_MD ;
+    rcxn:hasSlots cx:deu_Hinweisauf_slots ;
+    rcxn:hasTitle "Hinweis auf " .
+
+cx:deu_Konzentrationauf a rcxn:Construction ;
+    cx:hasExample cx:deu_Konzentrationauf_Ex_A ;
+    lg:partOfLanguage lg:deu ;
+    links:CL_similarFormSameFunction cx:engLME_concentrationon,
+        cx:pol_koncentracjanaPLUSLOC ;
+    rcxn:hasConstructionMeaning cx:deu_Konzentrationauf_Meaning ;
+    rcxn:hasMetadata cx:deu_Konzentrationauf_MD ;
+    rcxn:hasSlots cx:deu_Konzentrationauf_slots ;
+    rcxn:hasTitle "Konzentration auf " .
+
+cx:deu_Satireauf a rcxn:Construction ;
+    cx:hasExample cx:deu_Satireauf_Ex_A ;
+    lg:partOfLanguage lg:deu ;
+    links:CL_similarFormSameFunction cx:engLME_satireon,
+        cx:pol_satyranaPLUSAcc ;
+    rcxn:hasConstructionMeaning cx:deu_Satireauf_Meaning ;
+    rcxn:hasMetadata cx:deu_Satireauf_MD ;
+    rcxn:hasSlots cx:deu_Satireauf_slots ;
+    rcxn:hasTitle "Satire auf" .
+
+cx:deu_Schussauf a rcxn:Construction ;
+    cx:hasExample cx:deu_Schussauf_Ex_A ;
+    lg:partOfLanguage lg:deu ;
+    links:CL_similarFormSameFunction cx:engLME_shotatto,
+        cx:pol_strzałwPLUSACC ;
+    rcxn:hasConstructionMeaning cx:deu_Schussauf_Meaning ;
+    rcxn:hasMetadata cx:deu_Schussauf_MD ;
+    rcxn:hasSlots cx:deu_Schussauf_slots ;
+    rcxn:hasTitle "Schuss auf" .
+
+cx:deu_UEberfallauf a rcxn:Construction ;
+    cx:hasExample cx:deu_UEberfallauf_Ex_A ;
+    lg:partOfLanguage lg:deu ;
+    links:CL_similarFormSameFunction cx:engLME_assaulton,
+        cx:pol_ataknaPLUSACC ;
+    rcxn:hasConstructionMeaning cx:deu_UEberfallauf_Meaning ;
+    rcxn:hasMetadata cx:deu_UEberfallauf_MD ;
+    rcxn:hasSlots cx:deu_UEberfallauf_slots ;
+    rcxn:hasTitle "Überfall auf" .
+
+cx:deu_UEbergriffauf a rcxn:Construction ;
+    cx:hasExample cx:deu_UEbergriffauf_Ex_A ;
+    lg:partOfLanguage lg:deu ;
+    links:CL_similarFormSameFunction cx:engLME_assaulton,
+        cx:pol_napadnaPLUSAcc ;
+    rcxn:hasConstructionMeaning cx:deu_UEbergriffauf_Meaning ;
+    rcxn:hasMetadata cx:deu_UEbergriffauf_MD ;
+    rcxn:hasSlots cx:deu_UEbergriffauf_slots ;
+    rcxn:hasTitle "Übergriff auf " .
+
 cx:engInf_coolasadmirableconstruction a rcxn:Construction ;
     cx:hasExample cx:engInf_coolasadmirableconstruction_Ex_A,
         cx:engInf_coolasadmirableconstruction_Ex_B,
@@ -4729,14 +5120,35 @@ cx:engLME_GIVEOUTVerbParticleConstruction a rcxn:Construction ;
     rcxn:hasSlots cx:engLME_GIVEOUTVerbParticleConstruction_slots ;
     rcxn:hasTitle "GIVE-OUT Verb Particle Construction" .
 
-cx:engLME_assaulton a rcxn:Construction ;
+cx:engLME_assassinationattempton a rcxn:Construction ;
+    cx:hasExample cx:engLME_assassinationattempton_Ex_A ;
     lg:partOfLanguage lg:engLME ;
-    links:CL_similarFormSameFunction cx:deu_UEberfallauf,
-        cx:deu_UEbergriffauf ;
-    rcxn:hasConstructionMeaning cx:engLME_assaulton_Meaning ;
-    rcxn:hasMetadata cx:engLME_assaulton_MD ;
-    rcxn:hasSlots cx:engLME_assaulton_slots ;
-    rcxn:hasTitle "assault on" .
+    links:CL_similarFormSameFunction cx:deu_Attentatauf,
+        cx:pol_zamachnaPLUSACC ;
+    rcxn:hasConstructionMeaning cx:engLME_assassinationattempton_Meaning ;
+    rcxn:hasMetadata cx:engLME_assassinationattempton_MD ;
+    rcxn:hasSlots cx:engLME_assassinationattempton_slots ;
+    rcxn:hasTitle "assassination attempt on" .
+
+cx:engLME_attackonupon a rcxn:Construction ;
+    cx:hasExample cx:engLME_attackonupon_Ex_A ;
+    lg:partOfLanguage lg:engLME ;
+    links:CL_similarFormSameFunction cx:deu_Angriffauf,
+        cx:pol_ataknaPLUSACC ;
+    rcxn:hasConstructionMeaning cx:engLME_attackonupon_Meaning ;
+    rcxn:hasMetadata cx:engLME_attackonupon_MD ;
+    rcxn:hasSlots cx:engLME_attackonupon_slots ;
+    rcxn:hasTitle "attack on/upon" .
+
+cx:engLME_concentrationon a rcxn:Construction ;
+    cx:hasExample cx:engLME_concentrationon_Ex_A ;
+    lg:partOfLanguage lg:engLME ;
+    links:CL_similarFormSameFunction cx:deu_Konzentrationauf,
+        cx:pol_koncentracjanaPLUSLOC ;
+    rcxn:hasConstructionMeaning cx:engLME_concentrationon_Meaning ;
+    rcxn:hasMetadata cx:engLME_concentrationon_MD ;
+    rcxn:hasSlots cx:engLME_concentrationon_slots ;
+    rcxn:hasTitle "concentration on" .
 
 cx:engLME_coolasemotionconstruction a rcxn:Construction ;
     cx:hasExample cx:engLME_coolasemotionconstruction_Ex_A,
@@ -4749,6 +5161,56 @@ cx:engLME_coolasemotionconstruction a rcxn:Construction ;
     rcxn:hasMetadata cx:engLME_coolasemotionconstruction_MD ;
     rcxn:hasSlots cx:engLME_coolasemotionconstruction_slots ;
     rcxn:hasTitle "cool as emotion construction" .
+
+cx:engLME_hatredtowards a rcxn:Construction ;
+    cx:hasExample cx:engLME_hatredtowards_Ex_A ;
+    lg:partOfLanguage lg:engLME ;
+    links:CL_similarFormSameFunction cx:deu_Hassauf,
+        cx:pol_nienawiśćdoPLUSGEN ;
+    rcxn:hasConstructionMeaning cx:engLME_hatredtowards_Meaning ;
+    rcxn:hasMetadata cx:engLME_hatredtowards_MD ;
+    rcxn:hasSlots cx:engLME_hatredtowards_slots ;
+    rcxn:hasTitle "hatred towards" .
+
+cx:engLME_satireon a rcxn:Construction ;
+    cx:hasExample cx:engLME_satireon_Ex_A ;
+    lg:partOfLanguage lg:engLME ;
+    links:CL_similarFormSameFunction cx:deu_Satireauf,
+        cx:pol_satyranaPLUSAcc ;
+    rcxn:hasConstructionMeaning cx:engLME_satireon_Meaning ;
+    rcxn:hasMetadata cx:engLME_satireon_MD ;
+    rcxn:hasSlots cx:engLME_satireon_slots ;
+    rcxn:hasTitle "satire on" .
+
+cx:engLME_shotatto a rcxn:Construction ;
+    cx:hasExample cx:engLME_shotatto_Ex_A ;
+    lg:partOfLanguage lg:engLME ;
+    links:CL_similarFormSameFunction cx:deu_Schussauf,
+        cx:pol_strzałwPLUSACC ;
+    rcxn:hasConstructionMeaning cx:engLME_shotatto_Meaning ;
+    rcxn:hasMetadata cx:engLME_shotatto_MD ;
+    rcxn:hasSlots cx:engLME_shotatto_slots ;
+    rcxn:hasTitle "shot at/to" .
+
+cx:engLME_tiponreferenceto a rcxn:Construction ;
+    cx:hasExample cx:engLME_tiponreferenceto_Ex_A ;
+    lg:partOfLanguage lg:engLME ;
+    links:CL_similarFormSameFunction cx:deu_Hinweisauf,
+        cx:pol_wskazówkanaPLUSAccodniesieniadoPLUSGen ;
+    rcxn:hasConstructionMeaning cx:engLME_tiponreferenceto_Meaning ;
+    rcxn:hasMetadata cx:engLME_tiponreferenceto_MD ;
+    rcxn:hasSlots cx:engLME_tiponreferenceto_slots ;
+    rcxn:hasTitle "tip on/ reference to" .
+
+cx:engLME_viewon a rcxn:Construction ;
+    cx:hasExample cx:engLME_viewon_Ex_A ;
+    lg:partOfLanguage lg:engLME ;
+    links:CL_similarFormSameFunction cx:deu_Ausblickauf,
+        cx:pol_widoknaPLUSAcc ;
+    rcxn:hasConstructionMeaning cx:engLME_viewon_Meaning ;
+    rcxn:hasMetadata cx:engLME_viewon_MD ;
+    rcxn:hasSlots cx:engLME_viewon_slots ;
+    rcxn:hasTitle "view on" .
 
 cx:engUsSpo_Hadituptoherewith a rcxn:Construction ;
     cx:hasExample cx:engUsSpo_Hadituptoherewith_Ex_A ;
@@ -4796,6 +5258,86 @@ cx:hat_POUbeneficiaryconstruction a rcxn:Construction ;
     rcxn:hasMetadata cx:hat_POUbeneficiaryconstruction_MD ;
     rcxn:hasSlots cx:hat_POUbeneficiaryconstruction_slots ;
     rcxn:hasTitle "POU-beneficiary construction" .
+
+cx:pol_koncentracjanaPLUSLOC a rcxn:Construction ;
+    cx:hasExample cx:pol_koncentracjanaPLUSLOC_Ex_A ;
+    lg:partOfLanguage lg:pol ;
+    links:CL_similarFormSameFunction cx:deu_Konzentrationauf,
+        cx:engLME_concentrationon ;
+    rcxn:hasConstructionMeaning cx:pol_koncentracjanaPLUSLOC_Meaning ;
+    rcxn:hasMetadata cx:pol_koncentracjanaPLUSLOC_MD ;
+    rcxn:hasSlots cx:pol_koncentracjanaPLUSLOC_slots ;
+    rcxn:hasTitle "koncentracja na + LOC." .
+
+cx:pol_napadnaPLUSAcc a rcxn:Construction ;
+    cx:hasExample cx:pol_napadnaPLUSAcc_Ex_A ;
+    lg:partOfLanguage lg:pol ;
+    links:CL_similarFormSameFunction cx:deu_UEbergriffauf,
+        cx:engLME_assaulton ;
+    rcxn:hasConstructionMeaning cx:pol_napadnaPLUSAcc_Meaning ;
+    rcxn:hasMetadata cx:pol_napadnaPLUSAcc_MD ;
+    rcxn:hasSlots cx:pol_napadnaPLUSAcc_slots ;
+    rcxn:hasTitle "napad na + Acc." .
+
+cx:pol_nienawiśćdoPLUSGEN a rcxn:Construction ;
+    cx:hasExample cx:pol_nienawiśćdoPLUSGEN_Ex_A ;
+    lg:partOfLanguage lg:pol ;
+    links:CL_similarFormSameFunction cx:deu_Hassauf,
+        cx:engLME_hatredtowards ;
+    rcxn:hasConstructionMeaning cx:pol_nienawiśćdoPLUSGEN_Meaning ;
+    rcxn:hasMetadata cx:pol_nienawiśćdoPLUSGEN_MD ;
+    rcxn:hasSlots cx:pol_nienawiśćdoPLUSGEN_slots ;
+    rcxn:hasTitle "nienawiść do + GEN." .
+
+cx:pol_satyranaPLUSAcc a rcxn:Construction ;
+    cx:hasExample cx:pol_satyranaPLUSAcc_Ex_A ;
+    lg:partOfLanguage lg:pol ;
+    links:CL_similarFormSameFunction cx:deu_Satireauf,
+        cx:engLME_satireon ;
+    rcxn:hasConstructionMeaning cx:pol_satyranaPLUSAcc_Meaning ;
+    rcxn:hasMetadata cx:pol_satyranaPLUSAcc_MD ;
+    rcxn:hasSlots cx:pol_satyranaPLUSAcc_slots ;
+    rcxn:hasTitle "satyra na + Acc." .
+
+cx:pol_strzałwPLUSACC a rcxn:Construction ;
+    cx:hasExample cx:pol_strzałwPLUSACC_Ex_A ;
+    lg:partOfLanguage lg:pol ;
+    links:CL_similarFormSameFunction cx:deu_Schussauf,
+        cx:engLME_shotatto ;
+    rcxn:hasConstructionMeaning cx:pol_strzałwPLUSACC_Meaning ;
+    rcxn:hasMetadata cx:pol_strzałwPLUSACC_MD ;
+    rcxn:hasSlots cx:pol_strzałwPLUSACC_slots ;
+    rcxn:hasTitle "strzał w + ACC." .
+
+cx:pol_widoknaPLUSAcc a rcxn:Construction ;
+    cx:hasExample cx:pol_widoknaPLUSAcc_Ex_A ;
+    lg:partOfLanguage lg:pol ;
+    links:CL_similarFormSameFunction cx:deu_Ausblickauf,
+        cx:engLME_viewon ;
+    rcxn:hasConstructionMeaning cx:pol_widoknaPLUSAcc_Meaning ;
+    rcxn:hasMetadata cx:pol_widoknaPLUSAcc_MD ;
+    rcxn:hasSlots cx:pol_widoknaPLUSAcc_slots ;
+    rcxn:hasTitle "widok na + Acc." .
+
+cx:pol_wskazówkanaPLUSAccodniesieniadoPLUSGen a rcxn:Construction ;
+    cx:hasExample cx:pol_wskazówkanaPLUSAccodniesieniadoPLUSGen_Ex_A ;
+    lg:partOfLanguage lg:pol ;
+    links:CL_similarFormSameFunction cx:deu_Hinweisauf,
+        cx:engLME_tiponreferenceto ;
+    rcxn:hasConstructionMeaning cx:pol_wskazówkanaPLUSAccodniesieniadoPLUSGen_Meaning ;
+    rcxn:hasMetadata cx:pol_wskazówkanaPLUSAccodniesieniadoPLUSGen_MD ;
+    rcxn:hasSlots cx:pol_wskazówkanaPLUSAccodniesieniadoPLUSGen_slots ;
+    rcxn:hasTitle "wskazówka na + Acc./odniesienia do + Gen." .
+
+cx:pol_zamachnaPLUSACC a rcxn:Construction ;
+    cx:hasExample cx:pol_zamachnaPLUSACC_Ex_A ;
+    lg:partOfLanguage lg:pol ;
+    links:CL_similarFormSameFunction cx:deu_Attentatauf,
+        cx:engLME_assassinationattempton ;
+    rcxn:hasConstructionMeaning cx:pol_zamachnaPLUSACC_Meaning ;
+    rcxn:hasMetadata cx:pol_zamachnaPLUSACC_MD ;
+    rcxn:hasSlots cx:pol_zamachnaPLUSACC_slots ;
+    rcxn:hasTitle "zamach na + ACC." .
 
 cx:deu_Noun a rcxn:Construction ;
     lg:partOfLanguage lg:deu ;
@@ -4892,12 +5434,36 @@ This is a similar publicly available dataset: https://github.com/SPOClab-ca/neur
     rcxn:hasSlots cx:engLME_Argumentstructureconstruction_slots ;
     rcxn:hasTitle "Argument structure construction" .
 
+cx:engLME_assaulton a rcxn:Construction ;
+    cx:hasExample cx:engLME_assaulton_Ex_A ;
+    lg:partOfLanguage lg:engLME ;
+    links:CL_similarFormSameFunction cx:deu_UEberfallauf,
+        cx:deu_UEbergriffauf,
+        cx:pol_ataknaPLUSACC,
+        cx:pol_napadnaPLUSAcc ;
+    rcxn:hasConstructionMeaning cx:engLME_assaulton_Meaning ;
+    rcxn:hasMetadata cx:engLME_assaulton_MD ;
+    rcxn:hasSlots cx:engLME_assaulton_slots ;
+    rcxn:hasTitle "assault on" .
+
 cx:engUsUkWr_EvaluativeAttributionConstruction a rcxn:Construction ;
     lg:partOfLanguage lg:engUsUkWr ;
     rcxn:hasConstructionMeaning cx:engUsUkWr_EvaluativeAttributionConstruction_Meaning ;
     rcxn:hasMetadata cx:engUsUkWr_EvaluativeAttributionConstruction_MD ;
     rcxn:hasSlots cx:engUsUkWr_EvaluativeAttributionConstruction_slots ;
     rcxn:hasTitle "Evaluative Attribution Construction" .
+
+cx:pol_ataknaPLUSACC a rcxn:Construction ;
+    cx:hasExample cx:pol_ataknaPLUSACC_Ex_A ;
+    lg:partOfLanguage lg:pol ;
+    links:CL_similarFormSameFunction cx:deu_Angriffauf,
+        cx:deu_UEberfallauf,
+        cx:engLME_assaulton,
+        cx:engLME_attackonupon ;
+    rcxn:hasConstructionMeaning cx:pol_ataknaPLUSACC_Meaning ;
+    rcxn:hasMetadata cx:pol_ataknaPLUSACC_MD ;
+    rcxn:hasSlots cx:pol_ataknaPLUSACC_slots ;
+    rcxn:hasTitle "atak na + ACC." .
 
 cx:eng_AdjectivePhrase a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
@@ -4978,6 +5544,20 @@ cx:itaStoria_RelativeTopicShiftConstruction a rcxn:Construction ;
     rcxn:hasMetadata cx:itaStoria_RelativeTopicShiftConstruction_MD ;
     rcxn:hasSlots cx:itaStoria_RelativeTopicShiftConstruction_slots ;
     rcxn:hasTitle "Relative Topic Shift Construction " .
+
+cx:pol_NounPhrase a rcxn:Construction ;
+    lg:partOfLanguage lg:pol ;
+    links:elementOf cx:pol_ataknaPLUSACC,
+        cx:pol_koncentracjanaPLUSLOC,
+        cx:pol_napadnaPLUSAcc,
+        cx:pol_nienawiśćdoPLUSGEN,
+        cx:pol_satyranaPLUSAcc,
+        cx:pol_strzałwPLUSACC,
+        cx:pol_widoknaPLUSAcc,
+        cx:pol_wskazówkanaPLUSAccodniesieniadoPLUSGen,
+        cx:pol_zamachnaPLUSACC ;
+    rcxn:hasMetadata cx:pol_NounPhrase_MD ;
+    rcxn:hasTitle "Noun Phrase" .
 
 cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause a rcxn:Construction ;
     cx:hasExample cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_Ex_A,

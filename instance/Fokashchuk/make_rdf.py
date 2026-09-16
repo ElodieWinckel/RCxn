@@ -54,6 +54,18 @@ def clean_name(name):
     clean = clean.replace("/", "SLASH")
     return clean
 
+# Create Polish NP
+POLNP_name = "Noun Phrase"
+POLNP_name_cleaned = "pol_" + clean_name(POLNP_name)
+g.add((cx[POLNP_name_cleaned], RDF.type, rcxn.Construction))
+POLNP_MD = f"{POLNP_name_cleaned}_MD"
+g.add((cx[POLNP_MD], RDF.type, rcxn.Metadata))
+g.add((cx[POLNP_name_cleaned], rcxn.hasMetadata, cx[POLNP_MD]))
+g.add((cx[POLNP_MD], rcxn.annotator, membr.Fokashchuk))
+g.add((cx[POLNP_MD], DCTERMS.created, Literal(datetime.now().strftime('%Y-%m-%d'), datatype=XSD.date)))
+g.add((cx[POLNP_name_cleaned], rcxn.hasTitle, Literal(POLNP_name)))
+g.add((cx[POLNP_name_cleaned], lg.partOfLanguage, lg.pol))
+
 # Convert rows into triples
 for _, row in df.iterrows():
 
@@ -163,6 +175,8 @@ for _, row in df.iterrows():
         g.add((example_uri, RDF.type, cx.Example))
         g.add((example_uri, cx.hasAnnotatedText, Literal(annotated_example)))
         g.add((example_uri, cx.hasText, Literal(example)))
+        eng_example = row['ENG: Construct (equivalent to German)']
+        g.add((example_uri, cx.hasTranslation, Literal(eng_example)))
 
 ################################################################
 ### ENGLISH CONSTRUCTION
@@ -242,6 +256,131 @@ for _, row in df.iterrows():
         if row['ENG: Head of NP2'] != "Y":
             eng_NP2_head = f'head is "{row['ENG: Head of NP2']}"'
             g.add((eng_NP2_form_uri, RDFS.comment, Literal(eng_NP2_head)))
+
+        # Example
+        if not pd.isna(row['ENG: Construct (equivalent to German)']):
+            eng_example = row['ENG: Construct (equivalent to German)']
+            words = eng_example.split()
+            first = f"[{words[0]}]1"
+            second = f" [{words[1]}]2"
+            remaining = ' '.join(words[2:])
+            third = f" [{remaining}]3"
+            eng_annotated_example = first + second + third
+            eng_example_uri = cx[f"{eng_construction_name_cleaned}_Ex_A"]
+            g.add((cx[eng_construction_name_cleaned], cx.hasExample, eng_example_uri))
+            g.add((eng_example_uri, RDF.type, cx.Example))
+            g.add((eng_example_uri, cx.hasAnnotatedText, Literal(eng_annotated_example)))
+            g.add((eng_example_uri, cx.hasText, Literal(eng_example)))
+
+################################################################
+### POLISH CONSTRUCTION
+################################################################
+
+    # General and link
+    if not pd.isna(row['Equivalent Polish']):
+        pol_construction_language_uri = "pol"
+        pol_construction_name = row['Equivalent Polish']
+        pol_construction_name_cleaned = pol_construction_language_uri + "_" + clean_name(pol_construction_name)
+        g.add((cx[pol_construction_name_cleaned], RDF.type, rcxn.Construction))
+        pol_metadata_uri = f"{pol_construction_name_cleaned}_MD"
+        g.add((cx[pol_metadata_uri], RDF.type, rcxn.Metadata))
+        g.add((cx[pol_construction_name_cleaned], rcxn.hasMetadata, cx[pol_metadata_uri]))
+        g.add((cx[pol_metadata_uri], rcxn.annotator, membr.Fokashchuk))
+        g.add((cx[pol_metadata_uri], DCTERMS.created, Literal(datetime.now().strftime('%Y-%m-%d'), datatype=XSD.date)))
+        g.add((membr.Project_Fokashchuk_241210_F250218, rsrch.basedOn, cx[pol_construction_name_cleaned]))
+        pol_construction_complete_title = f"{pol_construction_name}"
+        g.add((cx[pol_construction_name_cleaned], rcxn.hasTitle, Literal(pol_construction_complete_title)))
+        g.add((cx[pol_construction_name_cleaned], lg.partOfLanguage, lg[pol_construction_language_uri]))
+        g.add((cx[pol_construction_name_cleaned], links.CL_similarFormSameFunction, cx[construction_name_cleaned]))
+        g.add((cx[pol_construction_name_cleaned], links.CL_similarFormSameFunction, cx[eng_construction_name_cleaned]))
+
+        # Meaning of the English construction
+        pol_cx_meaning_uri = f"{pol_construction_name_cleaned}_Meaning"
+        g.add((cx[pol_cx_meaning_uri], RDF.type, rcxn.ConstructionMeaning))
+        g.add((cx[pol_construction_name_cleaned], rcxn.hasConstructionMeaning, cx[pol_cx_meaning_uri]))
+        g.add((cx[pol_cx_meaning_uri], rcxn.hasMeaning, Literal(meaning))) # same meaning as german!
+
+        # sequence of construction elements for English construction
+        pol_seq_slots = URIRef(cx[f"{pol_construction_name_cleaned}_slots"])
+        g.add((pol_seq_slots, RDF.type, RDF.Seq))
+        g.add((cx[pol_construction_name_cleaned], rcxn.hasSlots, pol_seq_slots))
+        pol_NP1_element_uri = cx[f"{pol_construction_name_cleaned}_{1}"]
+        pol_PP_element_uri = cx[f"{pol_construction_name_cleaned}_{2}"]
+        pol_NP2_element_uri = cx[f"{pol_construction_name_cleaned}_{3}"]
+        g.add((pol_seq_slots, URIRef(RDF["_1"]), pol_NP1_element_uri))
+        g.add((pol_seq_slots, URIRef(RDF["_2"]), pol_PP_element_uri))
+        g.add((pol_seq_slots, URIRef(RDF["_3"]), pol_NP2_element_uri))
+
+        # Syntactic form of element 1
+        pol_NP1_form_uri = cx[f"{pol_construction_name_cleaned}_{1}_Form"]
+        g.add((pol_NP1_element_uri, rcxn.hasSlotForm, pol_NP1_form_uri))
+        g.add((pol_NP1_form_uri, RDF.type, rcxn.SlotForm))
+        pol_NP1_head = row['PL: Head of NP1']
+        pol_cleaned_stem_construction = "pol_" + clean_name(pol_NP1_head)
+        pol_metadata_stem_construction = f"{pol_cleaned_stem_construction}_MD"
+        g.add((cx[pol_cleaned_stem_construction], RDF.type, rcxn.Construction))
+        g.add((cx[pol_cleaned_stem_construction], lg.partOfLanguage, lg.eng))
+        g.add((cx[pol_cleaned_stem_construction], rcxn.hasMetadata, cx[pol_metadata_stem_construction]))
+        g.add((cx[pol_metadata_stem_construction], RDF.type, rcxn.Metadata))
+        g.add((cx[pol_metadata_stem_construction], rcxn.annotator, membr.Fokashchuk))
+        g.add((cx[pol_metadata_stem_construction], DCTERMS.created,
+               Literal(datetime.now().strftime('%Y-%m-%d'), datatype=XSD.date)))
+        g.add((cx[pol_cleaned_stem_construction], rcxn.hasTitle, Literal(pol_NP1_head)))
+        g.add((pol_NP1_form_uri, rcxn.hasStem, cx[pol_cleaned_stem_construction]))
+        g.add((cx[pol_cleaned_stem_construction], links.elementOf, cx[pol_construction_name_cleaned]))
+
+        # Syntactic form of element 2
+        pol_PP_form_uri = cx[f"{pol_construction_name_cleaned}_{2}_Form"]
+        g.add((pol_PP_element_uri, rcxn.hasSlotForm, pol_PP_form_uri))
+        g.add((pol_PP_form_uri, RDF.type, rcxn.SlotForm))
+        if '/' in row['PL: Preposition']:
+            parts = [part.strip() for part in row['PL: Preposition'].split('/', 1)]
+            pol_PP_prep_1 = parts[0] if len(parts) > 0 else ""
+            pol_PP_prep_2 = parts[1] if len(parts) > 1 else ""
+            g.add((pol_PP_form_uri, rcxn.hasSurfaceForm, Literal(pol_PP_prep_1)))
+            g.add((pol_PP_form_uri, rcxn.hasSurfaceForm, Literal(pol_PP_prep_2)))
+        else:
+            pol_PP_prep = row['PL: Preposition']
+            g.add((pol_PP_form_uri, rcxn.hasSurfaceForm, Literal(pol_PP_prep)))
+
+        # Syntactic form of element 3
+        pol_NP2_form_uri = cx[f"{pol_construction_name_cleaned}_{3}_Form"]
+        g.add((pol_NP2_element_uri, rcxn.hasSlotForm, pol_NP2_form_uri))
+        g.add((pol_NP2_form_uri, RDF.type, rcxn.SlotForm))
+        g.add((pol_NP2_form_uri, rcxn.hasSyntacticForm, cx.pol_NounPhrase))
+        if row['PL: Head of NP2'] != "Y":
+            pol_NP2_head = f'head is "{row['PL: Head of NP2']}"'
+            g.add((pol_NP2_form_uri, RDFS.comment, Literal(pol_NP2_head)))
+        if row['PL: Case of NP2'] == "ACC.":
+            pol_NP2_case = "Accusative"
+            g.add((pol_NP2_element_uri, olia.hasCase, olia[pol_NP2_case]))
+        if row['PL: Case of NP2'] == "DAT.":
+            pol_NP2_case = "DativeCase"
+            g.add((pol_NP2_element_uri, olia.hasCase, olia[pol_NP2_case]))
+        if row['PL: Case of NP2'] == "GEN.":
+            pol_NP2_case = "GenitiveCase"
+            g.add((pol_NP2_element_uri, olia.hasCase, olia[pol_NP2_case]))
+        if row['PL: Case of NP2'] == "LOC.":
+            pol_NP2_case = "LocativeCase"
+            g.add((pol_NP2_element_uri, olia.hasCase, olia[pol_NP2_case]))
+        if row['PL: Case of NP2'] == "ACC./LOC.":
+            g.add((pol_NP2_element_uri, olia.hasCase, olia.Accusative))
+            g.add((pol_NP2_element_uri, olia.hasCase, olia.LocativeCase))
+
+        # Example
+        if not pd.isna(row['PL: Construct (equivalent to German)']):
+            pol_example = row['PL: Construct (equivalent to German)']
+            words = pol_example.split()
+            first = f"[{words[0]}]1"
+            second = f" [{words[1]}]2"
+            remaining = ' '.join(words[2:])
+            third = f" [{remaining}]3"
+            pol_annotated_example = first + second + third
+            pol_example_uri = cx[f"{pol_construction_name_cleaned}_Ex_A"]
+            g.add((cx[pol_construction_name_cleaned], cx.hasExample, pol_example_uri))
+            g.add((pol_example_uri, RDF.type, cx.Example))
+            g.add((pol_example_uri, cx.hasAnnotatedText, Literal(pol_annotated_example)))
+            g.add((pol_example_uri, cx.hasText, Literal(pol_example)))
 
 # 5. Save as Turtle
 g.serialize(destination="Fokashchuk_cx.ttl", format="turtle")
