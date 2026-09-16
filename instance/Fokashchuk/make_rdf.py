@@ -36,6 +36,7 @@ def clean_name(name):
     clean = clean.replace(")", "")
     clean = clean.replace("/", "")
     clean = clean.replace("'","")
+    clean = clean.replace("ʹ","")
     clean = clean.replace("ß", "ss")
     clean = clean.replace("á", "a")
     clean = clean.replace("â", "a")
@@ -45,10 +46,14 @@ def clean_name(name):
     clean = clean.replace("ä", "ae")
     clean = clean.replace("ö", "oe")
     clean = clean.replace("ü", "ue")
-    clean = clean.replace("Ä","AE")
+    clean = clean.replace("Ä", "AE")
     clean = clean.replace("Ö", "OE")
     clean = clean.replace("Ü", "UE")
     clean = clean.replace("ā", "aa")
+    clean = clean.replace("ś", "sh")
+    clean = clean.replace("ł", "w")
+    clean = clean.replace("ó", "oo")
+    clean = clean.replace("ć", "ch")
     clean = clean.replace("+", "PLUS")
     clean = clean.replace("&", "AND")
     clean = clean.replace("/", "SLASH")
@@ -65,6 +70,17 @@ g.add((cx[POLNP_MD], rcxn.annotator, membr.Fokashchuk))
 g.add((cx[POLNP_MD], DCTERMS.created, Literal(datetime.now().strftime('%Y-%m-%d'), datatype=XSD.date)))
 g.add((cx[POLNP_name_cleaned], rcxn.hasTitle, Literal(POLNP_name)))
 g.add((cx[POLNP_name_cleaned], lg.partOfLanguage, lg.pol))
+
+# Create Ukrainian NP
+UKRNP_name_cleaned = "ukr_" + clean_name(POLNP_name)
+g.add((cx[UKRNP_name_cleaned], RDF.type, rcxn.Construction))
+UKRNP_MD = f"{UKRNP_name_cleaned}_MD"
+g.add((cx[UKRNP_MD], RDF.type, rcxn.Metadata))
+g.add((cx[UKRNP_name_cleaned], rcxn.hasMetadata, cx[POLNP_MD]))
+g.add((cx[UKRNP_MD], rcxn.annotator, membr.Fokashchuk))
+g.add((cx[UKRNP_MD], DCTERMS.created, Literal(datetime.now().strftime('%Y-%m-%d'), datatype=XSD.date)))
+g.add((cx[UKRNP_name_cleaned], rcxn.hasTitle, Literal(POLNP_name)))
+g.add((cx[UKRNP_name_cleaned], lg.partOfLanguage, lg.ukr))
 
 # Convert rows into triples
 for _, row in df.iterrows():
@@ -122,7 +138,6 @@ for _, row in df.iterrows():
     g.add((NP1_form_uri, RDF.type, rcxn.SlotForm))
     NP1_head = row['DE: Head of NP1']
     if NP1_head == "X" :
-        # TODO: make sure german noun cx exist
         g.add((NP1_form_uri, rcxn.hasSyntacticForm, cx.deu_Noun))
     else:
         cleaned_stem_construction = "deu_" + clean_name(NP1_head)
@@ -319,7 +334,7 @@ for _, row in df.iterrows():
         pol_cleaned_stem_construction = "pol_" + clean_name(pol_NP1_head)
         pol_metadata_stem_construction = f"{pol_cleaned_stem_construction}_MD"
         g.add((cx[pol_cleaned_stem_construction], RDF.type, rcxn.Construction))
-        g.add((cx[pol_cleaned_stem_construction], lg.partOfLanguage, lg.eng))
+        g.add((cx[pol_cleaned_stem_construction], lg.partOfLanguage, lg.pol))
         g.add((cx[pol_cleaned_stem_construction], rcxn.hasMetadata, cx[pol_metadata_stem_construction]))
         g.add((cx[pol_metadata_stem_construction], RDF.type, rcxn.Metadata))
         g.add((cx[pol_metadata_stem_construction], rcxn.annotator, membr.Fokashchuk))
@@ -381,6 +396,119 @@ for _, row in df.iterrows():
             g.add((pol_example_uri, RDF.type, cx.Example))
             g.add((pol_example_uri, cx.hasAnnotatedText, Literal(pol_annotated_example)))
             g.add((pol_example_uri, cx.hasText, Literal(pol_example)))
+
+################################################################
+### UKRAINIAN CONSTRUCTION
+################################################################
+
+    # General and link
+    if not pd.isna(row['Equivalent Ukrainian']):
+        ukr_construction_language_uri = "ukr"
+        ukr_construction_name = row['Equivalent Ukrainian']
+        ukr_transliteration = row['Transliteration Ukrainian']
+        ukr_transliteration_words = ukr_transliteration.split()
+        ukr_transliteration_stem = clean_name(f"ukr_{ukr_transliteration_words[0]}")
+        ukr_construction_name_cleaned = ukr_construction_language_uri + "_" + clean_name(ukr_transliteration)
+        g.add((cx[ukr_construction_name_cleaned], RDF.type, rcxn.Construction))
+        ukr_metadata_uri = f"{ukr_construction_name_cleaned}_MD"
+        g.add((cx[ukr_metadata_uri], RDF.type, rcxn.Metadata))
+        g.add((cx[ukr_construction_name_cleaned], rcxn.hasMetadata, cx[ukr_metadata_uri]))
+        g.add((cx[ukr_metadata_uri], rcxn.annotator, membr.Fokashchuk))
+        g.add((cx[ukr_metadata_uri], DCTERMS.created, Literal(datetime.now().strftime('%Y-%m-%d'), datatype=XSD.date)))
+        g.add((membr.Project_Fokashchuk_241210_F250218, rsrch.basedOn, cx[ukr_construction_name_cleaned]))
+        ukr_construction_complete_title = f"{ukr_construction_name}"
+        g.add((cx[ukr_construction_name_cleaned], rcxn.hasTitle, Literal(ukr_construction_complete_title)))
+        g.add((cx[ukr_construction_name_cleaned], lg.partOfLanguage, lg[ukr_construction_language_uri]))
+        g.add((cx[ukr_construction_name_cleaned], links.CL_similarFormSameFunction, cx[construction_name_cleaned]))
+        g.add((cx[ukr_construction_name_cleaned], links.CL_similarFormSameFunction, cx[eng_construction_name_cleaned]))
+
+        # Meaning of the English construction
+        ukr_cx_meaning_uri = f"{ukr_construction_name_cleaned}_Meaning"
+        g.add((cx[ukr_cx_meaning_uri], RDF.type, rcxn.ConstructionMeaning))
+        g.add((cx[ukr_construction_name_cleaned], rcxn.hasConstructionMeaning, cx[ukr_cx_meaning_uri]))
+        g.add((cx[ukr_cx_meaning_uri], rcxn.hasMeaning, Literal(meaning))) # same meaning as german!
+
+        # sequence of construction elements for English construction
+        ukr_seq_slots = URIRef(cx[f"{ukr_construction_name_cleaned}_slots"])
+        g.add((ukr_seq_slots, RDF.type, RDF.Seq))
+        g.add((cx[ukr_construction_name_cleaned], rcxn.hasSlots, ukr_seq_slots))
+        ukr_NP1_element_uri = cx[f"{ukr_construction_name_cleaned}_{1}"]
+        ukr_PP_element_uri = cx[f"{ukr_construction_name_cleaned}_{2}"]
+        ukr_NP2_element_uri = cx[f"{ukr_construction_name_cleaned}_{3}"]
+        g.add((ukr_seq_slots, URIRef(RDF["_1"]), ukr_NP1_element_uri))
+        g.add((ukr_seq_slots, URIRef(RDF["_2"]), ukr_PP_element_uri))
+        g.add((ukr_seq_slots, URIRef(RDF["_3"]), ukr_NP2_element_uri))
+
+        # Syntactic form of element 1
+        ukr_NP1_form_uri = cx[f"{ukr_construction_name_cleaned}_{1}_Form"]
+        g.add((ukr_NP1_element_uri, rcxn.hasSlotForm, ukr_NP1_form_uri))
+        g.add((ukr_NP1_form_uri, RDF.type, rcxn.SlotForm))
+        ukr_NP1_head = row['UA: Head of NP1']
+        ukr_metadata_stem_construction = f"{ukr_transliteration_stem}_MD"
+        g.add((cx[ukr_transliteration_stem], RDF.type, rcxn.Construction))
+        g.add((cx[ukr_transliteration_stem], lg.partOfLanguage, lg.ukr))
+        g.add((cx[ukr_transliteration_stem], rcxn.hasMetadata, cx[ukr_metadata_stem_construction]))
+        g.add((cx[ukr_metadata_stem_construction], RDF.type, rcxn.Metadata))
+        g.add((cx[ukr_metadata_stem_construction], rcxn.annotator, membr.Fokashchuk))
+        g.add((cx[ukr_metadata_stem_construction], DCTERMS.created,
+               Literal(datetime.now().strftime('%Y-%m-%d'), datatype=XSD.date)))
+        g.add((cx[ukr_transliteration_stem], rcxn.hasTitle, Literal(ukr_NP1_head)))
+        g.add((ukr_NP1_form_uri, rcxn.hasStem, cx[ukr_transliteration_stem]))
+        g.add((cx[ukr_transliteration_stem], links.elementOf, cx[ukr_construction_name_cleaned]))
+
+        # Syntactic form of element 2
+        ukr_PP_form_uri = cx[f"{ukr_construction_name_cleaned}_{2}_Form"]
+        g.add((ukr_PP_element_uri, rcxn.hasSlotForm, ukr_PP_form_uri))
+        g.add((ukr_PP_form_uri, RDF.type, rcxn.SlotForm))
+        if '/' in row['UA: Preposition']:
+            parts = [part.strip() for part in row['UA: Preposition'].split('/', 1)]
+            ukr_PP_prep_1 = parts[0] if len(parts) > 0 else ""
+            ukr_PP_prep_2 = parts[1] if len(parts) > 1 else ""
+            g.add((ukr_PP_form_uri, rcxn.hasSurfaceForm, Literal(ukr_PP_prep_1)))
+            g.add((ukr_PP_form_uri, rcxn.hasSurfaceForm, Literal(ukr_PP_prep_2)))
+        else:
+            ukr_PP_prep = row['UA: Preposition']
+            g.add((ukr_PP_form_uri, rcxn.hasSurfaceForm, Literal(ukr_PP_prep)))
+
+        # Syntactic form of element 3
+        ukr_NP2_form_uri = cx[f"{ukr_construction_name_cleaned}_{3}_Form"]
+        g.add((ukr_NP2_element_uri, rcxn.hasSlotForm, ukr_NP2_form_uri))
+        g.add((ukr_NP2_form_uri, RDF.type, rcxn.SlotForm))
+        g.add((ukr_NP2_form_uri, rcxn.hasSyntacticForm, cx.ukr_NounPhrase))
+        if row['UA: Head of NP2'] != "Y":
+            ukr_NP2_head = f'head is "{row['PL: Head of NP2']}"'
+            g.add((ukr_NP2_form_uri, RDFS.comment, Literal(ukr_NP2_head)))
+        if row['UA: Case of NP2'] == "ACC.":
+            ukr_NP2_case = "Accusative"
+            g.add((ukr_NP2_element_uri, olia.hasCase, olia[ukr_NP2_case]))
+        if row['UA: Case of NP2'] == "DAT.":
+            ukr_NP2_case = "DativeCase"
+            g.add((ukr_NP2_element_uri, olia.hasCase, olia[ukr_NP2_case]))
+        if row['UA: Case of NP2'] == "GEN.":
+            ukr_NP2_case = "GenitiveCase"
+            g.add((ukr_NP2_element_uri, olia.hasCase, olia[ukr_NP2_case]))
+        if row['UA: Case of NP2'] == "LOC.":
+            ukr_NP2_case = "LocativeCase"
+            g.add((ukr_NP2_element_uri, olia.hasCase, olia[ukr_NP2_case]))
+        if row['UA: Case of NP2'] == "ACC./LOC.":
+            g.add((ukr_NP2_element_uri, olia.hasCase, olia.Accusative))
+            g.add((ukr_NP2_element_uri, olia.hasCase, olia.LocativeCase))
+
+        # Example
+        if not pd.isna(row['PL: Construct (equivalent to German)']):
+            ukr_example = row['PL: Construct (equivalent to German)']
+            words = ukr_example.split()
+            first = f"[{words[0]}]1"
+            second = f" [{words[1]}]2"
+            remaining = ' '.join(words[2:])
+            third = f" [{remaining}]3"
+            ukr_annotated_example = first + second + third
+            ukr_example_uri = cx[f"{ukr_construction_name_cleaned}_Ex_A"]
+            g.add((cx[ukr_construction_name_cleaned], cx.hasExample, ukr_example_uri))
+            g.add((ukr_example_uri, RDF.type, cx.Example))
+            g.add((ukr_example_uri, cx.hasAnnotatedText, Literal(ukr_annotated_example)))
+            g.add((ukr_example_uri, cx.hasText, Literal(ukr_example)))
+
 
 # 5. Save as Turtle
 g.serialize(destination="Fokashchuk_cx.ttl", format="turtle")

@@ -345,6 +345,7 @@
     <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#pol -->
 
     <owl:NamedIndividual rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#pol">
+        <rdf:type rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#macrolanguage"/>
         <rdfs:label xml:lang="en">Polish</rdfs:label>
     </owl:NamedIndividual>
     
@@ -365,6 +366,15 @@
         <rdf:type rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#variety"/>
         <isVarietyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#spa"/>
         <rdfs:label xml:lang="en">Spoken Peninsular Spanish</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#ukr -->
+
+    <owl:NamedIndividual rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#ukr">
+        <rdf:type rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#macrolanguage"/>
+        <rdfs:label xml:lang="en">Ukrainian</rdfs:label>
     </owl:NamedIndividual>
     
 
