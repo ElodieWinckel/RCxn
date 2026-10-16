@@ -1,0 +1,86 @@
+@prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cx: <http://example.org/cx/> .
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterm: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
+@prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
+@prefix olia: <http://purl.org/olia/olia.owl#> .
+@prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+membr:Project_Schmechel rsrch:hasResearchQuestion membr:Project_Schmechel_2610160927 .
+
+cx:ang_Changeofstateconstruction a rcxn:Construction ;
+    cx:hasExample cx:ang_Changeofstateconstruction_Ex_A ;
+    #RDFS:comment """- ordinal logistic regression as a comparison between Old English prepositions 'to' and 'on'\r
+#- distinctive collexeme analysis of 'on' and 'to'""" ;
+    lg:partOfLanguage lg:ang ;
+    rcxn:hasConstructionMeaning cx:ang_Changeofstateconstruction_Meaning ;
+    rcxn:hasMetadata cx:ang_Changeofstateconstruction_MD ;
+    rcxn:hasSlots cx:ang_Changeofstateconstruction_slots ;
+    rcxn:hasTitle "Change of state construction" .
+
+cx:ang_Changeofstateconstruction_1 a rcxn:SlotObligatory ;
+    cx:WordOrder "Element 1 in first position" ;
+    olia:hasCase olia:Nominative ;
+    olia:hasSemanticRole olia:AgentRole .
+
+cx:ang_Changeofstateconstruction_2 a rcxn:SlotObligatory ;
+    cx:WordOrder "Element 2 immediately after Element 1" ;
+    rcxn:hasSemanticProperty "The meaning of the verb usually expresses that something is worked in a particular way." .
+
+cx:ang_Changeofstateconstruction_3 a rcxn:SlotObligatory ;
+    cx:WordOrder "Element 3 immediately after element 2" ;
+    olia:hasCase olia:Accusative ;
+    olia:hasSemanticRole olia:PatientRole ;
+    rcxn:hasSyntacticFunction "direct object" .
+
+cx:ang_Changeofstateconstruction_4 a rcxn:SlotObligatory ;
+    cx:WordOrder "Element 4 immediately after element 3" ;
+    cx:hasTranslation "to, into" ;
+    olia:hasCase olia:DativeCase ;
+    olia:hasSemanticRole olia:GoalRole ;
+    rcxn:hasSlotForm cx:ang_Changeofstateconstruction_4_Form ;
+    rcxn:hasSyntacticFunction "prepositional object" .
+
+cx:ang_Changeofstateconstruction_4_Form a rcxn:SlotForm ;
+    rcxn:hasPhonology "/toː/" ;
+    rcxn:hasSurfaceForm "to" .
+
+cx:ang_Changeofstateconstruction_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "[Wyrc]2 [þas wyrta ealle]3 [to swiþe smalan duste]4" ;
+    cx:hasGlosses "work.imp this.fem.acc.pl herb.fem.acc.pl all.fem.acc.pl to very fine.neut.dat.sg dust.neut.dat.sg" ;
+    cx:hasText "Wyrc þas wyrta ealle to swiþe smalan duste" ;
+    cx:hasTranslation "Work all these herbs to very fine dust." ;
+    RDFS:comment "The verb is an imperative in this case like most examples of this construction from Old English. But since the majority of examples are instructions from medicine handbooks where imperatives are common, it would be unreasonable to assume that this construction does not occur in the indicative." .
+
+cx:ang_Changeofstateconstruction_MD a rcxn:Metadata ;
+    dcterm:created "2026-10-16"^^xsd:date ;
+    #dcterm:references cx:ang_Changeofstateconstruction_Sources ;
+    rcxn:annotator membr:Schmechel .
+
+cx:ang_Changeofstateconstruction_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "[An affector]1 makes [an affected]3 change its state into [the result]4." ;
+    rcxn:usesImageSchema "source-path-goal" .
+
+#cx:ang_Changeofstateconstruction_Sources a dcmitype:Collection .
+
+cx:ang_Changeofstateconstruction_slots a rdf:Seq ;
+    rdf:_1 cx:ang_Changeofstateconstruction_1 ;
+    rdf:_2 cx:ang_Changeofstateconstruction_2 ;
+    rdf:_3 cx:ang_Changeofstateconstruction_3 ;
+    rdf:_4 cx:ang_Changeofstateconstruction_4 .
+
+membr:Project_Schmechel_2610160927_F2610160927 a rsrch:Finding ;
+    RDFS:label "Through distinctive collexeme analysis, it was possible to determine that a considerable number of verbs and nouns that are linked to meanings which express a change of state are attracted to the preposition 'to'. These verbs and nouns were among the 10 most strongly attracted words." ;
+    rsrch:basedOn cx:ang_Changeofstateconstruction .
+
+membr:Schmechel foaf:currentProject membr:Project_Schmechel_2610160927 .
+
+membr:Project_Schmechel_2610160927 a rsrch:Project ;
+    rsrch:hasFindings membr:Project_Schmechel_2610160927_F2610160927 ;
+    rsrch:projectName "Which metaphorical uses has the OE preposition 'to' developed?" .
+

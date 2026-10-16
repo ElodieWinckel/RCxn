@@ -18,6 +18,14 @@
 
 cx:Definitearticle RDFS:label "Definite article" .
 
+cx:ang_Changeofstateconstruction a rcxn:Construction ;
+    cx:hasExample cx:ang_Changeofstateconstruction_Ex_A ;
+    lg:partOfLanguage lg:ang ;
+    rcxn:hasConstructionMeaning cx:ang_Changeofstateconstruction_Meaning ;
+    rcxn:hasMetadata cx:ang_Changeofstateconstruction_MD ;
+    rcxn:hasSlots cx:ang_Changeofstateconstruction_slots ;
+    rcxn:hasTitle "Change of state construction" .
+
 cx:comePLUSnoisemannerofmovementVing_4_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_PrepositionalPhrase .
 
@@ -324,6 +332,54 @@ cx:SmallQuantityGestureConstruction_Meaning a gest:GestureMeaning ;
     gest:pragmaticProperty "Affective/evaluative framing.",
         "Foregrounding the small quantity of the referent." ;
     gest:semanticProperty "Small quantity." .
+
+cx:ang_Changeofstateconstruction_1 a rcxn:SlotObligatory ;
+    cx:WordOrder "Element 1 in first position" ;
+    olia:hasCase olia:Nominative ;
+    olia:hasSemanticRole olia:AgentRole .
+
+cx:ang_Changeofstateconstruction_2 a rcxn:SlotObligatory ;
+    cx:WordOrder "Element 2 immediately after Element 1" ;
+    rcxn:hasSemanticProperty "The meaning of the verb usually expresses that something is worked in a particular way." .
+
+cx:ang_Changeofstateconstruction_3 a rcxn:SlotObligatory ;
+    cx:WordOrder "Element 3 immediately after element 2" ;
+    olia:hasCase olia:Accusative ;
+    olia:hasSemanticRole olia:PatientRole ;
+    rcxn:hasSyntacticFunction "direct object" .
+
+cx:ang_Changeofstateconstruction_4 a rcxn:SlotObligatory ;
+    cx:WordOrder "Element 4 immediately after element 3" ;
+    cx:hasTranslation "to, into" ;
+    olia:hasCase olia:DativeCase ;
+    olia:hasSemanticRole olia:GoalRole ;
+    rcxn:hasSlotForm cx:ang_Changeofstateconstruction_4_Form ;
+    rcxn:hasSyntacticFunction "prepositional object" .
+
+cx:ang_Changeofstateconstruction_4_Form a rcxn:SlotForm ;
+    rcxn:hasPhonology "/toː/" ;
+    rcxn:hasSurfaceForm "to" .
+
+cx:ang_Changeofstateconstruction_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "[Wyrc]2 [þas wyrta ealle]3 [to swiþe smalan duste]4" ;
+    cx:hasGlosses "work.imp this.fem.acc.pl herb.fem.acc.pl all.fem.acc.pl to very fine.neut.dat.sg dust.neut.dat.sg" ;
+    cx:hasText "Wyrc þas wyrta ealle to swiþe smalan duste" ;
+    cx:hasTranslation "Work all these herbs to very fine dust." ;
+    RDFS:comment "The verb is an imperative in this case like most examples of this construction from Old English. But since the majority of examples are instructions from medicine handbooks where imperatives are common, it would be unreasonable to assume that this construction does not occur in the indicative." .
+
+cx:ang_Changeofstateconstruction_MD a rcxn:Metadata ;
+    DCTERMS:created "2026-10-16"^^xsd:date ;
+    rcxn:annotator membr:Schmechel .
+
+cx:ang_Changeofstateconstruction_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "[An affector]1 makes [an affected]3 change its state into [the result]4." ;
+    rcxn:usesImageSchema "source-path-goal" .
+
+cx:ang_Changeofstateconstruction_slots a RDF:Seq ;
+    RDF:_1 cx:ang_Changeofstateconstruction_1 ;
+    RDF:_2 cx:ang_Changeofstateconstruction_2 ;
+    RDF:_3 cx:ang_Changeofstateconstruction_3 ;
+    RDF:_4 cx:ang_Changeofstateconstruction_4 .
 
 cx:arzCai_Ditransitiveconstruction a rcxn:Construction ;
     cx:hasExample cx:arzCai_Ditransitiveconstruction_Ex_A,

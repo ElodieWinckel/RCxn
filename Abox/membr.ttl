@@ -205,7 +205,8 @@ membr:Rohwedder a FOAF:Person ;
     FOAF:homepage <https://www.cxg.phil.fau.eu/person/paul-rohwedder/> .
 
 membr:Schmechel a FOAF:Person ;
-    FOAF:currentProject membr:Project_Schmechel ;
+    FOAF:currentProject membr:Project_Schmechel,
+        membr:Project_Schmechel_2610160927 ;
     FOAF:familyName "Schmechel" ;
     FOAF:givenName "Dennis" ;
     FOAF:homepage <https://www.cxg.phil.fau.eu/person/dennis-schmechel/> .
@@ -519,7 +520,12 @@ membr:Project_Rohwedder a rsrch:Project ;
     rsrch:projectName "Project Rohwedder"@en .
 
 membr:Project_Schmechel a rsrch:Project ;
+    rsrch:hasResearchQuestion membr:Project_Schmechel_2610160927 ;
     rsrch:projectName "A constructional approach to prepositions and prepositional phrases in Old English"@en .
+
+membr:Project_Schmechel_2610160927_F2610160927 a rsrch:Finding ;
+    RDFS:label "Through distinctive collexeme analysis, it was possible to determine that a considerable number of verbs and nouns that are linked to meanings which express a change of state are attracted to the preposition 'to'. These verbs and nouns were among the 10 most strongly attracted words." ;
+    rsrch:basedOn cx:ang_Changeofstateconstruction .
 
 membr:Project_Senger a rsrch:Project ;
     rsrch:projectName "Project Senger"@en .
@@ -569,6 +575,10 @@ membr:Project_Wright a rsrch:Project ;
 membr:Project_Bayer_2602251146 a rsrch:Project ;
     rsrch:hasFindings membr:Project_Bayer_2602251146_F2602251146 ;
     rsrch:projectName "Recipient marking in Cairo Arabic" .
+
+membr:Project_Schmechel_2610160927 a rsrch:Project ;
+    rsrch:hasFindings membr:Project_Schmechel_2610160927_F2610160927 ;
+    rsrch:projectName "Which metaphorical uses has the OE preposition 'to' developed?" .
 
 membr:Project_Winckel_2601131454 a rsrch:Project ;
     rsrch:hasFindings membr:Project_Winckel_2601131454_F2601131454 ;

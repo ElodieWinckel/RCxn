@@ -32,7 +32,6 @@ def load_projects_from_ttl(file_path):
     g = Graph()
     g.parse(file_path, format='turtle')
     rsrch = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#")
-    foaf = Namespace("http://xmlns.com/foaf/0.1/")
     project_list = []
     for project in g.subjects(RDF.type, rsrch.Project):
         uri = str(project).replace("https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#", "")

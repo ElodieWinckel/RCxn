@@ -21,15 +21,19 @@ g.add((compcon.compcon, RDFS.label, Literal("Comparative concept")))
 # Define subclasses of "Comparative concept"
 g.add((compcon.sem, RDF.type, OWL.Class))
 g.add((compcon.sem, RDFS.label, Literal("meaning")))
+g.add((compcon.sem, RDFS.comment, Literal("One category of functional concepts, namely the meaning conveyed in an utterance."))) # from THE LOGIC OF COMPARATIVE CONCEPTS AND THEIR RELATIONS - January 23, 2024
 g.add((compcon.sem, RDFS.subClassOf, compcon.compcon))
 g.add((compcon.inf, RDF.type, OWL.Class))
 g.add((compcon.inf, RDFS.label, Literal("information packaging")))
+g.add((compcon.inf, RDFS.comment, Literal("One category of functional concepts, namely how meaning is packaged in an utterance for discourse."))) # from THE LOGIC OF COMPARATIVE CONCEPTS AND THEIR RELATIONS - January 23, 2024
 g.add((compcon.inf, RDFS.subClassOf, compcon.compcon))
 g.add((compcon.str, RDF.type, OWL.Class))
 g.add((compcon.str, RDFS.label, Literal("strategy")))
+g.add((compcon.str, RDFS.comment, Literal("A set of constructs that satisfy the morphosyntactic definition of the strategy and the functional definition of the construction that the strategy expresses."))) # from THE LOGIC OF COMPARATIVE CONCEPTS AND THEIR RELATIONS - January 23, 2024
 g.add((compcon.str, RDFS.subClassOf, compcon.compcon))
 g.add((compcon.cxn, RDF.type, OWL.Class))
 g.add((compcon.cxn, RDFS.label, Literal("construction")))
+g.add((compcon.cxn, RDFS.comment, Literal("A set of constructs that satisfy the functional definition of the construction."))) # from THE LOGIC OF COMPARATIVE CONCEPTS AND THEIR RELATIONS - January 23, 2024
 g.add((compcon.cxn, RDFS.subClassOf, compcon.compcon))
 iri_for_definition = "def" # This is just a trick because compcon.def is reserved...
 g.add((compcon[iri_for_definition], RDF.type, OWL.Class))
@@ -40,8 +44,6 @@ g.add((compcon[iri_for_definition], RDFS.comment, Literal("A category of concept
 g.add((compcon.Example, RDFS.label, Literal("Illustration of a comparative concept")))
 
 # Define some properties introduced in the yaml database
-g.add((compcon.subtypeOf, RDF.type, OWL.ObjectProperty))
-g.add((compcon.subtypeOf, RDFS.label, Literal("Subtype of")))
 g.add((compcon.functionOf, RDF.type, OWL.ObjectProperty))
 g.add((compcon.functionOf, RDFS.label, Literal("Function of")))
 g.add((compcon.roleOf, RDF.type, OWL.ObjectProperty))
@@ -56,6 +58,10 @@ g.add((compcon.Sections, RDF.type, OWL.ObjectProperty))
 g.add((compcon.Sections, RDFS.label, Literal("See section (in Croft 2022)")))
 g.add((compcon.hasExample, RDF.type, OWL.ObjectProperty))
 g.add((compcon.hasExample, RDFS.label, Literal("Example")))
+g.add((compcon.constituentOf, RDF.type, OWL.ObjectProperty))
+g.add((compcon.constituentOf, RDFS.label, Literal("Partonomy")))
+g.add((compcon.constituentOf, RDFS.comment, Literal("It relates two comparative concepts of the same type, i.e. a comparative concept that uses another comparative concept to the latter. For example, parts of a construction are sometimes also constructions.")))
+# TODO add domain and range for this property
 
 # Define property hasCompCon which will be used to annotate construction entries
 g.add((compcon.hasCompCon, RDF.type, OWL.ObjectProperty))
@@ -82,7 +88,7 @@ def add_entry_to_graph(entry):
     # Add SubtypeOf
     if 'SubtypeOf' in entry:
         for subtype in entry['SubtypeOf']:
-            g.add((entry_uri, compcon.subtypeOf, compcon[str.replace(subtype,":","_")]))
+            g.add((entry_uri, RDFS.subClassOf, compcon[str.replace(subtype,":","_")]))
 
     # Add FunctionOf
     if 'FunctionOf' in entry:
