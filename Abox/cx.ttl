@@ -177,6 +177,8 @@ cx:eng_coolconstruction_a a dcmitype:Collection ;
         references:4a943605-0f85-4796-b75d-ac165582ab1f-3,
         references:4a943605-0f85-4796-b75d-ac165582ab1f-4 .
 
+cx:eng_manyPLUSNcountCx_2_Index olia:hasNumber olia:Plural .
+
 cx:eng_monotransitive_construction a rcxn:Construction ;
     cx:hasExample cx:eng_monotransitive_construction_Ex_A,
         cx:eng_monotransitive_construction_Ex_B ;
@@ -3503,6 +3505,83 @@ cx:eng_keep a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
     links:elementOf cx:eng_Keepacoolheadconstruction ;
     rcxn:hasTitle "keep" .
+
+cx:eng_many a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    links:elementOf cx:eng_manyPLUSNcountCx ;
+    rcxn:hasMetadata cx:eng_many_MD ;
+    rcxn:hasTitle "many" .
+
+cx:eng_manyPLUSNcountCx a rcxn:Construction ;
+    cx:hasExample cx:eng_manyPLUSNcountCx_Ex_A,
+        cx:eng_manyPLUSNcountCx_Ex_B,
+        cx:eng_manyPLUSNcountCx_Ex_C ;
+    lg:partOfLanguage lg:eng ;
+    rcxn:hasConstructionMeaning cx:eng_manyPLUSNcountCx_Meaning ;
+    rcxn:hasMetadata cx:eng_manyPLUSNcountCx_MD ;
+    rcxn:hasSlots cx:eng_manyPLUSNcountCx_slots ;
+    rcxn:hasTitle "[many + Ncount] construction" .
+
+cx:eng_manyPLUSNcountCx_1 a rcxn:SlotObligatory ;
+    cx:WordOrder "Precedes Element 2" ;
+    RDFS:comment "Lexically fixed quantifier selecting a plural count-noun expression" ;
+    rcxn:hasOtherSemanticContribution "Indefinite cardinal quantification" ;
+    rcxn:hasSemanticProperty "Specifies a contextually large, indefinite number of entities" ;
+    rcxn:hasSlotForm cx:eng_manyPLUSNcountCx_1_Form ;
+    rcxn:hasSyntacticFunction "quantifier" .
+
+cx:eng_manyPLUSNcountCx_1_Form a rcxn:SlotForm ;
+    rcxn:hasPhonology "/ˈmen.i/" ;
+    rcxn:hasStem cx:eng_many ;
+    rcxn:hasSurfaceForm "many" .
+
+cx:eng_manyPLUSNcountCx_2 a rcxn:SlotOptional ;
+    cx:WordOrder "follows element 1" ;
+    RDFS:comment "Open nominal slot headed by a plural count noun; permits internal modification, e.g., many difficult questions" ;
+    rcxn:hasSemanticProperty "Countable referent" ;
+    rcxn:hasSyntacticFunction "Quantified nominal expression" .
+
+cx:eng_manyPLUSNcountCx_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "I might give [many]1 [reasons]2 to satisfy others." ;
+    cx:hasText "I might give many reasons to satisfy others." ;
+    RDFS:comment "Direct quantification of a plural count noun denoting abstract entities.",
+        "EEBO, 1614. Thomas Adams, The deuills banket (Text_ID: A00888)." .
+
+cx:eng_manyPLUSNcountCx_Ex_B a cx:Example ;
+    cx:hasAnnotatedText "He had lived [many]1 [years]2 in England, and he held an excellent position in society." ;
+    cx:hasText "He had lived many years in England, and he held an excellent position in society." ;
+    RDFS:comment "CLMET, 1874 (Text_ID: CLMET3_1_3_203).",
+        "The construction quantifies a plural count noun denoting temporal units. The example illustrates the use of MANY with nouns from the TIME semantic domain." .
+
+cx:eng_manyPLUSNcountCx_Ex_C a cx:Example ;
+    cx:hasAnnotatedText "There were [many]1 [insignificant sums]2 to individuals ..." ;
+    cx:hasText "There were many insignificant sums to individuals ..." ;
+    RDFS:comment "ARCHER, 1902. Arthur Conan Doyle, The Hound of the Baskervilles (Text_ID: 1902doyl_f7b).",
+        "The quantified plural count-noun expression includes an adjectival premodifier, illustrating internal nominal modification." .
+
+cx:eng_manyPLUSNcountCx_MD a rcxn:Metadata ;
+    cx:hasSources cx:eng_manyPLUSNcountCx_Sources ;
+    DCTERMS:created "2026-10-14"^^xsd:date ;
+    rcxn:annotator membr:Khanoub .
+
+cx:eng_manyPLUSNcountCx_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning """High quantity of [X(thing)]2: The construction expresses a contextually large, unspecified number of [entities denoted by a plural count-noun expression]2. 
+ [The quantifier]1 many indicates cardinal quantity, while the [nominal element]2 identifies what is being quantified.""" .
+
+cx:eng_manyPLUSNcountCx_Sources a dcmitype:Collection ;
+    DCTERMS:hasPart <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/references#7e9ff2c5-bddb-4bca-8410-f9e0e3c46cf6_1>,
+        <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/references#7e9ff2c5-bddb-4bca-8410-f9e0e3c46cf6_2>,
+        <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/references#7e9ff2c5-bddb-4bca-8410-f9e0e3c46cf6_3>,
+        <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/references#7e9ff2c5-bddb-4bca-8410-f9e0e3c46cf6_4>,
+        <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/references#7e9ff2c5-bddb-4bca-8410-f9e0e3c46cf6_5> .
+
+cx:eng_manyPLUSNcountCx_slots a RDF:Seq ;
+    RDF:_1 cx:eng_manyPLUSNcountCx_1 ;
+    RDF:_2 cx:eng_manyPLUSNcountCx_2 .
+
+cx:eng_many_MD a rcxn:Metadata ;
+    DCTERMS:created "2026-10-14"^^xsd:date ;
+    rcxn:annotator membr:Khanoub .
 
 cx:eng_monotransitive_construction_1 a rcxn:SlotOptional ;
     rcxn:hasCasaSyntacticFunction "potential subject" ;

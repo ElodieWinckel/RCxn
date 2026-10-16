@@ -1,0 +1,115 @@
+@prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cx: <http://example.org/cx/> .
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterm: <http://purl.org/dc/terms/> .
+@prefix evid: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/evid#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
+@prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#> .
+@prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
+@prefix olia: <http://purl.org/olia/olia.owl#> .
+@prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix references: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/references#> .
+@prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cx:eng_manyPLUSNcountCx_2_Index olia:hasNumber olia:Plural .
+
+membr:Project_Khanoub rsrch:hasResearchQuestion membr:Project_Khanoub_2610141629 .
+
+cx:eng_many a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    links:elementOf cx:eng_manyPLUSNcountCx ;
+    rcxn:hasMetadata cx:eng_many_MD ;
+    rcxn:hasTitle "many" .
+
+cx:eng_manyPLUSNcountCx_1 a rcxn:SlotObligatory ;
+    cx:WordOrder "Precedes Element 2" ;
+    RDFS:comment "Lexically fixed quantifier selecting a plural count-noun expression" ;
+    rcxn:hasOtherSemanticContribution "Indefinite cardinal quantification" ;
+    rcxn:hasSemanticProperty "Specifies a contextually large, indefinite number of entities" ;
+    rcxn:hasSlotForm cx:eng_manyPLUSNcountCx_1_Form ;
+    rcxn:hasSyntacticFunction "quantifier" .
+
+cx:eng_manyPLUSNcountCx_1_Form a rcxn:SlotForm ;
+    rcxn:hasPhonology "/ˈmen.i/" ;
+    rcxn:hasStem cx:eng_many ;
+    rcxn:hasSurfaceForm "many" .
+
+cx:eng_manyPLUSNcountCx_2 a rcxn:SlotOptional ;
+    cx:WordOrder "follows element 1" ;
+    RDFS:comment "Open nominal slot headed by a plural count noun; permits internal modification, e.g., many difficult questions" ;
+    rcxn:hasSemanticProperty "Countable referent" ;
+    rcxn:hasSyntacticFunction "Quantified nominal expression" .
+
+cx:eng_manyPLUSNcountCx_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "I might give [many]1 [reasons]2 to satisfy others." ;
+    cx:hasText "I might give many reasons to satisfy others." ;
+    RDFS:comment "EEBO, 1614. Thomas Adams, The deuills banket (Text_ID: A00888).", "Direct quantification of a plural count noun denoting abstract entities." .
+
+cx:eng_manyPLUSNcountCx_Ex_B a cx:Example ;
+    cx:hasAnnotatedText "He had lived [many]1 [years]2 in England, and he held an excellent position in society." ;
+    cx:hasText "He had lived many years in England, and he held an excellent position in society." ;
+    RDFS:comment "CLMET, 1874 (Text_ID: CLMET3_1_3_203)." , "The construction quantifies a plural count noun denoting temporal units. The example illustrates the use of MANY with nouns from the TIME semantic domain." .
+
+cx:eng_manyPLUSNcountCx_Ex_C a cx:Example ;
+    cx:hasAnnotatedText "There were [many]1 [insignificant sums]2 to individuals ..." ;
+    cx:hasText "There were many insignificant sums to individuals ..." ;
+    RDFS:comment "ARCHER, 1902. Arthur Conan Doyle, The Hound of the Baskervilles (Text_ID: 1902doyl_f7b)." , "The quantified plural count-noun expression includes an adjectival premodifier, illustrating internal nominal modification." .
+
+cx:eng_manyPLUSNcountCx_MD a rcxn:Metadata ;
+    dcterm:created "2026-10-14"^^xsd:date ;
+    cx:hasSources cx:eng_manyPLUSNcountCx_Sources ;
+    rcxn:annotator membr:Khanoub .
+
+cx:eng_manyPLUSNcountCx_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "High quantity of [X(thing)]2: The construction expresses a contextually large, unspecified number of [entities denoted by a plural count-noun expression]2. \n [The quantifier]1 many indicates cardinal quantity, while the [nominal element]2 identifies what is being quantified." .
+
+cx:eng_manyPLUSNcountCx_Sources a dcmitype:Collection ;
+    dcterm:hasPart references:7e9ff2c5-bddb-4bca-8410-f9e0e3c46cf6_1,
+       references:7e9ff2c5-bddb-4bca-8410-f9e0e3c46cf6_2 ,
+       references:7e9ff2c5-bddb-4bca-8410-f9e0e3c46cf6_3 ,
+       references:7e9ff2c5-bddb-4bca-8410-f9e0e3c46cf6_4 ,
+       references:7e9ff2c5-bddb-4bca-8410-f9e0e3c46cf6_5 .
+
+cx:eng_manyPLUSNcountCx_slots a rdf:Seq ;
+    rdf:_1 cx:eng_manyPLUSNcountCx_1 ;
+    rdf:_2 cx:eng_manyPLUSNcountCx_2 .
+
+cx:eng_many_MD a rcxn:Metadata ;
+    dcterm:created "2026-10-14"^^xsd:date ;
+    rcxn:annotator membr:Khanoub .
+
+membr:Project_Khanoub_2610141629_F2610141629_A a rsrch:Finding ;
+    RDFS:label """Finding 1: MANY appears to have remained relatively stable throughout the periods investigated. Its different patterns, such as many N, many of, many a, and elliptical many, continue to coexist, with relatively little evidence of major changes in its internal constructional organization. This is particularly interesting given that newer binominal quantifiers, such as a lot of, undergo changes over the same period.""" ;
+    rsrch:basedOn cx:eng_manyPLUSNcountCx, cx:eng_many .
+
+membr:Project_Khanoub_2610141629_F2610141629_B a rsrch:Finding ;
+    RDFS:label """Finding 2: MANY and LOT overlap in the kinds of nouns they can quantify, but they do not behave in exactly the same way. Even in contexts where both are possible, their use is shaped by the N2 semantics and whether the quantified noun is modified. Rather than behaving as free synonyms, the binominal quantifier expression a lot of appears to have developed its own preferences alongside the well-established monomorphemic quantifier MANY.""" ;
+    rsrch:basedOn cx:eng_manyPLUSNcountCx, cx:eng_many .
+
+references:7e9ff2c5-bddb-4bca-8410-f9e0e3c46cf6_1 evid:biblio """Diessel, H. (2019). The grammar network: How linguistic structure is shaped by language use. Cambridge University Press.""" .
+references:7e9ff2c5-bddb-4bca-8410-f9e0e3c46cf6_2 evid:biblio """Goldberg, A. E. (2006). Constructions at work: The nature of generalization in language. Oxford University Press.""" .
+references:7e9ff2c5-bddb-4bca-8410-f9e0e3c46cf6_3 evid:biblio """Huddleston, R., & Pullum, G. K. (2002). The Cambridge grammar of the English language. Cambridge University Press.""" .
+references:7e9ff2c5-bddb-4bca-8410-f9e0e3c46cf6_4 evid:biblio """Quirk, R., Greenbaum, S., Leech, G., & Svartvik, J. (1985). A comprehensive grammar of the English language. Longman.""" .
+references:7e9ff2c5-bddb-4bca-8410-f9e0e3c46cf6_5 evid:biblio """Traugott, E. C., & Trousdale, G. (2013). Constructionalization and constructional changes. Oxford University Press.""" .
+
+cx:eng_manyPLUSNcountCx a rcxn:Construction ;
+    cx:hasExample cx:eng_manyPLUSNcountCx_Ex_A,
+        cx:eng_manyPLUSNcountCx_Ex_B,
+        cx:eng_manyPLUSNcountCx_Ex_C ;
+    #RDFS:comment "A construction-specific extract from the manually annotated EEBO, ARCHER, and CLMET data can be provided as one Excel (.xlsx) or CSV (.csv) file, containing corpus examples, source metadata, and linguistic annotations. The scope and conditions of data sharing can be agreed upon before linking the file." ;
+    lg:partOfLanguage lg:eng ;
+    rcxn:hasConstructionMeaning cx:eng_manyPLUSNcountCx_Meaning ;
+    rcxn:hasMetadata cx:eng_manyPLUSNcountCx_MD ;
+    rcxn:hasSlots cx:eng_manyPLUSNcountCx_slots ;
+    rcxn:hasTitle "[many + Ncount] construction" .
+
+membr:Khanoub foaf:currentProject membr:Project_Khanoub_2610141629 .
+
+membr:Project_Khanoub_2610141629 a rsrch:Project ;
+    rsrch:hasFindings membr:Project_Khanoub_2610141629_F2610141629_A ;
+    rsrch:hasFindings membr:Project_Khanoub_2610141629_F2610141629_B ;
+    rsrch:projectName "How does the [many + Ncount] construction participate in diachronic quantifier competition, and which linguistic properties distinguish its use from that of binominal quantifiers such as [Det + lot + of + N]?" .
+

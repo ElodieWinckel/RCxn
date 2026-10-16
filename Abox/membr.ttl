@@ -133,7 +133,8 @@ membr:Kessler a FOAF:Person ;
     FOAF:homepage <https://www.cxg.phil.fau.eu/person/florian-kesler/> .
 
 membr:Khanoub a FOAF:Person ;
-    FOAF:currentProject membr:Project_Khanoub ;
+    FOAF:currentProject membr:Project_Khanoub,
+        membr:Project_Khanoub_2610141629 ;
     FOAF:familyName "Khanoub" ;
     FOAF:givenName "Rania" ;
     FOAF:homepage <https://www.cxg.phil.fau.eu/person/rania-khanoub/> .
@@ -434,7 +435,18 @@ membr:Project_Kessler_F250218 a rsrch:Finding ;
     rsrch:basedOn cx:lzh_Dooperationwithoperand1onoperand2construction .
 
 membr:Project_Khanoub a rsrch:Project ;
+    rsrch:hasResearchQuestion membr:Project_Khanoub_2610141629 ;
     rsrch:projectName "Competition and change in Modern English quantifier constructions"@en .
+
+membr:Project_Khanoub_2610141629_F2610141629_A a rsrch:Finding ;
+    RDFS:label "Finding 1: MANY appears to have remained relatively stable throughout the periods investigated. Its different patterns, such as many N, many of, many a, and elliptical many, continue to coexist, with relatively little evidence of major changes in its internal constructional organization. This is particularly interesting given that newer binominal quantifiers, such as a lot of, undergo changes over the same period." ;
+    rsrch:basedOn cx:eng_many,
+        cx:eng_manyPLUSNcountCx .
+
+membr:Project_Khanoub_2610141629_F2610141629_B a rsrch:Finding ;
+    RDFS:label "Finding 2: MANY and LOT overlap in the kinds of nouns they can quantify, but they do not behave in exactly the same way. Even in contexts where both are possible, their use is shaped by the N2 semantics and whether the quantified noun is modified. Rather than behaving as free synonyms, the binominal quantifier expression a lot of appears to have developed its own preferences alongside the well-established monomorphemic quantifier MANY." ;
+    rsrch:basedOn cx:eng_many,
+        cx:eng_manyPLUSNcountCx .
 
 membr:Project_Kissane a rsrch:Project ;
     rsrch:projectName "Form and meaning as factors in the identification and learning of constructional slots – English phrasal verbs and verb-preposition combinations"@en .
@@ -575,6 +587,11 @@ membr:Project_Wright a rsrch:Project ;
 membr:Project_Bayer_2602251146 a rsrch:Project ;
     rsrch:hasFindings membr:Project_Bayer_2602251146_F2602251146 ;
     rsrch:projectName "Recipient marking in Cairo Arabic" .
+
+membr:Project_Khanoub_2610141629 a rsrch:Project ;
+    rsrch:hasFindings membr:Project_Khanoub_2610141629_F2610141629_A,
+        membr:Project_Khanoub_2610141629_F2610141629_B ;
+    rsrch:projectName "How does the [many + Ncount] construction participate in diachronic quantifier competition, and which linguistic properties distinguish its use from that of binominal quantifiers such as [Det + lot + of + N]?" .
 
 membr:Project_Schmechel_2610160927 a rsrch:Project ;
     rsrch:hasFindings membr:Project_Schmechel_2610160927_F2610160927 ;
