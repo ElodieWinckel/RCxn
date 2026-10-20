@@ -1,12 +1,11 @@
 from . import app_form_blueprint
 from flask import current_app, request, render_template, send_file
-from rdflib import Graph, URIRef, Literal, BNode, Namespace, RDF, XSD, DCTERMS, DC
+from rdflib import Graph, URIRef, Literal, Namespace, RDF, XSD, DCTERMS
 from datetime import datetime
 import re
 import glob
 import json
 import os
-import requests
 import uuid
 from utils.clean_name import clean_name
 
@@ -74,17 +73,6 @@ def load_from_olia(top_class):
     all_classes = sorted(all_classes, key=lambda x: x[1].lower())
 
     return all_classes
-
-# Loads URIs of case features in OLIA + delete "Case" at the end of URI
-def load_CaseFeatures(file_path):
-    g = Graph()
-    g.parse(file_path, format='xml')
-    oliatop = Namespace("http://purl.org/olia/olia-top.owl#")
-    RDFS = Namespace("http://www.w3.org/2000/01/rdf-schema#")
-    names = [(str(s).replace("http://purl.org/olia/olia.owl#", "")) for s in g.subjects(RDFS.subClassOf, oliatop.CaseFeature)]
-    names = [(str(s).replace("Case", "")) for s in names]
-    names.sort()
-    return names
 
 # Loads URIs of tense features in OLIA (classes and subclasses thereof)
 def load_TenseFeatures(file_path):
@@ -196,11 +184,8 @@ uri_list = load_user_names_from_ttl('Abox/membr.ttl')
 project_list = load_projects_from_ttl('Abox/membr.ttl')
 findings_list = load_findings_from_ttl('Abox/membr.ttl')
 semantic_roles = load_from_olia("SemanticRole")
-semantic_roles.insert(0, '') # The first element of the drop-down list should be the empty string
 number_features = load_from_olia("NumberFeature")
-number_features.insert(0, '') # The first element of the drop-down list should be the empty string
-case_features = load_CaseFeatures('ontologies/olia.owl')
-case_features.insert(0, '') # The first element of the drop-down list should be the empty string
+case_features = load_from_olia("CaseFeature")
 tense_features = load_TenseFeatures('ontologies/olia.owl')
 tense_features.insert(0,("",""))
 modus = load_Mode('ontologies/olia.owl')
@@ -671,8 +656,7 @@ def form_submit():
             g.add((element_uri, olia.hasCase, Literal(add_case)))
         else:
             if case.strip():
-                case = case + "Case"
-                g.add((element_uri, olia.hasCase, olia[case]))
+                g.add((element_uri, olia.hasCase, URIRef(case)))
 
 ###################################################
 ### IMPLEMENT CONSTRUCTION COTEXT

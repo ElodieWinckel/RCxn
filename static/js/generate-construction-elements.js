@@ -453,11 +453,16 @@ function generateFields() {
         // Create dropdown (select element) for case
         const caseFeaturesSelect = document.createElement('select');
         caseFeaturesSelect.name = `case_${i + 1}`;
+        // Add a default empty option
+        const defaultCaseOption = document.createElement('option');
+        defaultCaseOption.value = ''; // Empty value
+        defaultCaseOption.textContent = '';
+        caseFeaturesSelect.appendChild(defaultCaseOption);
         // Populate the dropdown with options from the 'caseFeatures' array
-        caseFeatures.forEach(role => {
+        caseFeatures.forEach(([uri, label]) => {
             const option = document.createElement('option');
-            option.value = role;
-            option.textContent = role;
+            option.value = uri;
+            option.textContent = label;
             caseFeaturesSelect.appendChild(option);
         });
         // Add "Other" option to the dropdown
