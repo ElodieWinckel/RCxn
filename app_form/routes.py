@@ -69,37 +69,22 @@ def load_from_olia(top_class):
             if label:
                 all_classes.append((str(indirect_subclass), str(label)))
 
+            # Find subclasses of subclasses of subclass (3rd level)
+            for indirect_sub_subclass in g.subjects(RDFS.subClassOf, indirect_subclass):
+                label = g.value(subclass, RDFS.label, None) + ": " + g.value(indirect_subclass, RDFS.label, None) + ": " + g.value(indirect_sub_subclass, RDFS.label, None)
+                if label:
+                    all_classes.append((str(indirect_sub_subclass), str(label)))
+
+                # Find subclasses of subclasses of subclasses of subclass (4th level)
+                for indirect_sub_sub_subclass in g.subjects(RDFS.subClassOf, indirect_sub_subclass):
+                    label = g.value(subclass, RDFS.label, None) + ": " + g.value(indirect_subclass, RDFS.label, None) + ": " + g.value(indirect_sub_subclass, RDFS.label, None) + ": " + g.value(indirect_sub_sub_subclass, RDFS.label, None)
+                    if label:
+                        all_classes.append((str(indirect_sub_sub_subclass), str(label)))
+
     # Sort by label
     all_classes = sorted(all_classes, key=lambda x: x[1].lower())
 
     return all_classes
-
-# Loads URIs of tense features in OLIA (classes and subclasses thereof)
-def load_TenseFeatures(file_path):
-    g = Graph()
-    g.parse(file_path, format='xml')
-
-    oliatop = Namespace("http://purl.org/olia/olia-top.owl#")
-    RDFS = Namespace("http://www.w3.org/2000/01/rdf-schema#")
-
-    tense_features = []
-
-    # Find all subclasses and get their labels
-    for subclass in g.subjects(RDFS.subClassOf, oliatop.TenseFeature):
-        label = g.value(subclass, RDFS.label, None)
-        if label:
-            tense_features.append((str(subclass), str(label)))
-
-        # Find subclasses of subclasses
-        for indirect_subclass in g.subjects(RDFS.subClassOf, subclass):
-            label = g.value(indirect_subclass, RDFS.label, None)
-            if label:
-                tense_features.append((str(indirect_subclass), str(label)))
-
-    # Sort by label
-    tense_features = sorted(tense_features, key=lambda x: x[1].lower())
-
-    return tense_features
 
 # Loads URIs of modes in OLIA + delete "Verb" at the end of URI
 def load_Mode(file_path):
@@ -186,8 +171,7 @@ findings_list = load_findings_from_ttl('Abox/membr.ttl')
 semantic_roles = load_from_olia("SemanticRole")
 number_features = load_from_olia("NumberFeature")
 case_features = load_from_olia("CaseFeature")
-tense_features = load_TenseFeatures('ontologies/olia.owl')
-tense_features.insert(0,("",""))
+tense_features = load_from_olia("TenseFeature")
 modus = load_Mode('ontologies/olia.owl')
 modus.insert(0, '') # The first element of the drop-down list should be the empty string
 list_cx = load_existing_constructions("instance/Submissions/*_cx.ttl")

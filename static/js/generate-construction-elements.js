@@ -549,6 +549,11 @@ function generateFields() {
         // Create dropdown (select element) for tense
         const tenseFeaturesSelect = document.createElement('select');
         tenseFeaturesSelect.name = `tense_${i + 1}`;
+        // Add a default empty option
+        const defaultTenseOption = document.createElement('option');
+        defaultTenseOption.value = ''; // Empty value
+        defaultTenseOption.textContent = '';
+        tenseFeaturesSelect.appendChild(defaultTenseOption);
         // Populate the dropdown with options from the 'tenseFeatures' array
         tenseFeatures.forEach(([uri, label]) => {
             const option = document.createElement('option');
