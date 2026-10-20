@@ -75,7 +75,7 @@ cx:CausedMotionConstrutionPPto_MD a rcxn:Metadata ;
     cx:hasText "She gave him a present." .
 
 <http://example.org/cx/eng_ditransitive_construction_obj_np_MD> a rcxn:Metadata ;
-    cx:hasSources <http://example.org/cx/eng_ditransitive_construction_obj_np_Sources> ;
+    dcterm:references <http://example.org/cx/eng_ditransitive_construction_obj_np_Sources> ;
     rcxn:annotator membr:Winckel ;
     dcterm:created "2026-01-16"^^xsd:date .
 

@@ -60,7 +60,7 @@ cx:eng_manyPLUSNcountCx_Ex_C a cx:Example ;
 
 cx:eng_manyPLUSNcountCx_MD a rcxn:Metadata ;
     dcterm:created "2026-10-14"^^xsd:date ;
-    cx:hasSources cx:eng_manyPLUSNcountCx_Sources ;
+    dcterm:references cx:eng_manyPLUSNcountCx_Sources ;
     rcxn:annotator membr:Khanoub .
 
 cx:eng_manyPLUSNcountCx_Meaning a rcxn:ConstructionMeaning ;

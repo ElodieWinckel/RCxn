@@ -128,7 +128,7 @@ cx:comePLUSnoisemannerofmovementVing_Ex_D a cx:Example ;
 cx:comePLUSnoisemannerofmovementVing_MD a rcxn:Metadata ;
     rcxn:annotator membr:Patel ;
     dcterm:created "2024-11-28"^^xsd:date ;
-    cx:hasSources cx:comePLUSnoisemannerofmovementVing_Sources .
+    dcterm:references cx:comePLUSnoisemannerofmovementVing_Sources .
 
 cx:comePLUSnoisemannerofmovementVing_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "[Someone or something]1 moves towards a reference point in [a specified manner]3, often in a manner that is fast, sudden, uncontrolled, noisy, or otherwise overwhelming." .

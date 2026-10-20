@@ -70,7 +70,7 @@ cx:lzh_Dooperationwithoperand1onoperand2construction_Ex_A a cx:Example ;
 cx:lzh_Dooperationwithoperand1onoperand2construction_MD a rcxn:Metadata ;
     rcxn:annotator membr:Kessler ;
     dcterm:created "2024-12-01"^^xsd:date ;
-    cx:hasSources cx:lzh_Dooperationwithoperand1onoperand2construction_Sources .
+    dcterm:references cx:lzh_Dooperationwithoperand1onoperand2construction_Sources .
 
 cx:lzh_Dooperationwithoperand1onoperand2construction_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "Do [operation]3 with [operand 1]2 and [operand 2]4" .

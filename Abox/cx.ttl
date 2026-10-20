@@ -446,8 +446,8 @@ cx:arzCai_Ditransitiveconstruction_Ex_C a cx:Example ;
     cx:hasTranslation "Have you explained it to her?" .
 
 cx:arzCai_Ditransitiveconstruction_MD a rcxn:Metadata ;
-    cx:hasSources cx:arzCai_Ditransitiveconstruction_Sources ;
     DCTERMS:created "2026-02-25"^^xsd:date ;
+    DCTERMS:references cx:arzCai_Ditransitiveconstruction_Sources ;
     rcxn:annotator membr:Bayer .
 
 cx:arzCai_Ditransitiveconstruction_Meaning a rcxn:ConstructionMeaning ;
@@ -590,8 +590,8 @@ cx:comePLUSnoisemannerofmovementVing_Ex_D a cx:Example ;
     cx:hasText "A second or two later, everything came crashing down in a big heap on the railway line below ." .
 
 cx:comePLUSnoisemannerofmovementVing_MD a rcxn:Metadata ;
-    cx:hasSources cx:comePLUSnoisemannerofmovementVing_Sources ;
     DCTERMS:created "2024-11-28"^^xsd:date ;
+    DCTERMS:references cx:comePLUSnoisemannerofmovementVing_Sources ;
     rcxn:annotator membr:Patel .
 
 cx:comePLUSnoisemannerofmovementVing_Meaning a rcxn:ConstructionMeaning ;
@@ -1688,8 +1688,8 @@ cx:engInf_Coolexclamativeconstruction_2_Form a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "!" .
 
 cx:engInf_Coolexclamativeconstruction_MD a rcxn:Metadata ;
-    cx:hasSources cx:eng_coolconstruction_Sources ;
     DCTERMS:created "2025-12-10"^^xsd:date ;
+    DCTERMS:references cx:eng_coolconstruction_Sources ;
     rcxn:annotator membr:Boos,
         membr:Petrenko,
         membr:Weigelt,
@@ -1724,8 +1724,8 @@ cx:engInf_coolasadmirableconstruction_Ex_C a cx:Example ;
     cx:hasText "The movie is cool." .
 
 cx:engInf_coolasadmirableconstruction_MD a rcxn:Metadata ;
-    cx:hasSources cx:eng_coolconstruction_Sources ;
     DCTERMS:created "2025-11-28"^^xsd:date ;
+    DCTERMS:references cx:eng_coolconstruction_Sources ;
     rcxn:annotator membr:Boos,
         membr:Petrenko,
         membr:Weigelt,
@@ -1807,8 +1807,8 @@ cx:engLME_Argumentstructureconstruction_3_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_Phrase .
 
 cx:engLME_Argumentstructureconstruction_MD a rcxn:Metadata ;
-    cx:hasSources cx:engLME_Argumentstructureconstruction_Sources ;
     DCTERMS:created "2025-02-14"^^xsd:date ;
+    DCTERMS:references cx:engLME_Argumentstructureconstruction_Sources ;
     rcxn:annotator membr:Ramezani .
 
 cx:engLME_Argumentstructureconstruction_Meaning a rcxn:ConstructionMeaning ;
@@ -1866,8 +1866,8 @@ cx:engLME_AttributeConstructionAttrAdj_Ex_A a cx:Example ;
     cx:hasText "She called the idea stupid." .
 
 cx:engLME_AttributeConstructionAttrAdj_MD a rcxn:Metadata ;
-    cx:hasSources cx:engLME_AttributeConstructionAttrAdj_Sources ;
     DCTERMS:created "2026-01-13"^^xsd:date ;
+    DCTERMS:references cx:engLME_AttributeConstructionAttrAdj_Sources ;
     rcxn:annotator membr:Garibyan,
         membr:Winckel .
 
@@ -2495,8 +2495,8 @@ cx:engLME_coolascolourconstruction_Ex_B a cx:Example ;
     cx:hasText "a cool shade of grey" .
 
 cx:engLME_coolascolourconstruction_MD a rcxn:Metadata ;
-    cx:hasSources cx:eng_coolconstruction_Sources ;
     DCTERMS:created "2025-11-28"^^xsd:date ;
+    DCTERMS:references cx:eng_coolconstruction_Sources ;
     rcxn:annotator membr:Boos,
         membr:Petrenko,
         membr:Weigelt,
@@ -2526,8 +2526,8 @@ cx:engLME_coolasemotionconstruction_Ex_B a cx:Example ;
     cx:hasText "He is staying cool under pressure." .
 
 cx:engLME_coolasemotionconstruction_MD a rcxn:Metadata ;
-    cx:hasSources cx:eng_coolconstruction_Sources ;
     DCTERMS:created "2025-11-28"^^xsd:date ;
+    DCTERMS:references cx:eng_coolconstruction_Sources ;
     rcxn:annotator membr:Boos,
         membr:Petrenko,
         membr:Weigelt,
@@ -3122,8 +3122,8 @@ cx:eng_Keepacoolheadconstruction_Ex_A a cx:Example ;
     RDFS:comment "BNC, Newspaper, 1992" .
 
 cx:eng_Keepacoolheadconstruction_MD a rcxn:Metadata ;
-    cx:hasSources cx:eng_coolconstruction_Sources ;
     DCTERMS:created "2025-11-28"^^xsd:date ;
+    DCTERMS:references cx:eng_coolconstruction_Sources ;
     rcxn:annotator membr:Boos,
         membr:Petrenko,
         membr:Weigelt,
@@ -3374,8 +3374,8 @@ cx:eng_alotofPLUSNconstruction_Ex_C a cx:Example ;
         "Quantification of a plural count noun referring to people." .
 
 cx:eng_alotofPLUSNconstruction_MD a rcxn:Metadata ;
-    cx:hasSources cx:eng_alotofPLUSNconstruction_Sources ;
     DCTERMS:created "2026-10-19"^^xsd:date ;
+    DCTERMS:references cx:eng_alotofPLUSNconstruction_Sources ;
     rcxn:annotator membr:Khanoub .
 
 cx:eng_alotofPLUSNconstruction_Meaning a rcxn:ConstructionMeaning ;
@@ -3491,8 +3491,8 @@ cx:eng_coolconstruction_Ex_D a cx:Example ;
     cx:hasText "cool climate" .
 
 cx:eng_coolconstruction_MD a rcxn:Metadata ;
-    cx:hasSources cx:eng_coolconstruction_Sources ;
     DCTERMS:created "2025-11-28"^^xsd:date ;
+    DCTERMS:references cx:eng_coolconstruction_Sources ;
     rcxn:annotator membr:Boos,
         membr:Petrenko,
         membr:Weigelt,
@@ -3592,9 +3592,9 @@ cx:eng_ditransitive_construction_obj_np_Ex_A a cx:Example ;
     cx:hasText "She gave him a present." .
 
 cx:eng_ditransitive_construction_obj_np_MD a rcxn:Metadata ;
-    cx:hasSources cx:eng_ditransitive_construction_obj_np_Sources ;
     DCTERMS:created "2026-01-16"^^xsd:date,
         "2026-02-04"^^xsd:date ;
+    DCTERMS:references cx:eng_ditransitive_construction_obj_np_Sources ;
     rcxn:annotator membr:Winckel .
 
 cx:eng_ditransitive_construction_obj_np_Meaning a rcxn:ConstructionMeaning ;
@@ -3689,8 +3689,8 @@ cx:eng_manyPLUSNcountCx_Ex_C a cx:Example ;
         "The quantified plural count-noun expression includes an adjectival premodifier, illustrating internal nominal modification." .
 
 cx:eng_manyPLUSNcountCx_MD a rcxn:Metadata ;
-    cx:hasSources cx:eng_manyPLUSNcountCx_Sources ;
     DCTERMS:created "2026-10-14"^^xsd:date ;
+    DCTERMS:references cx:eng_manyPLUSNcountCx_Sources ;
     rcxn:annotator membr:Khanoub .
 
 cx:eng_manyPLUSNcountCx_Meaning a rcxn:ConstructionMeaning ;
@@ -4232,8 +4232,8 @@ cx:itaStoria_RelativeTopicShiftConstruction_Ex_B a cx:Example ;
     RDFS:comment "The Construction is in square brackets, while the rest has been included to allow for an understanding of its function. The coniunctio relativa 'Le quali' anaphorically refers to the 'provisioni' mentioned before the Construction. The noun in the NP thus remains implicit. The verb in the VP, 'aspettare' ('to wait') functions anaphorically, as it is a synonym of 'attendere', which appears shortly before the Construction. The main clause following the Construction introduces a new topic (the new trouble that the Florentines have to face). " .
 
 cx:itaStoria_RelativeTopicShiftConstruction_MD a rcxn:Metadata ;
-    cx:hasSources cx:itaStoria_RelativeTopicShiftConstruction_Sources ;
     DCTERMS:created "2024-11-21"^^xsd:date ;
+    DCTERMS:references cx:itaStoria_RelativeTopicShiftConstruction_Sources ;
     rcxn:annotator membr:Trombetta .
 
 cx:itaStoria_RelativeTopicShiftConstruction_Meaning a rcxn:ConstructionMeaning ;
@@ -4389,8 +4389,8 @@ cx:lzh_Dooperationwithoperand1onoperand2construction_Ex_A a cx:Example ;
     cx:hasTransliteration "yi gao cheng zhi" .
 
 cx:lzh_Dooperationwithoperand1onoperand2construction_MD a rcxn:Metadata ;
-    cx:hasSources cx:lzh_Dooperationwithoperand1onoperand2construction_Sources ;
     DCTERMS:created "2024-12-01"^^xsd:date ;
+    DCTERMS:references cx:lzh_Dooperationwithoperand1onoperand2construction_Sources ;
     rcxn:annotator membr:Kessler .
 
 cx:lzh_Dooperationwithoperand1onoperand2construction_Meaning a rcxn:ConstructionMeaning ;
@@ -4908,7 +4908,7 @@ cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_Ex_D a cx:Example ;
 
 cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_MD a rcxn:Metadata ;
     cx:creationDate "2024-11-25"^^xsd:date ;
-    cx:hasSources cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_Sources ;
+    DCTERMS:references cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_Sources ;
     rcxn:annotator membr:FernandezSantos .
 
 cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_Meaning a rcxn:ConstructionMeaning ;

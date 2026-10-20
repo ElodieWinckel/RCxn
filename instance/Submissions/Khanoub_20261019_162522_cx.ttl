@@ -129,7 +129,7 @@ cx:eng_alotofPLUSNconstruction_Ex_C a cx:Example ;
 
 cx:eng_alotofPLUSNconstruction_MD a rcxn:Metadata ;
     dcterm:created "2026-10-19"^^xsd:date ;
-    cx:hasSources cx:eng_alotofPLUSNconstruction_Sources ;
+    dcterm:references cx:eng_alotofPLUSNconstruction_Sources ;
     rcxn:annotator membr:Khanoub .
 
 cx:eng_alotofPLUSNconstruction_Meaning a rcxn:ConstructionMeaning ;
