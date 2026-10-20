@@ -186,7 +186,7 @@ def create_abox_from_submissions():
     add_user("Khanoub",
              "Rania",
              "Competition and change in Modern English quantifier constructions",
-             "https://www.cxg.phil.fau.eu/person/rania-khanoub/")
+             "https://www.cxg.phil.fau.eu/faudir/rania-khanoub/")
     add_user("Kissane",
              "Hassane",
              "Form and meaning as factors in the identification and learning of constructional slots – English phrasal verbs and verb-preposition combinations",

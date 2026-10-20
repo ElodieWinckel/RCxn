@@ -686,7 +686,6 @@ def construction_detail(uri):
                 'property': "Similar construction in other Constructicons",
                 'url': get_label_or_iri(url, g, ont),
             })
-    print(references)
 
     # Collect triples for research question and findings
     research = []
