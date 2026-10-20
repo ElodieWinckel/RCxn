@@ -353,5 +353,5 @@ def create_abox_from_submissions():
         # Check if the subject starts with the desired prefix
         if isinstance(s, URIRef) and str(s).startswith(references):
             graph_references.add((s, p, o))
-    # Serialize refernce.ttl
+    # Serialize reference.ttl
     graph_references.serialize(destination=output_references, format="turtle")

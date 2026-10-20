@@ -10,7 +10,7 @@
 @prefix olia: <http://purl.org/olia/olia.owl#> .
 @prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix references: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/references#> .
+@prefix references: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/references#> .
 @prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -67,7 +67,7 @@ cx:eng_manyPLUSNcountCx_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "High quantity of [X(thing)]2: The construction expresses a contextually large, unspecified number of [entities denoted by a plural count-noun expression]2. \n [The quantifier]1 many indicates cardinal quantity, while the [nominal element]2 identifies what is being quantified." .
 
 cx:eng_manyPLUSNcountCx_Sources a dcmitype:Collection ;
-    dcterm:hasPart references:7e9ff2c5-bddb-4bca-8410-f9e0e3c46cf6_1,
+    dcterm:hasPart references:7e9ff2c5-bddb-4bca-8410-f9e0e3c46cf6_1 ,
        references:7e9ff2c5-bddb-4bca-8410-f9e0e3c46cf6_2 ,
        references:7e9ff2c5-bddb-4bca-8410-f9e0e3c46cf6_3 ,
        references:7e9ff2c5-bddb-4bca-8410-f9e0e3c46cf6_4 ,
@@ -89,11 +89,11 @@ membr:Project_Khanoub_2610141629_F2610141629_B a rsrch:Finding ;
     RDFS:label """Finding 2: MANY and LOT overlap in the kinds of nouns they can quantify, but they do not behave in exactly the same way. Even in contexts where both are possible, their use is shaped by the N2 semantics and whether the quantified noun is modified. Rather than behaving as free synonyms, the binominal quantifier expression a lot of appears to have developed its own preferences alongside the well-established monomorphemic quantifier MANY.""" ;
     rsrch:basedOn cx:eng_manyPLUSNcountCx, cx:eng_many .
 
-references:7e9ff2c5-bddb-4bca-8410-f9e0e3c46cf6_1 evid:biblio """Diessel, H. (2019). The grammar network: How linguistic structure is shaped by language use. Cambridge University Press.""" .
-references:7e9ff2c5-bddb-4bca-8410-f9e0e3c46cf6_2 evid:biblio """Goldberg, A. E. (2006). Constructions at work: The nature of generalization in language. Oxford University Press.""" .
-references:7e9ff2c5-bddb-4bca-8410-f9e0e3c46cf6_3 evid:biblio """Huddleston, R., & Pullum, G. K. (2002). The Cambridge grammar of the English language. Cambridge University Press.""" .
-references:7e9ff2c5-bddb-4bca-8410-f9e0e3c46cf6_4 evid:biblio """Quirk, R., Greenbaum, S., Leech, G., & Svartvik, J. (1985). A comprehensive grammar of the English language. Longman.""" .
-references:7e9ff2c5-bddb-4bca-8410-f9e0e3c46cf6_5 evid:biblio """Traugott, E. C., & Trousdale, G. (2013). Constructionalization and constructional changes. Oxford University Press.""" .
+references:7e9ff2c5-bddb-4bca-8410-f9e0e3c46cf6_1 evid:biblio "Diessel, Holger. 2019. The grammar network: How linguistic structure is shaped by language use. Cambridge University Press." .
+references:7e9ff2c5-bddb-4bca-8410-f9e0e3c46cf6_2 evid:biblio "Goldberg, Adele E. 2006. Constructions at work: The nature of generalization in language. Oxford University Press." .
+references:7e9ff2c5-bddb-4bca-8410-f9e0e3c46cf6_3 evid:biblio "Huddleston, Rodney & Geoffrey K. Pullum. 2002. The Cambridge grammar of the English language. Cambridge University Press." .
+references:7e9ff2c5-bddb-4bca-8410-f9e0e3c46cf6_4 evid:biblio "Quirk, Randolph, Sidney Greenbaum, Geoffrey Leech, & Jan Svartvik. 1985. A comprehensive grammar of the English language. Longman." .
+references:7e9ff2c5-bddb-4bca-8410-f9e0e3c46cf6_5 evid:biblio "Traugott, Elizabeth C. & Graeme Trousdale. 2013. Constructionalization and constructional changes. Oxford University Press." .
 
 cx:eng_manyPLUSNcountCx a rcxn:Construction ;
     cx:hasExample cx:eng_manyPLUSNcountCx_Ex_A,

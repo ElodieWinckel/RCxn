@@ -329,7 +329,7 @@ def form_submit():
     RDFS = Namespace("http://www.w3.org/2000/01/rdf-schema#")
     g.bind("RDFS", RDFS)
 
-    references = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/references#")
+    references = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/references#")
     g.bind("references", references)
 
     lg = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#")
