@@ -398,10 +398,17 @@ def form_submit():
         g.add((cx[sources_uri], RDF.type , DCTERMS_Collection))
 
     if bibliography_plain_text:
-        # Define a URI for the entry
-        bib_uri = str(uuid.uuid4())
-        g.add((references[bib_uri], evid.biblio, Literal(bibliography_plain_text)))
-        g.add((cx[sources_uri], DCTERMS.hasPart, references[bib_uri]))
+        # Split the text into line and process each line
+        for i, line in enumerate(bibliography_plain_text.strip().splitlines(), start=1):
+            # Skip empty lines
+            line = line.strip()
+            if not line:
+                continue
+            # Define a URI for the entry
+            bib_uri = str(uuid.uuid4())
+            # Add the triplets
+            g.add((references[bib_uri], evid.biblio, Literal(line)))
+            g.add((cx[sources_uri], DCTERMS.hasPart, references[bib_uri]))
 
     # OTHER CONSTRUCTICONS
     # Add each URL from other constructicons (with rdfs:seeAlso)
