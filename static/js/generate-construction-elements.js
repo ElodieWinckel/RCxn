@@ -244,7 +244,7 @@ function generateFields() {
         // Add a default empty option
         const defaultOption = document.createElement('option');
         defaultOption.value = ''; // Empty value
-        defaultOption.textContent = '-- Select a semantic contribution --';
+        defaultOption.textContent = '';
         semanticContributionSelect.appendChild(defaultOption);
         // Populate the dropdown with options from the 'semanticRoles' array
         semanticRoles.forEach(([uri, label]) => {
@@ -409,11 +409,16 @@ function generateFields() {
         // Create dropdown (select element) for number
         const numberFeaturesSelect = document.createElement('select');
         numberFeaturesSelect.name = `number_${i + 1}`;
+        // Add a default empty option
+        const defaultNumberOption = document.createElement('option');
+        defaultNumberOption.value = ''; // Empty value
+        defaultNumberOption.textContent = '';
+        numberFeaturesSelect.appendChild(defaultNumberOption);
         // Populate the dropdown with options from the 'numberFeatures' array
-        numberFeatures.forEach(role => {
+        numberFeatures.forEach(([uri, label]) => {
             const option = document.createElement('option');
-            option.value = role;
-            option.textContent = role;
+            option.value = uri;
+            option.textContent = label;
             numberFeaturesSelect.appendChild(option);
         });
         // Add "Other" option to the dropdown

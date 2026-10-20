@@ -49,41 +49,31 @@ def load_findings_from_ttl(file_path):
                        str(g.value(s, RDFS.label))) for s in g.subjects(RDF.type, rsrch.Finding)]
     return uris_and_names
 
-# Loads URIs of semantic roles in OLIA
-def load_SemanticRoles(file_path):
+# Create a list of all subclasses of a class in OLiA
+def load_from_olia(top_class):
     g = Graph()
-    g.parse(file_path, format='xml')
+    g.parse('ontologies/olia.owl', format='xml')
     oliatop = Namespace("http://purl.org/olia/olia-top.owl#")
     RDFS = Namespace("http://www.w3.org/2000/01/rdf-schema#")
 
-    semantic_roles = []
+    all_classes = []
 
     # Find all subclasses and get their labels
-    for subclass in g.subjects(RDFS.subClassOf, oliatop.SemanticRole):
+    for subclass in g.subjects(RDFS.subClassOf, oliatop[top_class]):
         label = g.value(subclass, RDFS.label, None)
         if label:
-            semantic_roles.append((str(subclass), str(label)))
+            all_classes.append((str(subclass), str(label)))
 
         # Find subclasses of subclasses
         for indirect_subclass in g.subjects(RDFS.subClassOf, subclass):
             label = g.value(subclass, RDFS.label, None) + ": " + g.value(indirect_subclass, RDFS.label, None)
             if label:
-                semantic_roles.append((str(indirect_subclass), str(label)))
+                all_classes.append((str(indirect_subclass), str(label)))
 
     # Sort by label
-    semantic_roles = sorted(semantic_roles, key=lambda x: x[1].lower())
+    all_classes = sorted(all_classes, key=lambda x: x[1].lower())
 
-    return semantic_roles
-
-# Loads URIs of number features in OLIA
-def load_NumberFeatures(file_path):
-    g = Graph()
-    g.parse(file_path, format='xml')
-    oliatop = Namespace("http://purl.org/olia/olia-top.owl#")
-    RDFS = Namespace("http://www.w3.org/2000/01/rdf-schema#")
-    names = [(str(s).replace("http://purl.org/olia/olia.owl#", "")) for s in g.subjects(RDFS.subClassOf, oliatop.NumberFeature)]
-    names.sort()
-    return names
+    return all_classes
 
 # Loads URIs of case features in OLIA + delete "Case" at the end of URI
 def load_CaseFeatures(file_path):
@@ -205,9 +195,9 @@ def get_macrolanguage(lang_uri):
 uri_list = load_user_names_from_ttl('Abox/membr.ttl')
 project_list = load_projects_from_ttl('Abox/membr.ttl')
 findings_list = load_findings_from_ttl('Abox/membr.ttl')
-semantic_roles = load_SemanticRoles('ontologies/olia.owl')
+semantic_roles = load_from_olia("SemanticRole")
 semantic_roles.insert(0, '') # The first element of the drop-down list should be the empty string
-number_features = load_NumberFeatures('ontologies/olia.owl')
+number_features = load_from_olia("NumberFeature")
 number_features.insert(0, '') # The first element of the drop-down list should be the empty string
 case_features = load_CaseFeatures('ontologies/olia.owl')
 case_features.insert(0, '') # The first element of the drop-down list should be the empty string
@@ -562,7 +552,7 @@ def form_submit():
                 g.add((index_uri, olia.hasGender, olia[gender]))
                 g.add((index_uri, RDF.type, cx.Individual))
         if number.strip():
-            g.add((index_uri, olia.hasNumber, olia[number]))
+            g.add((index_uri, olia.hasNumber, URIRef(number)))
         else:
             if add_number.strip():
                 print("Warning: new value for number!")
