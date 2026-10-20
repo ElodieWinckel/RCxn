@@ -344,7 +344,8 @@ cx:ang_Changeofstateconstruction_1 a rcxn:SlotObligatory ;
 
 cx:ang_Changeofstateconstruction_2 a rcxn:SlotObligatory ;
     cx:WordOrder "Element 2 immediately after Element 1" ;
-    rcxn:hasSemanticProperty "The meaning of the verb usually expresses that something is worked in a particular way." .
+    rcxn:hasSemanticProperty "The meaning of the verb usually expresses that something is worked in a particular way." ;
+    rcxn:hasSyntacticFunction "verb" .
 
 cx:ang_Changeofstateconstruction_3 a rcxn:SlotObligatory ;
     cx:WordOrder "Element 3 immediately after element 2" ;
@@ -354,13 +355,20 @@ cx:ang_Changeofstateconstruction_3 a rcxn:SlotObligatory ;
 
 cx:ang_Changeofstateconstruction_4 a rcxn:SlotObligatory ;
     cx:WordOrder "Element 4 immediately after element 3" ;
-    cx:hasTranslation "to, into" ;
     olia:hasCase olia:DativeCase ;
     olia:hasSemanticRole olia:GoalRole ;
-    rcxn:hasSlotForm cx:ang_Changeofstateconstruction_4_Form ;
+    rcxn:hasSlots cx:ang_Changeofstateconstruction_4_slots ;
     rcxn:hasSyntacticFunction "prepositional object" .
 
-cx:ang_Changeofstateconstruction_4_Form a rcxn:SlotForm ;
+cx:ang_Changeofstateconstruction_4_slots a RDF:Seq ;
+    RDF:_1 cx:ang_Changeofstateconstruction_5 .
+
+cx:ang_Changeofstateconstruction_5 a rcxn:SlotObligatory ;
+    cx:WordOrder "Element 5 starts Element 4" ;
+    cx:hasTranslation "to, into" ;
+    rcxn:hasSlotForm cx:ang_Changeofstateconstruction_5_Form .
+
+cx:ang_Changeofstateconstruction_5_Form a rcxn:SlotForm ;
     rcxn:hasPhonology "/toː/" ;
     rcxn:hasSurfaceForm "to" .
 

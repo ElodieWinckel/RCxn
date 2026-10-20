@@ -30,7 +30,8 @@ cx:ang_Changeofstateconstruction_1 a rcxn:SlotObligatory ;
 
 cx:ang_Changeofstateconstruction_2 a rcxn:SlotObligatory ;
     cx:WordOrder "Element 2 immediately after Element 1" ;
-    rcxn:hasSemanticProperty "The meaning of the verb usually expresses that something is worked in a particular way." .
+    rcxn:hasSemanticProperty "The meaning of the verb usually expresses that something is worked in a particular way." ;
+    rcxn:hasSyntacticFunction "verb" .
 
 cx:ang_Changeofstateconstruction_3 a rcxn:SlotObligatory ;
     cx:WordOrder "Element 3 immediately after element 2" ;
@@ -40,13 +41,17 @@ cx:ang_Changeofstateconstruction_3 a rcxn:SlotObligatory ;
 
 cx:ang_Changeofstateconstruction_4 a rcxn:SlotObligatory ;
     cx:WordOrder "Element 4 immediately after element 3" ;
-    cx:hasTranslation "to, into" ;
     olia:hasCase olia:DativeCase ;
     olia:hasSemanticRole olia:GoalRole ;
-    rcxn:hasSlotForm cx:ang_Changeofstateconstruction_4_Form ;
-    rcxn:hasSyntacticFunction "prepositional object" .
+    rcxn:hasSyntacticFunction "prepositional object" ;
+    rcxn:hasSlots cx:ang_Changeofstateconstruction_4_slots .
 
-cx:ang_Changeofstateconstruction_4_Form a rcxn:SlotForm ;
+cx:ang_Changeofstateconstruction_5 a rcxn:SlotObligatory ;
+    cx:WordOrder "Element 5 starts Element 4" ;
+    cx:hasTranslation "to, into" ;
+    rcxn:hasSlotForm cx:ang_Changeofstateconstruction_5_Form .
+
+cx:ang_Changeofstateconstruction_5_Form a rcxn:SlotForm ;
     rcxn:hasPhonology "/toː/" ;
     rcxn:hasSurfaceForm "to" .
 
@@ -73,6 +78,9 @@ cx:ang_Changeofstateconstruction_slots a rdf:Seq ;
     rdf:_2 cx:ang_Changeofstateconstruction_2 ;
     rdf:_3 cx:ang_Changeofstateconstruction_3 ;
     rdf:_4 cx:ang_Changeofstateconstruction_4 .
+
+cx:ang_Changeofstateconstruction_4_slots a rdf:Seq ;
+    rdf:_1 cx:ang_Changeofstateconstruction_5 .
 
 membr:Project_Schmechel_2610160927_F2610160927 a rsrch:Finding ;
     RDFS:label "Through distinctive collexeme analysis, it was possible to determine that a considerable number of verbs and nouns that are linked to meanings which express a change of state are attracted to the preposition 'to'. These verbs and nouns were among the 10 most strongly attracted words." ;
