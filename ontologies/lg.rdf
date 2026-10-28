@@ -139,6 +139,15 @@
     
 
 
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#che -->
+
+    <owl:NamedIndividual rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#che">
+        <rdf:type rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#macrolanguage"/>
+        <rdfs:label xml:lang="en">Chechen</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#deu -->
 
     <owl:NamedIndividual rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#deu">
