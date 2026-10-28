@@ -119,6 +119,16 @@
     
 
 
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#araQur -->
+
+    <owl:NamedIndividual rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#araQur">
+        <rdf:type rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#variety"/>
+        <isVarietyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#ara"/>
+        <rdfs:label xml:lang="en">Quran Arabic</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#arz -->
 
     <owl:NamedIndividual rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#arz">

@@ -10,7 +10,8 @@
         "children": [
           {"id": "arzCai", "text": "Cairo Arabic"}
         ]
-      }
+      },
+      {"id": "araQur", "text": "Quran Arabic"}
     ]
   },
   {
