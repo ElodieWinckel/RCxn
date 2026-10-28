@@ -1,0 +1,49 @@
+@prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cx: <http://example.org/cx/> .
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterm: <http://purl.org/dc/terms/> .
+@prefix evid: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/evid#> .
+@prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
+@prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
+@prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix references: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/references#> .
+@prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+membr:Project_Badawi rsrch:hasFindings membr:Project_Badawi_F2610201111 .
+
+cx:engLME_Hadituptoherewithmesoconstruction a rcxn:Construction ;
+    lg:partOfLanguage lg:engLME ;
+    rcxn:hasConstructionMeaning cx:engLME_Hadituptoherewithmesoconstruction_Meaning ;
+    rcxn:hasMetadata cx:engLME_Hadituptoherewithmesoconstruction_MD ;
+    rcxn:hasSlots cx:engLME_Hadituptoherewithmesoconstruction_slots ;
+    rcxn:hasTitle "Had it up to here with (meso-construction)" .
+
+cx:engLME_Hadituptoherewithmesoconstruction_1 a rcxn:SlotObligatory .
+
+cx:engLME_Hadituptoherewithmesoconstruction_2 a rcxn:SlotObligatory .
+
+cx:engLME_Hadituptoherewithmesoconstruction_MD a rcxn:Metadata ;
+    dcterm:created "2026-10-20"^^xsd:date ;
+    dcterm:references cx:engLME_Hadituptoherewithmesoconstruction_Sources ;
+    rcxn:annotator membr:Badawi .
+
+cx:engLME_Hadituptoherewithmesoconstruction_Meaning a rcxn:ConstructionMeaning .
+
+cx:engLME_Hadituptoherewithmesoconstruction_Sources a dcmitype:Collection ;
+    dcterm:hasPart references:385e8135-3c97-4573-b480-b6805e951feb,
+        references:c9e9b417-d08d-445b-af6e-8222537a71ec .
+
+cx:engLME_Hadituptoherewithmesoconstruction_slots a rdf:Seq ;
+    rdf:_1 cx:engLME_Hadituptoherewithmesoconstruction_1 ;
+    rdf:_2 cx:engLME_Hadituptoherewithmesoconstruction_2 .
+
+membr:Project_Badawi_F2610201111 a rsrch:Finding ;
+    RDFS:label "It is alive!" ;
+    rsrch:basedOn cx:engLME_Hadituptoherewithmesoconstruction .
+
+references:385e8135-3c97-4573-b480-b6805e951feb evid:biblio "Blake, Ashley, Ewa Dąbrowska & Nick Riches. 2025. Exploring cognitive predictors of language in children with developmental language disorder: The role of nonverbal IQ, working memory, implicit statistical learning, and speed of automatization. Journal of Communication Disorders 116. 106541. https://doi.org/10.1016/j.jcomdis.2025.106541." .
+
+references:c9e9b417-d08d-445b-af6e-8222537a71ec evid:biblio "Blake, Ashley, Ewa Dąbrowska & Miquel Llompart. 2025. Toward an Understanding of Developmental Language Disorder in Adults: Investigating the Relationship Between Cognitive Abilities and Linguistic Outcomes. Journal of Speech, Language, and Hearing Research. American Speech-Language-Hearing Association 68(8). 3895–3918. https://doi.org/10.1044/2025_JSLHR-24-00557." .
+

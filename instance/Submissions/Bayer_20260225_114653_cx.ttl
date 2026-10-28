@@ -68,7 +68,7 @@ cx:arzCai_Ditransitiveconstruction_Ex_C a cx:Example ;
 
 cx:arzCai_Ditransitiveconstruction_MD a rcxn:Metadata ;
     rcxn:annotator membr:Bayer ;
-    cx:hasSources cx:arzCai_Ditransitiveconstruction_Sources ;
+    dcterm:references cx:arzCai_Ditransitiveconstruction_Sources ;
     dcterm:created "2026-02-25"^^xsd:date .
 
 cx:arzCai_Ditransitiveconstruction_Meaning a rcxn:ConstructionMeaning ;

@@ -1,12 +1,11 @@
 from . import app_form_blueprint
 from flask import current_app, request, render_template, send_file
-from rdflib import Graph, URIRef, Literal, BNode, Namespace, RDF, XSD, DCTERMS, DC
+from rdflib import Graph, URIRef, Literal, Namespace, RDF, XSD, DCTERMS
 from datetime import datetime
 import re
 import glob
 import json
 import os
-import requests
 import uuid
 from utils.clean_name import clean_name
 
@@ -49,79 +48,43 @@ def load_findings_from_ttl(file_path):
                        str(g.value(s, RDFS.label))) for s in g.subjects(RDF.type, rsrch.Finding)]
     return uris_and_names
 
-# Loads URIs of semantic roles in OLIA
-def load_SemanticRoles(file_path):
+# Create a list of all subclasses of a class in OLiA
+def load_from_olia(top_class):
     g = Graph()
-    g.parse(file_path, format='xml')
+    g.parse('ontologies/olia.owl', format='xml')
     oliatop = Namespace("http://purl.org/olia/olia-top.owl#")
     RDFS = Namespace("http://www.w3.org/2000/01/rdf-schema#")
 
-    semantic_roles = []
+    all_classes = []
 
     # Find all subclasses and get their labels
-    for subclass in g.subjects(RDFS.subClassOf, oliatop.SemanticRole):
+    for subclass in g.subjects(RDFS.subClassOf, oliatop[top_class]):
         label = g.value(subclass, RDFS.label, None)
         if label:
-            semantic_roles.append((str(subclass), str(label)))
+            all_classes.append((str(subclass), str(label)))
 
         # Find subclasses of subclasses
         for indirect_subclass in g.subjects(RDFS.subClassOf, subclass):
             label = g.value(subclass, RDFS.label, None) + ": " + g.value(indirect_subclass, RDFS.label, None)
             if label:
-                semantic_roles.append((str(indirect_subclass), str(label)))
+                all_classes.append((str(indirect_subclass), str(label)))
+
+            # Find subclasses of subclasses of subclass (3rd level)
+            for indirect_sub_subclass in g.subjects(RDFS.subClassOf, indirect_subclass):
+                label = g.value(subclass, RDFS.label, None) + ": " + g.value(indirect_subclass, RDFS.label, None) + ": " + g.value(indirect_sub_subclass, RDFS.label, None)
+                if label:
+                    all_classes.append((str(indirect_sub_subclass), str(label)))
+
+                # Find subclasses of subclasses of subclasses of subclass (4th level)
+                for indirect_sub_sub_subclass in g.subjects(RDFS.subClassOf, indirect_sub_subclass):
+                    label = g.value(subclass, RDFS.label, None) + ": " + g.value(indirect_subclass, RDFS.label, None) + ": " + g.value(indirect_sub_subclass, RDFS.label, None) + ": " + g.value(indirect_sub_sub_subclass, RDFS.label, None)
+                    if label:
+                        all_classes.append((str(indirect_sub_sub_subclass), str(label)))
 
     # Sort by label
-    semantic_roles = sorted(semantic_roles, key=lambda x: x[1].lower())
+    all_classes = sorted(all_classes, key=lambda x: x[1].lower())
 
-    return semantic_roles
-
-# Loads URIs of number features in OLIA
-def load_NumberFeatures(file_path):
-    g = Graph()
-    g.parse(file_path, format='xml')
-    oliatop = Namespace("http://purl.org/olia/olia-top.owl#")
-    RDFS = Namespace("http://www.w3.org/2000/01/rdf-schema#")
-    names = [(str(s).replace("http://purl.org/olia/olia.owl#", "")) for s in g.subjects(RDFS.subClassOf, oliatop.NumberFeature)]
-    names.sort()
-    return names
-
-# Loads URIs of case features in OLIA + delete "Case" at the end of URI
-def load_CaseFeatures(file_path):
-    g = Graph()
-    g.parse(file_path, format='xml')
-    oliatop = Namespace("http://purl.org/olia/olia-top.owl#")
-    RDFS = Namespace("http://www.w3.org/2000/01/rdf-schema#")
-    names = [(str(s).replace("http://purl.org/olia/olia.owl#", "")) for s in g.subjects(RDFS.subClassOf, oliatop.CaseFeature)]
-    names = [(str(s).replace("Case", "")) for s in names]
-    names.sort()
-    return names
-
-# Loads URIs of tense features in OLIA (classes and subclasses thereof)
-def load_TenseFeatures(file_path):
-    g = Graph()
-    g.parse(file_path, format='xml')
-
-    oliatop = Namespace("http://purl.org/olia/olia-top.owl#")
-    RDFS = Namespace("http://www.w3.org/2000/01/rdf-schema#")
-
-    tense_features = []
-
-    # Find all subclasses and get their labels
-    for subclass in g.subjects(RDFS.subClassOf, oliatop.TenseFeature):
-        label = g.value(subclass, RDFS.label, None)
-        if label:
-            tense_features.append((str(subclass), str(label)))
-
-        # Find subclasses of subclasses
-        for indirect_subclass in g.subjects(RDFS.subClassOf, subclass):
-            label = g.value(indirect_subclass, RDFS.label, None)
-            if label:
-                tense_features.append((str(indirect_subclass), str(label)))
-
-    # Sort by label
-    tense_features = sorted(tense_features, key=lambda x: x[1].lower())
-
-    return tense_features
+    return all_classes
 
 # Loads URIs of modes in OLIA + delete "Verb" at the end of URI
 def load_Mode(file_path):
@@ -205,14 +168,10 @@ def get_macrolanguage(lang_uri):
 uri_list = load_user_names_from_ttl('Abox/membr.ttl')
 project_list = load_projects_from_ttl('Abox/membr.ttl')
 findings_list = load_findings_from_ttl('Abox/membr.ttl')
-semantic_roles = load_SemanticRoles('ontologies/olia.owl')
-semantic_roles.insert(0, '') # The first element of the drop-down list should be the empty string
-number_features = load_NumberFeatures('ontologies/olia.owl')
-number_features.insert(0, '') # The first element of the drop-down list should be the empty string
-case_features = load_CaseFeatures('ontologies/olia.owl')
-case_features.insert(0, '') # The first element of the drop-down list should be the empty string
-tense_features = load_TenseFeatures('ontologies/olia.owl')
-tense_features.insert(0,("",""))
+semantic_roles = load_from_olia("SemanticRole")
+number_features = load_from_olia("NumberFeature")
+case_features = load_from_olia("CaseFeature")
+tense_features = load_from_olia("TenseFeature")
 modus = load_Mode('ontologies/olia.owl')
 modus.insert(0, '') # The first element of the drop-down list should be the empty string
 list_cx = load_existing_constructions("instance/Submissions/*_cx.ttl")
@@ -329,7 +288,7 @@ def form_submit():
     RDFS = Namespace("http://www.w3.org/2000/01/rdf-schema#")
     g.bind("RDFS", RDFS)
 
-    references = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/references#")
+    references = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/references#")
     g.bind("references", references)
 
     lg = Namespace("https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#")
@@ -398,10 +357,17 @@ def form_submit():
         g.add((cx[sources_uri], RDF.type , DCTERMS_Collection))
 
     if bibliography_plain_text:
-        # Define a URI for the entry
-        bib_uri = str(uuid.uuid4())
-        g.add((references[bib_uri], evid.biblio, Literal(bibliography_plain_text)))
-        g.add((cx[sources_uri], DCTERMS.hasPart, references[bib_uri]))
+        # Split the text into line and process each line
+        for i, line in enumerate(bibliography_plain_text.strip().splitlines(), start=1):
+            # Skip empty lines
+            line = line.strip()
+            if not line:
+                continue
+            # Define a URI for the entry
+            bib_uri = str(uuid.uuid4())
+            # Add the triplets
+            g.add((references[bib_uri], evid.biblio, Literal(line)))
+            g.add((cx[sources_uri], DCTERMS.hasPart, references[bib_uri]))
 
     # OTHER CONSTRUCTICONS
     # Add each URL from other constructicons (with rdfs:seeAlso)
@@ -555,7 +521,7 @@ def form_submit():
                 g.add((index_uri, olia.hasGender, olia[gender]))
                 g.add((index_uri, RDF.type, cx.Individual))
         if number.strip():
-            g.add((index_uri, olia.hasNumber, olia[number]))
+            g.add((index_uri, olia.hasNumber, URIRef(number)))
         else:
             if add_number.strip():
                 print("Warning: new value for number!")
@@ -674,8 +640,7 @@ def form_submit():
             g.add((element_uri, olia.hasCase, Literal(add_case)))
         else:
             if case.strip():
-                case = case + "Case"
-                g.add((element_uri, olia.hasCase, olia[case]))
+                g.add((element_uri, olia.hasCase, URIRef(case)))
 
 ###################################################
 ### IMPLEMENT CONSTRUCTION COTEXT

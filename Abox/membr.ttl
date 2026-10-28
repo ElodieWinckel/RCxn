@@ -134,10 +134,11 @@ membr:Kessler a FOAF:Person ;
 
 membr:Khanoub a FOAF:Person ;
     FOAF:currentProject membr:Project_Khanoub,
-        membr:Project_Khanoub_2610141629 ;
+        membr:Project_Khanoub_2610141629,
+        membr:Project_Khanoub_2610191625 ;
     FOAF:familyName "Khanoub" ;
     FOAF:givenName "Rania" ;
-    FOAF:homepage <https://www.cxg.phil.fau.eu/person/rania-khanoub/> .
+    FOAF:homepage <https://www.cxg.phil.fau.eu/faudir/rania-khanoub/> .
 
 membr:Kissane a FOAF:Person ;
     FOAF:currentProject membr:Project_Kissane ;
@@ -435,7 +436,8 @@ membr:Project_Kessler_F250218 a rsrch:Finding ;
     rsrch:basedOn cx:lzh_Dooperationwithoperand1onoperand2construction .
 
 membr:Project_Khanoub a rsrch:Project ;
-    rsrch:hasResearchQuestion membr:Project_Khanoub_2610141629 ;
+    rsrch:hasResearchQuestion membr:Project_Khanoub_2610141629,
+        membr:Project_Khanoub_2610191625 ;
     rsrch:projectName "Competition and change in Modern English quantifier constructions"@en .
 
 membr:Project_Khanoub_2610141629_F2610141629_A a rsrch:Finding ;
@@ -447,6 +449,10 @@ membr:Project_Khanoub_2610141629_F2610141629_B a rsrch:Finding ;
     RDFS:label "Finding 2: MANY and LOT overlap in the kinds of nouns they can quantify, but they do not behave in exactly the same way. Even in contexts where both are possible, their use is shaped by the N2 semantics and whether the quantified noun is modified. Rather than behaving as free synonyms, the binominal quantifier expression a lot of appears to have developed its own preferences alongside the well-established monomorphemic quantifier MANY." ;
     rsrch:basedOn cx:eng_many,
         cx:eng_manyPLUSNcountCx .
+
+membr:Project_Khanoub_2610191625_F2610191625 a rsrch:Finding ;
+    RDFS:label "The construction shows a clear shift from predominantly lexical/literal uses towards more generalized quantification. While earlier historical uses often retain source meanings, later examples increasingly express well-established generalized quantity." ;
+    rsrch:basedOn cx:eng_alotofPLUSNconstruction .
 
 membr:Project_Kissane a rsrch:Project ;
     rsrch:projectName "Form and meaning as factors in the identification and learning of constructional slots – English phrasal verbs and verb-preposition combinations"@en .
@@ -592,6 +598,10 @@ membr:Project_Khanoub_2610141629 a rsrch:Project ;
     rsrch:hasFindings membr:Project_Khanoub_2610141629_F2610141629_A,
         membr:Project_Khanoub_2610141629_F2610141629_B ;
     rsrch:projectName "How does the [many + Ncount] construction participate in diachronic quantifier competition, and which linguistic properties distinguish its use from that of binominal quantifiers such as [Det + lot + of + N]?" .
+
+membr:Project_Khanoub_2610191625 a rsrch:Project ;
+    rsrch:hasFindings membr:Project_Khanoub_2610191625_F2610191625 ;
+    rsrch:projectName "How did the binominal quantifier (a) lot(s) of develop into a general quantifier, and how has its role within the English quantifier system changed over time?" .
 
 membr:Project_Schmechel_2610160927 a rsrch:Project ;
     rsrch:hasFindings membr:Project_Schmechel_2610160927_F2610160927 ;

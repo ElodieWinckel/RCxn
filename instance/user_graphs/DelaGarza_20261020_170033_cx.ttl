@@ -1,0 +1,46 @@
+@prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cx: <http://example.org/cx/> .
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterm: <http://purl.org/dc/terms/> .
+@prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
+@prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
+@prefix olia: <http://purl.org/olia/olia.owl#> .
+@prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+membr:Project_DelaGarza rsrch:hasFindings membr:Project_DelaGarza_F2610201700 .
+
+cx:pol_Hadituptoherewith a rcxn:Construction ;
+    lg:partOfLanguage lg:pol ;
+    rcxn:hasConstructionMeaning cx:pol_Hadituptoherewith_Meaning ;
+    rcxn:hasMetadata cx:pol_Hadituptoherewith_MD ;
+    rcxn:hasSlots cx:pol_Hadituptoherewith_slots ;
+    rcxn:hasTitle "Had it up to here with" .
+
+cx:pol_Hadituptoherewith_1 a rcxn:SlotObligatory ;
+    cx:hasIndex cx:pol_Hadituptoherewith_1_Index .
+
+cx:pol_Hadituptoherewith_1_Index a cx:Event ;
+    olia:hasTense olia:Imperfect .
+
+cx:pol_Hadituptoherewith_2 a rcxn:SlotObligatory .
+
+cx:pol_Hadituptoherewith_MD a rcxn:Metadata ;
+    dcterm:created "2026-10-20"^^xsd:date ;
+    dcterm:references cx:pol_Hadituptoherewith_Sources ;
+    rcxn:annotator membr:DelaGarza .
+
+cx:pol_Hadituptoherewith_Meaning a rcxn:ConstructionMeaning .
+
+cx:pol_Hadituptoherewith_Sources a dcmitype:Collection .
+
+cx:pol_Hadituptoherewith_slots a rdf:Seq ;
+    rdf:_1 cx:pol_Hadituptoherewith_1 ;
+    rdf:_2 cx:pol_Hadituptoherewith_2 .
+
+membr:Project_DelaGarza_F2610201700 a rsrch:Finding ;
+    RDFS:label "They exist" ;
+    rsrch:basedOn cx:pol_Hadituptoherewith .
+

@@ -169,6 +169,8 @@ cx:eng_ChefskissGesturalConstruction a gest:GestureConstruction ;
     rcxn:hasMetadata cx:eng_ChefskissGesturalConstruction_MD ;
     rcxn:hasTitle "Chef’s Kiss as a Gestural Construction" .
 
+cx:eng_alotofPLUSNconstruction_2_Index olia:hasNumber olia:Singular .
+
 cx:eng_caused_motion_construction_ppto links:sameFunctionDifferentForm cx:eng_ditransitive_construction_obj_np .
 
 cx:eng_coolconstruction_a a dcmitype:Collection ;
@@ -342,7 +344,8 @@ cx:ang_Changeofstateconstruction_1 a rcxn:SlotObligatory ;
 
 cx:ang_Changeofstateconstruction_2 a rcxn:SlotObligatory ;
     cx:WordOrder "Element 2 immediately after Element 1" ;
-    rcxn:hasSemanticProperty "The meaning of the verb usually expresses that something is worked in a particular way." .
+    rcxn:hasSemanticProperty "The meaning of the verb usually expresses that something is worked in a particular way." ;
+    rcxn:hasSyntacticFunction "verb" .
 
 cx:ang_Changeofstateconstruction_3 a rcxn:SlotObligatory ;
     cx:WordOrder "Element 3 immediately after element 2" ;
@@ -352,13 +355,20 @@ cx:ang_Changeofstateconstruction_3 a rcxn:SlotObligatory ;
 
 cx:ang_Changeofstateconstruction_4 a rcxn:SlotObligatory ;
     cx:WordOrder "Element 4 immediately after element 3" ;
-    cx:hasTranslation "to, into" ;
     olia:hasCase olia:DativeCase ;
     olia:hasSemanticRole olia:GoalRole ;
-    rcxn:hasSlotForm cx:ang_Changeofstateconstruction_4_Form ;
+    rcxn:hasSlots cx:ang_Changeofstateconstruction_4_slots ;
     rcxn:hasSyntacticFunction "prepositional object" .
 
-cx:ang_Changeofstateconstruction_4_Form a rcxn:SlotForm ;
+cx:ang_Changeofstateconstruction_4_slots a RDF:Seq ;
+    RDF:_1 cx:ang_Changeofstateconstruction_5 .
+
+cx:ang_Changeofstateconstruction_5 a rcxn:SlotObligatory ;
+    cx:WordOrder "Element 5 starts Element 4" ;
+    cx:hasTranslation "to, into" ;
+    rcxn:hasSlotForm cx:ang_Changeofstateconstruction_5_Form .
+
+cx:ang_Changeofstateconstruction_5_Form a rcxn:SlotForm ;
     rcxn:hasPhonology "/toː/" ;
     rcxn:hasSurfaceForm "to" .
 
@@ -444,8 +454,8 @@ cx:arzCai_Ditransitiveconstruction_Ex_C a cx:Example ;
     cx:hasTranslation "Have you explained it to her?" .
 
 cx:arzCai_Ditransitiveconstruction_MD a rcxn:Metadata ;
-    cx:hasSources cx:arzCai_Ditransitiveconstruction_Sources ;
     DCTERMS:created "2026-02-25"^^xsd:date ;
+    DCTERMS:references cx:arzCai_Ditransitiveconstruction_Sources ;
     rcxn:annotator membr:Bayer .
 
 cx:arzCai_Ditransitiveconstruction_Meaning a rcxn:ConstructionMeaning ;
@@ -588,8 +598,8 @@ cx:comePLUSnoisemannerofmovementVing_Ex_D a cx:Example ;
     cx:hasText "A second or two later, everything came crashing down in a big heap on the railway line below ." .
 
 cx:comePLUSnoisemannerofmovementVing_MD a rcxn:Metadata ;
-    cx:hasSources cx:comePLUSnoisemannerofmovementVing_Sources ;
     DCTERMS:created "2024-11-28"^^xsd:date ;
+    DCTERMS:references cx:comePLUSnoisemannerofmovementVing_Sources ;
     rcxn:annotator membr:Patel .
 
 cx:comePLUSnoisemannerofmovementVing_Meaning a rcxn:ConstructionMeaning ;
@@ -1686,8 +1696,8 @@ cx:engInf_Coolexclamativeconstruction_2_Form a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "!" .
 
 cx:engInf_Coolexclamativeconstruction_MD a rcxn:Metadata ;
-    cx:hasSources cx:eng_coolconstruction_Sources ;
     DCTERMS:created "2025-12-10"^^xsd:date ;
+    DCTERMS:references cx:eng_coolconstruction_Sources ;
     rcxn:annotator membr:Boos,
         membr:Petrenko,
         membr:Weigelt,
@@ -1722,8 +1732,8 @@ cx:engInf_coolasadmirableconstruction_Ex_C a cx:Example ;
     cx:hasText "The movie is cool." .
 
 cx:engInf_coolasadmirableconstruction_MD a rcxn:Metadata ;
-    cx:hasSources cx:eng_coolconstruction_Sources ;
     DCTERMS:created "2025-11-28"^^xsd:date ;
+    DCTERMS:references cx:eng_coolconstruction_Sources ;
     rcxn:annotator membr:Boos,
         membr:Petrenko,
         membr:Weigelt,
@@ -1805,8 +1815,8 @@ cx:engLME_Argumentstructureconstruction_3_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_Phrase .
 
 cx:engLME_Argumentstructureconstruction_MD a rcxn:Metadata ;
-    cx:hasSources cx:engLME_Argumentstructureconstruction_Sources ;
     DCTERMS:created "2025-02-14"^^xsd:date ;
+    DCTERMS:references cx:engLME_Argumentstructureconstruction_Sources ;
     rcxn:annotator membr:Ramezani .
 
 cx:engLME_Argumentstructureconstruction_Meaning a rcxn:ConstructionMeaning ;
@@ -1864,8 +1874,8 @@ cx:engLME_AttributeConstructionAttrAdj_Ex_A a cx:Example ;
     cx:hasText "She called the idea stupid." .
 
 cx:engLME_AttributeConstructionAttrAdj_MD a rcxn:Metadata ;
-    cx:hasSources cx:engLME_AttributeConstructionAttrAdj_Sources ;
     DCTERMS:created "2026-01-13"^^xsd:date ;
+    DCTERMS:references cx:engLME_AttributeConstructionAttrAdj_Sources ;
     rcxn:annotator membr:Garibyan,
         membr:Winckel .
 
@@ -2493,8 +2503,8 @@ cx:engLME_coolascolourconstruction_Ex_B a cx:Example ;
     cx:hasText "a cool shade of grey" .
 
 cx:engLME_coolascolourconstruction_MD a rcxn:Metadata ;
-    cx:hasSources cx:eng_coolconstruction_Sources ;
     DCTERMS:created "2025-11-28"^^xsd:date ;
+    DCTERMS:references cx:eng_coolconstruction_Sources ;
     rcxn:annotator membr:Boos,
         membr:Petrenko,
         membr:Weigelt,
@@ -2524,8 +2534,8 @@ cx:engLME_coolasemotionconstruction_Ex_B a cx:Example ;
     cx:hasText "He is staying cool under pressure." .
 
 cx:engLME_coolasemotionconstruction_MD a rcxn:Metadata ;
-    cx:hasSources cx:eng_coolconstruction_Sources ;
     DCTERMS:created "2025-11-28"^^xsd:date ;
+    DCTERMS:references cx:eng_coolconstruction_Sources ;
     rcxn:annotator membr:Boos,
         membr:Petrenko,
         membr:Weigelt,
@@ -3079,6 +3089,16 @@ cx:eng_GenitiveNPConstruction_slots a RDF:Seq ;
     RDF:_1 cx:eng_GenitiveNPConstruction_1 ;
     RDF:_2 cx:eng_GenitiveNPConstruction_4 .
 
+cx:eng_Indefinitearticle a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    links:elementOf cx:eng_alotofPLUSNconstruction ;
+    rcxn:hasMetadata cx:eng_Indefinitearticle_MD ;
+    rcxn:hasTitle "Indefinite article" .
+
+cx:eng_Indefinitearticle_MD a rcxn:Metadata ;
+    DCTERMS:created "2026-10-19"^^xsd:date ;
+    rcxn:annotator membr:Khanoub .
+
 cx:eng_Keepacoolheadconstruction_1 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm cx:eng_Keepacoolheadconstruction_1_Form .
 
@@ -3110,8 +3130,8 @@ cx:eng_Keepacoolheadconstruction_Ex_A a cx:Example ;
     RDFS:comment "BNC, Newspaper, 1992" .
 
 cx:eng_Keepacoolheadconstruction_MD a rcxn:Metadata ;
-    cx:hasSources cx:eng_coolconstruction_Sources ;
     DCTERMS:created "2025-11-28"^^xsd:date ;
+    DCTERMS:references cx:eng_coolconstruction_Sources ;
     rcxn:annotator membr:Boos,
         membr:Petrenko,
         membr:Weigelt,
@@ -3125,6 +3145,20 @@ cx:eng_Keepacoolheadconstruction_slots a RDF:Seq ;
     RDF:_2 cx:eng_Keepacoolheadconstruction_2 ;
     RDF:_3 cx:eng_Keepacoolheadconstruction_3 ;
     RDF:_4 cx:eng_Keepacoolheadconstruction_4 .
+
+cx:eng_Noun a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    links:elementOf cx:eng_alotofPLUSNconstruction ;
+    rcxn:hasMetadata cx:eng_Noun_MD ;
+    rcxn:hasTitle "Noun" .
+
+cx:eng_NounPhrase_MD a rcxn:Metadata ;
+    DCTERMS:created "2026-10-19"^^xsd:date ;
+    rcxn:annotator membr:Khanoub .
+
+cx:eng_Noun_MD a rcxn:Metadata ;
+    DCTERMS:created "2026-10-19"^^xsd:date ;
+    rcxn:annotator membr:Khanoub .
 
 cx:eng_PhysicalHeight a gest:GestureConstruction ;
     gest:hasForm cx:eng_PhysicalHeight_Form ;
@@ -3155,6 +3189,16 @@ cx:eng_PhysicalHeight_Meaning a gest:GestureMeaning ;
 cx:eng_PossessivePronoun a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
     rcxn:hasTitle "Possessive Pronoun" .
+
+cx:eng_Preposition a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    links:elementOf cx:eng_alotofPLUSNconstruction ;
+    rcxn:hasMetadata cx:eng_Preposition_MD ;
+    rcxn:hasTitle "Preposition" .
+
+cx:eng_Preposition_MD a rcxn:Metadata ;
+    DCTERMS:created "2026-10-19"^^xsd:date ;
+    rcxn:annotator membr:Khanoub .
 
 cx:eng_PrepositionalPhrasetoPLUSVing a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
@@ -3265,6 +3309,99 @@ cx:eng_VerbING a rcxn:Construction ;
     links:elementOf cx:comePLUSnoisemannerofmovementVing ;
     rcxn:hasTitle "Verb + -ing" .
 
+cx:eng_a a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    links:elementOf cx:eng_alotofPLUSNconstruction ;
+    rcxn:hasMetadata cx:eng_a_MD ;
+    rcxn:hasTitle "a" .
+
+cx:eng_a_MD a rcxn:Metadata ;
+    DCTERMS:created "2026-10-19"^^xsd:date ;
+    rcxn:annotator membr:Khanoub .
+
+cx:eng_alotofPLUSNconstruction_1 a rcxn:SlotObligatory ;
+    cx:WordOrder "Precedes Element 2" ;
+    RDFS:comment "Fixed article forming part of the complex quantifier a lot of" ;
+    rcxn:hasSlotForm cx:eng_alotofPLUSNconstruction_1_Form ;
+    rcxn:hasSyntacticFunction "Determiner" .
+
+cx:eng_alotofPLUSNconstruction_1_Form a rcxn:SlotForm ;
+    rcxn:hasStem cx:eng_a ;
+    rcxn:hasSurfaceForm "a" ;
+    rcxn:hasSyntacticForm cx:eng_Indefinitearticle .
+
+cx:eng_alotofPLUSNconstruction_2 a rcxn:SlotObligatory ;
+    cx:WordOrder "Follows element 1 and precedes element 3" ;
+    RDFS:comment "Historically a lexical noun, lot forms part of a grammaticalized quantifier in this construction. Its earlier source meaning is no longer central to the quantificational reading" ;
+    rcxn:hasSlotForm cx:eng_alotofPLUSNconstruction_2_Form ;
+    rcxn:hasSyntacticFunction "Noun-derived component of the complex binominal quantifier" .
+
+cx:eng_alotofPLUSNconstruction_2_Form a rcxn:SlotForm ;
+    rcxn:hasPhonology "lot" ;
+    rcxn:hasStem cx:eng_lot ;
+    rcxn:hasSyntacticForm cx:eng_Noun .
+
+cx:eng_alotofPLUSNconstruction_3 a rcxn:SlotObligatory ;
+    cx:WordOrder "Follows element 2 and precedes element 4" ;
+    RDFS:comment "Fixed linking element connecting the complex quantifier to the quantified nominal expression" ;
+    rcxn:hasSlotForm cx:eng_alotofPLUSNconstruction_3_Form ;
+    rcxn:hasSyntacticFunction "Partitive" .
+
+cx:eng_alotofPLUSNconstruction_3_Form a rcxn:SlotForm ;
+    rcxn:hasStem cx:eng_of ;
+    rcxn:hasSurfaceForm "of" ;
+    rcxn:hasSyntacticForm cx:eng_Preposition .
+
+cx:eng_alotofPLUSNconstruction_4 a rcxn:SlotObligatory ;
+    cx:WordOrder "Follows element 3" ;
+    RDFS:comment "Open nominal slot that can be filled by plural count nouns, mass nouns, or pronouns. Internal modification is permitted, e.g., a lot of difficult questions" ;
+    rcxn:hasOtherSemanticContribution "Identifies the entities being quantified." ;
+    rcxn:hasSemanticProperty "Plural count, mass, or pronominal referent" ;
+    rcxn:hasSlotForm cx:eng_alotofPLUSNconstruction_4_Form ;
+    rcxn:hasSyntacticFunction "Quantified nominal expression" .
+
+cx:eng_alotofPLUSNconstruction_4_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:eng_NounPhrase .
+
+cx:eng_alotofPLUSNconstruction_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "[A]1 [lot]2 [of]3 [them]4 had purchased a site for a town ..." ;
+    cx:hasText "A lot of them had purchased a site for a town ..." ;
+    RDFS:comment "ARCHER, 1863 (Text_ID: 1863twn__x6a).",
+        "The quantifier takes a pronominal complement." .
+
+cx:eng_alotofPLUSNconstruction_Ex_B a cx:Example ;
+    cx:hasAnnotatedText "“When I make a word do [a]1 [lot]2 [of]3 [work]4 like that,” said Humpty Dumpty, ..." ;
+    cx:hasText "“When I make a word do a lot of work like that,” said Humpty Dumpty, ..." ;
+    RDFS:comment "CLMET, 1871. Lewis Carroll, Through the Looking-Glass (Text_ID: CLMET3_1_3_222).",
+        "Quantification of a mass noun." .
+
+cx:eng_alotofPLUSNconstruction_Ex_C a cx:Example ;
+    cx:hasAnnotatedText "In New York, [a]1 [lot]2 [of]3 [people]4 brought great big family Bibles that they could hardly carry." ;
+    cx:hasText "In New York, a lot of people brought great big family Bibles that they could hardly carry." ;
+    RDFS:comment "ARCHER, 1958. Billy Graham, Christ's Answer to the World (Text_ID: 1958grah_h8a).",
+        "Quantification of a plural count noun referring to people." .
+
+cx:eng_alotofPLUSNconstruction_MD a rcxn:Metadata ;
+    DCTERMS:created "2026-10-19"^^xsd:date ;
+    DCTERMS:references cx:eng_alotofPLUSNconstruction_Sources ;
+    rcxn:annotator membr:Khanoub .
+
+cx:eng_alotofPLUSNconstruction_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "The construction expresses a contextually large, unspecified number or amount. It can quantify plural count nouns (a lot of people) and mass nouns (a lot of water). In this use, a lot of functions as a complex quantifier rather than referring to a literal/source lot, parcel, or portion." .
+
+cx:eng_alotofPLUSNconstruction_Sources a dcmitype:Collection ;
+    DCTERMS:hasPart references:8991a2c6-5ff5-43b4-9d91-939c06413083_1,
+        references:8991a2c6-5ff5-43b4-9d91-939c06413083_2,
+        references:8991a2c6-5ff5-43b4-9d91-939c06413083_3,
+        references:8991a2c6-5ff5-43b4-9d91-939c06413083_4,
+        references:8991a2c6-5ff5-43b4-9d91-939c06413083_5 .
+
+cx:eng_alotofPLUSNconstruction_slots a RDF:Seq ;
+    RDF:_1 cx:eng_alotofPLUSNconstruction_1 ;
+    RDF:_2 cx:eng_alotofPLUSNconstruction_2 ;
+    RDF:_3 cx:eng_alotofPLUSNconstruction_3 ;
+    RDF:_4 cx:eng_alotofPLUSNconstruction_4 .
+
 cx:eng_assassinationattempt a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
     links:elementOf cx:engLME_assassinationattempton ;
@@ -3362,8 +3499,8 @@ cx:eng_coolconstruction_Ex_D a cx:Example ;
     cx:hasText "cool climate" .
 
 cx:eng_coolconstruction_MD a rcxn:Metadata ;
-    cx:hasSources cx:eng_coolconstruction_Sources ;
     DCTERMS:created "2025-11-28"^^xsd:date ;
+    DCTERMS:references cx:eng_coolconstruction_Sources ;
     rcxn:annotator membr:Boos,
         membr:Petrenko,
         membr:Weigelt,
@@ -3463,9 +3600,9 @@ cx:eng_ditransitive_construction_obj_np_Ex_A a cx:Example ;
     cx:hasText "She gave him a present." .
 
 cx:eng_ditransitive_construction_obj_np_MD a rcxn:Metadata ;
-    cx:hasSources cx:eng_ditransitive_construction_obj_np_Sources ;
     DCTERMS:created "2026-01-16"^^xsd:date,
         "2026-02-04"^^xsd:date ;
+    DCTERMS:references cx:eng_ditransitive_construction_obj_np_Sources ;
     rcxn:annotator membr:Winckel .
 
 cx:eng_ditransitive_construction_obj_np_Meaning a rcxn:ConstructionMeaning ;
@@ -3506,21 +3643,21 @@ cx:eng_keep a rcxn:Construction ;
     links:elementOf cx:eng_Keepacoolheadconstruction ;
     rcxn:hasTitle "keep" .
 
+cx:eng_lot a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    links:elementOf cx:eng_alotofPLUSNconstruction ;
+    rcxn:hasMetadata cx:eng_lot_MD ;
+    rcxn:hasTitle "lot" .
+
+cx:eng_lot_MD a rcxn:Metadata ;
+    DCTERMS:created "2026-10-19"^^xsd:date ;
+    rcxn:annotator membr:Khanoub .
+
 cx:eng_many a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
     links:elementOf cx:eng_manyPLUSNcountCx ;
     rcxn:hasMetadata cx:eng_many_MD ;
     rcxn:hasTitle "many" .
-
-cx:eng_manyPLUSNcountCx a rcxn:Construction ;
-    cx:hasExample cx:eng_manyPLUSNcountCx_Ex_A,
-        cx:eng_manyPLUSNcountCx_Ex_B,
-        cx:eng_manyPLUSNcountCx_Ex_C ;
-    lg:partOfLanguage lg:eng ;
-    rcxn:hasConstructionMeaning cx:eng_manyPLUSNcountCx_Meaning ;
-    rcxn:hasMetadata cx:eng_manyPLUSNcountCx_MD ;
-    rcxn:hasSlots cx:eng_manyPLUSNcountCx_slots ;
-    rcxn:hasTitle "[many + Ncount] construction" .
 
 cx:eng_manyPLUSNcountCx_1 a rcxn:SlotObligatory ;
     cx:WordOrder "Precedes Element 2" ;
@@ -3560,8 +3697,8 @@ cx:eng_manyPLUSNcountCx_Ex_C a cx:Example ;
         "The quantified plural count-noun expression includes an adjectival premodifier, illustrating internal nominal modification." .
 
 cx:eng_manyPLUSNcountCx_MD a rcxn:Metadata ;
-    cx:hasSources cx:eng_manyPLUSNcountCx_Sources ;
     DCTERMS:created "2026-10-14"^^xsd:date ;
+    DCTERMS:references cx:eng_manyPLUSNcountCx_Sources ;
     rcxn:annotator membr:Khanoub .
 
 cx:eng_manyPLUSNcountCx_Meaning a rcxn:ConstructionMeaning ;
@@ -3569,11 +3706,11 @@ cx:eng_manyPLUSNcountCx_Meaning a rcxn:ConstructionMeaning ;
  [The quantifier]1 many indicates cardinal quantity, while the [nominal element]2 identifies what is being quantified.""" .
 
 cx:eng_manyPLUSNcountCx_Sources a dcmitype:Collection ;
-    DCTERMS:hasPart <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/references#7e9ff2c5-bddb-4bca-8410-f9e0e3c46cf6_1>,
-        <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/references#7e9ff2c5-bddb-4bca-8410-f9e0e3c46cf6_2>,
-        <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/references#7e9ff2c5-bddb-4bca-8410-f9e0e3c46cf6_3>,
-        <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/references#7e9ff2c5-bddb-4bca-8410-f9e0e3c46cf6_4>,
-        <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/references#7e9ff2c5-bddb-4bca-8410-f9e0e3c46cf6_5> .
+    DCTERMS:hasPart references:7e9ff2c5-bddb-4bca-8410-f9e0e3c46cf6_1,
+        references:7e9ff2c5-bddb-4bca-8410-f9e0e3c46cf6_2,
+        references:7e9ff2c5-bddb-4bca-8410-f9e0e3c46cf6_3,
+        references:7e9ff2c5-bddb-4bca-8410-f9e0e3c46cf6_4,
+        references:7e9ff2c5-bddb-4bca-8410-f9e0e3c46cf6_5 .
 
 cx:eng_manyPLUSNcountCx_slots a RDF:Seq ;
     RDF:_1 cx:eng_manyPLUSNcountCx_1 ;
@@ -3615,6 +3752,16 @@ cx:eng_monotransitive_construction_slots a RDF:Seq ;
     RDF:_1 cx:eng_monotransitive_construction_1 ;
     RDF:_2 cx:eng_monotransitive_construction_2 ;
     RDF:_3 cx:eng_monotransitive_construction_3 .
+
+cx:eng_of a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    links:elementOf cx:eng_alotofPLUSNconstruction ;
+    rcxn:hasMetadata cx:eng_of_MD ;
+    rcxn:hasTitle "of" .
+
+cx:eng_of_MD a rcxn:Metadata ;
+    DCTERMS:created "2026-10-19"^^xsd:date ;
+    rcxn:annotator membr:Khanoub .
 
 cx:eng_resultative_construction_attr_to_inf links:sameFormDifferentFunction cx:eng_ditransitive_construction_obj_inf .
 
@@ -4093,8 +4240,8 @@ cx:itaStoria_RelativeTopicShiftConstruction_Ex_B a cx:Example ;
     RDFS:comment "The Construction is in square brackets, while the rest has been included to allow for an understanding of its function. The coniunctio relativa 'Le quali' anaphorically refers to the 'provisioni' mentioned before the Construction. The noun in the NP thus remains implicit. The verb in the VP, 'aspettare' ('to wait') functions anaphorically, as it is a synonym of 'attendere', which appears shortly before the Construction. The main clause following the Construction introduces a new topic (the new trouble that the Florentines have to face). " .
 
 cx:itaStoria_RelativeTopicShiftConstruction_MD a rcxn:Metadata ;
-    cx:hasSources cx:itaStoria_RelativeTopicShiftConstruction_Sources ;
     DCTERMS:created "2024-11-21"^^xsd:date ;
+    DCTERMS:references cx:itaStoria_RelativeTopicShiftConstruction_Sources ;
     rcxn:annotator membr:Trombetta .
 
 cx:itaStoria_RelativeTopicShiftConstruction_Meaning a rcxn:ConstructionMeaning ;
@@ -4250,8 +4397,8 @@ cx:lzh_Dooperationwithoperand1onoperand2construction_Ex_A a cx:Example ;
     cx:hasTransliteration "yi gao cheng zhi" .
 
 cx:lzh_Dooperationwithoperand1onoperand2construction_MD a rcxn:Metadata ;
-    cx:hasSources cx:lzh_Dooperationwithoperand1onoperand2construction_Sources ;
     DCTERMS:created "2024-12-01"^^xsd:date ;
+    DCTERMS:references cx:lzh_Dooperationwithoperand1onoperand2construction_Sources ;
     rcxn:annotator membr:Kessler .
 
 cx:lzh_Dooperationwithoperand1onoperand2construction_Meaning a rcxn:ConstructionMeaning ;
@@ -4769,7 +4916,7 @@ cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_Ex_D a cx:Example ;
 
 cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_MD a rcxn:Metadata ;
     cx:creationDate "2024-11-25"^^xsd:date ;
-    cx:hasSources cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_Sources ;
+    DCTERMS:references cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_Sources ;
     rcxn:annotator membr:FernandezSantos .
 
 cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_Meaning a rcxn:ConstructionMeaning ;
@@ -5374,6 +5521,17 @@ cx:eng_ThisclosetoVingconstruction_6 a rcxn:SlotObligatory ;
 
 cx:eng_active_3_argument_structure_construction links:inheritedBy cx:eng_ditransitive_construction_obj_inf,
         cx:eng_ditransitive_construction_obj_np .
+
+cx:eng_manyPLUSNcountCx a rcxn:Construction ;
+    cx:hasExample cx:eng_manyPLUSNcountCx_Ex_A,
+        cx:eng_manyPLUSNcountCx_Ex_B,
+        cx:eng_manyPLUSNcountCx_Ex_C ;
+    lg:partOfLanguage lg:eng ;
+    links:differentFormSimilarFunction cx:eng_alotofPLUSNconstruction ;
+    rcxn:hasConstructionMeaning cx:eng_manyPLUSNcountCx_Meaning ;
+    rcxn:hasMetadata cx:eng_manyPLUSNcountCx_MD ;
+    rcxn:hasSlots cx:eng_manyPLUSNcountCx_slots ;
+    rcxn:hasTitle "[many + Ncount] construction" .
 
 cx:gmh_Prefix a rcxn:Construction ;
     lg:partOfLanguage lg:gmh ;
@@ -6051,13 +6209,13 @@ cx:deu_UEbergriffauf a rcxn:Construction ;
     rcxn:hasTitle "Übergriff auf " .
 
 cx:engLME_Argumentstructureconstruction a rcxn:Construction ;
-    RDFS:comment """The main data includes 2000 sentences that are generated by GPT-4, which is a text file.\r
-The extension data includes a representation of these data in LLM and brain, \r
-Representation in LLMs are matrixes including hidden layer activity and attention factor.\r
-The representation in the brain includes EEG recordings from 10 participants while listening to 200 of these sentences.\r
-Both are matrixes in the format of NumPy arrays but can be converted to any supporting format.\r
-\r
-This is a similar publicly available dataset: https://github.com/SPOClab-ca/neural-reality-constructions\r
+    RDFS:comment """The main data includes 2000 sentences that are generated by GPT-4, which is a text file.\r\r
+The extension data includes a representation of these data in LLM and brain, \r\r
+Representation in LLMs are matrixes including hidden layer activity and attention factor.\r\r
+The representation in the brain includes EEG recordings from 10 participants while listening to 200 of these sentences.\r\r
+Both are matrixes in the format of NumPy arrays but can be converted to any supporting format.\r\r
+\r\r
+This is a similar publicly available dataset: https://github.com/SPOClab-ca/neural-reality-constructions\r\r
 """ ;
     lg:partOfLanguage lg:engLME ;
     links:inheritedBy cx:engLME_Ditransitiveconstruction,
@@ -6156,6 +6314,17 @@ cx:engLME_assaulton a rcxn:Construction ;
     rcxn:hasMetadata cx:engLME_assaulton_MD ;
     rcxn:hasSlots cx:engLME_assaulton_slots ;
     rcxn:hasTitle "assault on" .
+
+cx:eng_alotofPLUSNconstruction a rcxn:Construction ;
+    cx:hasExample cx:eng_alotofPLUSNconstruction_Ex_A,
+        cx:eng_alotofPLUSNconstruction_Ex_B,
+        cx:eng_alotofPLUSNconstruction_Ex_C ;
+    lg:partOfLanguage lg:eng ;
+    links:differentFormSimilarFunction cx:eng_manyPLUSNcountCx ;
+    rcxn:hasConstructionMeaning cx:eng_alotofPLUSNconstruction_Meaning ;
+    rcxn:hasMetadata cx:eng_alotofPLUSNconstruction_MD ;
+    rcxn:hasSlots cx:eng_alotofPLUSNconstruction_slots ;
+    rcxn:hasTitle "[a lot of + N] construction" .
 
 cx:pol_ataknaPLUSACC a rcxn:Construction ;
     cx:hasExample cx:pol_ataknaPLUSACC_Ex_A ;
@@ -6354,6 +6523,8 @@ cx:eng_NounPhrase a rcxn:Construction ;
         cx:engUsSpo_Hadituptoherewithmesoconstruction,
         cx:engUsSpo_Hadituptoherewithphysicalheightgesture,
         cx:engUsUkWr_EvaluativeAttributionConstruction,
+        cx:eng_alotofPLUSNconstruction,
         cx:eng_ditransitive_construction_obj_np ;
+    rcxn:hasMetadata cx:eng_NounPhrase_MD ;
     rcxn:hasTitle "Noun Phrase" .
 

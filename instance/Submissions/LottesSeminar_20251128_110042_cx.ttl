@@ -52,7 +52,7 @@ cx:engLME_coolascolourconstruction_MD a rcxn:Metadata ;
     rcxn:annotator membr:Boos ;
     rcxn:annotator membr:Weigelt ;
     rcxn:annotator membr:Petrenko ;
-    cx:hasSources cx:eng_coolconstruction_Sources ;
+    dcterm:references cx:eng_coolconstruction_Sources ;
     dcterm:created "2025-11-28"^^xsd:date .
 
 cx:engLME_coolascolourconstruction_slots a rdf:Seq ;
@@ -104,7 +104,7 @@ cx:engLME_coolasemotionconstruction_MD a rcxn:Metadata ;
     rcxn:annotator membr:Boos ;
     rcxn:annotator membr:Weigelt ;
     rcxn:annotator membr:Petrenko ;
-    cx:hasSources cx:eng_coolconstruction_Sources ;
+    dcterm:references cx:eng_coolconstruction_Sources ;
     dcterm:created "2025-11-28"^^xsd:date .
 
 cx:engLME_coolasemotionconstruction_slots a rdf:Seq ;
@@ -155,7 +155,7 @@ cx:engInf_coolasadmirableconstruction_MD a rcxn:Metadata ;
     rcxn:annotator membr:Boos ;
     rcxn:annotator membr:Weigelt ;
     rcxn:annotator membr:Petrenko ;
-    cx:hasSources cx:eng_coolconstruction_Sources ;
+    dcterm:references cx:eng_coolconstruction_Sources ;
     dcterm:created "2025-11-28"^^xsd:date .
 
 cx:engInf_coolasadmirableconstruction_slots a rdf:Seq ;
@@ -303,7 +303,7 @@ cx:eng_Keepacoolheadconstruction_MD a rcxn:Metadata ;
     rcxn:annotator membr:Boos ;
     rcxn:annotator membr:Weigelt ;
     rcxn:annotator membr:Petrenko ;
-    cx:hasSources cx:eng_coolconstruction_Sources ;
+    dcterm:references cx:eng_coolconstruction_Sources ;
     dcterm:created "2025-11-28"^^xsd:date .
 
 cx:eng_Keepacoolheadconstruction_Meaning a rcxn:ConstructionMeaning ;
@@ -380,7 +380,7 @@ cx:eng_coolconstruction_MD a rcxn:Metadata ;
     rcxn:annotator membr:Boos ;
     rcxn:annotator membr:Weigelt ;
     rcxn:annotator membr:Petrenko ;
-    cx:hasSources cx:eng_coolconstruction_Sources ;
+    dcterm:references cx:eng_coolconstruction_Sources ;
     dcterm:created "2025-11-28"^^xsd:date .
 
 cx:eng_coolconstruction_Meaning a rcxn:ConstructionMeaning ;

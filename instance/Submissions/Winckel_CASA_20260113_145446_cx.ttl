@@ -66,7 +66,7 @@ cx:engLME_AttributeConstructionAttrAdj_Ex_A a cx:Example ;
     cx:hasText "She called the idea stupid." .
 
 cx:engLME_AttributeConstructionAttrAdj_MD a rcxn:Metadata ;
-    cx:hasSources cx:engLME_AttributeConstructionAttrAdj_Sources ;
+    dcterm:references cx:engLME_AttributeConstructionAttrAdj_Sources ;
     rcxn:annotator membr:Winckel ,
          membr:Garibyan ;
     dcterm:created "2026-01-13"^^xsd:date .

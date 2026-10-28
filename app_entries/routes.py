@@ -673,11 +673,11 @@ def construction_detail(uri):
                 'property': get_label_or_iri(predicate, g, ont),
                 'object': get_label_or_iri(obj, g, ont),
             })
-    metadata[:] = [item for item in metadata if item['property'] != "hasSources"] # resources are delt with separately (see below "collect references")
+    metadata[:] = [item for item in metadata if item['property'] != "References"] # resources are delt with separately (see below "collect references")
 
     # collect references
     references = []
-    for collection in g.objects(subject=metadata_uri, predicate=cx.hasSources):
+    for collection in g.objects(subject=metadata_uri, predicate=DCTERMS.references):
         for ref in g.objects(collection, DCTERMS.hasPart):
             biblio = get_label_or_iri(g.value(ref, evid.biblio), g, ont)
             references.append(biblio)
@@ -834,7 +834,7 @@ def gesture_construction_detail(uri):
                 'property_definition': get_definition(predicate, g, ont),
                 'object': get_label_or_iri(obj, g, ont),
             })
-    metadata[:] = [item for item in metadata if item['property'] != "hasSources"]  # resources are delt with separately (see below "collect references")
+    metadata[:] = [item for item in metadata if item['property'] != "References"]  # resources are delt with separately (see below "collect references")
 
     # Fetch the title to display
     title = g.value(gesture_uri, rcxn.hasTitle)
@@ -889,7 +889,7 @@ def download_subgraph(uri):
             subgraph.add((s, p, o))
 
     # Identify references and ad them to the graph
-    for collection in g.objects(entry_metadata, cx.hasSources):
+    for collection in g.objects(entry_metadata, DCTERMS.references):
         for reference in g.objects(collection, cx.hasLiterature):
             for p, o in g.predicate_objects(reference):
                 subgraph.add((reference, p, o))

@@ -186,7 +186,7 @@ def create_abox_from_submissions():
     add_user("Khanoub",
              "Rania",
              "Competition and change in Modern English quantifier constructions",
-             "https://www.cxg.phil.fau.eu/person/rania-khanoub/")
+             "https://www.cxg.phil.fau.eu/faudir/rania-khanoub/")
     add_user("Kissane",
              "Hassane",
              "Form and meaning as factors in the identification and learning of constructional slots – English phrasal verbs and verb-preposition combinations",
@@ -353,5 +353,5 @@ def create_abox_from_submissions():
         # Check if the subject starts with the desired prefix
         if isinstance(s, URIRef) and str(s).startswith(references):
             graph_references.add((s, p, o))
-    # Serialize refernce.ttl
+    # Serialize reference.ttl
     graph_references.serialize(destination=output_references, format="turtle")

@@ -44,7 +44,7 @@ cx:engInf_Coolexclamativeconstruction_MD a rcxn:Metadata ;
     rcxn:annotator membr:Boos ;
     rcxn:annotator membr:Weigelt ;
     rcxn:annotator membr:Petrenko ;
-    cx:hasSources cx:eng_coolconstruction_Sources ;
+    dcterm:references cx:eng_coolconstruction_Sources ;
     dcterm:created "2025-12-10"^^xsd:date .
 
 cx:engInf_Coolexclamativeconstruction_Meaning a rcxn:ConstructionMeaning ;

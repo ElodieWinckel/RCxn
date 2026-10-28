@@ -138,7 +138,7 @@ cx:itaStoria_RelativeTopicShiftConstruction_Ex_B a cx:Example ;
 cx:itaStoria_RelativeTopicShiftConstruction_MD a rcxn:Metadata ;
     rcxn:annotator membr:Trombetta ;
     dcterm:created "2024-11-21"^^xsd:date ;
-    cx:hasSources cx:itaStoria_RelativeTopicShiftConstruction_Sources .
+    dcterm:references cx:itaStoria_RelativeTopicShiftConstruction_Sources .
 
 cx:itaStoria_RelativeTopicShiftConstruction_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "Transition from one (discourse) topic to another" .

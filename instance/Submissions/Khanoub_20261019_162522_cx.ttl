@@ -1,0 +1,196 @@
+@prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cx: <http://example.org/cx/> .
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterm: <http://purl.org/dc/terms/> .
+@prefix evid: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/evid#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
+@prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#> .
+@prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
+@prefix olia: <http://purl.org/olia/olia.owl#> .
+@prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix references: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/references#> .
+@prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cx:eng_alotofPLUSNconstruction_2_Index olia:hasNumber olia:Singular .
+
+membr:Project_Khanoub rsrch:hasResearchQuestion membr:Project_Khanoub_2610191625 .
+
+cx:eng_Indefinitearticle a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    links:elementOf cx:eng_alotofPLUSNconstruction ;
+    rcxn:hasMetadata cx:eng_Indefinitearticle_MD ;
+    rcxn:hasTitle "Indefinite article" .
+
+cx:eng_Indefinitearticle_MD a rcxn:Metadata ;
+    dcterm:created "2026-10-19"^^xsd:date ;
+    rcxn:annotator membr:Khanoub .
+
+cx:eng_Noun a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    links:elementOf cx:eng_alotofPLUSNconstruction ;
+    rcxn:hasMetadata cx:eng_Noun_MD ;
+    rcxn:hasTitle "Noun" .
+
+cx:eng_NounPhrase a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    links:elementOf cx:eng_alotofPLUSNconstruction ;
+    rcxn:hasMetadata cx:eng_NounPhrase_MD ;
+    rcxn:hasTitle "Noun Phrase" .
+
+cx:eng_NounPhrase_MD a rcxn:Metadata ;
+    dcterm:created "2026-10-19"^^xsd:date ;
+    rcxn:annotator membr:Khanoub .
+
+cx:eng_Noun_MD a rcxn:Metadata ;
+    dcterm:created "2026-10-19"^^xsd:date ;
+    rcxn:annotator membr:Khanoub .
+
+cx:eng_Preposition a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    links:elementOf cx:eng_alotofPLUSNconstruction ;
+    rcxn:hasMetadata cx:eng_Preposition_MD ;
+    rcxn:hasTitle "Preposition" .
+
+cx:eng_Preposition_MD a rcxn:Metadata ;
+    dcterm:created "2026-10-19"^^xsd:date ;
+    rcxn:annotator membr:Khanoub .
+
+cx:eng_a a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    links:elementOf cx:eng_alotofPLUSNconstruction ;
+    rcxn:hasMetadata cx:eng_a_MD ;
+    rcxn:hasTitle "a" .
+
+cx:eng_a_MD a rcxn:Metadata ;
+    dcterm:created "2026-10-19"^^xsd:date ;
+    rcxn:annotator membr:Khanoub .
+
+cx:eng_alotofPLUSNconstruction_1 a rcxn:SlotObligatory ;
+    cx:WordOrder "Precedes Element 2" ;
+    RDFS:comment "Fixed article forming part of the complex quantifier a lot of" ;
+    rcxn:hasSlotForm cx:eng_alotofPLUSNconstruction_1_Form ;
+    rcxn:hasSyntacticFunction "Determiner" .
+
+cx:eng_alotofPLUSNconstruction_1_Form a rcxn:SlotForm ;
+    rcxn:hasStem cx:eng_a ;
+    rcxn:hasSurfaceForm "a" ;
+    rcxn:hasSyntacticForm cx:eng_Indefinitearticle .
+
+cx:eng_alotofPLUSNconstruction_2 a rcxn:SlotObligatory ;
+    cx:WordOrder "Follows element 1 and precedes element 3" ;
+    RDFS:comment "Historically a lexical noun, lot forms part of a grammaticalized quantifier in this construction. Its earlier source meaning is no longer central to the quantificational reading" ;
+    rcxn:hasSlotForm cx:eng_alotofPLUSNconstruction_2_Form ;
+    rcxn:hasSyntacticFunction "Noun-derived component of the complex binominal quantifier" .
+
+cx:eng_alotofPLUSNconstruction_2_Form a rcxn:SlotForm ;
+    rcxn:hasPhonology "lot" ;
+    rcxn:hasStem cx:eng_lot ;
+    rcxn:hasSyntacticForm cx:eng_Noun .
+
+cx:eng_alotofPLUSNconstruction_3 a rcxn:SlotObligatory ;
+    cx:WordOrder "Follows element 2 and precedes element 4" ;
+    RDFS:comment "Fixed linking element connecting the complex quantifier to the quantified nominal expression" ;
+    rcxn:hasSlotForm cx:eng_alotofPLUSNconstruction_3_Form ;
+    rcxn:hasSyntacticFunction "Partitive" .
+
+cx:eng_alotofPLUSNconstruction_3_Form a rcxn:SlotForm ;
+    rcxn:hasStem cx:eng_of ;
+    rcxn:hasSurfaceForm "of" ;
+    rcxn:hasSyntacticForm cx:eng_Preposition .
+
+cx:eng_alotofPLUSNconstruction_4 a rcxn:SlotObligatory ;
+    cx:WordOrder "Follows element 3" ;
+    RDFS:comment "Open nominal slot that can be filled by plural count nouns, mass nouns, or pronouns. Internal modification is permitted, e.g., a lot of difficult questions" ;
+    rcxn:hasOtherSemanticContribution "Identifies the entities being quantified." ;
+    rcxn:hasSemanticProperty "Plural count, mass, or pronominal referent" ;
+    rcxn:hasSlotForm cx:eng_alotofPLUSNconstruction_4_Form ;
+    rcxn:hasSyntacticFunction "Quantified nominal expression" .
+
+cx:eng_alotofPLUSNconstruction_4_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:eng_NounPhrase .
+
+cx:eng_alotofPLUSNconstruction_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "[A]1 [lot]2 [of]3 [them]4 had purchased a site for a town ..." ;
+    cx:hasText "A lot of them had purchased a site for a town ..." ;
+    RDFS:comment "ARCHER, 1863 (Text_ID: 1863twn__x6a)." , "The quantifier takes a pronominal complement." .
+
+cx:eng_alotofPLUSNconstruction_Ex_B a cx:Example ;
+    cx:hasAnnotatedText "“When I make a word do [a]1 [lot]2 [of]3 [work]4 like that,” said Humpty Dumpty, ..." ;
+    cx:hasText "“When I make a word do a lot of work like that,” said Humpty Dumpty, ..." ;
+    RDFS:comment "CLMET, 1871. Lewis Carroll, Through the Looking-Glass (Text_ID: CLMET3_1_3_222)." , "Quantification of a mass noun." .
+
+cx:eng_alotofPLUSNconstruction_Ex_C a cx:Example ;
+    cx:hasAnnotatedText "In New York, [a]1 [lot]2 [of]3 [people]4 brought great big family Bibles that they could hardly carry." ;
+    cx:hasText "In New York, a lot of people brought great big family Bibles that they could hardly carry." ;
+    RDFS:comment "ARCHER, 1958. Billy Graham, Christ's Answer to the World (Text_ID: 1958grah_h8a)." , "Quantification of a plural count noun referring to people." .
+
+cx:eng_alotofPLUSNconstruction_MD a rcxn:Metadata ;
+    dcterm:created "2026-10-19"^^xsd:date ;
+    dcterm:references cx:eng_alotofPLUSNconstruction_Sources ;
+    rcxn:annotator membr:Khanoub .
+
+cx:eng_alotofPLUSNconstruction_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "The construction expresses a contextually large, unspecified number or amount. It can quantify plural count nouns (a lot of people) and mass nouns (a lot of water). In this use, a lot of functions as a complex quantifier rather than referring to a literal/source lot, parcel, or portion." .
+
+cx:eng_alotofPLUSNconstruction_Sources a dcmitype:Collection ;
+    dcterm:hasPart references:8991a2c6-5ff5-43b4-9d91-939c06413083_1 , references:8991a2c6-5ff5-43b4-9d91-939c06413083_2 , references:8991a2c6-5ff5-43b4-9d91-939c06413083_3 , references:8991a2c6-5ff5-43b4-9d91-939c06413083_4 , references:8991a2c6-5ff5-43b4-9d91-939c06413083_5 .
+
+cx:eng_alotofPLUSNconstruction_slots a rdf:Seq ;
+    rdf:_1 cx:eng_alotofPLUSNconstruction_1 ;
+    rdf:_2 cx:eng_alotofPLUSNconstruction_2 ;
+    rdf:_3 cx:eng_alotofPLUSNconstruction_3 ;
+    rdf:_4 cx:eng_alotofPLUSNconstruction_4 .
+
+cx:eng_lot a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    links:elementOf cx:eng_alotofPLUSNconstruction ;
+    rcxn:hasMetadata cx:eng_lot_MD ;
+    rcxn:hasTitle "lot" .
+
+cx:eng_lot_MD a rcxn:Metadata ;
+    dcterm:created "2026-10-19"^^xsd:date ;
+    rcxn:annotator membr:Khanoub .
+
+cx:eng_manyPLUSNcountCx links:differentFormSimilarFunction cx:eng_alotofPLUSNconstruction .
+
+cx:eng_of a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    links:elementOf cx:eng_alotofPLUSNconstruction ;
+    rcxn:hasMetadata cx:eng_of_MD ;
+    rcxn:hasTitle "of" .
+
+cx:eng_of_MD a rcxn:Metadata ;
+    dcterm:created "2026-10-19"^^xsd:date ;
+    rcxn:annotator membr:Khanoub .
+
+membr:Project_Khanoub_2610191625_F2610191625 a rsrch:Finding ;
+    RDFS:label "The construction shows a clear shift from predominantly lexical/literal uses towards more generalized quantification. While earlier historical uses often retain source meanings, later examples increasingly express well-established generalized quantity." ;
+    rsrch:basedOn cx:eng_alotofPLUSNconstruction .
+
+references:8991a2c6-5ff5-43b4-9d91-939c06413083_1 evid:biblio "Aarts, B. (1998). Binominal noun phrases in English. Transactions of the Philological Society, 96(1), 117–158. https://doi.org/10.1111/1467-968X.00025" .
+references:8991a2c6-5ff5-43b4-9d91-939c06413083_2 evid:biblio "Brems, L. (2010). Size noun constructions as collocationally constrained constructions: Lexical and grammaticalized uses. English Language & Linguistics, 14(1), 83–109. https://doi.org/10.1017/S1360674309990372" .
+references:8991a2c6-5ff5-43b4-9d91-939c06413083_3 evid:biblio "Brems, L. (2012). The establishment of quantifier constructions for size nouns: A diachronic case study of heap(s) and lot(s). Journal of Historical Pragmatics, 13(2), 202–231." .
+references:8991a2c6-5ff5-43b4-9d91-939c06413083_4 evid:biblio "Langacker, R. W. (2010). A lot of quantifiers. In S. Rice & J. Newman (Eds.), Empirical and experimental methods in cognitive/functional research (pp. 41–57). CSLI Publications." .
+references:8991a2c6-5ff5-43b4-9d91-939c06413083_5 evid:biblio "Traugott, E. C., & Trousdale, G. (2013). Constructionalization and constructional changes. Oxford University Press." .
+
+membr:Project_Khanoub_2610191625 a rsrch:Project ;
+    rsrch:hasFindings membr:Project_Khanoub_2610191625_F2610191625 ;
+    rsrch:projectName "How did the binominal quantifier (a) lot(s) of develop into a general quantifier, and how has its role within the English quantifier system changed over time?" .
+
+membr:Khanoub foaf:currentProject membr:Project_Khanoub_2610191625 .
+
+cx:eng_alotofPLUSNconstruction a rcxn:Construction ;
+    cx:hasExample cx:eng_alotofPLUSNconstruction_Ex_A,
+        cx:eng_alotofPLUSNconstruction_Ex_B,
+        cx:eng_alotofPLUSNconstruction_Ex_C ;
+    #RDFS:comment "A construction-specific extract from the manually annotated EEBO, ARCHER, and CLMET data can be provided as one Excel (.xlsx) or CSV (.csv) file, containing corpus examples, source metadata, constructional readings, and linguistic annotations." ;
+    lg:partOfLanguage lg:eng ;
+    links:differentFormSimilarFunction cx:eng_manyPLUSNcountCx ;
+    rcxn:hasConstructionMeaning cx:eng_alotofPLUSNconstruction_Meaning ;
+    rcxn:hasMetadata cx:eng_alotofPLUSNconstruction_MD ;
+    rcxn:hasSlots cx:eng_alotofPLUSNconstruction_slots ;
+    rcxn:hasTitle "[a lot of + N] construction" .
+
