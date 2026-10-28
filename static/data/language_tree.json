@@ -21,6 +21,10 @@
     ]
   },
   {
+    "id": "nld",
+    "text": "Dutch"
+  },
+  {
     "id": "eng",
     "text": "English",
     "children": [
@@ -34,13 +38,6 @@
           {"id": "engInf", "text": "Informal English"}
         ]
       }
-    ]
-  },
-  {
-    "id": "fas",
-    "text": "Persian",
-    "children": [
-      {"id": "pes", "text": "Iranian Persian"}
     ]
   },
   {
@@ -77,12 +74,15 @@
     ]
   },
   {
-    "id": "nld",
-    "text": "Dutch"
-  },
-  {
     "id": "ang",
     "text": "Old English (ca. 450-1100)"
+  },
+  {
+    "id": "fas",
+    "text": "Persian",
+    "children": [
+      {"id": "pes", "text": "Iranian Persian"}
+    ]
   },
   {
     "id": "pol",
