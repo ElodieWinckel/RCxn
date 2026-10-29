@@ -29,6 +29,8 @@ references:08c9d8b7-af8413-45e16f-746e5f49b3f9-6 evid:biblio "Pier Vincenzo Meng
 
 references:08c9d8b7-af8413-45e16f-746e5f49b3f9-7 evid:biblio "Nencioni, Giovanni. 1983. La lingua del Guicciardini. In Leo S. Olschki (ed.), Francesco Guicciardini, 1483-1983: nel V centenario della nascita, 215–270. Istituto Nazionale di Studi sul Rinascimento Studi e testi." .
 
+references:1495247b-1525-45be-9a55-c6fd421547bf evid:biblio "Dammel, Antje & Sebastian Kürschner. 2008. Complexity in nominal plural allomorphy: A contrastive survey of ten Germanic languages. In Language Complexity, 243–262. John Benjamins Publishing Company." .
+
 references:3123c19c-3f37-43ae-9471-d753fdd7839c evid:biblio "Woidich, Manfred. 2006. Das Kairensisch-Arabische. Eine Grammatik. Wiesbaden: Harrassowitz." .
 
 references:4a943605-0f85-4796-b75d-ac165582ab1f evid:biblio "2025. cool. DWDS - Digitale Wörterbuch der deutschen Sprache. Berlin-Brandenburgische Akademie der Wissenschaften. https://www.dwds.de/wb/cool. (28 November, 2025)." .
@@ -39,7 +41,15 @@ references:4a943605-0f85-4796-b75d-ac165582ab1f-3 evid:biblio "Davies, Mark (ed.
 
 references:4a943605-0f85-4796-b75d-ac165582ab1f-4 evid:biblio "Davies, Mark (ed.). The Corpus of Contemporary American English (COCA). www.english-corpora.org/coca/. (28 November, 2025)." .
 
+references:4a94c6ad-4d31-47a7-887c-cf5a289137de evid:biblio "Audring, Jenny & Ray Jackendoff. 2025. Construction Morphology and Relational Morphology. InMirjam Fried & Kiki Nikiforidou (eds.), The Cambridge Handbook of Construction Grammar, 101–128. 1st edn. Cambridge University Press. https://doi.org/10.1017/9781009049139.005." .
+
+references:4aa85e49-d3e2-448b-ac4b-9cb4dea93ede evid:biblio "Nübling, Damaris. 2001. Wechselflexion Luxemburgisch - Deutsch kontrastiv: “ech soen - du sees/si seet” vs. “ich sage, du sagst, sie sagt” : zum sekundären Ausbau eines präsentischen Wurzelvokalwechsels im Luxemburgischen. Sprachwissenschaft 26(4). 433–472." .
+
 references:53dd38c7-b35e-4852-bea9-6515e3855562 evid:biblio "Del Río, David, Ramón López-Higes & MaríaTeresa Martín-Aragoneses. 2012. Canonical word order and interference-based integration costs during sentence comprehension: The case of Spanish subject- and object-relative clauses. Quarterly Journal of Experimental Psychology 65(11). 2108–2128. https://doi.org/10.1080/17470218.2012.674951." .
+
+references:5526c23a-6142-48be-b061-244f9dcaee4a evid:biblio "Nübling, Damaris. 2013. Zwischen Konservierung, Eliminierung und Funktionalisierung: Der Umlaut in den germanischen Sprachen. Sprachwandelvergleich–Comparing Diachronies. Walter de Gruyter 550. 15." .
+
+references:6e9b6c5e-ac96-4685-9654-2f060c6f397c evid:biblio "Ruan, Junyu. 2024. Predictability changes in morphologization: A case study of German Umlaut. The Ohio State University." .
 
 references:7e9ff2c5-bddb-4bca-8410-f9e0e3c46cf6_1 evid:biblio "Diessel, Holger. 2019. The grammar network: How linguistic structure is shaped by language use. Cambridge University Press." .
 
@@ -66,6 +76,10 @@ references:8991a2c6-5ff5-43b4-9d91-939c06413083_5 evid:biblio "Traugott, E. C., 
 references:bc0c483a-f00d-4a05-aaee-7c42f22dcdb5 evid:biblio "Llompart, Miquel & Ewa Dąbrowska. 2024. Explicit instruction improves the comprehension of Spanish object relatives by young monolingual children. Language and Cognition 16(4). 986–1006. https://doi.org/10.1017/langcog.2023.69." .
 
 references:c3138c0e-1108-404a-96a8-0ade960b6ca4 evid:biblio "Diem, Werner. 2002. Translokative Verben im Arabischen. Wiesbaden: Harrassowitz." .
+
+references:c33e68a9-a0d8-4eb6-800f-eb3d17f0cd9f evid:biblio "Knooihuizen, Remco & Oscar Strik. 2014. Relative productivity potentials of Dutch verbal inflection patterns. Folia Linguistica 35(1). https://doi.org/10.1515/flih.2014.005." .
+
+references:d7faff17-6877-487b-b9ab-7cdb3cb1b20b evid:biblio "Van De Weijer, Jeroen, Weiyun Wei, Yumeng Wang, Guangyuan Ren & Yunyun Ran. 2020. Words are constructions, too: A construction-based approach to English ablaut reduplication. Linguistics 58(6). 1701–1735. https://doi.org/10.1515/ling-2020-0169." .
 
 references:db2b532f-f711-4470-8922-91afa4fc6aef evid:biblio "Presotto, Giacomo & Jacopo Torregrossa. 2024. Intervention and amelioration effects in the acquisition of Spanish object relative clauses: the role of word order and DOM. Glossa: a journal of general linguistics 9(1). https://doi.org/10.16995/glossa.11254." .
 

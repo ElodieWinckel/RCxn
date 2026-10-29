@@ -1,0 +1,146 @@
+@prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cx: <http://example.org/cx/> .
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterm: <http://purl.org/dc/terms/> .
+@prefix evid: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/evid#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
+@prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
+@prefix olia: <http://purl.org/olia/olia.owl#> .
+@prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix references: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/references#> .
+@prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+membr:Project_Hutta rsrch:hasResearchQuestion membr:Project_Hutta_2610271233 .
+
+cx:deu_Toechter a rcxn:Construction ;
+    cx:hasExample cx:deu_Toechter_Ex_A,
+        cx:deu_Toechter_Ex_B,
+        cx:deu_Toechter_Ex_C,
+        cx:deu_Toechter_Ex_D,
+        cx:deu_Toechter_Ex_E,
+        cx:deu_Toechter_Ex_F ;
+    lg:partOfLanguage lg:deu ;
+    rcxn:hasConstructionMeaning cx:deu_Toechter_Meaning ;
+    rcxn:hasMetadata cx:deu_Toechter_MD ;
+    rcxn:hasSlots cx:deu_Toechter_slots ;
+    rcxn:hasTitle "Töchter" .
+
+cx:deu_Toechter_1 a rcxn:SlotObligatory ;
+    cx:hasIndex cx:deu_Toechter_1_Index ;
+    cx:hasTranslation "daughters" ;
+    rcxn:hasSlots cx:deu_Toechter_1_slots ;
+    rcxn:hasSlotForm cx:deu_Toechter_1_Form .
+
+cx:deu_Toechter_1_Form a rcxn:SlotForm ;
+    rcxn:hasSurfaceForm "Töchter" .
+
+cx:deu_Toechter_1_Index a cx:Individual ;
+    olia:hasGender olia:Feminine ;
+    olia:hasNumber olia:Plural .
+
+cx:deu_Toechter_2 a rcxn:SlotOptional ;
+    cx:WordOrder "initial position in element 1 " ;
+    RDFS:comment "morpheme, umlaut. " ;
+    rcxn:hasSlotForm cx:deu_Toechter_2_Form .
+
+cx:deu_Toechter_2_Form a rcxn:SlotForm ;
+    rcxn:hasPhonology "/ɔ/" , "/ɛ/" , "/ø/" , "/œ/" ;
+    rcxn:hasSurfaceForm "o" , "e" , "ö" .
+
+cx:deu_Toechter_3 a rcxn:SlotOptional ;
+    cx:WordOrder "Follows element 2" ;
+    RDFS:comment "morpheme, inflectional suffix. " ;
+    rcxn:hasSlotForm cx:deu_Toechter_3_Form .
+
+cx:deu_Toechter_3_Form a rcxn:SlotForm ;
+    rcxn:hasPhonology "/s/" , "/ə/" ;
+    rcxn:hasSurfaceForm "-s" , "-e" .
+
+cx:deu_Toechter_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "T[ö]2chter" ;
+    cx:hasText "T[öchter]1" ;
+    cx:hasTranslation "Daughters" ;
+    RDFS:comment "Zwirner Corpus, ZW--_S_00124 (speaker), ZW--_E_00101_SE_01_T_01_DF_01 (recording)" .
+
+cx:deu_Toechter_Ex_B a cx:Example ;
+    cx:hasAnnotatedText "D[ö]2chter[e]3" ;
+    cx:hasText "D[öchtere]1" ;
+    cx:hasTranslation "Daughters" ;
+    RDFS:comment "Baden-Wuerttemberg, Zwirner Corpus: ZW--_S_00518 (speaker), ZW--_E_00463_SE_01_T_01_DF_01 (recording)" .
+
+cx:deu_Toechter_Ex_C a cx:Example ;
+    cx:hasAnnotatedText "D[ö]2chter[s]3" ;
+    cx:hasText "D[öchters]1" ;
+    cx:hasTranslation "Daughters" ;
+    RDFS:comment "North Rhine-Westphalia, Zwirner Corpus: ZW--_S_05810 (speaker), ZW--_E_05659_SE_01_T_01_DF_01 (recording)" .
+
+cx:deu_Toechter_Ex_D a cx:Example ;
+    cx:hasAnnotatedText "Dochter[s]3" ;
+    cx:hasText "Dochter[s]2" ;
+    cx:hasTranslation "Daughters" ;
+    RDFS:comment "Lower Saxony, Zwirner Corpus: ZW--_S_05276 (speaker), ZW--_E_05127_SE_01_T_01_DF_01 (recording)" .
+
+cx:deu_Toechter_Ex_E a cx:Example ;
+    cx:hasAnnotatedText "D[e]2chter" ;
+    cx:hasText "D[echter]1" ;
+    cx:hasTranslation "Daughters" ;
+    RDFS:comment "Baden-Wuerttemberg, Zwirner Corpus: ZW--_S_00323 (speaker), ZW--_E_00278_SE_01_T_01_DF_01 (recording)" .
+
+cx:deu_Toechter_Ex_F a cx:Example ;
+    cx:hasAnnotatedText "D[ö]2ch" ;
+    cx:hasText "D[öch]1" ;
+    cx:hasTranslation "Daughters" ;
+    RDFS:comment "Note: this example shows morphological reduction, a process, where plural is formed through removing parts of the singular form (here: -ter).", "Lower Saxony, Zwirner Corpus: ZW--_S_04875 (speaker), ZW--_E_04728_SE_01_T_01_DF_01 (recording)" .
+
+cx:deu_Toechter_MD a rcxn:Metadata ;
+    dcterm:created "2026-10-27"^^xsd:date ;
+    dcterm:references cx:deu_Toechter_Sources ;
+    rcxn:annotator membr:Hutta .
+
+cx:deu_Toechter_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "The construction specifies more than one daughter, by either making use of an [umlaut]2, an [inflectional suffix]3, or a combination of both" .
+
+cx:deu_Toechter_Sources a dcmitype:Collection ;
+    dcterm:hasPart references:1495247b-1525-45be-9a55-c6fd421547bf,
+        references:4a94c6ad-4d31-47a7-887c-cf5a289137de,
+        references:4aa85e49-d3e2-448b-ac4b-9cb4dea93ede,
+        references:5526c23a-6142-48be-b061-244f9dcaee4a,
+        references:6e9b6c5e-ac96-4685-9654-2f060c6f397c,
+        references:c33e68a9-a0d8-4eb6-800f-eb3d17f0cd9f,
+        references:d7faff17-6877-487b-b9ab-7cdb3cb1b20b .
+
+cx:deu_Toechter_slots a rdf:Seq ;
+    rdf:_1 cx:deu_Toechter_1 .
+
+cx:deu_Toechter_1_slots a rdf:Seq ;
+    rdf:_1 cx:deu_Toechter_2 ;
+    rdf:_2 cx:deu_Toechter_3 .
+
+membr:Hutta foaf:currentProject membr:Project_Hutta_2610271233 .
+
+membr:Project_Hutta_2610271233_F2610271233 a rsrch:Finding ;
+    RDFS:label """In dialects of German umlaut can be an obligatory element in a nominal plural construction, as well as an optional one. This means that depending on the specific regional variation, umlaut can serve as a singular element to form a nominal plural construction, it can be combined with a plural suffix to form a nominal plural construction, or the plural construction is only formed with a suffix. However,for 'Töchter' (dauchters) one element that forms plural is obligatory. \r
+Aside from the number of elements that form the construction, there are a number of allomorphemic variants of each element, which are specific to the dialect or regional variation of German. """ ;
+    rsrch:basedOn cx:deu_Toechter .
+
+references:1495247b-1525-45be-9a55-c6fd421547bf evid:biblio "Dammel, Antje & Sebastian Kürschner. 2008. Complexity in nominal plural allomorphy: A contrastive survey of ten Germanic languages. In Language Complexity, 243–262. John Benjamins Publishing Company." .
+
+references:4a94c6ad-4d31-47a7-887c-cf5a289137de evid:biblio "Audring, Jenny & Ray Jackendoff. 2025. Construction Morphology and Relational Morphology. InMirjam Fried & Kiki Nikiforidou (eds.), The Cambridge Handbook of Construction Grammar, 101–128. 1st edn. Cambridge University Press. https://doi.org/10.1017/9781009049139.005." .
+
+references:4aa85e49-d3e2-448b-ac4b-9cb4dea93ede evid:biblio "Nübling, Damaris. 2001. Wechselflexion Luxemburgisch - Deutsch kontrastiv: “ech soen - du sees/si seet” vs. “ich sage, du sagst, sie sagt” : zum sekundären Ausbau eines präsentischen Wurzelvokalwechsels im Luxemburgischen. Sprachwissenschaft 26(4). 433–472." .
+
+references:5526c23a-6142-48be-b061-244f9dcaee4a evid:biblio "Nübling, Damaris. 2013. Zwischen Konservierung, Eliminierung und Funktionalisierung: Der Umlaut in den germanischen Sprachen. Sprachwandelvergleich–Comparing Diachronies. Walter de Gruyter 550. 15." .
+
+references:6e9b6c5e-ac96-4685-9654-2f060c6f397c evid:biblio "Ruan, Junyu. 2024. Predictability changes in morphologization: A case study of German Umlaut. The Ohio State University." .
+
+references:c33e68a9-a0d8-4eb6-800f-eb3d17f0cd9f evid:biblio "Knooihuizen, Remco & Oscar Strik. 2014. Relative productivity potentials of Dutch verbal inflection patterns. Folia Linguistica 35(1). https://doi.org/10.1515/flih.2014.005." .
+
+references:d7faff17-6877-487b-b9ab-7cdb3cb1b20b evid:biblio "Van De Weijer, Jeroen, Weiyun Wei, Yumeng Wang, Guangyuan Ren & Yunyun Ran. 2020. Words are constructions, too: A construction-based approach to English ablaut reduplication. Linguistics 58(6). 1701–1735. https://doi.org/10.1515/ling-2020-0169." .
+
+membr:Project_Hutta_2610271233 a rsrch:Project ;
+    rsrch:hasFindings membr:Project_Hutta_2610271233_F2610271233 ;
+    rsrch:projectName "What role does umlaut play in forming plural constructions in dialects?" .
+

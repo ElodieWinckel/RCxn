@@ -42,6 +42,19 @@ cx:deuStdHigh_NP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_4_Form a cx:Slot
 
 cx:deuWrSt20_sichNPADJADVvorAugenVP_5_Index olia:hasNumber olia:Plural .
 
+cx:deu_Toechter a rcxn:Construction ;
+    cx:hasExample cx:deu_Toechter_Ex_A,
+        cx:deu_Toechter_Ex_B,
+        cx:deu_Toechter_Ex_C,
+        cx:deu_Toechter_Ex_D,
+        cx:deu_Toechter_Ex_E,
+        cx:deu_Toechter_Ex_F ;
+    lg:partOfLanguage lg:deu ;
+    rcxn:hasConstructionMeaning cx:deu_Toechter_Meaning ;
+    rcxn:hasMetadata cx:deu_Toechter_MD ;
+    rcxn:hasSlots cx:deu_Toechter_slots ;
+    rcxn:hasTitle "Töchter" .
+
 cx:engLME_AdjectivalwithPARTNERConstruction a rcxn:Construction ;
     compcon:hasCompCon compcon:cxn_modification-construction,
         compcon:cxn_referring-phrase,
@@ -1494,6 +1507,105 @@ cx:deu_Schussauf_slots a RDF:Seq ;
     RDF:_1 cx:deu_Schussauf_1 ;
     RDF:_2 cx:deu_Schussauf_2 ;
     RDF:_3 cx:deu_Schussauf_3 .
+
+cx:deu_Toechter_1 a rcxn:SlotObligatory ;
+    cx:hasIndex cx:deu_Toechter_1_Index ;
+    cx:hasTranslation "daughters" ;
+    rcxn:hasSlotForm cx:deu_Toechter_1_Form ;
+    rcxn:hasSlots cx:deu_Toechter_1_slots .
+
+cx:deu_Toechter_1_Form a rcxn:SlotForm ;
+    rcxn:hasSurfaceForm "Töchter" .
+
+cx:deu_Toechter_1_Index a cx:Individual ;
+    olia:hasGender olia:Feminine ;
+    olia:hasNumber olia:Plural .
+
+cx:deu_Toechter_1_slots a RDF:Seq ;
+    RDF:_1 cx:deu_Toechter_2 ;
+    RDF:_2 cx:deu_Toechter_3 .
+
+cx:deu_Toechter_2 a rcxn:SlotOptional ;
+    cx:WordOrder "initial position in element 1 " ;
+    RDFS:comment "morpheme, umlaut. " ;
+    rcxn:hasSlotForm cx:deu_Toechter_2_Form .
+
+cx:deu_Toechter_2_Form a rcxn:SlotForm ;
+    rcxn:hasPhonology "/ø/",
+        "/œ/",
+        "/ɔ/",
+        "/ɛ/" ;
+    rcxn:hasSurfaceForm "e",
+        "o",
+        "ö" .
+
+cx:deu_Toechter_3 a rcxn:SlotOptional ;
+    cx:WordOrder "Follows element 2" ;
+    RDFS:comment "morpheme, inflectional suffix. " ;
+    rcxn:hasSlotForm cx:deu_Toechter_3_Form .
+
+cx:deu_Toechter_3_Form a rcxn:SlotForm ;
+    rcxn:hasPhonology "/s/",
+        "/ə/" ;
+    rcxn:hasSurfaceForm "-e",
+        "-s" .
+
+cx:deu_Toechter_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "T[ö]2chter" ;
+    cx:hasText "T[öchter]1" ;
+    cx:hasTranslation "Daughters" ;
+    RDFS:comment "Zwirner Corpus, ZW--_S_00124 (speaker), ZW--_E_00101_SE_01_T_01_DF_01 (recording)" .
+
+cx:deu_Toechter_Ex_B a cx:Example ;
+    cx:hasAnnotatedText "D[ö]2chter[e]3" ;
+    cx:hasText "D[öchtere]1" ;
+    cx:hasTranslation "Daughters" ;
+    RDFS:comment "Baden-Wuerttemberg, Zwirner Corpus: ZW--_S_00518 (speaker), ZW--_E_00463_SE_01_T_01_DF_01 (recording)" .
+
+cx:deu_Toechter_Ex_C a cx:Example ;
+    cx:hasAnnotatedText "D[ö]2chter[s]3" ;
+    cx:hasText "D[öchters]1" ;
+    cx:hasTranslation "Daughters" ;
+    RDFS:comment "North Rhine-Westphalia, Zwirner Corpus: ZW--_S_05810 (speaker), ZW--_E_05659_SE_01_T_01_DF_01 (recording)" .
+
+cx:deu_Toechter_Ex_D a cx:Example ;
+    cx:hasAnnotatedText "Dochter[s]3" ;
+    cx:hasText "Dochter[s]2" ;
+    cx:hasTranslation "Daughters" ;
+    RDFS:comment "Lower Saxony, Zwirner Corpus: ZW--_S_05276 (speaker), ZW--_E_05127_SE_01_T_01_DF_01 (recording)" .
+
+cx:deu_Toechter_Ex_E a cx:Example ;
+    cx:hasAnnotatedText "D[e]2chter" ;
+    cx:hasText "D[echter]1" ;
+    cx:hasTranslation "Daughters" ;
+    RDFS:comment "Baden-Wuerttemberg, Zwirner Corpus: ZW--_S_00323 (speaker), ZW--_E_00278_SE_01_T_01_DF_01 (recording)" .
+
+cx:deu_Toechter_Ex_F a cx:Example ;
+    cx:hasAnnotatedText "D[ö]2ch" ;
+    cx:hasText "D[öch]1" ;
+    cx:hasTranslation "Daughters" ;
+    RDFS:comment "Lower Saxony, Zwirner Corpus: ZW--_S_04875 (speaker), ZW--_E_04728_SE_01_T_01_DF_01 (recording)",
+        "Note: this example shows morphological reduction, a process, where plural is formed through removing parts of the singular form (here: -ter)." .
+
+cx:deu_Toechter_MD a rcxn:Metadata ;
+    DCTERMS:created "2026-10-27"^^xsd:date ;
+    DCTERMS:references cx:deu_Toechter_Sources ;
+    rcxn:annotator membr:Hutta .
+
+cx:deu_Toechter_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "The construction specifies more than one daughter, by either making use of an [umlaut]2, an [inflectional suffix]3, or a combination of both" .
+
+cx:deu_Toechter_Sources a dcmitype:Collection ;
+    DCTERMS:hasPart references:1495247b-1525-45be-9a55-c6fd421547bf,
+        references:4a94c6ad-4d31-47a7-887c-cf5a289137de,
+        references:4aa85e49-d3e2-448b-ac4b-9cb4dea93ede,
+        references:5526c23a-6142-48be-b061-244f9dcaee4a,
+        references:6e9b6c5e-ac96-4685-9654-2f060c6f397c,
+        references:c33e68a9-a0d8-4eb6-800f-eb3d17f0cd9f,
+        references:d7faff17-6877-487b-b9ab-7cdb3cb1b20b .
+
+cx:deu_Toechter_slots a RDF:Seq ;
+    RDF:_1 cx:deu_Toechter_1 .
 
 cx:deu_UEberfall a rcxn:Construction ;
     lg:partOfLanguage lg:deu ;

@@ -91,7 +91,8 @@ membr:GroseHodge a FOAF:Person ;
     FOAF:homepage <https://www.cxg.phil.fau.eu/person/magdalena-grose-hodge/> .
 
 membr:Hutta a FOAF:Person ;
-    FOAF:currentProject membr:Project_Hutta ;
+    FOAF:currentProject membr:Project_Hutta,
+        membr:Project_Hutta_2610271233 ;
     FOAF:familyName "Hutta" ;
     FOAF:givenName "Sophie" ;
     FOAF:homepage <https://www.cxg.phil.fau.eu/person/sophie-hutta/> .
@@ -381,7 +382,13 @@ membr:Project_GroseHodge a rsrch:Project ;
     rsrch:projectName "Project Grose-Hodge"@en .
 
 membr:Project_Hutta a rsrch:Project ;
+    rsrch:hasResearchQuestion membr:Project_Hutta_2610271233 ;
     rsrch:projectName "Project Hutta"@en .
+
+membr:Project_Hutta_2610271233_F2610271233 a rsrch:Finding ;
+    RDFS:label """In dialects of German umlaut can be an obligatory element in a nominal plural construction, as well as an optional one. This means that depending on the specific regional variation, umlaut can serve as a singular element to form a nominal plural construction, it can be combined with a plural suffix to form a nominal plural construction, or the plural construction is only formed with a suffix. However,for 'Töchter' (dauchters) one element that forms plural is obligatory. \r
+Aside from the number of elements that form the construction, there are a number of allomorphemic variants of each element, which are specific to the dialect or regional variation of German. """ ;
+    rsrch:basedOn cx:deu_Toechter .
 
 membr:Project_Iabdounane a rsrch:Project ;
     rsrch:hasResearchQuestion membr:Project_Iabdounane_20260717 ;
@@ -593,6 +600,10 @@ membr:Project_Wright a rsrch:Project ;
 membr:Project_Bayer_2602251146 a rsrch:Project ;
     rsrch:hasFindings membr:Project_Bayer_2602251146_F2602251146 ;
     rsrch:projectName "Recipient marking in Cairo Arabic" .
+
+membr:Project_Hutta_2610271233 a rsrch:Project ;
+    rsrch:hasFindings membr:Project_Hutta_2610271233_F2610271233 ;
+    rsrch:projectName "What role does umlaut play in forming plural constructions in dialects?" .
 
 membr:Project_Khanoub_2610141629 a rsrch:Project ;
     rsrch:hasFindings membr:Project_Khanoub_2610141629_F2610141629_A,
