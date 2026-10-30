@@ -49,8 +49,16 @@
     "id": "deu",
     "text": "German",
     "children": [
-      {"id": "deuStdHigh", "text": "Standard High German"},
-      {"id": "deuWrSt20", "text": "Written Standard German of the 20th century"}
+      {"id": "deuFNG", "text": "Early New High German (1350–1650)"},
+      {
+        "id": "deuNHD",
+        "text": "New High German (1650 onwards)",
+        "children": [
+          {"id":  "deuPRE", "text": "Present Day German (1950 onwards)"},
+          {"id": "deuStdHigh", "text": "Standard High German"},
+          {"id": "deuWrSt20", "text": "Written Standard German of the 20th century"}
+        ]
+      }
     ]
   },
   {
@@ -81,6 +89,10 @@
   {
     "id": "ang",
     "text": "Old English (ca. 450-1100)"
+  },
+  {
+    "id": "goh",
+    "text": "Old High German (ca. 750-1050)"
   },
   {
     "id": "fas",

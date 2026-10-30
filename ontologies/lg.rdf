@@ -167,11 +167,41 @@
     
 
 
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#deuFNG -->
+
+    <owl:NamedIndividual rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#deuFNG">
+        <rdf:type rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#variety"/>
+        <isVarietyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#deu"/>
+        <rdfs:label xml:lang="en">Early New High German (1350–1650)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#deuNHD -->
+
+    <owl:NamedIndividual rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#deuNHD">
+        <rdf:type rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#variety"/>
+        <isVarietyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#deu"/>
+        <rdfs:label xml:lang="en">New High German (1650 onwards)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#deuPRE -->
+
+    <owl:NamedIndividual rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#deuPRE">
+        <rdf:type rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#variety"/>
+        <isVarietyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#deuNHD"/>
+        <rdfs:label xml:lang="en">Present Day German (1950 onwards)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#deuStdHigh -->
 
     <owl:NamedIndividual rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#deuStdHigh">
         <rdf:type rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#variety"/>
-        <isVarietyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#deu"/>
+        <isVarietyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#deuNHD"/>
         <rdfs:label xml:lang="en">Standard High German</rdfs:label>
     </owl:NamedIndividual>
     
@@ -181,7 +211,7 @@
 
     <owl:NamedIndividual rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#deuWrSt20">
         <rdf:type rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#variety"/>
-        <isVarietyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#deu"/>
+        <isVarietyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#deuNHD"/>
         <rdfs:label xml:lang="en">Written Standard German of the 20th century</rdfs:label>
     </owl:NamedIndividual>
     
@@ -300,6 +330,15 @@
         <rdf:type rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#variety"/>
         <isVarietyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#gmh"/>
         <rdfs:label xml:lang="en">Middle High German, 14th century</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#goh -->
+
+    <owl:NamedIndividual rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#goh">
+        <rdf:type rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#macrolanguage"/>
+        <rdfs:label xml:lang="en">Old High German (ca. 750-1050)</rdfs:label>
     </owl:NamedIndividual>
     
 
