@@ -9,13 +9,13 @@ membr:Alhabyan a FOAF:Person ;
         membr:Project_Alhabyan_2611021636 ;
     FOAF:familyName "Alhabyan" ;
     FOAF:givenName "Raghad" ;
-    FOAF:homepage <https://www.cxg.phil.fau.eu/person/raghad-alhabyan/> .
+    FOAF:homepage <https://www.cxg.phil.fau.eu/faudir/raghad-alhabyan/> .
 
 membr:Badawi a FOAF:Person ;
     FOAF:currentProject membr:Project_Badawi ;
     FOAF:familyName "Badawi" ;
     FOAF:givenName "Soran" ;
-    FOAF:homepage <https://www.cxg.phil.fau.eu/person/soran-badawi/> .
+    FOAF:homepage <https://www.cxg.phil.fau.eu/faudir/soran-badawi/> .
 
 membr:Bayer a FOAF:Person ;
     FOAF:currentProject membr:Project_Bayer,
@@ -29,7 +29,7 @@ membr:BenitoFernandez a FOAF:Person ;
         membr:Project_BenitoFernandez_2610301550 ;
     FOAF:familyName "Benito Fernandez" ;
     FOAF:givenName "Elba" ;
-    FOAF:homepage <https://www.cxg.phil.fau.eu/person/elba-benito-fernandez/> .
+    FOAF:homepage <https://www.cxg.phil.fau.eu/faudir/elba-benito-fernandez/> .
 
 membr:Blake a FOAF:Person ;
     FOAF:currentProject membr:Project_Blake ;
@@ -41,7 +41,7 @@ membr:Boos a FOAF:Person ;
     FOAF:currentProject membr:Project_Boos ;
     FOAF:familyName "Boos" ;
     FOAF:givenName "Julia" ;
-    FOAF:homepage <https://www.cxg.phil.fau.eu/person/julia-boos/> .
+    FOAF:homepage <https://www.cxg.phil.fau.eu/faudir/julia-boos/> .
 
 membr:DelaGarza a FOAF:Person ;
     FOAF:currentProject membr:Project_DelaGarza ;
@@ -49,91 +49,97 @@ membr:DelaGarza a FOAF:Person ;
     FOAF:givenName "Vania" ;
     FOAF:homepage <https://www.cxg.phil.fau.eu/person/vania-de-la-garza/> .
 
+<https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#Dell'Erba> a FOAF:Person ;
+    FOAF:currentProject <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#Project_Dell'Erba> ;
+    FOAF:familyName "Dell'Erba" ;
+    FOAF:givenName "Andrea" ;
+    FOAF:homepage <https://www.cxg.phil.fau.eu/faudir/andrea-dellerba/> .
+
 membr:FernandezSantos a FOAF:Person ;
     FOAF:currentProject membr:Project_FernandezSantos ;
     FOAF:familyName "Fernández Santos" ;
     FOAF:givenName "Sara" ;
-    FOAF:homepage <https://www.cxg.phil.fau.eu/person/sara-fernandez-santos/> .
+    FOAF:homepage <https://www.cxg.phil.fau.eu/faudir/sara-fernandez-santos/> .
 
 membr:Fokashchuk a FOAF:Person ;
     FOAF:currentProject membr:Project_Fokashchuk ;
     FOAF:familyName "Fokashchuk" ;
     FOAF:givenName "Iryna" ;
-    FOAF:homepage <https://www.cxg.phil.fau.eu/person/iryna-fokashchuk/> .
+    FOAF:homepage <https://www.cxg.phil.fau.eu/faudir/iryna-fokashchuk/> .
 
 membr:Fuehrer a FOAF:Person ;
     FOAF:currentProject membr:Project_Fuehrer ;
     FOAF:familyName "Führer" ;
     FOAF:givenName "Bastian" ;
-    FOAF:homepage <https://www.cxg.phil.fau.eu/person/bastian-fuhrer/> .
+    FOAF:homepage <https://www.cxg.phil.fau.eu/faudir/bastian-fuhrer/> .
 
 membr:Garibyan a FOAF:Person ;
     FOAF:currentProject membr:Project_Garibyan,
         membr:Project_Winckel_2601131454 ;
     FOAF:familyName "Garibyan" ;
     FOAF:givenName "Armine" ;
-    FOAF:homepage <https://www.cxg.phil.fau.eu/person/armine-garibyan/> .
+    FOAF:homepage <https://www.cxg.phil.fau.eu/faudir/armine-garibyan/> .
 
 membr:Gedik a FOAF:Person ;
     FOAF:currentProject membr:Project_Gedik ;
     FOAF:familyName "Gedik" ;
     FOAF:givenName "Tan Arda" ;
-    FOAF:homepage <https://www.cxg.phil.fau.eu/person/tan-arda-gedik/> .
+    FOAF:homepage <https://www.cxg.phil.fau.eu/faudir/tan-arda-gedik/> .
 
 membr:Gromadsky a FOAF:Person ;
     FOAF:currentProject membr:Project_Gromadsky ;
     FOAF:familyName "Gromadsky" ;
     FOAF:givenName "Dmitry" ;
-    FOAF:homepage <https://www.cxg.phil.fau.eu/person/dmitry-gromadsky/> .
+    FOAF:homepage <https://www.cxg.phil.fau.eu/faudir/dmitry-gromadsky/> .
 
 membr:GroseHodge a FOAF:Person ;
     FOAF:currentProject membr:Project_GroseHodge ;
     FOAF:familyName "Grose-Hodge" ;
     FOAF:givenName "Magdalena" ;
-    FOAF:homepage <https://www.cxg.phil.fau.eu/person/magdalena-grose-hodge/> .
+    FOAF:homepage <https://www.cxg.phil.fau.eu/faudir/magdalena-grose-hodge/> .
 
 membr:Hutta a FOAF:Person ;
     FOAF:currentProject membr:Project_Hutta,
         membr:Project_Hutta_2610271233 ;
     FOAF:familyName "Hutta" ;
     FOAF:givenName "Sophie" ;
-    FOAF:homepage <https://www.cxg.phil.fau.eu/person/sophie-hutta/> .
+    FOAF:homepage <https://www.cxg.phil.fau.eu/faudir/sophie-hutta/> .
 
 membr:Iabdounane a FOAF:Person ;
     FOAF:currentProject membr:Project_Iabdounane ;
     FOAF:familyName "Iabdounane" ;
     FOAF:givenName "Yassine" ;
-    FOAF:homepage <https://www.cxg.phil.fau.eu/person/yassine-iabdounane/> .
+    FOAF:homepage <https://www.cxg.phil.fau.eu/faudir/yassine-iabdounane/> .
 
 membr:Immertreu a FOAF:Person ;
     FOAF:currentProject membr:Project_Immertreu ;
     FOAF:familyName "Immertreu" ;
     FOAF:givenName "Mathis" ;
-    FOAF:homepage <https://www.cxg.phil.fau.eu/person/mathis-immertreu/> .
+    FOAF:homepage <https://www.cxg.phil.fau.eu/faudir/mathis-immertreu/> .
 
 membr:Kashigin a FOAF:Person ;
     FOAF:currentProject membr:Project_Kashigin ;
     FOAF:familyName "Kashigin" ;
     FOAF:givenName "Kyra" ;
-    FOAF:homepage <https://www.cxg.phil.fau.eu/person/kyra-kashigin/> .
+    FOAF:homepage <https://www.cxg.phil.fau.eu/faudir/kyra-kashigin/> .
 
 membr:Kassler a FOAF:Person ;
     FOAF:currentProject membr:Project_Kassler ;
     FOAF:familyName "Kassler" ;
     FOAF:givenName "Annika" ;
-    FOAF:homepage <https://www.cxg.phil.fau.eu/person/annika-kassler/> .
+    FOAF:homepage <https://www.cxg.phil.fau.eu/faudir/annika-kassler/> .
 
 membr:Kenanidis a FOAF:Person ;
     FOAF:currentProject membr:Project_Kenanidis ;
     FOAF:familyName "Kenanidis" ;
     FOAF:givenName "Panagiotis" ;
-    FOAF:homepage <https://www.cxg.phil.fau.eu/person/panagiotis-kenanidis/> .
+    FOAF:homepage <https://www.cxg.phil.fau.eu/faudir/panagiotis-kenanidis/> .
 
 membr:Kessler a FOAF:Person ;
     FOAF:currentProject membr:Project_Kessler ;
     FOAF:familyName "Keßler" ;
     FOAF:givenName "Florian" ;
-    FOAF:homepage <https://www.cxg.phil.fau.eu/person/florian-kesler/> .
+    FOAF:homepage <https://www.cxg.phil.fau.eu/faudir/florian-kesler/> .
 
 membr:Khanoub a FOAF:Person ;
     FOAF:currentProject membr:Project_Khanoub,
@@ -147,119 +153,125 @@ membr:Kissane a FOAF:Person ;
     FOAF:currentProject membr:Project_Kissane ;
     FOAF:familyName "Kissane" ;
     FOAF:givenName "Hassane" ;
-    FOAF:homepage <https://www.cxg.phil.fau.eu/person/hassane-kissane/> .
+    FOAF:homepage <https://www.cxg.phil.fau.eu/faudir/hassane-kissane/> .
 
 membr:Kligge a FOAF:Person ;
     FOAF:currentProject membr:Project_Kligge ;
     FOAF:familyName "Kligge" ;
     FOAF:givenName "Hendrik" ;
-    FOAF:homepage <https://www.cxg.phil.fau.eu/person/hendrik-kligge/> .
+    FOAF:homepage <https://www.cxg.phil.fau.eu/faudir/hendrik-kligge/> .
 
 membr:Lee a FOAF:Person ;
     FOAF:currentProject membr:Project_Lee ;
     FOAF:familyName "Lee" ;
     FOAF:givenName "Dongeun" ;
-    FOAF:homepage <https://www.cxg.phil.fau.eu/person/dongeun-lee/> .
+    FOAF:homepage <https://www.cxg.phil.fau.eu/faudir/dongeun-lee/> .
 
 membr:Legoute a FOAF:Person ;
     FOAF:currentProject membr:Project_Legoute ;
     FOAF:familyName "Legouté" ;
     FOAF:givenName "Anne Sherley" ;
-    FOAF:homepage <https://www.cxg.phil.fau.eu/person/anne-sherley-legoute/> .
+    FOAF:homepage <https://www.cxg.phil.fau.eu/faudir/anne-sherley-legoute/> .
 
 membr:Makhanina a FOAF:Person ;
     FOAF:currentProject membr:Project_Makhanina ;
     FOAF:familyName "Makhanina" ;
     FOAF:givenName "Asia" ;
-    FOAF:homepage <https://www.cxg.phil.fau.eu/person/asia-makhanina/> .
+    FOAF:homepage <https://www.cxg.phil.fau.eu/faudir/asia-makhanina/> .
+
+membr:Montevecchio a FOAF:Person ;
+    FOAF:currentProject membr:Project_Montevecchio ;
+    FOAF:familyName "Montevecchio" ;
+    FOAF:givenName "Paolo" ;
+    FOAF:homepage <https://www.cxg.phil.fau.eu/faudir/paolo-montevecchio/> .
 
 membr:Patel a FOAF:Person ;
     FOAF:currentProject membr:Project_Patel ;
     FOAF:familyName "Patel" ;
     FOAF:givenName "Malin" ;
-    FOAF:homepage <https://www.cxg.phil.fau.eu/person/malin-patel/> .
+    FOAF:homepage <https://www.cxg.phil.fau.eu/faudir/malin-patel/> .
 
 membr:Petrenko a FOAF:Person ;
     FOAF:currentProject membr:Project_Petrenko ;
     FOAF:familyName "Petrenko" ;
     FOAF:givenName "Elizaveta" ;
-    FOAF:homepage <https://www.cxg.phil.fau.eu/person/elizaveta-petrenko/> .
+    FOAF:homepage <https://www.cxg.phil.fau.eu/faudir/elizaveta-petrenko/> .
 
 membr:Prela a FOAF:Person ;
     FOAF:currentProject membr:Project_Prela ;
     FOAF:familyName "Prela" ;
     FOAF:givenName "Leonarda" ;
-    FOAF:homepage <https://www.cxg.phil.fau.eu/person/leonarda-prela/> .
+    FOAF:homepage <https://www.cxg.phil.fau.eu/faudir/leonarda-prela/> .
 
 membr:Ramezani a FOAF:Person ;
     FOAF:currentProject membr:Project_Ramezani ;
     FOAF:familyName "Ramezani" ;
     FOAF:givenName "Pegah" ;
-    FOAF:homepage <https://www.cxg.phil.fau.eu/person/pegah-ramezani/> .
+    FOAF:homepage <https://www.cxg.phil.fau.eu/faudir/pegah-ramezani/> .
 
 membr:Rastegar a FOAF:Person ;
     FOAF:currentProject membr:Project_Rastegar ;
     FOAF:familyName "Rastegar" ;
     FOAF:givenName "Aria" ;
-    FOAF:homepage <https://www.cxg.phil.fau.eu/person/aria-rastegar/> .
+    FOAF:homepage <https://www.cxg.phil.fau.eu/faudir/aria-rastegar/> .
 
 membr:Rohwedder a FOAF:Person ;
     FOAF:currentProject membr:Project_Rohwedder,
         membr:Project_Rohwedder_2611021659 ;
     FOAF:familyName "Rohwedder" ;
     FOAF:givenName "Paul" ;
-    FOAF:homepage <https://www.cxg.phil.fau.eu/person/paul-rohwedder/> .
+    FOAF:homepage <https://www.cxg.phil.fau.eu/faudir/paul-rohwedder/> .
 
 membr:Schmechel a FOAF:Person ;
     FOAF:currentProject membr:Project_Schmechel,
         membr:Project_Schmechel_2610160927 ;
     FOAF:familyName "Schmechel" ;
     FOAF:givenName "Dennis" ;
-    FOAF:homepage <https://www.cxg.phil.fau.eu/person/dennis-schmechel/> .
+    FOAF:homepage <https://www.cxg.phil.fau.eu/faudir/dennis-schmechel/> .
 
 membr:Senger a FOAF:Person ;
     FOAF:currentProject membr:Project_Senger,
         membr:Project_Senger_2610301632 ;
     FOAF:familyName "Senger" ;
     FOAF:givenName "Lena" ;
-    FOAF:homepage <https://www.cxg.phil.fau.eu/person/lena-senger/> .
+    FOAF:homepage <https://www.cxg.phil.fau.eu/faudir/lena-senger/> .
 
 membr:Stampfer a FOAF:Person ;
     FOAF:currentProject membr:Project_Stampfer ;
     FOAF:familyName "Stampfer" ;
     FOAF:givenName "Veronika" ;
-    FOAF:homepage <https://www.cxg.phil.fau.eu/person/veronika-stampfer/> .
+    FOAF:homepage <https://www.cxg.phil.fau.eu/faudir/veronika-stampfer/> .
 
 membr:Trombetta a FOAF:Person ;
     FOAF:currentProject membr:Project_Trombetta ;
     FOAF:familyName "Trombetta" ;
     FOAF:givenName "Chiara" ;
-    FOAF:homepage <https://www.cxg.phil.fau.eu/person/chiara-trombetta/> .
+    FOAF:homepage <https://www.cxg.phil.fau.eu/faudir/chiara-trombetta/> .
 
 membr:Tzimas a FOAF:Person ;
     FOAF:currentProject membr:Project_Tzimas ;
     FOAF:familyName "Tzimas" ;
     FOAF:givenName "Theocharis" ;
-    FOAF:homepage <https://www.cxg.phil.fau.eu/person/theocharis-tzimas/> .
+    FOAF:homepage <https://www.cxg.phil.fau.eu/faudir/theocharis-tzimas/> .
 
 membr:Weigelt a FOAF:Person ;
     FOAF:currentProject membr:Project_Weigelt ;
     FOAF:familyName "Weigelt" ;
     FOAF:givenName "Lina" ;
-    FOAF:homepage <https://www.cxg.phil.fau.eu/person/lina-weigelt/> .
+    FOAF:homepage <https://www.cxg.phil.fau.eu/faudir/lina-weigelt/> .
 
 membr:Winckel a FOAF:Person ;
     FOAF:currentProject membr:Project_Winckel,
         membr:Project_Winckel_2601131454 ;
     FOAF:familyName "Winckel" ;
     FOAF:givenName "Elodie" ;
-    FOAF:homepage <https://www.cxg.phil.fau.eu/person/elodie-winckel/> .
+    FOAF:homepage <https://www.cxg.phil.fau.eu/faudir/dr-elodie-winckel/> .
 
 membr:Wright a FOAF:Person ;
     FOAF:currentProject membr:Project_Wright ;
     FOAF:familyName "Wright" ;
     FOAF:givenName "Richenda" ;
-    FOAF:homepage <https://www.cxg.phil.fau.eu/person/richenda-wright/> .
+    FOAF:homepage <https://www.cxg.phil.fau.eu/faudir/richenda-wright/> .
 
 membr:Project_Alhabyan a rsrch:Project ;
     rsrch:hasResearchQuestion membr:Project_Alhabyan_2611021636 ;
@@ -296,6 +308,9 @@ membr:Project_Boos a rsrch:Project ;
 
 membr:Project_DelaGarza a rsrch:Project ;
     rsrch:projectName "Project De la Garza"@en .
+
+<https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#Project_Dell'Erba> a rsrch:Project ;
+    rsrch:projectName "Pseudo-coordination with motion verbs in the Romance Languages: a CxG-Perspective"@en .
 
 membr:Project_FernandezSantos a rsrch:Project ;
     rsrch:hasResearchQuestion membr:Project_FernandezSantos_241125 ;
@@ -512,6 +527,9 @@ membr:Project_Makhanina a rsrch:Project ;
 membr:Project_Makhanina_F2611020737 a rsrch:Finding ;
     RDFS:label "As an ergative language, Chechen uses ergative constructions in transitive clauses. Ergative construction gets constrained by progressive construction, i.e. in progressive the language employs neutral construction even in transitive clauses (encodes both subject and object with the same case - absolutive)" ;
     rsrch:basedOn cx:che_Ergativeconstruction .
+
+membr:Project_Montevecchio a rsrch:Project ;
+    rsrch:projectName "A constructional account of Prepositions and Prepositional Phrases in Early and Late Modern English"@en .
 
 membr:Project_Patel a rsrch:Project ;
     rsrch:hasResearchQuestion membr:Project_Patel_241128 ;

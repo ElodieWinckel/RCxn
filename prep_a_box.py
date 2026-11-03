@@ -102,11 +102,11 @@ def create_abox_from_submissions():
     add_user("Alhabyan",
              "Raghad",
              "Valency, preposition governing, and phrasal verbs in Arabic and Semitic",
-             "https://www.cxg.phil.fau.eu/person/raghad-alhabyan/")
+             "https://www.cxg.phil.fau.eu/faudir/raghad-alhabyan/")
     add_user("Badawi",
              "Soran",
              "Corpus-based measures of constructionhood",
-             "https://www.cxg.phil.fau.eu/person/soran-badawi/")
+             "https://www.cxg.phil.fau.eu/faudir/soran-badawi/")
     add_user("Bayer",
              "Nadine",
              "Differential argument marking in Arabic",
@@ -114,7 +114,7 @@ def create_abox_from_submissions():
     add_user("Benito Fernandez",
              "Elba",
              "Spanish quotative constructions in oral narratives — an Interactional Construction Grammar approach",
-             "https://www.cxg.phil.fau.eu/person/elba-benito-fernandez/")
+             "https://www.cxg.phil.fau.eu/faudir/elba-benito-fernandez/")
     add_user("Blake",
              "Ashley",
              "Project Blake",
@@ -122,67 +122,71 @@ def create_abox_from_submissions():
     add_user("Boos",
              "Julia",
              "Entrenchment meets literacy: How the development of reading ability affects child and adult language processing",
-             "https://www.cxg.phil.fau.eu/person/julia-boos/")
+             "https://www.cxg.phil.fau.eu/faudir/julia-boos/")
     add_user("De la Garza",
              "Vania",
              "Project De la Garza",
              "https://www.cxg.phil.fau.eu/person/vania-de-la-garza/")
+    add_user("Dell'Erba",
+         "Andrea",
+         "Pseudo-coordination with motion verbs in the Romance Languages: a CxG-Perspective",
+         "https://www.cxg.phil.fau.eu/faudir/andrea-dellerba/")
     add_user("Fernández Santos",
              "Sara",
              "Artificial language learning as a window to the early entrenchment of constructions",
-             "https://www.cxg.phil.fau.eu/person/sara-fernandez-santos/")
+             "https://www.cxg.phil.fau.eu/faudir/sara-fernandez-santos/")
     add_user("Fokashchuk",
              "Iryna",
              "Functions and cognitive semantics of prepositions in complex constructions",
-             "https://www.cxg.phil.fau.eu/person/iryna-fokashchuk/")
+             "https://www.cxg.phil.fau.eu/faudir/iryna-fokashchuk/")
     add_user("Führer",
              "Bastian",
              "German verbs with particles or prefixes in language change: Form, meaning, and syntax",
-             "https://www.cxg.phil.fau.eu/person/bastian-fuhrer/")
+             "https://www.cxg.phil.fau.eu/faudir/bastian-fuhrer/")
     add_user("Garibyan",
              "Armine",
              "Project Garibyan",
-             "https://www.cxg.phil.fau.eu/person/armine-garibyan/")
+             "https://www.cxg.phil.fau.eu/faudir/armine-garibyan/")
     add_user("Gedik",
              "Tan Arda",
              "Project Gedik",
-             "https://www.cxg.phil.fau.eu/person/tan-arda-gedik/")
+             "https://www.cxg.phil.fau.eu/faudir/tan-arda-gedik/")
     add_user("Gromadsky",
              "Dmitry",
              "Constructions in communication",
-             "https://www.cxg.phil.fau.eu/person/dmitry-gromadsky/")
+             "https://www.cxg.phil.fau.eu/faudir/dmitry-gromadsky/")
     add_user("Grose-Hodge",
              "Magdalena",
              "Project Grose-Hodge",
-             "https://www.cxg.phil.fau.eu/person/magdalena-grose-hodge/")
+             "https://www.cxg.phil.fau.eu/faudir/magdalena-grose-hodge/")
     add_user("Hutta",
              "Sophie",
              "Project Hutta",
-             "https://www.cxg.phil.fau.eu/person/sophie-hutta/")
+             "https://www.cxg.phil.fau.eu/faudir/sophie-hutta/")
     add_user("Iabdounane",
              "Yassine",
              "Multimodal constructional space",
-             "https://www.cxg.phil.fau.eu/person/yassine-iabdounane/")
+             "https://www.cxg.phil.fau.eu/faudir/yassine-iabdounane/")
     add_user("Immertreu",
              "Mathis",
              "Multimodal cognitive maps for cross-domain constructional networks",
-             "https://www.cxg.phil.fau.eu/person/mathis-immertreu/")
+             "https://www.cxg.phil.fau.eu/faudir/mathis-immertreu/")
     add_user("Kashigin",
              "Kyra",
              "Contrastive Construction Grammar: The interaction of argument-structure constructions and sentence-type constructions in english, Dutch and German",
-             "https://www.cxg.phil.fau.eu/person/kyra-kashigin/")
+             "https://www.cxg.phil.fau.eu/faudir/kyra-kashigin/")
     add_user("Kassler",
              "Annika",
              "Project Kassler",
-             "https://www.cxg.phil.fau.eu/person/annika-kassler/")
+             "https://www.cxg.phil.fau.eu/faudir/annika-kassler/")
     add_user("Kenanidis",
              "Panagiotis",
              "Project Kenanidis",
-             "https://www.cxg.phil.fau.eu/person/panagiotis-kenanidis/")
+             "https://www.cxg.phil.fau.eu/faudir/panagiotis-kenanidis/")
     add_user("Keßler",
              "Florian",
              "Chinese Mathematics",
-             "https://www.cxg.phil.fau.eu/person/florian-kesler/")
+             "https://www.cxg.phil.fau.eu/faudir/florian-kesler/")
     add_user("Khanoub",
              "Rania",
              "Competition and change in Modern English quantifier constructions",
@@ -190,79 +194,83 @@ def create_abox_from_submissions():
     add_user("Kissane",
              "Hassane",
              "Form and meaning as factors in the identification and learning of constructional slots – English phrasal verbs and verb-preposition combinations",
-             "https://www.cxg.phil.fau.eu/person/hassane-kissane/")
+             "https://www.cxg.phil.fau.eu/faudir/hassane-kissane/")
     add_user("Kligge",
              "Hendrik",
              "Representation and acquisition of agreement relations in a usage-based framework",
-             "https://www.cxg.phil.fau.eu/person/hendrik-kligge/")
+             "https://www.cxg.phil.fau.eu/faudir/hendrik-kligge/")
     add_user("Lee",
              "Dongeun",
              "Project Lee",
-             "https://www.cxg.phil.fau.eu/person/dongeun-lee/")
+             "https://www.cxg.phil.fau.eu/faudir/dongeun-lee/")
     add_user("Makhanina",
              "Asia",
              "Representation and acquisition of idiomatic constructions in L1 and L2 learners",
-             "https://www.cxg.phil.fau.eu/person/asia-makhanina/")
+             "https://www.cxg.phil.fau.eu/faudir/asia-makhanina/")
+    add_user("Montevecchio",
+             "Paolo",
+             "A constructional account of Prepositions and Prepositional Phrases in Early and Late Modern English",
+             "https://www.cxg.phil.fau.eu/faudir/paolo-montevecchio/")
     add_user("Patel",
              "Malin",
              "Corpus evidence for delineating constructions",
-             "https://www.cxg.phil.fau.eu/person/malin-patel/")
+             "https://www.cxg.phil.fau.eu/faudir/malin-patel/")
     add_user("Petrenko",
              "Elizaveta",
              "Comparing constructions cross-linguistically — Connecting constructicons",
-             "https://www.cxg.phil.fau.eu/person/elizaveta-petrenko/")
+             "https://www.cxg.phil.fau.eu/faudir/elizaveta-petrenko/")
     add_user("Prela",
              "Leonarda",
              "Project Prela",
-             "https://www.cxg.phil.fau.eu/person/leonarda-prela/")
+             "https://www.cxg.phil.fau.eu/faudir/leonarda-prela/")
     add_user("Ramezani",
              "Pegah",
              "Representation and processing of constructions in the brain",
-             "https://www.cxg.phil.fau.eu/person/pegah-ramezani/")
+             "https://www.cxg.phil.fau.eu/faudir/pegah-ramezani/")
     add_user("Rastegar",
              "Aria",
              "Representation and acquisition of idiomatic constructions in L1 and L2 learners",
-             "https://www.cxg.phil.fau.eu/person/aria-rastegar/")
+             "https://www.cxg.phil.fau.eu/faudir/aria-rastegar/")
     add_user("Rohwedder",
              "Paul",
              "Project Rohwedder",
-             "https://www.cxg.phil.fau.eu/person/paul-rohwedder/")
+             "https://www.cxg.phil.fau.eu/faudir/paul-rohwedder/")
     add_user("Legouté",
              "Anne Sherley",
              "Multifunctionality in Haitian Creole: New insights from a Construction Grammar perspective",
-             "https://www.cxg.phil.fau.eu/person/anne-sherley-legoute/")
+             "https://www.cxg.phil.fau.eu/faudir/anne-sherley-legoute/")
     add_user("Schmechel",
              "Dennis",
              "A constructional approach to prepositions and prepositional phrases in Old English",
-             "https://www.cxg.phil.fau.eu/person/dennis-schmechel/")
+             "https://www.cxg.phil.fau.eu/faudir/dennis-schmechel/")
     add_user("Senger",
              "Lena",
              "Individual language change across the lifespan",
-             "https://www.cxg.phil.fau.eu/person/lena-senger/")
+             "https://www.cxg.phil.fau.eu/faudir/lena-senger/")
     add_user("Stampfer",
              "Veronika",
              "Semantically related argument structures in the history of English",
-             "https://www.cxg.phil.fau.eu/person/veronika-stampfer/")
+             "https://www.cxg.phil.fau.eu/faudir/veronika-stampfer/")
     add_user("Trombetta",
              "Chiara",
              "Constructions beyond the sentence: text-structuring in (esp.) sixteenth-century historiographical texts",
-             "https://www.cxg.phil.fau.eu/person/chiara-trombetta/")
+             "https://www.cxg.phil.fau.eu/faudir/chiara-trombetta/")
     add_user("Tzimas",
              "Theocharis",
              "Subject-inversion throughout Early Modern English: changing relations in individual and communal constructions",
-             "https://www.cxg.phil.fau.eu/person/theocharis-tzimas/")
+             "https://www.cxg.phil.fau.eu/faudir/theocharis-tzimas/")
     add_user("Wright",
              "Richenda",
              "Project Wright",
-             "https://www.cxg.phil.fau.eu/person/richenda-wright/")
+             "https://www.cxg.phil.fau.eu/faudir/richenda-wright/")
     add_user("Weigelt",
              "Lina",
              "Project Weigelt",
-             "https://www.cxg.phil.fau.eu/person/lina-weigelt/")
+             "https://www.cxg.phil.fau.eu/faudir/lina-weigelt/")
     add_user("Winckel",
              "Elodie",
              "Building a Research Constructicon",
-             "https://www.cxg.phil.fau.eu/person/elodie-winckel/")
+             "https://www.cxg.phil.fau.eu/faudir/dr-elodie-winckel/")
 
     ####################################################
     # Make useful inferences (e.g., for mirror links)
