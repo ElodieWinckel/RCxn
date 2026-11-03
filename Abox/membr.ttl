@@ -499,7 +499,12 @@ membr:Project_Legoute_241128_F250218 a rsrch:Finding ;
     rsrch:basedOn cx:hat_POUbeneficiaryconstruction .
 
 membr:Project_Makhanina a rsrch:Project ;
+    rsrch:hasFindings membr:Project_Makhanina_F2611020737 ;
     rsrch:projectName "Representation and acquisition of idiomatic constructions in L1 and L2 learners"@en .
+
+membr:Project_Makhanina_F2611020737 a rsrch:Finding ;
+    RDFS:label "As an ergative language, Chechen uses ergative constructions in transitive clauses. Ergative construction gets constrained by progressive construction, i.e. in progressive the language employs neutral construction even in transitive clauses (encodes both subject and object with the same case - absolutive)" ;
+    rsrch:basedOn cx:che_Ergativeconstruction .
 
 membr:Project_Patel a rsrch:Project ;
     rsrch:hasResearchQuestion membr:Project_Patel_241128 ;

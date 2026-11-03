@@ -494,6 +494,75 @@ cx:arzCai_Ditransitiveconstruction_slots a RDF:Seq ;
     RDF:_3 cx:arzCai_Ditransitiveconstruction_3 ;
     RDF:_4 cx:arzCai_Ditransitiveconstruction_4 .
 
+cx:che_Ergativeconstruction a rcxn:Construction ;
+    cx:hasExample cx:che_Ergativeconstruction_Ex_A ;
+    lg:partOfLanguage lg:che ;
+    rcxn:hasConstructionMeaning cx:che_Ergativeconstruction_Meaning ;
+    rcxn:hasMetadata cx:che_Ergativeconstruction_MD ;
+    rcxn:hasSlots cx:che_Ergativeconstruction_slots ;
+    rcxn:hasTitle "Ergative construction" .
+
+cx:che_Ergativeconstruction_1 a rcxn:SlotObligatory ;
+    cx:WordOrder "Element 1 immediately before element 2" ;
+    cx:hasIndex cx:che_Ergativeconstruction_1_Index ;
+    olia:hasCase olia:ErgativeCase ;
+    rcxn:hasSlotForm cx:che_Ergativeconstruction_1_Form .
+
+cx:che_Ergativeconstruction_1_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:che_NounPhrase .
+
+cx:che_Ergativeconstruction_1_Index a cx:Individual ;
+    olia:hasAnimacy "Usually animate as this element is agent." .
+
+cx:che_Ergativeconstruction_2 a rcxn:SlotObligatory ;
+    cx:WordOrder "Element 2 immediately after element 1" ;
+    olia:hasSemanticRole olia:AgentRole ;
+    RDFS:comment "This is the ergative case marker, but it is only for nouns. Pronouns have their own ergative forms (usually suppletion)." ;
+    rcxn:hasSlotForm cx:che_Ergativeconstruction_2_Form ;
+    rcxn:hasSyntacticFunction "Ergative case marker" .
+
+cx:che_Ergativeconstruction_2_Form a rcxn:SlotForm ;
+    rcxn:hasPhonology "/s/" ;
+    rcxn:hasSurfaceForm "s" .
+
+cx:che_Ergativeconstruction_3 a rcxn:SlotObligatory ;
+    cx:WordOrder "Element 3 usually after element 2 since element 3 is a verb and Chechen is an SOV language." ;
+    RDFS:comment "Does not allow progressive" ;
+    rcxn:hasSyntacticFunction "Transitive verb" .
+
+cx:che_Ergativeconstruction_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "[K'ant]1 [s]2 hi [molu]3" ;
+    cx:hasGlosses "[boy]1 [ERG]2 waterABS [drinkPRS]3  " ;
+    cx:hasText "K'ant s hi molu" ;
+    cx:hasTranslation "(A) boy drinks water" .
+
+cx:che_Ergativeconstruction_MD a rcxn:Metadata ;
+    DCTERMS:created "2026-11-02"^^xsd:date ;
+    DCTERMS:references cx:che_Ergativeconstruction_Sources ;
+    rcxn:annotator membr:Makhanina .
+
+cx:che_Ergativeconstruction_Meaning a rcxn:ConstructionMeaning ;
+    RDFS:comment "Languages with ergative morphosyntactic alignment encode subjects of transitive verbs (A) differently than subjects of intransitive verbs (S). A is marked by ergative case whereas S is marked by absolutive case which also marks object of transitive verbs (O). A = ergative case; S, O = absolutive case. " .
+
+cx:che_Ergativeconstruction_Sources a dcmitype:Collection ;
+    DCTERMS:hasPart references:cb9d1a71-4b6f-44ae-bf0d-90bf161aa427,
+        references:edb60a8d-34ec-4c0c-9e74-6538fb89c073 .
+
+cx:che_Ergativeconstruction_slots a RDF:Seq ;
+    RDF:_1 cx:che_Ergativeconstruction_1 ;
+    RDF:_2 cx:che_Ergativeconstruction_2 ;
+    RDF:_3 cx:che_Ergativeconstruction_3 .
+
+cx:che_NounPhrase a rcxn:Construction ;
+    lg:partOfLanguage lg:che ;
+    links:elementOf cx:che_Ergativeconstruction ;
+    rcxn:hasMetadata cx:che_NounPhrase_MD ;
+    rcxn:hasTitle "Noun Phrase" .
+
+cx:che_NounPhrase_MD a rcxn:Metadata ;
+    DCTERMS:created "2026-11-03"^^xsd:date ;
+    rcxn:annotator membr:Makhanina .
+
 cx:comePLUSnoisemannerofmovementVing_1 a rcxn:SlotOptional ;
     rcxn:hasSemanticRole olia:UndergoerMacroRole ;
     rcxn:hasSlotForm cx:comePLUSnoisemannerofmovementVing_1_Form ;
