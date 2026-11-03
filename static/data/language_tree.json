@@ -38,9 +38,10 @@
         "id": "engLME",
         "text": "Late Modern English (1800-now)",
         "children": [
+          {"id": "engInf", "text": "Informal English"},
           {"id": "engUsSpo", "text": "Spoken American English"},
-          {"id": "engUsUkWr", "text": "Written British & American English"},
-          {"id": "engInf", "text": "Informal English"}
+          {"id": "engUkSpo", "text": "Spoken British English"},
+          {"id": "engUsUkWr", "text": "Written British & American English"}
         ]
       }
     ]

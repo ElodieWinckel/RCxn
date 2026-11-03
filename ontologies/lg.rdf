@@ -256,6 +256,16 @@
     
 
 
+    <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#engUkSpo -->
+
+    <owl:NamedIndividual rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#engUkSpo">
+        <rdf:type rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#variety"/>
+        <isVarietyOf rdf:resource="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#engLME"/>
+        <rdfs:label xml:lang="en">Spoken British English</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#engUsSpo -->
 
     <owl:NamedIndividual rdf:about="https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#engUsSpo">
