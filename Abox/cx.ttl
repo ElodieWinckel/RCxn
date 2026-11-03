@@ -26,6 +26,16 @@ cx:ang_Changeofstateconstruction a rcxn:Construction ;
     rcxn:hasSlots cx:ang_Changeofstateconstruction_slots ;
     rcxn:hasTitle "Change of state construction" .
 
+cx:araCla_ComitativeConstruction a rcxn:Construction ;
+    cx:hasExample cx:araCla_ComitativeConstruction_Ex_A,
+        cx:araCla_ComitativeConstruction_Ex_B,
+        cx:araCla_ComitativeConstruction_Ex_C ;
+    lg:partOfLanguage lg:araCla ;
+    rcxn:hasConstructionMeaning cx:araCla_ComitativeConstruction_Meaning ;
+    rcxn:hasMetadata cx:araCla_ComitativeConstruction_MD ;
+    rcxn:hasSlots cx:araCla_ComitativeConstruction_slots ;
+    rcxn:hasTitle "Comitative Construction" .
+
 cx:comePLUSnoisemannerofmovementVing_4_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_PrepositionalPhrase .
 
@@ -442,6 +452,83 @@ cx:ang_Changeofstateconstruction_slots a RDF:Seq ;
     RDF:_2 cx:ang_Changeofstateconstruction_2 ;
     RDF:_3 cx:ang_Changeofstateconstruction_3 ;
     RDF:_4 cx:ang_Changeofstateconstruction_4 .
+
+cx:araCla_ComitativeConstruction_1 a rcxn:SlotObligatory ;
+    cx:WordOrder "First element" ;
+    RDFS:comment "colloprofile: ǧāʾa 'to arrive'; ʾatā 'to come'; ḏahaba 'to leave'; daẖala 'to enter'; ẖaraǧa 'to go out'; marra 'to pass by' (ambiguous); ǧarā 'to move in specified course'; sāra 'to walk'; nazala 'to descend'; mašā 'to walk'; etc." ;
+    rcxn:hasSemanticProperty "Verbs denoting directed motion" ;
+    rcxn:hasSyntacticFunction "Verb" .
+
+cx:araCla_ComitativeConstruction_2 a rcxn:SlotOptional ;
+    cx:WordOrder "After Element 1" ;
+    cx:hasIndex cx:araCla_ComitativeConstruction_2_Index ;
+    olia:hasCase olia:Nominative ;
+    olia:hasSemanticRole olia:AgentRole ;
+    rcxn:hasSyntacticFunction "Subject " .
+
+cx:araCla_ComitativeConstruction_2_Index a cx:Individual ;
+    olia:hasAnimacy olia:Human .
+
+cx:araCla_ComitativeConstruction_3 a rcxn:SlotObligatory ;
+    cx:WordOrder "after Element 2, bound to Element 4" ;
+    olia:hasSemanticRole olia:ComitativeRole ;
+    rcxn:hasSlotForm cx:araCla_ComitativeConstruction_3_Form ;
+    rcxn:hasSyntacticFunction "Preposition " .
+
+cx:araCla_ComitativeConstruction_3_Form a rcxn:SlotForm ;
+    rcxn:hasPhonology "/bi/" ;
+    rcxn:hasSurfaceForm "bi-" .
+
+cx:araCla_ComitativeConstruction_4 a rcxn:SlotObligatory ;
+    cx:WordOrder "after Element 3" ;
+    cx:hasIndex cx:araCla_ComitativeConstruction_4_Index ;
+    olia:hasCase olia:GenitiveCase ;
+    olia:hasSemanticRole olia:PatientRole ;
+    rcxn:hasSemanticProperty "[NP] must not denote or refer to time/location nor to abstract concept ~ entails change of meaning" ;
+    rcxn:hasSyntacticFunction "Oblique" .
+
+cx:araCla_ComitativeConstruction_4_Index a cx:Individual ;
+    olia:hasAnimacy "Can be +/- animate, +/- human" .
+
+cx:araCla_ComitativeConstruction_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "[sāra]1 [bi-]3 [ʾahli-hī]4" ;
+    cx:hasGlosses "walk.3SGM.PERF with- housefolk.GEN-3SGM" ;
+    cx:hasText "sāra bi- ʾahli-hī" ;
+    cx:hasTranslation "He [Moses] was traveling with his housefolk" ;
+    RDFS:comment "The example is taken from the Quran" .
+
+cx:araCla_ComitativeConstruction_Ex_B a cx:Example ;
+    cx:hasAnnotatedText "[ʾtū]1 [bi-]3 [sūratin]4" ;
+    cx:hasGlosses "come.2PLM.IMP with- chapter.GEN" ;
+    cx:hasText "ʾtū bi- sūratin" ;
+    cx:hasTranslation "Produce a surah (chapter)." ;
+    RDFS:comment "The example is taken from the Quran" .
+
+cx:araCla_ComitativeConstruction_Ex_C a cx:Example ;
+    cx:hasAnnotatedText "[ḏahaba]1 [llāhu]2 [bi-]3 [nūri-him]4" ;
+    cx:hasGlosses "go.2SGM.PERF God with- light.GEN-3PLM" ;
+    cx:hasText "ḏahaba llāhu bi- nūri-him" ;
+    cx:hasTranslation "God taketh away their light " ;
+    RDFS:comment "The example is taken from the Quran" .
+
+cx:araCla_ComitativeConstruction_MD a rcxn:Metadata ;
+    DCTERMS:created "2026-11-02"^^xsd:date ;
+    DCTERMS:references cx:araCla_ComitativeConstruction_Sources ;
+    rcxn:annotator membr:Alhabyan .
+
+cx:araCla_ComitativeConstruction_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "[An ÆFFECTOR]2 [physically brings]1 [an ÆFFECTED]4 [with (bi-)]3 [him/her]2." .
+
+cx:araCla_ComitativeConstruction_Sources a dcmitype:Collection ;
+    DCTERMS:hasPart references:3511453c-d7c8-4218-956c-ad4e6d90a32b,
+        references:5f76c48c-0c97-4ef9-8a11-9053a9e76ca4,
+        references:6dea2d76-3517-44e0-bd18-ed7866d7857b .
+
+cx:araCla_ComitativeConstruction_slots a RDF:Seq ;
+    RDF:_1 cx:araCla_ComitativeConstruction_1 ;
+    RDF:_2 cx:araCla_ComitativeConstruction_2 ;
+    RDF:_3 cx:araCla_ComitativeConstruction_3 ;
+    RDF:_4 cx:araCla_ComitativeConstruction_4 .
 
 cx:arzCai_Ditransitiveconstruction a rcxn:Construction ;
     cx:hasExample cx:arzCai_Ditransitiveconstruction_Ex_A,

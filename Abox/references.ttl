@@ -39,6 +39,8 @@ references:1d894fdc-b0b7-47e4-80ee-98eda82340cf evid:biblio "Birner, Betty. 1994
 
 references:3123c19c-3f37-43ae-9471-d753fdd7839c evid:biblio "Woidich, Manfred. 2006. Das Kairensisch-Arabische. Eine Grammatik. Wiesbaden: Harrassowitz." .
 
+references:3511453c-d7c8-4218-956c-ad4e6d90a32b evid:biblio "University of Oslo. (n.d.). Quran. Bibliotheca Polyglotta. https://polyglotta.uio.no/index.php?page=volume&vid=51" .
+
 references:39b87c34-6766-4f64-9f87-7c249430e507 evid:biblio "Gaston, Phoebe. 2011. Drama SO. Yale Grammatical Diversity Project: English in North America. (Available online at http://ygdp.yale.edu/phenomena/drama-so. Accessed on 2026-10-30). Updated by Tom McCoy (2015) and Katie Martin (2018)." .
 
 references:4a943605-0f85-4796-b75d-ac165582ab1f evid:biblio "2025. cool. DWDS - Digitale Wörterbuch der deutschen Sprache. Berlin-Brandenburgische Akademie der Wissenschaften. https://www.dwds.de/wb/cool. (28 November, 2025)." .
@@ -60,6 +62,10 @@ references:53dd38c7-b35e-4852-bea9-6515e3855562 evid:biblio "Del Río, David, Ra
 references:5526c23a-6142-48be-b061-244f9dcaee4a evid:biblio "Nübling, Damaris. 2013. Zwischen Konservierung, Eliminierung und Funktionalisierung: Der Umlaut in den germanischen Sprachen. Sprachwandelvergleich–Comparing Diachronies. Walter de Gruyter 550. 15." .
 
 references:57dec8ff-7125-415f-ab44-20fdb4408e18 evid:biblio "Fischer, Olga. 1992. Syntax. In Norman Blake (ed.), The Cambridge History of the English Language, 207–408. Cambridge: Cambridge University Press. https://doi.org/10.1017/CHOL9780521264754.005." .
+
+references:5f76c48c-0c97-4ef9-8a11-9053a9e76ca4 evid:biblio "Kász, Cs. 2015. Valency Properties of Verbs in Modern Standard Arabic. In A.L. Malchukov and B. Comrie (eds.), Valency Classes in the World’s Languages, 327–364. Berlin: De Gruyter Mouton." .
+
+references:6dea2d76-3517-44e0-bd18-ed7866d7857b evid:biblio "Bloch, Ariel A. 1986. Studies in Arabic Syntax and Semantics. Wiesbaden: Harrassowitz." .
 
 references:6e9b6c5e-ac96-4685-9654-2f060c6f397c evid:biblio "Ruan, Junyu. 2024. Predictability changes in morphologization: A case study of German Umlaut. The Ohio State University." .
 

@@ -5,7 +5,8 @@
 @prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
 
 membr:Alhabyan a FOAF:Person ;
-    FOAF:currentProject membr:Project_Alhabyan ;
+    FOAF:currentProject membr:Project_Alhabyan,
+        membr:Project_Alhabyan_2611021636 ;
     FOAF:familyName "Alhabyan" ;
     FOAF:givenName "Raghad" ;
     FOAF:homepage <https://www.cxg.phil.fau.eu/person/raghad-alhabyan/> .
@@ -260,7 +261,12 @@ membr:Wright a FOAF:Person ;
     FOAF:homepage <https://www.cxg.phil.fau.eu/person/richenda-wright/> .
 
 membr:Project_Alhabyan a rsrch:Project ;
+    rsrch:hasResearchQuestion membr:Project_Alhabyan_2611021636 ;
     rsrch:projectName "Valency, preposition governing, and phrasal verbs in Arabic and Semitic"@en .
+
+membr:Project_Alhabyan_2611021636_F2611021636 a rsrch:Finding ;
+    RDFS:label "Provisional: Form I (faʾala) verbs of the CaCaCa vocalic pattern, denoting horizontal or vertical 'directed' motion, combine with the valency-increasing bound stem preposition [bi-] to denote a general notion of 'movement with' exhibited between two participants in the event. The same construction expanded into the more semantically specific \"bring with\" notion, whereby the first paritipant is more agentive, and the second assuming a more patient-like/passive character. From this latter semantics developed more lexically specified combinations, whereby the V+P combinations exhibit further unitary and noncompositional meanings, unredictable from the elements of the construction. These \"idiomatic constructions\" are conditioned by the meaning of the verbal element, but also by the semantic features of the prepositional complement.  " ;
+    rsrch:basedOn cx:araCla_ComitativeConstruction .
 
 membr:Project_Badawi a rsrch:Project ;
     rsrch:projectName "Corpus-based measures of constructionhood"@en .
@@ -623,6 +629,10 @@ membr:Project_Winckel_F2511281100 a rsrch:Finding ;
 
 membr:Project_Wright a rsrch:Project ;
     rsrch:projectName "Project Wright"@en .
+
+membr:Project_Alhabyan_2611021636 a rsrch:Project ;
+    rsrch:hasFindings membr:Project_Alhabyan_2611021636_F2611021636 ;
+    rsrch:projectName "Unpacking the syntactic and semantic valency of V+P sequences in Classical Arabic, this project ultimately explores the extent to which form can be predictable from meaning. " .
 
 membr:Project_Bayer_2602251146 a rsrch:Project ;
     rsrch:hasFindings membr:Project_Bayer_2602251146_F2602251146 ;
