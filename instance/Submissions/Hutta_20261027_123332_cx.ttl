@@ -42,7 +42,7 @@ cx:deu_Toechter_1_Index a cx:Individual ;
     olia:hasNumber olia:Plural .
 
 cx:deu_Toechter_2 a rcxn:SlotOptional ;
-    cx:WordOrder "initial position in element 1 " ;
+    cx:WordOrder "first vowel in Element 1" ;
     RDFS:comment "morpheme, umlaut. " ;
     rcxn:hasSlotForm cx:deu_Toechter_2_Form .
 
@@ -51,7 +51,7 @@ cx:deu_Toechter_2_Form a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "o" , "e" , "ö" .
 
 cx:deu_Toechter_3 a rcxn:SlotOptional ;
-    cx:WordOrder "Follows element 2" ;
+    cx:WordOrder "Last element in Element 1" ;
     RDFS:comment "morpheme, inflectional suffix. " ;
     rcxn:hasSlotForm cx:deu_Toechter_3_Form .
 
@@ -101,7 +101,7 @@ cx:deu_Toechter_MD a rcxn:Metadata ;
     rcxn:annotator membr:Hutta .
 
 cx:deu_Toechter_Meaning a rcxn:ConstructionMeaning ;
-    rcxn:hasMeaning "The construction specifies more than one daughter, by either making use of an [umlaut]2, an [inflectional suffix]3, or a combination of both" .
+    rcxn:hasMeaning "Daughters (more than one daughter)" .
 
 cx:deu_Toechter_Sources a dcmitype:Collection ;
     dcterm:hasPart references:1495247b-1525-45be-9a55-c6fd421547bf,
