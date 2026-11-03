@@ -584,7 +584,12 @@ membr:Project_Trombetta_F250218 a rsrch:Finding ;
     rsrch:basedOn cx:itaStoria_RelativeTopicShiftConstruction .
 
 membr:Project_Tzimas a rsrch:Project ;
+    rsrch:hasFindings membr:Project_Tzimas_F2611021411 ;
     rsrch:projectName "Subject-inversion throughout Early Modern English: changing relations in individual and communal constructions"@en .
+
+membr:Project_Tzimas_F2611021411 a rsrch:Finding ;
+    RDFS:label "The FVI construction follows an XVS word order where X is an Adverb Phrase, a Prepositional Phrase, an Adjective Phrase or a Noun Phrase. V can be any full verb, excluding be and have when they are in auxiliary form, and modal verbs such as must, can, should etc. S is any noun phrase in subject position. Findings so far indicate that this construction splits in two different sub-constructions, Locative and Temporal FVI, according to the semantics of X. These sub constructions have separate formal and pragmatic preferences and roles." ;
+    rsrch:basedOn cx:engEME_TheFVIconstruction .
 
 membr:Project_Weigelt a rsrch:Project ;
     rsrch:hasFindings membr:Project_Weigelt_F2610211337 ;

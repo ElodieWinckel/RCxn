@@ -1,0 +1,214 @@
+@prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cx: <http://example.org/cx/> .
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterm: <http://purl.org/dc/terms/> .
+@prefix evid: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/evid#> .
+@prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
+@prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#> .
+@prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
+@prefix olia: <http://purl.org/olia/olia.owl#> .
+@prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix references: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/references#> .
+@prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+membr:Project_Tzimas rsrch:hasFindings membr:Project_Tzimas_F2611021411 .
+
+cx:PresentativeInversion a rcxn:Construction ;
+    links:similarFormDifferentFunction cx:engEME_TheFVIconstruction ;
+    rcxn:hasMetadata cx:PresentativeInversion_MD ;
+    rcxn:hasTitle "Presentative Inversion" .
+
+cx:PresentativeInversion_MD a rcxn:Metadata ;
+    dcterm:created "2026-11-02"^^xsd:date ;
+    rcxn:annotator membr:Tzimas .
+
+cx:QuotativeInversion a rcxn:Construction ;
+    links:similarFormSimilarFunction cx:engEME_TheFVIconstruction ;
+    rcxn:hasMetadata cx:QuotativeInversion_MD ;
+    rcxn:hasTitle "Quotative Inversion" .
+
+cx:QuotativeInversion_MD a rcxn:Metadata ;
+    dcterm:created "2026-11-02"^^xsd:date ;
+    rcxn:annotator membr:Tzimas .
+
+cx:SubjectAuxiliaryInversion a rcxn:Construction ;
+    links:similarFormDifferentFunction cx:engEME_TheFVIconstruction ;
+    rcxn:hasMetadata cx:SubjectAuxiliaryInversion_MD ;
+    rcxn:hasTitle "Subject Auxiliary Inversion" .
+
+cx:SubjectAuxiliaryInversion_MD a rcxn:Metadata ;
+    dcterm:created "2026-11-02"^^xsd:date ;
+    rcxn:annotator membr:Tzimas .
+
+cx:engEME_TheFVIconstruction_1 a rcxn:SlotObligatory ;
+    cx:WordOrder "Element one is phrase-initial, only in main clauses." ;
+    rcxn:hasOtherSemanticContribution "Location" , "Direction (Path)" , "Instrument" , "Manner" , "Temporal" ;
+    rcxn:hasSlotForm cx:engEME_TheFVIconstruction_1_Form ;
+    rcxn:hasIS rcxn:Background .
+
+cx:engEME_TheFVIconstruction_1_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:eng_AdjectivePhrase,
+        cx:eng_AdverbPhrase,
+        cx:eng_NounPhrase,
+        cx:eng_PrepositionalPhrase .
+
+cx:engEME_TheFVIconstruction_2 a rcxn:SlotObligatory ;
+    cx:WordOrder "Element 2 can have some distance from element 1 but always appears after it." ;
+    cx:hasIndex cx:engEME_TheFVIconstruction_2_Index ;
+    rcxn:hasSlotForm cx:engEME_TheFVIconstruction_2_Form ;
+    rcxn:hasSyntacticFunction "Full Verb" .
+
+cx:engEME_TheFVIconstruction_2_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:eng_Verb .
+
+cx:engEME_TheFVIconstruction_2_Index a cx:Event ;
+    olia:hasTense "absolute present and past" , "no tenses that require auxiliaries" .
+
+cx:engEME_TheFVIconstruction_3 a rcxn:SlotObligatory ;
+    cx:WordOrder "Element three comes after element 2, not necessarily immediately after." ;
+    rcxn:hasOtherSemanticContribution "theme" , "agent" , "target" ;
+    rcxn:hasSlotForm cx:engEME_TheFVIconstruction_3_Form ;
+    rcxn:hasSyntacticFunction "Subject" ;
+    rcxn:hasIS rcxn:Focus .
+
+cx:engEME_TheFVIconstruction_3_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:eng_NounPhrase .
+
+cx:engEME_TheFVIconstruction_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "But [at the dore]1 [were set]2 [Musketeres]3 to guarde the place" ;
+    cx:hasText "But at the dore were set Musketeres to guarde the place" ;
+    RDFS:comment "Even though here we have an auxiliary 'were' because of passivization, it remains an example of FVI since the full verb (set) is also before 3" .
+
+cx:engEME_TheFVIconstruction_Ex_B a cx:Example ;
+    cx:hasAnnotatedText "[In the last place]1 [go]2 [the Preficae or the Women]3 ..." ;
+    cx:hasText "In the last place go the Preficae or the Women ..." .
+
+cx:engEME_TheFVIconstruction_MD a rcxn:Metadata ;
+    dcterm:created "2026-11-02"^^xsd:date ;
+    dcterm:references cx:engEME_TheFVIconstruction_Sources ;
+    rcxn:annotator membr:Tzimas .
+
+cx:engEME_TheFVIconstruction_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "FVI is an information-packaging device. It (mostly) makes sure that information structure abides by the Given-before-New and Ground-before-Figure principles. It is also genre-dependent: in narrative contexts it is also found to serve linking-to-previous-discourse functions  and acts as a focusing device." .
+
+cx:engEME_TheFVIconstruction_Sources a dcmitype:Collection ;
+    dcterm:hasPart references:118c727e-0d54-466b-9ea1-2bff012b7f46,
+        references:1d894fdc-b0b7-47e4-80ee-98eda82340cf,
+        references:57dec8ff-7125-415f-ab44-20fdb4408e18,
+        references:780146c4-8ca4-41c5-884d-7f88e5aab8ff,
+        references:8e4fefce-6bf1-4d8f-86a2-b34b157a073c,
+        references:91c770a5-b2eb-4d31-8ac1-de76a1740881,
+        references:94abbfc2-e6af-4334-9fa0-be7030bf0b89,
+        references:96afcaf4-8f09-4170-b25a-95129a83d59d,
+        references:d00ffba5-7382-4601-b08f-78dc570620de,
+        references:e0922bbf-fbdd-42e0-82a6-52d50a12e5e2,
+        references:f4827f62-fd00-411b-9579-7ae21d34505e .
+
+cx:engEME_TheFVIconstruction_slots a rdf:Seq ;
+    rdf:_1 cx:engEME_TheFVIconstruction_1 ;
+    rdf:_2 cx:engEME_TheFVIconstruction_2 ;
+    rdf:_3 cx:engEME_TheFVIconstruction_3 .
+
+cx:eng_AdjectivePhrase links:elementOf cx:engEME_TheFVIconstruction .
+
+cx:eng_AdverbPhrase a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    links:elementOf cx:engEME_TheFVIconstruction ;
+    rcxn:hasMetadata cx:eng_AdverbPhrase_MD ;
+    rcxn:hasTitle "Adverb Phrase" .
+
+cx:eng_AdverbPhrase_MD a rcxn:Metadata ;
+    dcterm:created "2026-11-02"^^xsd:date ;
+    rcxn:annotator membr:Tzimas .
+
+cx:eng_ArgumentStructureConstruction a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    links:inheritedBy cx:engEME_TheFVIconstruction ;
+    rcxn:hasMetadata cx:eng_ArgumentStructureConstruction_MD ;
+    rcxn:hasTitle "Argument Structure Construction" .
+
+cx:eng_ArgumentStructureConstruction_MD a rcxn:Metadata ;
+    dcterm:created "2026-11-02"^^xsd:date ;
+    rcxn:annotator membr:Tzimas .
+
+cx:eng_InversionConstruction a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    links:inheritedBy cx:engEME_TheFVIconstruction ;
+    rcxn:hasMetadata cx:eng_InversionConstruction_MD ;
+    rcxn:hasTitle "Inversion Construction" .
+
+cx:eng_InversionConstruction_MD a rcxn:Metadata ;
+    dcterm:created "2026-11-02"^^xsd:date ;
+    rcxn:annotator membr:Tzimas .
+
+cx:eng_LocativeFullVerbInversion a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    links:inheritsFrom cx:engEME_TheFVIconstruction ;
+    rcxn:hasMetadata cx:eng_LocativeFullVerbInversion_MD ;
+    rcxn:hasTitle "Locative Full-Verb Inversion" .
+
+cx:eng_LocativeFullVerbInversion_MD a rcxn:Metadata ;
+    dcterm:created "2026-11-02"^^xsd:date ;
+    rcxn:annotator membr:Tzimas .
+
+cx:eng_PrepositionalPhrase links:elementOf cx:engEME_TheFVIconstruction .
+
+cx:eng_TemporalFullVerbInversion a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    links:inheritsFrom cx:engEME_TheFVIconstruction ;
+    rcxn:hasMetadata cx:eng_TemporalFullVerbInversion_MD ;
+    rcxn:hasTitle "Temporal Full-Verb Inversion" .
+
+cx:eng_TemporalFullVerbInversion_MD a rcxn:Metadata ;
+    dcterm:created "2026-11-02"^^xsd:date ;
+    rcxn:annotator membr:Tzimas .
+
+cx:eng_Verb links:elementOf cx:engEME_TheFVIconstruction .
+
+membr:Project_Tzimas_F2611021411 a rsrch:Finding ;
+    RDFS:label "The FVI construction follows an XVS word order where X is an Adverb Phrase, a Prepositional Phrase, an Adjective Phrase or a Noun Phrase. V can be any full verb, excluding be and have when they are in auxiliary form, and modal verbs such as must, can, should etc. S is any noun phrase in subject position. Findings so far indicate that this construction splits in two different sub-constructions, Locative and Temporal FVI, according to the semantics of X. These sub constructions have separate formal and pragmatic preferences and roles." ;
+    rsrch:basedOn cx:engEME_TheFVIconstruction .
+
+references:118c727e-0d54-466b-9ea1-2bff012b7f46 evid:biblio "Chen, Rong. 2011. The Mind as Ground: A Study of the English Existential Construction. In Klaus-Uwe Panther & Günter Radden (eds.), Human Cognitive Processing, vol. 27, 49–70. Amsterdam: John Benjamins. https://doi.org/10.1075/hcp.27.05che." .
+
+references:1d894fdc-b0b7-47e4-80ee-98eda82340cf evid:biblio "Birner, Betty. 1994. Information Status and Word Order: An Analysis of English Inversion. Language 70(2). 233–259. https://doi.org/10.2307/415828." .
+
+references:57dec8ff-7125-415f-ab44-20fdb4408e18 evid:biblio "Fischer, Olga. 1992. Syntax. In Norman Blake (ed.), The Cambridge History of the English Language, 207–408. Cambridge: Cambridge University Press. https://doi.org/10.1017/CHOL9780521264754.005." .
+
+references:780146c4-8ca4-41c5-884d-7f88e5aab8ff evid:biblio "Bækken, Bjørg. 2000. Inversion in Early Modern English. English Studies 81(5). 393–421. https://doi.org/10.1076/0013-838X(200009)81:5;1-8:FT393." .
+
+references:8e4fefce-6bf1-4d8f-86a2-b34b157a073c evid:biblio "Birner, Betty. 2018. On Constructions as a Pragmatic Category. Language 94(2). 158–179. https://doi.org/10.1353/lan.2018.0031." .
+
+references:91c770a5-b2eb-4d31-8ac1-de76a1740881 evid:biblio "Birner, Betty J. 1995. Pragmatic Constraints on the Verb in English Inversion. Lingua 97(4). 233–256. https://doi.org/10.1016/0024-3841(95)00026-7." .
+
+references:94abbfc2-e6af-4334-9fa0-be7030bf0b89 evid:biblio "Chen, Rong. 2003. English Inversion: A Ground-before-Figure Construction. Berlin: De Gruyter." .
+
+references:96afcaf4-8f09-4170-b25a-95129a83d59d evid:biblio "Birner, Betty J. & Gregory Ward. 1998. Information Status and Noncanonical Word Order in English. Amsterdam: John Benjamins Publishing Company. https://doi.org/10.1075/slcs.40." .
+
+references:d00ffba5-7382-4601-b08f-78dc570620de evid:biblio "Bækken, Bjørg. 2005. Some Aspects of Word Order in Seventeenth-Century English. English Studies 86(6). 511–535. https://doi.org/10.1080/00138380500319943." .
+
+references:e0922bbf-fbdd-42e0-82a6-52d50a12e5e2 evid:biblio "Nevalainen, Terttu. 1997. Recycling Inversion: The Case of Initial Adverbs and Negators in Early Modern English. Studia Anglica Posnaniensia 31. 203–214." .
+
+references:f4827f62-fd00-411b-9579-7ae21d34505e evid:biblio "Chen, Rong. 2013. Subject Auxiliary Inversion and Linguistic Generalization: Evidence for Functional/Cognitive Motivation in Language. Cognitive Linguistics 24(1). 1–32. https://doi.org/10.1515/cog-2013-0001." .
+
+cx:eng_NounPhrase links:elementOf cx:engEME_TheFVIconstruction .
+
+cx:engEME_TheFVIconstruction a rcxn:Construction ;
+    cx:hasExample cx:engEME_TheFVIconstruction_Ex_A,
+        cx:engEME_TheFVIconstruction_Ex_B ;
+#    RDFS:comment "Corpus data from PPCEME (Kroch et al. 2004)." ;
+    lg:partOfLanguage lg:engEME ;
+    links:inheritedBy cx:eng_LocativeFullVerbInversion,
+        cx:eng_TemporalFullVerbInversion ;
+    links:inheritsFrom cx:eng_ArgumentStructureConstruction,
+        cx:eng_InversionConstruction ;
+    links:similarFormDifferentFunction cx:PresentativeInversion,
+        cx:SubjectAuxiliaryInversion ;
+    links:similarFormSimilarFunction cx:QuotativeInversion ;
+    rcxn:hasConstructionMeaning cx:engEME_TheFVIconstruction_Meaning ;
+    rcxn:hasMetadata cx:engEME_TheFVIconstruction_MD ;
+    rcxn:hasSlots cx:engEME_TheFVIconstruction_slots ;
+    rcxn:hasTitle "The FVI construction" .
+

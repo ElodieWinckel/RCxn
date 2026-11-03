@@ -334,6 +334,24 @@ cx:Noun_MD a rcxn:Metadata ;
         membr:Weigelt,
         membr:Winckel .
 
+cx:PresentativeInversion a rcxn:Construction ;
+    links:similarFormDifferentFunction cx:engEME_TheFVIconstruction ;
+    rcxn:hasMetadata cx:PresentativeInversion_MD ;
+    rcxn:hasTitle "Presentative Inversion" .
+
+cx:PresentativeInversion_MD a rcxn:Metadata ;
+    DCTERMS:created "2026-11-02"^^xsd:date ;
+    rcxn:annotator membr:Tzimas .
+
+cx:QuotativeInversion a rcxn:Construction ;
+    links:similarFormSimilarFunction cx:engEME_TheFVIconstruction ;
+    rcxn:hasMetadata cx:QuotativeInversion_MD ;
+    rcxn:hasTitle "Quotative Inversion" .
+
+cx:QuotativeInversion_MD a rcxn:Metadata ;
+    DCTERMS:created "2026-11-02"^^xsd:date ;
+    rcxn:annotator membr:Tzimas .
+
 cx:SmallQuantityGestureConstruction a gest:GestureConstruction ;
     gest:hasForm cx:SmallQuantityGestureConstruction_Form ;
     gest:hasMeaning cx:SmallQuantityGestureConstruction_Meaning ;
@@ -359,6 +377,15 @@ cx:SmallQuantityGestureConstruction_Meaning a gest:GestureMeaning ;
     gest:pragmaticProperty "Affective/evaluative framing.",
         "Foregrounding the small quantity of the referent." ;
     gest:semanticProperty "Small quantity." .
+
+cx:SubjectAuxiliaryInversion a rcxn:Construction ;
+    links:similarFormDifferentFunction cx:engEME_TheFVIconstruction ;
+    rcxn:hasMetadata cx:SubjectAuxiliaryInversion_MD ;
+    rcxn:hasTitle "Subject Auxiliary Inversion" .
+
+cx:SubjectAuxiliaryInversion_MD a rcxn:Metadata ;
+    DCTERMS:created "2026-11-02"^^xsd:date ;
+    rcxn:annotator membr:Tzimas .
 
 cx:ang_Changeofstateconstruction_1 a rcxn:SlotObligatory ;
     cx:WordOrder "Element 1 in first position" ;
@@ -1947,6 +1974,82 @@ cx:deu_vorPLUSbodypartconstructions_MD a rcxn:Metadata ;
 cx:deu_vor_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "in front of" .
 
+cx:engEME_TheFVIconstruction_1 a rcxn:SlotObligatory ;
+    cx:WordOrder "Element one is phrase-initial, only in main clauses." ;
+    rcxn:hasIS rcxn:Background ;
+    rcxn:hasOtherSemanticContribution "Direction (Path)",
+        "Instrument",
+        "Location",
+        "Manner",
+        "Temporal" ;
+    rcxn:hasSlotForm cx:engEME_TheFVIconstruction_1_Form .
+
+cx:engEME_TheFVIconstruction_1_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:eng_AdjectivePhrase,
+        cx:eng_AdverbPhrase,
+        cx:eng_NounPhrase,
+        cx:eng_PrepositionalPhrase .
+
+cx:engEME_TheFVIconstruction_2 a rcxn:SlotObligatory ;
+    cx:WordOrder "Element 2 can have some distance from element 1 but always appears after it." ;
+    cx:hasIndex cx:engEME_TheFVIconstruction_2_Index ;
+    rcxn:hasSlotForm cx:engEME_TheFVIconstruction_2_Form ;
+    rcxn:hasSyntacticFunction "Full Verb" .
+
+cx:engEME_TheFVIconstruction_2_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:eng_Verb .
+
+cx:engEME_TheFVIconstruction_2_Index a cx:Event ;
+    olia:hasTense "absolute present and past",
+        "no tenses that require auxiliaries" .
+
+cx:engEME_TheFVIconstruction_3 a rcxn:SlotObligatory ;
+    cx:WordOrder "Element three comes after element 2, not necessarily immediately after." ;
+    rcxn:hasIS rcxn:Focus ;
+    rcxn:hasOtherSemanticContribution "agent",
+        "target",
+        "theme" ;
+    rcxn:hasSlotForm cx:engEME_TheFVIconstruction_3_Form ;
+    rcxn:hasSyntacticFunction "Subject" .
+
+cx:engEME_TheFVIconstruction_3_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:eng_NounPhrase .
+
+cx:engEME_TheFVIconstruction_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "But [at the dore]1 [were set]2 [Musketeres]3 to guarde the place" ;
+    cx:hasText "But at the dore were set Musketeres to guarde the place" ;
+    RDFS:comment "Even though here we have an auxiliary 'were' because of passivization, it remains an example of FVI since the full verb (set) is also before 3" .
+
+cx:engEME_TheFVIconstruction_Ex_B a cx:Example ;
+    cx:hasAnnotatedText "[In the last place]1 [go]2 [the Preficae or the Women]3 ..." ;
+    cx:hasText "In the last place go the Preficae or the Women ..." .
+
+cx:engEME_TheFVIconstruction_MD a rcxn:Metadata ;
+    DCTERMS:created "2026-11-02"^^xsd:date ;
+    DCTERMS:references cx:engEME_TheFVIconstruction_Sources ;
+    rcxn:annotator membr:Tzimas .
+
+cx:engEME_TheFVIconstruction_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "FVI is an information-packaging device. It (mostly) makes sure that information structure abides by the Given-before-New and Ground-before-Figure principles. It is also genre-dependent: in narrative contexts it is also found to serve linking-to-previous-discourse functions  and acts as a focusing device." .
+
+cx:engEME_TheFVIconstruction_Sources a dcmitype:Collection ;
+    DCTERMS:hasPart references:118c727e-0d54-466b-9ea1-2bff012b7f46,
+        references:1d894fdc-b0b7-47e4-80ee-98eda82340cf,
+        references:57dec8ff-7125-415f-ab44-20fdb4408e18,
+        references:780146c4-8ca4-41c5-884d-7f88e5aab8ff,
+        references:8e4fefce-6bf1-4d8f-86a2-b34b157a073c,
+        references:91c770a5-b2eb-4d31-8ac1-de76a1740881,
+        references:94abbfc2-e6af-4334-9fa0-be7030bf0b89,
+        references:96afcaf4-8f09-4170-b25a-95129a83d59d,
+        references:d00ffba5-7382-4601-b08f-78dc570620de,
+        references:e0922bbf-fbdd-42e0-82a6-52d50a12e5e2,
+        references:f4827f62-fd00-411b-9579-7ae21d34505e .
+
+cx:engEME_TheFVIconstruction_slots a RDF:Seq ;
+    RDF:_1 cx:engEME_TheFVIconstruction_1 ;
+    RDF:_2 cx:engEME_TheFVIconstruction_2 ;
+    RDF:_3 cx:engEME_TheFVIconstruction_3 .
+
 cx:engInf_Coolexclamativeconstruction_1 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm cx:engInf_Coolexclamativeconstruction_1_Form .
 
@@ -3293,6 +3396,26 @@ cx:eng_Adjective_MD a rcxn:Metadata ;
         membr:Weigelt,
         membr:Winckel .
 
+cx:eng_AdverbPhrase a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    links:elementOf cx:engEME_TheFVIconstruction ;
+    rcxn:hasMetadata cx:eng_AdverbPhrase_MD ;
+    rcxn:hasTitle "Adverb Phrase" .
+
+cx:eng_AdverbPhrase_MD a rcxn:Metadata ;
+    DCTERMS:created "2026-11-02"^^xsd:date ;
+    rcxn:annotator membr:Tzimas .
+
+cx:eng_ArgumentStructureConstruction a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    links:inheritedBy cx:engEME_TheFVIconstruction ;
+    rcxn:hasMetadata cx:eng_ArgumentStructureConstruction_MD ;
+    rcxn:hasTitle "Argument Structure Construction" .
+
+cx:eng_ArgumentStructureConstruction_MD a rcxn:Metadata ;
+    DCTERMS:created "2026-11-02"^^xsd:date ;
+    rcxn:annotator membr:Tzimas .
+
 cx:eng_CauseMotionconstruction_1 a rcxn:SlotObligatory ;
     rcxn:hasSyntacticFunction "Subject" .
 
@@ -3414,6 +3537,16 @@ cx:eng_Indefinitearticle_MD a rcxn:Metadata ;
     DCTERMS:created "2026-10-19"^^xsd:date ;
     rcxn:annotator membr:Khanoub .
 
+cx:eng_InversionConstruction a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    links:inheritedBy cx:engEME_TheFVIconstruction ;
+    rcxn:hasMetadata cx:eng_InversionConstruction_MD ;
+    rcxn:hasTitle "Inversion Construction" .
+
+cx:eng_InversionConstruction_MD a rcxn:Metadata ;
+    DCTERMS:created "2026-11-02"^^xsd:date ;
+    rcxn:annotator membr:Tzimas .
+
 cx:eng_Keepacoolheadconstruction_1 a rcxn:SlotObligatory ;
     rcxn:hasSlotForm cx:eng_Keepacoolheadconstruction_1_Form .
 
@@ -3460,6 +3593,16 @@ cx:eng_Keepacoolheadconstruction_slots a RDF:Seq ;
     RDF:_2 cx:eng_Keepacoolheadconstruction_2 ;
     RDF:_3 cx:eng_Keepacoolheadconstruction_3 ;
     RDF:_4 cx:eng_Keepacoolheadconstruction_4 .
+
+cx:eng_LocativeFullVerbInversion a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    links:inheritsFrom cx:engEME_TheFVIconstruction ;
+    rcxn:hasMetadata cx:eng_LocativeFullVerbInversion_MD ;
+    rcxn:hasTitle "Locative Full-Verb Inversion" .
+
+cx:eng_LocativeFullVerbInversion_MD a rcxn:Metadata ;
+    DCTERMS:created "2026-11-02"^^xsd:date ;
+    rcxn:annotator membr:Tzimas .
 
 cx:eng_Noun a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
@@ -3532,6 +3675,16 @@ cx:eng_PrepositionalPhrasewithPLUSNP_MD a rcxn:Metadata ;
 cx:eng_Pronoun a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
     rcxn:hasTitle "Pronoun" .
+
+cx:eng_TemporalFullVerbInversion a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    links:inheritsFrom cx:engEME_TheFVIconstruction ;
+    rcxn:hasMetadata cx:eng_TemporalFullVerbInversion_MD ;
+    rcxn:hasTitle "Temporal Full-Verb Inversion" .
+
+cx:eng_TemporalFullVerbInversion_MD a rcxn:Metadata ;
+    DCTERMS:created "2026-11-02"^^xsd:date ;
+    rcxn:annotator membr:Tzimas .
 
 cx:eng_ThisclosetoVingconstruction_1 a rcxn:SlotOptional ;
     rcxn:hasSyntacticFunction "Subject" .
@@ -6684,25 +6837,6 @@ cx:engUsUkWr_EvaluativeAttributionConstruction a rcxn:Construction ;
     rcxn:hasSlots cx:engUsUkWr_EvaluativeAttributionConstruction_slots ;
     rcxn:hasTitle "Evaluative Attribution Construction" .
 
-cx:eng_AdjectivePhrase a rcxn:Construction ;
-    lg:partOfLanguage lg:eng ;
-    links:elementOf cx:engLME_AttributeConstructionAttrAdj,
-        cx:engUsUkWr_EvaluativeAttributionConstruction,
-        cx:eng_AdjectiveAttributiveconstruction,
-        cx:eng_AdjectivePredicativeconstruction ;
-    rcxn:hasConstructionMeaning cx:eng_AdjectivePhrase_Meaning ;
-    rcxn:hasMetadata cx:eng_AdjectivePhrase_MD ;
-    rcxn:hasSlots cx:eng_AdjectivePhrase_slots ;
-    rcxn:hasTitle "Adjective Phrase" .
-
-cx:eng_PrepositionalPhrase a rcxn:Construction ;
-    lg:partOfLanguage lg:eng ;
-    links:elementOf cx:comePLUSnoisemannerofmovementVing,
-        cx:deuStdHigh_NP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions,
-        cx:engUsUkWr_EvaluativeAttributionConstruction,
-        cx:eng_AdjectivePhrase ;
-    rcxn:hasTitle "Prepositional Phrase" .
-
 cx:eng_ditransitive_construction_obj_np a rcxn:Construction ;
     cx:hasExample cx:eng_ditransitive_construction_obj_np_Ex_A ;
     lg:partOfLanguage lg:engLME ;
@@ -6764,6 +6898,27 @@ cx:engLME_assaulton a rcxn:Construction ;
     rcxn:hasMetadata cx:engLME_assaulton_MD ;
     rcxn:hasSlots cx:engLME_assaulton_slots ;
     rcxn:hasTitle "assault on" .
+
+cx:eng_AdjectivePhrase a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    links:elementOf cx:engEME_TheFVIconstruction,
+        cx:engLME_AttributeConstructionAttrAdj,
+        cx:engUsUkWr_EvaluativeAttributionConstruction,
+        cx:eng_AdjectiveAttributiveconstruction,
+        cx:eng_AdjectivePredicativeconstruction ;
+    rcxn:hasConstructionMeaning cx:eng_AdjectivePhrase_Meaning ;
+    rcxn:hasMetadata cx:eng_AdjectivePhrase_MD ;
+    rcxn:hasSlots cx:eng_AdjectivePhrase_slots ;
+    rcxn:hasTitle "Adjective Phrase" .
+
+cx:eng_PrepositionalPhrase a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    links:elementOf cx:comePLUSnoisemannerofmovementVing,
+        cx:deuStdHigh_NP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions,
+        cx:engEME_TheFVIconstruction,
+        cx:engUsUkWr_EvaluativeAttributionConstruction,
+        cx:eng_AdjectivePhrase ;
+    rcxn:hasTitle "Prepositional Phrase" .
 
 cx:eng_alotofPLUSNconstruction a rcxn:Construction ;
     cx:hasExample cx:eng_alotofPLUSNconstruction_Ex_A,
@@ -6878,6 +7033,7 @@ cx:deu_AusdemAErmelschuettelnconstruction a rcxn:Construction ;
 cx:eng_Verb a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
     links:elementOf cx:comePLUSnoisemannerofmovementVing,
+        cx:engEME_TheFVIconstruction,
         cx:engLME_Argumentstructureconstruction,
         cx:engLME_AttributeConstructionAttrAdj,
         cx:engLME_Ditransitiveconstruction,
@@ -6905,6 +7061,22 @@ cx:deu_XaufY a rcxn:Construction ;
     rcxn:hasMetadata cx:deu_XaufY_MD ;
     rcxn:hasSlots cx:deu_XaufY_slots ;
     rcxn:hasTitle "X auf Y" .
+
+cx:engEME_TheFVIconstruction a rcxn:Construction ;
+    cx:hasExample cx:engEME_TheFVIconstruction_Ex_A,
+        cx:engEME_TheFVIconstruction_Ex_B ;
+    lg:partOfLanguage lg:engEME ;
+    links:inheritedBy cx:eng_LocativeFullVerbInversion,
+        cx:eng_TemporalFullVerbInversion ;
+    links:inheritsFrom cx:eng_ArgumentStructureConstruction,
+        cx:eng_InversionConstruction ;
+    links:similarFormDifferentFunction cx:PresentativeInversion,
+        cx:SubjectAuxiliaryInversion ;
+    links:similarFormSimilarFunction cx:QuotativeInversion ;
+    rcxn:hasConstructionMeaning cx:engEME_TheFVIconstruction_Meaning ;
+    rcxn:hasMetadata cx:engEME_TheFVIconstruction_MD ;
+    rcxn:hasSlots cx:engEME_TheFVIconstruction_slots ;
+    rcxn:hasTitle "The FVI construction" .
 
 cx:gmh12C_PräfixverbkonstruktionHandlung a rcxn:Construction ;
     cx:hasExample cx:gmh12C_PräfixverbkonstruktionHandlung_Ex_A,
@@ -6958,6 +7130,7 @@ cx:deu_NounPhrase a rcxn:Construction ;
 cx:eng_NounPhrase a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
     links:elementOf cx:comePLUSnoisemannerofmovementVing,
+        cx:engEME_TheFVIconstruction,
         cx:engLME_AttributeConstructionAttrAdj,
         cx:engLME_GIVEOUTVerbParticleConstruction,
         cx:engLME_assassinationattempton,
