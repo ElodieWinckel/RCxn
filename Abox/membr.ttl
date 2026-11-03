@@ -570,7 +570,12 @@ membr:Project_Tzimas a rsrch:Project ;
     rsrch:projectName "Subject-inversion throughout Early Modern English: changing relations in individual and communal constructions"@en .
 
 membr:Project_Weigelt a rsrch:Project ;
+    rsrch:hasFindings membr:Project_Weigelt_F2610211337 ;
     rsrch:projectName "Project Weigelt"@en .
+
+membr:Project_Weigelt_F2610211337 a rsrch:Finding ;
+    RDFS:label "Attaching {los} to a base verb marks ingressive aspect in Present Day German. {los} has marked ingressive aspect in base verbs since Early New High German. The construction further marks agentiveness, and requires an AGENS as argument role. The Argument Structure is monovalent/intransitive." ;
+    rsrch:basedOn cx:deuStdHigh_losingressiveconstruction .
 
 membr:Project_Winckel a rsrch:Project ;
     rsrch:hasFindings membr:Project_Winckel_F2511281100 ;
