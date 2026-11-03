@@ -1,0 +1,93 @@
+@prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cx: <http://example.org/cx/> .
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterm: <http://purl.org/dc/terms/> .
+@prefix evid: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/evid#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
+@prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
+@prefix olia: <http://purl.org/olia/olia.owl#> .
+@prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix references: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/references#> .
+@prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+membr:Project_Senger rsrch:hasResearchQuestion membr:Project_Senger_2610301632 .
+
+cx:engUsSpo_XissoNP a rcxn:Construction ;
+    cx:hasExample cx:engUsSpo_XissoNP_Ex_A,
+        cx:engUsSpo_XissoNP_Ex_B ;
+    cx:hasIntonation "The modifier must receive the highest pitch accent (Gaston 2011) " ;
+    lg:partOfLanguage lg:engUsSpo ;
+    rcxn:hasConstructionMeaning cx:engUsSpo_XissoNP_Meaning ;
+    rcxn:hasMetadata cx:engUsSpo_XissoNP_MD ;
+    rcxn:hasSlots cx:engUsSpo_XissoNP_slots ;
+    rcxn:hasTitle "X is so NP" .
+
+cx:engUsSpo_XissoNP_1 a rcxn:SlotObligatory ;
+    cx:WordOrder "precedes element 2" ;
+    olia:hasSemanticRole olia:ThemeRole ;
+    rcxn:hasSyntacticFunction "Subject" .
+
+cx:engUsSpo_XissoNP_2 a rcxn:SlotObligatory ;
+    cx:WordOrder "follows element 1, precedes element 3" ;
+    cx:hasIndex cx:engUsSpo_XissoNP_2_Index .
+
+cx:engUsSpo_XissoNP_2_Index a cx:Event ;
+    olia:hasTense olia:NotTemporallyAnchored .
+
+cx:engUsSpo_XissoNP_3 a rcxn:SlotObligatory ;
+    cx:WordOrder "follows element 2, precedes element 4" ;
+    rcxn:hasSyntacticFunction "Modifier" .
+
+cx:engUsSpo_XissoNP_4 a rcxn:SlotObligatory ;
+    cx:WordOrder "follows element 4" ;
+    RDFS:comment "Behaves as a gradient category between noun and adjective (Gonzálvez-García 2014: 279)" ;
+    rcxn:hasSyntacticFunction "Object" .
+
+cx:engUsSpo_XissoNP_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "I love it! [It]1 [’s]2 [so]3 [college]4. " ;
+    cx:hasText "I love it! It ’s so college. " ;
+    RDFS:comment "(Live with Regis and Kelly, KABC, 2009-08-06)" .
+
+cx:engUsSpo_XissoNP_Ex_B a cx:Example ;
+    cx:hasAnnotatedText "[You]1 [’re]2 [so]3 [glass half full today]4. " ;
+    cx:hasText "You ’re so glass half full today. " ;
+    RDFS:comment "(Live with Regis and Kelly, KABC, 2009-10-19)" .
+
+cx:engUsSpo_XissoNP_MD a rcxn:Metadata ;
+    dcterm:created "2026-10-30"^^xsd:date ;
+    dcterm:references cx:engUsSpo_XissoNP_Sources ;
+    rcxn:annotator membr:Senger .
+
+cx:engUsSpo_XissoNP_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "The characteristics of [something or someone]4 are attributed to [something or someone]1 in an intensified way. " .
+
+cx:engUsSpo_XissoNP_Sources a dcmitype:Collection ;
+    dcterm:hasPart references:39b87c34-6766-4f64-9f87-7c249430e507,
+        references:6f78a661-06f2-4b44-89ce-c5f4bccdabba,
+        references:bac2aff4-3cd4-4198-8f28-0ce2a5c8eff1 .
+
+cx:engUsSpo_XissoNP_slots a rdf:Seq ;
+    rdf:_1 cx:engUsSpo_XissoNP_1 ;
+    rdf:_2 cx:engUsSpo_XissoNP_2 ;
+    rdf:_3 cx:engUsSpo_XissoNP_3 ;
+    rdf:_4 cx:engUsSpo_XissoNP_4 .
+
+membr:Project_Senger_2610301632_F2610301632 a rsrch:Finding ;
+    RDFS:label "(provisional) In American English, the frequency of some of the so-called “GenX so” constructions seem to be declining continuously (Stange 2023). The findings of the project are expected to show how the linguistic behaviour of an individual speaker develops over time in relation to this observed community-level change, and to provide more detailed insights into patterns of age-grading, lifespan change, and retrograde change in the linguistic individual." ;
+    rsrch:basedOn cx:engUsSpo_XissoNP .
+
+membr:Senger foaf:currentProject membr:Project_Senger_2610301632 .
+
+references:39b87c34-6766-4f64-9f87-7c249430e507 evid:biblio "Gaston, Phoebe. 2011. Drama SO. Yale Grammatical Diversity Project: English in North America. (Available online at http://ygdp.yale.edu/phenomena/drama-so. Accessed on 2026-10-30). Updated by Tom McCoy (2015) and Katie Martin (2018)." .
+
+references:6f78a661-06f2-4b44-89ce-c5f4bccdabba evid:biblio "Stange, Ulrike. 2020. “Holding Grudges Is So Last Century”: The Use of GenX So as a Modifier of Noun Phrases. Journal of English Linguistics 48(2), 107–136." .
+
+references:bac2aff4-3cd4-4198-8f28-0ce2a5c8eff1 evid:biblio "Gonzálvez-García, Francisco. 2014. “That’s so a construction!” Some reflections on innovative uses of “so” in Present-day English. In María De Los Ángeles Gómez González, Francisco José Ruiz De Mendoza Ibáñez, Francisco Gonzálvez-García & Angela Downing (eds.), Theory and Practice in Functional-Cognitive Space (Studies in Functional and Structural Linguistics), vol. 68, 271–294. Amsterdam: John Benjamins Publishing Company." .
+
+membr:Project_Senger_2610301632 a rsrch:Project ;
+    rsrch:hasFindings membr:Project_Senger_2610301632_F2610301632 ;
+    rsrch:projectName "How does the linguistic behaviour of an individual speaker develop over time and how do such individual trajectories relate to community-level patterns of variation and change?" .
+

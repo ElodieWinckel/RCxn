@@ -216,7 +216,8 @@ membr:Schmechel a FOAF:Person ;
     FOAF:homepage <https://www.cxg.phil.fau.eu/person/dennis-schmechel/> .
 
 membr:Senger a FOAF:Person ;
-    FOAF:currentProject membr:Project_Senger ;
+    FOAF:currentProject membr:Project_Senger,
+        membr:Project_Senger_2610301632 ;
     FOAF:familyName "Senger" ;
     FOAF:givenName "Lena" ;
     FOAF:homepage <https://www.cxg.phil.fau.eu/person/lena-senger/> .
@@ -559,7 +560,12 @@ membr:Project_Schmechel_2610160927_F2610160927 a rsrch:Finding ;
     rsrch:basedOn cx:ang_Changeofstateconstruction .
 
 membr:Project_Senger a rsrch:Project ;
-    rsrch:projectName "Project Senger"@en .
+    rsrch:hasResearchQuestion membr:Project_Senger_2610301632 ;
+    rsrch:projectName "Individual language change across the lifespan"@en .
+
+membr:Project_Senger_2610301632_F2610301632 a rsrch:Finding ;
+    RDFS:label "(provisional) In American English, the frequency of some of the so-called “GenX so” constructions seem to be declining continuously (Stange 2023). The findings of the project are expected to show how the linguistic behaviour of an individual speaker develops over time in relation to this observed community-level change, and to provide more detailed insights into patterns of age-grading, lifespan change, and retrograde change in the linguistic individual." ;
+    rsrch:basedOn cx:engUsSpo_XissoNP .
 
 membr:Project_Stampfer a rsrch:Project ;
     rsrch:projectName "Semantically related argument structures in the history of English"@en .
@@ -632,6 +638,10 @@ membr:Project_Khanoub_2610191625 a rsrch:Project ;
 membr:Project_Schmechel_2610160927 a rsrch:Project ;
     rsrch:hasFindings membr:Project_Schmechel_2610160927_F2610160927 ;
     rsrch:projectName "Which metaphorical uses has the OE preposition 'to' developed?" .
+
+membr:Project_Senger_2610301632 a rsrch:Project ;
+    rsrch:hasFindings membr:Project_Senger_2610301632_F2610301632 ;
+    rsrch:projectName "How does the linguistic behaviour of an individual speaker develop over time and how do such individual trajectories relate to community-level patterns of variation and change?" .
 
 membr:Project_Winckel_2601131454 a rsrch:Project ;
     rsrch:hasFindings membr:Project_Winckel_2601131454_F2601131454 ;

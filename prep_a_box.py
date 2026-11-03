@@ -237,7 +237,7 @@ def create_abox_from_submissions():
              "https://www.cxg.phil.fau.eu/person/dennis-schmechel/")
     add_user("Senger",
              "Lena",
-             "Project Senger",
+             "Individual language change across the lifespan",
              "https://www.cxg.phil.fau.eu/person/lena-senger/")
     add_user("Stampfer",
              "Veronika",

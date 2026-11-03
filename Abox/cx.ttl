@@ -172,6 +172,16 @@ cx:engLME_SuperlativeConstruction a rcxn:Construction ;
 cx:engLME_Transitiveconstruction_2_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_Verb .
 
+cx:engUsSpo_XissoNP a rcxn:Construction ;
+    cx:hasExample cx:engUsSpo_XissoNP_Ex_A,
+        cx:engUsSpo_XissoNP_Ex_B ;
+    cx:hasIntonation "The modifier must receive the highest pitch accent (Gaston 2011) " ;
+    lg:partOfLanguage lg:engUsSpo ;
+    rcxn:hasConstructionMeaning cx:engUsSpo_XissoNP_Meaning ;
+    rcxn:hasMetadata cx:engUsSpo_XissoNP_MD ;
+    rcxn:hasSlots cx:engUsSpo_XissoNP_slots ;
+    rcxn:hasTitle "X is so NP" .
+
 cx:eng_CauseMotionconstruction_2_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_Verb .
 
@@ -3002,6 +3012,56 @@ cx:engUsSpo_Hadituptoherewithphysicalheightgesture_slots a RDF:Seq ;
     RDF:_1 cx:engUsSpo_Hadituptoherewithphysicalheightgesture_1 ;
     RDF:_2 cx:engUsSpo_Hadituptoherewithphysicalheightgesture_2 ;
     RDF:_3 cx:engUsSpo_Hadituptoherewithphysicalheightgesture_3 .
+
+cx:engUsSpo_XissoNP_1 a rcxn:SlotObligatory ;
+    cx:WordOrder "precedes element 2" ;
+    olia:hasSemanticRole olia:ThemeRole ;
+    rcxn:hasSyntacticFunction "Subject" .
+
+cx:engUsSpo_XissoNP_2 a rcxn:SlotObligatory ;
+    cx:WordOrder "follows element 1, precedes element 3" ;
+    cx:hasIndex cx:engUsSpo_XissoNP_2_Index .
+
+cx:engUsSpo_XissoNP_2_Index a cx:Event ;
+    olia:hasTense olia:NotTemporallyAnchored .
+
+cx:engUsSpo_XissoNP_3 a rcxn:SlotObligatory ;
+    cx:WordOrder "follows element 2, precedes element 4" ;
+    rcxn:hasSyntacticFunction "Modifier" .
+
+cx:engUsSpo_XissoNP_4 a rcxn:SlotObligatory ;
+    cx:WordOrder "follows element 4" ;
+    RDFS:comment "Behaves as a gradient category between noun and adjective (Gonzálvez-García 2014: 279)" ;
+    rcxn:hasSyntacticFunction "Object" .
+
+cx:engUsSpo_XissoNP_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "I love it! [It]1 [’s]2 [so]3 [college]4. " ;
+    cx:hasText "I love it! It ’s so college. " ;
+    RDFS:comment "(Live with Regis and Kelly, KABC, 2009-08-06)" .
+
+cx:engUsSpo_XissoNP_Ex_B a cx:Example ;
+    cx:hasAnnotatedText "[You]1 [’re]2 [so]3 [glass half full today]4. " ;
+    cx:hasText "You ’re so glass half full today. " ;
+    RDFS:comment "(Live with Regis and Kelly, KABC, 2009-10-19)" .
+
+cx:engUsSpo_XissoNP_MD a rcxn:Metadata ;
+    DCTERMS:created "2026-10-30"^^xsd:date ;
+    DCTERMS:references cx:engUsSpo_XissoNP_Sources ;
+    rcxn:annotator membr:Senger .
+
+cx:engUsSpo_XissoNP_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "The characteristics of [something or someone]4 are attributed to [something or someone]1 in an intensified way. " .
+
+cx:engUsSpo_XissoNP_Sources a dcmitype:Collection ;
+    DCTERMS:hasPart references:39b87c34-6766-4f64-9f87-7c249430e507,
+        references:6f78a661-06f2-4b44-89ce-c5f4bccdabba,
+        references:bac2aff4-3cd4-4198-8f28-0ce2a5c8eff1 .
+
+cx:engUsSpo_XissoNP_slots a RDF:Seq ;
+    RDF:_1 cx:engUsSpo_XissoNP_1 ;
+    RDF:_2 cx:engUsSpo_XissoNP_2 ;
+    RDF:_3 cx:engUsSpo_XissoNP_3 ;
+    RDF:_4 cx:engUsSpo_XissoNP_4 .
 
 cx:engUsUkWr_EvaluativeAttributionConstruction_1 a rcxn:SlotOptional ;
     rcxn:hasOtherSemanticContribution "Attributor" ;
