@@ -204,7 +204,8 @@ membr:Rastegar a FOAF:Person ;
     FOAF:homepage <https://www.cxg.phil.fau.eu/person/aria-rastegar/> .
 
 membr:Rohwedder a FOAF:Person ;
-    FOAF:currentProject membr:Project_Rohwedder ;
+    FOAF:currentProject membr:Project_Rohwedder,
+        membr:Project_Rohwedder_2611021659 ;
     FOAF:familyName "Rohwedder" ;
     FOAF:givenName "Paul" ;
     FOAF:homepage <https://www.cxg.phil.fau.eu/person/paul-rohwedder/> .
@@ -560,7 +561,12 @@ membr:Project_Rastegar a rsrch:Project ;
     rsrch:projectName "Representation and acquisition of idiomatic constructions in L1 and L2 learners"@en .
 
 membr:Project_Rohwedder a rsrch:Project ;
+    rsrch:hasResearchQuestion membr:Project_Rohwedder_2611021659 ;
     rsrch:projectName "Project Rohwedder"@en .
+
+membr:Project_Rohwedder_2611021659_F2611021659 a rsrch:Finding ;
+    RDFS:label "The quotative conditional \"Wenn Sie sagen X dann Y\" schema that has been analysed by Buck & Schopf (2021) as part of an animated speech pattern that can help simulate the argumentation towards a medical decision can indeed serve different (but ultimately related) purposes in doctor-patient interactions. It is usually used by the doctor to yield authority to the patient and simultaneously clarify the implications of the patient's perceived stance from the medical point of view. Depending on how the quote relates to previous sequences, the whole utterance may either target epistemic authority, usually being of a more reflective and evaluative character, or deontic authority, with a more forward-oriented character, highlighting and possibly challenging the patient's perceived stance." ;
+    rsrch:basedOn cx:deuNHD_QuotativeconditionalWennSiesagenXdannY .
 
 membr:Project_Schmechel a rsrch:Project ;
     rsrch:hasResearchQuestion membr:Project_Schmechel_2610160927 ;
@@ -654,6 +660,10 @@ membr:Project_Khanoub_2610141629 a rsrch:Project ;
 membr:Project_Khanoub_2610191625 a rsrch:Project ;
     rsrch:hasFindings membr:Project_Khanoub_2610191625_F2610191625 ;
     rsrch:projectName "How did the binominal quantifier (a) lot(s) of develop into a general quantifier, and how has its role within the English quantifier system changed over time?" .
+
+membr:Project_Rohwedder_2611021659 a rsrch:Project ;
+    rsrch:hasFindings membr:Project_Rohwedder_2611021659_F2611021659 ;
+    rsrch:projectName "How is patient agency negotiated with linguistic means in doctor-patient interaction?" .
 
 membr:Project_Schmechel_2610160927 a rsrch:Project ;
     rsrch:hasFindings membr:Project_Schmechel_2610160927_F2610160927 ;
