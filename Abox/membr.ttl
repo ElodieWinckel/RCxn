@@ -24,7 +24,8 @@ membr:Bayer a FOAF:Person ;
     FOAF:homepage <https://www.cxg.phil.fau.eu/person/nadine-bayer/> .
 
 membr:BenitoFernandez a FOAF:Person ;
-    FOAF:currentProject membr:Project_BenitoFernandez ;
+    FOAF:currentProject membr:Project_BenitoFernandez,
+        membr:Project_BenitoFernandez_2610301550 ;
     FOAF:familyName "Benito Fernandez" ;
     FOAF:givenName "Elba" ;
     FOAF:homepage <https://www.cxg.phil.fau.eu/person/elba-benito-fernandez/> .
@@ -272,7 +273,12 @@ membr:Project_Bayer_2602251146_F2602251146 a rsrch:Finding ;
     rsrch:basedOn cx:arzCai_Ditransitiveconstruction .
 
 membr:Project_BenitoFernandez a rsrch:Project ;
+    rsrch:hasResearchQuestion membr:Project_BenitoFernandez_2610301550 ;
     rsrch:projectName "Spanish quotative constructions in oral narratives — an Interactional Construction Grammar approach"@en .
+
+membr:Project_BenitoFernandez_2610301550_F2610301550 a rsrch:Finding ;
+    RDFS:label "" ;
+    rsrch:basedOn cx:spa_Decirquotativeconstruction .
 
 membr:Project_Blake a rsrch:Project ;
     rsrch:projectName "Project Blake"@en .
@@ -605,6 +611,10 @@ membr:Project_Wright a rsrch:Project ;
 membr:Project_Bayer_2602251146 a rsrch:Project ;
     rsrch:hasFindings membr:Project_Bayer_2602251146_F2602251146 ;
     rsrch:projectName "Recipient marking in Cairo Arabic" .
+
+membr:Project_BenitoFernandez_2610301550 a rsrch:Project ;
+    rsrch:hasFindings membr:Project_BenitoFernandez_2610301550_F2610301550 ;
+    rsrch:projectName "Is stance encoded in the constructional representation of quotative constructions?" .
 
 membr:Project_Hutta_2610271233 a rsrch:Project ;
     rsrch:hasFindings membr:Project_Hutta_2610271233_F2610271233 ;

@@ -5122,6 +5122,109 @@ cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_slots a RDF:Seq ;
     RDF:_4 cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_4 ;
     RDF:_5 cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_5 .
 
+cx:spa_Decirquotativeconstruction_1 a rcxn:SlotOptional ;
+    cx:WordOrder "may precede element 2 or follow element 3" ;
+    cx:hasIndex cx:spa_Decirquotativeconstruction_1_Index ;
+    olia:hasSemanticRole olia:AgentRole,
+        olia:ExperiencerRole ;
+    rcxn:hasSyntacticFunction "subject" .
+
+cx:spa_Decirquotativeconstruction_1_Index a cx:Individual ;
+    olia:hasAnimacy olia:Animate .
+
+cx:spa_Decirquotativeconstruction_2 a rcxn:SlotOptional ;
+    cx:WordOrder "precedes element 3" ;
+    cx:hasIndex cx:spa_Decirquotativeconstruction_2_Index ;
+    RDFS:comment "This element can only occur in speech reporting contexts, not in thought reporting ones. " ;
+    rcxn:hasOtherSemanticContribution "Pacient" ;
+    rcxn:hasSlotForm cx:spa_Decirquotativeconstruction_2_Form ;
+    rcxn:hasSyntacticFunction "Indirect object" .
+
+cx:spa_Decirquotativeconstruction_2_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:spa_Pronoun .
+
+cx:spa_Decirquotativeconstruction_2_Index a cx:Individual ;
+    olia:hasAnimacy olia:Animate .
+
+cx:spa_Decirquotativeconstruction_3 a rcxn:SlotObligatory ;
+    cx:WordOrder "may precede or follow element 1" ;
+    rcxn:hasSlotForm cx:spa_Decirquotativeconstruction_3_Form .
+
+cx:spa_Decirquotativeconstruction_3_Form a rcxn:SlotForm ;
+    rcxn:hasStem cx:spa_decir .
+
+cx:spa_Decirquotativeconstruction_4 a rcxn:SlotOptional ;
+    cx:WordOrder "follows element 3" ;
+    cx:hasIndex cx:spa_Decirquotativeconstruction_4_Index ;
+    RDFS:comment "This element can only occur in speech reporting contexts, not in thought reporting ones. " ;
+    rcxn:hasOtherSemanticContribution "Patient" ;
+    rcxn:hasSlotForm cx:spa_Decirquotativeconstruction_4_Form ;
+    rcxn:hasSyntacticFunction "Indirect Object" .
+
+cx:spa_Decirquotativeconstruction_4_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:spa_aPLUSNounPhrase .
+
+cx:spa_Decirquotativeconstruction_4_Index a cx:Individual ;
+    olia:hasAnimacy olia:Animate .
+
+cx:spa_Decirquotativeconstruction_5 a rcxn:SlotObligatory ;
+    cx:WordOrder "follows element 4" ;
+    olia:hasSemanticRole olia:ThemeRole ;
+    rcxn:hasSyntacticFunction "direct object" .
+
+cx:spa_Decirquotativeconstruction_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "[Mi hermana]1 [me]2 [dice]3: [\"prepárate que así el cielo blanco y oscuro va a estar todo el año.\"]5" ;
+    cx:hasGlosses "My sister to me says get ready because the sky’s going to be white and dark all year round" ;
+    cx:hasText "Mi hermana me dice: \"prepárate que así el cielo blanco y oscuro va a estar todo el año.\"" ;
+    cx:hasTranslation "My sister tells me, \"Get ready, because the sky’s going to be white and dark all year round.\"" .
+
+cx:spa_Decirquotativeconstruction_Ex_B a cx:Example ;
+    cx:hasAnnotatedText "[Le]2 [digo]3 [a mi esposo]4: [\"yo llego al hospital, ahí te veo.\"]5" ;
+    cx:hasGlosses "to.him say to my husband 'll get to the hospital I'll see you there" ;
+    cx:hasText "Le digo a mi esposo: \"yo llego al hospital, ahí te veo.\"" ;
+    cx:hasTranslation "I tell my husband: ‘I'll get to the hospital, I'll see you there.’" .
+
+cx:spa_Decirquotativeconstruction_Ex_C a cx:Example ;
+    cx:hasAnnotatedText "Encontré una ginecóloga que habla español y entonces [dije]3: [\"yo voy con la que habla español.\"]5" ;
+    cx:hasText "Encontré una ginecóloga que habla español y entonces dije: \"yo voy con la que habla español.\"" ;
+    cx:hasTranslation "I found a gynaecologist who speaks Spanish so I thought, ‘I’ll go to the one who speaks Spanish.’" ;
+    cx:hasTransliteration "Found a gynaecologist who speaks Spanish so say I’ll go to the one who speaks Spanish." .
+
+cx:spa_Decirquotativeconstruction_Ex_D a cx:Example ;
+    cx:hasAnnotatedText "[Me]2 [dijeron]3: [\"Número de placa\"]5" ;
+    cx:hasGlosses "to.me say number of plate" ;
+    cx:hasText "Me dijeron: \"Número de placa\"" ;
+    cx:hasTranslation "They said, \"Plate number\"" .
+
+cx:spa_Decirquotativeconstruction_MD a rcxn:Metadata ;
+    DCTERMS:created "2026-10-30"^^xsd:date ;
+    DCTERMS:references cx:spa_Decirquotativeconstruction_Sources ;
+    rcxn:annotator membr:BenitoFernandez .
+
+cx:spa_Decirquotativeconstruction_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "[somebody]1 says or thinks [something]3" .
+
+cx:spa_Decirquotativeconstruction_Sources a dcmitype:Collection ;
+    DCTERMS:hasPart references:0f16a490-fab7-4e81-be49-7112817d5831,
+        references:4e7834c3-5cae-4515-aa2a-ab3da677f171 .
+
+cx:spa_Decirquotativeconstruction_slots a RDF:Seq ;
+    RDF:_1 cx:spa_Decirquotativeconstruction_1 ;
+    RDF:_2 cx:spa_Decirquotativeconstruction_2 ;
+    RDF:_3 cx:spa_Decirquotativeconstruction_3 ;
+    RDF:_4 cx:spa_Decirquotativeconstruction_4 ;
+    RDF:_5 cx:spa_Decirquotativeconstruction_5 .
+
+cx:spa_Pronoun a rcxn:Construction ;
+    lg:partOfLanguage lg:spa ;
+    links:elementOf cx:spa_Decirquotativeconstruction ;
+    rcxn:hasMetadata cx:spa_Pronoun_MD ;
+    rcxn:hasTitle "Pronoun" .
+
+cx:spa_Pronoun_MD a rcxn:Metadata ;
+    DCTERMS:created "2026-10-30"^^xsd:date ;
+    rcxn:annotator membr:BenitoFernandez .
+
 cx:spa_Relativizer a rcxn:Construction ;
     lg:partOfLanguage lg:spa ;
     links:elementOf cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause ;
@@ -5132,10 +5235,30 @@ cx:spa_Verb a rcxn:Construction ;
     links:elementOf cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause ;
     rcxn:hasTitle "Verb" .
 
+cx:spa_aPLUSNounPhrase a rcxn:Construction ;
+    lg:partOfLanguage lg:spa ;
+    links:elementOf cx:spa_Decirquotativeconstruction ;
+    rcxn:hasMetadata cx:spa_aPLUSNounPhrase_MD ;
+    rcxn:hasTitle "a + Noun Phrase" .
+
+cx:spa_aPLUSNounPhrase_MD a rcxn:Metadata ;
+    DCTERMS:created "2026-10-30"^^xsd:date ;
+    rcxn:annotator membr:BenitoFernandez .
+
 cx:spa_aPLUSarticle a rcxn:Construction ;
     lg:partOfLanguage lg:spa ;
     links:elementOf cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause ;
     rcxn:hasTitle "a + article" .
+
+cx:spa_decir a rcxn:Construction ;
+    lg:partOfLanguage lg:spa ;
+    links:elementOf cx:spa_Decirquotativeconstruction ;
+    rcxn:hasMetadata cx:spa_decir_MD ;
+    rcxn:hasTitle "decir" .
+
+cx:spa_decir_MD a rcxn:Metadata ;
+    DCTERMS:created "2026-10-30"^^xsd:date ;
+    rcxn:annotator membr:BenitoFernandez .
 
 cx:spa_objectrelativeclause a rcxn:Construction ;
     lg:partOfLanguage lg:spa ;
@@ -5866,6 +5989,17 @@ cx:lzh_Dooperationwithoperand1onoperand2construction a rcxn:Construction ;
     rcxn:hasMetadata cx:lzh_Dooperationwithoperand1onoperand2construction_MD ;
     rcxn:hasSlots cx:lzh_Dooperationwithoperand1onoperand2construction_slots ;
     rcxn:hasTitle "Do operation with operand1 on operand2 construction" .
+
+cx:spa_Decirquotativeconstruction a rcxn:Construction ;
+    cx:hasExample cx:spa_Decirquotativeconstruction_Ex_A,
+        cx:spa_Decirquotativeconstruction_Ex_B,
+        cx:spa_Decirquotativeconstruction_Ex_C,
+        cx:spa_Decirquotativeconstruction_Ex_D ;
+    lg:partOfLanguage lg:spa ;
+    rcxn:hasConstructionMeaning cx:spa_Decirquotativeconstruction_Meaning ;
+    rcxn:hasMetadata cx:spa_Decirquotativeconstruction_MD ;
+    rcxn:hasSlots cx:spa_Decirquotativeconstruction_slots ;
+    rcxn:hasTitle "Decir quotative construction" .
 
 cx:engInf_coolasadmirableconstruction a rcxn:Construction ;
     cx:hasExample cx:engInf_coolasadmirableconstruction_Ex_A,
