@@ -39,8 +39,6 @@ references:1495247b-1525-45be-9a55-c6fd421547bf evid:biblio "Dammel, Antje & Seb
 
 references:1d894fdc-b0b7-47e4-80ee-98eda82340cf evid:biblio "Birner, Betty. 1994. Information Status and Word Order: An Analysis of English Inversion. Language 70(2). 233–259. https://doi.org/10.2307/415828." .
 
-references:3123c19c-3f37-43ae-9471-d753fdd7839c evid:biblio "Woidich, Manfred. 2006. Das Kairensisch-Arabische. Eine Grammatik. Wiesbaden: Harrassowitz." .
-
 references:34c997b5-ef0f-4a6b-9acb-63f34659318d evid:biblio "constructicon. Belgian Journal of Linguistics, 34:5–16." .
 
 references:3511453c-d7c8-4218-956c-ad4e6d90a32b evid:biblio "University of Oslo. (n.d.). Quran. Bibliotheca Polyglotta. https://polyglotta.uio.no/index.php?page=volume&vid=51" .
@@ -97,6 +95,8 @@ references:7e9ff2c5-bddb-4bca-8410-f9e0e3c46cf6_5 evid:biblio "Traugott, Elizabe
 
 references:8440be44-e7bb-4219-ae21-3ba91bc4696b evid:biblio "Llompart, Miquel, Sara Fernández Santos & Ewa Dąbrowska. 2025. Comprehension of object relatives in Spanish: the role of frequency and transparency in acquisition and adult grammar. Cognitive Linguistics 36(1). 31–57. https://doi.org/10.1515/cog-2024-0016." .
 
+references:881a7fb6-c1ad-4d94-b5e1-fa32629bbd99 evid:biblio "Diem, Werner. 2002. Translokative Verben im Arabischen. Wiesbaden: Harrassowitz." .
+
 references:8991a2c6-5ff5-43b4-9d91-939c06413083_1 evid:biblio "Aarts, B. (1998). Binominal noun phrases in English. Transactions of the Philological Society, 96(1), 117–158. https://doi.org/10.1111/1467-968X.00025" .
 
 references:8991a2c6-5ff5-43b4-9d91-939c06413083_2 evid:biblio "Brems, L. (2010). Size noun constructions as collocationally constrained constructions: Lexical and grammaticalized uses. English Language & Linguistics, 14(1), 83–109. https://doi.org/10.1017/S1360674309990372" .
@@ -115,13 +115,13 @@ references:94abbfc2-e6af-4334-9fa0-be7030bf0b89 evid:biblio "Chen, Rong. 2003. E
 
 references:96afcaf4-8f09-4170-b25a-95129a83d59d evid:biblio "Birner, Betty J. & Gregory Ward. 1998. Information Status and Noncanonical Word Order in English. Amsterdam: John Benjamins Publishing Company. https://doi.org/10.1075/slcs.40." .
 
+references:9bd02e11-eb36-4f54-a736-c845099f2894 evid:biblio "Woidich, Manfred. 2006. Das Kairensisch-Arabische. Eine Grammatik. Wiesbaden: Harrassowitz." .
+
 references:b9786f4a-5c7f-4d95-8549-dc2487786ff7 evid:biblio "Colleman, T. (2009). The semantic range of the Dutch double object construction: A collostructional perspective. Constructions and Frames, 1(2), 190-220." .
 
 references:bac2aff4-3cd4-4198-8f28-0ce2a5c8eff1 evid:biblio "Gonzálvez-García, Francisco. 2014. “That’s so a construction!” Some reflections on innovative uses of “so” in Present-day English. In María De Los Ángeles Gómez González, Francisco José Ruiz De Mendoza Ibáñez, Francisco Gonzálvez-García & Angela Downing (eds.), Theory and Practice in Functional-Cognitive Space (Studies in Functional and Structural Linguistics), vol. 68, 271–294. Amsterdam: John Benjamins Publishing Company." .
 
 references:bc0c483a-f00d-4a05-aaee-7c42f22dcdb5 evid:biblio "Llompart, Miquel & Ewa Dąbrowska. 2024. Explicit instruction improves the comprehension of Spanish object relatives by young monolingual children. Language and Cognition 16(4). 986–1006. https://doi.org/10.1017/langcog.2023.69." .
-
-references:c3138c0e-1108-404a-96a8-0ade960b6ca4 evid:biblio "Diem, Werner. 2002. Translokative Verben im Arabischen. Wiesbaden: Harrassowitz." .
 
 references:c33e68a9-a0d8-4eb6-800f-eb3d17f0cd9f evid:biblio "Knooihuizen, Remco & Oscar Strik. 2014. Relative productivity potentials of Dutch verbal inflection patterns. Folia Linguistica 35(1). https://doi.org/10.1515/flih.2014.005." .
 

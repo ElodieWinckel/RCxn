@@ -1,0 +1,78 @@
+@prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cx: <http://example.org/cx/> .
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterm: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
+@prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#> .
+@prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
+@prefix olia: <http://purl.org/olia/olia.owl#> .
+@prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+membr:Project_Bayer rsrch:hasResearchQuestion membr:Project_Bayer_2611042245 .
+
+cx:arzCai_Dativeconstruction a rcxn:Construction ;
+    links:similarFormSimilarFunction cx:arzCai_Prepositionaldativeconstruction ;
+    rcxn:hasMetadata cx:arzCai_Dativeconstruction_MD ;
+    rcxn:hasTitle "Dative construction" .
+
+cx:arzCai_Dativeconstruction_MD a rcxn:Metadata ;
+    dcterm:created "2026-11-04"^^xsd:date ;
+    rcxn:annotator membr:Bayer .
+
+cx:arzCai_Ditransitiveconstruction links:similarFormSimilarFunction cx:arzCai_Prepositionaldativeconstruction .
+
+cx:arzCai_Prepositionaldativeconstruction_1 a rcxn:SlotOptional ;
+    cx:WordOrder "Before element 2" ;
+    olia:hasSemanticRole olia:AgentRole .
+
+cx:arzCai_Prepositionaldativeconstruction_2 a rcxn:SlotObligatory ;
+    cx:WordOrder "After element 2, before elements 3 and 4" ;
+    RDFS:comment "colloprofile: idda; ʿallim; nāwil; massik; sallif; labbis; sallim; ḥammil; darris; šammim; fahhim; ḥaffaẓ; nassa; ballaġ; saʾal; fahhim; malla; warra; ḫassaṛ; ġaṛṛam; ʾallaʿ" .
+
+cx:arzCai_Prepositionaldativeconstruction_3 a rcxn:SlotObligatory ;
+    cx:WordOrder "After element 4" ;
+    olia:hasSemanticRole olia:RecipientRole .
+
+cx:arzCai_Prepositionaldativeconstruction_4 a rcxn:SlotObligatory ;
+    cx:WordOrder "After element 2, before element 3" ;
+    olia:hasSemanticRole olia:ThemeRole .
+
+cx:arzCai_Prepositionaldativeconstruction_MD a rcxn:Metadata ;
+    dcterm:created "2026-11-04"^^xsd:date ;
+    dcterm:references cx:arzCai_Prepositionaldativeconstruction_Sources ;
+    rcxn:annotator membr:Bayer .
+
+cx:arzCai_Prepositionaldativeconstruction_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "[Agent]1 causes [theme]4 to move to [recipient]3" .
+
+cx:arzCai_Prepositionaldativeconstruction_Sources a dcmitype:Collection .
+
+cx:arzCai_Prepositionaldativeconstruction_slots a rdf:Seq ;
+    rdf:_1 cx:arzCai_Prepositionaldativeconstruction_1 ;
+    rdf:_2 cx:arzCai_Prepositionaldativeconstruction_2 ;
+    rdf:_3 cx:arzCai_Prepositionaldativeconstruction_3 ;
+    rdf:_4 cx:arzCai_Prepositionaldativeconstruction_4 .
+
+membr:Project_Bayer_2611042245_F2611042245 a rsrch:Finding ;
+    RDFS:label "The prepositional dative construction is used for ditransitive verbs if the recipient is expressed by a full NP, while the theme is pronominal or if both arguments are pronominal. The ditransitive construction cannot be used in these cases. In other constellations the constructions alternate." ;
+    rsrch:basedOn cx:arzCai_Prepositionaldativeconstruction .
+
+membr:Bayer foaf:currentProject membr:Project_Bayer_2611042245 .
+
+membr:Project_Bayer_2611042245 a rsrch:Project ;
+    rsrch:hasFindings membr:Project_Bayer_2611042245_F2611042245 ;
+    rsrch:projectName "In which constellations of the theme's and the recipient's individuation properties is this construction used?" .
+
+cx:arzCai_Prepositionaldativeconstruction a rcxn:Construction ;
+    lg:partOfLanguage lg:arzCai ;
+    links:similarFormSimilarFunction cx:arzCai_Dativeconstruction,
+        cx:arzCai_Ditransitiveconstruction ;
+    rcxn:hasConstructionMeaning cx:arzCai_Prepositionaldativeconstruction_Meaning ;
+    rcxn:hasMetadata cx:arzCai_Prepositionaldativeconstruction_MD ;
+    rcxn:hasSlots cx:arzCai_Prepositionaldativeconstruction_slots ;
+    rcxn:hasTitle "Prepositional dative construction" .
+

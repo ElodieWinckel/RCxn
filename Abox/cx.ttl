@@ -566,68 +566,92 @@ cx:araCla_ComitativeConstruction_slots a RDF:Seq ;
     RDF:_3 cx:araCla_ComitativeConstruction_3 ;
     RDF:_4 cx:araCla_ComitativeConstruction_4 .
 
-cx:arzCai_Ditransitiveconstruction a rcxn:Construction ;
-    cx:hasExample cx:arzCai_Ditransitiveconstruction_Ex_A,
-        cx:arzCai_Ditransitiveconstruction_Ex_B,
-        cx:arzCai_Ditransitiveconstruction_Ex_C ;
-    lg:partOfLanguage lg:arzCai ;
-    links:similarFormSimilarFunction cx:lidativeconstruction ;
-    rcxn:hasConstructionMeaning cx:arzCai_Ditransitiveconstruction_Meaning ;
-    rcxn:hasMetadata cx:arzCai_Ditransitiveconstruction_MD ;
-    rcxn:hasSlots cx:arzCai_Ditransitiveconstruction_slots ;
-    rcxn:hasTitle "Ditransitive construction" .
+cx:arzCai_Dativeconstruction_1 a rcxn:SlotOptional ;
+    cx:WordOrder "Before element 2" ;
+    olia:hasSemanticRole olia:AgentRole .
+
+cx:arzCai_Dativeconstruction_2 a rcxn:SlotObligatory ;
+    cx:WordOrder "After element 2, before elements 3 and 4" ;
+    RDFS:comment "colloprofile: idda; ʿallim; nāwil; massik; sallif; labbis; sallim; ḥammil; darris; šammim; fahhim; ḥaffaẓ; nassa; ballaġ; saʾal; fahhim; malla; warra; ḫassaṛ; ġaṛṛam; ʾallaʿ" .
+
+cx:arzCai_Dativeconstruction_3 a rcxn:SlotObligatory ;
+    cx:WordOrder "After element 2, before element 4" ;
+    olia:hasSemanticRole olia:RecipientRole .
+
+cx:arzCai_Dativeconstruction_4 a rcxn:SlotObligatory ;
+    cx:WordOrder "After elements 2 and 3" ;
+    olia:hasSemanticRole olia:ThemeRole .
+
+cx:arzCai_Dativeconstruction_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "[Leyla]1 [iddit]2 [li-Ḫālid]3 [il-kitāb]4. " ;
+    cx:hasGlosses "Leyla give.3SGF.PERF DAT-Ḫālid the-book " ;
+    cx:hasText "Leyla iddit li-Ḫālid il-kitāb. " ;
+    cx:hasTranslation "Leyla gave Ḫālid the book. " .
+
+cx:arzCai_Dativeconstruction_Ex_B a cx:Example ;
+    cx:hasAnnotatedText "[warrēt]2 [li-s-suwwāḥ]3 [il-matḥaf]4. " ;
+    cx:hasGlosses "show.1SG.PERF DAT-the-tourists the-museum " ;
+    cx:hasText "warrēt li-s-suwwāḥ il-matḥaf. " ;
+    cx:hasTranslation "I showed the tourists the museum. " .
+
+cx:arzCai_Dativeconstruction_Ex_C a cx:Example ;
+    cx:hasAnnotatedText "[labbist]2-[il-hum]3 [il-hidūm il-gidīda]4" ;
+    cx:hasGlosses "dress.1SG.PERF-DAT-3PL the-clothes the-new" ;
+    cx:hasText "labbist-il-hum il-hidūm il-gidīda" ;
+    cx:hasTranslation "I dressed them in the new clothes" .
+
+cx:arzCai_Dativeconstruction_MD a rcxn:Metadata ;
+    DCTERMS:created "2026-11-04"^^xsd:date ;
+    DCTERMS:references cx:arzCai_Dativeconstruction_Sources ;
+    rcxn:annotator membr:Bayer .
+
+cx:arzCai_Dativeconstruction_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "[ÆFFECTOR]1 makes [RECIPIENT]3 receive or lose [ÆFFECTED]4" .
+
+cx:arzCai_Dativeconstruction_Sources a dcmitype:Collection .
+
+cx:arzCai_Dativeconstruction_slots a RDF:Seq ;
+    RDF:_1 cx:arzCai_Dativeconstruction_1 ;
+    RDF:_2 cx:arzCai_Dativeconstruction_2 ;
+    RDF:_3 cx:arzCai_Dativeconstruction_3 ;
+    RDF:_4 cx:arzCai_Dativeconstruction_4 .
 
 cx:arzCai_Ditransitiveconstruction_1 a rcxn:SlotOptional ;
-    cx:WordOrder "Before Element 2" ;
-    cx:hasIndex cx:arzCai_Ditransitiveconstruction_1_Index ;
-    olia:hasSemanticRole olia:AgentRole ;
-    RDFS:comment "Pronominal subjects are only expressed if emphasized" ;
-    rcxn:hasSyntacticFunction "subject" .
-
-cx:arzCai_Ditransitiveconstruction_1_Index a cx:Individual ;
-    olia:hasAnimacy olia:Animate .
+    cx:WordOrder "Before element 2" ;
+    olia:hasSemanticRole olia:AgentRole .
 
 cx:arzCai_Ditransitiveconstruction_2 a rcxn:SlotObligatory ;
-    cx:WordOrder "After Element 1, before Elements 3 and 4" ;
-    RDFS:comment "colloprofile: idda; ʿallim; nāwil; massik; sallif; labbis; sallim; ḥammil; darris; šammim; fahhim; ḥaffaẓ; nassa; ballaġ; saʾal; fahhim; malla; warra; ḫassaṛ; ġaṛṛam; ʾallaʿ" ;
-    rcxn:hasSemanticProperty "Verbs of the four following groups: \"to give\", \"to provide s.o. with sth.\", \"to tell\", \"to withdraw\"" ;
-    rcxn:hasSyntacticFunction "Verb" .
+    cx:WordOrder "After element 2, before elements 3 and 4" ;
+    RDFS:comment "colloprofile: idda; ʿallim; nāwil; massik; sallif; labbis; sallim; ḥammil; darris; šammim; fahhim; ḥaffaẓ; nassa; ballaġ; saʾal; fahhim; malla; warra; ḫassaṛ; ġaṛṛam; ʾallaʿ" .
 
 cx:arzCai_Ditransitiveconstruction_3 a rcxn:SlotObligatory ;
-    cx:WordOrder "After Element 2, before or after Element 4" ;
-    cx:hasIndex cx:arzCai_Ditransitiveconstruction_3_Index ;
-    olia:hasSemanticRole olia:RecipientRole ;
-    RDFS:comment "Obligatorily marked by the preposition/dative marker li- if the theme is pronominal, otherwise marking is optional. " ;
-    rcxn:hasSyntacticFunction "object" .
-
-cx:arzCai_Ditransitiveconstruction_3_Index a cx:Individual ;
-    olia:hasAnimacy olia:Animate .
+    cx:WordOrder "After element 2, before element 4" ;
+    olia:hasSemanticRole olia:RecipientRole .
 
 cx:arzCai_Ditransitiveconstruction_4 a rcxn:SlotObligatory ;
-    cx:WordOrder "After Element 2, before or after Element 3" ;
-    olia:hasSemanticRole olia:ThemeRole ;
-    rcxn:hasSyntacticFunction "Object" .
+    cx:WordOrder "After elements 2 and 3" ;
+    olia:hasSemanticRole olia:ThemeRole .
 
 cx:arzCai_Ditransitiveconstruction_Ex_A a cx:Example ;
-    cx:hasAnnotatedText "[Leyla]1 [iddit]2 [(li-)Ḫālid]3 [il-kitāb]4." ;
-    cx:hasGlosses "Leyla give.3SGF.PERF (to-)Ḫālid the-book" ;
-    cx:hasText "Leyla iddit (li-)Ḫālid il-kitāb." ;
-    cx:hasTranslation "Leyla gave Ḫālid the book." .
+    cx:hasAnnotatedText "[Leyla]1 [iddit]2 [Ḫālid]3 [il-kitāb]4. " ;
+    cx:hasGlosses "Leyla give.3SGF.PERF Ḫālid the-book " ;
+    cx:hasText "Leyla iddit Ḫālid il-kitāb. " ;
+    cx:hasTranslation "Leyla gave Ḫālid the book. " .
 
 cx:arzCai_Ditransitiveconstruction_Ex_B a cx:Example ;
-    cx:hasAnnotatedText "[warrēt]2 [(li-)s-suwwāḥ]3 [il-matḥaf]4." ;
-    cx:hasGlosses "show.1SG.PERF (to-)the-tourists the-museum" ;
-    cx:hasText "warrēt (li-)s-suwwāḥ il-matḥaf" ;
-    cx:hasTranslation "I showed the tourists the museum." .
+    cx:hasAnnotatedText "[warrēt]2 [is-suwwāḥ]3 [il-matḥaf]4. " ;
+    cx:hasGlosses "show.1SG.PERF the-tourists the-museum " ;
+    cx:hasText "warrēt is-suwwāḥ il-matḥaf. " ;
+    cx:hasTranslation "I showed the tourists the museum. " .
 
 cx:arzCai_Ditransitiveconstruction_Ex_C a cx:Example ;
-    cx:hasAnnotatedText "[fahhimti]2-[hā]4-[l-ha]3?" ;
-    cx:hasGlosses "explain.2SGF.PERF-OBJ.3SGF-DAT-OBJ.3SGF" ;
-    cx:hasText "fahhimti-hā-l-ha?" ;
-    cx:hasTranslation "Have you explained it to her?" .
+    cx:hasAnnotatedText "[fahhimtī]2-[ha]3 [il-muškila]4?" ;
+    cx:hasGlosses "explain.2SGF.PERF-OBJ.3SGF the-problem" ;
+    cx:hasText "fahhimtī-ha il-muškila?" ;
+    cx:hasTranslation "Did you explain the problem to her?" .
 
 cx:arzCai_Ditransitiveconstruction_MD a rcxn:Metadata ;
-    DCTERMS:created "2026-02-25"^^xsd:date ;
+    DCTERMS:created "2026-11-04"^^xsd:date ;
     DCTERMS:references cx:arzCai_Ditransitiveconstruction_Sources ;
     rcxn:annotator membr:Bayer .
 
@@ -635,14 +659,46 @@ cx:arzCai_Ditransitiveconstruction_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "[ÆFFECTOR]1 makes [RECIPIENT]3 receive or lose [ÆFFECTED]4" .
 
 cx:arzCai_Ditransitiveconstruction_Sources a dcmitype:Collection ;
-    DCTERMS:hasPart references:3123c19c-3f37-43ae-9471-d753fdd7839c,
-        references:c3138c0e-1108-404a-96a8-0ade960b6ca4 .
+    DCTERMS:hasPart references:881a7fb6-c1ad-4d94-b5e1-fa32629bbd99,
+        references:9bd02e11-eb36-4f54-a736-c845099f2894 .
 
 cx:arzCai_Ditransitiveconstruction_slots a RDF:Seq ;
     RDF:_1 cx:arzCai_Ditransitiveconstruction_1 ;
     RDF:_2 cx:arzCai_Ditransitiveconstruction_2 ;
     RDF:_3 cx:arzCai_Ditransitiveconstruction_3 ;
     RDF:_4 cx:arzCai_Ditransitiveconstruction_4 .
+
+cx:arzCai_Prepositionaldativeconstruction_1 a rcxn:SlotOptional ;
+    cx:WordOrder "Before element 2" ;
+    olia:hasSemanticRole olia:AgentRole .
+
+cx:arzCai_Prepositionaldativeconstruction_2 a rcxn:SlotObligatory ;
+    cx:WordOrder "After element 2, before elements 3 and 4" ;
+    RDFS:comment "colloprofile: idda; ʿallim; nāwil; massik; sallif; labbis; sallim; ḥammil; darris; šammim; fahhim; ḥaffaẓ; nassa; ballaġ; saʾal; fahhim; malla; warra; ḫassaṛ; ġaṛṛam; ʾallaʿ" .
+
+cx:arzCai_Prepositionaldativeconstruction_3 a rcxn:SlotObligatory ;
+    cx:WordOrder "After element 4" ;
+    olia:hasSemanticRole olia:RecipientRole .
+
+cx:arzCai_Prepositionaldativeconstruction_4 a rcxn:SlotObligatory ;
+    cx:WordOrder "After element 2, before element 3" ;
+    olia:hasSemanticRole olia:ThemeRole .
+
+cx:arzCai_Prepositionaldativeconstruction_MD a rcxn:Metadata ;
+    DCTERMS:created "2026-11-04"^^xsd:date ;
+    DCTERMS:references cx:arzCai_Prepositionaldativeconstruction_Sources ;
+    rcxn:annotator membr:Bayer .
+
+cx:arzCai_Prepositionaldativeconstruction_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "[Agent]1 causes [theme]4 to move to [recipient]3" .
+
+cx:arzCai_Prepositionaldativeconstruction_Sources a dcmitype:Collection .
+
+cx:arzCai_Prepositionaldativeconstruction_slots a RDF:Seq ;
+    RDF:_1 cx:arzCai_Prepositionaldativeconstruction_1 ;
+    RDF:_2 cx:arzCai_Prepositionaldativeconstruction_2 ;
+    RDF:_3 cx:arzCai_Prepositionaldativeconstruction_3 ;
+    RDF:_4 cx:arzCai_Prepositionaldativeconstruction_4 .
 
 cx:che_Ergativeconstruction a rcxn:Construction ;
     cx:hasExample cx:che_Ergativeconstruction_Ex_A ;
@@ -5254,16 +5310,6 @@ cx:lat_linkingclicheieinCaesarsandTacitusworks_MD a rcxn:Metadata ;
     DCTERMS:created "2024-11-21"^^xsd:date ;
     rcxn:annotator membr:Trombetta .
 
-cx:lidativeconstruction a rcxn:Construction ;
-    lg:partOfLanguage lg:arzCai ;
-    links:similarFormSimilarFunction cx:arzCai_Ditransitiveconstruction ;
-    rcxn:hasMetadata cx:lidativeconstruction_MD ;
-    rcxn:hasTitle "li-dative construction" .
-
-cx:lidativeconstruction_MD a rcxn:Metadata ;
-    DCTERMS:created "2026-02-25"^^xsd:date ;
-    rcxn:annotator membr:Bayer .
-
 cx:lzh_Dooperationwithoperand1onoperand2construction_1 a rcxn:SlotOptional ;
     cx:WordOrder "Immediately before Element 2" ;
     cx:hasTranslation "with" ;
@@ -6513,6 +6559,39 @@ cx:Noun a rcxn:Construction ;
         cx:eng_GenitiveNPConstruction ;
     rcxn:hasMetadata cx:Noun_MD ;
     rcxn:hasTitle "Noun" .
+
+cx:arzCai_Dativeconstruction a rcxn:Construction ;
+    cx:hasExample cx:arzCai_Dativeconstruction_Ex_A,
+        cx:arzCai_Dativeconstruction_Ex_B,
+        cx:arzCai_Dativeconstruction_Ex_C ;
+    lg:partOfLanguage lg:arzCai ;
+    links:similarFormSameFunction cx:arzCai_Ditransitiveconstruction ;
+    links:similarFormSimilarFunction cx:arzCai_Prepositionaldativeconstruction ;
+    rcxn:hasConstructionMeaning cx:arzCai_Dativeconstruction_Meaning ;
+    rcxn:hasMetadata cx:arzCai_Dativeconstruction_MD ;
+    rcxn:hasSlots cx:arzCai_Dativeconstruction_slots ;
+    rcxn:hasTitle "Dative construction" .
+
+cx:arzCai_Ditransitiveconstruction a rcxn:Construction ;
+    cx:hasExample cx:arzCai_Ditransitiveconstruction_Ex_A,
+        cx:arzCai_Ditransitiveconstruction_Ex_B,
+        cx:arzCai_Ditransitiveconstruction_Ex_C ;
+    lg:partOfLanguage lg:arzCai ;
+    links:similarFormSameFunction cx:arzCai_Dativeconstruction ;
+    links:similarFormSimilarFunction cx:arzCai_Prepositionaldativeconstruction ;
+    rcxn:hasConstructionMeaning cx:arzCai_Ditransitiveconstruction_Meaning ;
+    rcxn:hasMetadata cx:arzCai_Ditransitiveconstruction_MD ;
+    rcxn:hasSlots cx:arzCai_Ditransitiveconstruction_slots ;
+    rcxn:hasTitle "Ditransitive construction" .
+
+cx:arzCai_Prepositionaldativeconstruction a rcxn:Construction ;
+    lg:partOfLanguage lg:arzCai ;
+    links:similarFormSimilarFunction cx:arzCai_Dativeconstruction,
+        cx:arzCai_Ditransitiveconstruction ;
+    rcxn:hasConstructionMeaning cx:arzCai_Prepositionaldativeconstruction_Meaning ;
+    rcxn:hasMetadata cx:arzCai_Prepositionaldativeconstruction_MD ;
+    rcxn:hasSlots cx:arzCai_Prepositionaldativeconstruction_slots ;
+    rcxn:hasTitle "Prepositional dative construction" .
 
 cx:deuStdHigh_NP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions a rcxn:Construction ;
     lg:partOfLanguage lg:deuStdHigh ;

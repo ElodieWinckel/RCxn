@@ -20,7 +20,9 @@ membr:Badawi a FOAF:Person ;
 
 membr:Bayer a FOAF:Person ;
     FOAF:currentProject membr:Project_Bayer,
-        membr:Project_Bayer_2602251146 ;
+        membr:Project_Bayer_2611042245,
+        membr:Project_Bayer_2611042301,
+        membr:Project_Bayer_2611042311 ;
     FOAF:familyName "Bayer" ;
     FOAF:givenName "Nadine" ;
     FOAF:homepage <https://www.cxg.phil.fau.eu/person/nadine-bayer/> .
@@ -299,12 +301,22 @@ Overall, the construction is  partially schematic: open in its subject, partiall
     rsrch:basedOn cx:eng_EarnConstruction .
 
 membr:Project_Bayer a rsrch:Project ;
-    rsrch:hasResearchQuestion membr:Project_Bayer_2602251146 ;
+    rsrch:hasResearchQuestion membr:Project_Bayer_2611042245,
+        membr:Project_Bayer_2611042301,
+        membr:Project_Bayer_2611042311 ;
     rsrch:projectName "Differential argument marking in Arabic"@en .
 
-membr:Project_Bayer_2602251146_F2602251146 a rsrch:Finding ;
-    RDFS:label "Marking of the recipient is conditioned by expectation sensitivity and is advancing." ;
+membr:Project_Bayer_2611042245_F2611042245 a rsrch:Finding ;
+    RDFS:label "The prepositional dative construction is used for ditransitive verbs if the recipient is expressed by a full NP, while the theme is pronominal or if both arguments are pronominal. The ditransitive construction cannot be used in these cases. In other constellations the constructions alternate." ;
+    rsrch:basedOn cx:arzCai_Prepositionaldativeconstruction .
+
+membr:Project_Bayer_2611042301_F2611042301 a rsrch:Finding ;
+    RDFS:label "The ditransitive construction alternates with the prepositional dative construction and the dative construction if the recipient is nominal or pronominal and the theme is expressed by a full NP." ;
     rsrch:basedOn cx:arzCai_Ditransitiveconstruction .
+
+membr:Project_Bayer_2611042311_F2611042311 a rsrch:Finding ;
+    RDFS:label "The dative construction alternates with the prepositional dative construction and the ditransitive construction if the recipient is nominal or pronominal and the theme is expressed by a full NP." ;
+    rsrch:basedOn cx:arzCai_Dativeconstruction .
 
 membr:Project_BenitoFernandez a rsrch:Project ;
     rsrch:hasResearchQuestion membr:Project_BenitoFernandez_2610301550 ;
@@ -701,9 +713,17 @@ membr:Project_Badawi_2611021640 a rsrch:Project ;
     rsrch:hasFindings membr:Project_Badawi_2611021640_F2611021640 ;
     rsrch:projectName "How can the constructionhood of verb-argument patterns be measured from corpus data along fixedness, productivity and association, and how do these dimensions behave across the subsumption lattice of a verb’s patterns?" .
 
-membr:Project_Bayer_2602251146 a rsrch:Project ;
-    rsrch:hasFindings membr:Project_Bayer_2602251146_F2602251146 ;
-    rsrch:projectName "Recipient marking in Cairo Arabic" .
+membr:Project_Bayer_2611042245 a rsrch:Project ;
+    rsrch:hasFindings membr:Project_Bayer_2611042245_F2611042245 ;
+    rsrch:projectName "In which constellations of the theme's and the recipient's individuation properties is this construction used?" .
+
+membr:Project_Bayer_2611042301 a rsrch:Project ;
+    rsrch:hasFindings membr:Project_Bayer_2611042301_F2611042301 ;
+    rsrch:projectName "In which constellations of the theme's and the recipient's individuation properties is this construction used?" .
+
+membr:Project_Bayer_2611042311 a rsrch:Project ;
+    rsrch:hasFindings membr:Project_Bayer_2611042311_F2611042311 ;
+    rsrch:projectName "In which constellations of the theme's and the recipient's individuation properties is this construction used?" .
 
 membr:Project_BenitoFernandez_2610301550 a rsrch:Project ;
     rsrch:hasFindings membr:Project_BenitoFernandez_2610301550_F2610301550 ;

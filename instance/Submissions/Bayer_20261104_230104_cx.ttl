@@ -1,0 +1,114 @@
+@prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cx: <http://example.org/cx/> .
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterm: <http://purl.org/dc/terms/> .
+@prefix evid: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/evid#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
+@prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#> .
+@prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
+@prefix olia: <http://purl.org/olia/olia.owl#> .
+@prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix references: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/references#> .
+@prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+membr:Project_Bayer rsrch:hasResearchQuestion membr:Project_Bayer_2611042301 .
+
+cx:arzCai_Dativeconstruction a rcxn:Construction ;
+    links:similarFormSameFunction cx:arzCai_Ditransitiveconstruction ;
+    rcxn:hasMetadata cx:arzCai_Dativeconstruction_MD ;
+    rcxn:hasTitle "Dative construction" .
+
+cx:arzCai_Dativeconstruction_MD a rcxn:Metadata ;
+    dcterm:created "2026-11-04"^^xsd:date ;
+    rcxn:annotator membr:Bayer .
+
+cx:arzCai_Prepositionaldativeconstruction a rcxn:Construction ;
+    links:similarFormSimilarFunction cx:arzCai_Ditransitiveconstruction ;
+    rcxn:hasMetadata cx:arzCai_Prepositionaldativeconstruction_MD ;
+    rcxn:hasTitle "Prepositional dative construction" .
+
+cx:arzCai_Prepositionaldativeconstruction_MD a rcxn:Metadata ;
+    dcterm:created "2026-11-04"^^xsd:date ;
+    rcxn:annotator membr:Bayer .
+
+cx:arzCai_Ditransitiveconstruction_1 a rcxn:SlotOptional ;
+    cx:WordOrder "Before element 2" ;
+    olia:hasSemanticRole olia:AgentRole .
+
+cx:arzCai_Ditransitiveconstruction_2 a rcxn:SlotObligatory ;
+    cx:WordOrder "After element 2, before elements 3 and 4" ;
+    RDFS:comment "colloprofile: idda; ʿallim; nāwil; massik; sallif; labbis; sallim; ḥammil; darris; šammim; fahhim; ḥaffaẓ; nassa; ballaġ; saʾal; fahhim; malla; warra; ḫassaṛ; ġaṛṛam; ʾallaʿ" .
+
+cx:arzCai_Ditransitiveconstruction_3 a rcxn:SlotObligatory ;
+    cx:WordOrder "After element 2, before element 4" ;
+    olia:hasSemanticRole olia:RecipientRole .
+
+cx:arzCai_Ditransitiveconstruction_4 a rcxn:SlotObligatory ;
+    cx:WordOrder "After elements 2 and 3" ;
+    olia:hasSemanticRole olia:ThemeRole .
+
+cx:arzCai_Ditransitiveconstruction_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "[Leyla]1 [iddit]2 [Ḫālid]3 [il-kitāb]4. " ;
+    cx:hasGlosses "Leyla give.3SGF.PERF Ḫālid the-book " ;
+    cx:hasText "Leyla iddit Ḫālid il-kitāb. " ;
+    cx:hasTranslation "Leyla gave Ḫālid the book. " .
+
+cx:arzCai_Ditransitiveconstruction_Ex_B a cx:Example ;
+    cx:hasAnnotatedText "[warrēt]2 [is-suwwāḥ]3 [il-matḥaf]4. " ;
+    cx:hasGlosses "show.1SG.PERF the-tourists the-museum " ;
+    cx:hasText "warrēt is-suwwāḥ il-matḥaf. " ;
+    cx:hasTranslation "I showed the tourists the museum. " .
+
+cx:arzCai_Ditransitiveconstruction_Ex_C a cx:Example ;
+    cx:hasAnnotatedText "[fahhimtī]2-[ha]3 [il-muškila]4?" ;
+    cx:hasGlosses "explain.2SGF.PERF-OBJ.3SGF the-problem" ;
+    cx:hasText "fahhimtī-ha il-muškila?" ;
+    cx:hasTranslation "Did you explain the problem to her?" .
+
+cx:arzCai_Ditransitiveconstruction_MD a rcxn:Metadata ;
+    dcterm:created "2026-11-04"^^xsd:date ;
+    dcterm:references cx:arzCai_Ditransitiveconstruction_Sources ;
+    rcxn:annotator membr:Bayer .
+
+cx:arzCai_Ditransitiveconstruction_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "[ÆFFECTOR]1 makes [RECIPIENT]3 receive or lose [ÆFFECTED]4" .
+
+cx:arzCai_Ditransitiveconstruction_Sources a dcmitype:Collection ;
+    dcterm:hasPart references:881a7fb6-c1ad-4d94-b5e1-fa32629bbd99,
+        references:9bd02e11-eb36-4f54-a736-c845099f2894 .
+
+cx:arzCai_Ditransitiveconstruction_slots a rdf:Seq ;
+    rdf:_1 cx:arzCai_Ditransitiveconstruction_1 ;
+    rdf:_2 cx:arzCai_Ditransitiveconstruction_2 ;
+    rdf:_3 cx:arzCai_Ditransitiveconstruction_3 ;
+    rdf:_4 cx:arzCai_Ditransitiveconstruction_4 .
+
+membr:Project_Bayer_2611042301_F2611042301 a rsrch:Finding ;
+    RDFS:label "The ditransitive construction alternates with the prepositional dative construction and the dative construction if the recipient is nominal or pronominal and the theme is expressed by a full NP." ;
+    rsrch:basedOn cx:arzCai_Ditransitiveconstruction .
+
+references:881a7fb6-c1ad-4d94-b5e1-fa32629bbd99 evid:biblio "Diem, Werner. 2002. Translokative Verben im Arabischen. Wiesbaden: Harrassowitz." .
+
+references:9bd02e11-eb36-4f54-a736-c845099f2894 evid:biblio "Woidich, Manfred. 2006. Das Kairensisch-Arabische. Eine Grammatik. Wiesbaden: Harrassowitz." .
+
+membr:Project_Bayer_2611042301 a rsrch:Project ;
+    rsrch:hasFindings membr:Project_Bayer_2611042301_F2611042301 ;
+    rsrch:projectName "In which constellations of the theme's and the recipient's individuation properties is this construction used?" .
+
+cx:arzCai_Ditransitiveconstruction a rcxn:Construction ;
+    cx:hasExample cx:arzCai_Ditransitiveconstruction_Ex_A,
+        cx:arzCai_Ditransitiveconstruction_Ex_B,
+        cx:arzCai_Ditransitiveconstruction_Ex_C ;
+    lg:partOfLanguage lg:arzCai ;
+    links:similarFormSameFunction cx:arzCai_Dativeconstruction ;
+    links:similarFormSimilarFunction cx:arzCai_Prepositionaldativeconstruction ;
+    rcxn:hasConstructionMeaning cx:arzCai_Ditransitiveconstruction_Meaning ;
+    rcxn:hasMetadata cx:arzCai_Ditransitiveconstruction_MD ;
+    rcxn:hasSlots cx:arzCai_Ditransitiveconstruction_slots ;
+    rcxn:hasTitle "Ditransitive construction" .
+
+membr:Bayer foaf:currentProject membr:Project_Bayer_2611042301 .
+
