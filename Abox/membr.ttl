@@ -464,7 +464,12 @@ membr:Project_Iabdounane_Fthiscloseto a rsrch:Finding ;
     rsrch:basedOn cx:eng_ThisclosetoVingconstruction .
 
 membr:Project_Immertreu a rsrch:Project ;
+    rsrch:hasFindings membr:Project_Immertreu_F2611031114 ;
     rsrch:projectName "Multimodal cognitive maps for cross-domain constructional networks"@en .
+
+membr:Project_Immertreu_F2611031114 a rsrch:Finding ;
+    RDFS:label "SR based cognitive maps differentiate unit from date constructions" ;
+    rsrch:basedOn cx:eng_UnitConstruction .
 
 membr:Project_Kashigin a rsrch:Project ;
     rsrch:projectName "Contrastive Construction Grammar: The interaction of argument-structure constructions and sentence-type constructions in english, Dutch and German"@en .
