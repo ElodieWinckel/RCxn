@@ -1,0 +1,104 @@
+@prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cx: <http://example.org/cx/> .
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterm: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
+@prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#> .
+@prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
+@prefix olia: <http://purl.org/olia/olia.owl#> .
+@prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+membr:Project_Gromadsky rsrch:hasResearchQuestion membr:Project_Gromadsky_2611031634 .
+
+rcxn:Xthingconstruction_A rcxn:hasIS rcxn:Focus .
+
+cx:engUkSpo_Xthingconstruction_1 a rcxn:SlotObligatory ;
+    cx:hasIndex cx:engUkSpo_Xthingconstruction_1_Index ;
+    olia:hasSemanticRole olia:ThemeRole ;
+    rcxn:hasSlotForm cx:engUkSpo_Xthingconstruction_1_Form ;
+    rcxn:hasSyntacticFunction "Direct Object" , "Subject" ;
+    rcxn:hasSlots cx:engUkSpo_Xthingconstruction_1_slots .
+
+cx:engUkSpo_Xthingconstruction_1_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:eng_NounPhrase .
+
+cx:engUkSpo_Xthingconstruction_1_Index a cx:Individual ;
+    olia:hasAnimacy olia:Inanimate .
+
+cx:engUkSpo_Xthingconstruction_2 a rcxn:SlotObligatory ;
+    cx:WordOrder "Element 2 immediately before element 3" ;
+    RDFS:comment "a canonical referent " .
+
+cx:engUkSpo_Xthingconstruction_3 a rcxn:SlotObligatory ;
+    cx:WordOrder "Element 3 immediately after Element 2" ;
+    rcxn:hasSemanticProperty "general noun " ;
+    rcxn:hasSlotForm cx:engUkSpo_Xthingconstruction_3_Form .
+
+cx:engUkSpo_Xthingconstruction_3_Form a rcxn:SlotForm ;
+    rcxn:hasStem cx:eng_thing .
+
+cx:engUkSpo_Xthingconstruction_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "[the small plate]2 [thing]3" ;
+    cx:hasText "the small plate thing" ;
+    RDFS:comment "Meaning: something that resembles a small plate " .
+
+cx:engUkSpo_Xthingconstruction_Ex_B a cx:Example ;
+    cx:hasAnnotatedText "[three cylindrical colour toy]2 [things]3" ;
+    cx:hasText "three cylindrical colour toy things" ;
+    RDFS:comment "Meaning: three objects that resemble toys; an example of how the X thing construction can also be used in the plural." .
+
+cx:engUkSpo_Xthingconstruction_MD a rcxn:Metadata ;
+    dcterm:created "2026-11-03"^^xsd:date ;
+    dcterm:references cx:engUkSpo_Xthingconstruction_Sources ;
+    rcxn:annotator membr:Gromadsky .
+
+cx:engUkSpo_Xthingconstruction_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "The construction X thing refers to [an entity]1 that has some similarity to [X]2 without being a canonical instance of [X]2" .
+
+cx:engUkSpo_Xthingconstruction_Sources a dcmitype:Collection .
+
+cx:engUkSpo_Xthingconstruction_slots a rdf:Seq ;
+    rdf:_1 cx:engUkSpo_Xthingconstruction_1 .
+
+cx:engUkSpo_Xthingconstruction_1_slots a rdf:Seq ;
+    rdf:_1 cx:engUkSpo_Xthingconstruction_2 ;
+    rdf:_2 cx:engUkSpo_Xthingconstruction_3 .
+
+cx:eng_thing a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    links:elementOf cx:engUkSpo_Xthingconstruction ;
+    rcxn:hasMetadata cx:engUkSpo_thing_MD ;
+    rcxn:hasTitle "thing" .
+
+cx:eng_thing_MD a rcxn:Metadata ;
+    dcterm:created "2026-11-03"^^xsd:date ;
+    rcxn:annotator membr:Gromadsky .
+
+membr:Project_Gromadsky_2611031634_F2611031634 a rsrch:Finding ;
+    RDFS:label "To signal that a referent does not match the canonical meaning of a word, interlocutors tend to use that word as a modifier of the general noun thing (occasionally type), as in a monster thing or a styrofoam thing." ;
+    rsrch:basedOn cx:engUkSpo_Xthingconstruction .
+
+cx:eng_NounPhrase links:elementOf cx:engUkSpo_Xthingconstruction ;
+    links:inheritedBy cx:engUkSpo_Xthingconstruction .
+
+membr:Gromadsky foaf:currentProject membr:Project_Gromadsky_2611031634 .
+
+membr:Project_Gromadsky_2611031634 a rsrch:Project ;
+    rsrch:hasFindings membr:Project_Gromadsky_2611031634_F2611031634 ;
+    rsrch:projectName "What strategies do speakers use to signal that a word is being used in a non-canonical sense?" .
+
+cx:engUkSpo_Xthingconstruction a rcxn:Construction ;
+    cx:hasExample cx:engUkSpo_Xthingconstruction_Ex_A,
+        cx:engUkSpo_Xthingconstruction_Ex_B ;
+    #RDFS:comment "150 corrected transcripts from the spot-the-difference task. Upon completion of the transcript correction, the sample will increase to approximately 700" ;
+    lg:partOfLanguage lg:engUkSpo ;
+    links:inheritsFrom cx:eng_NounPhrase ;
+    rcxn:hasConstructionMeaning cx:engUkSpo_Xthingconstruction_Meaning ;
+    rcxn:hasMetadata cx:engUkSpo_Xthingconstruction_MD ;
+    rcxn:hasSlots cx:engUkSpo_Xthingconstruction_slots ;
+    rcxn:hasTitle "X thing construction" .
+

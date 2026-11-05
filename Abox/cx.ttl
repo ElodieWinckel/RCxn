@@ -240,6 +240,10 @@ cx:eng_monotransitive_construction a rcxn:Construction ;
     rcxn:hasSlots cx:eng_monotransitive_construction_slots ;
     rcxn:hasTitle "Monotransitive Construction" .
 
+cx:eng_thing_MD a rcxn:Metadata ;
+    DCTERMS:created "2026-11-03"^^xsd:date ;
+    rcxn:annotator membr:Gromadsky .
+
 cx:itaStoria_RelativeTopicShiftConstruction_2_Form a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "Il quale" .
 
@@ -3301,6 +3305,59 @@ cx:engLME_viewon_slots a RDF:Seq ;
     RDF:_2 cx:engLME_viewon_2 ;
     RDF:_3 cx:engLME_viewon_3 .
 
+cx:engUkSpo_Xthingconstruction_1 a rcxn:SlotObligatory ;
+    cx:hasIndex cx:engUkSpo_Xthingconstruction_1_Index ;
+    olia:hasSemanticRole olia:ThemeRole ;
+    rcxn:hasSlotForm cx:engUkSpo_Xthingconstruction_1_Form ;
+    rcxn:hasSlots cx:engUkSpo_Xthingconstruction_1_slots ;
+    rcxn:hasSyntacticFunction "Direct Object",
+        "Subject" .
+
+cx:engUkSpo_Xthingconstruction_1_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:eng_NounPhrase .
+
+cx:engUkSpo_Xthingconstruction_1_Index a cx:Individual ;
+    olia:hasAnimacy olia:Inanimate .
+
+cx:engUkSpo_Xthingconstruction_1_slots a RDF:Seq ;
+    RDF:_1 cx:engUkSpo_Xthingconstruction_2 ;
+    RDF:_2 cx:engUkSpo_Xthingconstruction_3 .
+
+cx:engUkSpo_Xthingconstruction_2 a rcxn:SlotObligatory ;
+    cx:WordOrder "Element 2 immediately before element 3" ;
+    RDFS:comment "a canonical referent " .
+
+cx:engUkSpo_Xthingconstruction_3 a rcxn:SlotObligatory ;
+    cx:WordOrder "Element 3 immediately after Element 2" ;
+    rcxn:hasSemanticProperty "general noun " ;
+    rcxn:hasSlotForm cx:engUkSpo_Xthingconstruction_3_Form .
+
+cx:engUkSpo_Xthingconstruction_3_Form a rcxn:SlotForm ;
+    rcxn:hasStem cx:eng_thing .
+
+cx:engUkSpo_Xthingconstruction_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "[the small plate]2 [thing]3" ;
+    cx:hasText "the small plate thing" ;
+    RDFS:comment "Meaning: something that resembles a small plate " .
+
+cx:engUkSpo_Xthingconstruction_Ex_B a cx:Example ;
+    cx:hasAnnotatedText "[three cylindrical colour toy]2 [things]3" ;
+    cx:hasText "three cylindrical colour toy things" ;
+    RDFS:comment "Meaning: three objects that resemble toys; an example of how the X thing construction can also be used in the plural." .
+
+cx:engUkSpo_Xthingconstruction_MD a rcxn:Metadata ;
+    DCTERMS:created "2026-11-03"^^xsd:date ;
+    DCTERMS:references cx:engUkSpo_Xthingconstruction_Sources ;
+    rcxn:annotator membr:Gromadsky .
+
+cx:engUkSpo_Xthingconstruction_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "The construction X thing refers to [an entity]1 that has some similarity to [X]2 without being a canonical instance of [X]2" .
+
+cx:engUkSpo_Xthingconstruction_Sources a dcmitype:Collection .
+
+cx:engUkSpo_Xthingconstruction_slots a RDF:Seq ;
+    RDF:_1 cx:engUkSpo_Xthingconstruction_1 .
+
 cx:engUsSpo_Hadituptoherewith_1 a rcxn:SlotObligatory ;
     olia:hasSemanticRole olia:ExperiencerRole ;
     rcxn:hasSlotForm cx:engUsSpo_Hadituptoherewith_1_Form ;
@@ -4555,6 +4612,12 @@ cx:eng_shot a rcxn:Construction ;
 cx:eng_shot_MD a rcxn:Metadata ;
     DCTERMS:created "2026-09-16"^^xsd:date ;
     rcxn:annotator membr:Fokashchuk .
+
+cx:eng_thing a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    links:elementOf cx:engUkSpo_Xthingconstruction ;
+    rcxn:hasMetadata cx:engUkSpo_thing_MD ;
+    rcxn:hasTitle "thing" .
 
 cx:eng_this a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
@@ -6482,6 +6545,16 @@ cx:engLME_coolascolourconstruction a rcxn:Construction ;
     rcxn:hasSlots cx:engLME_coolascolourconstruction_slots ;
     rcxn:hasTitle "cool as colour construction" .
 
+cx:engUkSpo_Xthingconstruction a rcxn:Construction ;
+    cx:hasExample cx:engUkSpo_Xthingconstruction_Ex_A,
+        cx:engUkSpo_Xthingconstruction_Ex_B ;
+    lg:partOfLanguage lg:engUkSpo ;
+    links:inheritsFrom cx:eng_NounPhrase ;
+    rcxn:hasConstructionMeaning cx:engUkSpo_Xthingconstruction_Meaning ;
+    rcxn:hasMetadata cx:engUkSpo_Xthingconstruction_MD ;
+    rcxn:hasSlots cx:engUkSpo_Xthingconstruction_slots ;
+    rcxn:hasTitle "X thing construction" .
+
 cx:eng_AdjectiveAttributiveconstruction a rcxn:Construction ;
     lg:partOfLanguage lg:engLME ;
     rcxn:hasConstructionMeaning cx:eng_AdjectiveAttributiveconstruction_Meaning ;
@@ -7459,12 +7532,14 @@ cx:eng_NounPhrase a rcxn:Construction ;
         cx:engLME_shotatto,
         cx:engLME_tiponreferenceto,
         cx:engLME_viewon,
+        cx:engUkSpo_Xthingconstruction,
         cx:engUsSpo_Hadituptoherewith,
         cx:engUsSpo_Hadituptoherewithmesoconstruction,
         cx:engUsSpo_Hadituptoherewithphysicalheightgesture,
         cx:engUsUkWr_EvaluativeAttributionConstruction,
         cx:eng_alotofPLUSNconstruction,
         cx:eng_ditransitive_construction_obj_np ;
+    links:inheritedBy cx:engUkSpo_Xthingconstruction ;
     rcxn:hasMetadata cx:eng_NounPhrase_MD ;
     rcxn:hasTitle "Noun Phrase" .
 

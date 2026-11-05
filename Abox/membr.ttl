@@ -88,7 +88,8 @@ membr:Gedik a FOAF:Person ;
     FOAF:homepage <https://www.cxg.phil.fau.eu/faudir/tan-arda-gedik/> .
 
 membr:Gromadsky a FOAF:Person ;
-    FOAF:currentProject membr:Project_Gromadsky ;
+    FOAF:currentProject membr:Project_Gromadsky,
+        membr:Project_Gromadsky_2611031634 ;
     FOAF:familyName "Gromadsky" ;
     FOAF:givenName "Dmitry" ;
     FOAF:homepage <https://www.cxg.phil.fau.eu/faudir/dmitry-gromadsky/> .
@@ -417,7 +418,12 @@ membr:Project_Gedik a rsrch:Project ;
     rsrch:projectName "Project Gedik"@en .
 
 membr:Project_Gromadsky a rsrch:Project ;
+    rsrch:hasResearchQuestion membr:Project_Gromadsky_2611031634 ;
     rsrch:projectName "Constructions in communication"@en .
+
+membr:Project_Gromadsky_2611031634_F2611031634 a rsrch:Finding ;
+    RDFS:label "To signal that a referent does not match the canonical meaning of a word, interlocutors tend to use that word as a modifier of the general noun thing (occasionally type), as in a monster thing or a styrofoam thing." ;
+    rsrch:basedOn cx:engUkSpo_Xthingconstruction .
 
 membr:Project_GroseHodge a rsrch:Project ;
     rsrch:projectName "Project Grose-Hodge"@en .
@@ -686,6 +692,10 @@ membr:Project_Bayer_2602251146 a rsrch:Project ;
 membr:Project_BenitoFernandez_2610301550 a rsrch:Project ;
     rsrch:hasFindings membr:Project_BenitoFernandez_2610301550_F2610301550 ;
     rsrch:projectName "Is stance encoded in the constructional representation of quotative constructions?" .
+
+membr:Project_Gromadsky_2611031634 a rsrch:Project ;
+    rsrch:hasFindings membr:Project_Gromadsky_2611031634_F2611031634 ;
+    rsrch:projectName "What strategies do speakers use to signal that a word is being used in a non-canonical sense?" .
 
 membr:Project_Hutta_2610271233 a rsrch:Project ;
     rsrch:hasFindings membr:Project_Hutta_2610271233_F2610271233 ;
