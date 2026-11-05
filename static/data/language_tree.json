@@ -57,6 +57,7 @@
         "children": [
           {"id":  "deuPRE", "text": "Present Day German (1950 onwards)"},
           {"id": "deuStdHigh", "text": "Standard High German"},
+          {"id":  "deuSpo", "text": "Spoken High German"},
           {"id": "deuWrSt20", "text": "Written Standard German of the 20th century"}
         ]
       }

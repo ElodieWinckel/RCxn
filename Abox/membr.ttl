@@ -635,7 +635,7 @@ membr:Project_Rohwedder a rsrch:Project ;
 
 membr:Project_Rohwedder_2611021659_F2611021659 a rsrch:Finding ;
     RDFS:label "The quotative conditional \"Wenn Sie sagen X dann Y\" schema that has been analysed by Buck & Schopf (2021) as part of an animated speech pattern that can help simulate the argumentation towards a medical decision can indeed serve different (but ultimately related) purposes in doctor-patient interactions. It is usually used by the doctor to yield authority to the patient and simultaneously clarify the implications of the patient's perceived stance from the medical point of view. Depending on how the quote relates to previous sequences, the whole utterance may either target epistemic authority, usually being of a more reflective and evaluative character, or deontic authority, with a more forward-oriented character, highlighting and possibly challenging the patient's perceived stance." ;
-    rsrch:basedOn cx:deuNHD_QuotativeconditionalWennSiesagenXdannY .
+    rsrch:basedOn cx:deuSpo_QuotativeconditionalWennSiesagenXdannY .
 
 membr:Project_Schmechel a rsrch:Project ;
     rsrch:hasResearchQuestion membr:Project_Schmechel_2610160927 ;

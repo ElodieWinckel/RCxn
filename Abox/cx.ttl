@@ -984,95 +984,95 @@ cx:deuFNG_losingressiveconstruction_slots a RDF:Seq ;
     RDF:_2 cx:deuFNG_losingressiveconstruction_2 ;
     RDF:_3 cx:deuFNG_losingressiveconstruction_3 .
 
-cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_1 a rcxn:SlotObligatory ;
+cx:deuSpo_QuotativeconditionalWennSiesagenXdannY_1 a rcxn:SlotObligatory ;
     cx:hasTranslation "if" ;
     olia:hasSemanticRole olia:ConditionRole ;
-    rcxn:hasSlotForm cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_1_Form ;
+    rcxn:hasSlotForm cx:deuSpo_QuotativeconditionalWennSiesagenXdannY_1_Form ;
     rcxn:hasSyntacticFunction "conditional conjunction" .
 
-cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_1_Form a rcxn:SlotForm ;
+cx:deuSpo_QuotativeconditionalWennSiesagenXdannY_1_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:deu_wenn .
 
-cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_2 a rcxn:SlotObligatory ;
+cx:deuSpo_QuotativeconditionalWennSiesagenXdannY_2 a rcxn:SlotObligatory ;
     cx:WordOrder "immediately after element 1" ;
-    cx:hasIndex cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_2_Index ;
+    cx:hasIndex cx:deuSpo_QuotativeconditionalWennSiesagenXdannY_2_Index ;
     olia:hasSemanticRole olia:AgentRole ;
     RDFS:comment "colloprofile: Sie (prototype)" ;
-    rcxn:hasSlotForm cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_2_Form .
+    rcxn:hasSlotForm cx:deuSpo_QuotativeconditionalWennSiesagenXdannY_2_Form .
 
-cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_2_Form a rcxn:SlotForm ;
+cx:deuSpo_QuotativeconditionalWennSiesagenXdannY_2_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:deu_NounPhrase .
 
-cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_2_Index a cx:Individual ;
+cx:deuSpo_QuotativeconditionalWennSiesagenXdannY_2_Index a cx:Individual ;
     cx:hasPerson cx:second ;
     olia:hasAnimacy olia:Human .
 
-cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_3 a rcxn:SlotObligatory ;
+cx:deuSpo_QuotativeconditionalWennSiesagenXdannY_3 a rcxn:SlotObligatory ;
     cx:WordOrder "between elements 2 and 4, but adjuncts can go in between on either side" ;
-    cx:hasIndex cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_3_Index ;
+    cx:hasIndex cx:deuSpo_QuotativeconditionalWennSiesagenXdannY_3_Index ;
     RDFS:comment "colloprofile: sagen (prototype)" ;
     rcxn:hasSemanticProperty "verbum dicendi" ;
-    rcxn:hasSlotForm cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_3_Form .
+    rcxn:hasSlotForm cx:deuSpo_QuotativeconditionalWennSiesagenXdannY_3_Form .
 
-cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_3_Form a rcxn:SlotForm ;
+cx:deuSpo_QuotativeconditionalWennSiesagenXdannY_3_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:deu_Verb .
 
-cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_3_Index a cx:Event ;
+cx:deuSpo_QuotativeconditionalWennSiesagenXdannY_3_Index a cx:Event ;
     cx:hasPerson cx:second ;
     olia:hasMode olia:ConditionalVerb ;
     olia:hasVoice olia:ActiveVoice .
 
-cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_4 a rcxn:SlotObligatory ;
+cx:deuSpo_QuotativeconditionalWennSiesagenXdannY_4 a rcxn:SlotObligatory ;
     cx:WordOrder "between object 3 and 5" ;
     olia:hasSemanticRole olia:ObliqueRole ;
     rcxn:hasOtherSemanticContribution "(actual or fictitious) quote of the adressee" ;
-    rcxn:hasSlotForm cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_4_Form .
+    rcxn:hasSlotForm cx:deuSpo_QuotativeconditionalWennSiesagenXdannY_4_Form .
 
-cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_4_Form a rcxn:SlotForm ;
+cx:deuSpo_QuotativeconditionalWennSiesagenXdannY_4_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:deu_NounPhrase .
 
-cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_5 a rcxn:SlotOptional ;
+cx:deuSpo_QuotativeconditionalWennSiesagenXdannY_5 a rcxn:SlotOptional ;
     cx:WordOrder "immediately after element 4" ;
     cx:hasTranslation "then" ;
-    rcxn:hasSlotForm cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_5_Form .
+    rcxn:hasSlotForm cx:deuSpo_QuotativeconditionalWennSiesagenXdannY_5_Form .
 
-cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_5_Form a rcxn:SlotForm ;
+cx:deuSpo_QuotativeconditionalWennSiesagenXdannY_5_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:deu_dann .
 
-cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_6 a rcxn:SlotObligatory ;
+cx:deuSpo_QuotativeconditionalWennSiesagenXdannY_6 a rcxn:SlotObligatory ;
     rcxn:hasOtherSemanticContribution "suggested conclusion" ;
     rcxn:hasSyntacticFunction "main clause" .
 
-cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_Ex_A a cx:Example ;
+cx:deuSpo_QuotativeconditionalWennSiesagenXdannY_Ex_A a cx:Example ;
     cx:hasAnnotatedText "Aber können, [wenn]1 [Sie]2 [sagen]3, [Sie wollen das jetzt raushaben]4, [dann]5 [kann man das raus, kann man den Port entfernen]6." ;
     cx:hasText "Aber können, wenn Sie sagen, Sie wollen das jetzt raushaben, dann kann man das raus, kann man den Port entfernen." ;
     cx:hasTranslation "But can, if you say, you want it out now, then it can be, the port can be removed." ;
     RDFS:comment "An example yielding deontic rights to the patient, similar to Buck & Schopf's examples, but without shift of deictic origo and directly relating to a prior utterance.." .
 
-cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_Ex_B a cx:Example ;
+cx:deuSpo_QuotativeconditionalWennSiesagenXdannY_Ex_B a cx:Example ;
     cx:hasAnnotatedText "[Ich glaube Ihnen das, es ist sehr schön]6, [wenn]1 [Sie]2 [sagen]3, [es ist kleiner geworden]4." ;
     cx:hasText "Ich glaube Ihnen das, es ist sehr schön, wenn Sie sagen, es ist kleiner geworden." ;
     cx:hasTranslation "I believe you, it is very nice, if you say, it has become smaller." ;
     RDFS:comment "An example acknowledging the epistemic patient's rights, doctor indicates not to doubt observations of the patient's own body." .
 
-cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_MD a rcxn:Metadata ;
+cx:deuSpo_QuotativeconditionalWennSiesagenXdannY_MD a rcxn:Metadata ;
     DCTERMS:created "2026-11-02"^^xsd:date ;
-    DCTERMS:references cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_Sources ;
+    DCTERMS:references cx:deuSpo_QuotativeconditionalWennSiesagenXdannY_Sources ;
     rcxn:annotator membr:Rohwedder .
 
-cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_Meaning a rcxn:ConstructionMeaning ;
+cx:deuSpo_QuotativeconditionalWennSiesagenXdannY_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "The speaker (doctor) quotes [the listener (patient)]2 with [something they have said or may say]4, thereby assigning a stance to them that is followed up with [a suggested conclusion]6 that both interactants may relate to in the further discussion of a medical decision" .
 
-cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_Sources a dcmitype:Collection ;
+cx:deuSpo_QuotativeconditionalWennSiesagenXdannY_Sources a dcmitype:Collection ;
     DCTERMS:hasPart references:0a5c37f9-8928-4c2e-b4fb-e85e51d134a7 .
 
-cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_slots a RDF:Seq ;
-    RDF:_1 cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_1 ;
-    RDF:_2 cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_2 ;
-    RDF:_3 cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_3 ;
-    RDF:_4 cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_4 ;
-    RDF:_5 cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_5 ;
-    RDF:_6 cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_6 .
+cx:deuSpo_QuotativeconditionalWennSiesagenXdannY_slots a RDF:Seq ;
+    RDF:_1 cx:deuSpo_QuotativeconditionalWennSiesagenXdannY_1 ;
+    RDF:_2 cx:deuSpo_QuotativeconditionalWennSiesagenXdannY_2 ;
+    RDF:_3 cx:deuSpo_QuotativeconditionalWennSiesagenXdannY_3 ;
+    RDF:_4 cx:deuSpo_QuotativeconditionalWennSiesagenXdannY_4 ;
+    RDF:_5 cx:deuSpo_QuotativeconditionalWennSiesagenXdannY_5 ;
+    RDF:_6 cx:deuSpo_QuotativeconditionalWennSiesagenXdannY_6 .
 
 cx:deuStdHigh_NP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_1 a rcxn:SlotObligatory ;
     cx:hasIndex cx:deuStdHigh_NP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_1_Index ;
@@ -2213,7 +2213,7 @@ cx:deu_XaufY_slots a RDF:Seq ;
 
 cx:deu_conditionalclauseconstruction a rcxn:Construction ;
     lg:partOfLanguage lg:deu ;
-    links:inheritedBy cx:deuNHD_QuotativeconditionalWennSiesagenXdannY ;
+    links:inheritedBy cx:deuSpo_QuotativeconditionalWennSiesagenXdannY ;
     rcxn:hasMetadata cx:deu_conditionalclauseconstruction_MD ;
     rcxn:hasTitle "conditional clause construction" .
 
@@ -2223,7 +2223,7 @@ cx:deu_conditionalclauseconstruction_MD a rcxn:Metadata ;
 
 cx:deu_dann a rcxn:Construction ;
     lg:partOfLanguage lg:deu ;
-    links:elementOf cx:deuNHD_QuotativeconditionalWennSiesagenXdannY ;
+    links:elementOf cx:deuSpo_QuotativeconditionalWennSiesagenXdannY ;
     rcxn:hasMetadata cx:deu_dann_MD ;
     rcxn:hasTitle "dann" .
 
@@ -2233,7 +2233,7 @@ cx:deu_dann_MD a rcxn:Metadata ;
 
 cx:deu_quotativeconstruction a rcxn:Construction ;
     lg:partOfLanguage lg:deu ;
-    links:inheritedBy cx:deuNHD_QuotativeconditionalWennSiesagenXdannY ;
+    links:inheritedBy cx:deuSpo_QuotativeconditionalWennSiesagenXdannY ;
     rcxn:hasMetadata cx:deu_quotativeconstruction_MD ;
     rcxn:hasTitle "quotative construction" .
 
@@ -2252,7 +2252,7 @@ cx:deu_schuetteln_Meaning a rcxn:ConstructionMeaning ;
 
 cx:deu_transitiveconstruction a rcxn:Construction ;
     lg:partOfLanguage lg:deu ;
-    links:inheritedBy cx:deuNHD_QuotativeconditionalWennSiesagenXdannY ;
+    links:inheritedBy cx:deuSpo_QuotativeconditionalWennSiesagenXdannY ;
     rcxn:hasMetadata cx:deu_transitiveconstruction_MD ;
     rcxn:hasTitle "transitive construction" .
 
@@ -2281,7 +2281,7 @@ cx:deu_vor_Meaning a rcxn:ConstructionMeaning ;
 
 cx:deu_wenn a rcxn:Construction ;
     lg:partOfLanguage lg:deu ;
-    links:elementOf cx:deuNHD_QuotativeconditionalWennSiesagenXdannY ;
+    links:elementOf cx:deuSpo_QuotativeconditionalWennSiesagenXdannY ;
     rcxn:hasMetadata cx:deu_wenn_MD ;
     rcxn:hasTitle "wenn" .
 
@@ -6901,7 +6901,7 @@ cx:spa_Decirquotativeconstruction a rcxn:Construction ;
 cx:deu_Verb a rcxn:Construction ;
     lg:partOfLanguage lg:deu ;
     links:elementOf cx:deuFNG_losingressiveconstruction,
-        cx:deuNHD_QuotativeconditionalWennSiesagenXdannY,
+        cx:deuSpo_QuotativeconditionalWennSiesagenXdannY,
         cx:deuWrSt20_sichNPADJADVvorAugenVP,
         cx:deu_AusdemAErmelschuettelnconstruction ;
     rcxn:hasTitle "Verb" .
@@ -7460,16 +7460,16 @@ cx:engUsUkWr_EvaluativeAttributionConstruction a rcxn:Construction ;
     rcxn:hasSlots cx:engUsUkWr_EvaluativeAttributionConstruction_slots ;
     rcxn:hasTitle "Evaluative Attribution Construction" .
 
-cx:deuNHD_QuotativeconditionalWennSiesagenXdannY a rcxn:Construction ;
-    cx:hasExample cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_Ex_A,
-        cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_Ex_B ;
-    lg:partOfLanguage lg:deuNHD ;
+cx:deuSpo_QuotativeconditionalWennSiesagenXdannY a rcxn:Construction ;
+    cx:hasExample cx:deuSpo_QuotativeconditionalWennSiesagenXdannY_Ex_A,
+        cx:deuSpo_QuotativeconditionalWennSiesagenXdannY_Ex_B ;
+    lg:partOfLanguage lg:deuSpo ;
     links:inheritsFrom cx:deu_conditionalclauseconstruction,
         cx:deu_quotativeconstruction,
         cx:deu_transitiveconstruction ;
-    rcxn:hasConstructionMeaning cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_Meaning ;
-    rcxn:hasMetadata cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_MD ;
-    rcxn:hasSlots cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_slots ;
+    rcxn:hasConstructionMeaning cx:deuSpo_QuotativeconditionalWennSiesagenXdannY_Meaning ;
+    rcxn:hasMetadata cx:deuSpo_QuotativeconditionalWennSiesagenXdannY_MD ;
+    rcxn:hasSlots cx:deuSpo_QuotativeconditionalWennSiesagenXdannY_slots ;
     rcxn:hasTitle "Quotative conditional: Wenn Sie sagen X dann Y" .
 
 cx:eng_ditransitive_construction_obj_np a rcxn:Construction ;
@@ -7746,7 +7746,7 @@ cx:deu_NPDefDetstrongPLUSADJweakPLUSN a rcxn:Construction ;
 
 cx:deu_NounPhrase a rcxn:Construction ;
     lg:partOfLanguage lg:deu ;
-    links:elementOf cx:deuNHD_QuotativeconditionalWennSiesagenXdannY,
+    links:elementOf cx:deuSpo_QuotativeconditionalWennSiesagenXdannY,
         cx:deuStdHigh_NP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions,
         cx:deuWrSt20_sichNPADJADVvorAugenVP,
         cx:deu_Angriffauf,
