@@ -1,0 +1,74 @@
+@prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cx: <http://example.org/cx/> .
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterm: <http://purl.org/dc/terms/> .
+@prefix evid: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/evid#> .
+@prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
+@prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
+@prefix olia: <http://purl.org/olia/olia.owl#> .
+@prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix references: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/references#> .
+@prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+membr:Project_Kashigin rsrch:hasFindings membr:Project_Kashigin_F2611032248 .
+
+cx:nld_DitransitiveConstructionOBJNP a rcxn:Construction ;
+    cx:hasExample cx:nld_DitransitiveConstructionOBJNP_Ex_A ;
+    lg:partOfLanguage lg:nld ;
+    rcxn:hasConstructionMeaning cx:nld_DitransitiveConstructionOBJNP_Meaning ;
+    rcxn:hasMetadata cx:nld_DitransitiveConstructionOBJNP_MD ;
+    rcxn:hasSlots cx:nld_DitransitiveConstructionOBJNP_slots ;
+    rcxn:hasTitle "Ditransitive Construction (OBJ: NP)" .
+
+cx:nld_DitransitiveConstructionOBJNP_1 a rcxn:SlotOptional ;
+    cx:WordOrder "usually in first position " ;
+    olia:hasCase olia:Nominative ;
+    olia:hasSemanticRole olia:ActorMacroRole ;
+    rcxn:hasSyntacticFunction "potential subject" .
+
+cx:nld_DitransitiveConstructionOBJNP_2 a rcxn:SlotObligatory ;
+    cx:WordOrder "declarative main clauses: 2nd position" , "subordinate clauses: final, following all other elements in the construction" ;
+    RDFS:comment "colloprofile: geven kosten bezorgen bieden gunnen opleggen aanbieden opleveren aandoen toebrengen verwijten verlenen ten laste leggen kwalijk nemen toewijzen voorschotelen ontnemen inblazen aanrekenen toedienen (Source: Colleman, 2009)" .
+
+cx:nld_DitransitiveConstructionOBJNP_3 a rcxn:SlotObligatory ;
+    cx:WordOrder "precedes the direct object (Æffected) unless the direct object is a pronoun" ;
+    olia:hasCase olia:ObjectiveCase ;
+    olia:hasSemanticRole olia:UndergoerMacroRole ;
+    rcxn:hasSyntacticFunction "Object" .
+
+cx:nld_DitransitiveConstructionOBJNP_4 a rcxn:SlotObligatory ;
+    cx:WordOrder "succeeds the indirect object (Recipient) unless it is a pronoun in which case it precedes it" ;
+    olia:hasCase olia:ObjectiveCase ;
+    olia:hasSemanticRole olia:ThemeRole ;
+    rcxn:hasSyntacticFunction "Object" .
+
+cx:nld_DitransitiveConstructionOBJNP_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "[Zij]1 [geeft]2 [de man]3 [een boek]4." ;
+    cx:hasText "Zij geeft de man een boek." ;
+    cx:hasTranslation "She gives the man a book. " .
+
+cx:nld_DitransitiveConstructionOBJNP_MD a rcxn:Metadata ;
+    dcterm:created "2026-11-03"^^xsd:date ;
+    dcterm:references cx:nld_DitransitiveConstructionOBJNP_Sources ;
+    rcxn:annotator membr:Kashigin .
+
+cx:nld_DitransitiveConstructionOBJNP_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "[ÆFFECTOR]1 changes the possession relation between [RECIPIENT]3 and [ÆFFECTED]4" .
+
+cx:nld_DitransitiveConstructionOBJNP_Sources a dcmitype:Collection ;
+    dcterm:hasPart references:b9786f4a-5c7f-4d95-8549-dc2487786ff7 .
+
+cx:nld_DitransitiveConstructionOBJNP_slots a rdf:Seq ;
+    rdf:_1 cx:nld_DitransitiveConstructionOBJNP_1 ;
+    rdf:_2 cx:nld_DitransitiveConstructionOBJNP_2 ;
+    rdf:_3 cx:nld_DitransitiveConstructionOBJNP_3 ;
+    rdf:_4 cx:nld_DitransitiveConstructionOBJNP_4 .
+
+membr:Project_Kashigin_F2611032248 a rsrch:Finding ;
+    RDFS:label "" ;
+    rsrch:basedOn cx:nld_DitransitiveConstructionOBJNP .
+
+references:b9786f4a-5c7f-4d95-8549-dc2487786ff7 evid:biblio "Colleman, T. (2009). The semantic range of the Dutch double object construction: A collostructional perspective. Constructions and Frames, 1(2), 190-220." .
+

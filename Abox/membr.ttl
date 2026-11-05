@@ -478,7 +478,12 @@ membr:Project_Immertreu_F2611031114 a rsrch:Finding ;
     rsrch:basedOn cx:eng_UnitConstruction .
 
 membr:Project_Kashigin a rsrch:Project ;
+    rsrch:hasFindings membr:Project_Kashigin_F2611032248 ;
     rsrch:projectName "Contrastive Construction Grammar: The interaction of argument-structure constructions and sentence-type constructions in english, Dutch and German"@en .
+
+membr:Project_Kashigin_F2611032248 a rsrch:Finding ;
+    RDFS:label "" ;
+    rsrch:basedOn cx:nld_DitransitiveConstructionOBJNP .
 
 membr:Project_Kassler a rsrch:Project ;
     rsrch:projectName "Project Kassler"@en .

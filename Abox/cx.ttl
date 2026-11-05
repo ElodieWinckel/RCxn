@@ -257,6 +257,14 @@ cx:lat_Adjective a rcxn:Construction ;
     rcxn:hasSlots cx:lat_Adjective_slots ;
     rcxn:hasTitle "Adjective" .
 
+cx:nld_DitransitiveConstructionOBJNP a rcxn:Construction ;
+    cx:hasExample cx:nld_DitransitiveConstructionOBJNP_Ex_A ;
+    lg:partOfLanguage lg:nld ;
+    rcxn:hasConstructionMeaning cx:nld_DitransitiveConstructionOBJNP_Meaning ;
+    rcxn:hasMetadata cx:nld_DitransitiveConstructionOBJNP_MD ;
+    rcxn:hasSlots cx:nld_DitransitiveConstructionOBJNP_slots ;
+    rcxn:hasTitle "Ditransitive Construction (OBJ: NP)" .
+
 cx:rus_AdjNomCopNPNom a rcxn:Construction ;
     cx:hasExample cx:rus_AdjNomCopNPNom_Ex_A,
         cx:rus_AdjNomCopNPNom_Ex_B ;
@@ -5255,6 +5263,51 @@ cx:lzh_Dooperationwithoperand1onoperand2construction_slots a RDF:Seq ;
     RDF:_2 cx:lzh_Dooperationwithoperand1onoperand2construction_2 ;
     RDF:_3 cx:lzh_Dooperationwithoperand1onoperand2construction_3 ;
     RDF:_4 cx:lzh_Dooperationwithoperand1onoperand2construction_4 .
+
+cx:nld_DitransitiveConstructionOBJNP_1 a rcxn:SlotOptional ;
+    cx:WordOrder "usually in first position " ;
+    olia:hasCase olia:Nominative ;
+    olia:hasSemanticRole olia:ActorMacroRole ;
+    rcxn:hasSyntacticFunction "potential subject" .
+
+cx:nld_DitransitiveConstructionOBJNP_2 a rcxn:SlotObligatory ;
+    cx:WordOrder "declarative main clauses: 2nd position",
+        "subordinate clauses: final, following all other elements in the construction" ;
+    RDFS:comment "colloprofile: geven kosten bezorgen bieden gunnen opleggen aanbieden opleveren aandoen toebrengen verwijten verlenen ten laste leggen kwalijk nemen toewijzen voorschotelen ontnemen inblazen aanrekenen toedienen (Source: Colleman, 2009)" .
+
+cx:nld_DitransitiveConstructionOBJNP_3 a rcxn:SlotObligatory ;
+    cx:WordOrder "precedes the direct object (Æffected) unless the direct object is a pronoun" ;
+    olia:hasCase olia:ObjectiveCase ;
+    olia:hasSemanticRole olia:UndergoerMacroRole ;
+    rcxn:hasSyntacticFunction "Object" .
+
+cx:nld_DitransitiveConstructionOBJNP_4 a rcxn:SlotObligatory ;
+    cx:WordOrder "succeeds the indirect object (Recipient) unless it is a pronoun in which case it precedes it" ;
+    olia:hasCase olia:ObjectiveCase ;
+    olia:hasSemanticRole olia:ThemeRole ;
+    rcxn:hasSyntacticFunction "Object" .
+
+cx:nld_DitransitiveConstructionOBJNP_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "[Zij]1 [geeft]2 [de man]3 [een boek]4." ;
+    cx:hasText "Zij geeft de man een boek." ;
+    cx:hasTranslation "She gives the man a book. " .
+
+cx:nld_DitransitiveConstructionOBJNP_MD a rcxn:Metadata ;
+    DCTERMS:created "2026-11-03"^^xsd:date ;
+    DCTERMS:references cx:nld_DitransitiveConstructionOBJNP_Sources ;
+    rcxn:annotator membr:Kashigin .
+
+cx:nld_DitransitiveConstructionOBJNP_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "[ÆFFECTOR]1 changes the possession relation between [RECIPIENT]3 and [ÆFFECTED]4" .
+
+cx:nld_DitransitiveConstructionOBJNP_Sources a dcmitype:Collection ;
+    DCTERMS:hasPart references:b9786f4a-5c7f-4d95-8549-dc2487786ff7 .
+
+cx:nld_DitransitiveConstructionOBJNP_slots a RDF:Seq ;
+    RDF:_1 cx:nld_DitransitiveConstructionOBJNP_1 ;
+    RDF:_2 cx:nld_DitransitiveConstructionOBJNP_2 ;
+    RDF:_3 cx:nld_DitransitiveConstructionOBJNP_3 ;
+    RDF:_4 cx:nld_DitransitiveConstructionOBJNP_4 .
 
 cx:pes_baraayekasiaastinbaalaazadantorollupsleevesforsomething a rcxn:Construction ;
     lg:partOfLanguage lg:pes ;
