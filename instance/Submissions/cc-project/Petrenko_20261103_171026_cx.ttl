@@ -1,0 +1,75 @@
+@prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cx: <http://example.org/cx/> .
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterm: <http://purl.org/dc/terms/> .
+@prefix evid: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/evid#> .
+@prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
+@prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
+@prefix olia: <http://purl.org/olia/olia.owl#> .
+@prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix references: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/references#> .
+@prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+membr:Project_Petrenko rsrch:hasFindings membr:Project_Petrenko_F2611031710 .
+
+cx:rus_AdjNomCopNPNom a rcxn:Construction ;
+    cx:hasExample cx:rus_AdjNomCopNPNom_Ex_A,
+        cx:rus_AdjNomCopNPNom_Ex_B ;
+    lg:partOfLanguage lg:rus ;
+    rcxn:hasConstructionMeaning cx:rus_AdjNomCopNPNom_Meaning ;
+    rcxn:hasMetadata cx:rus_AdjNomCopNPNom_MD ;
+    rcxn:hasSlots cx:rus_AdjNomCopNPNom_slots ;
+    rcxn:hasTitle "Adj-Nom Cop NP-Nom!" .
+
+cx:rus_AdjNomCopNPNom_1 a rcxn:SlotObligatory ;
+    olia:hasCase olia:Nominative ;
+    rcxn:hasSemanticProperty "Property, expressing positive or negative evaluation" .
+
+cx:rus_AdjNomCopNPNom_2 a rcxn:SlotObligatory .
+
+cx:rus_AdjNomCopNPNom_3 a rcxn:SlotObligatory ;
+    olia:hasCase olia:Nominative ;
+    rcxn:hasSemanticProperty "Topic" .
+
+cx:rus_AdjNomCopNPNom_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "Свои сбережения они хранят в сейфе. [Огромные]1 [суммы]2! " ;
+    cx:hasGlosses "their.REFL.POSS savings they.3PL.NOM keep.3PL.NOM in safe-LOC. huge-PL.NOM amount-PL.NOM" ;
+    cx:hasText "Свои сбережения они хранят в сейфе. Огромные суммы! " ;
+    cx:hasTranslation "They keep their savings in a safe. Huge amounts!" ;
+    cx:hasTransliteration "Svoi sberezhenija oni hranjat v sejfe. Ogromnye summy!" ;
+    RDFS:comment "from https://constructicon.github.io/russian/#707" .
+
+cx:rus_AdjNomCopNPNom_Ex_B a cx:Example ;
+    cx:hasAnnotatedText "[Неплохой]1 [городок]2! " ;
+    cx:hasGlosses "not.bad-M.SG.NOM town-DIM.M.SG.NOM" ;
+    cx:hasText "Неплохой городок! " ;
+    cx:hasTranslation "A pretty good little town!" ;
+    cx:hasTransliteration "Neplohoj gorod-ok!" ;
+    RDFS:comment "from https://constructicon.github.io/russian/#707" .
+
+cx:rus_AdjNomCopNPNom_MD a rcxn:Metadata ;
+    dcterm:created "2026-11-03"^^xsd:date ;
+    dcterm:references cx:rus_AdjNomCopNPNom_Sources ;
+    rcxn:annotator membr:Petrenko .
+
+cx:rus_AdjNomCopNPNom_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning """[Property]Evaluation [Entity]Evaluated!\r
+The implicit Assessor/Evaluator evaluates the [Entity]3 by ascribing a [Property]1 to it.""" .
+
+cx:rus_AdjNomCopNPNom_Sources a dcmitype:Collection ;
+    dcterm:hasPart references:6f619a90-6cf1-43ae-adc3-31e2fd0d92cd ;
+    RDFS:seeAlso <https://constructicon.de/constructions/110> .
+
+cx:rus_AdjNomCopNPNom_slots a rdf:Seq ;
+    rdf:_1 cx:rus_AdjNomCopNPNom_1 ;
+    rdf:_2 cx:rus_AdjNomCopNPNom_2 ;
+    rdf:_3 cx:rus_AdjNomCopNPNom_3 .
+
+membr:Project_Petrenko_F2611031710 a rsrch:Finding ;
+    RDFS:label "Comparative concepts van partially be applied to the Russian Constructicon." ;
+    rsrch:basedOn cx:rus_AdjNomCopNPNom .
+
+references:6f619a90-6cf1-43ae-adc3-31e2fd0d92cd evid:biblio "Endresen, Anna & Laura A. Janda. 2020. Taking Construction Grammar One Step Further: Families, Clusters, and Networks of Evaluative Constructions in Russian. Frontiers in Psychology 11. 574353. https://doi.org/10.3389/fpsyg.2020.574353." .
+

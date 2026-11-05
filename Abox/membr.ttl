@@ -567,7 +567,8 @@ membr:Project_Patel_241128_F2608271115 a rsrch:Finding ;
     rsrch:basedOn cx:comePLUSnoisemannerofmovementVing .
 
 membr:Project_Petrenko a rsrch:Project ;
-    rsrch:hasFindings membr:Project_Petrenko_F2603061532 ;
+    rsrch:hasFindings membr:Project_Petrenko_F2603061532,
+        membr:Project_Petrenko_F2611031710 ;
     rsrch:projectName "Comparing constructions cross-linguistically — Connecting constructicons"@en .
 
 membr:Project_Petrenko_F2603061532 a rsrch:Finding ;
@@ -582,6 +583,10 @@ membr:Project_Petrenko_F2603061532 a rsrch:Finding ;
         cx:engLME_MostLeastConstruction,
         cx:engLME_PremodifierofAdjectiveConstruction,
         cx:engLME_SuperlativeConstruction .
+
+membr:Project_Petrenko_F2611031710 a rsrch:Finding ;
+    RDFS:label "Comparative concepts van partially be applied to the Russian Constructicon." ;
+    rsrch:basedOn cx:rus_AdjNomCopNPNom .
 
 membr:Project_Prela a rsrch:Project ;
     rsrch:projectName "Project Prela"@en .

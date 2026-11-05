@@ -257,6 +257,15 @@ cx:lat_Adjective a rcxn:Construction ;
     rcxn:hasSlots cx:lat_Adjective_slots ;
     rcxn:hasTitle "Adjective" .
 
+cx:rus_AdjNomCopNPNom a rcxn:Construction ;
+    cx:hasExample cx:rus_AdjNomCopNPNom_Ex_A,
+        cx:rus_AdjNomCopNPNom_Ex_B ;
+    lg:partOfLanguage lg:rus ;
+    rcxn:hasConstructionMeaning cx:rus_AdjNomCopNPNom_Meaning ;
+    rcxn:hasMetadata cx:rus_AdjNomCopNPNom_MD ;
+    rcxn:hasSlots cx:rus_AdjNomCopNPNom_slots ;
+    rcxn:hasTitle "Adj-Nom Cop NP-Nom!" .
+
 cx:ukr_NounPhrase_MD a rcxn:Metadata ;
     DCTERMS:created "2026-09-16"^^xsd:date ;
     rcxn:annotator membr:Fokashchuk .
@@ -5661,6 +5670,50 @@ cx:pol_zamachnaPLUSACC_slots a RDF:Seq ;
     RDF:_1 cx:pol_zamachnaPLUSACC_1 ;
     RDF:_2 cx:pol_zamachnaPLUSACC_2 ;
     RDF:_3 cx:pol_zamachnaPLUSACC_3 .
+
+cx:rus_AdjNomCopNPNom_1 a rcxn:SlotObligatory ;
+    olia:hasCase olia:Nominative ;
+    rcxn:hasSemanticProperty "Property, expressing positive or negative evaluation" .
+
+cx:rus_AdjNomCopNPNom_2 a rcxn:SlotObligatory .
+
+cx:rus_AdjNomCopNPNom_3 a rcxn:SlotObligatory ;
+    olia:hasCase olia:Nominative ;
+    rcxn:hasSemanticProperty "Topic" .
+
+cx:rus_AdjNomCopNPNom_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "Свои сбережения они хранят в сейфе. [Огромные]1 [суммы]2! " ;
+    cx:hasGlosses "their.REFL.POSS savings they.3PL.NOM keep.3PL.NOM in safe-LOC. huge-PL.NOM amount-PL.NOM" ;
+    cx:hasText "Свои сбережения они хранят в сейфе. Огромные суммы! " ;
+    cx:hasTranslation "They keep their savings in a safe. Huge amounts!" ;
+    cx:hasTransliteration "Svoi sberezhenija oni hranjat v sejfe. Ogromnye summy!" ;
+    RDFS:comment "from https://constructicon.github.io/russian/#707" .
+
+cx:rus_AdjNomCopNPNom_Ex_B a cx:Example ;
+    cx:hasAnnotatedText "[Неплохой]1 [городок]2! " ;
+    cx:hasGlosses "not.bad-M.SG.NOM town-DIM.M.SG.NOM" ;
+    cx:hasText "Неплохой городок! " ;
+    cx:hasTranslation "A pretty good little town!" ;
+    cx:hasTransliteration "Neplohoj gorod-ok!" ;
+    RDFS:comment "from https://constructicon.github.io/russian/#707" .
+
+cx:rus_AdjNomCopNPNom_MD a rcxn:Metadata ;
+    DCTERMS:created "2026-11-03"^^xsd:date ;
+    DCTERMS:references cx:rus_AdjNomCopNPNom_Sources ;
+    rcxn:annotator membr:Petrenko .
+
+cx:rus_AdjNomCopNPNom_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning """[Property]Evaluation [Entity]Evaluated!\r
+The implicit Assessor/Evaluator evaluates the [Entity]3 by ascribing a [Property]1 to it.""" .
+
+cx:rus_AdjNomCopNPNom_Sources a dcmitype:Collection ;
+    DCTERMS:hasPart references:6f619a90-6cf1-43ae-adc3-31e2fd0d92cd ;
+    RDFS:seeAlso <https://constructicon.de/constructions/110> .
+
+cx:rus_AdjNomCopNPNom_slots a RDF:Seq ;
+    RDF:_1 cx:rus_AdjNomCopNPNom_1 ;
+    RDF:_2 cx:rus_AdjNomCopNPNom_2 ;
+    RDF:_3 cx:rus_AdjNomCopNPNom_3 .
 
 cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_1 a rcxn:SlotObligatory ;
     cx:hasIndex cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_1_Index ;
