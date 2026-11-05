@@ -182,7 +182,8 @@ membr:Makhanina a FOAF:Person ;
     FOAF:homepage <https://www.cxg.phil.fau.eu/faudir/asia-makhanina/> .
 
 membr:Montevecchio a FOAF:Person ;
-    FOAF:currentProject membr:Project_Montevecchio ;
+    FOAF:currentProject membr:Project_Montevecchio,
+        membr:Project_Montevecchio_2611041733 ;
     FOAF:familyName "Montevecchio" ;
     FOAF:givenName "Paolo" ;
     FOAF:homepage <https://www.cxg.phil.fau.eu/faudir/paolo-montevecchio/> .
@@ -557,7 +558,12 @@ membr:Project_Makhanina_F2611020737 a rsrch:Finding ;
     rsrch:basedOn cx:che_Ergativeconstruction .
 
 membr:Project_Montevecchio a rsrch:Project ;
+    rsrch:hasResearchQuestion membr:Project_Montevecchio_2611041733 ;
     rsrch:projectName "A constructional account of Prepositions and Prepositional Phrases in Early and Late Modern English"@en .
+
+membr:Project_Montevecchio_2611041733_F2611041733 a rsrch:Finding ;
+    RDFS:label "Preposition phrases with metaphorical meanings using the preposition OVER in Legal % Administrative texts in Early Modern English tend to be mostly used with regards to the Restraint Image Schema." ;
+    rsrch:basedOn cx:engEME_Figurativecontrolconstruction .
 
 membr:Project_Patel a rsrch:Project ;
     rsrch:hasResearchQuestion membr:Project_Patel_241128 ;
@@ -719,6 +725,10 @@ membr:Project_Khanoub_2610141629 a rsrch:Project ;
 membr:Project_Khanoub_2610191625 a rsrch:Project ;
     rsrch:hasFindings membr:Project_Khanoub_2610191625_F2610191625 ;
     rsrch:projectName "How did the binominal quantifier (a) lot(s) of develop into a general quantifier, and how has its role within the English quantifier system changed over time?" .
+
+membr:Project_Montevecchio_2611041733 a rsrch:Project ;
+    rsrch:hasFindings membr:Project_Montevecchio_2611041733_F2611041733 ;
+    rsrch:projectName "What metaphorical uses has the preposition OVER developed?" .
 
 membr:Project_Rohwedder_2611021659 a rsrch:Project ;
     rsrch:hasFindings membr:Project_Rohwedder_2611021659_F2611021659 ;

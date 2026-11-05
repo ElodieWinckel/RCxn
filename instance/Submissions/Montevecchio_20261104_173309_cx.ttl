@@ -1,0 +1,61 @@
+@prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cx: <http://example.org/cx/> .
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterm: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
+@prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
+@prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+membr:Project_Montevecchio rsrch:hasResearchQuestion membr:Project_Montevecchio_2611041733 .
+
+cx:engEME_Figurativecontrolconstruction a rcxn:Construction ;
+    cx:hasExample cx:engEME_Figurativecontrolconstruction_Ex_A ;
+    lg:partOfLanguage lg:engEME ;
+    rcxn:hasConstructionMeaning cx:engEME_Figurativecontrolconstruction_Meaning ;
+    rcxn:hasMetadata cx:engEME_Figurativecontrolconstruction_MD ;
+    rcxn:hasSlots cx:engEME_Figurativecontrolconstruction_slots ;
+    rcxn:hasTitle "Figurative control construction" .
+
+cx:engEME_Figurativecontrolconstruction_1 a rcxn:SlotObligatory ;
+    cx:WordOrder "Element 1 before element 2" .
+
+cx:engEME_Figurativecontrolconstruction_2 a rcxn:SlotObligatory ;
+    cx:WordOrder "Element 2 directly before Element 3" .
+
+cx:engEME_Figurativecontrolconstruction_3 a rcxn:SlotObligatory ;
+    cx:WordOrder "Element 3 directly after element 2" .
+
+cx:engEME_Figurativecontrolconstruction_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "...that [he]1 was lord [over]2 [all creatures that were under heaven]3..." ;
+    cx:hasText "...that he was lord over all creatures that were under heaven..." .
+
+cx:engEME_Figurativecontrolconstruction_MD a rcxn:Metadata ;
+    dcterm:created "2026-11-04"^^xsd:date ;
+    dcterm:references cx:engEME_Figurativecontrolconstruction_Sources ;
+    rcxn:annotator membr:Montevecchio .
+
+cx:engEME_Figurativecontrolconstruction_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "[An agent]1 has abstract control [OVER]2 [A patient]3" ;
+    rcxn:usesImageSchema "Restraint" .
+
+cx:engEME_Figurativecontrolconstruction_Sources a dcmitype:Collection .
+
+cx:engEME_Figurativecontrolconstruction_slots a rdf:Seq ;
+    rdf:_1 cx:engEME_Figurativecontrolconstruction_1 ;
+    rdf:_2 cx:engEME_Figurativecontrolconstruction_2 ;
+    rdf:_3 cx:engEME_Figurativecontrolconstruction_3 .
+
+membr:Montevecchio foaf:currentProject membr:Project_Montevecchio_2611041733 .
+
+membr:Project_Montevecchio_2611041733_F2611041733 a rsrch:Finding ;
+    RDFS:label "Preposition phrases with metaphorical meanings using the preposition OVER in Legal % Administrative texts in Early Modern English tend to be mostly used with regards to the Restraint Image Schema." ;
+    rsrch:basedOn cx:engEME_Figurativecontrolconstruction .
+
+membr:Project_Montevecchio_2611041733 a rsrch:Project ;
+    rsrch:hasFindings membr:Project_Montevecchio_2611041733_F2611041733 ;
+    rsrch:projectName "What metaphorical uses has the preposition OVER developed?" .
+

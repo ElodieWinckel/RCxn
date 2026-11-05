@@ -65,6 +65,14 @@ cx:deu_Toechter a rcxn:Construction ;
     rcxn:hasSlots cx:deu_Toechter_slots ;
     rcxn:hasTitle "Töchter" .
 
+cx:engEME_Figurativecontrolconstruction a rcxn:Construction ;
+    cx:hasExample cx:engEME_Figurativecontrolconstruction_Ex_A ;
+    lg:partOfLanguage lg:engEME ;
+    rcxn:hasConstructionMeaning cx:engEME_Figurativecontrolconstruction_Meaning ;
+    rcxn:hasMetadata cx:engEME_Figurativecontrolconstruction_MD ;
+    rcxn:hasSlots cx:engEME_Figurativecontrolconstruction_slots ;
+    rcxn:hasTitle "Figurative control construction" .
+
 cx:engLME_AdjectivalwithPARTNERConstruction a rcxn:Construction ;
     compcon:hasCompCon compcon:cxn_modification-construction,
         compcon:cxn_referring-phrase,
@@ -2224,6 +2232,35 @@ cx:deu_wenn a rcxn:Construction ;
 cx:deu_wenn_MD a rcxn:Metadata ;
     DCTERMS:created "2026-11-05"^^xsd:date ;
     rcxn:annotator membr:Rohwedder .
+
+cx:engEME_Figurativecontrolconstruction_1 a rcxn:SlotObligatory ;
+    cx:WordOrder "Element 1 before element 2" .
+
+cx:engEME_Figurativecontrolconstruction_2 a rcxn:SlotObligatory ;
+    cx:WordOrder "Element 2 directly before Element 3" .
+
+cx:engEME_Figurativecontrolconstruction_3 a rcxn:SlotObligatory ;
+    cx:WordOrder "Element 3 directly after element 2" .
+
+cx:engEME_Figurativecontrolconstruction_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "...that [he]1 was lord [over]2 [all creatures that were under heaven]3..." ;
+    cx:hasText "...that he was lord over all creatures that were under heaven..." .
+
+cx:engEME_Figurativecontrolconstruction_MD a rcxn:Metadata ;
+    DCTERMS:created "2026-11-04"^^xsd:date ;
+    DCTERMS:references cx:engEME_Figurativecontrolconstruction_Sources ;
+    rcxn:annotator membr:Montevecchio .
+
+cx:engEME_Figurativecontrolconstruction_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "[An agent]1 has abstract control [OVER]2 [A patient]3" ;
+    rcxn:usesImageSchema "Restraint" .
+
+cx:engEME_Figurativecontrolconstruction_Sources a dcmitype:Collection .
+
+cx:engEME_Figurativecontrolconstruction_slots a RDF:Seq ;
+    RDF:_1 cx:engEME_Figurativecontrolconstruction_1 ;
+    RDF:_2 cx:engEME_Figurativecontrolconstruction_2 ;
+    RDF:_3 cx:engEME_Figurativecontrolconstruction_3 .
 
 cx:engEME_TheFVIconstruction_1 a rcxn:SlotObligatory ;
     cx:WordOrder "Element one is phrase-initial, only in main clauses." ;
