@@ -4067,7 +4067,7 @@ cx:eng_UnitConstruction_MD a rcxn:Metadata ;
     rcxn:annotator membr:Immertreu .
 
 cx:eng_UnitConstruction_Meaning a rcxn:ConstructionMeaning ;
-    rcxn:hasMeaning "a quantity expressed as a count of standardized units" .
+    rcxn:hasMeaning "a quantity expressed as [a count]1 of [standardized units]2" .
 
 cx:eng_UnitConstruction_Sources a dcmitype:Collection .
 
