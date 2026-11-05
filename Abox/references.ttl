@@ -41,9 +41,15 @@ references:1d894fdc-b0b7-47e4-80ee-98eda82340cf evid:biblio "Birner, Betty. 1994
 
 references:3123c19c-3f37-43ae-9471-d753fdd7839c evid:biblio "Woidich, Manfred. 2006. Das Kairensisch-Arabische. Eine Grammatik. Wiesbaden: Harrassowitz." .
 
+references:34c997b5-ef0f-4a6b-9acb-63f34659318d evid:biblio "constructicon. Belgian Journal of Linguistics, 34:5–16." .
+
 references:3511453c-d7c8-4218-956c-ad4e6d90a32b evid:biblio "University of Oslo. (n.d.). Quran. Bibliotheca Polyglotta. https://polyglotta.uio.no/index.php?page=volume&vid=51" .
 
 references:39b87c34-6766-4f64-9f87-7c249430e507 evid:biblio "Gaston, Phoebe. 2011. Drama SO. Yale Grammatical Diversity Project: English in North America. (Available online at http://ygdp.yale.edu/phenomena/drama-so. Accessed on 2026-10-30). Updated by Tom McCoy (2015) and Katie Martin (2018)." .
+
+references:3e049438-dc56-4ccf-81f4-ca59b7f455cd evid:biblio "Forsberg, M., Johansson, R., Bäckström, L., Borin, L., Lyngfelt, B., Olofsson, J., & Prentice, J. (2014). From construction candidates to constructicon entries: An experiment using semi-automatic methods for identifying constructions in corpora. Constructions and Frames, 6(1):114–135." .
+
+references:46ceab2b-78ca-4369-b397-1f4cfc77b173 evid:biblio "Evert, S. & Heid, U. (2019). Between collocation and construction: Lexical preferences in non-idiomatic word combinations. Presentation at EUROPHRAS 2019: Productive Patterns in Phraseology, Santiago de Compostela, Spain." .
 
 references:4a943605-0f85-4796-b75d-ac165582ab1f evid:biblio "2025. cool. DWDS - Digitale Wörterbuch der deutschen Sprache. Berlin-Brandenburgische Akademie der Wissenschaften. https://www.dwds.de/wb/cool. (28 November, 2025)." .
 
@@ -58,6 +64,8 @@ references:4a94c6ad-4d31-47a7-887c-cf5a289137de evid:biblio "Audring, Jenny & Ra
 references:4aa85e49-d3e2-448b-ac4b-9cb4dea93ede evid:biblio "Nübling, Damaris. 2001. Wechselflexion Luxemburgisch - Deutsch kontrastiv: “ech soen - du sees/si seet” vs. “ich sage, du sagst, sie sagt” : zum sekundären Ausbau eines präsentischen Wurzelvokalwechsels im Luxemburgischen. Sprachwissenschaft 26(4). 433–472." .
 
 references:4e7834c3-5cae-4515-aa2a-ab3da677f171 evid:biblio "Posio, Pekka & Andrea Pešková. 2020. Le dije yo, digo: Construccionalización de los introductores cuotativos con el verbo decir en español peninsular y argentino. Spanish in Context 17(3). 391–414. https://doi.org/10.1075/sic.18002.pos." .
+
+references:51b4d46e-301b-44fe-bd25-95050b325e05 evid:biblio "Dunn, J. (2024). Computational Construction Grammar: A Usage-Based Approach. Elements in Cognitive Linguistics. Cambridge University Press." .
 
 references:53dd38c7-b35e-4852-bea9-6515e3855562 evid:biblio "Del Río, David, Ramón López-Higes & MaríaTeresa Martín-Aragoneses. 2012. Canonical word order and interference-based integration costs during sentence comprehension: The case of Spanish subject- and object-relative clauses. Quarterly Journal of Experimental Psychology 65(11). 2108–2128. https://doi.org/10.1080/17470218.2012.674951." .
 
@@ -119,6 +127,8 @@ references:d00ffba5-7382-4601-b08f-78dc570620de evid:biblio "Bækken, Bjørg. 20
 
 references:d7faff17-6877-487b-b9ab-7cdb3cb1b20b evid:biblio "Van De Weijer, Jeroen, Weiyun Wei, Yumeng Wang, Guangyuan Ren & Yunyun Ran. 2020. Words are constructions, too: A construction-based approach to English ablaut reduplication. Linguistics 58(6). 1701–1735. https://doi.org/10.1515/ling-2020-0169." .
 
+references:d99b0509-98a6-4dd2-b8f9-ca4e25d49072 evid:biblio "Diessel, H. (2019). The Grammar Network: How Linguistic Structure Is Shaped by Language Use. Cambridge University Press." .
+
 references:db2b532f-f711-4470-8922-91afa4fc6aef evid:biblio "Presotto, Giacomo & Jacopo Torregrossa. 2024. Intervention and amelioration effects in the acquisition of Spanish object relative clauses: the role of word order and DOM. Glossa: a journal of general linguistics 9(1). https://doi.org/10.16995/glossa.11254." .
 
 references:db2b532f-f711-4470-8922-91afa4fc6aef-1 evid:biblio "Fernández Santos, Sara, Miquel Llompart & Ewa Dąbrowska. 2025. Predictive processing can override perceptual information: evidence from Spanish object relative clauses. Language and Cognition 17. e59. https://doi.org/10.1017/langcog.2025.10015." .
@@ -128,6 +138,8 @@ references:db2b532f-f711-4470-8922-91afa4fc6aef-2 evid:biblio "Kenanidis, Panagi
 references:e0922bbf-fbdd-42e0-82a6-52d50a12e5e2 evid:biblio "Nevalainen, Terttu. 1997. Recycling Inversion: The Case of Initial Adverbs and Negators in Early Modern English. Studia Anglica Posnaniensia 31. 203–214." .
 
 references:edb60a8d-34ec-4c0c-9e74-6538fb89c073 evid:biblio "Haspelmath, M. (2019). Ergativity and depth of analysis. Rhema, 2019(4), 108-130. doi:10.31862/2500-2953-2019-4-108-130." .
+
+references:f1506d5b-dc68-44ec-aad3-3a3cc3f0a081 evid:biblio "Goldberg, A. E. (1995). Constructions. A Construction Grammar Approach to Argument Structure. Chicago: The University of Chicago Press." .
 
 references:f4827f62-fd00-411b-9579-7ae21d34505e evid:biblio "Chen, Rong. 2013. Subject Auxiliary Inversion and Linguistic Generalization: Evidence for Functional/Cognitive Motivation in Language. Cognitive Linguistics 24(1). 1–32. https://doi.org/10.1515/cog-2013-0001." .
 

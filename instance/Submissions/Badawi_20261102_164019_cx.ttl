@@ -1,0 +1,110 @@
+@prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cx: <http://example.org/cx/> .
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterm: <http://purl.org/dc/terms/> .
+@prefix evid: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/evid#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
+@prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
+@prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix references: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/references#> .
+@prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+membr:Project_Badawi rsrch:hasResearchQuestion membr:Project_Badawi_2611021640 .
+
+cx:eng_EarnConstruction a rcxn:Construction ;
+    cx:hasExample cx:eng_EarnConstruction_Ex_A,
+        cx:eng_EarnConstruction_Ex_B,
+        cx:eng_EarnConstruction_Ex_C ;
+    lg:partOfLanguage lg:eng ;
+    rcxn:hasConstructionMeaning cx:eng_EarnConstruction_Meaning ;
+    rcxn:hasMetadata cx:eng_EarnConstruction_MD ;
+    rcxn:hasSlots cx:eng_EarnConstruction_slots ;
+    rcxn:hasTitle "Earn Construction" .
+
+cx:eng_EarnConstruction_1 a rcxn:SlotOptional ;
+    rcxn:hasOtherSemanticContribution "ÆFFECTOR" ;
+    rcxn:hasSyntacticFunction "Subject" .
+
+cx:eng_EarnConstruction_2 a rcxn:SlotObligatory ;
+    cx:WordOrder "Element 2 follows Element 1" .
+
+cx:eng_EarnConstruction_3 a rcxn:SlotOptional ;
+    cx:WordOrder "Element 3 follows Element 2 when the verb is used as ditransitive" ;
+    rcxn:hasOtherSemanticContribution "RECIPIENT" ;
+    rcxn:hasSyntacticFunction "Indirect Object" .
+
+cx:eng_EarnConstruction_4 a rcxn:SlotObligatory ;
+    cx:WordOrder "Element 4 follows Element 3 ,but when Element 3 is not present then Element 4 follows Element 2" ;
+    rcxn:hasOtherSemanticContribution "ÆFFECTED" ;
+    rcxn:hasSyntacticFunction "Direct Object" .
+
+cx:eng_EarnConstruction_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "Presumably [the ships]1 [earn]2 [money]4 by carrying cargoes, doing the ordinary. ( H0D 2490 )" ;
+    cx:hasText "Presumably the ships earn money by carrying cargoes, doing the ordinary. ( H0D 2490 )" ;
+    RDFS:comment "The AEFFECTOR is inanimate (ships), and the by-phrase expresses the work for which the return is obtained" .
+
+cx:eng_EarnConstruction_Ex_B a cx:Example ;
+    cx:hasAnnotatedText "It’s tough to get into the union, and it’s tough to [earn]2 [a living]4 in the profession. ( A06 1525 )" ;
+    cx:hasText "It’s tough to get into the union, and it’s tough to earn a living in the profession. ( A06 1525 )" ;
+    RDFS:comment "living is the strongest object collexeme of earn. Non-finite use with an implicit AEFFECTOR." .
+
+cx:eng_EarnConstruction_Ex_C a cx:Example ;
+    cx:hasAnnotatedText "[Revelations about his string of dancing partners and unsuitable friends]1 might have [earned]2 [him]3 [a reputation]4 not unlike Fergie’. (CEK 1093 ). " ;
+    cx:hasText "Revelations about his string of dancing partners and unsuitable friends might have earned him a reputation not unlike Fergie’. (CEK 1093 )s. " ;
+    RDFS:comment "Ditransitive variant. The nominal AEFFECTOR is the behaviour that brings the status about, the pronoun him is the RECIPIENT, and the reputation obtained is a negative one." .
+
+cx:eng_EarnConstruction_MD a rcxn:Metadata ;
+    dcterm:created "2026-11-02"^^xsd:date ;
+    dcterm:references cx:eng_EarnConstruction_Sources ;
+    rcxn:annotator membr:Badawi .
+
+cx:eng_EarnConstruction_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "1. [An Affector]1 obtains [an Affected]4 as a deserved return for its own work, effort or behaviour." ,
+        "2. [An Affector]1 obtains [money or a means of subsistence]4 in return for work." ,
+        "3. [An Affector]1 obtains [a status or a positive evaluation]4 in return for its behaviour or achievements." .
+
+cx:eng_EarnConstruction_Sources a dcmitype:Collection ;
+    dcterm:hasPart references:34c997b5-ef0f-4a6b-9acb-63f34659318d,
+        references:3e049438-dc56-4ccf-81f4-ca59b7f455cd,
+        references:46ceab2b-78ca-4369-b397-1f4cfc77b173,
+        references:51b4d46e-301b-44fe-bd25-95050b325e05,
+        references:d99b0509-98a6-4dd2-b8f9-ca4e25d49072,
+        references:f1506d5b-dc68-44ec-aad3-3a3cc3f0a081 .
+
+cx:eng_EarnConstruction_slots a rdf:Seq ;
+    rdf:_1 cx:eng_EarnConstruction_1 ;
+    rdf:_2 cx:eng_EarnConstruction_2 ;
+    rdf:_3 cx:eng_EarnConstruction_3 ;
+    rdf:_4 cx:eng_EarnConstruction_4 .
+
+membr:Badawi foaf:currentProject membr:Project_Badawi_2611021640 .
+
+membr:Project_Badawi_2611021640_F2611021640 a rsrch:Finding ;
+    RDFS:label """1. The object slot of earn is strongly restricted lexically and semantically, while the subject slot is open. Against a whole-corpus baseline, the strongest object collexemes are living (G² = 3,130), money (1,799), wage, reputation, nickname, keep, respect and profit.\r
+2. Semantically, money objects occur 8.3 times more often with earn than with verbs in general (10.7 times at the level of the money-and-business field).\r
+3. Semantically, money objects occur 8.3 times more often with earn than with verbs in general (10.7 times at the level of the money-and-business field).\r
+4. The money reading is preferred with I (G² = 43.9), you (19.3) and she (10.1), not with he, they, we or it.\r
+5. A ditransitive variant (389 instances; earn someone a place / a nickname / a reputation) behaves as a distinct sub-construction. It prefers status objects and avoids money (7 vs. 353 instances, G² = 37.3). It takes a nominal subject in 69% of cases (34% elsewhere), typically the achievement that causes the reward, and is strongly fixed in its indirect-object slot (0.58, mainly he and himself).\r
+Overall, the construction is  partially schematic: open in its subject, partially lexicalised in its object, with earn a living as its most strongly associated sub-pattern.\r
+""" ;
+    rsrch:basedOn cx:eng_EarnConstruction .
+
+references:34c997b5-ef0f-4a6b-9acb-63f34659318d evid:biblio "constructicon. Belgian Journal of Linguistics, 34:5–16." .
+
+references:3e049438-dc56-4ccf-81f4-ca59b7f455cd evid:biblio "Forsberg, M., Johansson, R., Bäckström, L., Borin, L., Lyngfelt, B., Olofsson, J., & Prentice, J. (2014). From construction candidates to constructicon entries: An experiment using semi-automatic methods for identifying constructions in corpora. Constructions and Frames, 6(1):114–135." .
+
+references:46ceab2b-78ca-4369-b397-1f4cfc77b173 evid:biblio "Evert, S. & Heid, U. (2019). Between collocation and construction: Lexical preferences in non-idiomatic word combinations. Presentation at EUROPHRAS 2019: Productive Patterns in Phraseology, Santiago de Compostela, Spain." .
+
+references:51b4d46e-301b-44fe-bd25-95050b325e05 evid:biblio "Dunn, J. (2024). Computational Construction Grammar: A Usage-Based Approach. Elements in Cognitive Linguistics. Cambridge University Press." .
+
+references:d99b0509-98a6-4dd2-b8f9-ca4e25d49072 evid:biblio "Diessel, H. (2019). The Grammar Network: How Linguistic Structure Is Shaped by Language Use. Cambridge University Press." .
+
+references:f1506d5b-dc68-44ec-aad3-3a3cc3f0a081 evid:biblio "Goldberg, A. E. (1995). Constructions. A Construction Grammar Approach to Argument Structure. Chicago: The University of Chicago Press." .
+
+membr:Project_Badawi_2611021640 a rsrch:Project ;
+    rsrch:hasFindings membr:Project_Badawi_2611021640_F2611021640 ;
+    rsrch:projectName "How can the constructionhood of verb-argument patterns be measured from corpus data along fixedness, productivity and association, and how do these dimensions behave across the subsumption lattice of a verb’s patterns?" .
+
