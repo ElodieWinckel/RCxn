@@ -32,7 +32,11 @@ cx:engUsSpo_XissoNP_1 a rcxn:SlotObligatory ;
 
 cx:engUsSpo_XissoNP_2 a rcxn:SlotObligatory ;
     cx:WordOrder "follows element 1, precedes element 3" ;
+    rcxn:hasSlotForm cx:engUsSpo_XissoNP_1_Form ;
     cx:hasIndex cx:engUsSpo_XissoNP_2_Index .
+
+cx:engUsSpo_XissoNP_1_Form a rcxn:SlotForm ;
+    rcxn:hasSurfaceForm "so" .
 
 cx:engUsSpo_XissoNP_2_Index a cx:Event ;
     olia:hasTense olia:NotTemporallyAnchored .
@@ -44,7 +48,11 @@ cx:engUsSpo_XissoNP_3 a rcxn:SlotObligatory ;
 cx:engUsSpo_XissoNP_4 a rcxn:SlotObligatory ;
     cx:WordOrder "follows element 4" ;
     RDFS:comment "Behaves as a gradient category between noun and adjective (Gonzálvez-García 2014: 279)" ;
-    rcxn:hasSyntacticFunction "Object" .
+    rcxn:hasSyntacticFunction "Object" ;
+    rcxn:hasSlotForm cx:engUsSpo_XissoNP_4_Form.
+
+cx:engUsSpo_XissoNP_4_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:eng_NounPhrase .
 
 cx:engUsSpo_XissoNP_Ex_A a cx:Example ;
     cx:hasAnnotatedText "I love it! [It]1 [’s]2 [so]3 [college]4. " ;

@@ -23,7 +23,16 @@ cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_1 a rcxn:SlotObligatory ;
     rcxn:hasSyntacticFunction "conditional conjunction" .
 
 cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_1_Form a rcxn:SlotForm ;
-    rcxn:hasSurfaceForm "wenn" .
+    rcxn:hasSyntacticForm cx:deu_wenn .
+
+cx:deu_wenn a rcxn:Construction ;
+    lg:partOfLanguage lg:deu ;
+    rcxn:hasMetadata cx:deu_wenn_MD ;
+    rcxn:hasTitle "wenn" .
+
+cx:deu_wenn_MD a rcxn:Metadata ;
+    dcterm:created "2026-11-05"^^xsd:date ;
+    rcxn:annotator membr:Rohwedder .
 
 cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_2 a rcxn:SlotObligatory ;
     cx:WordOrder "immediately after element 1" ;
@@ -57,7 +66,7 @@ cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_3_Index a cx:Event ;
 cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_4 a rcxn:SlotObligatory ;
     cx:WordOrder "between object 3 and 5" ;
     olia:hasSemanticRole olia:ObliqueRole ;
-    rcxn:hasSemanticProperty "(actual or fictitious) quote of the adressee" ;
+    rcxn:hasOtherSemanticContribution "(actual or fictitious) quote of the adressee" ;
     rcxn:hasSlotForm cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_4_Form .
 
 cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_4_Form a rcxn:SlotForm ;
@@ -69,10 +78,19 @@ cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_5 a rcxn:SlotOptional ;
     rcxn:hasSlotForm cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_5_Form .
 
 cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_5_Form a rcxn:SlotForm ;
-    rcxn:hasSurfaceForm "dann" .
+    rcxn:hasSyntacticForm cx:deu_dann .
+
+cx:deu_dann a rcxn:Construction ;
+    lg:partOfLanguage lg:deu ;
+    rcxn:hasMetadata cx:deu_dann_MD ;
+    rcxn:hasTitle "dann" .
+
+cx:deu_dann_MD a rcxn:Metadata ;
+    dcterm:created "2026-11-05"^^xsd:date ;
+    rcxn:annotator membr:Rohwedder .
 
 cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_6 a rcxn:SlotObligatory ;
-    rcxn:hasSemanticProperty "suggested conclusion" ;
+    rcxn:hasOtherSemanticContribution "suggested conclusion" ;
     rcxn:hasSyntacticFunction "main clause" .
 
 cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_Ex_A a cx:Example ;
@@ -93,7 +111,7 @@ cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_MD a rcxn:Metadata ;
     rcxn:annotator membr:Rohwedder .
 
 cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_Meaning a rcxn:ConstructionMeaning ;
-    rcxn:hasMeaning "The speaker (doctor) quotes [the listener (patient)]2 with [something they have said or may say]4, thereby assigning [a stance]6 to them that both interactants can consequently relate to in the preparation of a medical decision." .
+    rcxn:hasMeaning "The speaker (doctor) quotes [the listener (patient)]2 with [something they have said or may say]4, thereby assigning a stance to them that is followed up with [a suggested conclusion]6 that both interactants may relate to in the further discussion of a medical decision" .
 
 cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_Sources a dcmitype:Collection ;
     dcterm:hasPart references:0a5c37f9-8928-4c2e-b4fb-e85e51d134a7 .

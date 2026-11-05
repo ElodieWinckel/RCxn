@@ -182,16 +182,6 @@ cx:engLME_SuperlativeConstruction a rcxn:Construction ;
 cx:engLME_Transitiveconstruction_2_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_Verb .
 
-cx:engUsSpo_XissoNP a rcxn:Construction ;
-    cx:hasExample cx:engUsSpo_XissoNP_Ex_A,
-        cx:engUsSpo_XissoNP_Ex_B ;
-    cx:hasIntonation "The modifier must receive the highest pitch accent (Gaston 2011) " ;
-    lg:partOfLanguage lg:engUsSpo ;
-    rcxn:hasConstructionMeaning cx:engUsSpo_XissoNP_Meaning ;
-    rcxn:hasMetadata cx:engUsSpo_XissoNP_MD ;
-    rcxn:hasSlots cx:engUsSpo_XissoNP_slots ;
-    rcxn:hasTitle "X is so NP" .
-
 cx:eng_CauseMotionconstruction_2_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_Verb .
 
@@ -860,6 +850,76 @@ cx:comePLUSnoisemannerofmovementVing_slots a RDF:Seq ;
     RDF:_5 cx:comePLUSnoisemannerofmovementVing_5 ;
     RDF:_6 cx:comePLUSnoisemannerofmovementVing_6 .
 
+cx:deuFNG_losingressiveconstruction a rcxn:Construction ;
+    cx:hasExample cx:deuFNG_losingressiveconstruction_Ex_A,
+        cx:deuFNG_losingressiveconstruction_Ex_B,
+        cx:deuFNG_losingressiveconstruction_Ex_C ;
+    lg:partOfLanguage lg:deuFNG ;
+    rcxn:hasConstructionMeaning cx:deuFNG_losingressiveconstruction_Meaning ;
+    rcxn:hasMetadata cx:deuFNG_losingressiveconstruction_MD ;
+    rcxn:hasSlots cx:deuFNG_losingressiveconstruction_slots ;
+    rcxn:hasTitle "los-ingressive-construction" .
+
+cx:deuFNG_losingressiveconstruction_1 a rcxn:SlotObligatory ;
+    cx:hasIndex cx:deuFNG_losingressiveconstruction_1_Index ;
+    olia:hasSemanticRole olia:AgentRole .
+
+cx:deuFNG_losingressiveconstruction_1_Index a cx:Individual ;
+    olia:hasAnimacy olia:Animate .
+
+cx:deuFNG_losingressiveconstruction_2 a rcxn:SlotObligatory ;
+    RDFS:comment "begin-indicating particle",
+        "prefix-like type: losVINF, morphologically seperated type: losgeVINF, loszuVINF, syntactically seperated type VFin ... los" ;
+    rcxn:hasOtherSemanticContribution "ingressive aspect" ;
+    rcxn:hasSemanticProperty "adds ingressive aspect to the base verb" ;
+    rcxn:hasSlotForm cx:deuFNG_losingressiveconstruction_2_Form .
+
+cx:deuFNG_losingressiveconstruction_2_Form a rcxn:SlotForm ;
+    rcxn:hasSurfaceForm "los" .
+
+cx:deuFNG_losingressiveconstruction_3 a rcxn:SlotObligatory ;
+    rcxn:hasSemanticProperty "prefers activity verbs (esp. verbs of movement or uttering sounds), states are only possible if they also fall in the category of progression verbs (e.g. (los)dampfen, (los)regnen, but not *loswissen), some achievements and semelfactives; accomplishments are blocked" ;
+    rcxn:hasSlotForm cx:deuFNG_losingressiveconstruction_3_Form .
+
+cx:deuFNG_losingressiveconstruction_3_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:deu_Verb .
+
+cx:deuFNG_losingressiveconstruction_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "Danach [fährt]3 [sie]1 [los]2 und überlässt Collins seinem Schicksal. (Wikipedia-Korpus, Wissenschaft, 12.09.2025)" ;
+    cx:hasGlosses "Afterwards drives she los(=begin indicating particle) and leaves Collins his fate." ;
+    cx:hasText "Danach fährt sie los und überlässt Collins seinem Schicksal. (Wikipedia-Korpus, Wissenschaft, 12.09.2025)" ;
+    cx:hasTranslation "Afterwards, she begins to drive (begins to move through the action of driving) and leaves Collins to his fate." ;
+    RDFS:comment "example for the syntactically seperated type" .
+
+cx:deuFNG_losingressiveconstruction_Ex_B a cx:Example ;
+    cx:hasAnnotatedText "[Ich]1 saß dort, wie erstarrt, und wollte am liebsten [los]2[weinen]3. (FAZ-Korpus, Zeitung, 19.02.2025)" ;
+    cx:hasGlosses "I sat there, like frozen, and wanted preferably los(=ingressive particle)cry." ;
+    cx:hasText "Ich saß dort, wie erstarrt, und wollte am liebsten losweinen. (FAZ-Korpus, Zeitung, 19.02.2025)" ;
+    cx:hasTranslation "I sat there, like frozen, and preferably wanted to start to cry." ;
+    RDFS:comment "example for the univerbated/prefix-like type" .
+
+cx:deuFNG_losingressiveconstruction_Ex_C a cx:Example ;
+    cx:hasAnnotatedText "Denn auch außerhalb des Musikprogramms findet ständig [jemand]1 einen Anlass, plötzlich [los]2zu[singen]3. (Tagesspiegel-Korpus, Zeitung, 13.10.2022)" ;
+    cx:hasGlosses "Because even outside the music programme, finds regularly somebody a reason suddenly los(=ingressive particle)-to-sing." ;
+    cx:hasText "Denn auch außerhalb des Musikprogramms findet ständig jemand einen Anlass, plötzlich loszusingen. (Tagesspiegel-Korpus, Zeitung, 13.10.2022)" ;
+    cx:hasTranslation "Because even outside of the music programme, somebody regularly finds a reason to suddenly start to sing." ;
+    RDFS:comment "example for the morphologically seperated type" .
+
+cx:deuFNG_losingressiveconstruction_MD a rcxn:Metadata ;
+    DCTERMS:created "2026-10-21"^^xsd:date ;
+    DCTERMS:references cx:deuFNG_losingressiveconstruction_Sources ;
+    rcxn:annotator membr:Weigelt .
+
+cx:deuFNG_losingressiveconstruction_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "[AGENS]1 begins to [V]3" .
+
+cx:deuFNG_losingressiveconstruction_Sources a dcmitype:Collection .
+
+cx:deuFNG_losingressiveconstruction_slots a RDF:Seq ;
+    RDF:_1 cx:deuFNG_losingressiveconstruction_1 ;
+    RDF:_2 cx:deuFNG_losingressiveconstruction_2 ;
+    RDF:_3 cx:deuFNG_losingressiveconstruction_3 .
+
 cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_1 a rcxn:SlotObligatory ;
     cx:hasTranslation "if" ;
     olia:hasSemanticRole olia:ConditionRole ;
@@ -867,7 +927,7 @@ cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_1 a rcxn:SlotObligatory ;
     rcxn:hasSyntacticFunction "conditional conjunction" .
 
 cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_1_Form a rcxn:SlotForm ;
-    rcxn:hasSurfaceForm "wenn" .
+    rcxn:hasSyntacticForm cx:deu_wenn .
 
 cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_2 a rcxn:SlotObligatory ;
     cx:WordOrder "immediately after element 1" ;
@@ -901,7 +961,7 @@ cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_3_Index a cx:Event ;
 cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_4 a rcxn:SlotObligatory ;
     cx:WordOrder "between object 3 and 5" ;
     olia:hasSemanticRole olia:ObliqueRole ;
-    rcxn:hasSemanticProperty "(actual or fictitious) quote of the adressee" ;
+    rcxn:hasOtherSemanticContribution "(actual or fictitious) quote of the adressee" ;
     rcxn:hasSlotForm cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_4_Form .
 
 cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_4_Form a rcxn:SlotForm ;
@@ -913,10 +973,10 @@ cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_5 a rcxn:SlotOptional ;
     rcxn:hasSlotForm cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_5_Form .
 
 cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_5_Form a rcxn:SlotForm ;
-    rcxn:hasSurfaceForm "dann" .
+    rcxn:hasSyntacticForm cx:deu_dann .
 
 cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_6 a rcxn:SlotObligatory ;
-    rcxn:hasSemanticProperty "suggested conclusion" ;
+    rcxn:hasOtherSemanticContribution "suggested conclusion" ;
     rcxn:hasSyntacticFunction "main clause" .
 
 cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_Ex_A a cx:Example ;
@@ -937,7 +997,7 @@ cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_MD a rcxn:Metadata ;
     rcxn:annotator membr:Rohwedder .
 
 cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_Meaning a rcxn:ConstructionMeaning ;
-    rcxn:hasMeaning "The speaker (doctor) quotes [the listener (patient)]2 with [something they have said or may say]4, thereby assigning [a stance]6 to them that both interactants can consequently relate to in the preparation of a medical decision." .
+    rcxn:hasMeaning "The speaker (doctor) quotes [the listener (patient)]2 with [something they have said or may say]4, thereby assigning a stance to them that is followed up with [a suggested conclusion]6 that both interactants may relate to in the further discussion of a medical decision" .
 
 cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_Sources a dcmitype:Collection ;
     DCTERMS:hasPart references:0a5c37f9-8928-4c2e-b4fb-e85e51d134a7 .
@@ -1003,80 +1063,6 @@ cx:deuStdHigh_NP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_Meaning a rcxn:C
 cx:deuStdHigh_NP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_slots a RDF:Seq ;
     RDF:_1 cx:deuStdHigh_NP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_1 ;
     RDF:_2 cx:deuStdHigh_NP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_2 .
-
-cx:deuStdHigh_losingressiveconstruction a rcxn:Construction ;
-    cx:hasExample cx:deuStdHigh_losingressiveconstruction_Ex_A,
-        cx:deuStdHigh_losingressiveconstruction_Ex_B,
-        cx:deuStdHigh_losingressiveconstruction_Ex_C ;
-    lg:partOfLanguage lg:deuStdHigh ;
-    rcxn:hasConstructionMeaning cx:deuStdHigh_losingressiveconstruction_Meaning ;
-    rcxn:hasMetadata cx:deuStdHigh_losingressiveconstruction_MD ;
-    rcxn:hasSlots cx:deuStdHigh_losingressiveconstruction_slots ;
-    rcxn:hasTitle "los-ingressive-construction" .
-
-cx:deuStdHigh_losingressiveconstruction_1 a rcxn:SlotObligatory ;
-    cx:hasIndex cx:deuStdHigh_losingressiveconstruction_1_Index ;
-    rcxn:hasSemanticProperty "AGENS-role" ;
-    rcxn:hasSlotForm cx:deuStdHigh_losingressiveconstruction_1_Form .
-
-cx:deuStdHigh_losingressiveconstruction_1_Form a rcxn:SlotForm ;
-    rcxn:hasSurfaceForm "[AGENS]" .
-
-cx:deuStdHigh_losingressiveconstruction_1_Index a cx:Individual ;
-    olia:hasAnimacy olia:Animate .
-
-cx:deuStdHigh_losingressiveconstruction_2 a rcxn:SlotObligatory ;
-    RDFS:comment "begin-indicating particle",
-        "prefix-like type: losVINF, morphologically seperated type: losgeVINF, loszuVINF, syntactically seperated type VFin ... los" ;
-    rcxn:hasOtherSemanticContribution "ingressive aspect" ;
-    rcxn:hasSemanticProperty "adds ingressive aspect to the base verb" ;
-    rcxn:hasSlotForm cx:deuStdHigh_losingressiveconstruction_2_Form .
-
-cx:deuStdHigh_losingressiveconstruction_2_Form a rcxn:SlotForm ;
-    rcxn:hasSurfaceForm "los" .
-
-cx:deuStdHigh_losingressiveconstruction_3 a rcxn:SlotObligatory ;
-    rcxn:hasSemanticProperty "prefers activity verbs (esp. verbs of movement or uttering sounds), states are only possible if they also fall in the category of progression verbs (e.g. (los)dampfen, (los)regnen, but not *loswissen), some achievements and semelfactives; accomplishments are blocked" ;
-    rcxn:hasSlotForm cx:deuStdHigh_losingressiveconstruction_3_Form .
-
-cx:deuStdHigh_losingressiveconstruction_3_Form a rcxn:SlotForm ;
-    rcxn:hasSyntacticForm cx:deu_Verb .
-
-cx:deuStdHigh_losingressiveconstruction_Ex_A a cx:Example ;
-    cx:hasAnnotatedText "Danach [fährt]3 [sie]1 [los]2 und überlässt Collins seinem Schicksal. (Wikipedia-Korpus, Wissenschaft, 12.09.2025)" ;
-    cx:hasGlosses "Afterwards drives she los(=begin indicating particle) and leaves Collins his fate." ;
-    cx:hasText "Danach fährt sie los und überlässt Collins seinem Schicksal. (Wikipedia-Korpus, Wissenschaft, 12.09.2025)" ;
-    cx:hasTranslation "Afterwards, she begins to drive (begins to move through the action of driving) and leaves Collins to his fate." ;
-    RDFS:comment "example for the syntactically seperated type" .
-
-cx:deuStdHigh_losingressiveconstruction_Ex_B a cx:Example ;
-    cx:hasAnnotatedText "[Ich]1 saß dort, wie erstarrt, und wollte am liebsten [los]2[weinen]3. (FAZ-Korpus, Zeitung, 19.02.2025)" ;
-    cx:hasGlosses "I sat there, like frozen, and wanted preferably los(=ingressive particle)cry." ;
-    cx:hasText "Ich saß dort, wie erstarrt, und wollte am liebsten losweinen. (FAZ-Korpus, Zeitung, 19.02.2025)" ;
-    cx:hasTranslation "I sat there, like frozen, and preferably wanted to start to cry." ;
-    RDFS:comment "example for the univerbated/prefix-like type" .
-
-cx:deuStdHigh_losingressiveconstruction_Ex_C a cx:Example ;
-    cx:hasAnnotatedText "Denn auch außerhalb des Musikprogramms findet ständig [jemand]1 einen Anlass, plötzlich [loszu]2[singen]3. (Tagesspiegel-Korpus, Zeitung, 13.10.2022)" ;
-    cx:hasGlosses "Because even outside the music programme, finds regularly somebody a reason suddenly los(=ingressive particle)-to-sing." ;
-    cx:hasText "Denn auch außerhalb des Musikprogramms findet ständig jemand einen Anlass, plötzlich loszusingen. (Tagesspiegel-Korpus, Zeitung, 13.10.2022)" ;
-    cx:hasTranslation "Because even outside of the music programme, somebody regularly finds a reason to suddenly start to sing." ;
-    RDFS:comment "example for the morphologically seperated type" .
-
-cx:deuStdHigh_losingressiveconstruction_MD a rcxn:Metadata ;
-    DCTERMS:created "2026-10-21"^^xsd:date ;
-    DCTERMS:references cx:deuStdHigh_losingressiveconstruction_Sources ;
-    rcxn:annotator membr:Weigelt .
-
-cx:deuStdHigh_losingressiveconstruction_Meaning a rcxn:ConstructionMeaning ;
-    rcxn:hasMeaning "[AGENS]1 begins to [V]3" .
-
-cx:deuStdHigh_losingressiveconstruction_Sources a dcmitype:Collection .
-
-cx:deuStdHigh_losingressiveconstruction_slots a RDF:Seq ;
-    RDF:_1 cx:deuStdHigh_losingressiveconstruction_1 ;
-    RDF:_2 cx:deuStdHigh_losingressiveconstruction_2 ;
-    RDF:_3 cx:deuStdHigh_losingressiveconstruction_3 .
 
 cx:deuWrSt20_sichNPADJADVvorAugenVP_1 a rcxn:SlotOptional ;
     cx:WordOrder "In most cases, NP precedes the prepositional phrase \"vor Augen\"." ;
@@ -2171,6 +2157,16 @@ cx:deu_conditionalclauseconstruction_MD a rcxn:Metadata ;
     DCTERMS:created "2026-11-02"^^xsd:date ;
     rcxn:annotator membr:Rohwedder .
 
+cx:deu_dann a rcxn:Construction ;
+    lg:partOfLanguage lg:deu ;
+    links:elementOf cx:deuNHD_QuotativeconditionalWennSiesagenXdannY ;
+    rcxn:hasMetadata cx:deu_dann_MD ;
+    rcxn:hasTitle "dann" .
+
+cx:deu_dann_MD a rcxn:Metadata ;
+    DCTERMS:created "2026-11-05"^^xsd:date ;
+    rcxn:annotator membr:Rohwedder .
+
 cx:deu_quotativeconstruction a rcxn:Construction ;
     lg:partOfLanguage lg:deu ;
     links:inheritedBy cx:deuNHD_QuotativeconditionalWennSiesagenXdannY ;
@@ -2218,6 +2214,16 @@ cx:deu_vorPLUSbodypartconstructions_MD a rcxn:Metadata ;
 
 cx:deu_vor_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "in front of" .
+
+cx:deu_wenn a rcxn:Construction ;
+    lg:partOfLanguage lg:deu ;
+    links:elementOf cx:deuNHD_QuotativeconditionalWennSiesagenXdannY ;
+    rcxn:hasMetadata cx:deu_wenn_MD ;
+    rcxn:hasTitle "wenn" .
+
+cx:deu_wenn_MD a rcxn:Metadata ;
+    DCTERMS:created "2026-11-05"^^xsd:date ;
+    rcxn:annotator membr:Rohwedder .
 
 cx:engEME_TheFVIconstruction_1 a rcxn:SlotObligatory ;
     cx:WordOrder "Element one is phrase-initial, only in main clauses." ;
@@ -3483,14 +3489,28 @@ cx:engUsSpo_Hadituptoherewithphysicalheightgesture_slots a RDF:Seq ;
     RDF:_2 cx:engUsSpo_Hadituptoherewithphysicalheightgesture_2 ;
     RDF:_3 cx:engUsSpo_Hadituptoherewithphysicalheightgesture_3 .
 
+cx:engUsSpo_XissoNP a rcxn:Construction ;
+    cx:hasExample cx:engUsSpo_XissoNP_Ex_A,
+        cx:engUsSpo_XissoNP_Ex_B ;
+    cx:hasIntonation "The modifier must receive the highest pitch accent (Gaston 2011) " ;
+    lg:partOfLanguage lg:engUsSpo ;
+    rcxn:hasConstructionMeaning cx:engUsSpo_XissoNP_Meaning ;
+    rcxn:hasMetadata cx:engUsSpo_XissoNP_MD ;
+    rcxn:hasSlots cx:engUsSpo_XissoNP_slots ;
+    rcxn:hasTitle "X is so NP" .
+
 cx:engUsSpo_XissoNP_1 a rcxn:SlotObligatory ;
     cx:WordOrder "precedes element 2" ;
     olia:hasSemanticRole olia:ThemeRole ;
     rcxn:hasSyntacticFunction "Subject" .
 
+cx:engUsSpo_XissoNP_1_Form a rcxn:SlotForm ;
+    rcxn:hasSurfaceForm "so" .
+
 cx:engUsSpo_XissoNP_2 a rcxn:SlotObligatory ;
     cx:WordOrder "follows element 1, precedes element 3" ;
-    cx:hasIndex cx:engUsSpo_XissoNP_2_Index .
+    cx:hasIndex cx:engUsSpo_XissoNP_2_Index ;
+    rcxn:hasSlotForm cx:engUsSpo_XissoNP_1_Form .
 
 cx:engUsSpo_XissoNP_2_Index a cx:Event ;
     olia:hasTense olia:NotTemporallyAnchored .
@@ -3502,7 +3522,11 @@ cx:engUsSpo_XissoNP_3 a rcxn:SlotObligatory ;
 cx:engUsSpo_XissoNP_4 a rcxn:SlotObligatory ;
     cx:WordOrder "follows element 4" ;
     RDFS:comment "Behaves as a gradient category between noun and adjective (Gonzálvez-García 2014: 279)" ;
+    rcxn:hasSlotForm cx:engUsSpo_XissoNP_4_Form ;
     rcxn:hasSyntacticFunction "Object" .
+
+cx:engUsSpo_XissoNP_4_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:eng_NounPhrase .
 
 cx:engUsSpo_XissoNP_Ex_A a cx:Example ;
     cx:hasAnnotatedText "I love it! [It]1 [’s]2 [so]3 [college]4. " ;
@@ -5890,7 +5914,7 @@ cx:spa_Decirquotativeconstruction_2 a rcxn:SlotOptional ;
     cx:WordOrder "precedes element 3" ;
     cx:hasIndex cx:spa_Decirquotativeconstruction_2_Index ;
     RDFS:comment "This element can only occur in speech reporting contexts, not in thought reporting ones. " ;
-    rcxn:hasOtherSemanticContribution "Pacient" ;
+    rcxn:hasOtherSemanticContribution "Recipient" ;
     rcxn:hasSlotForm cx:spa_Decirquotativeconstruction_2_Form ;
     rcxn:hasSyntacticFunction "Indirect object" .
 
@@ -5911,7 +5935,7 @@ cx:spa_Decirquotativeconstruction_4 a rcxn:SlotOptional ;
     cx:WordOrder "follows element 3" ;
     cx:hasIndex cx:spa_Decirquotativeconstruction_4_Index ;
     RDFS:comment "This element can only occur in speech reporting contexts, not in thought reporting ones. " ;
-    rcxn:hasOtherSemanticContribution "Patient" ;
+    rcxn:hasOtherSemanticContribution "Recipient" ;
     rcxn:hasSlotForm cx:spa_Decirquotativeconstruction_4_Form ;
     rcxn:hasSyntacticFunction "Indirect Object" .
 
@@ -5956,7 +5980,7 @@ cx:spa_Decirquotativeconstruction_MD a rcxn:Metadata ;
     rcxn:annotator membr:BenitoFernandez .
 
 cx:spa_Decirquotativeconstruction_Meaning a rcxn:ConstructionMeaning ;
-    rcxn:hasMeaning "[somebody]1 says or thinks [something]3" .
+    rcxn:hasMeaning "[somebody]1 says or thinks [something]5" .
 
 cx:spa_Decirquotativeconstruction_Sources a dcmitype:Collection ;
     DCTERMS:hasPart references:0f16a490-fab7-4e81-be49-7112817d5831,
@@ -6760,8 +6784,8 @@ cx:spa_Decirquotativeconstruction a rcxn:Construction ;
 
 cx:deu_Verb a rcxn:Construction ;
     lg:partOfLanguage lg:deu ;
-    links:elementOf cx:deuNHD_QuotativeconditionalWennSiesagenXdannY,
-        cx:deuStdHigh_losingressiveconstruction,
+    links:elementOf cx:deuFNG_losingressiveconstruction,
+        cx:deuNHD_QuotativeconditionalWennSiesagenXdannY,
         cx:deuWrSt20_sichNPADJADVvorAugenVP,
         cx:deu_AusdemAErmelschuettelnconstruction ;
     rcxn:hasTitle "Verb" .
@@ -6845,18 +6869,6 @@ cx:hat_POUbeneficiaryconstruction a rcxn:Construction ;
     rcxn:hasMetadata cx:hat_POUbeneficiaryconstruction_MD ;
     rcxn:hasSlots cx:hat_POUbeneficiaryconstruction_slots ;
     rcxn:hasTitle "POU-beneficiary construction" .
-
-cx:deuNHD_QuotativeconditionalWennSiesagenXdannY a rcxn:Construction ;
-    cx:hasExample cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_Ex_A,
-        cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_Ex_B ;
-    lg:partOfLanguage lg:deuNHD ;
-    links:inheritsFrom cx:deu_conditionalclauseconstruction,
-        cx:deu_quotativeconstruction,
-        cx:deu_transitiveconstruction ;
-    rcxn:hasConstructionMeaning cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_Meaning ;
-    rcxn:hasMetadata cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_MD ;
-    rcxn:hasSlots cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_slots ;
-    rcxn:hasTitle "Quotative conditional: Wenn Sie sagen X dann Y" .
 
 cx:deu_Noun a rcxn:Construction ;
     lg:partOfLanguage lg:deu ;
@@ -7332,6 +7344,18 @@ cx:engUsUkWr_EvaluativeAttributionConstruction a rcxn:Construction ;
     rcxn:hasSlots cx:engUsUkWr_EvaluativeAttributionConstruction_slots ;
     rcxn:hasTitle "Evaluative Attribution Construction" .
 
+cx:deuNHD_QuotativeconditionalWennSiesagenXdannY a rcxn:Construction ;
+    cx:hasExample cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_Ex_A,
+        cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_Ex_B ;
+    lg:partOfLanguage lg:deuNHD ;
+    links:inheritsFrom cx:deu_conditionalclauseconstruction,
+        cx:deu_quotativeconstruction,
+        cx:deu_transitiveconstruction ;
+    rcxn:hasConstructionMeaning cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_Meaning ;
+    rcxn:hasMetadata cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_MD ;
+    rcxn:hasSlots cx:deuNHD_QuotativeconditionalWennSiesagenXdannY_slots ;
+    rcxn:hasTitle "Quotative conditional: Wenn Sie sagen X dann Y" .
+
 cx:eng_ditransitive_construction_obj_np a rcxn:Construction ;
     cx:hasExample cx:eng_ditransitive_construction_obj_np_Ex_A ;
     lg:partOfLanguage lg:engLME ;
@@ -7642,6 +7666,7 @@ cx:eng_NounPhrase a rcxn:Construction ;
         cx:engUsSpo_Hadituptoherewith,
         cx:engUsSpo_Hadituptoherewithmesoconstruction,
         cx:engUsSpo_Hadituptoherewithphysicalheightgesture,
+        cx:engUsSpo_XissoNP,
         cx:engUsUkWr_EvaluativeAttributionConstruction,
         cx:eng_alotofPLUSNconstruction,
         cx:eng_ditransitive_construction_obj_np ;
