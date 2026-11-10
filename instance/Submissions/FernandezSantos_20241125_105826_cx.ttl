@@ -25,17 +25,17 @@ cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause a rcxn:Construction ;
         cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_Ex_D ;
     rcxn:hasMetadata cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_MD ;
     rcxn:hasSlots cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_slots ;
-    links:inheritsFrom cx:spa_objectrelativeclause,
+    links:inheritsFrom cx:spa_Objectrelativeclause,
         cx:spa_relativeclause,
         cx:spa_transitiveconstruction ;
     lg:partOfLanguage lg:spaSpoPen .
 
-cx:spa_objectrelativeclause a rcxn:Construction ;
-    rcxn:hasMetadata cx:spa_objectrelativeclause_MD ;
+cx:spa_Objectrelativeclause a rcxn:Construction ;
+    rcxn:hasMetadata cx:spa_Objectrelativeclause_MD ;
     rcxn:hasTitle "Object relative clause" ;
     lg:partOfLanguage lg:spa.
 
-cx:spa_objectrelativeclause_MD a rcxn:Metadata ;
+cx:spa_Objectrelativeclause_MD a rcxn:Metadata ;
     rcxn:annotator membr:FernandezSantos ;
     dcterm:created "2024-11-25"^^xsd:date ;
     lg:partOfLanguage lg:spa.

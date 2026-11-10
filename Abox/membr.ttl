@@ -41,7 +41,9 @@ membr:Blake a FOAF:Person ;
     FOAF:homepage <https://www.cxg.phil.fau.eu/person/ashley-blake/> .
 
 membr:Boos a FOAF:Person ;
-    FOAF:currentProject membr:Project_Boos ;
+    FOAF:currentProject membr:Project_Boos,
+        membr:Project_Boos_2611051416,
+        membr:Project_Boos_2611051450 ;
     FOAF:familyName "Boos" ;
     FOAF:givenName "Julia" ;
     FOAF:homepage <https://www.cxg.phil.fau.eu/faudir/julia-boos/> .
@@ -330,7 +332,17 @@ membr:Project_Blake a rsrch:Project ;
     rsrch:projectName "Project Blake"@en .
 
 membr:Project_Boos a rsrch:Project ;
+    rsrch:hasResearchQuestion membr:Project_Boos_2611051416,
+        membr:Project_Boos_2611051450 ;
     rsrch:projectName "Entrenchment meets literacy: How the development of reading ability affects child and adult language processing"@en .
+
+membr:Project_Boos_2611051416_F2611051416 a rsrch:Finding ;
+    RDFS:label "Research shows that subject relative clauses are typically more easily and faster processed than object relative clauses in right-branching languages like Spanish. Even in subject relatives where two NPs semantically compete for subject interpretation, speakers have no problem interpreting the syntactic structure of the clause. Conversely, interpretation of object relatives pose more problems to native speakers." ;
+    rsrch:basedOn cx:spa_Subjectrelativeclause .
+
+membr:Project_Boos_2611051450_F2611051450 a rsrch:Finding ;
+    RDFS:label "Research shows that object relative clauses are typically more difficult to process than subject relative clauses in right-branching languages like Spanish. In spoken language, object relatives follow a fairly stereotypical pattern: the second NP (Element 5) typically realised as a pronoun and the head NP (Element 1), i.e. the object of the relative clause, is usually an inanimate object. These factors can facilitate object relative clause processing. Object relatives, however, remain difficult to interpret when the two noun phrases semantically compete for subject/object interpretation. " ;
+    rsrch:basedOn cx:spa_Objectrelativeclause .
 
 membr:Project_DelaGarza a rsrch:Project ;
     rsrch:projectName "Project De la Garza"@en .
@@ -728,6 +740,14 @@ membr:Project_Bayer_2611042311 a rsrch:Project ;
 membr:Project_BenitoFernandez_2610301550 a rsrch:Project ;
     rsrch:hasFindings membr:Project_BenitoFernandez_2610301550_F2610301550 ;
     rsrch:projectName "Is stance encoded in the constructional representation of quotative constructions?" .
+
+membr:Project_Boos_2611051416 a rsrch:Project ;
+    rsrch:hasFindings membr:Project_Boos_2611051416_F2611051416 ;
+    rsrch:projectName "Which factors influence relative clause interpretation, especially object relative clause processing?" .
+
+membr:Project_Boos_2611051450 a rsrch:Project ;
+    rsrch:hasFindings membr:Project_Boos_2611051450_F2611051450 ;
+    rsrch:projectName "Which factors influence relative clause interpretation, especially object relative clause processing?" .
 
 membr:Project_Gromadsky_2611031634 a rsrch:Project ;
     rsrch:hasFindings membr:Project_Gromadsky_2611031634_F2611031634 ;

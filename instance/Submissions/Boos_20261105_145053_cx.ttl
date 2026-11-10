@@ -1,0 +1,125 @@
+@prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cx: <http://example.org/cx/> .
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterm: <http://purl.org/dc/terms/> .
+@prefix evid: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/evid#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
+@prefix links: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/links-1.1#> .
+@prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
+@prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix references: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/references#> .
+@prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+membr:Project_Boos rsrch:hasResearchQuestion membr:Project_Boos_2611051450 .
+
+cx:spa_Subjectrelativeclause a rcxn:Construction ;
+    links:similarFormDifferentFunction cx:spa_Objectrelativeclause ;
+    rcxn:hasMetadata cx:spa_Subjectrelativeclause_MD ;
+    rcxn:hasTitle "Subject relative clause" .
+
+cx:spa_Subjectrelativeclause_MD a rcxn:Metadata ;
+    dcterm:created "2026-11-05"^^xsd:date ;
+    rcxn:annotator membr:Boos .
+
+cx:spa_Objectrelativeclause_1 a rcxn:SlotObligatory ;
+    rcxn:hasSyntacticFunction "Direct object (within the clause)" .
+
+cx:spa_Objectrelativeclause_2 a rcxn:SlotOptional ;
+    cx:WordOrder "If present, Element 2 immediately after Element 1" ;
+    cx:hasTranslation "to:the" ;
+    rcxn:hasSemanticProperty "only if Element 1 is animate and human" ;
+    rcxn:hasSyntacticFunction "Direct object marker" .
+
+cx:spa_Objectrelativeclause_3 a rcxn:SlotObligatory ;
+    cx:WordOrder "immediately after Element 1 (if Element 2 not present), or immediately after Element 2 if present" ;
+    cx:hasTranslation "that" ;
+    rcxn:hasSlotForm cx:spa_Objectrelativeclause_3_Form .
+
+cx:spa_Objectrelativeclause_3_Form a rcxn:SlotForm ;
+    rcxn:hasPhonology "/ke/" ;
+    rcxn:hasSurfaceForm "que" .
+
+cx:spa_Objectrelativeclause_4 a rcxn:SlotObligatory ;
+    cx:WordOrder "Element 4 and 5 both follow Element 3, but Element 4 can occur before or after Element 5" ;
+    rcxn:hasSemanticProperty "transitive" ;
+    rcxn:hasSlotForm cx:spa_Objectrelativeclause_4_Form .
+
+cx:spa_Objectrelativeclause_4_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:spa_Verb .
+
+cx:spa_Objectrelativeclause_5 a rcxn:SlotObligatory ;
+    cx:WordOrder "Element 4 and 5 both follow Element 3, but Element 5 can occur before or after Element 4" ;
+    RDFS:comment "Spanish is a pro-drop language, so Element 5 might not be formally realised as an NP, but instead encoded in the verb inflection" ;
+    rcxn:hasSyntacticFunction "Subject (within the clause)" .
+
+cx:spa_Objectrelativeclause_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "[el libro]1 [que]3 [lee]4 [la niña]5" ;
+    cx:hasGlosses "the book that read-PRS.3SG the girl" ;
+    cx:hasText "el libro que lee la niña" ;
+    cx:hasTranslation "the book that the girl reads" .
+
+cx:spa_Objectrelativeclause_Ex_B a cx:Example ;
+    cx:hasAnnotatedText "[el libro]1 [que]3 [la niña]5 [lee]4" ;
+    cx:hasGlosses "the book that the girl read-PRS.3SG" ;
+    cx:hasText "el libro que la niña lee" ;
+    cx:hasTranslation "the book that the girl reads" .
+
+cx:spa_Objectrelativeclause_Ex_C a cx:Example ;
+    cx:hasAnnotatedText "[la mujer]1 [a la]2 [que]3 [ayudé]4" ;
+    cx:hasGlosses "the woman to:the help-PST.1SG" ;
+    cx:hasText "la mujer a la que ayudé" ;
+    cx:hasTranslation "the woman that I helped" .
+
+cx:spa_Objectrelativeclause_MD a rcxn:Metadata ;
+    dcterm:created "2026-11-05"^^xsd:date ;
+    dcterm:references cx:spa_Objectrelativeclause_Sources ;
+    rcxn:annotator membr:Boos .
+
+cx:spa_Objectrelativeclause_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "Modification/specification of an [NP]1: [Someone]5 carries out a [transitive action]4 that affects [someone else]1. The function of the object relative clause is to identify the [affected]1." .
+
+cx:spa_Objectrelativeclause_Sources a dcmitype:Collection ;
+    dcterm:hasPart references:136d2e86-b998-41b2-ac40-e17c059254f9,
+        references:4a389cf2-bc8c-446b-ba5c-56cb89913035,
+        references:8c72eb2d-f0be-4e53-8747-16de4ae875e1,
+        references:d991053c-6c61-491c-a615-4143d7dd98d3 .
+
+cx:spa_Objectrelativeclause_slots a rdf:Seq ;
+    rdf:_1 cx:spa_Objectrelativeclause_1 ;
+    rdf:_2 cx:spa_Objectrelativeclause_2 ;
+    rdf:_3 cx:spa_Objectrelativeclause_3 ;
+    rdf:_4 cx:spa_Objectrelativeclause_4 ;
+    rdf:_5 cx:spa_Objectrelativeclause_5 .
+
+membr:Project_Boos_2611051450_F2611051450 a rsrch:Finding ;
+    RDFS:label "Research shows that object relative clauses are typically more difficult to process than subject relative clauses in right-branching languages like Spanish. In spoken language, object relatives follow a fairly stereotypical pattern: the second NP (Element 5) typically realised as a pronoun and the head NP (Element 1), i.e. the object of the relative clause, is usually an inanimate object. These factors can facilitate object relative clause processing. Object relatives, however, remain difficult to interpret when the two noun phrases semantically compete for subject/object interpretation. " ;
+    rsrch:basedOn cx:spa_Objectrelativeclause .
+
+references:136d2e86-b998-41b2-ac40-e17c059254f9 evid:biblio "Presotto, Giacomo & Jacopo Torregrossa. 2024. Intervention and amelioration effects in the acquisition of Spanish object relative clauses: the role of word order and DOM. Glossa: a journal of general linguistics 9(1). https://doi.org/10.16995/glossa.11254." .
+
+references:4a389cf2-bc8c-446b-ba5c-56cb89913035 evid:biblio "Fernández Santos, Sara, Miquel Llompart & Ewa Dąbrowska. 2025. Predictive processing can override perceptual information: evidence from Spanish object relative clauses. Language and Cognition 17. e59. https://doi.org/10.1017/langcog.2025.10015." .
+
+references:8c72eb2d-f0be-4e53-8747-16de4ae875e1 evid:biblio "Reali, Florencia. 2014. Frequency Affects Object Relative Clause Processing: Some Evidence in Favor of Usage-Based Accounts. Language Learning 64(3). 685–714. https://doi.org/10.1111/lang.12066." .
+
+references:d991053c-6c61-491c-a615-4143d7dd98d3 evid:biblio "Behavioral experiment	Llompart, Miquel, Sara Fernández Santos & Ewa Dąbrowska. 2025. Comprehension of object relatives in Spanish: the role of frequency and transparency in acquisition and adult grammar. Cognitive Linguistics 36(1). 31–57. https://doi.org/10.1515/cog-2024-0016." .
+
+cx:spa_Objectrelativeclause a rcxn:Construction ;
+    cx:hasExample cx:spa_Objectrelativeclause_Ex_A,
+        cx:spa_Objectrelativeclause_Ex_B,
+        cx:spa_Objectrelativeclause_Ex_C ;
+    lg:partOfLanguage lg:spa ;
+    links:similarFormDifferentFunction cx:spa_Subjectrelativeclause ;
+    rcxn:hasConstructionMeaning cx:spa_Objectrelativeclause_Meaning ;
+    rcxn:hasMetadata cx:spa_Objectrelativeclause_MD ;
+    rcxn:hasSlots cx:spa_Objectrelativeclause_slots ;
+    rcxn:hasTitle "Object relative clause" .
+
+membr:Boos foaf:currentProject membr:Project_Boos_2611051450 .
+
+membr:Project_Boos_2611051450 a rsrch:Project ;
+    rsrch:hasFindings membr:Project_Boos_2611051450_F2611051450 ;
+    rsrch:projectName "Which factors influence relative clause interpretation, especially object relative clause processing?" .
+

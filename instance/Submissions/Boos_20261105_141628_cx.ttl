@@ -1,0 +1,93 @@
+@prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cx: <http://example.org/cx/> .
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterm: <http://purl.org/dc/terms/> .
+@prefix evid: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/evid#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix lg: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/lg#> .
+@prefix membr: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/membr#> .
+@prefix rcxn: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rcxn#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix references: <https://bdlweb.phil.uni-erlangen.de/RCxn/Abox/references#> .
+@prefix rsrch: <https://bdlweb.phil.uni-erlangen.de/RCxn/ontologies/rsrch#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+membr:Project_Boos rsrch:hasResearchQuestion membr:Project_Boos_2611051416 .
+
+cx:spa_Subjectrelativeclause a rcxn:Construction ;
+    cx:hasExample cx:spa_Subjectrelativeclause_Ex_A,
+        cx:spa_Subjectrelativeclause_Ex_B,
+        cx:spa_Subjectrelativeclause_Ex_C ;
+    lg:partOfLanguage lg:spa ;
+    rcxn:hasConstructionMeaning cx:spa_Subjectrelativeclause_Meaning ;
+    rcxn:hasMetadata cx:spa_Subjectrelativeclause_MD ;
+    rcxn:hasSlots cx:spa_Subjectrelativeclause_slots ;
+    rcxn:hasTitle "Subject relative clause" .
+
+cx:spa_Subjectrelativeclause_1 a rcxn:SlotObligatory ;
+    rcxn:hasSyntacticFunction "subject (within the clause)" .
+
+cx:spa_Subjectrelativeclause_2 a rcxn:SlotObligatory ;
+    cx:WordOrder "Element 2 immediately after Element. 1" ;
+    cx:hasTranslation "that" ;
+    rcxn:hasSlotForm cx:spa_Subjectrelativeclause_2_Form .
+
+cx:spa_Subjectrelativeclause_2_Form a rcxn:SlotForm ;
+    rcxn:hasPhonology "/ke/" ;
+    rcxn:hasSurfaceForm "que" .
+
+cx:spa_Subjectrelativeclause_3 a rcxn:SlotObligatory ;
+    cx:WordOrder "usually directly after Element 2, but can follow Element 4 depending on form of Element 4 or information structure" ;
+    rcxn:hasSlotForm cx:spa_Subjectrelativeclause_3_Form .
+
+cx:spa_Subjectrelativeclause_3_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:spa_Verb .
+
+cx:spa_Subjectrelativeclause_4 a rcxn:SlotOptional ;
+    cx:WordOrder "usually after Element 3, but can precede Element 3 depending on form of Element 4 or information structure" ;
+    rcxn:hasSyntacticFunction "direct object (within clause, if Element 3 transitive)" .
+
+cx:spa_Subjectrelativeclause_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "[La niña]1 [que]2 [lee]3 [el libro]4" ;
+    cx:hasText "La niña que lee el libro" ;
+    cx:hasTranslation "The girl that reads the book" .
+
+cx:spa_Subjectrelativeclause_Ex_B a cx:Example ;
+    cx:hasAnnotatedText "[La mujer]1 [que]2 [esta cantando]3" ;
+    cx:hasText "La mujer que esta cantando" ;
+    cx:hasTranslation "The woman that is singing" .
+
+cx:spa_Subjectrelativeclause_Ex_C a cx:Example ;
+    cx:hasAnnotatedText "[La mujer]1 [que]2 [le]4 [saludó]3" ;
+    cx:hasText "La mujer que le saludó" ;
+    cx:hasTranslation "The woman that greeted him" .
+
+cx:spa_Subjectrelativeclause_MD a rcxn:Metadata ;
+    dcterm:created "2026-11-05"^^xsd:date ;
+    dcterm:references cx:spa_Subjectrelativeclause_Sources ;
+    rcxn:annotator membr:Boos .
+
+cx:spa_Subjectrelativeclause_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "Modification/specification of an [NP]1: [Someone/Something (affector)]1 [carries out action or is being described]3. The function of the subject relative clause is to identify the [affector]1." .
+
+cx:spa_Subjectrelativeclause_Sources a dcmitype:Collection ;
+    dcterm:hasPart references:7c10c3b0-4776-4c06-a0b7-264915534a34 .
+
+cx:spa_Subjectrelativeclause_slots a rdf:Seq ;
+    rdf:_1 cx:spa_Subjectrelativeclause_1 ;
+    rdf:_2 cx:spa_Subjectrelativeclause_2 ;
+    rdf:_3 cx:spa_Subjectrelativeclause_3 ;
+    rdf:_4 cx:spa_Subjectrelativeclause_4 .
+
+membr:Boos foaf:currentProject membr:Project_Boos_2611051416 .
+
+membr:Project_Boos_2611051416_F2611051416 a rsrch:Finding ;
+    RDFS:label "Research shows that subject relative clauses are typically more easily and faster processed than object relative clauses in right-branching languages like Spanish. Even in subject relatives where two NPs semantically compete for subject interpretation, speakers have no problem interpreting the syntactic structure of the clause. Conversely, interpretation of object relatives pose more problems to native speakers." ;
+    rsrch:basedOn cx:spa_Subjectrelativeclause .
+
+references:7c10c3b0-4776-4c06-a0b7-264915534a34 evid:biblio "Fernández Santos, Sara, Miquel Llompart & Ewa Dąbrowska. 2025. Predictive processing can override perceptual information: evidence from Spanish object relative clauses. Language and Cognition 17. e59. https://doi.org/10.1017/langcog.2025.10015." .
+
+membr:Project_Boos_2611051416 a rsrch:Project ;
+    rsrch:hasFindings membr:Project_Boos_2611051416_F2611051416 ;
+    rsrch:projectName "Which factors influence relative clause interpretation, especially object relative clause processing?" .
+

@@ -6076,6 +6076,79 @@ cx:spa_Decirquotativeconstruction_slots a RDF:Seq ;
     RDF:_4 cx:spa_Decirquotativeconstruction_4 ;
     RDF:_5 cx:spa_Decirquotativeconstruction_5 .
 
+cx:spa_Objectrelativeclause_1 a rcxn:SlotObligatory ;
+    rcxn:hasSyntacticFunction "Direct object (within the clause)" .
+
+cx:spa_Objectrelativeclause_2 a rcxn:SlotOptional ;
+    cx:WordOrder "If present, Element 2 immediately after Element 1" ;
+    cx:hasTranslation "to:the" ;
+    rcxn:hasSemanticProperty "only if Element 1 is animate and human" ;
+    rcxn:hasSyntacticFunction "Direct object marker" .
+
+cx:spa_Objectrelativeclause_3 a rcxn:SlotObligatory ;
+    cx:WordOrder "immediately after Element 1 (if Element 2 not present), or immediately after Element 2 if present" ;
+    cx:hasTranslation "that" ;
+    rcxn:hasSlotForm cx:spa_Objectrelativeclause_3_Form .
+
+cx:spa_Objectrelativeclause_3_Form a rcxn:SlotForm ;
+    rcxn:hasPhonology "/ke/" ;
+    rcxn:hasSurfaceForm "que" .
+
+cx:spa_Objectrelativeclause_4 a rcxn:SlotObligatory ;
+    cx:WordOrder "Element 4 and 5 both follow Element 3, but Element 4 can occur before or after Element 5" ;
+    rcxn:hasSemanticProperty "transitive" ;
+    rcxn:hasSlotForm cx:spa_Objectrelativeclause_4_Form .
+
+cx:spa_Objectrelativeclause_4_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:spa_Verb .
+
+cx:spa_Objectrelativeclause_5 a rcxn:SlotObligatory ;
+    cx:WordOrder "Element 4 and 5 both follow Element 3, but Element 5 can occur before or after Element 4" ;
+    RDFS:comment "Spanish is a pro-drop language, so Element 5 might not be formally realised as an NP, but instead encoded in the verb inflection" ;
+    rcxn:hasSyntacticFunction "Subject (within the clause)" .
+
+cx:spa_Objectrelativeclause_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "[el libro]1 [que]3 [lee]4 [la niña]5" ;
+    cx:hasGlosses "the book that read-PRS.3SG the girl" ;
+    cx:hasText "el libro que lee la niña" ;
+    cx:hasTranslation "the book that the girl reads" .
+
+cx:spa_Objectrelativeclause_Ex_B a cx:Example ;
+    cx:hasAnnotatedText "[el libro]1 [que]3 [la niña]5 [lee]4" ;
+    cx:hasGlosses "the book that the girl read-PRS.3SG" ;
+    cx:hasText "el libro que la niña lee" ;
+    cx:hasTranslation "the book that the girl reads" .
+
+cx:spa_Objectrelativeclause_Ex_C a cx:Example ;
+    cx:hasAnnotatedText "[la mujer]1 [a la]2 [que]3 [ayudé]4" ;
+    cx:hasGlosses "the woman to:the help-PST.1SG" ;
+    cx:hasText "la mujer a la que ayudé" ;
+    cx:hasTranslation "the woman that I helped" .
+
+cx:spa_Objectrelativeclause_MD a rcxn:Metadata ;
+    DCTERMS:created "2024-11-25"^^xsd:date,
+        "2026-11-05"^^xsd:date ;
+    DCTERMS:references cx:spa_Objectrelativeclause_Sources ;
+    lg:partOfLanguage lg:spa ;
+    rcxn:annotator membr:Boos,
+        membr:FernandezSantos .
+
+cx:spa_Objectrelativeclause_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "Modification/specification of an [NP]1: [Someone]5 carries out a [transitive action]4 that affects [someone else]1. The function of the object relative clause is to identify the [affected]1." .
+
+cx:spa_Objectrelativeclause_Sources a dcmitype:Collection ;
+    DCTERMS:hasPart references:136d2e86-b998-41b2-ac40-e17c059254f9,
+        references:4a389cf2-bc8c-446b-ba5c-56cb89913035,
+        references:8c72eb2d-f0be-4e53-8747-16de4ae875e1,
+        references:d991053c-6c61-491c-a615-4143d7dd98d3 .
+
+cx:spa_Objectrelativeclause_slots a RDF:Seq ;
+    RDF:_1 cx:spa_Objectrelativeclause_1 ;
+    RDF:_2 cx:spa_Objectrelativeclause_2 ;
+    RDF:_3 cx:spa_Objectrelativeclause_3 ;
+    RDF:_4 cx:spa_Objectrelativeclause_4 ;
+    RDF:_5 cx:spa_Objectrelativeclause_5 .
+
 cx:spa_Pronoun a rcxn:Construction ;
     lg:partOfLanguage lg:spa ;
     links:elementOf cx:spa_Decirquotativeconstruction ;
@@ -6091,10 +6164,60 @@ cx:spa_Relativizer a rcxn:Construction ;
     links:elementOf cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause ;
     rcxn:hasTitle "Relativizer" .
 
-cx:spa_Verb a rcxn:Construction ;
-    lg:partOfLanguage lg:spa ;
-    links:elementOf cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause ;
-    rcxn:hasTitle "Verb" .
+cx:spa_Subjectrelativeclause_1 a rcxn:SlotObligatory ;
+    rcxn:hasSyntacticFunction "subject (within the clause)" .
+
+cx:spa_Subjectrelativeclause_2 a rcxn:SlotObligatory ;
+    cx:WordOrder "Element 2 immediately after Element. 1" ;
+    cx:hasTranslation "that" ;
+    rcxn:hasSlotForm cx:spa_Subjectrelativeclause_2_Form .
+
+cx:spa_Subjectrelativeclause_2_Form a rcxn:SlotForm ;
+    rcxn:hasPhonology "/ke/" ;
+    rcxn:hasSurfaceForm "que" .
+
+cx:spa_Subjectrelativeclause_3 a rcxn:SlotObligatory ;
+    cx:WordOrder "usually directly after Element 2, but can follow Element 4 depending on form of Element 4 or information structure" ;
+    rcxn:hasSlotForm cx:spa_Subjectrelativeclause_3_Form .
+
+cx:spa_Subjectrelativeclause_3_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:spa_Verb .
+
+cx:spa_Subjectrelativeclause_4 a rcxn:SlotOptional ;
+    cx:WordOrder "usually after Element 3, but can precede Element 3 depending on form of Element 4 or information structure" ;
+    rcxn:hasSyntacticFunction "direct object (within clause, if Element 3 transitive)" .
+
+cx:spa_Subjectrelativeclause_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "[La niña]1 [que]2 [lee]3 [el libro]4" ;
+    cx:hasText "La niña que lee el libro" ;
+    cx:hasTranslation "The girl that reads the book" .
+
+cx:spa_Subjectrelativeclause_Ex_B a cx:Example ;
+    cx:hasAnnotatedText "[La mujer]1 [que]2 [esta cantando]3" ;
+    cx:hasText "La mujer que esta cantando" ;
+    cx:hasTranslation "The woman that is singing" .
+
+cx:spa_Subjectrelativeclause_Ex_C a cx:Example ;
+    cx:hasAnnotatedText "[La mujer]1 [que]2 [le]4 [saludó]3" ;
+    cx:hasText "La mujer que le saludó" ;
+    cx:hasTranslation "The woman that greeted him" .
+
+cx:spa_Subjectrelativeclause_MD a rcxn:Metadata ;
+    DCTERMS:created "2026-11-05"^^xsd:date ;
+    DCTERMS:references cx:spa_Subjectrelativeclause_Sources ;
+    rcxn:annotator membr:Boos .
+
+cx:spa_Subjectrelativeclause_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "Modification/specification of an [NP]1: [Someone/Something (affector)]1 [carries out action or is being described]3. The function of the subject relative clause is to identify the [affector]1." .
+
+cx:spa_Subjectrelativeclause_Sources a dcmitype:Collection ;
+    DCTERMS:hasPart references:7c10c3b0-4776-4c06-a0b7-264915534a34 .
+
+cx:spa_Subjectrelativeclause_slots a RDF:Seq ;
+    RDF:_1 cx:spa_Subjectrelativeclause_1 ;
+    RDF:_2 cx:spa_Subjectrelativeclause_2 ;
+    RDF:_3 cx:spa_Subjectrelativeclause_3 ;
+    RDF:_4 cx:spa_Subjectrelativeclause_4 .
 
 cx:spa_aPLUSNounPhrase a rcxn:Construction ;
     lg:partOfLanguage lg:spa ;
@@ -6120,17 +6243,6 @@ cx:spa_decir a rcxn:Construction ;
 cx:spa_decir_MD a rcxn:Metadata ;
     DCTERMS:created "2026-10-30"^^xsd:date ;
     rcxn:annotator membr:BenitoFernandez .
-
-cx:spa_objectrelativeclause a rcxn:Construction ;
-    lg:partOfLanguage lg:spa ;
-    links:inheritedBy cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause ;
-    rcxn:hasMetadata cx:spa_objectrelativeclause_MD ;
-    rcxn:hasTitle "Object relative clause" .
-
-cx:spa_objectrelativeclause_MD a rcxn:Metadata ;
-    DCTERMS:created "2024-11-25"^^xsd:date ;
-    lg:partOfLanguage lg:spa ;
-    rcxn:annotator membr:FernandezSantos .
 
 cx:spa_relativeclause a rcxn:Construction ;
     lg:partOfLanguage lg:spa ;
@@ -6765,6 +6877,17 @@ cx:spa_NounPhrase a rcxn:Construction ;
     links:elementOf cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause ;
     rcxn:hasTitle "Noun Phrase" .
 
+cx:spa_Subjectrelativeclause a rcxn:Construction ;
+    cx:hasExample cx:spa_Subjectrelativeclause_Ex_A,
+        cx:spa_Subjectrelativeclause_Ex_B,
+        cx:spa_Subjectrelativeclause_Ex_C ;
+    lg:partOfLanguage lg:spa ;
+    links:similarFormDifferentFunction cx:spa_Objectrelativeclause ;
+    rcxn:hasConstructionMeaning cx:spa_Subjectrelativeclause_Meaning ;
+    rcxn:hasMetadata cx:spa_Subjectrelativeclause_MD ;
+    rcxn:hasSlots cx:spa_Subjectrelativeclause_slots ;
+    rcxn:hasTitle "Subject relative clause" .
+
 cx:zho_NounPhrase a rcxn:Construction ;
     lg:partOfLanguage lg:zho ;
     links:elementOf cx:lzh_Dooperationwithoperand1onoperand2construction ;
@@ -6897,6 +7020,25 @@ cx:spa_Decirquotativeconstruction a rcxn:Construction ;
     rcxn:hasMetadata cx:spa_Decirquotativeconstruction_MD ;
     rcxn:hasSlots cx:spa_Decirquotativeconstruction_slots ;
     rcxn:hasTitle "Decir quotative construction" .
+
+cx:spa_Objectrelativeclause a rcxn:Construction ;
+    cx:hasExample cx:spa_Objectrelativeclause_Ex_A,
+        cx:spa_Objectrelativeclause_Ex_B,
+        cx:spa_Objectrelativeclause_Ex_C ;
+    lg:partOfLanguage lg:spa ;
+    links:inheritedBy cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause ;
+    links:similarFormDifferentFunction cx:spa_Subjectrelativeclause ;
+    rcxn:hasConstructionMeaning cx:spa_Objectrelativeclause_Meaning ;
+    rcxn:hasMetadata cx:spa_Objectrelativeclause_MD ;
+    rcxn:hasSlots cx:spa_Objectrelativeclause_slots ;
+    rcxn:hasTitle "Object relative clause" .
+
+cx:spa_Verb a rcxn:Construction ;
+    lg:partOfLanguage lg:spa ;
+    links:elementOf cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause,
+        cx:spa_Objectrelativeclause,
+        cx:spa_Subjectrelativeclause ;
+    rcxn:hasTitle "Verb" .
 
 cx:deu_Verb a rcxn:Construction ;
     lg:partOfLanguage lg:deu ;
@@ -7630,7 +7772,7 @@ cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause a rcxn:Construction ;
     evid:basedOnStudy cx:FernandezSantos_20260130_629470,
         cx:FernandezSantos_20260130_629471 ;
     lg:partOfLanguage lg:spaSpoPen ;
-    links:inheritsFrom cx:spa_objectrelativeclause,
+    links:inheritsFrom cx:spa_Objectrelativeclause,
         cx:spa_relativeclause,
         cx:spa_transitiveconstruction ;
     rcxn:hasConstructionMeaning cx:spaSpoPen_Potentiallyambiguousobjectrelativeclause_Meaning ;
