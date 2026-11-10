@@ -210,13 +210,6 @@ cx:eng_EarnConstruction a rcxn:Construction ;
     rcxn:hasSlots cx:eng_EarnConstruction_slots ;
     rcxn:hasTitle "Earn Construction" .
 
-cx:eng_UnitConstruction a rcxn:Construction ;
-    lg:partOfLanguage lg:eng ;
-    rcxn:hasConstructionMeaning cx:eng_UnitConstruction_Meaning ;
-    rcxn:hasMetadata cx:eng_UnitConstruction_MD ;
-    rcxn:hasSlots cx:eng_UnitConstruction_slots ;
-    rcxn:hasTitle "Unit Construction" .
-
 cx:eng_alotofPLUSNconstruction_2_Index olia:hasNumber olia:Singular .
 
 cx:eng_caused_motion_construction_ppto links:sameFunctionDifferentForm cx:eng_ditransitive_construction_obj_np .
@@ -3065,6 +3058,57 @@ cx:engLME_Transitiveconstruction_slots a RDF:Seq ;
     RDF:_2 cx:engLME_Transitiveconstruction_2 ;
     RDF:_3 cx:engLME_Transitiveconstruction_3 .
 
+cx:engLME_UnitConstruction a rcxn:Construction ;
+    cx:hasExample cx:engLME_UnitConstruction_Ex_A,
+        cx:engLME_UnitConstruction_Ex_B,
+        cx:engLME_UnitConstruction_Ex_C,
+        cx:engLME_UnitConstruction_Ex_D ;
+    lg:partOfLanguage lg:engLME ;
+    rcxn:hasConstructionMeaning cx:engLME_UnitConstruction_Meaning ;
+    rcxn:hasMetadata cx:engLME_UnitConstruction_MD ;
+    rcxn:hasSlots cx:engLME_UnitConstruction_slots ;
+    rcxn:hasTitle "Unit Construction" .
+
+cx:engLME_UnitConstruction_1 a rcxn:SlotObligatory ;
+    cx:WordOrder "Element 1 immediately before element 2" ;
+    rcxn:hasSlotForm cx:engLME_UnitConstruction_1_Form .
+
+cx:engLME_UnitConstruction_1_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:eng_cardinalnumber .
+
+cx:engLME_UnitConstruction_2 a rcxn:SlotObligatory ;
+    rcxn:hasOtherSemanticContribution "Unit" .
+
+cx:engLME_UnitConstruction_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "[3]1 [km]2" ;
+    cx:hasText "3 km" .
+
+cx:engLME_UnitConstruction_Ex_B a cx:Example ;
+    cx:hasAnnotatedText "[5]1 [mph]2" ;
+    cx:hasText "5 mph" .
+
+cx:engLME_UnitConstruction_Ex_C a cx:Example ;
+    cx:hasAnnotatedText "[12]1 [cm]2" ;
+    cx:hasText "12 cm" .
+
+cx:engLME_UnitConstruction_Ex_D a cx:Example ;
+    cx:hasAnnotatedText "[8]1 [ft]2" ;
+    cx:hasText "8 ft" .
+
+cx:engLME_UnitConstruction_MD a rcxn:Metadata ;
+    DCTERMS:created "2026-11-03"^^xsd:date ;
+    DCTERMS:references cx:engLME_UnitConstruction_Sources ;
+    rcxn:annotator membr:Immertreu .
+
+cx:engLME_UnitConstruction_Meaning a rcxn:ConstructionMeaning ;
+    rcxn:hasMeaning "a quantity expressed as [a count]1 of [standardized units]2" .
+
+cx:engLME_UnitConstruction_Sources a dcmitype:Collection .
+
+cx:engLME_UnitConstruction_slots a RDF:Seq ;
+    RDF:_1 cx:engLME_UnitConstruction_1 ;
+    RDF:_2 cx:engLME_UnitConstruction_2 .
+
 cx:engLME_assassinationattempton_1 rcxn:hasSlotForm cx:engLME_assassinationattempton_1_Form .
 
 cx:engLME_assassinationattempton_1_Form a rcxn:SlotForm ;
@@ -4243,29 +4287,6 @@ cx:eng_ThroatCutGesture_Meaning a gest:GestureMeaning ;
     gest:pragmaticProperty "Directive, request, warning, or, framing." ;
     gest:semanticProperty "Putting an end to something" .
 
-cx:eng_UnitConstruction_1 a rcxn:SlotObligatory ;
-    cx:WordOrder "Element 1 immediately before element 2" ;
-    rcxn:hasSlotForm cx:eng_UnitConstruction_1_Form .
-
-cx:eng_UnitConstruction_1_Form a rcxn:SlotForm ;
-    rcxn:hasSurfaceForm "[Number] [Unit]" .
-
-cx:eng_UnitConstruction_2 a rcxn:SlotObligatory .
-
-cx:eng_UnitConstruction_MD a rcxn:Metadata ;
-    DCTERMS:created "2026-11-03"^^xsd:date ;
-    DCTERMS:references cx:eng_UnitConstruction_Sources ;
-    rcxn:annotator membr:Immertreu .
-
-cx:eng_UnitConstruction_Meaning a rcxn:ConstructionMeaning ;
-    rcxn:hasMeaning "a quantity expressed as [a count]1 of [standardized units]2" .
-
-cx:eng_UnitConstruction_Sources a dcmitype:Collection .
-
-cx:eng_UnitConstruction_slots a RDF:Seq ;
-    RDF:_1 cx:eng_UnitConstruction_1 ;
-    RDF:_2 cx:eng_UnitConstruction_2 .
-
 cx:eng_VerbING a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
     links:elementOf cx:comePLUSnoisemannerofmovementVing ;
@@ -4404,6 +4425,16 @@ cx:eng_burn a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
     links:elementOf cx:engLME_Burnonesbridgesconstruction ;
     rcxn:hasTitle "burn" .
+
+cx:eng_cardinalnumber a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    links:elementOf cx:engLME_UnitConstruction ;
+    rcxn:hasMetadata cx:eng_cardinalnumber_MD ;
+    rcxn:hasTitle "cardinal number" .
+
+cx:eng_cardinalnumber_MD a rcxn:Metadata ;
+    DCTERMS:created "2026-11-10"^^xsd:date ;
+    rcxn:annotator membr:Immertreu .
 
 cx:eng_clause a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;

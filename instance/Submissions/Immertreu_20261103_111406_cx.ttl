@@ -11,37 +11,66 @@
 
 membr:Project_Immertreu rsrch:hasFindings membr:Project_Immertreu_F2611031114 .
 
-cx:eng_UnitConstruction a rcxn:Construction ;
-    lg:partOfLanguage lg:eng ;
-    rcxn:hasConstructionMeaning cx:eng_UnitConstruction_Meaning ;
-    rcxn:hasMetadata cx:eng_UnitConstruction_MD ;
-    rcxn:hasSlots cx:eng_UnitConstruction_slots ;
-    rcxn:hasTitle "Unit Construction" .
+cx:engLME_UnitConstruction a rcxn:Construction ;
+    lg:partOfLanguage lg:engLME ;
+    rcxn:hasConstructionMeaning cx:engLME_UnitConstruction_Meaning ;
+    rcxn:hasMetadata cx:engLME_UnitConstruction_MD ;
+    rcxn:hasSlots cx:engLME_UnitConstruction_slots ;
+    rcxn:hasTitle "Unit Construction" ;
+    cx:hasExample cx:engLME_UnitConstruction_Ex_A,
+        cx:engLME_UnitConstruction_Ex_B,
+        cx:engLME_UnitConstruction_Ex_C,
+        cx:engLME_UnitConstruction_Ex_D .
 
-cx:eng_UnitConstruction_1 a rcxn:SlotObligatory ;
+cx:engLME_UnitConstruction_1 a rcxn:SlotObligatory ;
     cx:WordOrder "Element 1 immediately before element 2" ;
-    rcxn:hasSlotForm cx:eng_UnitConstruction_1_Form .
+    rcxn:hasSlotForm cx:engLME_UnitConstruction_1_Form .
 
-cx:eng_UnitConstruction_1_Form a rcxn:SlotForm ;
-    rcxn:hasSurfaceForm "[Number] [Unit]" .
+cx:engLME_UnitConstruction_1_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:eng_cardinalnumber .
 
-cx:eng_UnitConstruction_2 a rcxn:SlotObligatory .
+cx:eng_cardinalnumber a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    rcxn:hasMetadata cx:eng_cardinalnumber_MD ;
+    rcxn:hasTitle "cardinal number" .
 
-cx:eng_UnitConstruction_MD a rcxn:Metadata ;
-    dcterm:created "2026-11-03"^^xsd:date ;
-    dcterm:references cx:eng_UnitConstruction_Sources ;
+cx:eng_cardinalnumber_MD a rcxn:Metadata ;
+    dcterm:created "2026-11-10"^^xsd:date ;
     rcxn:annotator membr:Immertreu .
 
-cx:eng_UnitConstruction_Meaning a rcxn:ConstructionMeaning ;
+cx:engLME_UnitConstruction_2 a rcxn:SlotObligatory ;
+    rcxn:hasOtherSemanticContribution "Unit".
+
+cx:engLME_UnitConstruction_MD a rcxn:Metadata ;
+    dcterm:created "2026-11-03"^^xsd:date ;
+    dcterm:references cx:engLME_UnitConstruction_Sources ;
+    rcxn:annotator membr:Immertreu .
+
+cx:engLME_UnitConstruction_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "a quantity expressed as [a count]1 of [standardized units]2" .
 
-cx:eng_UnitConstruction_Sources a dcmitype:Collection .
+cx:engLME_UnitConstruction_Sources a dcmitype:Collection .
 
-cx:eng_UnitConstruction_slots a rdf:Seq ;
-    rdf:_1 cx:eng_UnitConstruction_1 ;
-    rdf:_2 cx:eng_UnitConstruction_2 .
+cx:engLME_UnitConstruction_slots a rdf:Seq ;
+    rdf:_1 cx:engLME_UnitConstruction_1 ;
+    rdf:_2 cx:engLME_UnitConstruction_2 .
 
 membr:Project_Immertreu_F2611031114 a rsrch:Finding ;
     RDFS:label "SR based cognitive maps differentiate unit from date constructions" ;
-    rsrch:basedOn cx:eng_UnitConstruction .
+    rsrch:basedOn cx:engLME_UnitConstruction .
 
+cx:engLME_UnitConstruction_Ex_A a cx:Example ;
+    cx:hasAnnotatedText "[3]1 [km]2" ;
+    cx:hasText "3 km" .
+
+cx:engLME_UnitConstruction_Ex_B a cx:Example ;
+    cx:hasAnnotatedText "[5]1 [mph]2" ;
+    cx:hasText "5 mph" .
+
+cx:engLME_UnitConstruction_Ex_C a cx:Example ;
+    cx:hasAnnotatedText "[12]1 [cm]2" ;
+    cx:hasText "12 cm" .
+
+cx:engLME_UnitConstruction_Ex_D a cx:Example ;
+    cx:hasAnnotatedText "[8]1 [ft]2" ;
+    cx:hasText "8 ft" .
