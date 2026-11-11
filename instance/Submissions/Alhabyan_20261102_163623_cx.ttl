@@ -18,7 +18,8 @@ membr:Project_Alhabyan rsrch:hasResearchQuestion membr:Project_Alhabyan_26110216
 cx:araCla_ComitativeConstruction a rcxn:Construction ;
     cx:hasExample cx:araCla_ComitativeConstruction_Ex_A,
         cx:araCla_ComitativeConstruction_Ex_B,
-        cx:araCla_ComitativeConstruction_Ex_C ;
+        cx:araCla_ComitativeConstruction_Ex_C,
+        cx:araCla_ComitativeConstruction_Ex_D ;
     lg:partOfLanguage lg:araCla ;
     rcxn:hasConstructionMeaning cx:araCla_ComitativeConstruction_Meaning ;
     rcxn:hasMetadata cx:araCla_ComitativeConstruction_MD ;
@@ -28,7 +29,7 @@ cx:araCla_ComitativeConstruction a rcxn:Construction ;
 cx:araCla_ComitativeConstruction_1 a rcxn:SlotObligatory ;
     cx:WordOrder "First element" ;
     rcxn:hasSemanticProperty "Verbs denoting directed motion" ;
-    RDFS:comment "colloprofile: ǧāʾa 'to arrive'; ʾatā 'to come'; ḏahaba 'to leave'; daẖala 'to enter'; ẖaraǧa 'to go out'; marra 'to pass by' (ambiguous); ǧarā 'to move in specified course'; sāra 'to walk'; nazala 'to descend'; mašā 'to walk'; etc." ;
+    RDFS:comment "collocolloprofile: ǧāʾa 'to arrive'; ʾatā 'to come'; ḏahaba 'to leave'; daẖala 'to enter'; ẖaraǧa 'to go out'; marra 'to pass by' (ambiguous); ǧarā 'to move in specified course'; sāra 'to walk'; nazala 'to descend'; mašā 'to walk'; ʾinṭalaqa 'to rush'; ʾasrā 'to travel by night', etc. " ;
     rcxn:hasSyntacticFunction "Verb" .
 
 cx:araCla_ComitativeConstruction_2 a rcxn:SlotOptional ;
@@ -63,25 +64,33 @@ cx:araCla_ComitativeConstruction_4_Index a cx:Individual ;
     olia:hasAnimacy "Can be +/- animate, +/- human" .
 
 cx:araCla_ComitativeConstruction_Ex_A a cx:Example ;
-    cx:hasAnnotatedText "[sāra]1 [bi-]3 [ʾahli-hī]4" ;
+    cx:hasAnnotatedText "وَسَارَ بِأَهْلِهِ" ;
+    cx:hasTransliteration "wa-[sāra]1 [bi-]3[ʾahli-hī]4" ;
     cx:hasGlosses "walk.3SGM.PERF with- housefolk.GEN-3SGM" ;
-    cx:hasText "sāra bi- ʾahli-hī" ;
+    cx:hasText "وَسَارَ بِأَهْلِهِ" ;
     cx:hasTranslation "He [Moses] was traveling with his housefolk" ;
-    RDFS:comment "The example is taken from the Quran" .
+    RDFS:comment "Source: Quran 28:29" .
 
 cx:araCla_ComitativeConstruction_Ex_B a cx:Example ;
-    cx:hasAnnotatedText "[ʾtū]1 [bi-]3 [sūratin]4" ;
+    cx:hasAnnotatedText "فَأْتُوا بِسُورَةٍ مِّن مِّثْلِهِ" ;
+    cx:hasTransliteration "fa-[ʾt]1[ū]2 [bi-]3[sūratin]4 min miṯli-hī" ;
     cx:hasGlosses "come.2PLM.IMP with- chapter.GEN" ;
-    cx:hasText "ʾtū bi- sūratin" ;
+    cx:hasText "فَأْتُوا بِسُورَةٍ مِّن مِّثْلِهِ" ;
     cx:hasTranslation "Produce a surah (chapter)." ;
-    RDFS:comment "The example is taken from the Quran" .
+    RDFS:comment "Source: Quran 2:23" .
 
 cx:araCla_ComitativeConstruction_Ex_C a cx:Example ;
-    cx:hasAnnotatedText "[ḏahaba]1 [llāhu]2 [bi-]3 [nūri-him]4" ;
+    cx:hasAnnotatedText "ذَهَبَ اللَّهُ بِنُورِهِمْ" ;
+    cx:hasTransliteration "[ḏahaba]1 [llāhu]2 [bi-]3[nūri-him]4" ;
     cx:hasGlosses "go.2SGM.PERF God with- light.GEN-3PLM" ;
-    cx:hasText "ḏahaba llāhu bi- nūri-him" ;
+    cx:hasText "ذَهَبَ اللَّهُ بِنُورِهِمْ" ;
     cx:hasTranslation "God taketh away their light " ;
-    RDFS:comment "The example is taken from the Quran" .
+    RDFS:comment "Source: Quran 2:17" .
+
+cx:araCla_ComitativeConstruction_Ex_D a cx:Example ;
+    cx:hasAnnotatedText "فَ[أْتُ]1[وا]2 [بِ]3[سُورَةٍ]4ْ" ;
+    cx:hasTranslation "فَأْتُوا بِسُورَةٍْ" ;
+    RDFS:comment "test" .
 
 cx:araCla_ComitativeConstruction_MD a rcxn:Metadata ;
     dcterm:created "2026-11-02"^^xsd:date ;
@@ -89,7 +98,7 @@ cx:araCla_ComitativeConstruction_MD a rcxn:Metadata ;
     rcxn:annotator membr:Alhabyan .
 
 cx:araCla_ComitativeConstruction_Meaning a rcxn:ConstructionMeaning ;
-    rcxn:hasMeaning "[An ÆFFECTOR]2 [physically brings]1 [an ÆFFECTED]4 [with (bi-)]3 [him/her]2." .
+    rcxn:hasMeaning "An [Agent]2 [brings]1 a [Patient]4 [with (bi-)]3 [him/her]2." .
 
 cx:araCla_ComitativeConstruction_Sources a dcmitype:Collection ;
     dcterm:hasPart references:3511453c-d7c8-4218-956c-ad4e6d90a32b,
@@ -105,7 +114,7 @@ cx:araCla_ComitativeConstruction_slots a rdf:Seq ;
 membr:Alhabyan foaf:currentProject membr:Project_Alhabyan_2611021636 .
 
 membr:Project_Alhabyan_2611021636_F2611021636 a rsrch:Finding ;
-    RDFS:label "Provisional: Form I (faʾala) verbs of the CaCaCa vocalic pattern, denoting horizontal or vertical 'directed' motion, combine with the valency-increasing bound stem preposition [bi-] to denote a general notion of 'movement with' exhibited between two participants in the event. The same construction expanded into the more semantically specific \"bring with\" notion, whereby the first paritipant is more agentive, and the second assuming a more patient-like/passive character. From this latter semantics developed more lexically specified combinations, whereby the V+P combinations exhibit further unitary and noncompositional meanings, unredictable from the elements of the construction. These \"idiomatic constructions\" are conditioned by the meaning of the verbal element, but also by the semantic features of the prepositional complement.  " ;
+    RDFS:label "Provisional: Form I (faʾala) verbs of the CaCaCa vocalic pattern, denoting horizontal or vertical 'directed' motion, combine with the valency-increasing bound stem preposition [bi-] to denote a general notion of 'movement with' exhibited between two participants in the event. The same construction expanded into the more semantically specific \"bring with\" notion, whereby the first paritipant is more agentive, and the second assuming a more patient-like/passive character. From this latter semantics developed more lexically specified combinations, whereby the V+P combinations exhibit further unitary and noncompositional meanings, unredictable from the elements of the construction. These \"idiomatic constructions\" are conditioned by the meaning of the verbal element, but also by the semantic features of the prepositional complement." ;
     rsrch:basedOn cx:araCla_ComitativeConstruction .
 
 references:3511453c-d7c8-4218-956c-ad4e6d90a32b evid:biblio "University of Oslo. (n.d.). Quran. Bibliotheca Polyglotta. https://polyglotta.uio.no/index.php?page=volume&vid=51" .
