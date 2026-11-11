@@ -18,8 +18,7 @@ membr:Project_Alhabyan rsrch:hasResearchQuestion membr:Project_Alhabyan_26110216
 cx:araCla_ComitativeConstruction a rcxn:Construction ;
     cx:hasExample cx:araCla_ComitativeConstruction_Ex_A,
         cx:araCla_ComitativeConstruction_Ex_B,
-        cx:araCla_ComitativeConstruction_Ex_C,
-        cx:araCla_ComitativeConstruction_Ex_D ;
+        cx:araCla_ComitativeConstruction_Ex_C ;
     lg:partOfLanguage lg:araCla ;
     rcxn:hasConstructionMeaning cx:araCla_ComitativeConstruction_Meaning ;
     rcxn:hasMetadata cx:araCla_ComitativeConstruction_MD ;
@@ -90,11 +89,6 @@ cx:araCla_ComitativeConstruction_Ex_C a cx:Example ;
     cx:hasText "ذَهَبَ اللَّهُ بِنُورِهِمْ" ;
     cx:hasTranslation "God taketh away their light " ;
     RDFS:comment "Source: Quran 2:17" .
-
-cx:araCla_ComitativeConstruction_Ex_D a cx:Example ;
-    cx:hasAnnotatedText "فَ[أْتُ]1[وا]2 [بِ]3[سُورَةٍ]4ْ" ;
-    cx:hasTranslation "فَأْتُوا بِسُورَةٍْ" ;
-    RDFS:comment "test" .
 
 cx:araCla_ComitativeConstruction_MD a rcxn:Metadata ;
     dcterm:created "2026-11-02"^^xsd:date ;

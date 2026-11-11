@@ -689,7 +689,7 @@ membr:Project_Weigelt a rsrch:Project ;
 
 membr:Project_Weigelt_F2610211337 a rsrch:Finding ;
     RDFS:label "Attaching {los} to a base verb marks ingressive aspect in Present Day German. {los} has marked ingressive aspect in base verbs since Early New High German. The construction further marks agentiveness, and requires an AGENS as argument role. The Argument Structure is monovalent/intransitive." ;
-    rsrch:basedOn cx:deuFNG_losingressiveconstruction .
+    rsrch:basedOn cx:deuNHD_losingressiveconstruction .
 
 membr:Project_Winckel a rsrch:Project ;
     rsrch:hasFindings membr:Project_Winckel_F2511281100 ;

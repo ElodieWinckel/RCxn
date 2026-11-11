@@ -465,8 +465,7 @@ cx:ang_Changeofstateconstruction_slots a RDF:Seq ;
 cx:araCla_ComitativeConstruction a rcxn:Construction ;
     cx:hasExample cx:araCla_ComitativeConstruction_Ex_A,
         cx:araCla_ComitativeConstruction_Ex_B,
-        cx:araCla_ComitativeConstruction_Ex_C,
-        cx:araCla_ComitativeConstruction_Ex_D ;
+        cx:araCla_ComitativeConstruction_Ex_C ;
     lg:partOfLanguage lg:araCla ;
     rcxn:hasConstructionMeaning cx:araCla_ComitativeConstruction_Meaning ;
     rcxn:hasMetadata cx:araCla_ComitativeConstruction_MD ;
@@ -537,11 +536,6 @@ cx:araCla_ComitativeConstruction_Ex_C a cx:Example ;
     cx:hasTranslation "God taketh away their light " ;
     cx:hasTransliteration "[ḏahaba]1 [llāhu]2 [bi-]3[nūri-him]4" ;
     RDFS:comment "Source: Quran 2:17" .
-
-cx:araCla_ComitativeConstruction_Ex_D a cx:Example ;
-    cx:hasAnnotatedText "فَ[أْتُ]1[وا]2 [بِ]3[سُورَةٍ]4ْ" ;
-    cx:hasTranslation "فَأْتُوا بِسُورَةٍْ" ;
-    RDFS:comment "test" .
 
 cx:araCla_ComitativeConstruction_MD a rcxn:Metadata ;
     DCTERMS:created "2026-11-02"^^xsd:date ;
@@ -920,75 +914,75 @@ cx:comePLUSnoisemannerofmovementVing_slots a RDF:Seq ;
     RDF:_5 cx:comePLUSnoisemannerofmovementVing_5 ;
     RDF:_6 cx:comePLUSnoisemannerofmovementVing_6 .
 
-cx:deuFNG_losingressiveconstruction a rcxn:Construction ;
-    cx:hasExample cx:deuFNG_losingressiveconstruction_Ex_A,
-        cx:deuFNG_losingressiveconstruction_Ex_B,
-        cx:deuFNG_losingressiveconstruction_Ex_C ;
-    lg:partOfLanguage lg:deuFNG ;
-    rcxn:hasConstructionMeaning cx:deuFNG_losingressiveconstruction_Meaning ;
-    rcxn:hasMetadata cx:deuFNG_losingressiveconstruction_MD ;
-    rcxn:hasSlots cx:deuFNG_losingressiveconstruction_slots ;
+cx:deuNHD_losingressiveconstruction a rcxn:Construction ;
+    cx:hasExample cx:deuNHD_losingressiveconstruction_Ex_A,
+        cx:deuNHD_losingressiveconstruction_Ex_B,
+        cx:deuNHD_losingressiveconstruction_Ex_C ;
+    lg:partOfLanguage lg:deuNHD ;
+    rcxn:hasConstructionMeaning cx:deuNHD_losingressiveconstruction_Meaning ;
+    rcxn:hasMetadata cx:deuNHD_losingressiveconstruction_MD ;
+    rcxn:hasSlots cx:deuNHD_losingressiveconstruction_slots ;
     rcxn:hasTitle "los-ingressive-construction" .
 
-cx:deuFNG_losingressiveconstruction_1 a rcxn:SlotObligatory ;
-    cx:hasIndex cx:deuFNG_losingressiveconstruction_1_Index ;
+cx:deuNHD_losingressiveconstruction_1 a rcxn:SlotObligatory ;
+    cx:hasIndex cx:deuNHD_losingressiveconstruction_1_Index ;
     olia:hasSemanticRole olia:AgentRole .
 
-cx:deuFNG_losingressiveconstruction_1_Index a cx:Individual ;
+cx:deuNHD_losingressiveconstruction_1_Index a cx:Individual ;
     olia:hasAnimacy olia:Animate .
 
-cx:deuFNG_losingressiveconstruction_2 a rcxn:SlotObligatory ;
+cx:deuNHD_losingressiveconstruction_2 a rcxn:SlotObligatory ;
     RDFS:comment "begin-indicating particle",
         "prefix-like type: losVINF, morphologically seperated type: losgeVINF, loszuVINF, syntactically seperated type VFin ... los" ;
     rcxn:hasOtherSemanticContribution "ingressive aspect" ;
     rcxn:hasSemanticProperty "adds ingressive aspect to the base verb" ;
-    rcxn:hasSlotForm cx:deuFNG_losingressiveconstruction_2_Form .
+    rcxn:hasSlotForm cx:deuNHD_losingressiveconstruction_2_Form .
 
-cx:deuFNG_losingressiveconstruction_2_Form a rcxn:SlotForm ;
+cx:deuNHD_losingressiveconstruction_2_Form a rcxn:SlotForm ;
     rcxn:hasSurfaceForm "los" .
 
-cx:deuFNG_losingressiveconstruction_3 a rcxn:SlotObligatory ;
+cx:deuNHD_losingressiveconstruction_3 a rcxn:SlotObligatory ;
     rcxn:hasSemanticProperty "prefers activity verbs (esp. verbs of movement or uttering sounds), states are only possible if they also fall in the category of progression verbs (e.g. (los)dampfen, (los)regnen, but not *loswissen), some achievements and semelfactives; accomplishments are blocked" ;
-    rcxn:hasSlotForm cx:deuFNG_losingressiveconstruction_3_Form .
+    rcxn:hasSlotForm cx:deuNHD_losingressiveconstruction_3_Form .
 
-cx:deuFNG_losingressiveconstruction_3_Form a rcxn:SlotForm ;
+cx:deuNHD_losingressiveconstruction_3_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:deu_Verb .
 
-cx:deuFNG_losingressiveconstruction_Ex_A a cx:Example ;
+cx:deuNHD_losingressiveconstruction_Ex_A a cx:Example ;
     cx:hasAnnotatedText "Danach [fährt]3 [sie]1 [los]2 und überlässt Collins seinem Schicksal. (Wikipedia-Korpus, Wissenschaft, 12.09.2025)" ;
     cx:hasGlosses "Afterwards drives she los(=begin indicating particle) and leaves Collins his fate." ;
     cx:hasText "Danach fährt sie los und überlässt Collins seinem Schicksal. (Wikipedia-Korpus, Wissenschaft, 12.09.2025)" ;
     cx:hasTranslation "Afterwards, she begins to drive (begins to move through the action of driving) and leaves Collins to his fate." ;
     RDFS:comment "example for the syntactically seperated type" .
 
-cx:deuFNG_losingressiveconstruction_Ex_B a cx:Example ;
+cx:deuNHD_losingressiveconstruction_Ex_B a cx:Example ;
     cx:hasAnnotatedText "[Ich]1 saß dort, wie erstarrt, und wollte am liebsten [los]2[weinen]3. (FAZ-Korpus, Zeitung, 19.02.2025)" ;
     cx:hasGlosses "I sat there, like frozen, and wanted preferably los(=ingressive particle)cry." ;
     cx:hasText "Ich saß dort, wie erstarrt, und wollte am liebsten losweinen. (FAZ-Korpus, Zeitung, 19.02.2025)" ;
     cx:hasTranslation "I sat there, like frozen, and preferably wanted to start to cry." ;
     RDFS:comment "example for the univerbated/prefix-like type" .
 
-cx:deuFNG_losingressiveconstruction_Ex_C a cx:Example ;
+cx:deuNHD_losingressiveconstruction_Ex_C a cx:Example ;
     cx:hasAnnotatedText "Denn auch außerhalb des Musikprogramms findet ständig [jemand]1 einen Anlass, plötzlich [los]2zu[singen]3. (Tagesspiegel-Korpus, Zeitung, 13.10.2022)" ;
     cx:hasGlosses "Because even outside the music programme, finds regularly somebody a reason suddenly los(=ingressive particle)-to-sing." ;
     cx:hasText "Denn auch außerhalb des Musikprogramms findet ständig jemand einen Anlass, plötzlich loszusingen. (Tagesspiegel-Korpus, Zeitung, 13.10.2022)" ;
     cx:hasTranslation "Because even outside of the music programme, somebody regularly finds a reason to suddenly start to sing." ;
     RDFS:comment "example for the morphologically seperated type" .
 
-cx:deuFNG_losingressiveconstruction_MD a rcxn:Metadata ;
+cx:deuNHD_losingressiveconstruction_MD a rcxn:Metadata ;
     DCTERMS:created "2026-10-21"^^xsd:date ;
-    DCTERMS:references cx:deuFNG_losingressiveconstruction_Sources ;
+    DCTERMS:references cx:deuNHD_losingressiveconstruction_Sources ;
     rcxn:annotator membr:Weigelt .
 
-cx:deuFNG_losingressiveconstruction_Meaning a rcxn:ConstructionMeaning ;
+cx:deuNHD_losingressiveconstruction_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "[AGENS]1 begins to [V]3" .
 
-cx:deuFNG_losingressiveconstruction_Sources a dcmitype:Collection .
+cx:deuNHD_losingressiveconstruction_Sources a dcmitype:Collection .
 
-cx:deuFNG_losingressiveconstruction_slots a RDF:Seq ;
-    RDF:_1 cx:deuFNG_losingressiveconstruction_1 ;
-    RDF:_2 cx:deuFNG_losingressiveconstruction_2 ;
-    RDF:_3 cx:deuFNG_losingressiveconstruction_3 .
+cx:deuNHD_losingressiveconstruction_slots a RDF:Seq ;
+    RDF:_1 cx:deuNHD_losingressiveconstruction_1 ;
+    RDF:_2 cx:deuNHD_losingressiveconstruction_2 ;
+    RDF:_3 cx:deuNHD_losingressiveconstruction_3 .
 
 cx:deuSpo_QuotativeconditionalWennSiesagenXdannY_1 a rcxn:SlotObligatory ;
     cx:hasTranslation "if" ;
@@ -7104,7 +7098,7 @@ cx:spa_Verb a rcxn:Construction ;
 
 cx:deu_Verb a rcxn:Construction ;
     lg:partOfLanguage lg:deu ;
-    links:elementOf cx:deuFNG_losingressiveconstruction,
+    links:elementOf cx:deuNHD_losingressiveconstruction,
         cx:deuSpo_QuotativeconditionalWennSiesagenXdannY,
         cx:deuWrSt20_sichNPADJADVvorAugenVP,
         cx:deu_AusdemAErmelschuettelnconstruction ;
