@@ -296,11 +296,10 @@ membr:Project_Badawi_2611021640_F2611021640 a rsrch:Finding ;
     RDFS:label """1. The object slot of earn is strongly restricted lexically and semantically, while the subject slot is open. Against a whole-corpus baseline, the strongest object collexemes are living (G² = 3,130), money (1,799), wage, reputation, nickname, keep, respect and profit.\r
 2. Semantically, money objects occur 8.3 times more often with earn than with verbs in general (10.7 times at the level of the money-and-business field).\r
 3. Semantically, money objects occur 8.3 times more often with earn than with verbs in general (10.7 times at the level of the money-and-business field).\r
-4. The money reading is preferred with I (G² = 43.9), you (19.3) and she (10.1), not with he, they, we or it.\r
-5. A ditransitive variant (389 instances; earn someone a place / a nickname / a reputation) behaves as a distinct sub-construction. It prefers status objects and avoids money (7 vs. 353 instances, G² = 37.3). It takes a nominal subject in 69% of cases (34% elsewhere), typically the achievement that causes the reward, and is strongly fixed in its indirect-object slot (0.58, mainly he and himself).\r
+4. The money reading is preferred with I (G² = 43.9; where G² is the log-likelihood), you (G² = 19.3) and she (G² = 10.1), not with he, they, we or it.\r
 Overall, the construction is  partially schematic: open in its subject, partially lexicalised in its object, with earn a living as its most strongly associated sub-pattern.\r
 """ ;
-    rsrch:basedOn cx:eng_EarnConstruction .
+    rsrch:basedOn cx:engLME_EarnConstruction .
 
 membr:Project_Bayer a rsrch:Project ;
     rsrch:hasResearchQuestion membr:Project_Bayer_2611042245,
