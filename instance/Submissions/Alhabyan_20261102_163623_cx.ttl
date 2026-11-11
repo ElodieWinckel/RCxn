@@ -36,7 +36,7 @@ cx:araCla_ComitativeConstruction_2 a rcxn:SlotOptional ;
     cx:WordOrder "After Element 1" ;
     cx:hasIndex cx:araCla_ComitativeConstruction_2_Index ;
     olia:hasCase olia:Nominative ;
-    olia:hasSemanticRole olia:AgentRole ;
+    rcxn:hasOtherSemanticContribution "A role" ;
     rcxn:hasSyntacticFunction "Subject " .
 
 cx:araCla_ComitativeConstruction_2_Index a cx:Individual ;
@@ -56,9 +56,13 @@ cx:araCla_ComitativeConstruction_4 a rcxn:SlotObligatory ;
     cx:WordOrder "after Element 3" ;
     cx:hasIndex cx:araCla_ComitativeConstruction_4_Index ;
     olia:hasCase olia:GenitiveCase ;
-    olia:hasSemanticRole olia:PatientRole ;
+    rcxn:hasOtherSemanticContribution "P role" ;
     rcxn:hasSemanticProperty "[NP] must not denote or refer to time/location nor to abstract concept ~ entails change of meaning" ;
-    rcxn:hasSyntacticFunction "Oblique" .
+    rcxn:hasSyntacticFunction "Oblique" ;
+    rcxn:hasSlotForm cx:araCla_ComitativeConstruction_4_Form .
+
+cx:araCla_ComitativeConstruction_4_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:ara_NounPhrase .
 
 cx:araCla_ComitativeConstruction_4_Index a cx:Individual ;
     olia:hasAnimacy "Can be +/- animate, +/- human" .
@@ -114,7 +118,7 @@ cx:araCla_ComitativeConstruction_slots a rdf:Seq ;
 membr:Alhabyan foaf:currentProject membr:Project_Alhabyan_2611021636 .
 
 membr:Project_Alhabyan_2611021636_F2611021636 a rsrch:Finding ;
-    RDFS:label "Provisional: Form I (faʾala) verbs of the CaCaCa vocalic pattern, denoting horizontal or vertical 'directed' motion, combine with the valency-increasing bound stem preposition [bi-] to denote a general notion of 'movement with' exhibited between two participants in the event. The same construction expanded into the more semantically specific \"bring with\" notion, whereby the first paritipant is more agentive, and the second assuming a more patient-like/passive character. From this latter semantics developed more lexically specified combinations, whereby the V+P combinations exhibit further unitary and noncompositional meanings, unredictable from the elements of the construction. These \"idiomatic constructions\" are conditioned by the meaning of the verbal element, but also by the semantic features of the prepositional complement." ;
+    RDFS:label "Provisional: Form I (faʾala) verbs of the CaCaCa vocalic pattern, denoting horizontal or vertical 'directed' motion, combine with the valency-increasing bound stem preposition [bi-] to denote a general notion of 'movement with' exhibited between two participants in the event. The same construction expanded into the more semantically specific \"bring with\" notion, whereby the first paritipant is more agentive, and the second assuming a more patient-like/passive character. From this latter semantics developed more lexically specified combinations, whereby the V+P combinations exhibit further unitary and noncompositional meanings, unpredictable from the elements of the construction. These \"idiomatic constructions\" are conditioned by the meaning of the verbal element, but also by the semantic features of the prepositional complement." ;
     rsrch:basedOn cx:araCla_ComitativeConstruction .
 
 references:3511453c-d7c8-4218-956c-ad4e6d90a32b evid:biblio "University of Oslo. (n.d.). Quran. Bibliotheca Polyglotta. https://polyglotta.uio.no/index.php?page=volume&vid=51" .
@@ -127,3 +131,11 @@ membr:Project_Alhabyan_2611021636 a rsrch:Project ;
     rsrch:hasFindings membr:Project_Alhabyan_2611021636_F2611021636 ;
     rsrch:projectName "Unpacking the syntactic and semantic valency of V+P sequences in Classical Arabic, this project ultimately explores the extent to which form can be predictable from meaning. " .
 
+cx:ara_NounPhrase a rcxn:Construction ;
+    lg:partOfLanguage lg:ara ;
+    rcxn:hasMetadata cx:ara_NounPhrase_MD ;
+    rcxn:hasTitle "Noun Phrase" .
+
+cx:ara_NounPhrase_MD a rcxn:Metadata ;
+    dcterm:created "2026-11-11"^^xsd:date ;
+    rcxn:annotator membr:Alhabyan .

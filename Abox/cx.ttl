@@ -26,17 +26,6 @@ cx:ang_Changeofstateconstruction a rcxn:Construction ;
     rcxn:hasSlots cx:ang_Changeofstateconstruction_slots ;
     rcxn:hasTitle "Change of state construction" .
 
-cx:araCla_ComitativeConstruction a rcxn:Construction ;
-    cx:hasExample cx:araCla_ComitativeConstruction_Ex_A,
-        cx:araCla_ComitativeConstruction_Ex_B,
-        cx:araCla_ComitativeConstruction_Ex_C,
-        cx:araCla_ComitativeConstruction_Ex_D ;
-    lg:partOfLanguage lg:araCla ;
-    rcxn:hasConstructionMeaning cx:araCla_ComitativeConstruction_Meaning ;
-    rcxn:hasMetadata cx:araCla_ComitativeConstruction_MD ;
-    rcxn:hasSlots cx:araCla_ComitativeConstruction_slots ;
-    rcxn:hasTitle "Comitative Construction" .
-
 cx:comePLUSnoisemannerofmovementVing_4_Form a rcxn:SlotForm ;
     rcxn:hasSyntacticForm cx:eng_PrepositionalPhrase .
 
@@ -473,6 +462,17 @@ cx:ang_Changeofstateconstruction_slots a RDF:Seq ;
     RDF:_3 cx:ang_Changeofstateconstruction_3 ;
     RDF:_4 cx:ang_Changeofstateconstruction_4 .
 
+cx:araCla_ComitativeConstruction a rcxn:Construction ;
+    cx:hasExample cx:araCla_ComitativeConstruction_Ex_A,
+        cx:araCla_ComitativeConstruction_Ex_B,
+        cx:araCla_ComitativeConstruction_Ex_C,
+        cx:araCla_ComitativeConstruction_Ex_D ;
+    lg:partOfLanguage lg:araCla ;
+    rcxn:hasConstructionMeaning cx:araCla_ComitativeConstruction_Meaning ;
+    rcxn:hasMetadata cx:araCla_ComitativeConstruction_MD ;
+    rcxn:hasSlots cx:araCla_ComitativeConstruction_slots ;
+    rcxn:hasTitle "Comitative Construction" .
+
 cx:araCla_ComitativeConstruction_1 a rcxn:SlotObligatory ;
     cx:WordOrder "First element" ;
     RDFS:comment "collocolloprofile: ǧāʾa 'to arrive'; ʾatā 'to come'; ḏahaba 'to leave'; daẖala 'to enter'; ẖaraǧa 'to go out'; marra 'to pass by' (ambiguous); ǧarā 'to move in specified course'; sāra 'to walk'; nazala 'to descend'; mašā 'to walk'; ʾinṭalaqa 'to rush'; ʾasrā 'to travel by night', etc. " ;
@@ -483,7 +483,7 @@ cx:araCla_ComitativeConstruction_2 a rcxn:SlotOptional ;
     cx:WordOrder "After Element 1" ;
     cx:hasIndex cx:araCla_ComitativeConstruction_2_Index ;
     olia:hasCase olia:Nominative ;
-    olia:hasSemanticRole olia:AgentRole ;
+    rcxn:hasOtherSemanticContribution "A role" ;
     rcxn:hasSyntacticFunction "Subject " .
 
 cx:araCla_ComitativeConstruction_2_Index a cx:Individual ;
@@ -503,9 +503,13 @@ cx:araCla_ComitativeConstruction_4 a rcxn:SlotObligatory ;
     cx:WordOrder "after Element 3" ;
     cx:hasIndex cx:araCla_ComitativeConstruction_4_Index ;
     olia:hasCase olia:GenitiveCase ;
-    olia:hasSemanticRole olia:PatientRole ;
+    rcxn:hasOtherSemanticContribution "P role" ;
     rcxn:hasSemanticProperty "[NP] must not denote or refer to time/location nor to abstract concept ~ entails change of meaning" ;
+    rcxn:hasSlotForm cx:araCla_ComitativeConstruction_4_Form ;
     rcxn:hasSyntacticFunction "Oblique" .
+
+cx:araCla_ComitativeConstruction_4_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:ara_NounPhrase .
 
 cx:araCla_ComitativeConstruction_4_Index a cx:Individual ;
     olia:hasAnimacy "Can be +/- animate, +/- human" .
@@ -557,6 +561,16 @@ cx:araCla_ComitativeConstruction_slots a RDF:Seq ;
     RDF:_2 cx:araCla_ComitativeConstruction_2 ;
     RDF:_3 cx:araCla_ComitativeConstruction_3 ;
     RDF:_4 cx:araCla_ComitativeConstruction_4 .
+
+cx:ara_NounPhrase a rcxn:Construction ;
+    lg:partOfLanguage lg:ara ;
+    links:elementOf cx:araCla_ComitativeConstruction ;
+    rcxn:hasMetadata cx:ara_NounPhrase_MD ;
+    rcxn:hasTitle "Noun Phrase" .
+
+cx:ara_NounPhrase_MD a rcxn:Metadata ;
+    DCTERMS:created "2026-11-11"^^xsd:date ;
+    rcxn:annotator membr:Alhabyan .
 
 cx:arzCai_Dativeconstruction_1 a rcxn:SlotOptional ;
     cx:WordOrder "Before element 2" ;
