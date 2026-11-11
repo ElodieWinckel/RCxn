@@ -2716,6 +2716,16 @@ cx:engLME_ComparativeConstruction_slots a RDF:Seq ;
     RDF:_3 cx:engLME_ComparativeConstruction_3 ;
     RDF:_4 cx:engLME_ComparativeConstruction_4 .
 
+cx:engLME_Dateconstruction a rcxn:Construction ;
+    lg:partOfLanguage lg:engLME ;
+    links:similarFormSimilarFunction cx:engLME_UnitConstruction ;
+    rcxn:hasMetadata cx:engLME_Dateconstruction_MD ;
+    rcxn:hasTitle "Date construction" .
+
+cx:engLME_Dateconstruction_MD a rcxn:Metadata ;
+    DCTERMS:created "2026-11-11"^^xsd:date ;
+    rcxn:annotator membr:Immertreu .
+
 cx:engLME_Ditransitiveconstruction_1 a rcxn:SlotObligatory ;
     rcxn:hasSyntacticFunction "Subject" .
 
@@ -3128,17 +3138,6 @@ cx:engLME_Transitiveconstruction_slots a RDF:Seq ;
     RDF:_1 cx:engLME_Transitiveconstruction_1 ;
     RDF:_2 cx:engLME_Transitiveconstruction_2 ;
     RDF:_3 cx:engLME_Transitiveconstruction_3 .
-
-cx:engLME_UnitConstruction a rcxn:Construction ;
-    cx:hasExample cx:engLME_UnitConstruction_Ex_A,
-        cx:engLME_UnitConstruction_Ex_B,
-        cx:engLME_UnitConstruction_Ex_C,
-        cx:engLME_UnitConstruction_Ex_D ;
-    lg:partOfLanguage lg:engLME ;
-    rcxn:hasConstructionMeaning cx:engLME_UnitConstruction_Meaning ;
-    rcxn:hasMetadata cx:engLME_UnitConstruction_MD ;
-    rcxn:hasSlots cx:engLME_UnitConstruction_slots ;
-    rcxn:hasTitle "Unit Construction" .
 
 cx:engLME_UnitConstruction_1 a rcxn:SlotObligatory ;
     cx:WordOrder "Element 1 immediately before element 2" ;
@@ -6815,6 +6814,18 @@ cx:engLME_Transitiveconstruction a rcxn:Construction ;
     rcxn:hasMetadata cx:engLME_Transitiveconstruction_MD ;
     rcxn:hasSlots cx:engLME_Transitiveconstruction_slots ;
     rcxn:hasTitle "Transitive construction" .
+
+cx:engLME_UnitConstruction a rcxn:Construction ;
+    cx:hasExample cx:engLME_UnitConstruction_Ex_A,
+        cx:engLME_UnitConstruction_Ex_B,
+        cx:engLME_UnitConstruction_Ex_C,
+        cx:engLME_UnitConstruction_Ex_D ;
+    lg:partOfLanguage lg:engLME ;
+    links:similarFormSimilarFunction cx:engLME_Dateconstruction ;
+    rcxn:hasConstructionMeaning cx:engLME_UnitConstruction_Meaning ;
+    rcxn:hasMetadata cx:engLME_UnitConstruction_MD ;
+    rcxn:hasSlots cx:engLME_UnitConstruction_slots ;
+    rcxn:hasTitle "Unit Construction" .
 
 cx:engUsSpo_Hadituptoherewith_2 a rcxn:SlotObligatory ;
     rcxn:hasOtherSemanticContribution "Enough" ;
