@@ -55,14 +55,6 @@ cx:deu_Toechter a rcxn:Construction ;
     rcxn:hasSlots cx:deu_Toechter_slots ;
     rcxn:hasTitle "Töchter" .
 
-cx:engEME_Figurativecontrolconstruction a rcxn:Construction ;
-    cx:hasExample cx:engEME_Figurativecontrolconstruction_Ex_A ;
-    lg:partOfLanguage lg:engEME ;
-    rcxn:hasConstructionMeaning cx:engEME_Figurativecontrolconstruction_Meaning ;
-    rcxn:hasMetadata cx:engEME_Figurativecontrolconstruction_MD ;
-    rcxn:hasSlots cx:engEME_Figurativecontrolconstruction_slots ;
-    rcxn:hasTitle "Figurative control construction" .
-
 cx:engLME_AdjectivalwithPARTNERConstruction a rcxn:Construction ;
     compcon:hasCompCon compcon:cxn_modification-construction,
         compcon:cxn_referring-phrase,
@@ -2361,17 +2353,32 @@ cx:deu_wenn_MD a rcxn:Metadata ;
     rcxn:annotator membr:Rohwedder .
 
 cx:engEME_Figurativecontrolconstruction_1 a rcxn:SlotObligatory ;
-    cx:WordOrder "Element 1 before element 2" .
+    cx:WordOrder "Element 1 before element 2" ;
+    olia:hasSemanticRole olia:AgentRole ;
+    rcxn:hasSlotForm cx:engEME_Figurativecontrolconstruction_1_Form .
+
+cx:engEME_Figurativecontrolconstruction_1_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:eng_NounPhrase .
 
 cx:engEME_Figurativecontrolconstruction_2 a rcxn:SlotObligatory ;
-    cx:WordOrder "Element 2 directly before Element 3" .
+    cx:WordOrder "Element 2 directly before Element 3" ;
+    rcxn:hasSlotForm cx:engEME_Figurativecontrolconstruction_2_Form .
+
+cx:engEME_Figurativecontrolconstruction_2_Form a rcxn:SlotForm ;
+    rcxn:hasStem cx:eng_over .
 
 cx:engEME_Figurativecontrolconstruction_3 a rcxn:SlotObligatory ;
-    cx:WordOrder "Element 3 directly after element 2" .
+    cx:WordOrder "Element 3 directly after element 2" ;
+    olia:hasSemanticRole olia:PatientRole ;
+    rcxn:hasSlotForm cx:engEME_Figurativecontrolconstruction_3_Form .
+
+cx:engEME_Figurativecontrolconstruction_3_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:eng_NounPhrase .
 
 cx:engEME_Figurativecontrolconstruction_Ex_A a cx:Example ;
     cx:hasAnnotatedText "...that [he]1 was lord [over]2 [all creatures that were under heaven]3..." ;
-    cx:hasText "...that he was lord over all creatures that were under heaven..." .
+    cx:hasText "...that he was lord over all creatures that were under heaven..." ;
+    RDFS:comment "Source: EEBO: A11157, 1486" .
 
 cx:engEME_Figurativecontrolconstruction_MD a rcxn:Metadata ;
     DCTERMS:created "2026-11-04"^^xsd:date ;
@@ -4851,6 +4858,16 @@ cx:eng_of_MD a rcxn:Metadata ;
     DCTERMS:created "2026-10-19"^^xsd:date ;
     rcxn:annotator membr:Khanoub .
 
+cx:eng_over a rcxn:Construction ;
+    lg:partOfLanguage lg:eng ;
+    links:elementOf cx:engEME_Figurativecontrolconstruction ;
+    rcxn:hasMetadata cx:eng_over_MD ;
+    rcxn:hasTitle "over" .
+
+cx:eng_over_MD a rcxn:Metadata ;
+    DCTERMS:created "2026-11-17"^^xsd:date ;
+    rcxn:annotator membr:Montevecchio .
+
 cx:eng_resultative_construction_attr_to_inf links:sameFormDifferentFunction cx:eng_ditransitive_construction_obj_inf .
 
 cx:eng_satire a rcxn:Construction ;
@@ -6928,6 +6945,14 @@ cx:deu_XanY a rcxn:Construction ;
     rcxn:hasSlots cx:deu_XanY_slots ;
     rcxn:hasTitle "X an Y" .
 
+cx:engEME_Figurativecontrolconstruction a rcxn:Construction ;
+    cx:hasExample cx:engEME_Figurativecontrolconstruction_Ex_A ;
+    lg:partOfLanguage lg:engEME ;
+    rcxn:hasConstructionMeaning cx:engEME_Figurativecontrolconstruction_Meaning ;
+    rcxn:hasMetadata cx:engEME_Figurativecontrolconstruction_MD ;
+    rcxn:hasSlots cx:engEME_Figurativecontrolconstruction_slots ;
+    rcxn:hasTitle "Figurative control construction" .
+
 cx:engInf_Coolexclamativeconstruction a rcxn:Construction ;
     lg:partOfLanguage lg:engInf ;
     links:inheritsFrom cx:Adjectiveexclamativeconstruction ;
@@ -8141,6 +8166,7 @@ cx:deu_NounPhrase a rcxn:Construction ;
 cx:eng_NounPhrase a rcxn:Construction ;
     lg:partOfLanguage lg:eng ;
     links:elementOf cx:comePLUSnoisemannerofmovementVing,
+        cx:engEME_Figurativecontrolconstruction,
         cx:engEME_TheFVIconstruction,
         cx:engLME_AttributeConstructionAttrAdj,
         cx:engLME_GIVEOUTVerbParticleConstruction,
