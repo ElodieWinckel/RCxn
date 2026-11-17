@@ -25,13 +25,23 @@ cx:spa_Subjectrelativeclause_MD a rcxn:Metadata ;
     rcxn:annotator membr:Boos .
 
 cx:spa_Objectrelativeclause_1 a rcxn:SlotObligatory ;
-    rcxn:hasSyntacticFunction "Direct object (within the clause)" .
+    rcxn:hasSyntacticFunction "Direct object (within the clause)" ;
+    rcxn:hasSlotForm cx:spa_Objectrelativeclause_1_Form ;
+    RDFS:comment "prototypically inanimate in spoken variety" ;
+    rcxn:hasOtherSemanticContribution "affected" .
+
+cx:spa_Objectrelativeclause_1_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:spa_NounPhrase.
 
 cx:spa_Objectrelativeclause_2 a rcxn:SlotOptional ;
     cx:WordOrder "If present, Element 2 immediately after Element 1" ;
     cx:hasTranslation "to:the" ;
     rcxn:hasSemanticProperty "only if Element 1 is animate and human" ;
-    rcxn:hasSyntacticFunction "Direct object marker" .
+    rcxn:hasSyntacticFunction "Direct object marker" ;
+    rcxn:hasSlotForm cx:spa_Objectrelativeclause_2_Form .
+
+cx:spa_Objectrelativeclause_2_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:spa_aPLUSarticle .
 
 cx:spa_Objectrelativeclause_3 a rcxn:SlotObligatory ;
     cx:WordOrder "immediately after Element 1 (if Element 2 not present), or immediately after Element 2 if present" ;
@@ -40,7 +50,8 @@ cx:spa_Objectrelativeclause_3 a rcxn:SlotObligatory ;
 
 cx:spa_Objectrelativeclause_3_Form a rcxn:SlotForm ;
     rcxn:hasPhonology "/ke/" ;
-    rcxn:hasSurfaceForm "que" .
+    rcxn:hasSurfaceForm "que" ;
+    rcxn:hasSyntacticForm cx:spa_Relativizer.
 
 cx:spa_Objectrelativeclause_4 a rcxn:SlotObligatory ;
     cx:WordOrder "Element 4 and 5 both follow Element 3, but Element 4 can occur before or after Element 5" ;
@@ -53,7 +64,13 @@ cx:spa_Objectrelativeclause_4_Form a rcxn:SlotForm ;
 cx:spa_Objectrelativeclause_5 a rcxn:SlotObligatory ;
     cx:WordOrder "Element 4 and 5 both follow Element 3, but Element 5 can occur before or after Element 4" ;
     RDFS:comment "Spanish is a pro-drop language, so Element 5 might not be formally realised as an NP, but instead encoded in the verb inflection" ;
-    rcxn:hasSyntacticFunction "Subject (within the clause)" .
+    rcxn:hasSyntacticFunction "Subject (within the clause)" ;
+    rcxn:hasSlotForm cx:spa_Objectrelativeclause_5_Form ;
+    RDFS:comment "prototypically a pronoun  in spoken variety" ;
+    rcxn:hasOtherSemanticContribution "affector" .
+
+cx:spa_Objectrelativeclause_5_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:spa_NounPhrase.
 
 cx:spa_Objectrelativeclause_Ex_A a cx:Example ;
     cx:hasAnnotatedText "[el libro]1 [que]3 [lee]4 [la niña]5" ;
@@ -79,7 +96,7 @@ cx:spa_Objectrelativeclause_MD a rcxn:Metadata ;
     rcxn:annotator membr:Boos .
 
 cx:spa_Objectrelativeclause_Meaning a rcxn:ConstructionMeaning ;
-    rcxn:hasMeaning "Modification/specification of an [NP]1: [Someone]5 carries out a [transitive action]4 that affects [someone else]1. The function of the object relative clause is to identify the [affected]1." .
+    rcxn:hasMeaning "Modification/specification of an [NP]1: [Someone/Something (affector)]5 [carries out a transitive action]4 that affects [a second party]1. The function of the object relative clause is to identify the [affected]1." .
 
 cx:spa_Objectrelativeclause_Sources a dcmitype:Collection ;
     dcterm:hasPart references:136d2e86-b998-41b2-ac40-e17c059254f9,
@@ -123,3 +140,11 @@ membr:Project_Boos_2611051450 a rsrch:Project ;
     rsrch:hasFindings membr:Project_Boos_2611051450_F2611051450 ;
     rsrch:projectName "Which factors influence relative clause interpretation, especially object relative clause processing?" .
 
+cx:spa_Relativizer a rcxn:Construction ;
+    lg:partOfLanguage lg:spa ;
+    rcxn:hasMetadata cx:spa_Relativizer_MD ;
+    rcxn:hasTitle "Relativizer" .
+
+cx:spa_Relativizer_MD a rcxn:Metadata ;
+    dcterm:created "2026-11-17"^^xsd:date ;
+    rcxn:annotator membr:Boos .
