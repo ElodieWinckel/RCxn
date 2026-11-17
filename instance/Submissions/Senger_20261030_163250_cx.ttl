@@ -32,18 +32,18 @@ cx:engUsSpo_XissoNP_1 a rcxn:SlotObligatory ;
 
 cx:engUsSpo_XissoNP_2 a rcxn:SlotObligatory ;
     cx:WordOrder "follows element 1, precedes element 3" ;
-    rcxn:hasSlotForm cx:engUsSpo_XissoNP_1_Form ;
     cx:hasIndex cx:engUsSpo_XissoNP_2_Index .
-
-cx:engUsSpo_XissoNP_1_Form a rcxn:SlotForm ;
-    rcxn:hasSurfaceForm "so" .
 
 cx:engUsSpo_XissoNP_2_Index a cx:Event ;
     olia:hasTense olia:NotTemporallyAnchored .
 
 cx:engUsSpo_XissoNP_3 a rcxn:SlotObligatory ;
     cx:WordOrder "follows element 2, precedes element 4" ;
+    rcxn:hasSlotForm cx:engUsSpo_XissoNP_3_Form ;
     rcxn:hasSyntacticFunction "Modifier" .
+
+cx:engUsSpo_XissoNP_3_Form a rcxn:SlotForm ;
+    rcxn:hasSurfaceForm "so" .
 
 cx:engUsSpo_XissoNP_4 a rcxn:SlotObligatory ;
     cx:WordOrder "follows element 4" ;
@@ -60,7 +60,7 @@ cx:engUsSpo_XissoNP_Ex_A a cx:Example ;
     RDFS:comment "(Live with Regis and Kelly, KABC, 2009-08-06)" .
 
 cx:engUsSpo_XissoNP_Ex_B a cx:Example ;
-    cx:hasAnnotatedText "[You]1 [’re]2 [so]3 [glass half full today]4. " ;
+    cx:hasAnnotatedText "[You]1 [’re]2 [so]3 [glass half full]4 today. " ;
     cx:hasText "You ’re so glass half full today. " ;
     RDFS:comment "(Live with Regis and Kelly, KABC, 2009-10-19)" .
 
