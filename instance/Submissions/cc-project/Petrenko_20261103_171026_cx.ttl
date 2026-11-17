@@ -21,20 +21,38 @@ cx:rus_AdjNomCopNPNom a rcxn:Construction ;
     rcxn:hasConstructionMeaning cx:rus_AdjNomCopNPNom_Meaning ;
     rcxn:hasMetadata cx:rus_AdjNomCopNPNom_MD ;
     rcxn:hasSlots cx:rus_AdjNomCopNPNom_slots ;
-    rcxn:hasTitle "Adj-Nom Cop NP-Nom!" .
+    rcxn:hasTitle "Adj-Nom Cop NP-Nom!" ;
+    RDFS:comment """Original entry from the Russian Constructicon.""" .
 
 cx:rus_AdjNomCopNPNom_1 a rcxn:SlotObligatory ;
     olia:hasCase olia:Nominative ;
-    rcxn:hasSemanticProperty "Property, expressing positive or negative evaluation" .
+    rcxn:hasSemanticProperty "Property, expressing positive or negative evaluation" ;
+    rcxn:hasOtherSemanticContribution "Evaluation" ;
+    rcxn:hasSlotForm cx:rus_AdjNomCopNPNom_1_Form ;
+    rcxn:hasSyntacticFunction "root (UD)".
 
-cx:rus_AdjNomCopNPNom_2 a rcxn:SlotObligatory .
+cx:rus_AdjNomCopNPNom_1_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:rus_Adjective .
+
+cx:rus_AdjNomCopNPNom_2 a rcxn:SlotObligatory ;
+    rcxn:hasSlotForm cx:rus_AdjNomCopNPNom_2_Form ;
+    rcxn:hasSyntacticFunction "cop (UD)" .
+
+cx:rus_AdjNomCopNPNom_2_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:rus_Copula .
 
 cx:rus_AdjNomCopNPNom_3 a rcxn:SlotObligatory ;
     olia:hasCase olia:Nominative ;
-    rcxn:hasSemanticProperty "Topic" .
+    rcxn:hasSemanticProperty "Topic" ;
+    rcxn:hasOtherSemanticContribution "Evaluated" ;
+    rcxn:hasSlotForm cx:rus_AdjNomCopNPNom_3_Form ;
+    rcxn:hasSyntacticFunction "nsubj (UD)" .
+
+cx:rus_AdjNomCopNPNom_3_Form a rcxn:SlotForm ;
+    rcxn:hasSyntacticForm cx:rus_NounPhrase .
 
 cx:rus_AdjNomCopNPNom_Ex_A a cx:Example ;
-    cx:hasAnnotatedText "Свои сбережения они хранят в сейфе. [Огромные]1 [суммы]2! " ;
+    cx:hasAnnotatedText "Свои сбережения они хранят в сейфе. [Огромные]1 [суммы]3! " ;
     cx:hasGlosses "their.REFL.POSS savings they.3PL.NOM keep.3PL.NOM in safe-LOC. huge-PL.NOM amount-PL.NOM" ;
     cx:hasText "Свои сбережения они хранят в сейфе. Огромные суммы! " ;
     cx:hasTranslation "They keep their savings in a safe. Huge amounts!" ;
@@ -42,7 +60,7 @@ cx:rus_AdjNomCopNPNom_Ex_A a cx:Example ;
     RDFS:comment "from https://constructicon.github.io/russian/#707" .
 
 cx:rus_AdjNomCopNPNom_Ex_B a cx:Example ;
-    cx:hasAnnotatedText "[Неплохой]1 [городок]2! " ;
+    cx:hasAnnotatedText "[Неплохой]1 [городок]3! " ;
     cx:hasGlosses "not.bad-M.SG.NOM town-DIM.M.SG.NOM" ;
     cx:hasText "Неплохой городок! " ;
     cx:hasTranslation "A pretty good little town!" ;
@@ -55,8 +73,7 @@ cx:rus_AdjNomCopNPNom_MD a rcxn:Metadata ;
     rcxn:annotator membr:Petrenko .
 
 cx:rus_AdjNomCopNPNom_Meaning a rcxn:ConstructionMeaning ;
-    rcxn:hasMeaning """[Property]Evaluation [Entity]Evaluated!\r
-The implicit Assessor/Evaluator evaluates the [Entity]3 by ascribing a [Property]1 to it.""" .
+    rcxn:hasMeaning "The implicit Assessor/Evaluator evaluates the [Entity]3 by ascribing a [Property]1 to it." .
 
 cx:rus_AdjNomCopNPNom_Sources a dcmitype:Collection ;
     dcterm:hasPart references:6f619a90-6cf1-43ae-adc3-31e2fd0d92cd ;
@@ -73,3 +90,29 @@ membr:Project_Petrenko_F2611031710 a rsrch:Finding ;
 
 references:6f619a90-6cf1-43ae-adc3-31e2fd0d92cd evid:biblio "Endresen, Anna & Laura A. Janda. 2020. Taking Construction Grammar One Step Further: Families, Clusters, and Networks of Evaluative Constructions in Russian. Frontiers in Psychology 11. 574353. https://doi.org/10.3389/fpsyg.2020.574353." .
 
+cx:rus_Adjective a rcxn:Construction ;
+    lg:partOfLanguage lg:rus ;
+    rcxn:hasMetadata cx:rus_Adjective_MD ;
+    rcxn:hasTitle "Adjective" .
+
+cx:rus_Adjective_MD a rcxn:Metadata ;
+    dcterm:created "2026-11-17"^^xsd:date ;
+    rcxn:annotator membr:Petrenko .
+
+cx:rus_Copula a rcxn:Construction ;
+    lg:partOfLanguage lg:rus ;
+    rcxn:hasMetadata cx:rus_Copula_MD ;
+    rcxn:hasTitle "Copula" .
+
+cx:rus_Copula_MD a rcxn:Metadata ;
+    dcterm:created "2026-11-17"^^xsd:date ;
+    rcxn:annotator membr:Petrenko .
+
+cx:rus_NounPhrase a rcxn:Construction ;
+    lg:partOfLanguage lg:rus ;
+    rcxn:hasMetadata cx:rus_NounPhrase_MD ;
+    rcxn:hasTitle "Noun Phrase" .
+
+cx:rus_NounPhrase_MD a rcxn:Metadata ;
+    dcterm:created "2026-11-17"^^xsd:date ;
+    rcxn:annotator membr:Petrenko .
