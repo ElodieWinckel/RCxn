@@ -684,12 +684,17 @@ membr:Project_Tzimas_F2611021411 a rsrch:Finding ;
     rsrch:basedOn cx:engEME_TheFVIconstruction .
 
 membr:Project_Weigelt a rsrch:Project ;
-    rsrch:hasFindings membr:Project_Weigelt_F2610211337 ;
+    rsrch:hasFindings membr:Project_Weigelt_F2610211337,
+        membr:Project_Weigelt_F2611111011 ;
     rsrch:projectName "Project Weigelt"@en .
 
 membr:Project_Weigelt_F2610211337 a rsrch:Finding ;
     RDFS:label "Attaching {los} to a base verb marks ingressive aspect in Present Day German. {los} has marked ingressive aspect in base verbs since Early New High German. The construction further marks agentiveness, and requires an AGENS as argument role. The Argument Structure is monovalent/intransitive." ;
     rsrch:basedOn cx:deuNHD_losingressiveconstruction .
+
+membr:Project_Weigelt_F2611111011 a rsrch:Finding ;
+    RDFS:label "In combination with an AGENT and a RESULT, {er-} marks resultative aspect in Present Day German verbs. The construction can also take on a facultative BENEFACTIVE. If AGENT and BENEFACTIVE are the same entity, and this fact is specifically focused on, the BENEFACTIVE slot is filled by a reflexive pronoun." ;
+    rsrch:basedOn cx:deuNHD_erresultativeconstruction .
 
 membr:Project_Winckel a rsrch:Project ;
     rsrch:hasFindings membr:Project_Winckel_F2511281100 ;
