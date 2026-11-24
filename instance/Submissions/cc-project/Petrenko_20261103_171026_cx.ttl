@@ -22,7 +22,7 @@ cx:rus_AdjNomCopNPNom a rcxn:Construction ;
     rcxn:hasMetadata cx:rus_AdjNomCopNPNom_MD ;
     rcxn:hasSlots cx:rus_AdjNomCopNPNom_slots ;
     rcxn:hasTitle "Adj-Nom Cop NP-Nom!" ;
-    RDFS:comment """Original entry from the Russian Constructicon.""" .
+    RDFS:comment """Original entry from the Russian Constructicon (https://constructicon.github.io/russian/#707): Bast, Radovan, Anna Endresen, Laura A. Janda, Marianne Lund, Olga Lyashevskaya, James McDonald, Daria Mordashova, Tore Nesset, Ekaterina Rakhilina, Francis M. Tyers, Valentina Zhukova. 2021. The Russian Constructicon. An electronic database of the Russian grammatical constructions. Available at https://constructicon.github.io/russian/.""" .
 
 cx:rus_AdjNomCopNPNom_1 a rcxn:SlotObligatory ;
     olia:hasCase olia:Nominative ;
@@ -77,7 +77,7 @@ cx:rus_AdjNomCopNPNom_Meaning a rcxn:ConstructionMeaning ;
 
 cx:rus_AdjNomCopNPNom_Sources a dcmitype:Collection ;
     dcterm:hasPart references:6f619a90-6cf1-43ae-adc3-31e2fd0d92cd ;
-    RDFS:seeAlso <https://constructicon.de/constructions/110> .
+    RDFS:seeAlso <https://constructicon.github.io/russian/#707> , <https://constructicon.de/constructions/110> , <https://framenet-constructicon.hhu.de/constructicon/construction?id=2416> , <https://framenet-constructicon.hhu.de/constructicon/construction?id=13> .
 
 cx:rus_AdjNomCopNPNom_slots a rdf:Seq ;
     rdf:_1 cx:rus_AdjNomCopNPNom_1 ;
@@ -85,7 +85,7 @@ cx:rus_AdjNomCopNPNom_slots a rdf:Seq ;
     rdf:_3 cx:rus_AdjNomCopNPNom_3 .
 
 membr:Project_Petrenko_F2611031710 a rsrch:Finding ;
-    RDFS:label "Comparative concepts van partially be applied to the Russian Constructicon." ;
+    RDFS:label "Comparative concepts can partially be applied to the Russian Constructicon." ;
     rsrch:basedOn cx:rus_AdjNomCopNPNom .
 
 references:6f619a90-6cf1-43ae-adc3-31e2fd0d92cd evid:biblio "Endresen, Anna & Laura A. Janda. 2020. Taking Construction Grammar One Step Further: Families, Clusters, and Networks of Evaluative Constructions in Russian. Frontiers in Psychology 11. 574353. https://doi.org/10.3389/fpsyg.2020.574353." .

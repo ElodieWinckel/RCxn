@@ -19218,7 +19218,10 @@ cx:rus_AdjNomCopNPNom_Meaning a rcxn:ConstructionMeaning ;
 
 cx:rus_AdjNomCopNPNom_Sources a dcmitype:Collection ;
     DCTERMS:hasPart references:6f619a90-6cf1-43ae-adc3-31e2fd0d92cd ;
-    RDFS:seeAlso <https://constructicon.de/constructions/110> .
+    RDFS:seeAlso <https://constructicon.de/constructions/110>,
+        <https://constructicon.github.io/russian/#707>,
+        <https://framenet-constructicon.hhu.de/constructicon/construction?id=13>,
+        <https://framenet-constructicon.hhu.de/constructicon/construction?id=2416> .
 
 cx:rus_AdjNomCopNPNom_slots a RDF:Seq ;
     RDF:_1 cx:rus_AdjNomCopNPNom_1 ;
@@ -24577,7 +24580,7 @@ cx:lzh_Dooperationwithoperand1onoperand2construction a rcxn:Construction ;
 cx:rus_AdjNomCopNPNom a rcxn:Construction ;
     cx:hasExample cx:rus_AdjNomCopNPNom_Ex_A,
         cx:rus_AdjNomCopNPNom_Ex_B ;
-    RDFS:comment "Original entry from the Russian Constructicon." ;
+    RDFS:comment "Original entry from the Russian Constructicon (https://constructicon.github.io/russian/#707): Bast, Radovan, Anna Endresen, Laura A. Janda, Marianne Lund, Olga Lyashevskaya, James McDonald, Daria Mordashova, Tore Nesset, Ekaterina Rakhilina, Francis M. Tyers, Valentina Zhukova. 2021. The Russian Constructicon. An electronic database of the Russian grammatical constructions. Available at https://constructicon.github.io/russian/." ;
     lg:partOfLanguage lg:rus ;
     rcxn:hasConstructionMeaning cx:rus_AdjNomCopNPNom_Meaning ;
     rcxn:hasMetadata cx:rus_AdjNomCopNPNom_MD ;
