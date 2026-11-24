@@ -48,19 +48,6 @@ cx:deuStdHigh_NP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_4_Form a cx:Slot
 
 cx:deuWrSt20_sichNPADJADVvorAugenVP_5_Index olia:hasNumber olia:Plural .
 
-cx:deu_Toechter a rcxn:Construction ;
-    cx:hasExample cx:deu_Toechter_Ex_A,
-        cx:deu_Toechter_Ex_B,
-        cx:deu_Toechter_Ex_C,
-        cx:deu_Toechter_Ex_D,
-        cx:deu_Toechter_Ex_E,
-        cx:deu_Toechter_Ex_F ;
-    lg:partOfLanguage lg:deu ;
-    rcxn:hasConstructionMeaning cx:deu_Toechter_Meaning ;
-    rcxn:hasMetadata cx:deu_Toechter_MD ;
-    rcxn:hasSlots cx:deu_Toechter_slots ;
-    rcxn:hasTitle "Töchter" .
-
 cx:engLME_AdjectivalwithPARTNERConstruction a rcxn:Construction ;
     compcon:hasCompCon compcon:cxn_modification-construction,
         compcon:cxn_referring-phrase,
@@ -1695,6 +1682,10 @@ cx:deu_Hinweisauf_slots a RDF:Seq ;
     RDF:_2 cx:deu_Hinweisauf_2 ;
     RDF:_3 cx:deu_Hinweisauf_3 .
 
+cx:deu_InflectionalSuffixconstruction_MD a rcxn:Metadata ;
+    DCTERMS:created "2026-11-24"^^xsd:date ;
+    rcxn:annotator membr:Hutta .
+
 cx:deu_Konzentration a rcxn:Construction ;
     lg:partOfLanguage lg:deu ;
     links:elementOf cx:deu_Konzentrationauf ;
@@ -1741,6 +1732,10 @@ cx:deu_Konzentrationauf_slots a RDF:Seq ;
     RDF:_1 cx:deu_Konzentrationauf_1 ;
     RDF:_2 cx:deu_Konzentrationauf_2 ;
     RDF:_3 cx:deu_Konzentrationauf_3 .
+
+cx:deu_Morphemeconstruction_MD a rcxn:Metadata ;
+    DCTERMS:created "2026-11-24"^^xsd:date ;
+    rcxn:annotator membr:Hutta .
 
 cx:deu_NPDefDetstrongPLUSADJweakPLUSN_1 a rcxn:SlotObligatory ;
     cx:WordOrder "element 1 immediately before element 2" ;
@@ -1922,6 +1917,16 @@ cx:deu_NPnomsgmasc a rcxn:Construction ;
     rcxn:annotator membr:Kligge ;
     rcxn:hasTitle "NP nom.sg.masc" .
 
+cx:deu_PluralNoun a rcxn:Construction ;
+    lg:partOfLanguage lg:deu ;
+    links:inheritedBy cx:deu_Toechter ;
+    rcxn:hasMetadata cx:deu_PluralNoun_MD ;
+    rcxn:hasTitle "Plural Noun" .
+
+cx:deu_PluralNoun_MD a rcxn:Metadata ;
+    DCTERMS:created "2026-11-24"^^xsd:date ;
+    rcxn:annotator membr:Hutta .
+
 cx:deu_Preposition a rcxn:Construction ;
     lg:partOfLanguage lg:deu ;
     links:elementOf cx:deu_AusdemAErmelschuettelnconstruction ;
@@ -2026,6 +2031,20 @@ cx:deu_Schussauf_slots a RDF:Seq ;
     RDF:_2 cx:deu_Schussauf_2 ;
     RDF:_3 cx:deu_Schussauf_3 .
 
+cx:deu_Suffixconstruction_MD a rcxn:Metadata ;
+    DCTERMS:created "2026-11-24"^^xsd:date ;
+    rcxn:annotator membr:Hutta .
+
+cx:deu_Tochter a rcxn:Construction ;
+    lg:partOfLanguage lg:deu ;
+    links:inheritedBy cx:deu_Toechter ;
+    rcxn:hasMetadata cx:deu_Tochter_MD ;
+    rcxn:hasTitle "Tochter" .
+
+cx:deu_Tochter_MD a rcxn:Metadata ;
+    DCTERMS:created "2026-11-24"^^xsd:date ;
+    rcxn:annotator membr:Hutta .
+
 cx:deu_Toechter_1 a rcxn:SlotObligatory ;
     cx:hasIndex cx:deu_Toechter_1_Index ;
     cx:hasTranslation "daughters" ;
@@ -2045,7 +2064,6 @@ cx:deu_Toechter_1_slots a RDF:Seq ;
 
 cx:deu_Toechter_2 a rcxn:SlotOptional ;
     cx:WordOrder "first vowel in Element 1" ;
-    RDFS:comment "morpheme, umlaut. " ;
     rcxn:hasSlotForm cx:deu_Toechter_2_Form .
 
 cx:deu_Toechter_2_Form a rcxn:SlotForm ;
@@ -2055,18 +2073,19 @@ cx:deu_Toechter_2_Form a rcxn:SlotForm ;
         "/ɛ/" ;
     rcxn:hasSurfaceForm "e",
         "o",
-        "ö" .
+        "ö" ;
+    rcxn:hasSyntacticForm cx:deu_Umlautconstruction .
 
 cx:deu_Toechter_3 a rcxn:SlotOptional ;
     cx:WordOrder "Last element in Element 1" ;
-    RDFS:comment "morpheme, inflectional suffix. " ;
     rcxn:hasSlotForm cx:deu_Toechter_3_Form .
 
 cx:deu_Toechter_3_Form a rcxn:SlotForm ;
     rcxn:hasPhonology "/s/",
         "/ə/" ;
     rcxn:hasSurfaceForm "-e",
-        "-s" .
+        "-s" ;
+    rcxn:hasSyntacticForm cx:deu_InflectionalSuffixconstruction .
 
 cx:deu_Toechter_Ex_A a cx:Example ;
     cx:hasAnnotatedText "T[ö]2chter" ;
@@ -2218,6 +2237,10 @@ cx:deu_UEbergriffauf_slots a RDF:Seq ;
     RDF:_1 cx:deu_UEbergriffauf_1 ;
     RDF:_2 cx:deu_UEbergriffauf_2 ;
     RDF:_3 cx:deu_UEbergriffauf_3 .
+
+cx:deu_Umlautconstruction_MD a rcxn:Metadata ;
+    DCTERMS:created "2026-11-24"^^xsd:date ;
+    rcxn:annotator membr:Hutta .
 
 cx:deu_V2clauseconstruction_MD a rcxn:Metadata ;
     DCTERMS:created "2026-11-17"^^xsd:date ;
@@ -6943,6 +6966,20 @@ cx:deu_Adjective a rcxn:Construction ;
         cx:deu_NPDefDetstrongPLUSADJweakPLUSN ;
     rcxn:hasTitle "Adjective" .
 
+cx:deu_InflectionalSuffixconstruction a rcxn:Construction ;
+    lg:partOfLanguage lg:deu ;
+    links:elementOf cx:deu_Toechter ;
+    links:inheritsFrom cx:deu_Suffixconstruction ;
+    rcxn:hasMetadata cx:deu_InflectionalSuffixconstruction_MD ;
+    rcxn:hasTitle "Inflectional Suffix construction" .
+
+cx:deu_Morphemeconstruction a rcxn:Construction ;
+    lg:partOfLanguage lg:deu ;
+    links:inheritedBy cx:deu_Suffixconstruction,
+        cx:deu_Umlautconstruction ;
+    rcxn:hasMetadata cx:deu_Morphemeconstruction_MD ;
+    rcxn:hasTitle "Morpheme construction" .
+
 cx:deu_NPADJstrongPLUSADJstrongPLUSN a rcxn:Construction,
         rcxn:Metadata ;
     DCTERMS:created "2024-12-02"^^xsd:date ;
@@ -6951,6 +6988,20 @@ cx:deu_NPADJstrongPLUSADJstrongPLUSN a rcxn:Construction,
     rcxn:annotator membr:Kligge ;
     rcxn:hasMetadata cx:deu_NPADJstrongPLUSADJstrongPLUSN ;
     rcxn:hasTitle "NP [ADJ-strong + ADJ-strong + N]" .
+
+cx:deu_Suffixconstruction a rcxn:Construction ;
+    lg:partOfLanguage lg:deu ;
+    links:inheritedBy cx:deu_InflectionalSuffixconstruction ;
+    links:inheritsFrom cx:deu_Morphemeconstruction ;
+    rcxn:hasMetadata cx:deu_Suffixconstruction_MD ;
+    rcxn:hasTitle "Suffix construction" .
+
+cx:deu_Umlautconstruction a rcxn:Construction ;
+    lg:partOfLanguage lg:deu ;
+    links:elementOf cx:deu_Toechter ;
+    links:inheritsFrom cx:deu_Morphemeconstruction ;
+    rcxn:hasMetadata cx:deu_Umlautconstruction_MD ;
+    rcxn:hasTitle "Umlaut construction" .
 
 cx:deu_V2clauseconstruction a rcxn:Construction ;
     lg:partOfLanguage lg:deu ;
@@ -7286,6 +7337,21 @@ cx:spa_Verb a rcxn:Construction ;
         cx:spa_Objectrelativeclause,
         cx:spa_Subjectrelativeclause ;
     rcxn:hasTitle "Verb" .
+
+cx:deu_Toechter a rcxn:Construction ;
+    cx:hasExample cx:deu_Toechter_Ex_A,
+        cx:deu_Toechter_Ex_B,
+        cx:deu_Toechter_Ex_C,
+        cx:deu_Toechter_Ex_D,
+        cx:deu_Toechter_Ex_E,
+        cx:deu_Toechter_Ex_F ;
+    lg:partOfLanguage lg:deu ;
+    links:inheritsFrom cx:deu_PluralNoun,
+        cx:deu_Tochter ;
+    rcxn:hasConstructionMeaning cx:deu_Toechter_Meaning ;
+    rcxn:hasMetadata cx:deu_Toechter_MD ;
+    rcxn:hasSlots cx:deu_Toechter_slots ;
+    rcxn:hasTitle "Töchter" .
 
 cx:engInf_coolasadmirableconstruction a rcxn:Construction ;
     cx:hasExample cx:engInf_coolasadmirableconstruction_Ex_A,
