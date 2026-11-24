@@ -8,7 +8,7 @@ from graph_loader import (g, ont, casa, cx, compcon, evid, frac, gest, lg, links
 
 
 # Read Excel file
-df = pd.read_excel("data_modified.xlsx")
+df = pd.read_excel("Constructicon data_Fokashchuk.xlsx")
 
 # Create RDF graph
 g = Graph()
@@ -30,7 +30,7 @@ g.add((cx[POLNP_MD], RDF.type, rcxn.Metadata))
 g.add((cx[POLNP_name_cleaned], rcxn.hasMetadata, cx[POLNP_MD]))
 g.add((cx[POLNP_MD], rcxn.annotator, membr.Fokashchuk))
 g.add((cx[POLNP_MD], DCTERMS.created, Literal(datetime.now().strftime('%Y-%m-%d'), datatype=XSD.date)))
-g.add((cx[POLNP_name_cleaned], rcxn.hasTitle, Literal(POLNP_name)))
+g.add((cx[POLNP_name_cleaned], rcxn.hasTitle, Literal(str(POLNP_name).strip())))
 g.add((cx[POLNP_name_cleaned], lg.partOfLanguage, lg.pol))
 
 # Create Ukrainian NP
@@ -41,7 +41,7 @@ g.add((cx[UKRNP_MD], RDF.type, rcxn.Metadata))
 g.add((cx[UKRNP_name_cleaned], rcxn.hasMetadata, cx[POLNP_MD]))
 g.add((cx[UKRNP_MD], rcxn.annotator, membr.Fokashchuk))
 g.add((cx[UKRNP_MD], DCTERMS.created, Literal(datetime.now().strftime('%Y-%m-%d'), datatype=XSD.date)))
-g.add((cx[UKRNP_name_cleaned], rcxn.hasTitle, Literal(POLNP_name)))
+g.add((cx[UKRNP_name_cleaned], rcxn.hasTitle, Literal(str(POLNP_name).strip())))
 g.add((cx[UKRNP_name_cleaned], lg.partOfLanguage, lg.ukr))
 
 generic = ""
@@ -71,7 +71,7 @@ for _, row in df.iterrows():
     g.add((cx[metadata_uri], DCTERMS.created, Literal(datetime.now().strftime('%Y-%m-%d'), datatype=XSD.date)))
     g.add((membr.Project_Fokashchuk_241210_F250218, rsrch.basedOn, cx[construction_name_cleaned]))
     construction_complete_title = f"{construction_name}"
-    g.add((cx[construction_name_cleaned], rcxn.hasTitle, Literal(construction_complete_title)))
+    g.add((cx[construction_name_cleaned], rcxn.hasTitle, Literal(str(construction_complete_title).strip())))
     g.add((cx[construction_name_cleaned], lg.partOfLanguage, lg[construction_language_uri]))
 
     # Meaning of the construction
@@ -116,7 +116,7 @@ for _, row in df.iterrows():
         g.add((cx[metadata_stem_construction], rcxn.annotator, membr.Fokashchuk))
         g.add((cx[metadata_stem_construction], DCTERMS.created,
                Literal(datetime.now().strftime('%Y-%m-%d'), datatype=XSD.date)))
-        g.add((cx[cleaned_stem_construction], rcxn.hasTitle, Literal(NP1_head)))
+        g.add((cx[cleaned_stem_construction], rcxn.hasTitle, Literal(str(NP1_head).strip())))
         g.add((NP1_form_uri, rcxn.hasStem, cx[cleaned_stem_construction]))
         g.add((cx[cleaned_stem_construction], links.elementOf, cx[construction_name_cleaned]))
 
@@ -183,7 +183,7 @@ for _, row in df.iterrows():
         g.add((cx[eng_metadata_uri], DCTERMS.created, Literal(datetime.now().strftime('%Y-%m-%d'), datatype=XSD.date)))
         g.add((membr.Project_Fokashchuk_241210_F250218, rsrch.basedOn, cx[eng_construction_name_cleaned]))
         eng_construction_complete_title = f"{eng_construction_name}"
-        g.add((cx[eng_construction_name_cleaned], rcxn.hasTitle, Literal(eng_construction_complete_title)))
+        g.add((cx[eng_construction_name_cleaned], rcxn.hasTitle, Literal(str(eng_construction_complete_title).strip())))
         g.add((cx[eng_construction_name_cleaned], lg.partOfLanguage, lg[eng_construction_language_uri]))
         g.add((cx[eng_construction_name_cleaned], links.CL_similarFormSameFunction, cx[construction_name_cleaned]))
 
@@ -218,7 +218,7 @@ for _, row in df.iterrows():
         g.add((cx[eng_metadata_stem_construction], rcxn.annotator, membr.Fokashchuk))
         g.add((cx[eng_metadata_stem_construction], DCTERMS.created,
                Literal(datetime.now().strftime('%Y-%m-%d'), datatype=XSD.date)))
-        g.add((cx[eng_cleaned_stem_construction], rcxn.hasTitle, Literal(eng_NP1_head)))
+        g.add((cx[eng_cleaned_stem_construction], rcxn.hasTitle, Literal(str(eng_NP1_head).strip())))
         g.add((eng_NP1_form_uri, rcxn.hasStem, cx[eng_cleaned_stem_construction]))
         g.add((cx[eng_cleaned_stem_construction], links.elementOf, cx[eng_construction_name_cleaned]))
 
@@ -226,7 +226,7 @@ for _, row in df.iterrows():
         eng_PP_form_uri = cx[f"{eng_construction_name_cleaned}_{2}_Form"]
         g.add((eng_PP_element_uri, rcxn.hasSlotForm, eng_PP_form_uri))
         g.add((eng_PP_form_uri, RDF.type, rcxn.SlotForm))
-        if '/' in row['ENG: Preposition']:
+        if '/' in str(row['ENG: Preposition']):
             parts = [part.strip() for part in row['ENG: Preposition'].split('/', 1)]
             eng_PP_prep_1 = parts[0] if len(parts) > 0 else ""
             eng_PP_prep_2 = parts[1] if len(parts) > 1 else ""
@@ -277,7 +277,7 @@ for _, row in df.iterrows():
         g.add((cx[pol_metadata_uri], DCTERMS.created, Literal(datetime.now().strftime('%Y-%m-%d'), datatype=XSD.date)))
         g.add((membr.Project_Fokashchuk_241210_F250218, rsrch.basedOn, cx[pol_construction_name_cleaned]))
         pol_construction_complete_title = f"{pol_construction_name}"
-        g.add((cx[pol_construction_name_cleaned], rcxn.hasTitle, Literal(pol_construction_complete_title)))
+        g.add((cx[pol_construction_name_cleaned], rcxn.hasTitle, Literal(str(pol_construction_complete_title).strip())))
         g.add((cx[pol_construction_name_cleaned], lg.partOfLanguage, lg[pol_construction_language_uri]))
         g.add((cx[pol_construction_name_cleaned], links.CL_similarFormSameFunction, cx[construction_name_cleaned]))
         g.add((cx[pol_construction_name_cleaned], links.CL_similarFormSameFunction, cx[eng_construction_name_cleaned]))
@@ -313,7 +313,7 @@ for _, row in df.iterrows():
         g.add((cx[pol_metadata_stem_construction], rcxn.annotator, membr.Fokashchuk))
         g.add((cx[pol_metadata_stem_construction], DCTERMS.created,
                Literal(datetime.now().strftime('%Y-%m-%d'), datatype=XSD.date)))
-        g.add((cx[pol_cleaned_stem_construction], rcxn.hasTitle, Literal(pol_NP1_head)))
+        g.add((cx[pol_cleaned_stem_construction], rcxn.hasTitle, Literal(str(pol_NP1_head).strip())))
         g.add((pol_NP1_form_uri, rcxn.hasStem, cx[pol_cleaned_stem_construction]))
         g.add((cx[pol_cleaned_stem_construction], links.elementOf, cx[pol_construction_name_cleaned]))
 
@@ -321,7 +321,7 @@ for _, row in df.iterrows():
         pol_PP_form_uri = cx[f"{pol_construction_name_cleaned}_{2}_Form"]
         g.add((pol_PP_element_uri, rcxn.hasSlotForm, pol_PP_form_uri))
         g.add((pol_PP_form_uri, RDF.type, rcxn.SlotForm))
-        if '/' in row['PL: Preposition']:
+        if '/' in str(row['PL: Preposition']):
             parts = [part.strip() for part in row['PL: Preposition'].split('/', 1)]
             pol_PP_prep_1 = parts[0] if len(parts) > 0 else ""
             pol_PP_prep_2 = parts[1] if len(parts) > 1 else ""
@@ -390,7 +390,7 @@ for _, row in df.iterrows():
         g.add((cx[ukr_metadata_uri], DCTERMS.created, Literal(datetime.now().strftime('%Y-%m-%d'), datatype=XSD.date)))
         g.add((membr.Project_Fokashchuk_241210_F250218, rsrch.basedOn, cx[ukr_construction_name_cleaned]))
         ukr_construction_complete_title = f"{ukr_construction_name}"
-        g.add((cx[ukr_construction_name_cleaned], rcxn.hasTitle, Literal(ukr_construction_complete_title)))
+        g.add((cx[ukr_construction_name_cleaned], rcxn.hasTitle, Literal(str(ukr_construction_complete_title).strip())))
         g.add((cx[ukr_construction_name_cleaned], lg.partOfLanguage, lg[ukr_construction_language_uri]))
         g.add((cx[ukr_construction_name_cleaned], links.CL_similarFormSameFunction, cx[construction_name_cleaned]))
         g.add((cx[ukr_construction_name_cleaned], links.CL_similarFormSameFunction, cx[eng_construction_name_cleaned]))
@@ -426,7 +426,7 @@ for _, row in df.iterrows():
         g.add((cx[ukr_metadata_stem_construction], rcxn.annotator, membr.Fokashchuk))
         g.add((cx[ukr_metadata_stem_construction], DCTERMS.created,
                Literal(datetime.now().strftime('%Y-%m-%d'), datatype=XSD.date)))
-        g.add((cx[ukr_transliteration_stem], rcxn.hasTitle, Literal(ukr_NP1_head)))
+        g.add((cx[ukr_transliteration_stem], rcxn.hasTitle, Literal(str(ukr_NP1_head).strip())))
         g.add((ukr_NP1_form_uri, rcxn.hasStem, cx[ukr_transliteration_stem]))
         g.add((cx[ukr_transliteration_stem], links.elementOf, cx[ukr_construction_name_cleaned]))
 
@@ -434,7 +434,7 @@ for _, row in df.iterrows():
         ukr_PP_form_uri = cx[f"{ukr_construction_name_cleaned}_{2}_Form"]
         g.add((ukr_PP_element_uri, rcxn.hasSlotForm, ukr_PP_form_uri))
         g.add((ukr_PP_form_uri, RDF.type, rcxn.SlotForm))
-        if '/' in row['UA: Preposition']:
+        if '/' in str(row['UA: Preposition']):
             parts = [part.strip() for part in row['UA: Preposition'].split('/', 1)]
             ukr_PP_prep_1 = parts[0] if len(parts) > 0 else ""
             ukr_PP_prep_2 = parts[1] if len(parts) > 1 else ""

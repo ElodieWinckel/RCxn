@@ -177,3 +177,8 @@ cx:deu_vor a rcxn:Construction ;
 
 cx:deu_vor_Meaning a rcxn:ConstructionMeaning ;
     rcxn:hasMeaning "in front of" .
+
+cx:deu_NounPhrase  a rcxn:Construction ;
+    rcxn:hasTitle "Noun Phrase" ;
+    lg:partOfLanguage lg:deu.
+

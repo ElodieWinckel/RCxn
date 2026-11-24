@@ -74,10 +74,6 @@ cx:deuStdHigh_NP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_2_slots a rdf:Se
     rdf:_1 cx:deuStdHigh_NP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_3 ;
     rdf:_2 cx:deuStdHigh_NP1PLUSaufPLUSNP2ANDNP1PLUSanPLUSNP2constructions_4 .
 
-cx:deu_NounPhrase  a rcxn:Construction ;
-    rcxn:hasTitle "Noun Phrase" ;
-    lg:partOfLanguage lg:deu.
-
 membr:Project_Fokashchuk rsrch:hasResearchQuestion membr:Project_Fokashchuk_241210 .
 
 membr:Project_Fokashchuk_241210 a rsrch:Project ;
